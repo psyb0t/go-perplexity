@@ -2,6 +2,14 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.1.3, 2026-10-17
+
+- `DecisionsRequest.Model`'s doc comment, and the matching text on `ClientInterface.DecisionsV1DecisionsPost`, `DecisionsV1DecisionsPostWithBody`, `ClientWithResponsesInterface.DecisionsV1DecisionsPostWithResponse` and `DecisionsV1DecisionsPostWithBodyWithResponse`, now name `pplx-decider-v1.2` and `pplx-decider-flash-v1.2` as the decision models, plus the aliases `pplx-decider-latest`, `perplexity/pplx-decider-latest`, `pplx-decider-flash-latest` and `perplexity/pplx-decider-flash-latest`. The old names `pplx-decider-v1.1-27b` and `pplx-decider-v1-27b` are still documented as accepted, and now map to `pplx-decider-v1.2`.
+- `DecisionsRequest.State` and `DecisionsRequest_State`'s doc comments now say images can appear anywhere in `state`, not only inside an array, and that each question allows up to 8 images.
+- `DecisionsRequest`'s doc comment now gives the input limit as 256K tokens instead of 262,144 tokens.
+- `ResponsesRequest.Model`'s doc comment updates its example model id from `anthropic/claude-sonnet-4-6` to `anthropic/claude-sonnet-5-5`.
+- No exported identifier was added, removed or changed. All of the above are comment-only updates in the generated client, matching the upstream spec.
+
 ## v0.1.2, 2026-10-17
 
 - Documentation only. The agent skill explains how to look up every endpoint, parameter and model with `go doc` or on pkg.go.dev, and declares its license.

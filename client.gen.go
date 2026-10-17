@@ -2503,15 +2503,15 @@ type DateFilters struct {
 	SearchRecencyFilter *SearchRecencyFilter `json:"search_recency_filter,omitempty"`
 }
 
-// DecisionsRequest The content to evaluate and the named questions to ask about it. Unknown fields return `400`. Input must stay under 262,144 tokens and the body under 32 MiB.
+// DecisionsRequest The content to evaluate and the named questions to ask about it. Unknown fields return `400`. Input must stay under 256K tokens and the body under 32 MiB.
 type DecisionsRequest struct {
-	// Model The model to use: `pplx-decider-v1.1-27b` or `pplx-decider-v1-27b`. A missing or unknown model returns `400`.
+	// Model The decision model: `pplx-decider-v1.2` (27B, $0.02 per million input tokens) or `pplx-decider-flash-v1.2` (4B, $0.01 per million input tokens). The aliases `pplx-decider-latest` and `perplexity/pplx-decider-latest` select `pplx-decider-v1.2`, and `pplx-decider-flash-latest` and `perplexity/pplx-decider-flash-latest` select `pplx-decider-flash-v1.2`; an alias can move to a newer model over time. `pplx-decider-v1.1-27b` and `pplx-decider-v1-27b` remain accepted and select `pplx-decider-v1.2`. A missing or unknown model returns `400`.
 	Model string `json:"model"`
 
 	// Questions Questions keyed by a non-empty name you choose. The response uses the same names. 1 to 128 questions.
 	Questions map[string]Question `json:"questions"`
 
-	// State The content every question in the request refers to: a string, an object, or an array. Images go in an array as OpenAI-style `image_url` parts with base64 PNG, JPEG, or WebP data URLs.
+	// State The content every question in the request refers to: a string, an object, or an array. Images can appear anywhere in `state` as OpenAI-style `image_url` parts with base64 PNG, JPEG, or WebP data URLs and are read in place. Up to 8 images per question.
 	State DecisionsRequest_State `json:"state"`
 }
 
@@ -2524,7 +2524,7 @@ type DecisionsRequestState1 map[string]interface{}
 // DecisionsRequestState2 defines model for DecisionsRequest.State.2.
 type DecisionsRequestState2 = []interface{}
 
-// DecisionsRequest_State The content every question in the request refers to: a string, an object, or an array. Images go in an array as OpenAI-style `image_url` parts with base64 PNG, JPEG, or WebP data URLs.
+// DecisionsRequest_State The content every question in the request refers to: a string, an object, or an array. Images can appear anywhere in `state` as OpenAI-style `image_url` parts with base64 PNG, JPEG, or WebP data URLs and are read in place. Up to 8 images per question.
 type DecisionsRequest_State struct {
 	union json.RawMessage
 }
@@ -3716,7 +3716,7 @@ type ResponsesRequest struct {
 	// Must be >= 1 if specified. Maximum allowed is 100.
 	MaxSteps *int32 `json:"max_steps,omitempty"`
 
-	// Model Model ID in provider/model format (e.g., "openai/gpt-5.6-terra", "anthropic/claude-sonnet-4-6").
+	// Model Model ID in provider/model format (e.g., "openai/gpt-5.6-terra", "anthropic/claude-sonnet-5-5").
 	// If models is also provided, models takes precedence.
 	// Required if neither models nor preset is provided.
 	Model *string `json:"model,omitempty"`
@@ -9230,7 +9230,7 @@ type ClientInterface interface {
 
 	// DecisionsV1DecisionsPostWithBody Answer questions
 	//
-	// Evaluate one or more named questions against the content in `state`. Mix `noul`, `choice`, and `score` questions in one request; the response returns one answer per question under the same name, plus the model name and token usage. Set `model` to `pplx-decider-v1.1-27b` or `pplx-decider-v1-27b`; a missing or unknown model returns `400`. Send the key as `Authorization: Bearer <key>`; an `x-api-key` header is not read and returns `401`.
+	// Evaluate one or more named questions against the content in `state`. Mix `noul`, `choice`, and `score` questions in one request; the response returns one answer per question under the same name, plus the model name and token usage. Set `model` to `pplx-decider-v1.2` or `pplx-decider-flash-v1.2`, or to the alias `pplx-decider-latest` or `pplx-decider-flash-latest`; a missing or unknown model returns `400`. Send the key as `Authorization: Bearer <key>`; an `x-api-key` header is not read and returns `401`.
 	//
 	// Takes any type of body and a specified content type.
 	//
@@ -9239,7 +9239,7 @@ type ClientInterface interface {
 
 	// DecisionsV1DecisionsPost Answer questions
 	//
-	// Evaluate one or more named questions against the content in `state`. Mix `noul`, `choice`, and `score` questions in one request; the response returns one answer per question under the same name, plus the model name and token usage. Set `model` to `pplx-decider-v1.1-27b` or `pplx-decider-v1-27b`; a missing or unknown model returns `400`. Send the key as `Authorization: Bearer <key>`; an `x-api-key` header is not read and returns `401`.
+	// Evaluate one or more named questions against the content in `state`. Mix `noul`, `choice`, and `score` questions in one request; the response returns one answer per question under the same name, plus the model name and token usage. Set `model` to `pplx-decider-v1.2` or `pplx-decider-flash-v1.2`, or to the alias `pplx-decider-latest` or `pplx-decider-flash-latest`; a missing or unknown model returns `400`. Send the key as `Authorization: Bearer <key>`; an `x-api-key` header is not read and returns `401`.
 	//
 	// Takes a body of the `application/json` content type.
 	//
@@ -9632,7 +9632,7 @@ func (c *Client) ContextualizedEmbeddingsV1ContextualizedembeddingsPost(ctx cont
 
 // DecisionsV1DecisionsPostWithBody Answer questions
 //
-// Evaluate one or more named questions against the content in `state`. Mix `noul`, `choice`, and `score` questions in one request; the response returns one answer per question under the same name, plus the model name and token usage. Set `model` to `pplx-decider-v1.1-27b` or `pplx-decider-v1-27b`; a missing or unknown model returns `400`. Send the key as `Authorization: Bearer <key>`; an `x-api-key` header is not read and returns `401`.
+// Evaluate one or more named questions against the content in `state`. Mix `noul`, `choice`, and `score` questions in one request; the response returns one answer per question under the same name, plus the model name and token usage. Set `model` to `pplx-decider-v1.2` or `pplx-decider-flash-v1.2`, or to the alias `pplx-decider-latest` or `pplx-decider-flash-latest`; a missing or unknown model returns `400`. Send the key as `Authorization: Bearer <key>`; an `x-api-key` header is not read and returns `401`.
 //
 // Takes any type of body and a specified content type.
 //
@@ -9651,7 +9651,7 @@ func (c *Client) DecisionsV1DecisionsPostWithBody(ctx context.Context, contentTy
 
 // DecisionsV1DecisionsPost Answer questions
 //
-// Evaluate one or more named questions against the content in `state`. Mix `noul`, `choice`, and `score` questions in one request; the response returns one answer per question under the same name, plus the model name and token usage. Set `model` to `pplx-decider-v1.1-27b` or `pplx-decider-v1-27b`; a missing or unknown model returns `400`. Send the key as `Authorization: Bearer <key>`; an `x-api-key` header is not read and returns `401`.
+// Evaluate one or more named questions against the content in `state`. Mix `noul`, `choice`, and `score` questions in one request; the response returns one answer per question under the same name, plus the model name and token usage. Set `model` to `pplx-decider-v1.2` or `pplx-decider-flash-v1.2`, or to the alias `pplx-decider-latest` or `pplx-decider-flash-latest`; a missing or unknown model returns `400`. Send the key as `Authorization: Bearer <key>`; an `x-api-key` header is not read and returns `401`.
 //
 // Takes a body of the `application/json` content type.
 //
@@ -11228,7 +11228,7 @@ type ClientWithResponsesInterface interface {
 
 	// DecisionsV1DecisionsPostWithBodyWithResponse Answer questions
 	//
-	// Evaluate one or more named questions against the content in `state`. Mix `noul`, `choice`, and `score` questions in one request; the response returns one answer per question under the same name, plus the model name and token usage. Set `model` to `pplx-decider-v1.1-27b` or `pplx-decider-v1-27b`; a missing or unknown model returns `400`. Send the key as `Authorization: Bearer <key>`; an `x-api-key` header is not read and returns `401`.
+	// Evaluate one or more named questions against the content in `state`. Mix `noul`, `choice`, and `score` questions in one request; the response returns one answer per question under the same name, plus the model name and token usage. Set `model` to `pplx-decider-v1.2` or `pplx-decider-flash-v1.2`, or to the alias `pplx-decider-latest` or `pplx-decider-flash-latest`; a missing or unknown model returns `400`. Send the key as `Authorization: Bearer <key>`; an `x-api-key` header is not read and returns `401`.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -11237,7 +11237,7 @@ type ClientWithResponsesInterface interface {
 
 	// DecisionsV1DecisionsPostWithResponse Answer questions
 	//
-	// Evaluate one or more named questions against the content in `state`. Mix `noul`, `choice`, and `score` questions in one request; the response returns one answer per question under the same name, plus the model name and token usage. Set `model` to `pplx-decider-v1.1-27b` or `pplx-decider-v1-27b`; a missing or unknown model returns `400`. Send the key as `Authorization: Bearer <key>`; an `x-api-key` header is not read and returns `401`.
+	// Evaluate one or more named questions against the content in `state`. Mix `noul`, `choice`, and `score` questions in one request; the response returns one answer per question under the same name, plus the model name and token usage. Set `model` to `pplx-decider-v1.2` or `pplx-decider-flash-v1.2`, or to the alias `pplx-decider-latest` or `pplx-decider-flash-latest`; a missing or unknown model returns `400`. Send the key as `Authorization: Bearer <key>`; an `x-api-key` header is not read and returns `401`.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -13008,7 +13008,7 @@ func (c *ClientWithResponses) ContextualizedEmbeddingsV1Contextualizedembeddings
 
 // DecisionsV1DecisionsPostWithBodyWithResponse Answer questions
 //
-// Evaluate one or more named questions against the content in `state`. Mix `noul`, `choice`, and `score` questions in one request; the response returns one answer per question under the same name, plus the model name and token usage. Set `model` to `pplx-decider-v1.1-27b` or `pplx-decider-v1-27b`; a missing or unknown model returns `400`. Send the key as `Authorization: Bearer <key>`; an `x-api-key` header is not read and returns `401`.
+// Evaluate one or more named questions against the content in `state`. Mix `noul`, `choice`, and `score` questions in one request; the response returns one answer per question under the same name, plus the model name and token usage. Set `model` to `pplx-decider-v1.2` or `pplx-decider-flash-v1.2`, or to the alias `pplx-decider-latest` or `pplx-decider-flash-latest`; a missing or unknown model returns `400`. Send the key as `Authorization: Bearer <key>`; an `x-api-key` header is not read and returns `401`.
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -13023,7 +13023,7 @@ func (c *ClientWithResponses) DecisionsV1DecisionsPostWithBodyWithResponse(ctx c
 
 // DecisionsV1DecisionsPostWithResponse Answer questions
 //
-// Evaluate one or more named questions against the content in `state`. Mix `noul`, `choice`, and `score` questions in one request; the response returns one answer per question under the same name, plus the model name and token usage. Set `model` to `pplx-decider-v1.1-27b` or `pplx-decider-v1-27b`; a missing or unknown model returns `400`. Send the key as `Authorization: Bearer <key>`; an `x-api-key` header is not read and returns `401`.
+// Evaluate one or more named questions against the content in `state`. Mix `noul`, `choice`, and `score` questions in one request; the response returns one answer per question under the same name, plus the model name and token usage. Set `model` to `pplx-decider-v1.2` or `pplx-decider-flash-v1.2`, or to the alias `pplx-decider-latest` or `pplx-decider-flash-latest`; a missing or unknown model returns `400`. Send the key as `Authorization: Bearer <key>`; an `x-api-key` header is not read and returns `401`.
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
