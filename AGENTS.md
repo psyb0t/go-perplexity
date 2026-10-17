@@ -43,6 +43,7 @@ make sec       # gitleaks, govulncheck, semgrep
 - `ListModelsResponse` is a schema in the spec, so the list models response wrapper is `ListModelsResponse2`.
 - Skill create and update take a raw body only (`CreateSkillWithBody`, `UpdateSkillWithBody`).
 - CI does not run `make generate`, because the spec changes upstream. Regenerate locally and commit the result.
+- `.github/workflows/regen.yml` regenerates the client every day and releases the result. When the checks fail, Claude edits the repository to fix them, but a fix may not touch the paths listed under `fix_protected_paths` in that workflow: the workflows, the Makefile, `AGENTS.md`, `.agents/rules/`, the lint, security and spec download scripts and their configs. A problem that needs a change there fails the run and needs a manual fix.
 
 ## Rules
 
