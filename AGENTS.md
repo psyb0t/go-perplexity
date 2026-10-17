@@ -42,7 +42,7 @@ make sec       # gitleaks, govulncheck, semgrep
 - Several operation IDs are derived from routes, so method names are long (`ChatCompletionsChatCompletionsPost`, `EmbeddingsV1EmbeddingsPost`). A spec update that renames an operation ID renames the method; check the README, the skill and the tests after `make generate`.
 - `ListModelsResponse` is a schema in the spec, so the list models response wrapper is `ListModelsResponse2`.
 - Skill create and update take a raw body only (`CreateSkillWithBody`, `UpdateSkillWithBody`).
-- CI does not run `make generate`, because the spec changes upstream. Regenerate locally and commit the result.
+- `make generate` always downloads the current spec, so it can change the client even when nothing here changed. Review the generated diff before committing it.
 - `.github/workflows/regen.yml` regenerates the client every day and releases the result. When the checks fail, Claude edits the repository to fix them, but a fix may not touch the paths listed under `fix_protected_paths` in that workflow: the workflows, the Makefile, `AGENTS.md`, `.agents/rules/`, the lint, security and spec download scripts and their configs. A problem that needs a change there fails the run and needs a manual fix.
 
 ## Rules

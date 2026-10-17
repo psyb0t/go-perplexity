@@ -54,6 +54,8 @@ func main() {
 
 The same code is in `example_test.go`, so `make test` checks that it compiles.
 
+The full API is in the [Go reference](https://pkg.go.dev/github.com/psyb0t/go-perplexity); from inside your module, `go doc github.com/psyb0t/go-perplexity` prints the same.
+
 Method names come from the spec's operation IDs. Some are long because the spec derives them from the route: the Sonar chat endpoint is `ChatCompletionsChatCompletionsPost`, search is `SearchSearchPost`, and the async Sonar endpoints carry an `AsyncChatCompletions` prefix and suffix. The list models response type is `ListModelsResponse2`, because `ListModelsResponse` is already a schema name in the spec.
 
 ## Auth
