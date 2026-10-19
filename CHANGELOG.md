@@ -2,6 +2,12 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.1.4, 2026-10-19
+
+- `ResponsesResponse.Preset` is a new field. It names the preset and version that ran the response, as `name@<version>`. It is present only when the request used a preset, and streams resumed with `starting_after` omit it.
+- `ResponsesRequest.Preset`'s doc comment now says it accepts `name`, `name@latest`, or `name@<version>`. `name` and `name@latest` run the active version of that preset; `name@<version>` runs that exact version. Preset versions are opaque, so do not parse or order them.
+- Sending a versioned value back as `ResponsesRequest.Preset` reruns that exact version, including any bug fix patches applied since it last ran. A preset value without a version means the run predates preset versions or ran without one, and reruns the active version.
+
 ## v0.1.3, 2026-10-17
 
 - `DecisionsRequest.Model`'s doc comment, and the matching text on `ClientInterface.DecisionsV1DecisionsPost`, `DecisionsV1DecisionsPostWithBody`, `ClientWithResponsesInterface.DecisionsV1DecisionsPostWithResponse` and `DecisionsV1DecisionsPostWithBodyWithResponse`, now name `pplx-decider-v1.2` and `pplx-decider-flash-v1.2` as the decision models, plus the aliases `pplx-decider-latest`, `perplexity/pplx-decider-latest`, `pplx-decider-flash-latest` and `perplexity/pplx-decider-flash-latest`. The old names `pplx-decider-v1.1-27b` and `pplx-decider-v1-27b` are still documented as accepted, and now map to `pplx-decider-v1.2`.

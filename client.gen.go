@@ -3727,8 +3727,12 @@ type ResponsesRequest struct {
 	// The response.model will reflect the model that actually succeeded.
 	Models *[]string `json:"models,omitempty"`
 
-	// Preset Preset configuration name (e.g., "fast", "low", "medium", "high", "xhigh").
-	// Pre-configured model with system prompt and search parameters.
+	// Preset Preset to run, as `name`, `name@latest`, or `name@<version>` (e.g., "fast", "low", "fast@2026-09-29.0").
+	// A preset is a pre-configured model with system prompt and search parameters.
+	// `name` and `name@latest` run the active version. `name@<version>` runs that exact version.
+	// A `preset` value returned on a response pins that configuration only when it carries a version.
+	// A returned value without a version runs the active version.
+	// Versions are opaque: do not parse, order, or calculate them.
 	// Required if model is not provided.
 	Preset *string `json:"preset,omitempty"`
 
@@ -3783,6 +3787,15 @@ type ResponsesResponse struct {
 
 	// Output Array of output items (messages, search results, tool calls)
 	Output []OutputItem `json:"output"`
+
+	// Preset Preset and version that ran this response, as `name@<version>` (e.g., "fast@2026-09-29.0").
+	// Present only when the request used a preset. Streams resumed with `starting_after` omit it.
+	// For an alias, this is the preset and version that the alias selects.
+	// Send a value with a version as the request `preset` to run that configuration again.
+	// A released version can receive bug-fix patches, so sending it back runs that version as currently patched.
+	// A value without a version is the bare preset name: the run was created before preset versions, or was served without versions.
+	// Sending it runs the active version.
+	Preset *string `json:"preset,omitempty"`
 
 	// Status Status of the response
 	Status Status `json:"status"`
