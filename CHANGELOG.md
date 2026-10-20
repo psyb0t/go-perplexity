@@ -2,6 +2,15 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.1.5, 2026-10-20
+
+- `ChoiceAnswer.Confidence`'s doc comment now says it is computed from `probabilities` as `(p_top - 1/n) / (1 - 1/n)`. It is 0 when every option is equally likely and 1 when one option has all the probability or there is only one option.
+- `ScoreAnswer.Confidence`'s doc comment now says it is computed from `probabilities` as `1 - spread / baseline`, with a floor of 0, and is 1 for a single level.
+- `DecisionsRequest`'s doc comment now says the `state` plus any one question must stay under 256K input tokens. Questions that do not fit together are answered in groups, and each group counts the `state` again. The body limit is still 32 MiB.
+- `Usage`'s doc comment now says input tokens are billed at the selected model's rate: $0.02 per million for `pplx-decider-v1.2` and $0.01 for `pplx-decider-flash-v1.2`. Output tokens are free.
+- `ToolCallDetails.TokenUsage`'s doc comment no longer says advisor entries represent individual invocations.
+- No exported identifier was added, removed or changed. All of the above are comment-only updates in the generated client, matching the upstream spec.
+
 ## v0.1.4, 2026-10-19
 
 - `ResponsesResponse.Preset` is a new field. It names the preset and version that ran the response, as `name@<version>`. It is present only when the request used a preset, and streams resumed with `starting_after` omit it.

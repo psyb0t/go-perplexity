@@ -2198,7 +2198,7 @@ type ChoiceAnswer struct {
 	// Choice The option with the highest probability.
 	Choice string `json:"choice"`
 
-	// Confidence Confidence in the selected option, from 0 to 1. Higher means more certainty.
+	// Confidence Computed from `probabilities` as `(p_top - 1/n) / (1 - 1/n)`, where `p_top` is the highest probability and `n` is the number of options. 0 when every option is equally likely; 1 when one option has all the probability or there is only one option.
 	Confidence float64 `json:"confidence"`
 
 	// Probabilities Probability of each option, keyed by option name. Values are between 0 and 1 and sum to approximately 1.
@@ -2503,7 +2503,7 @@ type DateFilters struct {
 	SearchRecencyFilter *SearchRecencyFilter `json:"search_recency_filter,omitempty"`
 }
 
-// DecisionsRequest The content to evaluate and the named questions to ask about it. Unknown fields return `400`. Input must stay under 256K tokens and the body under 32 MiB.
+// DecisionsRequest The content to evaluate and the named questions to ask about it. Unknown fields return `400`. The `state` plus any one question must stay under 256K input tokens; questions that do not fit together are answered in groups, and each group counts the `state` again. The body must stay under 32 MiB.
 type DecisionsRequest struct {
 	// Model The decision model: `pplx-decider-v1.2` (27B, $0.02 per million input tokens) or `pplx-decider-flash-v1.2` (4B, $0.01 per million input tokens). The aliases `pplx-decider-latest` and `perplexity/pplx-decider-latest` select `pplx-decider-v1.2`, and `pplx-decider-flash-latest` and `perplexity/pplx-decider-flash-latest` select `pplx-decider-flash-v1.2`; an alias can move to a newer model over time. `pplx-decider-v1.1-27b` and `pplx-decider-v1-27b` remain accepted and select `pplx-decider-v1.2`. A missing or unknown model returns `400`.
 	Model string `json:"model"`
@@ -3871,7 +3871,7 @@ type SandboxToolType string
 
 // ScoreAnswer Answer to a `score` question: the expected score, the rubric, a confidence value, and the probability of each level.
 type ScoreAnswer struct {
-	// Confidence Confidence in the score, from 0 to 1. Higher means more certainty.
+	// Confidence Computed from `probabilities` as `1 - spread / baseline`, with a floor of 0. `spread` is the sum of `p_i × |i - top|`, where `top` is the most likely level; `baseline` is the unweighted average of `|i - top|` over all levels. 1 for a single level.
 	Confidence float64 `json:"confidence"`
 
 	// Legend Level index, as a string, mapped back to the `criteria` entry it stands for.
@@ -4125,7 +4125,7 @@ type ToolCallDetails struct {
 	// Invocation Number of times this tool was invoked
 	Invocation *int64 `json:"invocation,omitempty"`
 
-	// TokenUsage Model token usage for tools backed by internal LLM calls. Sandbox SDK usage is aggregated by model; advisor entries represent individual invocations.
+	// TokenUsage Model token usage for tools backed by internal LLM calls. Sandbox SDK usage is aggregated by model.
 	TokenUsage *[]ToolCallTokenUsage `json:"token_usage,omitempty"`
 }
 
@@ -4210,7 +4210,7 @@ type UrlContent struct {
 	Url string `json:"url"`
 }
 
-// Usage Token counts for the request. Input tokens are billed at $0.02 per million; output tokens are free.
+// Usage Token counts for the request. Input tokens are billed per million at the rate of the selected model: $0.02 for `pplx-decider-v1.2` and $0.01 for `pplx-decider-flash-v1.2`. Output tokens are free.
 type Usage struct {
 	// InputTokens Input tokens processed for the request.
 	InputTokens int `json:"input_tokens"`
