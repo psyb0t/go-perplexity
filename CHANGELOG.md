@@ -2,6 +2,14 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.2.0, 2026-10-22
+
+- Added the Batch API. New `Client` and `ClientWithResponses` methods: `CreateBatch`, `CreateBatchWithBody`, `GetBatch`, `ListBatches`, `CancelBatch`, plus the matching `...WithResponse` methods. New types include `Batch`, `BatchStatus`, `BatchRequestCounts`, `BatchUsage`, `BatchList`, `CreateBatchRequest`, `CreateBatchParams` and `ListBatchesParams`.
+- Added batch file endpoints: `CreateFileWithBody`, `ListFiles`, `GetFile`, `GetFileContent` and `DeleteFile`, with their `...WithResponse` methods, `New...Request` builders and `Parse...Response` functions. New types include `BatchFile`, `BatchFileList`, `BatchFileDeleted`, `BatchFilePurpose`, `ListFilesParams` and `CreateFileMultipartBody`.
+- Breaking: `ResponsesRequest.Preset` and `ResponsesResponse.Preset` are replaced by `ResponsesRequest.Effort` and `ResponsesResponse.Effort`. The JSON key changes from `preset` to `effort`. The values and versioning (`name`, `name@latest`, `name@<version>`) work as before. Doc comments on `MaxSteps`, `Model` and `Profile` now say "effort level" instead of "preset".
+- Added methods to `ClientInterface` and `ClientWithResponsesInterface` for every new endpoint. Types that implement these interfaces must add them.
+- Raised the minimum Go version in `go.mod` from 1.26.9 to 1.26.10, which includes the fix for GO-2026-6809 in `crypto/x509`. The development image and the setup reference follow.
+
 ## v0.1.5, 2026-10-20
 
 - `ChoiceAnswer.Confidence`'s doc comment now says it is computed from `probabilities` as `(p_top - 1/n) / (1 - 1/n)`. It is 0 when every option is equally likely and 1 when one option has all the probability or there is only one option.

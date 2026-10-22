@@ -196,6 +196,150 @@ func (e AsyncProcessingStatus) Valid() bool {
 	}
 }
 
+// Defines values for BatchObject.
+const (
+	BatchObjectBatch BatchObject = "batch"
+)
+
+// Valid indicates whether the value is a known member of the BatchObject enum.
+func (e BatchObject) Valid() bool {
+	switch e {
+	case BatchObjectBatch:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for BatchErrorsObject.
+const (
+	BatchErrorsObjectList BatchErrorsObject = "list"
+)
+
+// Valid indicates whether the value is a known member of the BatchErrorsObject enum.
+func (e BatchErrorsObject) Valid() bool {
+	switch e {
+	case BatchErrorsObjectList:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for BatchFileObject.
+const (
+	BatchFileObjectFile BatchFileObject = "file"
+)
+
+// Valid indicates whether the value is a known member of the BatchFileObject enum.
+func (e BatchFileObject) Valid() bool {
+	switch e {
+	case BatchFileObjectFile:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for BatchFilePurpose.
+const (
+	BatchFilePurposeBatch       BatchFilePurpose = "batch"
+	BatchFilePurposeBatchOutput BatchFilePurpose = "batch_output"
+)
+
+// Valid indicates whether the value is a known member of the BatchFilePurpose enum.
+func (e BatchFilePurpose) Valid() bool {
+	switch e {
+	case BatchFilePurposeBatch:
+		return true
+	case BatchFilePurposeBatchOutput:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for BatchFileDeletedObject.
+const (
+	BatchFileDeletedObjectFile BatchFileDeletedObject = "file"
+)
+
+// Valid indicates whether the value is a known member of the BatchFileDeletedObject enum.
+func (e BatchFileDeletedObject) Valid() bool {
+	switch e {
+	case BatchFileDeletedObjectFile:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for BatchFileListObject.
+const (
+	BatchFileListObjectList BatchFileListObject = "list"
+)
+
+// Valid indicates whether the value is a known member of the BatchFileListObject enum.
+func (e BatchFileListObject) Valid() bool {
+	switch e {
+	case BatchFileListObjectList:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for BatchListObject.
+const (
+	BatchListObjectList BatchListObject = "list"
+)
+
+// Valid indicates whether the value is a known member of the BatchListObject enum.
+func (e BatchListObject) Valid() bool {
+	switch e {
+	case BatchListObjectList:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for BatchStatus.
+const (
+	BatchStatusCancelled  BatchStatus = "cancelled"
+	BatchStatusCancelling BatchStatus = "cancelling"
+	BatchStatusCompleted  BatchStatus = "completed"
+	BatchStatusExpired    BatchStatus = "expired"
+	BatchStatusFailed     BatchStatus = "failed"
+	BatchStatusFinalizing BatchStatus = "finalizing"
+	BatchStatusInProgress BatchStatus = "in_progress"
+	BatchStatusValidating BatchStatus = "validating"
+)
+
+// Valid indicates whether the value is a known member of the BatchStatus enum.
+func (e BatchStatus) Valid() bool {
+	switch e {
+	case BatchStatusCancelled:
+		return true
+	case BatchStatusCancelling:
+		return true
+	case BatchStatusCompleted:
+		return true
+	case BatchStatusExpired:
+		return true
+	case BatchStatusFailed:
+		return true
+	case BatchStatusFinalizing:
+		return true
+	case BatchStatusInProgress:
+		return true
+	case BatchStatusValidating:
+		return true
+	default:
+		return false
+	}
+}
+
 // Defines values for BuiltinSkillName.
 const (
 	BuiltinSkillNameOffice     BuiltinSkillName = "office"
@@ -445,6 +589,36 @@ func (e ContextualizedEmbeddingsRequestModel) Valid() bool {
 	case ContextualizedEmbeddingsRequestModelPplxEmbedContextV106b:
 		return true
 	case ContextualizedEmbeddingsRequestModelPplxEmbedContextV14b:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CreateBatchRequestCompletionWindow.
+const (
+	CreateBatchRequestCompletionWindowN24h CreateBatchRequestCompletionWindow = "24h"
+)
+
+// Valid indicates whether the value is a known member of the CreateBatchRequestCompletionWindow enum.
+func (e CreateBatchRequestCompletionWindow) Valid() bool {
+	switch e {
+	case CreateBatchRequestCompletionWindowN24h:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CreateBatchRequestEndpoint.
+const (
+	CreateBatchRequestEndpointV1responses CreateBatchRequestEndpoint = "/v1/responses"
+)
+
+// Valid indicates whether the value is a known member of the CreateBatchRequestEndpoint enum.
+func (e CreateBatchRequestEndpoint) Valid() bool {
+	switch e {
+	case CreateBatchRequestEndpointV1responses:
 		return true
 	default:
 		return false
@@ -1663,6 +1837,57 @@ func (e GetComputerUsageAnalyticsParamsBucketWidth) Valid() bool {
 	}
 }
 
+// Defines values for ListFilesParamsOrder.
+const (
+	ListFilesParamsOrderAsc  ListFilesParamsOrder = "asc"
+	ListFilesParamsOrderDesc ListFilesParamsOrder = "desc"
+)
+
+// Valid indicates whether the value is a known member of the ListFilesParamsOrder enum.
+func (e ListFilesParamsOrder) Valid() bool {
+	switch e {
+	case ListFilesParamsOrderAsc:
+		return true
+	case ListFilesParamsOrderDesc:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ListFilesParamsPurpose.
+const (
+	ListFilesParamsPurposeBatch       ListFilesParamsPurpose = "batch"
+	ListFilesParamsPurposeBatchOutput ListFilesParamsPurpose = "batch_output"
+)
+
+// Valid indicates whether the value is a known member of the ListFilesParamsPurpose enum.
+func (e ListFilesParamsPurpose) Valid() bool {
+	switch e {
+	case ListFilesParamsPurposeBatch:
+		return true
+	case ListFilesParamsPurposeBatchOutput:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for CreateFileMultipartBodyPurpose.
+const (
+	CreateFileMultipartBodyPurposeBatch CreateFileMultipartBodyPurpose = "batch"
+)
+
+// Valid indicates whether the value is a known member of the CreateFileMultipartBodyPurpose enum.
+func (e CreateFileMultipartBodyPurpose) Valid() bool {
+	switch e {
+	case CreateFileMultipartBodyPurposeBatch:
+		return true
+	default:
+		return false
+	}
+}
+
 // Defines values for GetComputerUsageAnalyticsV2ParamsDataset.
 const (
 	GetComputerUsageAnalyticsV2ParamsDatasetCreditUsage GetComputerUsageAnalyticsV2ParamsDataset = "credit_usage"
@@ -2032,6 +2257,134 @@ type AsyncApiChatCompletionsResponseSummary struct {
 
 // AsyncProcessingStatus Status enum for async processing.
 type AsyncProcessingStatus string
+
+// Batch defines model for Batch.
+type Batch struct {
+	CancelledAt      *int64 `json:"cancelled_at,omitempty"`
+	CancellingAt     *int64 `json:"cancelling_at,omitempty"`
+	CompletedAt      *int64 `json:"completed_at,omitempty"`
+	CompletionWindow string `json:"completion_window"`
+
+	// CreatedAt Unix seconds
+	CreatedAt     int64              `json:"created_at"`
+	Endpoint      string             `json:"endpoint"`
+	ErrorFileId   *string            `json:"error_file_id,omitempty"`
+	Errors        *BatchErrors       `json:"errors,omitempty"`
+	ExpiredAt     *int64             `json:"expired_at,omitempty"`
+	ExpiresAt     *int64             `json:"expires_at,omitempty"`
+	FailedAt      *int64             `json:"failed_at,omitempty"`
+	FinalizingAt  *int64             `json:"finalizing_at,omitempty"`
+	Id            string             `json:"id"`
+	InProgressAt  *int64             `json:"in_progress_at,omitempty"`
+	InputFileId   string             `json:"input_file_id"`
+	Metadata      *map[string]string `json:"metadata,omitempty"`
+	Object        BatchObject        `json:"object"`
+	OutputFileId  *string            `json:"output_file_id,omitempty"`
+	RequestCounts BatchRequestCounts `json:"request_counts"`
+	Status        BatchStatus        `json:"status"`
+	Usage         BatchUsage         `json:"usage"`
+}
+
+// BatchObject defines model for Batch.Object.
+type BatchObject string
+
+// BatchError defines model for BatchError.
+type BatchError struct {
+	Code string `json:"code"`
+
+	// Line 1-based input line the error refers to
+	Line    *int64 `json:"line,omitempty"`
+	Message string `json:"message"`
+}
+
+// BatchErrors defines model for BatchErrors.
+type BatchErrors struct {
+	Data   []BatchError      `json:"data"`
+	Object BatchErrorsObject `json:"object"`
+}
+
+// BatchErrorsObject defines model for BatchErrors.Object.
+type BatchErrorsObject string
+
+// BatchFile defines model for BatchFile.
+type BatchFile struct {
+	Bytes int64 `json:"bytes"`
+
+	// CreatedAt Unix seconds
+	CreatedAt int64 `json:"created_at"`
+
+	// ExpiresAt Unix seconds
+	ExpiresAt *int64          `json:"expires_at,omitempty"`
+	Filename  string          `json:"filename"`
+	Id        string          `json:"id"`
+	Object    BatchFileObject `json:"object"`
+
+	// Purpose `batch` for uploads, `batch_output` for output and error files
+	Purpose BatchFilePurpose `json:"purpose"`
+}
+
+// BatchFileObject defines model for BatchFile.Object.
+type BatchFileObject string
+
+// BatchFilePurpose `batch` for uploads, `batch_output` for output and error files
+type BatchFilePurpose string
+
+// BatchFileDeleted defines model for BatchFileDeleted.
+type BatchFileDeleted struct {
+	Deleted bool                   `json:"deleted"`
+	Id      string                 `json:"id"`
+	Object  BatchFileDeletedObject `json:"object"`
+}
+
+// BatchFileDeletedObject defines model for BatchFileDeleted.Object.
+type BatchFileDeletedObject string
+
+// BatchFileList defines model for BatchFileList.
+type BatchFileList struct {
+	Data    []BatchFile         `json:"data"`
+	FirstId *string             `json:"first_id,omitempty"`
+	HasMore bool                `json:"has_more"`
+	LastId  *string             `json:"last_id,omitempty"`
+	Object  BatchFileListObject `json:"object"`
+}
+
+// BatchFileListObject defines model for BatchFileList.Object.
+type BatchFileListObject string
+
+// BatchList defines model for BatchList.
+type BatchList struct {
+	Data    []Batch         `json:"data"`
+	FirstId *string         `json:"first_id,omitempty"`
+	HasMore bool            `json:"has_more"`
+	LastId  *string         `json:"last_id,omitempty"`
+	Object  BatchListObject `json:"object"`
+}
+
+// BatchListObject defines model for BatchList.Object.
+type BatchListObject string
+
+// BatchRequestCounts defines model for BatchRequestCounts.
+type BatchRequestCounts struct {
+	Completed int64 `json:"completed"`
+	Failed    int64 `json:"failed"`
+	Total     int64 `json:"total"`
+}
+
+// BatchStatus defines model for BatchStatus.
+type BatchStatus string
+
+// BatchUsage defines model for BatchUsage.
+type BatchUsage struct {
+	InputTokens        int64 `json:"input_tokens"`
+	InputTokensDetails struct {
+		CachedTokens int64 `json:"cached_tokens"`
+	} `json:"input_tokens_details"`
+	OutputTokens        int64 `json:"output_tokens"`
+	OutputTokensDetails struct {
+		ReasoningTokens int64 `json:"reasoning_tokens"`
+	} `json:"output_tokens_details"`
+	TotalTokens int64 `json:"total_tokens"`
+}
 
 // BuiltinSkill defines model for BuiltinSkill.
 type BuiltinSkill struct {
@@ -2465,6 +2818,27 @@ type Cost struct {
 	// TotalCost Total cost for the request in USD
 	TotalCost float64 `json:"total_cost"`
 }
+
+// CreateBatchRequest defines model for CreateBatchRequest.
+type CreateBatchRequest struct {
+	// CompletionWindow Target completion time; `24h` is the only value and the default
+	CompletionWindow *CreateBatchRequestCompletionWindow `json:"completion_window,omitempty"`
+
+	// Endpoint Endpoint every line in the input file targets
+	Endpoint CreateBatchRequestEndpoint `json:"endpoint"`
+
+	// InputFileId Id of a file uploaded with `purpose=batch`
+	InputFileId string `json:"input_file_id"`
+
+	// Metadata Up to 16 key value pairs; keys up to 64 characters, values up to 512
+	Metadata *map[string]string `json:"metadata,omitempty"`
+}
+
+// CreateBatchRequestCompletionWindow Target completion time; `24h` is the only value and the default
+type CreateBatchRequestCompletionWindow string
+
+// CreateBatchRequestEndpoint Endpoint every line in the input file targets
+type CreateBatchRequestEndpoint string
 
 // Currency Currency code for cost values
 type Currency string
@@ -3698,6 +4072,15 @@ type ResponsesRequest struct {
 	// Background Run the response asynchronously. With `stream: false`, the request returns immediately with `status: "queued"`; poll `GET /v1/responses/{id}` until the response reaches a terminal status. Background runs are durable, so you can also stream them and reconnect after a drop.
 	Background *bool `json:"background,omitempty"`
 
+	// Effort Effort to run, as `name`, `name@latest`, or `name@<version>` (e.g., "fast", "low", "fast@2026-09-29.0").
+	// An effort level is a pre-configured model with system prompt and search parameters.
+	// `name` and `name@latest` run the active version. `name@<version>` runs that exact version.
+	// An `effort` value returned on a response pins that configuration only when it carries a version.
+	// A returned value without a version runs the active version.
+	// Versions are opaque: do not parse, order, or calculate them.
+	// Required if model is not provided.
+	Effort *string `json:"effort,omitempty"`
+
 	// Input Input content - either a string or array of input items
 	Input Input `json:"input"`
 
@@ -3711,14 +4094,14 @@ type ResponsesRequest struct {
 	MaxOutputTokens *int32 `json:"max_output_tokens,omitempty"`
 
 	// MaxSteps Maximum number of research loop steps.
-	// If provided, overrides the preset's max_steps value. For requests that specify model or models without a preset, the default is 1.
+	// If provided, overrides the effort level's max_steps value. For requests that specify model or models without an effort level, the default is 1.
 	// Set max_steps to at least 3 when using finance_search with a direct model so the agent has enough steps to initialize and run the tool.
 	// Must be >= 1 if specified. Maximum allowed is 100.
 	MaxSteps *int32 `json:"max_steps,omitempty"`
 
 	// Model Model ID in provider/model format (e.g., "openai/gpt-5.6-terra", "anthropic/claude-sonnet-5-5").
 	// If models is also provided, models takes precedence.
-	// Required if neither models nor preset is provided.
+	// Required if neither models nor effort is provided.
 	Model *string `json:"model,omitempty"`
 
 	// Models Model fallback chain. Each model is in provider/model format.
@@ -3727,19 +4110,10 @@ type ResponsesRequest struct {
 	// The response.model will reflect the model that actually succeeded.
 	Models *[]string `json:"models,omitempty"`
 
-	// Preset Preset to run, as `name`, `name@latest`, or `name@<version>` (e.g., "fast", "low", "fast@2026-09-29.0").
-	// A preset is a pre-configured model with system prompt and search parameters.
-	// `name` and `name@latest` run the active version. `name@<version>` runs that exact version.
-	// A `preset` value returned on a response pins that configuration only when it carries a version.
-	// A returned value without a version runs the active version.
-	// Versions are opaque: do not parse, order, or calculate them.
-	// Required if model is not provided.
-	Preset *string `json:"preset,omitempty"`
-
 	// PreviousResponseId OpenAI-compatible previous response id for multi-turn response chains. When set, the new response continues from the completed prior response's saved state. The prior response must belong to the same account and have completed.
 	PreviousResponseId *string `json:"previous_response_id,omitempty"`
 
-	// Profile Saved, versioned configuration to run with. The version is resolved when the request is admitted. Cannot be combined with preset.
+	// Profile Saved, versioned configuration to run with. The version is resolved when the request is admitted. Cannot be combined with effort.
 	Profile   *ProfileReference `json:"profile,omitempty"`
 	Reasoning *ReasoningConfig  `json:"reasoning,omitempty"`
 
@@ -3773,6 +4147,15 @@ type ResponsesResponse struct {
 	// CreatedAt Unix timestamp when the response was created
 	CreatedAt int64 `json:"created_at"`
 
+	// Effort Effort and version that ran this response, as `name@<version>` (e.g., "fast@2026-09-29.0").
+	// Present only when the request used an effort level. Streams resumed with `starting_after` omit it.
+	// For an alias, this is the effort and version that the alias selects.
+	// Send a value with a version as the request `effort` to run that configuration again.
+	// A released version can receive bug-fix patches, so sending it back runs that version as currently patched.
+	// A value without a version is the bare effort name: the run was created before effort versions, or was served without versions.
+	// Sending it runs the active version.
+	Effort *string `json:"effort,omitempty"`
+
 	// Error Error details if the response failed
 	Error *ErrorInfo `json:"error,omitempty"`
 
@@ -3787,15 +4170,6 @@ type ResponsesResponse struct {
 
 	// Output Array of output items (messages, search results, tool calls)
 	Output []OutputItem `json:"output"`
-
-	// Preset Preset and version that ran this response, as `name@<version>` (e.g., "fast@2026-09-29.0").
-	// Present only when the request used a preset. Streams resumed with `starting_after` omit it.
-	// For an alias, this is the preset and version that the alias selects.
-	// Send a value with a version as the request `preset` to run that configuration again.
-	// A released version can receive bug-fix patches, so sending it back runs that version as currently patched.
-	// A value without a version is the bare preset name: the run was created before preset versions, or was served without versions.
-	// Sending it runs the active version.
-	Preset *string `json:"preset,omitempty"`
 
 	// Status Status of the response
 	Status Status `json:"status"`
@@ -4353,7 +4727,7 @@ type WebSearchTool struct {
 	// MaxTokensPerPage Maximum tokens to extract per search result page
 	MaxTokensPerPage *int32 `json:"max_tokens_per_page,omitempty"`
 
-	// SearchType Search type for this tool. `web` uses standard web search. `fast` uses the lower-latency Fast Search path, billed at $1.00 per 1,000 invocations plus model tokens. When omitted, inherits the preset's search type if configured; otherwise uses `web`.
+	// SearchType Search type for this tool. `web` uses standard web search. `fast` uses the lower-latency Fast Search path, billed at $1.00 per 1,000 invocations plus model tokens. When omitted, inherits the effort's search type if configured; otherwise uses `web`.
 	SearchType *WebSearchToolSearchType `json:"search_type,omitempty"`
 
 	// Type Tool type identifier
@@ -4363,11 +4737,20 @@ type WebSearchTool struct {
 	UserLocation *ToolUserLocation `json:"user_location,omitempty"`
 }
 
-// WebSearchToolSearchType Search type for this tool. `web` uses standard web search. `fast` uses the lower-latency Fast Search path, billed at $1.00 per 1,000 invocations plus model tokens. When omitted, inherits the preset's search type if configured; otherwise uses `web`.
+// WebSearchToolSearchType Search type for this tool. `web` uses standard web search. `fast` uses the lower-latency Fast Search path, billed at $1.00 per 1,000 invocations plus model tokens. When omitted, inherits the effort's search type if configured; otherwise uses `web`.
 type WebSearchToolSearchType string
 
 // WebSearchToolType Tool type identifier
 type WebSearchToolType string
+
+// BatchFileId defines model for BatchFileId.
+type BatchFileId = string
+
+// BatchId defines model for BatchId.
+type BatchId = string
+
+// BatchIdempotencyKey defines model for BatchIdempotencyKey.
+type BatchIdempotencyKey = string
 
 // ExpectedRevisionRequired defines model for ExpectedRevisionRequired.
 type ExpectedRevisionRequired = string
@@ -4428,6 +4811,54 @@ type GetComputerUsageAnalyticsParamsDataset string
 
 // GetComputerUsageAnalyticsParamsBucketWidth defines parameters for GetComputerUsageAnalytics.
 type GetComputerUsageAnalyticsParamsBucketWidth string
+
+// ListBatchesParams defines parameters for ListBatches.
+type ListBatchesParams struct {
+	// Limit Maximum number of batches to return
+	Limit *int `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// After Batch id to start after, the `last_id` of the previous page
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+}
+
+// CreateBatchParams defines parameters for CreateBatch.
+type CreateBatchParams struct {
+	// IdempotencyKey Unique key for this create; a repeat returns the original batch
+	IdempotencyKey *BatchIdempotencyKey `json:"Idempotency-Key,omitempty"`
+}
+
+// ListFilesParams defines parameters for ListFiles.
+type ListFilesParams struct {
+	// Limit Maximum number of files to return
+	Limit *int `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// After File id to start after, the `last_id` of the previous page
+	After *string `form:"after,omitempty" json:"after,omitempty"`
+
+	// Order Sort order, `desc` for newest first
+	Order *ListFilesParamsOrder `form:"order,omitempty" json:"order,omitempty"`
+
+	// Purpose Only list files with this purpose, `batch` for uploads or `batch_output` for output and error files
+	Purpose *ListFilesParamsPurpose `form:"purpose,omitempty" json:"purpose,omitempty"`
+}
+
+// ListFilesParamsOrder defines parameters for ListFiles.
+type ListFilesParamsOrder string
+
+// ListFilesParamsPurpose defines parameters for ListFiles.
+type ListFilesParamsPurpose string
+
+// CreateFileMultipartBody defines parameters for CreateFile.
+type CreateFileMultipartBody struct {
+	// File The JSONL file
+	File openapi_types.File `json:"file"`
+
+	// Purpose Only `batch` is accepted
+	Purpose CreateFileMultipartBodyPurpose `json:"purpose"`
+}
+
+// CreateFileMultipartBodyPurpose defines parameters for CreateFile.
+type CreateFileMultipartBodyPurpose string
 
 // ListSkillsParams defines parameters for ListSkills.
 type ListSkillsParams struct {
@@ -4521,6 +4952,9 @@ type CreateAgentJSONRequestBody = ResponsesRequest
 // CreateAsyncChatCompletionsAsyncChatCompletionsPostJSONRequestBody defines body for CreateAsyncChatCompletionsAsyncChatCompletionsPost for application/json ContentType.
 type CreateAsyncChatCompletionsAsyncChatCompletionsPostJSONRequestBody = AsyncApiChatCompletionsRequest
 
+// CreateBatchJSONRequestBody defines body for CreateBatch for application/json ContentType.
+type CreateBatchJSONRequestBody = CreateBatchRequest
+
 // ContextualizedEmbeddingsV1ContextualizedembeddingsPostJSONRequestBody defines body for ContextualizedEmbeddingsV1ContextualizedembeddingsPost for application/json ContentType.
 type ContextualizedEmbeddingsV1ContextualizedembeddingsPostJSONRequestBody = ContextualizedEmbeddingsRequest
 
@@ -4529,6 +4963,9 @@ type DecisionsV1DecisionsPostJSONRequestBody = DecisionsRequest
 
 // EmbeddingsV1EmbeddingsPostJSONRequestBody defines body for EmbeddingsV1EmbeddingsPost for application/json ContentType.
 type EmbeddingsV1EmbeddingsPostJSONRequestBody = EmbeddingsRequest
+
+// CreateFileMultipartRequestBody defines body for CreateFile for multipart/form-data ContentType.
+type CreateFileMultipartRequestBody CreateFileMultipartBody
 
 // CreateSkillMultipartRequestBody defines body for CreateSkill for multipart/form-data ContentType.
 type CreateSkillMultipartRequestBody CreateSkillMultipartBody
@@ -9223,6 +9660,53 @@ type ClientInterface interface {
 	// Corresponds with GET /v1/async/sonar/{api_request} (the `GetAsyncChatCompletionResponseAsyncChatCompletionsApiRequestGet` operationId).
 	GetAsyncChatCompletionResponseAsyncChatCompletionsApiRequestGet(ctx context.Context, apiRequest string, reqEditors ...RequestEditorFn) (*http.Response, error)
 
+	// ListBatches List batches
+	//
+	// Lists your organization's batches, newest first.
+	//
+	// Corresponds with GET /v1/batches (the `ListBatches` operationId).
+	ListBatches(ctx context.Context, params *ListBatchesParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CreateBatchWithBody Create a batch
+	//
+	// Creates a batch from an uploaded input file. The batch starts in
+	// `validating`. Send an `Idempotency-Key` header to make retries safe: a
+	// repeat with the same key returns the original batch.
+	// `output_expires_after` is not supported and is rejected with a 400;
+	// output and error files are kept 30 days.
+	//
+	// Takes any type of body and a specified content type.
+	//
+	// Corresponds with POST /v1/batches (the `CreateBatch` operationId).
+	CreateBatchWithBody(ctx context.Context, params *CreateBatchParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CreateBatch Create a batch
+	//
+	// Creates a batch from an uploaded input file. The batch starts in
+	// `validating`. Send an `Idempotency-Key` header to make retries safe: a
+	// repeat with the same key returns the original batch.
+	// `output_expires_after` is not supported and is rejected with a 400;
+	// output and error files are kept 30 days.
+	//
+	// Takes a body of the `application/json` content type.
+	//
+	// Corresponds with POST /v1/batches (the `CreateBatch` operationId).
+	CreateBatch(ctx context.Context, params *CreateBatchParams, body CreateBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GetBatch Retrieve a batch
+	//
+	// Corresponds with GET /v1/batches/{batch_id} (the `GetBatch` operationId).
+	GetBatch(ctx context.Context, batchId BatchId, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CancelBatch Cancel a batch
+	//
+	// Moves the batch to `cancelling`; it becomes `cancelled` once running
+	// items stop. Completed items stay in the output file and are billed.
+	// Cancelling a cancelled or cancelling batch returns it unchanged.
+	//
+	// Corresponds with POST /v1/batches/{batch_id}/cancel (the `CancelBatch` operationId).
+	CancelBatch(ctx context.Context, batchId BatchId, reqEditors ...RequestEditorFn) (*http.Response, error)
+
 	// ContextualizedEmbeddingsV1ContextualizedembeddingsPostWithBody Create Contextualized Embeddings
 	//
 	// Generate contextualized embeddings for document chunks. Chunks from the same document share context awareness, improving retrieval quality for document-based applications.
@@ -9276,6 +9760,44 @@ type ClientInterface interface {
 	//
 	// Corresponds with POST /v1/embeddings (the `EmbeddingsV1EmbeddingsPost` operationId).
 	EmbeddingsV1EmbeddingsPost(ctx context.Context, body EmbeddingsV1EmbeddingsPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// ListFiles List files
+	//
+	// Lists your organization's files, both uploads and the output and error
+	// files batches write. Deleted and expired files are not listed.
+	//
+	// Corresponds with GET /v1/files (the `ListFiles` operationId).
+	ListFiles(ctx context.Context, params *ListFilesParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CreateFileWithBody Upload a file
+	//
+	// Uploads a JSONL batch input file, up to 50,000 lines and 200 MB. Every
+	// line is validated before the file is stored. Files expire after 30 days;
+	// `expires_after` is not supported and is rejected with a 400.
+	//
+	// Takes any type of body and a specified content type.
+	//
+	// Corresponds with POST /v1/files (the `CreateFile` operationId).
+	CreateFileWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// DeleteFile Delete a file
+	//
+	// Deletes a file. Batches already created from it are not affected.
+	//
+	// Corresponds with DELETE /v1/files/{file_id} (the `DeleteFile` operationId).
+	DeleteFile(ctx context.Context, fileId BatchFileId, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GetFile Retrieve a file
+	//
+	// Corresponds with GET /v1/files/{file_id} (the `GetFile` operationId).
+	GetFile(ctx context.Context, fileId BatchFileId, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GetFileContent Download file content
+	//
+	// Streams the raw bytes of an input, output, or error file.
+	//
+	// Corresponds with GET /v1/files/{file_id}/content (the `GetFileContent` operationId).
+	GetFileContent(ctx context.Context, fileId BatchFileId, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// ListModels List Models
 	//
@@ -9605,6 +10127,103 @@ func (c *Client) GetAsyncChatCompletionResponseAsyncChatCompletionsApiRequestGet
 	return c.Client.Do(req)
 }
 
+// ListBatches List batches
+//
+// Lists your organization's batches, newest first.
+//
+// Corresponds with GET /v1/batches (the `ListBatches` operationId).
+func (c *Client) ListBatches(ctx context.Context, params *ListBatchesParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewListBatchesRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// CreateBatchWithBody Create a batch
+//
+// Creates a batch from an uploaded input file. The batch starts in
+// `validating`. Send an `Idempotency-Key` header to make retries safe: a
+// repeat with the same key returns the original batch.
+// `output_expires_after` is not supported and is rejected with a 400;
+// output and error files are kept 30 days.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /v1/batches (the `CreateBatch` operationId).
+func (c *Client) CreateBatchWithBody(ctx context.Context, params *CreateBatchParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCreateBatchRequestWithBody(c.Server, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// CreateBatch Create a batch
+//
+// Creates a batch from an uploaded input file. The batch starts in
+// `validating`. Send an `Idempotency-Key` header to make retries safe: a
+// repeat with the same key returns the original batch.
+// `output_expires_after` is not supported and is rejected with a 400;
+// output and error files are kept 30 days.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /v1/batches (the `CreateBatch` operationId).
+func (c *Client) CreateBatch(ctx context.Context, params *CreateBatchParams, body CreateBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCreateBatchRequest(c.Server, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// GetBatch Retrieve a batch
+//
+// Corresponds with GET /v1/batches/{batch_id} (the `GetBatch` operationId).
+func (c *Client) GetBatch(ctx context.Context, batchId BatchId, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetBatchRequest(c.Server, batchId)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// CancelBatch Cancel a batch
+//
+// Moves the batch to `cancelling`; it becomes `cancelled` once running
+// items stop. Completed items stay in the output file and are billed.
+// Cancelling a cancelled or cancelling batch returns it unchanged.
+//
+// Corresponds with POST /v1/batches/{batch_id}/cancel (the `CancelBatch` operationId).
+func (c *Client) CancelBatch(ctx context.Context, batchId BatchId, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCancelBatchRequest(c.Server, batchId)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // ContextualizedEmbeddingsV1ContextualizedembeddingsPostWithBody Create Contextualized Embeddings
 //
 // Generate contextualized embeddings for document chunks. Chunks from the same document share context awareness, improving retrieval quality for document-based applications.
@@ -9709,6 +10328,94 @@ func (c *Client) EmbeddingsV1EmbeddingsPostWithBody(ctx context.Context, content
 // Corresponds with POST /v1/embeddings (the `EmbeddingsV1EmbeddingsPost` operationId).
 func (c *Client) EmbeddingsV1EmbeddingsPost(ctx context.Context, body EmbeddingsV1EmbeddingsPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewEmbeddingsV1EmbeddingsPostRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// ListFiles List files
+//
+// Lists your organization's files, both uploads and the output and error
+// files batches write. Deleted and expired files are not listed.
+//
+// Corresponds with GET /v1/files (the `ListFiles` operationId).
+func (c *Client) ListFiles(ctx context.Context, params *ListFilesParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewListFilesRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// CreateFileWithBody Upload a file
+//
+// Uploads a JSONL batch input file, up to 50,000 lines and 200 MB. Every
+// line is validated before the file is stored. Files expire after 30 days;
+// `expires_after` is not supported and is rejected with a 400.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /v1/files (the `CreateFile` operationId).
+func (c *Client) CreateFileWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCreateFileRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// DeleteFile Delete a file
+//
+// Deletes a file. Batches already created from it are not affected.
+//
+// Corresponds with DELETE /v1/files/{file_id} (the `DeleteFile` operationId).
+func (c *Client) DeleteFile(ctx context.Context, fileId BatchFileId, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDeleteFileRequest(c.Server, fileId)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// GetFile Retrieve a file
+//
+// Corresponds with GET /v1/files/{file_id} (the `GetFile` operationId).
+func (c *Client) GetFile(ctx context.Context, fileId BatchFileId, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetFileRequest(c.Server, fileId)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// GetFileContent Download file content
+//
+// Streams the raw bytes of an input, output, or error file.
+//
+// Corresponds with GET /v1/files/{file_id}/content (the `GetFileContent` operationId).
+func (c *Client) GetFileContent(ctx context.Context, fileId BatchFileId, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetFileContentRequest(c.Server, fileId)
 	if err != nil {
 		return nil, err
 	}
@@ -10365,6 +11072,195 @@ func NewGetAsyncChatCompletionResponseAsyncChatCompletionsApiRequestGetRequest(s
 	return req, nil
 }
 
+// NewListBatchesRequest constructs an http.Request for the ListBatches method
+func NewListBatchesRequest(server string, params *ListBatchesParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/batches")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "limit", *params.Limit, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.After != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "after", *params.After, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewCreateBatchRequest calls the generic CreateBatch builder with application/json body
+func NewCreateBatchRequest(server string, params *CreateBatchParams, body CreateBatchJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewCreateBatchRequestWithBody(server, params, "application/json", bodyReader)
+}
+
+// NewCreateBatchRequestWithBody constructs an http.Request for the CreateBatch method, with any body, and a specified content type
+func NewCreateBatchRequestWithBody(server string, params *CreateBatchParams, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/batches")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	if params != nil {
+
+		if params.IdempotencyKey != nil {
+			var headerParam0 string
+
+			headerParam0, err = runtime.StyleParamWithOptions("simple", false, "Idempotency-Key", *params.IdempotencyKey, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("Idempotency-Key", headerParam0)
+		}
+
+	}
+
+	return req, nil
+}
+
+// NewGetBatchRequest constructs an http.Request for the GetBatch method
+func NewGetBatchRequest(server string, batchId BatchId) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "batch_id", batchId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/batches/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewCancelBatchRequest constructs an http.Request for the CancelBatch method
+func NewCancelBatchRequest(server string, batchId BatchId) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "batch_id", batchId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/batches/%s/cancel", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
 // NewContextualizedEmbeddingsV1ContextualizedembeddingsPostRequest calls the generic ContextualizedEmbeddingsV1ContextualizedembeddingsPost builder with application/json body
 func NewContextualizedEmbeddingsV1ContextualizedembeddingsPostRequest(server string, body ContextualizedEmbeddingsV1ContextualizedembeddingsPostJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
@@ -10481,6 +11377,227 @@ func NewEmbeddingsV1EmbeddingsPostRequestWithBody(server string, contentType str
 	}
 
 	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewListFilesRequest constructs an http.Request for the ListFiles method
+func NewListFilesRequest(server string, params *ListFilesParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/files")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "limit", *params.Limit, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.After != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "after", *params.After, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Order != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "order", *params.Order, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.Purpose != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "purpose", *params.Purpose, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewCreateFileRequestWithBody constructs an http.Request for the CreateFile method, with any body, and a specified content type
+func NewCreateFileRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/files")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewDeleteFileRequest constructs an http.Request for the DeleteFile method
+func NewDeleteFileRequest(server string, fileId BatchFileId) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "file_id", fileId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/files/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodDelete, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetFileRequest constructs an http.Request for the GetFile method
+func NewGetFileRequest(server string, fileId BatchFileId) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "file_id", fileId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/files/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetFileContentRequest constructs an http.Request for the GetFileContent method
+func NewGetFileContentRequest(server string, fileId BatchFileId) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "file_id", fileId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/files/%s/content", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
 
 	return req, nil
 }
@@ -11221,6 +12338,59 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with GET /v1/async/sonar/{api_request} (the `GetAsyncChatCompletionResponseAsyncChatCompletionsApiRequestGet` operationId).
 	GetAsyncChatCompletionResponseAsyncChatCompletionsApiRequestGetWithResponse(ctx context.Context, apiRequest string, reqEditors ...RequestEditorFn) (*GetAsyncChatCompletionResponseAsyncChatCompletionsApiRequestGetResponse, error)
 
+	// ListBatchesWithResponse List batches
+	//
+	// Lists your organization's batches, newest first.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /v1/batches (the `ListBatches` operationId).
+	ListBatchesWithResponse(ctx context.Context, params *ListBatchesParams, reqEditors ...RequestEditorFn) (*ListBatchesResponse, error)
+
+	// CreateBatchWithBodyWithResponse Create a batch
+	//
+	// Creates a batch from an uploaded input file. The batch starts in
+	// `validating`. Send an `Idempotency-Key` header to make retries safe: a
+	// repeat with the same key returns the original batch.
+	// `output_expires_after` is not supported and is rejected with a 400;
+	// output and error files are kept 30 days.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /v1/batches (the `CreateBatch` operationId).
+	CreateBatchWithBodyWithResponse(ctx context.Context, params *CreateBatchParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CreateBatchResponse, error)
+
+	// CreateBatchWithResponse Create a batch
+	//
+	// Creates a batch from an uploaded input file. The batch starts in
+	// `validating`. Send an `Idempotency-Key` header to make retries safe: a
+	// repeat with the same key returns the original batch.
+	// `output_expires_after` is not supported and is rejected with a 400;
+	// output and error files are kept 30 days.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /v1/batches (the `CreateBatch` operationId).
+	CreateBatchWithResponse(ctx context.Context, params *CreateBatchParams, body CreateBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*CreateBatchResponse, error)
+
+	// GetBatchWithResponse Retrieve a batch
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /v1/batches/{batch_id} (the `GetBatch` operationId).
+	GetBatchWithResponse(ctx context.Context, batchId BatchId, reqEditors ...RequestEditorFn) (*GetBatchResponse, error)
+
+	// CancelBatchWithResponse Cancel a batch
+	//
+	// Moves the batch to `cancelling`; it becomes `cancelled` once running
+	// items stop. Completed items stay in the output file and are billed.
+	// Cancelling a cancelled or cancelling batch returns it unchanged.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /v1/batches/{batch_id}/cancel (the `CancelBatch` operationId).
+	CancelBatchWithResponse(ctx context.Context, batchId BatchId, reqEditors ...RequestEditorFn) (*CancelBatchResponse, error)
+
 	// ContextualizedEmbeddingsV1ContextualizedembeddingsPostWithBodyWithResponse Create Contextualized Embeddings
 	//
 	// Generate contextualized embeddings for document chunks. Chunks from the same document share context awareness, improving retrieval quality for document-based applications.
@@ -11274,6 +12444,52 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with POST /v1/embeddings (the `EmbeddingsV1EmbeddingsPost` operationId).
 	EmbeddingsV1EmbeddingsPostWithResponse(ctx context.Context, body EmbeddingsV1EmbeddingsPostJSONRequestBody, reqEditors ...RequestEditorFn) (*EmbeddingsV1EmbeddingsPostResponse, error)
+
+	// ListFilesWithResponse List files
+	//
+	// Lists your organization's files, both uploads and the output and error
+	// files batches write. Deleted and expired files are not listed.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /v1/files (the `ListFiles` operationId).
+	ListFilesWithResponse(ctx context.Context, params *ListFilesParams, reqEditors ...RequestEditorFn) (*ListFilesResponse, error)
+
+	// CreateFileWithBodyWithResponse Upload a file
+	//
+	// Uploads a JSONL batch input file, up to 50,000 lines and 200 MB. Every
+	// line is validated before the file is stored. Files expire after 30 days;
+	// `expires_after` is not supported and is rejected with a 400.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /v1/files (the `CreateFile` operationId).
+	CreateFileWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CreateFileResponse, error)
+
+	// DeleteFileWithResponse Delete a file
+	//
+	// Deletes a file. Batches already created from it are not affected.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with DELETE /v1/files/{file_id} (the `DeleteFile` operationId).
+	DeleteFileWithResponse(ctx context.Context, fileId BatchFileId, reqEditors ...RequestEditorFn) (*DeleteFileResponse, error)
+
+	// GetFileWithResponse Retrieve a file
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /v1/files/{file_id} (the `GetFile` operationId).
+	GetFileWithResponse(ctx context.Context, fileId BatchFileId, reqEditors ...RequestEditorFn) (*GetFileResponse, error)
+
+	// GetFileContentWithResponse Download file content
+	//
+	// Streams the raw bytes of an input, output, or error file.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /v1/files/{file_id}/content (the `GetFileContent` operationId).
+	GetFileContentWithResponse(ctx context.Context, fileId BatchFileId, reqEditors ...RequestEditorFn) (*GetFileContentResponse, error)
 
 	// ListModelsWithResponse List Models
 	//
@@ -11933,6 +13149,254 @@ func (r GetAsyncChatCompletionResponseAsyncChatCompletionsApiRequestGetResponse)
 	return ""
 }
 
+type ListBatchesResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BatchList
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *ApiError
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *ApiError
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r ListBatchesResponse) GetJSON200() *BatchList {
+	return r.JSON200
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r ListBatchesResponse) GetJSON400() *ApiError {
+	return r.JSON400
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r ListBatchesResponse) GetJSON429() *ApiError {
+	return r.JSON429
+}
+
+// GetBody returns the raw response body bytes
+func (r ListBatchesResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r ListBatchesResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r ListBatchesResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r ListBatchesResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type CreateBatchResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *Batch
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *ApiError
+	// JSON402 the response for an HTTP 402 `application/json` response
+	JSON402 *ApiError
+	// JSON403 the response for an HTTP 403 `application/json` response
+	JSON403 *ApiError
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *ApiError
+	// JSON503 the response for an HTTP 503 `application/json` response
+	JSON503 *ApiError
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r CreateBatchResponse) GetJSON200() *Batch {
+	return r.JSON200
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r CreateBatchResponse) GetJSON400() *ApiError {
+	return r.JSON400
+}
+
+// GetJSON402 returns the response for an HTTP 402 `application/json` response
+func (r CreateBatchResponse) GetJSON402() *ApiError {
+	return r.JSON402
+}
+
+// GetJSON403 returns the response for an HTTP 403 `application/json` response
+func (r CreateBatchResponse) GetJSON403() *ApiError {
+	return r.JSON403
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r CreateBatchResponse) GetJSON429() *ApiError {
+	return r.JSON429
+}
+
+// GetJSON503 returns the response for an HTTP 503 `application/json` response
+func (r CreateBatchResponse) GetJSON503() *ApiError {
+	return r.JSON503
+}
+
+// GetBody returns the raw response body bytes
+func (r CreateBatchResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r CreateBatchResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CreateBatchResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r CreateBatchResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type GetBatchResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *Batch
+	// JSON404 the response for an HTTP 404 `application/json` response
+	JSON404 *ApiError
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *ApiError
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r GetBatchResponse) GetJSON200() *Batch {
+	return r.JSON200
+}
+
+// GetJSON404 returns the response for an HTTP 404 `application/json` response
+func (r GetBatchResponse) GetJSON404() *ApiError {
+	return r.JSON404
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r GetBatchResponse) GetJSON429() *ApiError {
+	return r.JSON429
+}
+
+// GetBody returns the raw response body bytes
+func (r GetBatchResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r GetBatchResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetBatchResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r GetBatchResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type CancelBatchResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *Batch
+	// JSON404 the response for an HTTP 404 `application/json` response
+	JSON404 *ApiError
+	// JSON409 the response for an HTTP 409 `application/json` response
+	JSON409 *ApiError
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *ApiError
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r CancelBatchResponse) GetJSON200() *Batch {
+	return r.JSON200
+}
+
+// GetJSON404 returns the response for an HTTP 404 `application/json` response
+func (r CancelBatchResponse) GetJSON404() *ApiError {
+	return r.JSON404
+}
+
+// GetJSON409 returns the response for an HTTP 409 `application/json` response
+func (r CancelBatchResponse) GetJSON409() *ApiError {
+	return r.JSON409
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r CancelBatchResponse) GetJSON429() *ApiError {
+	return r.JSON429
+}
+
+// GetBody returns the raw response body bytes
+func (r CancelBatchResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r CancelBatchResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CancelBatchResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r CancelBatchResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
 type ContextualizedEmbeddingsV1ContextualizedembeddingsPostResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
@@ -12133,6 +13597,267 @@ func (r EmbeddingsV1EmbeddingsPostResponse) StatusCode() int {
 
 // ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
 func (r EmbeddingsV1EmbeddingsPostResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type ListFilesResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BatchFileList
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *ApiError
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *ApiError
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r ListFilesResponse) GetJSON200() *BatchFileList {
+	return r.JSON200
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r ListFilesResponse) GetJSON400() *ApiError {
+	return r.JSON400
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r ListFilesResponse) GetJSON429() *ApiError {
+	return r.JSON429
+}
+
+// GetBody returns the raw response body bytes
+func (r ListFilesResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r ListFilesResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r ListFilesResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r ListFilesResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type CreateFileResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BatchFile
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *ApiError
+	// JSON403 the response for an HTTP 403 `application/json` response
+	JSON403 *ApiError
+	// JSON413 the response for an HTTP 413 `application/json` response
+	JSON413 *ApiError
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *ApiError
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r CreateFileResponse) GetJSON200() *BatchFile {
+	return r.JSON200
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r CreateFileResponse) GetJSON400() *ApiError {
+	return r.JSON400
+}
+
+// GetJSON403 returns the response for an HTTP 403 `application/json` response
+func (r CreateFileResponse) GetJSON403() *ApiError {
+	return r.JSON403
+}
+
+// GetJSON413 returns the response for an HTTP 413 `application/json` response
+func (r CreateFileResponse) GetJSON413() *ApiError {
+	return r.JSON413
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r CreateFileResponse) GetJSON429() *ApiError {
+	return r.JSON429
+}
+
+// GetBody returns the raw response body bytes
+func (r CreateFileResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r CreateFileResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CreateFileResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r CreateFileResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type DeleteFileResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BatchFileDeleted
+	// JSON404 the response for an HTTP 404 `application/json` response
+	JSON404 *ApiError
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r DeleteFileResponse) GetJSON200() *BatchFileDeleted {
+	return r.JSON200
+}
+
+// GetJSON404 returns the response for an HTTP 404 `application/json` response
+func (r DeleteFileResponse) GetJSON404() *ApiError {
+	return r.JSON404
+}
+
+// GetBody returns the raw response body bytes
+func (r DeleteFileResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r DeleteFileResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r DeleteFileResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r DeleteFileResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type GetFileResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *BatchFile
+	// JSON404 the response for an HTTP 404 `application/json` response
+	JSON404 *ApiError
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r GetFileResponse) GetJSON200() *BatchFile {
+	return r.JSON200
+}
+
+// GetJSON404 returns the response for an HTTP 404 `application/json` response
+func (r GetFileResponse) GetJSON404() *ApiError {
+	return r.JSON404
+}
+
+// GetBody returns the raw response body bytes
+func (r GetFileResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r GetFileResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetFileResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r GetFileResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type GetFileContentResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON404 the response for an HTTP 404 `application/json` response
+	JSON404 *ApiError
+}
+
+// GetJSON404 returns the response for an HTTP 404 `application/json` response
+func (r GetFileContentResponse) GetJSON404() *ApiError {
+	return r.JSON404
+}
+
+// GetBody returns the raw response body bytes
+func (r GetFileContentResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r GetFileContentResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetFileContentResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r GetFileContentResponse) ContentType() string {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.Header.Get("Content-Type")
 	}
@@ -12989,6 +14714,89 @@ func (c *ClientWithResponses) GetAsyncChatCompletionResponseAsyncChatCompletions
 	return ParseGetAsyncChatCompletionResponseAsyncChatCompletionsApiRequestGetResponse(rsp)
 }
 
+// ListBatchesWithResponse List batches
+//
+// Lists your organization's batches, newest first.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /v1/batches (the `ListBatches` operationId).
+func (c *ClientWithResponses) ListBatchesWithResponse(ctx context.Context, params *ListBatchesParams, reqEditors ...RequestEditorFn) (*ListBatchesResponse, error) {
+	rsp, err := c.ListBatches(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseListBatchesResponse(rsp)
+}
+
+// CreateBatchWithBodyWithResponse Create a batch
+//
+// Creates a batch from an uploaded input file. The batch starts in
+// `validating`. Send an `Idempotency-Key` header to make retries safe: a
+// repeat with the same key returns the original batch.
+// `output_expires_after` is not supported and is rejected with a 400;
+// output and error files are kept 30 days.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /v1/batches (the `CreateBatch` operationId).
+func (c *ClientWithResponses) CreateBatchWithBodyWithResponse(ctx context.Context, params *CreateBatchParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CreateBatchResponse, error) {
+	rsp, err := c.CreateBatchWithBody(ctx, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCreateBatchResponse(rsp)
+}
+
+// CreateBatchWithResponse Create a batch
+//
+// Creates a batch from an uploaded input file. The batch starts in
+// `validating`. Send an `Idempotency-Key` header to make retries safe: a
+// repeat with the same key returns the original batch.
+// `output_expires_after` is not supported and is rejected with a 400;
+// output and error files are kept 30 days.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /v1/batches (the `CreateBatch` operationId).
+func (c *ClientWithResponses) CreateBatchWithResponse(ctx context.Context, params *CreateBatchParams, body CreateBatchJSONRequestBody, reqEditors ...RequestEditorFn) (*CreateBatchResponse, error) {
+	rsp, err := c.CreateBatch(ctx, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCreateBatchResponse(rsp)
+}
+
+// GetBatchWithResponse Retrieve a batch
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /v1/batches/{batch_id} (the `GetBatch` operationId).
+func (c *ClientWithResponses) GetBatchWithResponse(ctx context.Context, batchId BatchId, reqEditors ...RequestEditorFn) (*GetBatchResponse, error) {
+	rsp, err := c.GetBatch(ctx, batchId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetBatchResponse(rsp)
+}
+
+// CancelBatchWithResponse Cancel a batch
+//
+// Moves the batch to `cancelling`; it becomes `cancelled` once running
+// items stop. Completed items stay in the output file and are billed.
+// Cancelling a cancelled or cancelling batch returns it unchanged.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /v1/batches/{batch_id}/cancel (the `CancelBatch` operationId).
+func (c *ClientWithResponses) CancelBatchWithResponse(ctx context.Context, batchId BatchId, reqEditors ...RequestEditorFn) (*CancelBatchResponse, error) {
+	rsp, err := c.CancelBatch(ctx, batchId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCancelBatchResponse(rsp)
+}
+
 // ContextualizedEmbeddingsV1ContextualizedembeddingsPostWithBodyWithResponse Create Contextualized Embeddings
 //
 // Generate contextualized embeddings for document chunks. Chunks from the same document share context awareness, improving retrieval quality for document-based applications.
@@ -13077,6 +14885,82 @@ func (c *ClientWithResponses) EmbeddingsV1EmbeddingsPostWithResponse(ctx context
 		return nil, err
 	}
 	return ParseEmbeddingsV1EmbeddingsPostResponse(rsp)
+}
+
+// ListFilesWithResponse List files
+//
+// Lists your organization's files, both uploads and the output and error
+// files batches write. Deleted and expired files are not listed.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /v1/files (the `ListFiles` operationId).
+func (c *ClientWithResponses) ListFilesWithResponse(ctx context.Context, params *ListFilesParams, reqEditors ...RequestEditorFn) (*ListFilesResponse, error) {
+	rsp, err := c.ListFiles(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseListFilesResponse(rsp)
+}
+
+// CreateFileWithBodyWithResponse Upload a file
+//
+// Uploads a JSONL batch input file, up to 50,000 lines and 200 MB. Every
+// line is validated before the file is stored. Files expire after 30 days;
+// `expires_after` is not supported and is rejected with a 400.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /v1/files (the `CreateFile` operationId).
+func (c *ClientWithResponses) CreateFileWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CreateFileResponse, error) {
+	rsp, err := c.CreateFileWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCreateFileResponse(rsp)
+}
+
+// DeleteFileWithResponse Delete a file
+//
+// Deletes a file. Batches already created from it are not affected.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with DELETE /v1/files/{file_id} (the `DeleteFile` operationId).
+func (c *ClientWithResponses) DeleteFileWithResponse(ctx context.Context, fileId BatchFileId, reqEditors ...RequestEditorFn) (*DeleteFileResponse, error) {
+	rsp, err := c.DeleteFile(ctx, fileId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDeleteFileResponse(rsp)
+}
+
+// GetFileWithResponse Retrieve a file
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /v1/files/{file_id} (the `GetFile` operationId).
+func (c *ClientWithResponses) GetFileWithResponse(ctx context.Context, fileId BatchFileId, reqEditors ...RequestEditorFn) (*GetFileResponse, error) {
+	rsp, err := c.GetFile(ctx, fileId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetFileResponse(rsp)
+}
+
+// GetFileContentWithResponse Download file content
+//
+// Streams the raw bytes of an input, output, or error file.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /v1/files/{file_id}/content (the `GetFileContent` operationId).
+func (c *ClientWithResponses) GetFileContentWithResponse(ctx context.Context, fileId BatchFileId, reqEditors ...RequestEditorFn) (*GetFileContentResponse, error) {
+	rsp, err := c.GetFileContent(ctx, fileId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetFileContentResponse(rsp)
 }
 
 // ListModelsWithResponse List Models
@@ -13631,6 +15515,194 @@ func ParseGetAsyncChatCompletionResponseAsyncChatCompletionsApiRequestGetRespons
 	return response, nil
 }
 
+// ParseListBatchesResponse parses an HTTP response from a ListBatchesWithResponse call
+func ParseListBatchesResponse(rsp *http.Response) (*ListBatchesResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &ListBatchesResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BatchList
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest ApiError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest ApiError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCreateBatchResponse parses an HTTP response from a CreateBatchWithResponse call
+func ParseCreateBatchResponse(rsp *http.Response) (*CreateBatchResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CreateBatchResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest Batch
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest ApiError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 402:
+		var dest ApiError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON402 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest ApiError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest ApiError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ApiError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetBatchResponse parses an HTTP response from a GetBatchWithResponse call
+func ParseGetBatchResponse(rsp *http.Response) (*GetBatchResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetBatchResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest Batch
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest ApiError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest ApiError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCancelBatchResponse parses an HTTP response from a CancelBatchWithResponse call
+func ParseCancelBatchResponse(rsp *http.Response) (*CancelBatchResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CancelBatchResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest Batch
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest ApiError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 409:
+		var dest ApiError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON409 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest ApiError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	}
+
+	return response, nil
+}
+
 // ParseContextualizedEmbeddingsV1ContextualizedembeddingsPostResponse parses an HTTP response from a ContextualizedEmbeddingsV1ContextualizedembeddingsPostWithResponse call
 func ParseContextualizedEmbeddingsV1ContextualizedembeddingsPostResponse(rsp *http.Response) (*ContextualizedEmbeddingsV1ContextualizedembeddingsPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
@@ -13858,6 +15930,192 @@ func ParseEmbeddingsV1EmbeddingsPostResponse(rsp *http.Response) (*EmbeddingsV1E
 			return nil, err
 		}
 		response.JSON422 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseListFilesResponse parses an HTTP response from a ListFilesWithResponse call
+func ParseListFilesResponse(rsp *http.Response) (*ListFilesResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &ListFilesResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BatchFileList
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest ApiError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest ApiError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCreateFileResponse parses an HTTP response from a CreateFileWithResponse call
+func ParseCreateFileResponse(rsp *http.Response) (*CreateFileResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CreateFileResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BatchFile
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest ApiError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest ApiError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 413:
+		var dest ApiError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON413 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest ApiError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseDeleteFileResponse parses an HTTP response from a DeleteFileWithResponse call
+func ParseDeleteFileResponse(rsp *http.Response) (*DeleteFileResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &DeleteFileResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BatchFileDeleted
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest ApiError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetFileResponse parses an HTTP response from a GetFileWithResponse call
+func ParseGetFileResponse(rsp *http.Response) (*GetFileResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetFileResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest BatchFile
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest ApiError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGetFileContentResponse parses an HTTP response from a GetFileContentWithResponse call
+func ParseGetFileContentResponse(rsp *http.Response) (*GetFileContentResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetFileContentResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest ApiError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
 
 	}
 
