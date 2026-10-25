@@ -3842,6 +3842,12 @@ type PeopleSearchResultsOutputItemType string
 
 // PeopleSearchTool People search tool configuration for the Agent API
 type PeopleSearchTool struct {
+	// MaxTokens Maximum total tokens for search context
+	MaxTokens *int32 `json:"max_tokens,omitempty"`
+
+	// MaxTokensPerPage Maximum tokens to extract per search result page
+	MaxTokensPerPage *int32 `json:"max_tokens_per_page,omitempty"`
+
 	// Type Tool type identifier
 	Type PeopleSearchToolType `json:"type"`
 }

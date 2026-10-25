@@ -1,6 +1,6 @@
 {
   "name": "go-perplexity",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Unofficial Go client for the Perplexity REST API, generated with oapi-codegen: Sonar chat completions, search, embeddings, agents, skills and models.",
   "author": { "name": "psyb0t", "url": "https://github.com/psyb0t" },
   "homepage": "https://github.com/psyb0t/go-perplexity",

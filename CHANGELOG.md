@@ -2,6 +2,10 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.2.1, 2026-10-25
+
+- Added optional fields `PeopleSearchTool.MaxTokens` and `PeopleSearchTool.MaxTokensPerPage` (both `*int32`, JSON keys `max_tokens` and `max_tokens_per_page`). They cap the total tokens of search context and the tokens extracted per result page. Existing callers are unaffected.
+
 ## v0.2.0, 2026-10-22
 
 - Added the Batch API. New `Client` and `ClientWithResponses` methods: `CreateBatch`, `CreateBatchWithBody`, `GetBatch`, `ListBatches`, `CancelBatch`, plus the matching `...WithResponse` methods. New types include `Batch`, `BatchStatus`, `BatchRequestCounts`, `BatchUsage`, `BatchList`, `CreateBatchRequest`, `CreateBatchParams` and `ListBatchesParams`.
