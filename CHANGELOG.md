@@ -2,6 +2,11 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.2.2, 2026-10-26
+
+- `DecisionsRequest`'s doc comment now says the grouped answering of questions applies to `pplx-decider-v1.2`. `pplx-decider-flash-v1.2` answers each question separately and counts the `state` again for every question.
+- No exported identifier was added, removed or changed. This is a comment-only update in the generated client, matching the upstream spec (version 1.0.0).
+
 ## v0.2.1, 2026-10-25
 
 - Added optional fields `PeopleSearchTool.MaxTokens` and `PeopleSearchTool.MaxTokensPerPage` (both `*int32`, JSON keys `max_tokens` and `max_tokens_per_page`). They cap the total tokens of search context and the tokens extracted per result page. Existing callers are unaffected.
