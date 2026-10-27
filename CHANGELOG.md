@@ -2,6 +2,10 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.2.3, 2026-10-27
+
+- The development image is based on Debian (`golang:1.26.10-trixie`) instead of Alpine. Alpine keeps only the latest build of each package, so the exact pins broke the image build whenever a package was updated. System packages now come from the snapshot.debian.org date the base image was built from, which keeps them fixed for a given base image digest. jq 1.8.2, shellcheck 0.11.0 and shfmt 3.13.1 keep their versions, and Semgrep runs in its own virtual environment.
+
 ## v0.2.2, 2026-10-26
 
 - `DecisionsRequest`'s doc comment now says the grouped answering of questions applies to `pplx-decider-v1.2`. `pplx-decider-flash-v1.2` answers each question separately and counts the `state` again for every question.
