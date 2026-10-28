@@ -2,6 +2,14 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.3.0, 2026-10-28
+
+- Added the admin audit events endpoint. New methods: `Client.ListAdminAuditEventsV1AdminAuditEventsGet` and `ClientWithResponses.ListAdminAuditEventsV1AdminAuditEventsGetWithResponse`, plus `NewListAdminAuditEventsV1AdminAuditEventsGetRequest` and `ParseListAdminAuditEventsV1AdminAuditEventsGetResponse`. Filter and page with `ListAdminAuditEventsV1AdminAuditEventsGetParams`.
+- Added the types `AuditEvent`, `AuditEventsResponse`, `AdminApiErrorResponse` and `ListAdminAuditEventsV1AdminAuditEventsGetResponse`.
+- Breaking: `ListBatchesParams.After` and `ListFilesParams.After` are renamed to `ListBatchesParams.AfterId` and `ListFilesParams.AfterId`. The query parameter changes from `after` to `after_id`. Callers must rename the field.
+- Added methods to `ClientInterface` and `ClientWithResponsesInterface` for the new endpoint. Types that implement these interfaces must add them.
+- The doc comments on `ComputerUsageResponse.Categories` and `ComputerUsageV2Response.Categories` now say the list holds the available category labels, and that the credit source axis is optional for credit usage.
+
 ## v0.2.4, 2026-10-28
 
 - Updated Semgrep in the development image to 1.182.1 and refreshed its locked dependencies. certifi 2026.10.23 drops the emSign root CAs whose intermediate keys were compromised (GHSA-6q48-6c7w-9gw2).

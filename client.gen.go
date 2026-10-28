@@ -1921,6 +1921,15 @@ func (e GetComputerUsageAnalyticsV2ParamsGroupBy) Valid() bool {
 	}
 }
 
+// AdminApiErrorResponse defines model for AdminApiErrorResponse.
+type AdminApiErrorResponse struct {
+	Error struct {
+		Code    int    `json:"code"`
+		Message string `json:"message"`
+		Type    string `json:"type"`
+	} `json:"error"`
+}
+
 // AnalyticsErrorResponse defines model for AnalyticsErrorResponse.
 type AnalyticsErrorResponse struct {
 	Error struct {
@@ -2257,6 +2266,51 @@ type AsyncApiChatCompletionsResponseSummary struct {
 
 // AsyncProcessingStatus Status enum for async processing.
 type AsyncProcessingStatus string
+
+// AuditEvent A single audit event. Field semantics match audit log webhooks.
+type AuditEvent struct {
+	// ActorEmail Email of the member who performed the action. Empty for system-generated events such as `audit_events_accessed`.
+	ActorEmail string `json:"actor_email"`
+
+	// ActorExternalUserId The actor's external identifier from your identity provider (SCIM `externalId`) when set; otherwise an empty string.
+	ActorExternalUserId string `json:"actor_external_user_id"`
+
+	// CreatedAt When the event occurred, in UTC.
+	CreatedAt time.Time `json:"created_at"`
+
+	// Id Stable, unique event identifier.
+	Id string `json:"id"`
+
+	// IpAddress Client IP address recorded for the action, or an empty string when unavailable.
+	IpAddress string `json:"ip_address"`
+
+	// Metadata Event-specific details. Keys vary by `type` and match the audit log webhook payload for that event. Treat the object as additive; new keys may appear without a version change.
+	Metadata map[string]interface{} `json:"metadata"`
+
+	// SessionId Identifier for the actor's sign-in session, or `null` when no session applies.
+	SessionId *string `json:"session_id"`
+
+	// Type Event type, for example `query`, `member_invited`, or `connector_connected`.
+	Type string `json:"type"`
+
+	// UserAgent Client user agent recorded for the action, or an empty string when unavailable.
+	UserAgent string `json:"user_agent"`
+}
+
+// AuditEventsResponse defines model for AuditEventsResponse.
+type AuditEventsResponse struct {
+	// Data Events in this page, newest first.
+	Data []AuditEvent `json:"data"`
+
+	// FirstId Opaque cursor for the newest event in the page, or `null` when `data` is empty. Save it and pass it as `before_id` on a later poll.
+	FirstId *string `json:"first_id"`
+
+	// HasMore Whether more events exist beyond this page in the direction you are paging. Stop when `false`; do not wait for an empty page.
+	HasMore bool `json:"has_more"`
+
+	// LastId Opaque cursor for the oldest event in the page, or `null` when `data` is empty. Pass it as `after_id` to fetch the next older page.
+	LastId *string `json:"last_id"`
+}
 
 // Batch defines model for Batch.
 type Batch struct {
@@ -2661,7 +2715,7 @@ type ComputerUsageCategoryCount struct {
 
 // ComputerUsageResponse defines model for ComputerUsageResponse.
 type ComputerUsageResponse struct {
-	// Categories Category breakdown labels the requested dataset surfaces, in canonical render order. Each label is a key in every bucket's `by_categories`.
+	// Categories Available category breakdown labels, in canonical render order. Each label is a key in every bucket's `by_categories`. For credit_usage, the legacy Credit Source axis is optional; use this list rather than assuming paid/promo data is available.
 	Categories []string `json:"categories"`
 
 	// Data Every bucket in the page's window, in chronological order. Buckets without data carry count 0 and an empty breakdown.
@@ -2688,7 +2742,7 @@ type ComputerUsageV2Bucket struct {
 
 // ComputerUsageV2Response defines model for ComputerUsageV2Response.
 type ComputerUsageV2Response struct {
-	// Categories Category breakdown labels each member row surfaces, in canonical render order. Each label is a key in every row's `by_categories`.
+	// Categories Available category breakdown labels for member rows, in canonical render order. Each label is a key in every row's `by_categories`. For credit_usage, the legacy Credit Source axis is optional; use this list rather than assuming paid/promo data is available.
 	Categories []string `json:"categories"`
 
 	// Data Daily buckets in chronological order, each with one row per member who used credits that day. Days with no attributable usage are omitted.
@@ -4785,6 +4839,27 @@ type TooManyRequests = ErrorResponse
 // Unauthorized The body of an error response.
 type Unauthorized = ErrorResponse
 
+// ListAdminAuditEventsV1AdminAuditEventsGetParams defines parameters for ListAdminAuditEventsV1AdminAuditEventsGet.
+type ListAdminAuditEventsV1AdminAuditEventsGetParams struct {
+	// Limit Maximum number of events to return in one page.
+	Limit *int `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// StartTime Inclusive lower bound on `created_at`, as an RFC 3339 timestamp with a timezone offset (for example `2026-10-01T00:00:00Z`). Defaults to 30 days before `end_time`.
+	StartTime *time.Time `form:"start_time,omitempty" json:"start_time,omitempty"`
+
+	// EndTime Inclusive upper bound on `created_at`, as an RFC 3339 timestamp with a timezone offset. Defaults to the current time. The window between `start_time` and `end_time` cannot exceed 30 days.
+	EndTime *time.Time `form:"end_time,omitempty" json:"end_time,omitempty"`
+
+	// EventType Return only events of this type, for example `member_role_changed`. Required to see `audit_events_accessed` events, which the default feed omits.
+	EventType *string `form:"event_type,omitempty" json:"event_type,omitempty"`
+
+	// AfterId Opaque cursor. Return events older than this cursor; pass the previous page's `last_id` to fetch the next older page. Cannot be combined with `before_id`.
+	AfterId *string `form:"after_id,omitempty" json:"after_id,omitempty"`
+
+	// BeforeId Opaque cursor. Return events newer than this cursor; pass a saved `first_id` to fetch only events that arrived since. Cannot be combined with `after_id`.
+	BeforeId *string `form:"before_id,omitempty" json:"before_id,omitempty"`
+}
+
 // CancelAgentResponse200JSONResponseBodyStatus defines parameters for CancelAgentResponse.
 type CancelAgentResponse200JSONResponseBodyStatus string
 
@@ -4823,8 +4898,8 @@ type ListBatchesParams struct {
 	// Limit Maximum number of batches to return
 	Limit *int `form:"limit,omitempty" json:"limit,omitempty"`
 
-	// After Batch id to start after, the `last_id` of the previous page
-	After *string `form:"after,omitempty" json:"after,omitempty"`
+	// AfterId Batch id to start after, the `last_id` of the previous page
+	AfterId *string `form:"after_id,omitempty" json:"after_id,omitempty"`
 }
 
 // CreateBatchParams defines parameters for CreateBatch.
@@ -4838,8 +4913,8 @@ type ListFilesParams struct {
 	// Limit Maximum number of files to return
 	Limit *int `form:"limit,omitempty" json:"limit,omitempty"`
 
-	// After File id to start after, the `last_id` of the previous page
-	After *string `form:"after,omitempty" json:"after,omitempty"`
+	// AfterId File id to start after, the `last_id` of the previous page
+	AfterId *string `form:"after_id,omitempty" json:"after_id,omitempty"`
 
 	// Order Sort order, `desc` for newest first
 	Order *ListFilesParamsOrder `form:"order,omitempty" json:"order,omitempty"`
@@ -9581,6 +9656,13 @@ type ClientInterface interface {
 	// Corresponds with POST /search (the `SearchSearchPost` operationId).
 	SearchSearchPost(ctx context.Context, body SearchSearchPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
+	// ListAdminAuditEventsV1AdminAuditEventsGet List audit events
+	//
+	// Returns the organization's audit events, newest first. Requires an **audit log API key** (scope `audit_logs:read`) created by an org admin under **Enterprise APIs → Admin API**; Sonar API keys are rejected with `403`. Without time parameters the endpoint covers the most recent 30 days; a single request can span at most 30 days. See the [Audit Log API guide](/docs/admin/audit-api) for key setup, pagination patterns, and event fields.
+	//
+	// Corresponds with GET /v1/admin/audit-events (the `ListAdminAuditEventsV1AdminAuditEventsGet` operationId).
+	ListAdminAuditEventsV1AdminAuditEventsGet(ctx context.Context, params *ListAdminAuditEventsV1AdminAuditEventsGetParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
 	// CreateAgentWithBody Create Agent Response
 	//
 	// Generate a response for the provided input with optional web search and reasoning.
@@ -9894,7 +9976,7 @@ type ClientInterface interface {
 
 	// GetComputerUsageAnalyticsV2 Usage Analytics per Member
 	//
-	// Returns your organization's Perplexity usage broken down per member, as daily buckets. Each day lists one row per member with usage that day, keyed by email. credit_usage carries the same Model and Credit Source breakdown as v1; query_volume carries Feature, Project and Comet. Uses the same organization analytics API key as v1. Only complete UTC days are returned; the in-progress day is never included.
+	// Returns your organization's Perplexity usage broken down per member, as daily buckets. Each day lists one row per member with usage that day, keyed by email. credit_usage carries a Model breakdown and an optional legacy Credit Source breakdown, subject to the same availability rules as v1; query_volume carries Feature, Project and Comet. Read the available axes from categories rather than assuming paid/promo data is present. Uses the same organization analytics API key as v1. Only complete UTC days are returned; the in-progress day is never included.
 	//
 	// Corresponds with GET /v2/analytics/computer/usage (the `GetComputerUsageAnalyticsV2` operationId).
 	GetComputerUsageAnalyticsV2(ctx context.Context, params *GetComputerUsageAnalyticsV2Params, reqEditors ...RequestEditorFn) (*http.Response, error)
@@ -9928,6 +10010,23 @@ func (c *Client) SearchSearchPostWithBody(ctx context.Context, contentType strin
 // Corresponds with POST /search (the `SearchSearchPost` operationId).
 func (c *Client) SearchSearchPost(ctx context.Context, body SearchSearchPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewSearchSearchPostRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// ListAdminAuditEventsV1AdminAuditEventsGet List audit events
+//
+// Returns the organization's audit events, newest first. Requires an **audit log API key** (scope `audit_logs:read`) created by an org admin under **Enterprise APIs → Admin API**; Sonar API keys are rejected with `403`. Without time parameters the endpoint covers the most recent 30 days; a single request can span at most 30 days. See the [Audit Log API guide](/docs/admin/audit-api) for key setup, pagination patterns, and event fields.
+//
+// Corresponds with GET /v1/admin/audit-events (the `ListAdminAuditEventsV1AdminAuditEventsGet` operationId).
+func (c *Client) ListAdminAuditEventsV1AdminAuditEventsGet(ctx context.Context, params *ListAdminAuditEventsV1AdminAuditEventsGetParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewListAdminAuditEventsV1AdminAuditEventsGetRequest(c.Server, params)
 	if err != nil {
 		return nil, err
 	}
@@ -10621,7 +10720,7 @@ func (c *Client) ChatCompletionsChatCompletionsPost(ctx context.Context, body Ch
 
 // GetComputerUsageAnalyticsV2 Usage Analytics per Member
 //
-// Returns your organization's Perplexity usage broken down per member, as daily buckets. Each day lists one row per member with usage that day, keyed by email. credit_usage carries the same Model and Credit Source breakdown as v1; query_volume carries Feature, Project and Comet. Uses the same organization analytics API key as v1. Only complete UTC days are returned; the in-progress day is never included.
+// Returns your organization's Perplexity usage broken down per member, as daily buckets. Each day lists one row per member with usage that day, keyed by email. credit_usage carries a Model breakdown and an optional legacy Credit Source breakdown, subject to the same availability rules as v1; query_volume carries Feature, Project and Comet. Read the available axes from categories rather than assuming paid/promo data is present. Uses the same organization analytics API key as v1. Only complete UTC days are returned; the in-progress day is never included.
 //
 // Corresponds with GET /v2/analytics/computer/usage (the `GetComputerUsageAnalyticsV2` operationId).
 func (c *Client) GetComputerUsageAnalyticsV2(ctx context.Context, params *GetComputerUsageAnalyticsV2Params, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -10672,6 +10771,120 @@ func NewSearchSearchPostRequestWithBody(server string, contentType string, body 
 	}
 
 	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewListAdminAuditEventsV1AdminAuditEventsGetRequest constructs an http.Request for the ListAdminAuditEventsV1AdminAuditEventsGet method
+func NewListAdminAuditEventsV1AdminAuditEventsGetRequest(server string, params *ListAdminAuditEventsV1AdminAuditEventsGetParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/admin/audit-events")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "limit", *params.Limit, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.StartTime != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "start_time", *params.StartTime, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: "date-time"}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.EndTime != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "end_time", *params.EndTime, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: "date-time"}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.EventType != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "event_type", *params.EventType, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.AfterId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "after_id", *params.AfterId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.BeforeId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "before_id", *params.BeforeId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
 
 	return req, nil
 }
@@ -11118,9 +11331,9 @@ func NewListBatchesRequest(server string, params *ListBatchesParams) (*http.Requ
 
 		}
 
-		if params.After != nil {
+		if params.AfterId != nil {
 
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "after", *params.After, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "after_id", *params.AfterId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
 				return nil, err
 			} else {
 				for _, qp := range strings.Split(queryFrag, "&") {
@@ -11427,9 +11640,9 @@ func NewListFilesRequest(server string, params *ListFilesParams) (*http.Request,
 
 		}
 
-		if params.After != nil {
+		if params.AfterId != nil {
 
-			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "after", *params.After, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "after_id", *params.AfterId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
 				return nil, err
 			} else {
 				for _, qp := range strings.Split(queryFrag, "&") {
@@ -12245,6 +12458,15 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /search (the `SearchSearchPost` operationId).
 	SearchSearchPostWithResponse(ctx context.Context, body SearchSearchPostJSONRequestBody, reqEditors ...RequestEditorFn) (*SearchSearchPostResponse, error)
 
+	// ListAdminAuditEventsV1AdminAuditEventsGetWithResponse List audit events
+	//
+	// Returns the organization's audit events, newest first. Requires an **audit log API key** (scope `audit_logs:read`) created by an org admin under **Enterprise APIs → Admin API**; Sonar API keys are rejected with `403`. Without time parameters the endpoint covers the most recent 30 days; a single request can span at most 30 days. See the [Audit Log API guide](/docs/admin/audit-api) for key setup, pagination patterns, and event fields.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /v1/admin/audit-events (the `ListAdminAuditEventsV1AdminAuditEventsGet` operationId).
+	ListAdminAuditEventsV1AdminAuditEventsGetWithResponse(ctx context.Context, params *ListAdminAuditEventsV1AdminAuditEventsGetParams, reqEditors ...RequestEditorFn) (*ListAdminAuditEventsV1AdminAuditEventsGetResponse, error)
+
 	// CreateAgentWithBodyWithResponse Create Agent Response
 	//
 	// Generate a response for the provided input with optional web search and reasoning.
@@ -12598,7 +12820,7 @@ type ClientWithResponsesInterface interface {
 
 	// GetComputerUsageAnalyticsV2WithResponse Usage Analytics per Member
 	//
-	// Returns your organization's Perplexity usage broken down per member, as daily buckets. Each day lists one row per member with usage that day, keyed by email. credit_usage carries the same Model and Credit Source breakdown as v1; query_volume carries Feature, Project and Comet. Uses the same organization analytics API key as v1. Only complete UTC days are returned; the in-progress day is never included.
+	// Returns your organization's Perplexity usage broken down per member, as daily buckets. Each day lists one row per member with usage that day, keyed by email. credit_usage carries a Model breakdown and an optional legacy Credit Source breakdown, subject to the same availability rules as v1; query_volume carries Feature, Project and Comet. Read the available axes from categories rather than assuming paid/promo data is present. Uses the same organization analytics API key as v1. Only complete UTC days are returned; the in-progress day is never included.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
@@ -12648,6 +12870,89 @@ func (r SearchSearchPostResponse) StatusCode() int {
 
 // ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
 func (r SearchSearchPostResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type ListAdminAuditEventsV1AdminAuditEventsGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *AuditEventsResponse
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *AdminApiErrorResponse
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *AdminApiErrorResponse
+	// JSON403 the response for an HTTP 403 `application/json` response
+	JSON403 *AdminApiErrorResponse
+	// JSON404 the response for an HTTP 404 `application/json` response
+	JSON404 *AdminApiErrorResponse
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *AdminApiErrorResponse
+	// JSON503 the response for an HTTP 503 `application/json` response
+	JSON503 *AdminApiErrorResponse
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r ListAdminAuditEventsV1AdminAuditEventsGetResponse) GetJSON200() *AuditEventsResponse {
+	return r.JSON200
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r ListAdminAuditEventsV1AdminAuditEventsGetResponse) GetJSON400() *AdminApiErrorResponse {
+	return r.JSON400
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r ListAdminAuditEventsV1AdminAuditEventsGetResponse) GetJSON401() *AdminApiErrorResponse {
+	return r.JSON401
+}
+
+// GetJSON403 returns the response for an HTTP 403 `application/json` response
+func (r ListAdminAuditEventsV1AdminAuditEventsGetResponse) GetJSON403() *AdminApiErrorResponse {
+	return r.JSON403
+}
+
+// GetJSON404 returns the response for an HTTP 404 `application/json` response
+func (r ListAdminAuditEventsV1AdminAuditEventsGetResponse) GetJSON404() *AdminApiErrorResponse {
+	return r.JSON404
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r ListAdminAuditEventsV1AdminAuditEventsGetResponse) GetJSON429() *AdminApiErrorResponse {
+	return r.JSON429
+}
+
+// GetJSON503 returns the response for an HTTP 503 `application/json` response
+func (r ListAdminAuditEventsV1AdminAuditEventsGetResponse) GetJSON503() *AdminApiErrorResponse {
+	return r.JSON503
+}
+
+// GetBody returns the raw response body bytes
+func (r ListAdminAuditEventsV1AdminAuditEventsGetResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r ListAdminAuditEventsV1AdminAuditEventsGetResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r ListAdminAuditEventsV1AdminAuditEventsGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r ListAdminAuditEventsV1AdminAuditEventsGetResponse) ContentType() string {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.Header.Get("Content-Type")
 	}
@@ -14555,6 +14860,21 @@ func (c *ClientWithResponses) SearchSearchPostWithResponse(ctx context.Context, 
 	return ParseSearchSearchPostResponse(rsp)
 }
 
+// ListAdminAuditEventsV1AdminAuditEventsGetWithResponse List audit events
+//
+// Returns the organization's audit events, newest first. Requires an **audit log API key** (scope `audit_logs:read`) created by an org admin under **Enterprise APIs → Admin API**; Sonar API keys are rejected with `403`. Without time parameters the endpoint covers the most recent 30 days; a single request can span at most 30 days. See the [Audit Log API guide](/docs/admin/audit-api) for key setup, pagination patterns, and event fields.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /v1/admin/audit-events (the `ListAdminAuditEventsV1AdminAuditEventsGet` operationId).
+func (c *ClientWithResponses) ListAdminAuditEventsV1AdminAuditEventsGetWithResponse(ctx context.Context, params *ListAdminAuditEventsV1AdminAuditEventsGetParams, reqEditors ...RequestEditorFn) (*ListAdminAuditEventsV1AdminAuditEventsGetResponse, error) {
+	rsp, err := c.ListAdminAuditEventsV1AdminAuditEventsGet(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseListAdminAuditEventsV1AdminAuditEventsGetResponse(rsp)
+}
+
 // CreateAgentWithBodyWithResponse Create Agent Response
 //
 // Generate a response for the provided input with optional web search and reasoning.
@@ -15130,7 +15450,7 @@ func (c *ClientWithResponses) ChatCompletionsChatCompletionsPostWithResponse(ctx
 
 // GetComputerUsageAnalyticsV2WithResponse Usage Analytics per Member
 //
-// Returns your organization's Perplexity usage broken down per member, as daily buckets. Each day lists one row per member with usage that day, keyed by email. credit_usage carries the same Model and Credit Source breakdown as v1; query_volume carries Feature, Project and Comet. Uses the same organization analytics API key as v1. Only complete UTC days are returned; the in-progress day is never included.
+// Returns your organization's Perplexity usage broken down per member, as daily buckets. Each day lists one row per member with usage that day, keyed by email. credit_usage carries a Model breakdown and an optional legacy Credit Source breakdown, subject to the same availability rules as v1; query_volume carries Feature, Project and Comet. Read the available axes from categories rather than assuming paid/promo data is present. Uses the same organization analytics API key as v1. Only complete UTC days are returned; the in-progress day is never included.
 //
 // Returns a wrapper object for the known response body format(s).
 //
@@ -15170,6 +15490,74 @@ func ParseSearchSearchPostResponse(rsp *http.Response) (*SearchSearchPostRespons
 			return nil, err
 		}
 		response.JSON422 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseListAdminAuditEventsV1AdminAuditEventsGetResponse parses an HTTP response from a ListAdminAuditEventsV1AdminAuditEventsGetWithResponse call
+func ParseListAdminAuditEventsV1AdminAuditEventsGetResponse(rsp *http.Response) (*ListAdminAuditEventsV1AdminAuditEventsGetResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &ListAdminAuditEventsV1AdminAuditEventsGetResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest AuditEventsResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest AdminApiErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest AdminApiErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest AdminApiErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest AdminApiErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest AdminApiErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest AdminApiErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
 
 	}
 
