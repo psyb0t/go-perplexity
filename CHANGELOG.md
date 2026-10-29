@@ -2,6 +2,11 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.3.1, 2026-10-29
+
+- The doc comments on `ClientInterface.ListAdminAuditEventsV1AdminAuditEventsGet`, `Client.ListAdminAuditEventsV1AdminAuditEventsGet`, `ClientWithResponsesInterface.ListAdminAuditEventsV1AdminAuditEventsGetWithResponse` and `ClientWithResponses.ListAdminAuditEventsV1AdminAuditEventsGetWithResponse` now say the audit log API key is created under "Enterprise APIs, Audit API" instead of "Admin API", and link to the "Audit API guide" instead of the "Audit Log API guide".
+- No exported identifier was added, removed or changed. This is a comment-only update in the generated client, matching the upstream spec (version 1.0.0).
+
 ## v0.3.0, 2026-10-28
 
 - Added the admin audit events endpoint. New methods: `Client.ListAdminAuditEventsV1AdminAuditEventsGet` and `ClientWithResponses.ListAdminAuditEventsV1AdminAuditEventsGetWithResponse`, plus `NewListAdminAuditEventsV1AdminAuditEventsGetRequest` and `ParseListAdminAuditEventsV1AdminAuditEventsGetResponse`. Filter and page with `ListAdminAuditEventsV1AdminAuditEventsGetParams`.

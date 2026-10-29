@@ -9658,7 +9658,7 @@ type ClientInterface interface {
 
 	// ListAdminAuditEventsV1AdminAuditEventsGet List audit events
 	//
-	// Returns the organization's audit events, newest first. Requires an **audit log API key** (scope `audit_logs:read`) created by an org admin under **Enterprise APIs → Admin API**; Sonar API keys are rejected with `403`. Without time parameters the endpoint covers the most recent 30 days; a single request can span at most 30 days. See the [Audit Log API guide](/docs/admin/audit-api) for key setup, pagination patterns, and event fields.
+	// Returns the organization's audit events, newest first. Requires an **audit log API key** (scope `audit_logs:read`) created by an org admin under **Enterprise APIs → Audit API**; Sonar API keys are rejected with `403`. Without time parameters the endpoint covers the most recent 30 days; a single request can span at most 30 days. See the [Audit API guide](/docs/admin/audit-api) for key setup, pagination patterns, and event fields.
 	//
 	// Corresponds with GET /v1/admin/audit-events (the `ListAdminAuditEventsV1AdminAuditEventsGet` operationId).
 	ListAdminAuditEventsV1AdminAuditEventsGet(ctx context.Context, params *ListAdminAuditEventsV1AdminAuditEventsGetParams, reqEditors ...RequestEditorFn) (*http.Response, error)
@@ -10022,7 +10022,7 @@ func (c *Client) SearchSearchPost(ctx context.Context, body SearchSearchPostJSON
 
 // ListAdminAuditEventsV1AdminAuditEventsGet List audit events
 //
-// Returns the organization's audit events, newest first. Requires an **audit log API key** (scope `audit_logs:read`) created by an org admin under **Enterprise APIs → Admin API**; Sonar API keys are rejected with `403`. Without time parameters the endpoint covers the most recent 30 days; a single request can span at most 30 days. See the [Audit Log API guide](/docs/admin/audit-api) for key setup, pagination patterns, and event fields.
+// Returns the organization's audit events, newest first. Requires an **audit log API key** (scope `audit_logs:read`) created by an org admin under **Enterprise APIs → Audit API**; Sonar API keys are rejected with `403`. Without time parameters the endpoint covers the most recent 30 days; a single request can span at most 30 days. See the [Audit API guide](/docs/admin/audit-api) for key setup, pagination patterns, and event fields.
 //
 // Corresponds with GET /v1/admin/audit-events (the `ListAdminAuditEventsV1AdminAuditEventsGet` operationId).
 func (c *Client) ListAdminAuditEventsV1AdminAuditEventsGet(ctx context.Context, params *ListAdminAuditEventsV1AdminAuditEventsGetParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -12460,7 +12460,7 @@ type ClientWithResponsesInterface interface {
 
 	// ListAdminAuditEventsV1AdminAuditEventsGetWithResponse List audit events
 	//
-	// Returns the organization's audit events, newest first. Requires an **audit log API key** (scope `audit_logs:read`) created by an org admin under **Enterprise APIs → Admin API**; Sonar API keys are rejected with `403`. Without time parameters the endpoint covers the most recent 30 days; a single request can span at most 30 days. See the [Audit Log API guide](/docs/admin/audit-api) for key setup, pagination patterns, and event fields.
+	// Returns the organization's audit events, newest first. Requires an **audit log API key** (scope `audit_logs:read`) created by an org admin under **Enterprise APIs → Audit API**; Sonar API keys are rejected with `403`. Without time parameters the endpoint covers the most recent 30 days; a single request can span at most 30 days. See the [Audit API guide](/docs/admin/audit-api) for key setup, pagination patterns, and event fields.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
@@ -14862,7 +14862,7 @@ func (c *ClientWithResponses) SearchSearchPostWithResponse(ctx context.Context, 
 
 // ListAdminAuditEventsV1AdminAuditEventsGetWithResponse List audit events
 //
-// Returns the organization's audit events, newest first. Requires an **audit log API key** (scope `audit_logs:read`) created by an org admin under **Enterprise APIs → Admin API**; Sonar API keys are rejected with `403`. Without time parameters the endpoint covers the most recent 30 days; a single request can span at most 30 days. See the [Audit Log API guide](/docs/admin/audit-api) for key setup, pagination patterns, and event fields.
+// Returns the organization's audit events, newest first. Requires an **audit log API key** (scope `audit_logs:read`) created by an org admin under **Enterprise APIs → Audit API**; Sonar API keys are rejected with `403`. Without time parameters the endpoint covers the most recent 30 days; a single request can span at most 30 days. See the [Audit API guide](/docs/admin/audit-api) for key setup, pagination patterns, and event fields.
 //
 // Returns a wrapper object for the known response body format(s).
 //
