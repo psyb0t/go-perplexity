@@ -2,6 +2,11 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.3.2, 2026-10-29
+
+- `ResponsesRequest.MaxSteps`: the doc comment now gives the maximum allowed value as 500 instead of 100.
+- No exported identifier was added, removed or changed. This is a comment-only update in the generated client, matching the upstream spec (version 1.0.0).
+
 ## v0.3.1, 2026-10-29
 
 - The doc comments on `ClientInterface.ListAdminAuditEventsV1AdminAuditEventsGet`, `Client.ListAdminAuditEventsV1AdminAuditEventsGet`, `ClientWithResponsesInterface.ListAdminAuditEventsV1AdminAuditEventsGetWithResponse` and `ClientWithResponses.ListAdminAuditEventsV1AdminAuditEventsGetWithResponse` now say the audit log API key is created under "Enterprise APIs, Audit API" instead of "Admin API", and link to the "Audit API guide" instead of the "Audit Log API guide".

@@ -4156,7 +4156,7 @@ type ResponsesRequest struct {
 	// MaxSteps Maximum number of research loop steps.
 	// If provided, overrides the effort level's max_steps value. For requests that specify model or models without an effort level, the default is 1.
 	// Set max_steps to at least 3 when using finance_search with a direct model so the agent has enough steps to initialize and run the tool.
-	// Must be >= 1 if specified. Maximum allowed is 100.
+	// Must be >= 1 if specified. Maximum allowed is 500.
 	MaxSteps *int32 `json:"max_steps,omitempty"`
 
 	// Model Model ID in provider/model format (e.g., "openai/gpt-5.6-terra", "anthropic/claude-sonnet-5-5").
