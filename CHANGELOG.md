@@ -2,6 +2,16 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.3.3, 2026-11-03
+
+- `ComputerUsageResponse.Categories` and `ComputerUsageV2Response.Categories`: the doc comments no longer describe the Credit Source axis as optional paid/promo data. They say to use the list to see which breakdowns are available, and that the `credit_usage` example uses the Model axis.
+- `ComputerUsageCategoryCount`: the doc comment now gives a model name for the `credit_usage` Model axis as the example, instead of paid/promo.
+- `ComputerUsageResponse.HasMore`: the doc comment now says it reports whether more complete buckets remain in the requested time window, and not whether the data has synced.
+- `ComputerUsageResponse.NextPage`, `ComputerUsageV2Response.NextPage` and the `Page` field of `GetComputerUsageAnalyticsParams` and its v2 counterpart: the doc comments now call the cursor opaque and say to keep the other query parameters unchanged to continue the same report.
+- `ComputerUsageV2Bucket.Results`, `ComputerUsageV2Response.Data`, `ComputerUsageV2Result` and `ComputerUsageV2Result.Count`: the doc comments now say usage is for the selected dataset, with credits for `credit_usage` and queries for `query_volume`, instead of credits only.
+- The per-member usage endpoint doc comments on the `Client` and `ClientWithResponses` types and their interfaces say `credit_usage` returns each member's total credits and a Model breakdown, and drop the legacy Credit Source text.
+- No exported identifier was added, removed or changed. This is a comment-only update in the generated client, matching the upstream spec (version 1.0.0).
+
 ## v0.3.2, 2026-10-29
 
 - `ResponsesRequest.MaxSteps`: the doc comment now gives the maximum allowed value as 500 instead of 100.

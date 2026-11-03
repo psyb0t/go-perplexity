@@ -2707,7 +2707,7 @@ type ComputerUsageBucket struct {
 	StartTime int `json:"start_time"`
 }
 
-// ComputerUsageCategoryCount A bucket's count for one value of a category breakdown — e.g. a connector name for connectors, a duration band for task_durations, or paid/promo for credit_usage's Credit Source axis.
+// ComputerUsageCategoryCount A bucket's count for one value of a category breakdown, such as a connector name for connectors, a duration band for task_durations, or a model name for credit_usage's Model axis.
 type ComputerUsageCategoryCount struct {
 	Category string `json:"category"`
 	Count    int    `json:"count"`
@@ -2715,16 +2715,16 @@ type ComputerUsageCategoryCount struct {
 
 // ComputerUsageResponse defines model for ComputerUsageResponse.
 type ComputerUsageResponse struct {
-	// Categories Available category breakdown labels, in canonical render order. Each label is a key in every bucket's `by_categories`. For credit_usage, the legacy Credit Source axis is optional; use this list rather than assuming paid/promo data is available.
+	// Categories Available category breakdown labels, in canonical render order. Each label is a key in every bucket's `by_categories`. Use this list to determine which breakdowns are available. The credit_usage example uses the Model axis.
 	Categories []string `json:"categories"`
 
 	// Data Every bucket in the page's window, in chronological order. Buckets without data carry count 0 and an empty breakdown.
 	Data []ComputerUsageBucket `json:"data"`
 
-	// HasMore Whether more buckets exist beyond this page. False also when the window's remaining buckets are past the current data frontier.
+	// HasMore Whether additional complete buckets remain in the requested time window. This does not indicate whether the data has synced.
 	HasMore bool `json:"has_more"`
 
-	// NextPage Cursor for the next page; pass as the page parameter with otherwise identical query parameters.
+	// NextPage Opaque cursor for the next page. Pass it as page and keep the other query parameters unchanged to continue the same report.
 	NextPage *string `json:"next_page,omitempty"`
 }
 
@@ -2733,7 +2733,7 @@ type ComputerUsageV2Bucket struct {
 	// EndTime Day end in unix seconds (UTC), exclusive.
 	EndTime int `json:"end_time"`
 
-	// Results One row per member with credit usage on this day.
+	// Results One row per member with recorded usage for the selected dataset on this day.
 	Results []ComputerUsageV2Result `json:"results"`
 
 	// StartTime Day start in unix seconds (UTC), inclusive.
@@ -2742,25 +2742,25 @@ type ComputerUsageV2Bucket struct {
 
 // ComputerUsageV2Response defines model for ComputerUsageV2Response.
 type ComputerUsageV2Response struct {
-	// Categories Available category breakdown labels for member rows, in canonical render order. Each label is a key in every row's `by_categories`. For credit_usage, the legacy Credit Source axis is optional; use this list rather than assuming paid/promo data is available.
+	// Categories Available category breakdown labels for member rows, in canonical render order. Each label is a key in every row's `by_categories`. Use this list to determine which breakdowns are available. The credit_usage example uses the Model axis.
 	Categories []string `json:"categories"`
 
-	// Data Daily buckets in chronological order, each with one row per member who used credits that day. Days with no attributable usage are omitted.
+	// Data Daily buckets in chronological order, each with one row per member with recorded usage for the selected dataset that day. Days with no attributable usage are omitted.
 	Data []ComputerUsageV2Bucket `json:"data"`
 
 	// HasMore Whether more member rows exist beyond this page.
 	HasMore bool `json:"has_more"`
 
-	// NextPage Cursor for the next page; pass as the page parameter with otherwise identical query parameters.
+	// NextPage Opaque cursor for the next page. Pass it as page and keep the other query parameters unchanged to continue the same report.
 	NextPage *string `json:"next_page,omitempty"`
 }
 
-// ComputerUsageV2Result One member's credit usage for a single day.
+// ComputerUsageV2Result One member's usage for the selected dataset for a single day.
 type ComputerUsageV2Result struct {
 	// ByCategories The member's day broken down by each label in the response's top-level `categories` list.
 	ByCategories map[string][]ComputerUsageCategoryCount `json:"by_categories"`
 
-	// Count The member's credit total for the day. May exceed the sum of any single breakdown — usage without a category attribution counts toward the total but not the breakdown.
+	// Count The member's total for the selected dataset that day: credits for credit_usage, queries for query_volume. For credit_usage, the total may exceed the sum of a breakdown because usage without category attribution still counts toward the total.
 	Count int `json:"count"`
 
 	// UserEmail The member's email. Rows whose member can no longer be resolved to an email are omitted.
@@ -4880,7 +4880,7 @@ type GetComputerUsageAnalyticsParams struct {
 	// Limit Buckets per page. 1d: default 7, max 31. 1h: default 24, max 168.
 	Limit *int `form:"limit,omitempty" json:"limit,omitempty"`
 
-	// Page Opaque pagination cursor from a previous response's next_page. Valid only with the same query parameters it was issued for.
+	// Page Opaque pagination cursor from a previous response's next_page. Keep the other query parameters unchanged to continue the same report.
 	Page *string `form:"page,omitempty" json:"page,omitempty"`
 
 	// UserEmail Restrict results to a single member of your organization. Emails that don't match a current member return a generic 400. Not available for query_volume or daily_active_users, which are aggregated per organization; use the v2 endpoint for per-member query volume.
@@ -5014,7 +5014,7 @@ type GetComputerUsageAnalyticsV2Params struct {
 	// Limit Member rows per page. Default 50, max 100. A page can span multiple days.
 	Limit *int `form:"limit,omitempty" json:"limit,omitempty"`
 
-	// Page Opaque pagination cursor from a previous response's next_page. Valid only with the same query parameters it was issued for.
+	// Page Opaque pagination cursor from a previous response's next_page. Keep the other query parameters unchanged to continue the same report.
 	Page *string `form:"page,omitempty" json:"page,omitempty"`
 }
 
@@ -9976,7 +9976,7 @@ type ClientInterface interface {
 
 	// GetComputerUsageAnalyticsV2 Usage Analytics per Member
 	//
-	// Returns your organization's Perplexity usage broken down per member, as daily buckets. Each day lists one row per member with usage that day, keyed by email. credit_usage carries a Model breakdown and an optional legacy Credit Source breakdown, subject to the same availability rules as v1; query_volume carries Feature, Project and Comet. Read the available axes from categories rather than assuming paid/promo data is present. Uses the same organization analytics API key as v1. Only complete UTC days are returned; the in-progress day is never included.
+	// Returns your organization's Perplexity usage broken down per member, as daily buckets. Each day lists one row per member with usage that day, keyed by email. credit_usage returns each member's total credits and a Model breakdown; query_volume carries Feature, Project and Comet. Read the available axes from categories to determine which breakdowns are available. Uses the same organization analytics API key as v1. Only complete UTC days are returned; the in-progress day is never included.
 	//
 	// Corresponds with GET /v2/analytics/computer/usage (the `GetComputerUsageAnalyticsV2` operationId).
 	GetComputerUsageAnalyticsV2(ctx context.Context, params *GetComputerUsageAnalyticsV2Params, reqEditors ...RequestEditorFn) (*http.Response, error)
@@ -10720,7 +10720,7 @@ func (c *Client) ChatCompletionsChatCompletionsPost(ctx context.Context, body Ch
 
 // GetComputerUsageAnalyticsV2 Usage Analytics per Member
 //
-// Returns your organization's Perplexity usage broken down per member, as daily buckets. Each day lists one row per member with usage that day, keyed by email. credit_usage carries a Model breakdown and an optional legacy Credit Source breakdown, subject to the same availability rules as v1; query_volume carries Feature, Project and Comet. Read the available axes from categories rather than assuming paid/promo data is present. Uses the same organization analytics API key as v1. Only complete UTC days are returned; the in-progress day is never included.
+// Returns your organization's Perplexity usage broken down per member, as daily buckets. Each day lists one row per member with usage that day, keyed by email. credit_usage returns each member's total credits and a Model breakdown; query_volume carries Feature, Project and Comet. Read the available axes from categories to determine which breakdowns are available. Uses the same organization analytics API key as v1. Only complete UTC days are returned; the in-progress day is never included.
 //
 // Corresponds with GET /v2/analytics/computer/usage (the `GetComputerUsageAnalyticsV2` operationId).
 func (c *Client) GetComputerUsageAnalyticsV2(ctx context.Context, params *GetComputerUsageAnalyticsV2Params, reqEditors ...RequestEditorFn) (*http.Response, error) {
@@ -12820,7 +12820,7 @@ type ClientWithResponsesInterface interface {
 
 	// GetComputerUsageAnalyticsV2WithResponse Usage Analytics per Member
 	//
-	// Returns your organization's Perplexity usage broken down per member, as daily buckets. Each day lists one row per member with usage that day, keyed by email. credit_usage carries a Model breakdown and an optional legacy Credit Source breakdown, subject to the same availability rules as v1; query_volume carries Feature, Project and Comet. Read the available axes from categories rather than assuming paid/promo data is present. Uses the same organization analytics API key as v1. Only complete UTC days are returned; the in-progress day is never included.
+	// Returns your organization's Perplexity usage broken down per member, as daily buckets. Each day lists one row per member with usage that day, keyed by email. credit_usage returns each member's total credits and a Model breakdown; query_volume carries Feature, Project and Comet. Read the available axes from categories to determine which breakdowns are available. Uses the same organization analytics API key as v1. Only complete UTC days are returned; the in-progress day is never included.
 	//
 	// Returns a wrapper object for the known response body format(s).
 	//
@@ -15450,7 +15450,7 @@ func (c *ClientWithResponses) ChatCompletionsChatCompletionsPostWithResponse(ctx
 
 // GetComputerUsageAnalyticsV2WithResponse Usage Analytics per Member
 //
-// Returns your organization's Perplexity usage broken down per member, as daily buckets. Each day lists one row per member with usage that day, keyed by email. credit_usage carries a Model breakdown and an optional legacy Credit Source breakdown, subject to the same availability rules as v1; query_volume carries Feature, Project and Comet. Read the available axes from categories rather than assuming paid/promo data is present. Uses the same organization analytics API key as v1. Only complete UTC days are returned; the in-progress day is never included.
+// Returns your organization's Perplexity usage broken down per member, as daily buckets. Each day lists one row per member with usage that day, keyed by email. credit_usage returns each member's total credits and a Model breakdown; query_volume carries Feature, Project and Comet. Read the available axes from categories to determine which breakdowns are available. Uses the same organization analytics API key as v1. Only complete UTC days are returned; the in-progress day is never included.
 //
 // Returns a wrapper object for the known response body format(s).
 //
