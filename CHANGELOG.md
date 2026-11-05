@@ -2,6 +2,14 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.3.4, 2026-11-05
+
+- Added web grounding for decisions. New optional request fields `DecisionsRequest.Mode` (type `*DecisionsRequestMode`, constant `DecisionsRequestModeWebGrounding`, with a `Valid` method) and `DecisionsRequest.MaxStaleness` (`*int64`, seconds). With `mode` set to `web_grounding`, the API searches the web before the model answers and fetches the page for a URL-only `state`. `MaxStaleness` limits the age of the fetched page and is ignored without `Mode`.
+- Added optional response fields `DecisionsResponse.SearchResults` (`*[]DecisionSearchResult`) and `DecisionsResponse.FetchedResults` (`*[]DecisionFetchedResult`). They hold the search evidence and fetched page text, and `usage.input_tokens` counts both.
+- Added the types `DecisionSearchResult` (`Url`, `Title`, `Snippet`, `Date`, `LastUpdated`) and `DecisionFetchedResult` (`Url`, `Title`, `Snippet`).
+- `DecisionsRequest.Questions`'s doc comment now says at least one question, with at most 100 when `mode` is `web_grounding`. More returns `400` with `param` `questions`.
+- The doc comments on `DecisionsRequest.State`, `DecisionsRequest_State` and the decisions endpoint methods on `Client`, `ClientWithResponses` and their interfaces describe the new mode. Existing callers are unaffected.
+
 ## v0.3.3, 2026-11-03
 
 - `ComputerUsageResponse.Categories` and `ComputerUsageV2Response.Categories`: the doc comments no longer describe the Credit Source axis as optional paid/promo data. They say to use the list to see which breakdowns are available, and that the `credit_usage` example uses the Model axis.
