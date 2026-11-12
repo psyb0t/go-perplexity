@@ -2,6 +2,12 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.3.5, 2026-11-12
+
+- `ResponsesRequest.MaxOutputTokens`: the doc comment no longer says the field is required for `anthropic/*` models. It now says the field is an optional total output-token budget across the run, including for Anthropic models. When neither the request nor its effort level or saved profile sets a budget, each generation can produce up to 128,000 output tokens, capped by the model's supported limit.
+- Raised the minimum Go version in `go.mod` from 1.26.10 to 1.26.11, which fixes GO-2026-6859 in `net/http`. The development image and the setup reference follow.
+- No exported identifier was added, removed or changed. The client change is a comment-only update matching the upstream spec (version 1.0.0).
+
 ## v0.3.4, 2026-11-05
 
 - Added web grounding for decisions. New optional request fields `DecisionsRequest.Mode` (type `*DecisionsRequestMode`, constant `DecisionsRequestModeWebGrounding`, with a `Valid` method) and `DecisionsRequest.MaxStaleness` (`*int64`, seconds). With `mode` set to `web_grounding`, the API searches the web before the model answers and fetches the page for a URL-only `state`. `MaxStaleness` limits the age of the fetched page and is ignored without `Mode`.

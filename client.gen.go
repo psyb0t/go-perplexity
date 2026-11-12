@@ -4210,7 +4210,7 @@ type ResponsesRequest struct {
 	// LanguagePreference ISO 639-1 language code for response language
 	LanguagePreference *string `json:"language_preference,omitempty"`
 
-	// MaxOutputTokens Maximum tokens to generate. This is a shared optional Agent API request parameter, but it is required when using anthropic/* models. If omitted for an Anthropic model, the API returns HTTP 400 with: validation failed: max_output_tokens is required when using Anthropic models.
+	// MaxOutputTokens Optional total output-token budget across the run, including for Anthropic models. When neither the request nor its effort level or saved profile supplies a budget, each generation can produce up to 128,000 output tokens, capped by the model's supported limit.
 	MaxOutputTokens *int32 `json:"max_output_tokens,omitempty"`
 
 	// MaxSteps Maximum number of research loop steps.
