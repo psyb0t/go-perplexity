@@ -2,6 +2,14 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.3.6, 2026-11-13
+
+- Added the `locate` question type for decisions. New types `LocateQuestion` (`Instructions`, `Type`), `LocateAnswer` (`Spans`, `Type`) and `LocateSpan` (`Start`, `End`, `Text`, `Score`). A `locate` answer lists the verbatim spans of `state` that match the instructions, with offsets in Unicode characters.
+- Added the enum types `LocateQuestionType` and `LocateAnswerType`, each with the constant `...TypeLocate` and a `Valid` method.
+- Added the union methods `Question.AsLocateQuestion`, `Question.FromLocateQuestion`, `Question.MergeLocateQuestion`, `Answer.AsLocateAnswer`, `Answer.FromLocateAnswer` and `Answer.MergeLocateAnswer`. `Question.ValueByDiscriminator` and `Answer.ValueByDiscriminator` now handle the `locate` type.
+- The doc comments on `DecisionsRequest` and `Usage` and the decisions endpoint methods now name the models `pplx-decider-v1.3` and `pplx-decider-flash-v1.3`. The `pplx-decider-latest` aliases now select the v1.3 models, and only the v1.3 models serve `locate` questions.
+- `DecisionsRequest.Questions`'s doc comment now says `locate` questions are not accepted with `mode` set to `web_grounding`. Existing callers are unaffected.
+
 ## v0.3.5, 2026-11-12
 
 - `ResponsesRequest.MaxOutputTokens`: the doc comment no longer says the field is required for `anthropic/*` models. It now says the field is an optional total output-token budget across the run, including for Anthropic models. When neither the request nor its effort level or saved profile sets a budget, each generation can produce up to 128,000 output tokens, capped by the model's supported limit.
