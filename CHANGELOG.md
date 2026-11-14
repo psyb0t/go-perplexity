@@ -2,6 +2,11 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.4.0, 2026-11-14
+
+- Removed the optional fields `ApiSearchRequest.MaxTokens` (`*int`, JSON key `max_tokens`) and `ApiSearchRequest.MaxTokensPerPage` (`*int`, JSON key `max_tokens_per_page`). Callers that set either field must drop it.
+- No other exported identifier changed. The regenerated client matches the upstream spec (version 1.0.0).
+
 ## v0.3.6, 2026-11-13
 
 - Added the `locate` question type for decisions. New types `LocateQuestion` (`Instructions`, `Type`), `LocateAnswer` (`Spans`, `Type`) and `LocateSpan` (`Start`, `End`, `Text`, `Score`). A `locate` answer lists the verbatim spans of `state` that match the instructions, with offsets in Unicode characters.

@@ -2192,12 +2192,6 @@ type ApiSearchRequest struct {
 	// MaxResults Maximum number of results. Values above 20 require search_type=people. Supports up to 20 for web search and up to 50 for people search.
 	MaxResults *int `json:"max_results,omitempty"`
 
-	// MaxTokens Maximum total webpage content tokens to return across all search results
-	MaxTokens *int `json:"max_tokens,omitempty"`
-
-	// MaxTokensPerPage Maximum webpage content tokens to extract from each result page
-	MaxTokensPerPage *int `json:"max_tokens_per_page,omitempty"`
-
 	// Query Search query (required)
 	Query ApiSearchRequest_Query `json:"query"`
 
