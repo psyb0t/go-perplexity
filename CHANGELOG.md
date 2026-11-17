@@ -2,6 +2,15 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.5.0, 2026-11-17
+
+- Added the monitors endpoints. New methods on `Client`: `CreateMonitor`, `CreateMonitorWithBody`, `ListMonitors`, `GetMonitor`, `UpdateMonitor`, `UpdateMonitorWithBody`, `DeleteMonitor`, `PauseMonitor`, `ResumeMonitor`, `RunMonitor`, `ListMonitorRuns`, `GetMonitorRun` and `TestMonitorWebhook`. `ClientWithResponses` has the matching `...WithResponse` methods.
+- Added the monitor types `Monitor`, `MonitorRun`, `MonitorChange`, `MonitorDiff`, `MonitorList`, `MonitorObject`, `CreateMonitorRequest`, `CreateMonitorParams`, `ListMonitorsParams`, `ListMonitorRunsParams` and the response types such as `CreateMonitorResponse` and `GetMonitorRunResponse`. Targets are page targets, and schedules are interval or cron schedules.
+- Added the output item types `SandboxReadFileOutputItem`, `SandboxWriteFileOutputItem`, `ShareFileOutputItem` and `SkillLoadedOutputItem`, with the `OutputItem` methods `As...`, `From...` and `Merge...` for each.
+- Added the field `LocateSpan.SearchResult`.
+- Breaking for types that implement the interfaces: `ClientInterface` and `ClientWithResponsesInterface` gained the monitor methods, so mocks and wrappers must add them. Callers of `Client` and `ClientWithResponses` are unaffected.
+- No exported identifier was removed. The regenerated client matches the upstream spec (version 1.0.0).
+
 ## v0.4.0, 2026-11-14
 
 - Removed the optional fields `ApiSearchRequest.MaxTokens` (`*int`, JSON key `max_tokens`) and `ApiSearchRequest.MaxTokensPerPage` (`*int`, JSON key `max_tokens_per_page`). Callers that set either field must drop it.

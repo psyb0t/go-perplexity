@@ -670,6 +670,21 @@ func (e DecisionsRequestMode) Valid() bool {
 	}
 }
 
+// Defines values for DeleteMonitorResponseObject.
+const (
+	DeleteMonitorResponseObjectMonitor DeleteMonitorResponseObject = "monitor"
+)
+
+// Valid indicates whether the value is a known member of the DeleteMonitorResponseObject enum.
+func (e DeleteMonitorResponseObject) Valid() bool {
+	switch e {
+	case DeleteMonitorResponseObjectMonitor:
+		return true
+	default:
+		return false
+	}
+}
+
 // Defines values for EmbeddingsRequestEncodingFormat.
 const (
 	EmbeddingsRequestEncodingFormatBase64Binary EmbeddingsRequestEncodingFormat = "base64_binary"
@@ -1303,6 +1318,579 @@ func (e ModelObject) Valid() bool {
 	}
 }
 
+// Defines values for MonitorObject.
+const (
+	MonitorObjectMonitor MonitorObject = "monitor"
+)
+
+// Valid indicates whether the value is a known member of the MonitorObject enum.
+func (e MonitorObject) Valid() bool {
+	switch e {
+	case MonitorObjectMonitor:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for MonitorApiErrorType.
+const (
+	MonitorApiErrorTypeApiProductNotAllowed     MonitorApiErrorType = "api_product_not_allowed"
+	MonitorApiErrorTypeBadGateway               MonitorApiErrorType = "bad_gateway"
+	MonitorApiErrorTypeConflict                 MonitorApiErrorType = "conflict"
+	MonitorApiErrorTypeForbidden                MonitorApiErrorType = "forbidden"
+	MonitorApiErrorTypeGatewayTimeout           MonitorApiErrorType = "gateway_timeout"
+	MonitorApiErrorTypeInsufficientQuota        MonitorApiErrorType = "insufficient_quota"
+	MonitorApiErrorTypeInternalError            MonitorApiErrorType = "internal_error"
+	MonitorApiErrorTypeInvalidApiKey            MonitorApiErrorType = "invalid_api_key"
+	MonitorApiErrorTypeInvalidRequest           MonitorApiErrorType = "invalid_request"
+	MonitorApiErrorTypeInvalidState             MonitorApiErrorType = "invalid_state"
+	MonitorApiErrorTypeNotFound                 MonitorApiErrorType = "not_found"
+	MonitorApiErrorTypePaymentRequired          MonitorApiErrorType = "payment_required"
+	MonitorApiErrorTypeQuotaExceeded            MonitorApiErrorType = "quota_exceeded"
+	MonitorApiErrorTypeRequestRateLimitExceeded MonitorApiErrorType = "request_rate_limit_exceeded"
+	MonitorApiErrorTypeRunInProgress            MonitorApiErrorType = "run_in_progress"
+	MonitorApiErrorTypeServiceUnavailable       MonitorApiErrorType = "service_unavailable"
+	MonitorApiErrorTypeTokenExpired             MonitorApiErrorType = "token_expired"
+)
+
+// Valid indicates whether the value is a known member of the MonitorApiErrorType enum.
+func (e MonitorApiErrorType) Valid() bool {
+	switch e {
+	case MonitorApiErrorTypeApiProductNotAllowed:
+		return true
+	case MonitorApiErrorTypeBadGateway:
+		return true
+	case MonitorApiErrorTypeConflict:
+		return true
+	case MonitorApiErrorTypeForbidden:
+		return true
+	case MonitorApiErrorTypeGatewayTimeout:
+		return true
+	case MonitorApiErrorTypeInsufficientQuota:
+		return true
+	case MonitorApiErrorTypeInternalError:
+		return true
+	case MonitorApiErrorTypeInvalidApiKey:
+		return true
+	case MonitorApiErrorTypeInvalidRequest:
+		return true
+	case MonitorApiErrorTypeInvalidState:
+		return true
+	case MonitorApiErrorTypeNotFound:
+		return true
+	case MonitorApiErrorTypePaymentRequired:
+		return true
+	case MonitorApiErrorTypeQuotaExceeded:
+		return true
+	case MonitorApiErrorTypeRequestRateLimitExceeded:
+		return true
+	case MonitorApiErrorTypeRunInProgress:
+		return true
+	case MonitorApiErrorTypeServiceUnavailable:
+		return true
+	case MonitorApiErrorTypeTokenExpired:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for MonitorCronScheduleType.
+const (
+	MonitorCronScheduleTypeCron MonitorCronScheduleType = "cron"
+)
+
+// Valid indicates whether the value is a known member of the MonitorCronScheduleType enum.
+func (e MonitorCronScheduleType) Valid() bool {
+	switch e {
+	case MonitorCronScheduleTypeCron:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for MonitorCronScheduleRequestType.
+const (
+	MonitorCronScheduleRequestTypeCron MonitorCronScheduleRequestType = "cron"
+)
+
+// Valid indicates whether the value is a known member of the MonitorCronScheduleRequestType enum.
+func (e MonitorCronScheduleRequestType) Valid() bool {
+	switch e {
+	case MonitorCronScheduleRequestTypeCron:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for MonitorCurrency.
+const (
+	MonitorCurrencyUSD MonitorCurrency = "USD"
+)
+
+// Valid indicates whether the value is a known member of the MonitorCurrency enum.
+func (e MonitorCurrency) Valid() bool {
+	switch e {
+	case MonitorCurrencyUSD:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for MonitorEventType.
+const (
+	MonitorEventTypeMonitorChangesDetected MonitorEventType = "monitor.changes.detected"
+	MonitorEventTypeMonitorPaused          MonitorEventType = "monitor.paused"
+	MonitorEventTypeMonitorRunCompleted    MonitorEventType = "monitor.run.completed"
+)
+
+// Valid indicates whether the value is a known member of the MonitorEventType enum.
+func (e MonitorEventType) Valid() bool {
+	switch e {
+	case MonitorEventTypeMonitorChangesDetected:
+		return true
+	case MonitorEventTypeMonitorPaused:
+		return true
+	case MonitorEventTypeMonitorRunCompleted:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for MonitorFreshness.
+const (
+	MonitorFreshnessPublished MonitorFreshness = "published"
+	MonitorFreshnessUpdated   MonitorFreshness = "updated"
+)
+
+// Valid indicates whether the value is a known member of the MonitorFreshness enum.
+func (e MonitorFreshness) Valid() bool {
+	switch e {
+	case MonitorFreshnessPublished:
+		return true
+	case MonitorFreshnessUpdated:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for MonitorIntervalScheduleType.
+const (
+	MonitorIntervalScheduleTypeInterval MonitorIntervalScheduleType = "interval"
+)
+
+// Valid indicates whether the value is a known member of the MonitorIntervalScheduleType enum.
+func (e MonitorIntervalScheduleType) Valid() bool {
+	switch e {
+	case MonitorIntervalScheduleTypeInterval:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for MonitorIntervalScheduleRequestType.
+const (
+	MonitorIntervalScheduleRequestTypeInterval MonitorIntervalScheduleRequestType = "interval"
+)
+
+// Valid indicates whether the value is a known member of the MonitorIntervalScheduleRequestType enum.
+func (e MonitorIntervalScheduleRequestType) Valid() bool {
+	switch e {
+	case MonitorIntervalScheduleRequestTypeInterval:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for MonitorListObject.
+const (
+	MonitorListObjectList MonitorListObject = "list"
+)
+
+// Valid indicates whether the value is a known member of the MonitorListObject enum.
+func (e MonitorListObject) Valid() bool {
+	switch e {
+	case MonitorListObjectList:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for MonitorPageChangeType.
+const (
+	MonitorPageChangeTypePageChange MonitorPageChangeType = "page_change"
+)
+
+// Valid indicates whether the value is a known member of the MonitorPageChangeType enum.
+func (e MonitorPageChangeType) Valid() bool {
+	switch e {
+	case MonitorPageChangeTypePageChange:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for MonitorPageTargetType.
+const (
+	MonitorPageTargetTypePage MonitorPageTargetType = "page"
+)
+
+// Valid indicates whether the value is a known member of the MonitorPageTargetType enum.
+func (e MonitorPageTargetType) Valid() bool {
+	switch e {
+	case MonitorPageTargetTypePage:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for MonitorPageTargetErrorType.
+const (
+	MonitorPageTargetErrorTypePage MonitorPageTargetErrorType = "page"
+)
+
+// Valid indicates whether the value is a known member of the MonitorPageTargetErrorType enum.
+func (e MonitorPageTargetErrorType) Valid() bool {
+	switch e {
+	case MonitorPageTargetErrorTypePage:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for MonitorPageTargetRequestType.
+const (
+	MonitorPageTargetRequestTypePage MonitorPageTargetRequestType = "page"
+)
+
+// Valid indicates whether the value is a known member of the MonitorPageTargetRequestType enum.
+func (e MonitorPageTargetRequestType) Valid() bool {
+	switch e {
+	case MonitorPageTargetRequestTypePage:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for MonitorPauseReason.
+const (
+	MonitorPauseReasonInsufficientCredits MonitorPauseReason = "insufficient_credits"
+	MonitorPauseReasonOrgPolicy           MonitorPauseReason = "org_policy"
+	MonitorPauseReasonSourceFailing       MonitorPauseReason = "source_failing"
+	MonitorPauseReasonUser                MonitorPauseReason = "user"
+	MonitorPauseReasonWebhookFailing      MonitorPauseReason = "webhook_failing"
+)
+
+// Valid indicates whether the value is a known member of the MonitorPauseReason enum.
+func (e MonitorPauseReason) Valid() bool {
+	switch e {
+	case MonitorPauseReasonInsufficientCredits:
+		return true
+	case MonitorPauseReasonOrgPolicy:
+		return true
+	case MonitorPauseReasonSourceFailing:
+		return true
+	case MonitorPauseReasonUser:
+		return true
+	case MonitorPauseReasonWebhookFailing:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for MonitorRunObject.
+const (
+	MonitorRunObjectMonitorRun MonitorRunObject = "monitor.run"
+)
+
+// Valid indicates whether the value is a known member of the MonitorRunObject enum.
+func (e MonitorRunObject) Valid() bool {
+	switch e {
+	case MonitorRunObjectMonitorRun:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for MonitorRunFailureCode.
+const (
+	MonitorRunFailureCodeDetectFailed    MonitorRunFailureCode = "detect_failed"
+	MonitorRunFailureCodeGateUnavailable MonitorRunFailureCode = "gate_unavailable"
+	MonitorRunFailureCodeJudgeFailed     MonitorRunFailureCode = "judge_failed"
+	MonitorRunFailureCodeNotifyFailed    MonitorRunFailureCode = "notify_failed"
+	MonitorRunFailureCodeSourceFailed    MonitorRunFailureCode = "source_failed"
+	MonitorRunFailureCodeTimedOut        MonitorRunFailureCode = "timed_out"
+)
+
+// Valid indicates whether the value is a known member of the MonitorRunFailureCode enum.
+func (e MonitorRunFailureCode) Valid() bool {
+	switch e {
+	case MonitorRunFailureCodeDetectFailed:
+		return true
+	case MonitorRunFailureCodeGateUnavailable:
+		return true
+	case MonitorRunFailureCodeJudgeFailed:
+		return true
+	case MonitorRunFailureCodeNotifyFailed:
+		return true
+	case MonitorRunFailureCodeSourceFailed:
+		return true
+	case MonitorRunFailureCodeTimedOut:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for MonitorRunInProgressErrorErrorCode.
+const (
+	MonitorRunInProgressErrorErrorCodeN409 MonitorRunInProgressErrorErrorCode = 409
+)
+
+// Valid indicates whether the value is a known member of the MonitorRunInProgressErrorErrorCode enum.
+func (e MonitorRunInProgressErrorErrorCode) Valid() bool {
+	switch e {
+	case MonitorRunInProgressErrorErrorCodeN409:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for MonitorRunInProgressErrorErrorType.
+const (
+	MonitorRunInProgressErrorErrorTypeRunInProgress MonitorRunInProgressErrorErrorType = "run_in_progress"
+)
+
+// Valid indicates whether the value is a known member of the MonitorRunInProgressErrorErrorType enum.
+func (e MonitorRunInProgressErrorErrorType) Valid() bool {
+	switch e {
+	case MonitorRunInProgressErrorErrorTypeRunInProgress:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for MonitorRunListObject.
+const (
+	MonitorRunListObjectList MonitorRunListObject = "list"
+)
+
+// Valid indicates whether the value is a known member of the MonitorRunListObject enum.
+func (e MonitorRunListObject) Valid() bool {
+	switch e {
+	case MonitorRunListObjectList:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for MonitorRunStatus.
+const (
+	MonitorRunStatusFailed    MonitorRunStatus = "failed"
+	MonitorRunStatusQueued    MonitorRunStatus = "queued"
+	MonitorRunStatusRunning   MonitorRunStatus = "running"
+	MonitorRunStatusSkipped   MonitorRunStatus = "skipped"
+	MonitorRunStatusSucceeded MonitorRunStatus = "succeeded"
+)
+
+// Valid indicates whether the value is a known member of the MonitorRunStatus enum.
+func (e MonitorRunStatus) Valid() bool {
+	switch e {
+	case MonitorRunStatusFailed:
+		return true
+	case MonitorRunStatusQueued:
+		return true
+	case MonitorRunStatusRunning:
+		return true
+	case MonitorRunStatusSkipped:
+		return true
+	case MonitorRunStatusSucceeded:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for MonitorRunTrigger.
+const (
+	MonitorRunTriggerManual   MonitorRunTrigger = "manual"
+	MonitorRunTriggerSchedule MonitorRunTrigger = "schedule"
+)
+
+// Valid indicates whether the value is a known member of the MonitorRunTrigger enum.
+func (e MonitorRunTrigger) Valid() bool {
+	switch e {
+	case MonitorRunTriggerManual:
+		return true
+	case MonitorRunTriggerSchedule:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for MonitorSearchResultChangeType.
+const (
+	MonitorSearchResultChangeTypeSearchResult MonitorSearchResultChangeType = "search_result"
+)
+
+// Valid indicates whether the value is a known member of the MonitorSearchResultChangeType enum.
+func (e MonitorSearchResultChangeType) Valid() bool {
+	switch e {
+	case MonitorSearchResultChangeTypeSearchResult:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for MonitorSearchTargetType.
+const (
+	MonitorSearchTargetTypeSearch MonitorSearchTargetType = "search"
+)
+
+// Valid indicates whether the value is a known member of the MonitorSearchTargetType enum.
+func (e MonitorSearchTargetType) Valid() bool {
+	switch e {
+	case MonitorSearchTargetTypeSearch:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for MonitorSearchTargetRequestType.
+const (
+	MonitorSearchTargetRequestTypeSearch MonitorSearchTargetRequestType = "search"
+)
+
+// Valid indicates whether the value is a known member of the MonitorSearchTargetRequestType enum.
+func (e MonitorSearchTargetRequestType) Valid() bool {
+	switch e {
+	case MonitorSearchTargetRequestTypeSearch:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for MonitorStatus.
+const (
+	MonitorStatusActive MonitorStatus = "active"
+	MonitorStatusPaused MonitorStatus = "paused"
+)
+
+// Valid indicates whether the value is a known member of the MonitorStatus enum.
+func (e MonitorStatus) Valid() bool {
+	switch e {
+	case MonitorStatusActive:
+		return true
+	case MonitorStatusPaused:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for MonitorTargetErrorCode.
+const (
+	MonitorTargetErrorCodeBlocked          MonitorTargetErrorCode = "blocked"
+	MonitorTargetErrorCodeFetchUnavailable MonitorTargetErrorCode = "fetch_unavailable"
+	MonitorTargetErrorCodeHttpStatus       MonitorTargetErrorCode = "http_status"
+	MonitorTargetErrorCodeInvalidUrl       MonitorTargetErrorCode = "invalid_url"
+	MonitorTargetErrorCodeLoadFailed       MonitorTargetErrorCode = "load_failed"
+	MonitorTargetErrorCodeNoContent        MonitorTargetErrorCode = "no_content"
+	MonitorTargetErrorCodeTimeout          MonitorTargetErrorCode = "timeout"
+)
+
+// Valid indicates whether the value is a known member of the MonitorTargetErrorCode enum.
+func (e MonitorTargetErrorCode) Valid() bool {
+	switch e {
+	case MonitorTargetErrorCodeBlocked:
+		return true
+	case MonitorTargetErrorCodeFetchUnavailable:
+		return true
+	case MonitorTargetErrorCodeHttpStatus:
+		return true
+	case MonitorTargetErrorCodeInvalidUrl:
+		return true
+	case MonitorTargetErrorCodeLoadFailed:
+		return true
+	case MonitorTargetErrorCodeNoContent:
+		return true
+	case MonitorTargetErrorCodeTimeout:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for MonitorWebhookTestObject.
+const (
+	MonitorWebhookTestObjectMonitorWebhookTest MonitorWebhookTestObject = "monitor.webhook_test"
+)
+
+// Valid indicates whether the value is a known member of the MonitorWebhookTestObject enum.
+func (e MonitorWebhookTestObject) Valid() bool {
+	switch e {
+	case MonitorWebhookTestObjectMonitorWebhookTest:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for MonitorWebhookTestError.
+const (
+	MonitorWebhookTestErrorBlockedAddress MonitorWebhookTestError = "blocked_address"
+	MonitorWebhookTestErrorHttpStatus     MonitorWebhookTestError = "http_status"
+	MonitorWebhookTestErrorInvalidUrl     MonitorWebhookTestError = "invalid_url"
+	MonitorWebhookTestErrorNetworkError   MonitorWebhookTestError = "network_error"
+	MonitorWebhookTestErrorSendFailed     MonitorWebhookTestError = "send_failed"
+	MonitorWebhookTestErrorTimeout        MonitorWebhookTestError = "timeout"
+	MonitorWebhookTestErrorTlsCertificate MonitorWebhookTestError = "tls_certificate"
+)
+
+// Valid indicates whether the value is a known member of the MonitorWebhookTestError enum.
+func (e MonitorWebhookTestError) Valid() bool {
+	switch e {
+	case MonitorWebhookTestErrorBlockedAddress:
+		return true
+	case MonitorWebhookTestErrorHttpStatus:
+		return true
+	case MonitorWebhookTestErrorInvalidUrl:
+		return true
+	case MonitorWebhookTestErrorNetworkError:
+		return true
+	case MonitorWebhookTestErrorSendFailed:
+		return true
+	case MonitorWebhookTestErrorTimeout:
+		return true
+	case MonitorWebhookTestErrorTlsCertificate:
+		return true
+	default:
+		return false
+	}
+}
+
 // Defines values for NamespaceToolType.
 const (
 	NamespaceToolTypeNamespace NamespaceToolType = "namespace"
@@ -1531,6 +2119,21 @@ func (e RoleType) Valid() bool {
 	}
 }
 
+// Defines values for SandboxReadFileOutputItemType.
+const (
+	SandboxReadFileOutputItemTypeSandboxReadFile SandboxReadFileOutputItemType = "sandbox_read_file"
+)
+
+// Valid indicates whether the value is a known member of the SandboxReadFileOutputItemType enum.
+func (e SandboxReadFileOutputItemType) Valid() bool {
+	switch e {
+	case SandboxReadFileOutputItemTypeSandboxReadFile:
+		return true
+	default:
+		return false
+	}
+}
+
 // Defines values for SandboxResultsOutputItemStatus.
 const (
 	SandboxResultsOutputItemStatusCompleted SandboxResultsOutputItemStatus = "completed"
@@ -1576,6 +2179,21 @@ const (
 func (e SandboxToolType) Valid() bool {
 	switch e {
 	case SandboxToolTypeSandbox:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for SandboxWriteFileOutputItemType.
+const (
+	SandboxWriteFileOutputItemTypeSandboxWriteFile SandboxWriteFileOutputItemType = "sandbox_write_file"
+)
+
+// Valid indicates whether the value is a known member of the SandboxWriteFileOutputItemType enum.
+func (e SandboxWriteFileOutputItemType) Valid() bool {
+	switch e {
+	case SandboxWriteFileOutputItemTypeSandboxWriteFile:
 		return true
 	default:
 		return false
@@ -1663,6 +2281,36 @@ const (
 func (e SearchSource) Valid() bool {
 	switch e {
 	case SearchSourceWeb:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ShareFileOutputItemType.
+const (
+	ShareFileOutputItemTypeShareFile ShareFileOutputItemType = "share_file"
+)
+
+// Valid indicates whether the value is a known member of the ShareFileOutputItemType enum.
+func (e ShareFileOutputItemType) Valid() bool {
+	switch e {
+	case ShareFileOutputItemTypeShareFile:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for SkillLoadedOutputItemType.
+const (
+	SkillLoadedOutputItemTypeSkillLoaded SkillLoadedOutputItemType = "skill_loaded"
+)
+
+// Valid indicates whether the value is a known member of the SkillLoadedOutputItemType enum.
+func (e SkillLoadedOutputItemType) Valid() bool {
+	switch e {
+	case SkillLoadedOutputItemTypeSkillLoaded:
 		return true
 	default:
 		return false
@@ -2933,6 +3581,21 @@ type CreateBatchRequestCompletionWindow string
 // CreateBatchRequestEndpoint Endpoint every line in the input file targets
 type CreateBatchRequestEndpoint string
 
+// CreateMonitorRequest defines model for CreateMonitorRequest.
+type CreateMonitorRequest struct {
+	// Goal What counts as worth an alert; each candidate is judged against it
+	Goal *string `json:"goal,omitempty"`
+
+	// Metadata Up to 16 key value pairs; keys 1 to 64 characters, values up to 512 characters (Unicode code points, valid UTF-8). Echoed on every webhook.
+	Metadata *MonitorMetadata       `json:"metadata,omitempty"`
+	Name     string                 `json:"name"`
+	Schedule MonitorScheduleRequest `json:"schedule"`
+
+	// Targets Exactly one `search` target, or 1 to 10 `page` targets with distinct URLs
+	Targets MonitorTargets         `json:"targets"`
+	Webhook *MonitorWebhookRequest `json:"webhook,omitempty"`
+}
+
 // Currency Currency code for cost values
 type Currency string
 
@@ -3000,7 +3663,7 @@ type DecisionSearchResult struct {
 	Url string `json:"url"`
 }
 
-// DecisionsRequest The content to evaluate and the named questions to ask about it. `mode` and `max_staleness` are optional. An unknown top-level field returns `400`. The `state` plus any one question must stay under 256K input tokens; on `pplx-decider-v1.3`, `pplx-decider-flash-v1.3` and `pplx-decider-v1.2`, questions that do not fit together are answered in groups, and each group counts the `state` again. `pplx-decider-flash-v1.2` answers each question separately and counts the `state` again for every question. The body must stay under 32 MiB.
+// DecisionsRequest The content to evaluate and the named questions to ask about it. `mode` and `max_staleness` are optional. An unknown top-level field returns `400`. The `state` plus any one question must stay under 256K input tokens; questions that do not fit together are answered in groups, and each group counts the `state` again. The body must stay under 32 MiB.
 type DecisionsRequest struct {
 	// MaxStaleness Maximum age of the fetched page in seconds since its last crawl. Applies to URL-only state with `mode: "web_grounding"`. An older stored copy triggers a fresh crawl before the page text is used. Omit to use a stored copy without an age limit. Ignored without `mode`. Does not filter search results.
 	MaxStaleness *int64 `json:"max_staleness,omitempty"`
@@ -3011,7 +3674,7 @@ type DecisionsRequest struct {
 	// Model The decision model: `pplx-decider-v1.3` (27B, $0.02 per million input tokens), `pplx-decider-flash-v1.3` (4B, $0.01 per million input tokens), `pplx-decider-v1.2` (27B, $0.02 per million input tokens) or `pplx-decider-flash-v1.2` (4B, $0.01 per million input tokens). The aliases `pplx-decider-latest` and `perplexity/pplx-decider-latest` select `pplx-decider-v1.3`, and `pplx-decider-flash-latest` and `perplexity/pplx-decider-flash-latest` select `pplx-decider-flash-v1.3`; an alias can move to a newer model over time. `pplx-decider-v1.1-27b` and `pplx-decider-v1-27b` remain accepted and select `pplx-decider-v1.2`. Only the v1.3 models serve `locate` questions. A missing or unknown model returns `400`.
 	Model string `json:"model"`
 
-	// Questions Questions keyed by a non-empty name you choose. The response uses the same names. At least one question. With `mode` `web_grounding`, at most 100, and `locate` questions are not accepted; either returns `400` with `param` `questions`.
+	// Questions Questions keyed by a non-empty name you choose. The response uses the same names. At least one question. With `mode` `web_grounding`, at most 100; more returns `400` with `param` `questions`.
 	Questions map[string]Question `json:"questions"`
 
 	// State The content every question in the request refers to: a string, an object, or an array. Images can appear anywhere in `state` as OpenAI-style `image_url` parts with base64 PNG, JPEG, or WebP data URLs and are read in place. Up to 8 images per question. With `mode: "web_grounding"`, a single page URL is fetched and replaced with its text before web search. Use `max_staleness` to control the age of the fetched copy.
@@ -3052,6 +3715,16 @@ type DecisionsResponse struct {
 	// Usage Token counts for this request.
 	Usage Usage `json:"usage"`
 }
+
+// DeleteMonitorResponse defines model for DeleteMonitorResponse.
+type DeleteMonitorResponse struct {
+	Deleted bool                        `json:"deleted"`
+	Id      string                      `json:"id"`
+	Object  DeleteMonitorResponseObject `json:"object"`
+}
+
+// DeleteMonitorResponseObject defines model for DeleteMonitorResponse.Object.
+type DeleteMonitorResponseObject string
 
 // EmbeddingObject A single embedding result
 type EmbeddingObject struct {
@@ -3610,7 +4283,7 @@ type LocateAnswer struct {
 // LocateAnswerType Always `locate`.
 type LocateAnswerType string
 
-// LocateQuestion A question that returns the spans of `state` that match `instructions`. It ignores `criteria` and any other member besides `type` and `instructions`. Only `pplx-decider-v1.3` and `pplx-decider-flash-v1.3` serve it; other models return `400`. A request with a `locate` question needs a string `state`, no images, at most 128 questions and native mode (no `web_grounding`). Other question types can be sent in the same request. Locate was trained on inputs of up to 8k tokens and evaluated on inputs of up to 32k tokens; longer inputs are accepted, but span quality on them is not measured.
+// LocateQuestion A question that returns the spans of `state` that match `instructions`. It ignores `criteria` and any other member besides `type` and `instructions`. Only `pplx-decider-v1.3` and `pplx-decider-flash-v1.3` serve it; other models return `400`. A request with a `locate` question needs a string `state`, no images, and at most 128 questions; with `web_grounding`, a page URL `state` returns `400` with `param` `state`. Other question types can be sent in the same request. Locate was trained on inputs of up to 8k tokens and evaluated on inputs of up to 32k tokens; longer inputs are accepted, but span quality on them is not measured.
 type LocateQuestion struct {
 	// Instructions What to find in `state`: a short label such as `email address` or an instruction such as `Extract the city where the job is located.` Whitespace-only text returns `400`.
 	Instructions string `json:"instructions"`
@@ -3629,6 +4302,9 @@ type LocateSpan struct {
 
 	// Score The model's score for the span. Higher means more certainty.
 	Score float64 `json:"score"`
+
+	// SearchResult With `web_grounding`, present when the span was found in search evidence: the index of that result in `search_results`. `start`, `end`, and `text` then refer to that result's `snippet`.
+	SearchResult *int `json:"search_result,omitempty"`
 
 	// Start Offset of the first character of the span in `state`, in Unicode characters.
 	Start int `json:"start"`
@@ -3865,6 +4541,626 @@ type Model struct {
 
 // ModelObject The object type, which is always `model`.
 type ModelObject string
+
+// Monitor Fields that do not apply are omitted, never null: `webhook`,
+// `pause_reason`, `current_run_id`, `next_run_at` and `last_run`.
+type Monitor struct {
+	// CreatedAt RFC 3339 in UTC with whole seconds, for example `2026-11-12T09:00:41Z`.
+	CreatedAt MonitorTimestamp `json:"created_at"`
+
+	// CurrentRunId The queued or running run
+	CurrentRunId *string `json:"current_run_id,omitempty"`
+
+	// Goal `""` when unset
+	Goal string `json:"goal"`
+
+	// Id Opaque ID with the prefix `mon_`
+	Id string `json:"id"`
+
+	// LastRun The last finished run
+	LastRun *MonitorLastRun `json:"last_run,omitempty"`
+
+	// Metadata Up to 16 key value pairs; keys 1 to 64 characters, values up to 512 characters (Unicode code points, valid UTF-8). Echoed on every webhook.
+	Metadata MonitorMetadata `json:"metadata"`
+	Name     string          `json:"name"`
+
+	// NextRunAt Omitted while paused
+	NextRunAt *MonitorTimestamp `json:"next_run_at,omitempty"`
+	Object    MonitorObject     `json:"object"`
+
+	// PauseReason Only while `paused`
+	PauseReason *MonitorPauseReason `json:"pause_reason,omitempty"`
+
+	// Schedule When a monitor runs. New types may be added.
+	Schedule MonitorSchedule `json:"schedule"`
+
+	// Status `active` monitors run on their schedule; `paused` ones don't run until
+	// resumed. Whether a run is in flight is `current_run_id`, not the
+	// status. New statuses may be added; treat an unknown one as not
+	// running on its schedule.
+	Status  MonitorStatus   `json:"status"`
+	Targets []MonitorTarget `json:"targets"`
+
+	// UpdatedAt RFC 3339 in UTC with whole seconds, for example `2026-11-12T09:00:41Z`.
+	UpdatedAt MonitorTimestamp `json:"updated_at"`
+	Webhook   *MonitorWebhook  `json:"webhook,omitempty"`
+}
+
+// MonitorObject defines model for Monitor.Object.
+type MonitorObject string
+
+// MonitorApiError defines model for MonitorApiError.
+type MonitorApiError struct {
+	Error *struct {
+		// Code HTTP status code
+		Code int `json:"code"`
+
+		// Message Human-readable error message
+		Message string `json:"message"`
+
+		// Param Parameter that caused the error
+		Param *string `json:"param,omitempty"`
+
+		// Type Machine-readable error type. Monitors returns `invalid_request`
+		// (400), `invalid_api_key`, `token_expired` and
+		// `insufficient_quota` (401), `payment_required` (402),
+		// `forbidden` and `api_product_not_allowed` (403), `not_found`
+		// (404), `invalid_state` (409: the monitor's state does not allow
+		// the request; change it first), `conflict` (409: the monitor was
+		// modified concurrently; retry), `quota_exceeded` (409),
+		// `run_in_progress` (409), `request_rate_limit_exceeded` (429),
+		// `internal_error` (500), `bad_gateway` (502), `service_unavailable` (503) and
+		// `gateway_timeout` (504). New types may be added; act on `code`
+		// for an unknown one.
+		Type MonitorApiErrorType `json:"type"`
+	} `json:"error,omitempty"`
+}
+
+// MonitorApiErrorType Machine-readable error type. Monitors returns `invalid_request`
+// (400), `invalid_api_key`, `token_expired` and
+// `insufficient_quota` (401), `payment_required` (402),
+// `forbidden` and `api_product_not_allowed` (403), `not_found`
+// (404), `invalid_state` (409: the monitor's state does not allow
+// the request; change it first), `conflict` (409: the monitor was
+// modified concurrently; retry), `quota_exceeded` (409),
+// `run_in_progress` (409), `request_rate_limit_exceeded` (429),
+// `internal_error` (500), `bad_gateway` (502), `service_unavailable` (503) and
+// `gateway_timeout` (504). New types may be added; act on `code`
+// for an unknown one.
+type MonitorApiErrorType string
+
+// MonitorChange One finding the judge kept. New types may be added; skip changes with an unknown type.
+type MonitorChange struct {
+	union json.RawMessage
+}
+
+// MonitorChangeId Stable opaque ID with the prefix `chg_`. Use it to deduplicate the same finding across runs and webhook deliveries.
+type MonitorChangeId = string
+
+// MonitorCronSchedule defines model for MonitorCronSchedule.
+type MonitorCronSchedule struct {
+	// Cron Five-field cron expression, for example `0 9 * * 1-5`, without a `TZ=` prefix. Runs may be as often as every minute and at most 31 days apart, checked in `timezone`: monthly passes; quarterly, yearly, the 31st and leap-day schedules are rejected. Runs get up to 10 minutes of jitter.
+	Cron string `json:"cron"`
+
+	// Timezone IANA timezone, for example `Europe/Belgrade`. Optional in requests (default `UTC`); always returned.
+	Timezone string                  `json:"timezone"`
+	Type     MonitorCronScheduleType `json:"type"`
+}
+
+// MonitorCronScheduleType defines model for MonitorCronSchedule.Type.
+type MonitorCronScheduleType string
+
+// MonitorCronScheduleRequest defines model for MonitorCronScheduleRequest.
+type MonitorCronScheduleRequest struct {
+	Cron     string                         `json:"cron"`
+	Timezone *string                        `json:"timezone,omitempty"`
+	Type     MonitorCronScheduleRequestType `json:"type"`
+}
+
+// MonitorCronScheduleRequestType defines model for MonitorCronScheduleRequest.Type.
+type MonitorCronScheduleRequestType string
+
+// MonitorCurrency Currency code for cost values
+type MonitorCurrency string
+
+// MonitorDiff Text changes between two page checks.
+type MonitorDiff struct {
+	// AddedLines Added lines in the whole diff, also when `unified` was cut
+	AddedLines int32 `json:"added_lines"`
+
+	// RemovedLines Removed lines in the whole diff, also when `unified` was cut
+	RemovedLines int32 `json:"removed_lines"`
+
+	// Truncated Whether `unified` was cut to fit the 24 KiB byte limit. It keeps
+	// complete lines where possible; an oversized line can be shortened
+	// at a UTF-8 character boundary. Its last hunk header counts only
+	// the lines shown.
+	Truncated bool `json:"truncated"`
+
+	// Unified Unified diff without file headers: `@@ -l,s +l,s @@` hunks with one
+	// context line, each line prefixed with ` `, `-` or `+` and ending in
+	// `\n`. Any diff library or viewer reads it. Limited to 24 KiB
+	// (24,576 UTF-8 bytes).
+	Unified string `json:"unified"`
+}
+
+// MonitorDomain A bare host name, such as `example.com`.
+type MonitorDomain = string
+
+// MonitorEventType `monitor.changes.detected`: a run succeeded with at least one change.
+// `monitor.run.completed`: a run ended `succeeded` (with or without
+// changes) or `failed`. `monitor.paused`: the service paused the
+// monitor; your own pause sends nothing. New types may be added; a new
+// type is sent only to webhooks that list it in `events`.
+type MonitorEventType string
+
+// MonitorFreshness New values may be added; ignore unknown ones in responses.
+type MonitorFreshness string
+
+// MonitorIntervalSchedule defines model for MonitorIntervalSchedule.
+type MonitorIntervalSchedule struct {
+	// Interval A whole number of minutes, hours, days or weeks (`30m`, `6h`,
+	// `1d`, `2w`), from `1m` to `31d`. Responses use the largest exact
+	// unit, so `60m` reads back as `1h`. Runs get up to 10% jitter.
+	Interval string                      `json:"interval"`
+	Type     MonitorIntervalScheduleType `json:"type"`
+}
+
+// MonitorIntervalScheduleType defines model for MonitorIntervalSchedule.Type.
+type MonitorIntervalScheduleType string
+
+// MonitorIntervalScheduleRequest defines model for MonitorIntervalScheduleRequest.
+type MonitorIntervalScheduleRequest struct {
+	// Interval A whole number of minutes, hours, days or weeks (`30m`, `6h`,
+	// `1d`, `2w`), from `1m` to `31d`. Runs get up to 10% jitter.
+	Interval string                             `json:"interval"`
+	Type     MonitorIntervalScheduleRequestType `json:"type"`
+}
+
+// MonitorIntervalScheduleRequestType defines model for MonitorIntervalScheduleRequest.Type.
+type MonitorIntervalScheduleRequestType string
+
+// MonitorJudge Judging settings for this target. Present only when the monitor overrides the default threshold.
+type MonitorJudge struct {
+	// Threshold Minimum score, above 0 and up to 1, that every judging check must reach for a result or page change to be kept. A higher value keeps fewer changes.
+	Threshold *float64 `json:"threshold,omitempty"`
+}
+
+// MonitorJudgeRequest Judging settings for this target.
+type MonitorJudgeRequest struct {
+	// Threshold Minimum score, above 0 and up to 1, that every judging check must reach for a result or page change to be kept. A higher value keeps fewer changes.
+	Threshold *float64 `json:"threshold,omitempty"`
+}
+
+// MonitorLastRun The last finished run
+type MonitorLastRun struct {
+	ChangeCount int32 `json:"change_count"`
+
+	// FinishedAt RFC 3339 in UTC with whole seconds, for example `2026-11-12T09:00:41Z`.
+	FinishedAt MonitorTimestamp `json:"finished_at"`
+	Id         string           `json:"id"`
+
+	// Status `queued` is a manual run that has not started. `skipped` is a run that did not start, including a queued run cancelled by pausing the monitor. New statuses may be added; treat an unknown one as not finished.
+	Status MonitorRunStatus `json:"status"`
+}
+
+// MonitorList defines model for MonitorList.
+type MonitorList struct {
+	Data []Monitor `json:"data"`
+
+	// HasMore Pass the last `data[].id` as `after` for the next page
+	HasMore bool              `json:"has_more"`
+	Object  MonitorListObject `json:"object"`
+}
+
+// MonitorListObject defines model for MonitorList.Object.
+type MonitorListObject string
+
+// MonitorMetadata Up to 16 key value pairs; keys 1 to 64 characters, values up to 512 characters (Unicode code points, valid UTF-8). Echoed on every webhook.
+type MonitorMetadata map[string]string
+
+// MonitorPageChange A meaningful change to a page target
+type MonitorPageChange struct {
+	// Confidence Score from 0 to 1 that the change matches `goal`; higher is more
+	// confident. Compare scores within one monitor; the scale may be
+	// recalibrated.
+	Confidence float64 `json:"confidence"`
+
+	// Diff Text changes between two page checks.
+	Diff MonitorDiff `json:"diff"`
+
+	// FetchedAt When the later snapshot was fetched
+	FetchedAt MonitorTimestamp `json:"fetched_at"`
+
+	// Id Stable opaque ID with the prefix `chg_`. Use it to deduplicate the same finding across runs and webhook deliveries.
+	Id MonitorChangeId `json:"id"`
+
+	// PreviousFetchedAt When the earlier of the two compared snapshots was fetched
+	PreviousFetchedAt MonitorTimestamp `json:"previous_fetched_at"`
+
+	// Title Omitted when unknown
+	Title *string               `json:"title,omitempty"`
+	Type  MonitorPageChangeType `json:"type"`
+	Url   string                `json:"url"`
+}
+
+// MonitorPageChangeType defines model for MonitorPageChange.Type.
+type MonitorPageChangeType string
+
+// MonitorPageTarget Reports meaningful changes to one URL. The first run of a page
+// target saves a baseline and reports nothing.
+type MonitorPageTarget struct {
+	// Judge Judging settings for this target. Present only when the monitor overrides the default threshold.
+	Judge *MonitorJudge         `json:"judge,omitempty"`
+	Type  MonitorPageTargetType `json:"type"`
+
+	// Url Absolute `http(s)` URL of a public host, without credentials
+	Url string `json:"url"`
+}
+
+// MonitorPageTargetType defines model for MonitorPageTarget.Type.
+type MonitorPageTargetType string
+
+// MonitorPageTargetError A page target that could not be read this run
+type MonitorPageTargetError struct {
+	// Code Why the page could not be read: the URL is not valid (`invalid_url`), the site blocked the request (`blocked`), the page has no readable text (`no_content`), loading failed (`load_failed`) or timed out (`timeout`), page retrieval is temporarily unavailable (`fetch_unavailable`), or the page returned an error status (`http_status`, with `status_code`). New codes may be added.
+	Code MonitorTargetErrorCode `json:"code"`
+
+	// Message Human-readable; may change. Do not parse.
+	Message string `json:"message"`
+
+	// StatusCode The page's HTTP status; only with `http_status`
+	StatusCode *int32                     `json:"status_code,omitempty"`
+	Type       MonitorPageTargetErrorType `json:"type"`
+	Url        string                     `json:"url"`
+}
+
+// MonitorPageTargetErrorType defines model for MonitorPageTargetError.Type.
+type MonitorPageTargetErrorType string
+
+// MonitorPageTargetRequest defines model for MonitorPageTargetRequest.
+type MonitorPageTargetRequest struct {
+	// Judge Judging settings for this target.
+	Judge *MonitorJudgeRequest         `json:"judge,omitempty"`
+	Type  MonitorPageTargetRequestType `json:"type"`
+
+	// Url Absolute `http(s)` URL of a public host, without credentials
+	Url string `json:"url"`
+}
+
+// MonitorPageTargetRequestType defines model for MonitorPageTargetRequest.Type.
+type MonitorPageTargetRequestType string
+
+// MonitorPauseReason Why a `paused` monitor stopped: you paused it (`user`), credits ran
+// out, webhook deliveries repeatedly failed (`webhook_failing`), every source the monitor reads repeatedly failed (`source_failing`), or your API Group's policy
+// no longer allows monitors. Resume it once the cause is
+// fixed. New reasons may be added; treat an unknown value as a reason to
+// check the monitor before resuming it.
+type MonitorPauseReason string
+
+// MonitorRun defines model for MonitorRun.
+type MonitorRun struct {
+	Changes []MonitorChange  `json:"changes"`
+	Counts  MonitorRunCounts `json:"counts"`
+
+	// CreatedAt RFC 3339 in UTC with whole seconds, for example `2026-11-12T09:00:41Z`.
+	CreatedAt MonitorTimestamp `json:"created_at"`
+
+	// Error Only on `failed` and `skipped` runs
+	Error *MonitorRunError `json:"error,omitempty"`
+
+	// FinishedAt Omitted until the run ends
+	FinishedAt *MonitorTimestamp `json:"finished_at,omitempty"`
+
+	// Id Opaque ID with the prefix `run_`
+	Id        string           `json:"id"`
+	MonitorId string           `json:"monitor_id"`
+	Object    MonitorRunObject `json:"object"`
+
+	// Status `queued` is a manual run that has not started. `skipped` is a run that did not start, including a queued run cancelled by pausing the monitor. New statuses may be added; treat an unknown one as not finished.
+	Status       MonitorRunStatus     `json:"status"`
+	TargetErrors []MonitorTargetError `json:"target_errors"`
+
+	// Trigger What started the run. New triggers may be added; accept unknown values.
+	Trigger MonitorRunTrigger `json:"trigger"`
+
+	// Usage Usage for the run. Only a `succeeded` run has nonzero usage. A succeeded Search run is billed once per run and reports zero `fetched_urls`; Page monitors report counted `fetched_urls`. Judging is included in the price.
+	Usage MonitorRunUsage `json:"usage"`
+
+	// Window Omitted while the run is `queued`
+	Window *MonitorRunWindow `json:"window,omitempty"`
+}
+
+// MonitorRunObject defines model for MonitorRun.Object.
+type MonitorRunObject string
+
+// MonitorRunCost Estimated run cost at list prices: $0.001 per succeeded Search run or counted fetched URL in a succeeded Page run, rounded to 5 decimal places. This is not the amount charged.
+type MonitorRunCost struct {
+	// Currency Currency code for cost values
+	Currency  MonitorCurrency `json:"currency"`
+	TotalCost float64         `json:"total_cost"`
+}
+
+// MonitorRunCounts defines model for MonitorRunCounts.
+type MonitorRunCounts struct {
+	// Candidates New search results or changed pages before judging
+	Candidates int32 `json:"candidates"`
+	Changes    int32 `json:"changes"`
+
+	// Errors Target fetch failures and candidates that could not be judged.
+	Errors int32 `json:"errors"`
+}
+
+// MonitorRunError Why a run failed or was skipped: a `failed` run has `code`, a
+// `skipped` run has `skip_reason`, the pause reason that refused it.
+type MonitorRunError struct {
+	// Code Why a run failed: it could not start (`gate_unavailable`), retrieval failed (`detect_failed`), judging failed (`judge_failed`), every source failed (`source_failed`), the notification could not be scheduled (`notify_failed`), or the run timed out (`timed_out`). New codes may be added; treat an unknown one as a failure to retry on schedule.
+	Code *MonitorRunFailureCode `json:"code,omitempty"`
+
+	// Message Human-readable; may change. Do not parse.
+	Message string `json:"message"`
+
+	// SkipReason Why a `paused` monitor stopped: you paused it (`user`), credits ran
+	// out, webhook deliveries repeatedly failed (`webhook_failing`), every source the monitor reads repeatedly failed (`source_failing`), or your API Group's policy
+	// no longer allows monitors. Resume it once the cause is
+	// fixed. New reasons may be added; treat an unknown value as a reason to
+	// check the monitor before resuming it.
+	SkipReason *MonitorPauseReason `json:"skip_reason,omitempty"`
+}
+
+// MonitorRunFailureCode Why a run failed: it could not start (`gate_unavailable`), retrieval failed (`detect_failed`), judging failed (`judge_failed`), every source failed (`source_failed`), the notification could not be scheduled (`notify_failed`), or the run timed out (`timed_out`). New codes may be added; treat an unknown one as a failure to retry on schedule.
+type MonitorRunFailureCode string
+
+// MonitorRunInProgressError defines model for MonitorRunInProgressError.
+type MonitorRunInProgressError struct {
+	Error struct {
+		Code MonitorRunInProgressErrorErrorCode `json:"code"`
+
+		// CurrentRunId The run already queued or running
+		CurrentRunId string                             `json:"current_run_id"`
+		Message      string                             `json:"message"`
+		Type         MonitorRunInProgressErrorErrorType `json:"type"`
+	} `json:"error"`
+}
+
+// MonitorRunInProgressErrorErrorCode defines model for MonitorRunInProgressError.Error.Code.
+type MonitorRunInProgressErrorErrorCode int
+
+// MonitorRunInProgressErrorErrorType defines model for MonitorRunInProgressError.Error.Type.
+type MonitorRunInProgressErrorErrorType string
+
+// MonitorRunList defines model for MonitorRunList.
+type MonitorRunList struct {
+	Data []MonitorRun `json:"data"`
+
+	// HasMore Pass the last `data[].id` as `after` for the next page
+	HasMore bool                 `json:"has_more"`
+	Object  MonitorRunListObject `json:"object"`
+}
+
+// MonitorRunListObject defines model for MonitorRunList.Object.
+type MonitorRunListObject string
+
+// MonitorRunStatus `queued` is a manual run that has not started. `skipped` is a run that did not start, including a queued run cancelled by pausing the monitor. New statuses may be added; treat an unknown one as not finished.
+type MonitorRunStatus string
+
+// MonitorRunTrigger What started the run. New triggers may be added; accept unknown values.
+type MonitorRunTrigger string
+
+// MonitorRunUsage Usage for the run. Only a `succeeded` run has nonzero usage. A succeeded Search run is billed once per run and reports zero `fetched_urls`; Page monitors report counted `fetched_urls`. Judging is included in the price.
+type MonitorRunUsage struct {
+	// Cost Estimated run cost at list prices: $0.001 per succeeded Search run or counted fetched URL in a succeeded Page run, rounded to 5 decimal places. This is not the amount charged.
+	Cost MonitorRunCost `json:"cost"`
+
+	// FetchedUrls Pages a Page monitor run fetched. Zero for a Search monitor run.
+	FetchedUrls int32 `json:"fetched_urls"`
+}
+
+// MonitorRunWindow The time range a run covers, `(from, to]`. Before the first successful run, the window starts one schedule period before creation, up to seven days earlier. Later windows normally start where the last successful window ended, subject to the service's lookback limit. The window ends when the run starts.
+type MonitorRunWindow struct {
+	// From RFC 3339 in UTC with whole seconds, for example `2026-11-12T09:00:41Z`.
+	From MonitorTimestamp `json:"from"`
+
+	// To RFC 3339 in UTC with whole seconds, for example `2026-11-12T09:00:41Z`.
+	To MonitorTimestamp `json:"to"`
+}
+
+// MonitorSchedule When a monitor runs. New types may be added.
+type MonitorSchedule struct {
+	union json.RawMessage
+}
+
+// MonitorScheduleRequest defines model for MonitorScheduleRequest.
+type MonitorScheduleRequest struct {
+	union json.RawMessage
+}
+
+// MonitorSearchFilters defines model for MonitorSearchFilters.
+type MonitorSearchFilters struct {
+	// ExcludeDomains Results from these domains or their subdomains are dropped; may be `[]`
+	ExcludeDomains []MonitorDomain `json:"exclude_domains"`
+
+	// Freshness Which result date puts a result in the run window: `published`,
+	// `updated`, or both (either date counts). Responses always list
+	// the values in use. `updated` uses the source's last-updated date
+	// with calendar-day precision, not a content-version or page-diff
+	// guarantee. URLs this monitor has already reported stay
+	// suppressed.
+	Freshness []MonitorFreshness `json:"freshness"`
+
+	// IncludeDomains Only results from these domains or their subdomains; `[]` for no restriction
+	IncludeDomains []MonitorDomain `json:"include_domains"`
+}
+
+// MonitorSearchFiltersRequest defines model for MonitorSearchFiltersRequest.
+type MonitorSearchFiltersRequest struct {
+	// ExcludeDomains Up to 20 host names whose results, and their subdomains', are
+	// dropped. A domain may not also be in `include_domains`.
+	ExcludeDomains *[]string `json:"exclude_domains,omitempty"`
+
+	// Freshness Omit or send an empty array for both `published` and `updated`.
+	Freshness *[]MonitorFreshness `json:"freshness,omitempty"`
+
+	// IncludeDomains Up to 20 bare host names such as `example.com`, without a scheme, path, or port. Only results from these domains or their subdomains are included.
+	IncludeDomains *[]string `json:"include_domains,omitempty"`
+}
+
+// MonitorSearchResultChange A search result new to the query since the last run
+type MonitorSearchResultChange struct {
+	// Confidence Score from 0 to 1 that the change matches `goal`; higher is more
+	// confident. Compare scores within one monitor; the scale may be
+	// recalibrated.
+	Confidence float64 `json:"confidence"`
+
+	// Id Stable opaque ID with the prefix `chg_`. Use it to deduplicate the same finding across runs and webhook deliveries.
+	Id MonitorChangeId `json:"id"`
+
+	// LastUpdatedAt The source's last-updated date, at calendar-day precision, when it has one
+	LastUpdatedAt *MonitorTimestamp `json:"last_updated_at,omitempty"`
+
+	// PublishedAt When the source reports one
+	PublishedAt *MonitorTimestamp `json:"published_at,omitempty"`
+
+	// Snippet Text from the result, when the source has it
+	Snippet *string `json:"snippet,omitempty"`
+
+	// Title Omitted when unknown
+	Title *string                       `json:"title,omitempty"`
+	Type  MonitorSearchResultChangeType `json:"type"`
+	Url   string                        `json:"url"`
+}
+
+// MonitorSearchResultChangeType defines model for MonitorSearchResultChange.Type.
+type MonitorSearchResultChangeType string
+
+// MonitorSearchTarget Reports pages new to `query` since the last run.
+type MonitorSearchTarget struct {
+	Filters MonitorSearchFilters `json:"filters"`
+
+	// Judge Judging settings for this target. Present only when the monitor overrides the default threshold.
+	Judge *MonitorJudge `json:"judge,omitempty"`
+
+	// MaxResults Maximum search results considered per query; the run can keep fewer.
+	MaxResults int32                   `json:"max_results"`
+	Query      string                  `json:"query"`
+	Type       MonitorSearchTargetType `json:"type"`
+}
+
+// MonitorSearchTargetType defines model for MonitorSearchTarget.Type.
+type MonitorSearchTargetType string
+
+// MonitorSearchTargetRequest defines model for MonitorSearchTargetRequest.
+type MonitorSearchTargetRequest struct {
+	Filters *MonitorSearchFiltersRequest `json:"filters,omitempty"`
+
+	// Judge Judging settings for this target.
+	Judge *MonitorJudgeRequest `json:"judge,omitempty"`
+
+	// MaxResults Maximum search results considered per query; the run can keep fewer.
+	MaxResults *int32 `json:"max_results,omitempty"`
+
+	// Query Search query to run on each run
+	Query string                         `json:"query"`
+	Type  MonitorSearchTargetRequestType `json:"type"`
+}
+
+// MonitorSearchTargetRequestType defines model for MonitorSearchTargetRequest.Type.
+type MonitorSearchTargetRequestType string
+
+// MonitorStatus `active` monitors run on their schedule; `paused` ones don't run until
+// resumed. Whether a run is in flight is `current_run_id`, not the
+// status. New statuses may be added; treat an unknown one as not
+// running on its schedule.
+type MonitorStatus string
+
+// MonitorTarget One thing a monitor watches. Today a monitor has exactly one `search`
+// target, or 1 to 10 `page` targets with distinct URLs. New types may
+// be added; skip targets with an unknown type.
+type MonitorTarget struct {
+	union json.RawMessage
+}
+
+// MonitorTargetError A target that could not be read this run; its baseline is kept. New
+// types may be added; skip errors with an unknown type.
+type MonitorTargetError struct {
+	union json.RawMessage
+}
+
+// MonitorTargetErrorCode Why the page could not be read: the URL is not valid (`invalid_url`), the site blocked the request (`blocked`), the page has no readable text (`no_content`), loading failed (`load_failed`) or timed out (`timeout`), page retrieval is temporarily unavailable (`fetch_unavailable`), or the page returned an error status (`http_status`, with `status_code`). New codes may be added.
+type MonitorTargetErrorCode string
+
+// MonitorTargetRequest defines model for MonitorTargetRequest.
+type MonitorTargetRequest struct {
+	union json.RawMessage
+}
+
+// MonitorTargets Exactly one `search` target, or 1 to 10 `page` targets with distinct URLs
+type MonitorTargets = []MonitorTargetRequest
+
+// MonitorTimestamp RFC 3339 in UTC with whole seconds, for example `2026-11-12T09:00:41Z`.
+type MonitorTimestamp = time.Time
+
+// MonitorWebhook defines model for MonitorWebhook.
+type MonitorWebhook struct {
+	// Events The subscribed event types, defaults filled in
+	Events []MonitorEventType `json:"events"`
+
+	// Secret Present only in the response that generated it: a create, or an
+	// update that adds a webhook, without a `secret` in the request.
+	Secret *MonitorWebhookSecret `json:"secret,omitempty"`
+	Url    string                `json:"url"`
+}
+
+// MonitorWebhookRequest defines model for MonitorWebhookRequest.
+type MonitorWebhookRequest struct {
+	// Events Event types to send. Omitted or empty means
+	// `[monitor.changes.detected, monitor.paused]`. An unknown type
+	// returns 400 with param `webhook.events[N]`, the index of the
+	// first unknown entry.
+	Events *[]MonitorEventType `json:"events,omitempty"`
+
+	// Secret Optional signing secret. Without it, create generates one and an
+	// update keeps the current one (or generates one when the monitor
+	// had no webhook). A different secret on update rotates: the old one
+	// also signs for 24 hours. A secret you send is never returned.
+	Secret *MonitorWebhookSecret `json:"secret,omitempty"`
+
+	// Url HTTPS endpoint with a public address
+	Url string `json:"url"`
+}
+
+// MonitorWebhookSecret Standard Webhooks signing secret: `whsec_` plus the standard (padded)
+// base64 of 24 to 64 bytes; the HMAC key is the decoded bytes.
+type MonitorWebhookSecret = string
+
+// MonitorWebhookTest The outcome of one test send
+type MonitorWebhookTest struct {
+	// Delivered The receiver answered 2xx
+	Delivered bool `json:"delivered"`
+
+	// DurationMs Time from sending to the answer or the failure
+	DurationMs int32 `json:"duration_ms"`
+
+	// Error Why the send failed; omitted when delivered. `http_status`: the
+	// receiver answered `status_code` (a 3xx too, since redirects are not
+	// followed). New values may be added.
+	Error *MonitorWebhookTestError `json:"error,omitempty"`
+
+	// EventId The test event's `id` and `webhook-id` header
+	EventId string                   `json:"event_id"`
+	Object  MonitorWebhookTestObject `json:"object"`
+
+	// StatusCode The receiver's HTTP status; omitted when it never answered
+	StatusCode *int32 `json:"status_code,omitempty"`
+}
+
+// MonitorWebhookTestObject defines model for MonitorWebhookTest.Object.
+type MonitorWebhookTestObject string
+
+// MonitorWebhookTestError Why the send failed; omitted when delivered. `http_status`: the
+// receiver answered `status_code` (a 3xx too, since redirects are not
+// followed). New values may be added.
+type MonitorWebhookTestError string
 
 // NamespaceTool A response-only namespace containing complete external tool definitions.
 type NamespaceTool struct {
@@ -4389,6 +5685,31 @@ type ResponsesUsage struct {
 // RoleType Role in a message
 type RoleType string
 
+// SandboxReadFileOutputItem Result of a file read inside the sandbox.
+type SandboxReadFileOutputItem struct {
+	// CallId Identifier of the tool call that produced this item.
+	CallId string `json:"call_id"`
+
+	// Content Text read from the file.
+	Content *string `json:"content,omitempty"`
+
+	// Error Error message if the read failed.
+	Error *string `json:"error,omitempty"`
+
+	// FilePath Path of the file the sandbox read.
+	FilePath string `json:"file_path"`
+
+	// StartLine Line number where `content` starts. Present only when the read covered part of the file.
+	StartLine *int32 `json:"start_line,omitempty"`
+
+	// TotalLines Number of lines in the file. Present only when the read covered part of the file.
+	TotalLines *int32                        `json:"total_lines,omitempty"`
+	Type       SandboxReadFileOutputItemType `json:"type"`
+}
+
+// SandboxReadFileOutputItemType defines model for SandboxReadFileOutputItem.Type.
+type SandboxReadFileOutputItemType string
+
 // SandboxResultsOutputItem Result of a sandbox tool invocation. Contains the executed code and its output.
 type SandboxResultsOutputItem struct {
 	// Code The code that was executed inside the sandbox.
@@ -4425,6 +5746,25 @@ type SandboxTool struct {
 
 // SandboxToolType Tool type identifier
 type SandboxToolType string
+
+// SandboxWriteFileOutputItem Result of a file write inside the sandbox.
+type SandboxWriteFileOutputItem struct {
+	// CallId Identifier of the tool call that produced this item.
+	CallId string `json:"call_id"`
+
+	// Error Error message if the write failed.
+	Error *string `json:"error,omitempty"`
+
+	// FilePath Path of the file the sandbox wrote.
+	FilePath string `json:"file_path"`
+
+	// SizeBytes Size of the written file, in bytes.
+	SizeBytes *int64                         `json:"size_bytes,omitempty"`
+	Type      SandboxWriteFileOutputItemType `json:"type"`
+}
+
+// SandboxWriteFileOutputItemType defines model for SandboxWriteFileOutputItem.Type.
+type SandboxWriteFileOutputItemType string
 
 // ScoreAnswer Answer to a `score` question: the expected score, the rubric, a confidence value, and the probability of each level.
 type ScoreAnswer struct {
@@ -4579,6 +5919,31 @@ type SearchResultsOutputItemType string
 // SearchSource Source of search results
 type SearchSource string
 
+// ShareFileOutputItem Result of a `share_file` tool call. On success, `file_id` and `filename` identify a sandbox file you can download with the response files endpoints.
+type ShareFileOutputItem struct {
+	// CallId Identifier of the tool call that produced this item.
+	CallId string `json:"call_id"`
+
+	// Error Error message if the file could not be shared.
+	Error *string `json:"error,omitempty"`
+
+	// FileId Identifier of the shared file.
+	FileId *string `json:"file_id,omitempty"`
+
+	// Filename Name of the shared file.
+	Filename *string `json:"filename,omitempty"`
+
+	// SizeBytes Size of the shared file, in bytes.
+	SizeBytes *int64                  `json:"size_bytes,omitempty"`
+	Type      ShareFileOutputItemType `json:"type"`
+
+	// Url Relative path for downloading the file's content.
+	Url *string `json:"url,omitempty"`
+}
+
+// ShareFileOutputItemType defines model for ShareFileOutputItem.Type.
+type ShareFileOutputItemType string
+
 // Skill defines model for Skill.
 type Skill struct {
 	union json.RawMessage
@@ -4602,6 +5967,16 @@ type SkillList struct {
 	NextPageToken *string        `json:"next_page_token,omitempty"`
 	Skills        []SkillSummary `json:"skills"`
 }
+
+// SkillLoadedOutputItem Records that the model loaded a skill during the run.
+type SkillLoadedOutputItem struct {
+	// Name Name of the loaded skill.
+	Name string                    `json:"name"`
+	Type SkillLoadedOutputItemType `json:"type"`
+}
+
+// SkillLoadedOutputItemType defines model for SkillLoadedOutputItem.Type.
+type SkillLoadedOutputItemType string
 
 // SkillRevision defines model for SkillRevision.
 type SkillRevision struct {
@@ -4753,6 +6128,21 @@ type ToolUserLocation struct {
 // URL defines model for URL.
 type URL struct {
 	Url string `json:"url"`
+}
+
+// UpdateMonitorRequest Any subset of the writable fields. A present key replaces that whole
+// field; an absent key leaves it unchanged. `null` clears an optional
+// field: `goal` becomes `""`, `metadata` becomes `{}`, `webhook` is
+// removed.
+type UpdateMonitorRequest struct {
+	Goal     *string                 `json:"goal,omitempty"`
+	Metadata *map[string]string      `json:"metadata,omitempty"`
+	Name     *string                 `json:"name,omitempty"`
+	Schedule *MonitorScheduleRequest `json:"schedule,omitempty"`
+
+	// Targets Exactly one `search` target, or 1 to 10 `page` targets with distinct URLs
+	Targets *MonitorTargets        `json:"targets,omitempty"`
+	Webhook *MonitorWebhookRequest `json:"webhook,omitempty"`
 }
 
 // UrlContent Content fetched from a URL
@@ -4941,6 +6331,21 @@ type ExpectedRevisionRequired = string
 // Limit defines model for Limit.
 type Limit = int
 
+// MonitorAfter defines model for MonitorAfter.
+type MonitorAfter = string
+
+// MonitorId defines model for MonitorId.
+type MonitorId = string
+
+// MonitorIdempotencyKey defines model for MonitorIdempotencyKey.
+type MonitorIdempotencyKey = string
+
+// MonitorLimit defines model for MonitorLimit.
+type MonitorLimit = int
+
+// MonitorRunId defines model for MonitorRunId.
+type MonitorRunId = string
+
 // PageToken defines model for PageToken.
 type PageToken = string
 
@@ -4952,6 +6357,39 @@ type SkillId = string
 
 // BadRequest The body of an error response.
 type BadRequest = ErrorResponse
+
+// MonitorBadGateway defines model for MonitorBadGateway.
+type MonitorBadGateway = MonitorApiError
+
+// MonitorBadRequest defines model for MonitorBadRequest.
+type MonitorBadRequest = MonitorApiError
+
+// MonitorConcurrentUpdate defines model for MonitorConcurrentUpdate.
+type MonitorConcurrentUpdate = MonitorApiError
+
+// MonitorForbidden defines model for MonitorForbidden.
+type MonitorForbidden = MonitorApiError
+
+// MonitorGatewayTimeout defines model for MonitorGatewayTimeout.
+type MonitorGatewayTimeout = MonitorApiError
+
+// MonitorInvalidState defines model for MonitorInvalidState.
+type MonitorInvalidState = MonitorApiError
+
+// MonitorNotFound defines model for MonitorNotFound.
+type MonitorNotFound = MonitorApiError
+
+// MonitorPaymentRequired defines model for MonitorPaymentRequired.
+type MonitorPaymentRequired = MonitorApiError
+
+// MonitorTooManyRequests defines model for MonitorTooManyRequests.
+type MonitorTooManyRequests = MonitorApiError
+
+// MonitorUnauthorized defines model for MonitorUnauthorized.
+type MonitorUnauthorized = MonitorApiError
+
+// MonitorUnavailable defines model for MonitorUnavailable.
+type MonitorUnavailable = MonitorApiError
 
 // PayloadTooLarge The body of an error response.
 type PayloadTooLarge = ErrorResponse
@@ -5064,6 +6502,35 @@ type CreateFileMultipartBody struct {
 // CreateFileMultipartBodyPurpose defines parameters for CreateFile.
 type CreateFileMultipartBodyPurpose string
 
+// ListMonitorsParams defines parameters for ListMonitors.
+type ListMonitorsParams struct {
+	// Limit Maximum number of objects to return. Values above 100 are treated as 100.
+	Limit *MonitorLimit `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// After Id to start after, the last `data[].id` of the previous page
+	After *MonitorAfter `form:"after,omitempty" json:"after,omitempty"`
+}
+
+// CreateMonitorParams defines parameters for CreateMonitor.
+type CreateMonitorParams struct {
+	// IdempotencyKey Unique key for this create. A repeat with the same key and the same body returns the monitor that the first request created, in its current state and without the secret; the same key with a different body is a 400.
+	IdempotencyKey *MonitorIdempotencyKey `json:"Idempotency-Key,omitempty"`
+}
+
+// RunMonitor409JSONResponseBody defines parameters for RunMonitor.
+type RunMonitor409JSONResponseBody struct {
+	union json.RawMessage
+}
+
+// ListMonitorRunsParams defines parameters for ListMonitorRuns.
+type ListMonitorRunsParams struct {
+	// Limit Maximum number of objects to return. Values above 100 are treated as 100.
+	Limit *MonitorLimit `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// After Id to start after, the last `data[].id` of the previous page
+	After *MonitorAfter `form:"after,omitempty" json:"after,omitempty"`
+}
+
 // ListSkillsParams defines parameters for ListSkills.
 type ListSkillsParams struct {
 	// Limit Maximum items to return, 1 to 200; defaults to 50
@@ -5170,6 +6637,12 @@ type EmbeddingsV1EmbeddingsPostJSONRequestBody = EmbeddingsRequest
 
 // CreateFileMultipartRequestBody defines body for CreateFile for multipart/form-data ContentType.
 type CreateFileMultipartRequestBody CreateFileMultipartBody
+
+// CreateMonitorJSONRequestBody defines body for CreateMonitor for application/json ContentType.
+type CreateMonitorJSONRequestBody = CreateMonitorRequest
+
+// UpdateMonitorJSONRequestBody defines body for UpdateMonitor for application/json ContentType.
+type UpdateMonitorJSONRequestBody = UpdateMonitorRequest
 
 // CreateSkillMultipartRequestBody defines body for CreateSkill for multipart/form-data ContentType.
 type CreateSkillMultipartRequestBody CreateSkillMultipartBody
@@ -7254,6 +8727,576 @@ func (t *InputItem) UnmarshalJSON(b []byte) error {
 	return err
 }
 
+// AsMonitorSearchResultChange returns the union data inside the MonitorChange as a MonitorSearchResultChange
+func (t MonitorChange) AsMonitorSearchResultChange() (MonitorSearchResultChange, error) {
+	var body MonitorSearchResultChange
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromMonitorSearchResultChange overwrites any union data inside the MonitorChange as the provided MonitorSearchResultChange
+func (t *MonitorChange) FromMonitorSearchResultChange(v MonitorSearchResultChange) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"search_result"}`))
+	t.union = b
+	return err
+}
+
+// MergeMonitorSearchResultChange performs a merge with any union data inside the MonitorChange, using the provided MonitorSearchResultChange
+func (t *MonitorChange) MergeMonitorSearchResultChange(v MonitorSearchResultChange) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"search_result"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsMonitorPageChange returns the union data inside the MonitorChange as a MonitorPageChange
+func (t MonitorChange) AsMonitorPageChange() (MonitorPageChange, error) {
+	var body MonitorPageChange
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromMonitorPageChange overwrites any union data inside the MonitorChange as the provided MonitorPageChange
+func (t *MonitorChange) FromMonitorPageChange(v MonitorPageChange) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"page_change"}`))
+	t.union = b
+	return err
+}
+
+// MergeMonitorPageChange performs a merge with any union data inside the MonitorChange, using the provided MonitorPageChange
+func (t *MonitorChange) MergeMonitorPageChange(v MonitorPageChange) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"page_change"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t MonitorChange) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t MonitorChange) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "page_change":
+		return t.AsMonitorPageChange()
+	case "search_result":
+		return t.AsMonitorSearchResultChange()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t MonitorChange) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *MonitorChange) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsMonitorIntervalSchedule returns the union data inside the MonitorSchedule as a MonitorIntervalSchedule
+func (t MonitorSchedule) AsMonitorIntervalSchedule() (MonitorIntervalSchedule, error) {
+	var body MonitorIntervalSchedule
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromMonitorIntervalSchedule overwrites any union data inside the MonitorSchedule as the provided MonitorIntervalSchedule
+func (t *MonitorSchedule) FromMonitorIntervalSchedule(v MonitorIntervalSchedule) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"interval"}`))
+	t.union = b
+	return err
+}
+
+// MergeMonitorIntervalSchedule performs a merge with any union data inside the MonitorSchedule, using the provided MonitorIntervalSchedule
+func (t *MonitorSchedule) MergeMonitorIntervalSchedule(v MonitorIntervalSchedule) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"interval"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsMonitorCronSchedule returns the union data inside the MonitorSchedule as a MonitorCronSchedule
+func (t MonitorSchedule) AsMonitorCronSchedule() (MonitorCronSchedule, error) {
+	var body MonitorCronSchedule
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromMonitorCronSchedule overwrites any union data inside the MonitorSchedule as the provided MonitorCronSchedule
+func (t *MonitorSchedule) FromMonitorCronSchedule(v MonitorCronSchedule) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"cron"}`))
+	t.union = b
+	return err
+}
+
+// MergeMonitorCronSchedule performs a merge with any union data inside the MonitorSchedule, using the provided MonitorCronSchedule
+func (t *MonitorSchedule) MergeMonitorCronSchedule(v MonitorCronSchedule) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"cron"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t MonitorSchedule) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t MonitorSchedule) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "cron":
+		return t.AsMonitorCronSchedule()
+	case "interval":
+		return t.AsMonitorIntervalSchedule()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t MonitorSchedule) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *MonitorSchedule) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsMonitorIntervalScheduleRequest returns the union data inside the MonitorScheduleRequest as a MonitorIntervalScheduleRequest
+func (t MonitorScheduleRequest) AsMonitorIntervalScheduleRequest() (MonitorIntervalScheduleRequest, error) {
+	var body MonitorIntervalScheduleRequest
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromMonitorIntervalScheduleRequest overwrites any union data inside the MonitorScheduleRequest as the provided MonitorIntervalScheduleRequest
+func (t *MonitorScheduleRequest) FromMonitorIntervalScheduleRequest(v MonitorIntervalScheduleRequest) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"interval"}`))
+	t.union = b
+	return err
+}
+
+// MergeMonitorIntervalScheduleRequest performs a merge with any union data inside the MonitorScheduleRequest, using the provided MonitorIntervalScheduleRequest
+func (t *MonitorScheduleRequest) MergeMonitorIntervalScheduleRequest(v MonitorIntervalScheduleRequest) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"interval"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsMonitorCronScheduleRequest returns the union data inside the MonitorScheduleRequest as a MonitorCronScheduleRequest
+func (t MonitorScheduleRequest) AsMonitorCronScheduleRequest() (MonitorCronScheduleRequest, error) {
+	var body MonitorCronScheduleRequest
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromMonitorCronScheduleRequest overwrites any union data inside the MonitorScheduleRequest as the provided MonitorCronScheduleRequest
+func (t *MonitorScheduleRequest) FromMonitorCronScheduleRequest(v MonitorCronScheduleRequest) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"cron"}`))
+	t.union = b
+	return err
+}
+
+// MergeMonitorCronScheduleRequest performs a merge with any union data inside the MonitorScheduleRequest, using the provided MonitorCronScheduleRequest
+func (t *MonitorScheduleRequest) MergeMonitorCronScheduleRequest(v MonitorCronScheduleRequest) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"cron"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t MonitorScheduleRequest) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t MonitorScheduleRequest) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "cron":
+		return t.AsMonitorCronScheduleRequest()
+	case "interval":
+		return t.AsMonitorIntervalScheduleRequest()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t MonitorScheduleRequest) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *MonitorScheduleRequest) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsMonitorSearchTarget returns the union data inside the MonitorTarget as a MonitorSearchTarget
+func (t MonitorTarget) AsMonitorSearchTarget() (MonitorSearchTarget, error) {
+	var body MonitorSearchTarget
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromMonitorSearchTarget overwrites any union data inside the MonitorTarget as the provided MonitorSearchTarget
+func (t *MonitorTarget) FromMonitorSearchTarget(v MonitorSearchTarget) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"search"}`))
+	t.union = b
+	return err
+}
+
+// MergeMonitorSearchTarget performs a merge with any union data inside the MonitorTarget, using the provided MonitorSearchTarget
+func (t *MonitorTarget) MergeMonitorSearchTarget(v MonitorSearchTarget) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"search"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsMonitorPageTarget returns the union data inside the MonitorTarget as a MonitorPageTarget
+func (t MonitorTarget) AsMonitorPageTarget() (MonitorPageTarget, error) {
+	var body MonitorPageTarget
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromMonitorPageTarget overwrites any union data inside the MonitorTarget as the provided MonitorPageTarget
+func (t *MonitorTarget) FromMonitorPageTarget(v MonitorPageTarget) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"page"}`))
+	t.union = b
+	return err
+}
+
+// MergeMonitorPageTarget performs a merge with any union data inside the MonitorTarget, using the provided MonitorPageTarget
+func (t *MonitorTarget) MergeMonitorPageTarget(v MonitorPageTarget) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"page"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t MonitorTarget) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t MonitorTarget) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "page":
+		return t.AsMonitorPageTarget()
+	case "search":
+		return t.AsMonitorSearchTarget()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t MonitorTarget) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *MonitorTarget) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsMonitorPageTargetError returns the union data inside the MonitorTargetError as a MonitorPageTargetError
+func (t MonitorTargetError) AsMonitorPageTargetError() (MonitorPageTargetError, error) {
+	var body MonitorPageTargetError
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromMonitorPageTargetError overwrites any union data inside the MonitorTargetError as the provided MonitorPageTargetError
+func (t *MonitorTargetError) FromMonitorPageTargetError(v MonitorPageTargetError) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"page"}`))
+	t.union = b
+	return err
+}
+
+// MergeMonitorPageTargetError performs a merge with any union data inside the MonitorTargetError, using the provided MonitorPageTargetError
+func (t *MonitorTargetError) MergeMonitorPageTargetError(v MonitorPageTargetError) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"page"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t MonitorTargetError) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t MonitorTargetError) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "page":
+		return t.AsMonitorPageTargetError()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t MonitorTargetError) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *MonitorTargetError) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsMonitorSearchTargetRequest returns the union data inside the MonitorTargetRequest as a MonitorSearchTargetRequest
+func (t MonitorTargetRequest) AsMonitorSearchTargetRequest() (MonitorSearchTargetRequest, error) {
+	var body MonitorSearchTargetRequest
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromMonitorSearchTargetRequest overwrites any union data inside the MonitorTargetRequest as the provided MonitorSearchTargetRequest
+func (t *MonitorTargetRequest) FromMonitorSearchTargetRequest(v MonitorSearchTargetRequest) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"search"}`))
+	t.union = b
+	return err
+}
+
+// MergeMonitorSearchTargetRequest performs a merge with any union data inside the MonitorTargetRequest, using the provided MonitorSearchTargetRequest
+func (t *MonitorTargetRequest) MergeMonitorSearchTargetRequest(v MonitorSearchTargetRequest) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"search"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsMonitorPageTargetRequest returns the union data inside the MonitorTargetRequest as a MonitorPageTargetRequest
+func (t MonitorTargetRequest) AsMonitorPageTargetRequest() (MonitorPageTargetRequest, error) {
+	var body MonitorPageTargetRequest
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromMonitorPageTargetRequest overwrites any union data inside the MonitorTargetRequest as the provided MonitorPageTargetRequest
+func (t *MonitorTargetRequest) FromMonitorPageTargetRequest(v MonitorPageTargetRequest) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"page"}`))
+	t.union = b
+	return err
+}
+
+// MergeMonitorPageTargetRequest performs a merge with any union data inside the MonitorTargetRequest, using the provided MonitorPageTargetRequest
+func (t *MonitorTargetRequest) MergeMonitorPageTargetRequest(v MonitorPageTargetRequest) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"page"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t MonitorTargetRequest) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t MonitorTargetRequest) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "page":
+		return t.AsMonitorPageTargetRequest()
+	case "search":
+		return t.AsMonitorSearchTargetRequest()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t MonitorTargetRequest) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *MonitorTargetRequest) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
 // AsNoulCriteriaFalse0 returns the union data inside the NoulCriteria_False as a NoulCriteriaFalse0
 func (t NoulCriteria_False) AsNoulCriteriaFalse0() (NoulCriteriaFalse0, error) {
 	var body NoulCriteriaFalse0
@@ -7790,6 +9833,142 @@ func (t *OutputItem) MergeSandboxResultsOutputItem(v SandboxResultsOutputItem) e
 	return err
 }
 
+// AsSandboxWriteFileOutputItem returns the union data inside the OutputItem as a SandboxWriteFileOutputItem
+func (t OutputItem) AsSandboxWriteFileOutputItem() (SandboxWriteFileOutputItem, error) {
+	var body SandboxWriteFileOutputItem
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromSandboxWriteFileOutputItem overwrites any union data inside the OutputItem as the provided SandboxWriteFileOutputItem
+func (t *OutputItem) FromSandboxWriteFileOutputItem(v SandboxWriteFileOutputItem) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"sandbox_write_file"}`))
+	t.union = b
+	return err
+}
+
+// MergeSandboxWriteFileOutputItem performs a merge with any union data inside the OutputItem, using the provided SandboxWriteFileOutputItem
+func (t *OutputItem) MergeSandboxWriteFileOutputItem(v SandboxWriteFileOutputItem) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"sandbox_write_file"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsSandboxReadFileOutputItem returns the union data inside the OutputItem as a SandboxReadFileOutputItem
+func (t OutputItem) AsSandboxReadFileOutputItem() (SandboxReadFileOutputItem, error) {
+	var body SandboxReadFileOutputItem
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromSandboxReadFileOutputItem overwrites any union data inside the OutputItem as the provided SandboxReadFileOutputItem
+func (t *OutputItem) FromSandboxReadFileOutputItem(v SandboxReadFileOutputItem) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"sandbox_read_file"}`))
+	t.union = b
+	return err
+}
+
+// MergeSandboxReadFileOutputItem performs a merge with any union data inside the OutputItem, using the provided SandboxReadFileOutputItem
+func (t *OutputItem) MergeSandboxReadFileOutputItem(v SandboxReadFileOutputItem) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"sandbox_read_file"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsShareFileOutputItem returns the union data inside the OutputItem as a ShareFileOutputItem
+func (t OutputItem) AsShareFileOutputItem() (ShareFileOutputItem, error) {
+	var body ShareFileOutputItem
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromShareFileOutputItem overwrites any union data inside the OutputItem as the provided ShareFileOutputItem
+func (t *OutputItem) FromShareFileOutputItem(v ShareFileOutputItem) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"share_file"}`))
+	t.union = b
+	return err
+}
+
+// MergeShareFileOutputItem performs a merge with any union data inside the OutputItem, using the provided ShareFileOutputItem
+func (t *OutputItem) MergeShareFileOutputItem(v ShareFileOutputItem) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"share_file"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsSkillLoadedOutputItem returns the union data inside the OutputItem as a SkillLoadedOutputItem
+func (t OutputItem) AsSkillLoadedOutputItem() (SkillLoadedOutputItem, error) {
+	var body SkillLoadedOutputItem
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromSkillLoadedOutputItem overwrites any union data inside the OutputItem as the provided SkillLoadedOutputItem
+func (t *OutputItem) FromSkillLoadedOutputItem(v SkillLoadedOutputItem) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"skill_loaded"}`))
+	t.union = b
+	return err
+}
+
+// MergeSkillLoadedOutputItem performs a merge with any union data inside the OutputItem, using the provided SkillLoadedOutputItem
+func (t *OutputItem) MergeSkillLoadedOutputItem(v SkillLoadedOutputItem) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"skill_loaded"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
 // AsMcpListToolsOutputItem returns the union data inside the OutputItem as a McpListToolsOutputItem
 func (t OutputItem) AsMcpListToolsOutputItem() (McpListToolsOutputItem, error) {
 	var body McpListToolsOutputItem
@@ -7958,10 +10137,18 @@ func (t OutputItem) ValueByDiscriminator() (interface{}, error) {
 		return t.AsMessageOutputItem()
 	case "people_search_results":
 		return t.AsPeopleSearchResultsOutputItem()
+	case "sandbox_read_file":
+		return t.AsSandboxReadFileOutputItem()
 	case "sandbox_results":
 		return t.AsSandboxResultsOutputItem()
+	case "sandbox_write_file":
+		return t.AsSandboxWriteFileOutputItem()
 	case "search_results":
 		return t.AsSearchResultsOutputItem()
+	case "share_file":
+		return t.AsShareFileOutputItem()
+	case "skill_loaded":
+		return t.AsSkillLoadedOutputItem()
 	case "tool_search_output":
 		return t.AsToolSearchOutputItem()
 	default:
@@ -9759,6 +11946,68 @@ func (t *VideoURL_FrameInterval) UnmarshalJSON(b []byte) error {
 	return err
 }
 
+// AsMonitorRunInProgressError returns the union data inside the RunMonitor409JSONResponseBody as a MonitorRunInProgressError
+func (t RunMonitor409JSONResponseBody) AsMonitorRunInProgressError() (MonitorRunInProgressError, error) {
+	var body MonitorRunInProgressError
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromMonitorRunInProgressError overwrites any union data inside the RunMonitor409JSONResponseBody as the provided MonitorRunInProgressError
+func (t *RunMonitor409JSONResponseBody) FromMonitorRunInProgressError(v MonitorRunInProgressError) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeMonitorRunInProgressError performs a merge with any union data inside the RunMonitor409JSONResponseBody, using the provided MonitorRunInProgressError
+func (t *RunMonitor409JSONResponseBody) MergeMonitorRunInProgressError(v MonitorRunInProgressError) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsMonitorApiError returns the union data inside the RunMonitor409JSONResponseBody as a MonitorApiError
+func (t RunMonitor409JSONResponseBody) AsMonitorApiError() (MonitorApiError, error) {
+	var body MonitorApiError
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromMonitorApiError overwrites any union data inside the RunMonitor409JSONResponseBody as the provided MonitorApiError
+func (t *RunMonitor409JSONResponseBody) FromMonitorApiError(v MonitorApiError) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeMonitorApiError performs a merge with any union data inside the RunMonitor409JSONResponseBody, using the provided MonitorApiError
+func (t *RunMonitor409JSONResponseBody) MergeMonitorApiError(v MonitorApiError) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t RunMonitor409JSONResponseBody) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *RunMonitor409JSONResponseBody) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
 // RequestEditorFn is the function signature for the RequestEditor callback function
 type RequestEditorFn func(ctx context.Context, req *http.Request) error
 
@@ -10088,6 +12337,150 @@ type ClientInterface interface {
 	//
 	// Corresponds with GET /v1/models (the `ListModels` operationId).
 	ListModels(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// ListMonitors List monitors
+	//
+	// Lists your API Group's monitors, newest first.
+	//
+	// Corresponds with GET /v1/monitors (the `ListMonitors` operationId).
+	ListMonitors(ctx context.Context, params *ListMonitorsParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CreateMonitorWithBody Create a monitor
+	//
+	// Creates an `active` monitor. Its first run is due immediately and starts asynchronously; retrieve results with Get a run or List a monitor's runs.
+	//
+	// Omit `webhook` or set it to null to retrieve results without notifications. If you configure a webhook without a `secret`, this response returns the generated secret in `webhook.secret`. Store it to verify deliveries. A secret you supply is never returned.
+	//
+	// Use `Idempotency-Key` for retries. The same key and body return the original monitor in its current state, without its secret. Reusing the key with a different body returns `400`. If the first response was lost, set a new secret with Update a monitor.
+	//
+	// Active-monitor limits apply per API organization: 100 for tiers 0 and 1, 200 for tier 2, 300 for tier 3, 400 for tier 4, and 500 for tier 5. Paused monitors do not count. Creating or resuming at the limit returns HTTP `409` with `quota_exceeded`. Pause or delete an active monitor, or upgrade the organization's tier, before retrying.
+	//
+	// Takes any type of body and a specified content type.
+	//
+	// Corresponds with POST /v1/monitors (the `CreateMonitor` operationId).
+	CreateMonitorWithBody(ctx context.Context, params *CreateMonitorParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CreateMonitor Create a monitor
+	//
+	// Creates an `active` monitor. Its first run is due immediately and starts asynchronously; retrieve results with Get a run or List a monitor's runs.
+	//
+	// Omit `webhook` or set it to null to retrieve results without notifications. If you configure a webhook without a `secret`, this response returns the generated secret in `webhook.secret`. Store it to verify deliveries. A secret you supply is never returned.
+	//
+	// Use `Idempotency-Key` for retries. The same key and body return the original monitor in its current state, without its secret. Reusing the key with a different body returns `400`. If the first response was lost, set a new secret with Update a monitor.
+	//
+	// Active-monitor limits apply per API organization: 100 for tiers 0 and 1, 200 for tier 2, 300 for tier 3, 400 for tier 4, and 500 for tier 5. Paused monitors do not count. Creating or resuming at the limit returns HTTP `409` with `quota_exceeded`. Pause or delete an active monitor, or upgrade the organization's tier, before retrying.
+	//
+	// Takes a body of the `application/json` content type.
+	//
+	// Corresponds with POST /v1/monitors (the `CreateMonitor` operationId).
+	CreateMonitor(ctx context.Context, params *CreateMonitorParams, body CreateMonitorJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// DeleteMonitor Delete a monitor
+	//
+	// Deletes the monitor, its run history, and its state, and stops scheduling new runs.
+	//
+	// Corresponds with DELETE /v1/monitors/{monitor_id} (the `DeleteMonitor` operationId).
+	DeleteMonitor(ctx context.Context, monitorId MonitorId, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GetMonitor Retrieve a monitor
+	//
+	// Returns the monitor with its status, `next_run_at`, and last run.
+	//
+	// Corresponds with GET /v1/monitors/{monitor_id} (the `GetMonitor` operationId).
+	GetMonitor(ctx context.Context, monitorId MonitorId, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// UpdateMonitorWithBody Update a monitor
+	//
+	// Replaces each top-level field the body names: any subset of `name`,
+	// `goal`, `targets`, `schedule`, `webhook` and `metadata`. An absent
+	// key leaves the field unchanged. `null` clears an optional field:
+	// `goal` becomes `""`, `metadata` becomes `{}`, `webhook` is removed;
+	// `null` for `name`, `targets` or `schedule` returns 400. An empty
+	// object returns the monitor unchanged.
+	//
+	// A new `schedule` recomputes `next_run_at`. Updating targets preserves existing run windows, seen-URL history, and stored Page baselines, subject to retention. A Page URL without a stored baseline establishes one on its first successful fetch. A
+	// `webhook` replaces the whole webhook. Without a `secret` it keeps the
+	// current one, or, on a monitor without a webhook, generates one that
+	// this response returns in `webhook.secret`. A new `secret` rotates:
+	// for 24 hours deliveries are signed with both the new and the old
+	// secret.
+	//
+	// Takes any type of body and a specified content type.
+	//
+	// Corresponds with PATCH /v1/monitors/{monitor_id} (the `UpdateMonitor` operationId).
+	UpdateMonitorWithBody(ctx context.Context, monitorId MonitorId, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// UpdateMonitor Update a monitor
+	//
+	// Replaces each top-level field the body names: any subset of `name`,
+	// `goal`, `targets`, `schedule`, `webhook` and `metadata`. An absent
+	// key leaves the field unchanged. `null` clears an optional field:
+	// `goal` becomes `""`, `metadata` becomes `{}`, `webhook` is removed;
+	// `null` for `name`, `targets` or `schedule` returns 400. An empty
+	// object returns the monitor unchanged.
+	//
+	// A new `schedule` recomputes `next_run_at`. Updating targets preserves existing run windows, seen-URL history, and stored Page baselines, subject to retention. A Page URL without a stored baseline establishes one on its first successful fetch. A
+	// `webhook` replaces the whole webhook. Without a `secret` it keeps the
+	// current one, or, on a monitor without a webhook, generates one that
+	// this response returns in `webhook.secret`. A new `secret` rotates:
+	// for 24 hours deliveries are signed with both the new and the old
+	// secret.
+	//
+	// Takes a body of the `application/json` content type.
+	//
+	// Corresponds with PATCH /v1/monitors/{monitor_id} (the `UpdateMonitor` operationId).
+	UpdateMonitor(ctx context.Context, monitorId MonitorId, body UpdateMonitorJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// PauseMonitor Pause a monitor
+	//
+	// Stops scheduled runs and keeps the monitor's state. A queued run is
+	// cancelled (it ends `skipped`); a run already running finishes. Pausing
+	// a paused monitor returns it unchanged.
+	//
+	// Corresponds with POST /v1/monitors/{monitor_id}/pause (the `PauseMonitor` operationId).
+	PauseMonitor(ctx context.Context, monitorId MonitorId, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// ResumeMonitor Resume a monitor
+	//
+	// Resumes scheduled runs and sets `next_run_at` from now. Missed runs are not replayed individually. Resuming a monitor that is not paused returns HTTP `409` with `invalid_state`. State has a 90-day retention period, so a long-paused monitor may establish a new baseline.
+	//
+	// The same active-monitor limit applies to creation and resuming. At the limit, HTTP `409` with `quota_exceeded` leaves the monitor unchanged. Pause or delete an active monitor, or upgrade the organization's tier, before retrying.
+	//
+	// Corresponds with POST /v1/monitors/{monitor_id}/resume (the `ResumeMonitor` operationId).
+	ResumeMonitor(ctx context.Context, monitorId MonitorId, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// RunMonitor Run a monitor now
+	//
+	// Queues a manual run and returns it at once with status `queued`. The
+	// run's `id` is the `run_id` of its `monitor.run.completed` event, and
+	// you can follow it with get run. A monitor has at most one run at a
+	// time: while one is queued or running, this returns 409
+	// `run_in_progress` with that run's ID. A paused monitor returns 409
+	// `invalid_state`.
+	//
+	// Corresponds with POST /v1/monitors/{monitor_id}/run (the `RunMonitor` operationId).
+	RunMonitor(ctx context.Context, monitorId MonitorId, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// ListMonitorRuns List a monitor's runs
+	//
+	// Lists the monitor's runs with their changes, newest first. Runs are kept 90 days.
+	//
+	// Corresponds with GET /v1/monitors/{monitor_id}/runs (the `ListMonitorRuns` operationId).
+	ListMonitorRuns(ctx context.Context, monitorId MonitorId, params *ListMonitorRunsParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GetMonitorRun Get a run
+	//
+	// Returns one run with its changes and target errors. A run is visible as soon as run-now returns it.
+	//
+	// Corresponds with GET /v1/monitors/{monitor_id}/runs/{run_id} (the `GetMonitorRun` operationId).
+	GetMonitorRun(ctx context.Context, monitorId MonitorId, runId MonitorRunId, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// TestMonitorWebhook Test a monitor's webhook
+	//
+	// Sends one signed `monitor.webhook.test` event to the configured webhook URL. Takes no request body and returns the delivery outcome after a response or a 10-second timeout. The test is not retried and does not count toward the `webhook_failing` pause threshold. A monitor without a webhook returns HTTP `409` with `invalid_state`.
+	//
+	// Corresponds with POST /v1/monitors/{monitor_id}/webhook/test (the `TestMonitorWebhook` operationId).
+	TestMonitorWebhook(ctx context.Context, monitorId MonitorId, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// ListSkills List skills
 	//
@@ -10733,6 +13126,280 @@ func (c *Client) GetFileContent(ctx context.Context, fileId BatchFileId, reqEdit
 // Corresponds with GET /v1/models (the `ListModels` operationId).
 func (c *Client) ListModels(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewListModelsRequest(c.Server)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// ListMonitors List monitors
+//
+// Lists your API Group's monitors, newest first.
+//
+// Corresponds with GET /v1/monitors (the `ListMonitors` operationId).
+func (c *Client) ListMonitors(ctx context.Context, params *ListMonitorsParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewListMonitorsRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// CreateMonitorWithBody Create a monitor
+//
+// Creates an `active` monitor. Its first run is due immediately and starts asynchronously; retrieve results with Get a run or List a monitor's runs.
+//
+// Omit `webhook` or set it to null to retrieve results without notifications. If you configure a webhook without a `secret`, this response returns the generated secret in `webhook.secret`. Store it to verify deliveries. A secret you supply is never returned.
+//
+// Use `Idempotency-Key` for retries. The same key and body return the original monitor in its current state, without its secret. Reusing the key with a different body returns `400`. If the first response was lost, set a new secret with Update a monitor.
+//
+// Active-monitor limits apply per API organization: 100 for tiers 0 and 1, 200 for tier 2, 300 for tier 3, 400 for tier 4, and 500 for tier 5. Paused monitors do not count. Creating or resuming at the limit returns HTTP `409` with `quota_exceeded`. Pause or delete an active monitor, or upgrade the organization's tier, before retrying.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /v1/monitors (the `CreateMonitor` operationId).
+func (c *Client) CreateMonitorWithBody(ctx context.Context, params *CreateMonitorParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCreateMonitorRequestWithBody(c.Server, params, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// CreateMonitor Create a monitor
+//
+// Creates an `active` monitor. Its first run is due immediately and starts asynchronously; retrieve results with Get a run or List a monitor's runs.
+//
+// Omit `webhook` or set it to null to retrieve results without notifications. If you configure a webhook without a `secret`, this response returns the generated secret in `webhook.secret`. Store it to verify deliveries. A secret you supply is never returned.
+//
+// Use `Idempotency-Key` for retries. The same key and body return the original monitor in its current state, without its secret. Reusing the key with a different body returns `400`. If the first response was lost, set a new secret with Update a monitor.
+//
+// Active-monitor limits apply per API organization: 100 for tiers 0 and 1, 200 for tier 2, 300 for tier 3, 400 for tier 4, and 500 for tier 5. Paused monitors do not count. Creating or resuming at the limit returns HTTP `409` with `quota_exceeded`. Pause or delete an active monitor, or upgrade the organization's tier, before retrying.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /v1/monitors (the `CreateMonitor` operationId).
+func (c *Client) CreateMonitor(ctx context.Context, params *CreateMonitorParams, body CreateMonitorJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCreateMonitorRequest(c.Server, params, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// DeleteMonitor Delete a monitor
+//
+// Deletes the monitor, its run history, and its state, and stops scheduling new runs.
+//
+// Corresponds with DELETE /v1/monitors/{monitor_id} (the `DeleteMonitor` operationId).
+func (c *Client) DeleteMonitor(ctx context.Context, monitorId MonitorId, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewDeleteMonitorRequest(c.Server, monitorId)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// GetMonitor Retrieve a monitor
+//
+// Returns the monitor with its status, `next_run_at`, and last run.
+//
+// Corresponds with GET /v1/monitors/{monitor_id} (the `GetMonitor` operationId).
+func (c *Client) GetMonitor(ctx context.Context, monitorId MonitorId, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetMonitorRequest(c.Server, monitorId)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// UpdateMonitorWithBody Update a monitor
+//
+// Replaces each top-level field the body names: any subset of `name`,
+// `goal`, `targets`, `schedule`, `webhook` and `metadata`. An absent
+// key leaves the field unchanged. `null` clears an optional field:
+// `goal` becomes `""`, `metadata` becomes `{}`, `webhook` is removed;
+// `null` for `name`, `targets` or `schedule` returns 400. An empty
+// object returns the monitor unchanged.
+//
+// A new `schedule` recomputes `next_run_at`. Updating targets preserves existing run windows, seen-URL history, and stored Page baselines, subject to retention. A Page URL without a stored baseline establishes one on its first successful fetch. A
+// `webhook` replaces the whole webhook. Without a `secret` it keeps the
+// current one, or, on a monitor without a webhook, generates one that
+// this response returns in `webhook.secret`. A new `secret` rotates:
+// for 24 hours deliveries are signed with both the new and the old
+// secret.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with PATCH /v1/monitors/{monitor_id} (the `UpdateMonitor` operationId).
+func (c *Client) UpdateMonitorWithBody(ctx context.Context, monitorId MonitorId, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewUpdateMonitorRequestWithBody(c.Server, monitorId, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// UpdateMonitor Update a monitor
+//
+// Replaces each top-level field the body names: any subset of `name`,
+// `goal`, `targets`, `schedule`, `webhook` and `metadata`. An absent
+// key leaves the field unchanged. `null` clears an optional field:
+// `goal` becomes `""`, `metadata` becomes `{}`, `webhook` is removed;
+// `null` for `name`, `targets` or `schedule` returns 400. An empty
+// object returns the monitor unchanged.
+//
+// A new `schedule` recomputes `next_run_at`. Updating targets preserves existing run windows, seen-URL history, and stored Page baselines, subject to retention. A Page URL without a stored baseline establishes one on its first successful fetch. A
+// `webhook` replaces the whole webhook. Without a `secret` it keeps the
+// current one, or, on a monitor without a webhook, generates one that
+// this response returns in `webhook.secret`. A new `secret` rotates:
+// for 24 hours deliveries are signed with both the new and the old
+// secret.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with PATCH /v1/monitors/{monitor_id} (the `UpdateMonitor` operationId).
+func (c *Client) UpdateMonitor(ctx context.Context, monitorId MonitorId, body UpdateMonitorJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewUpdateMonitorRequest(c.Server, monitorId, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// PauseMonitor Pause a monitor
+//
+// Stops scheduled runs and keeps the monitor's state. A queued run is
+// cancelled (it ends `skipped`); a run already running finishes. Pausing
+// a paused monitor returns it unchanged.
+//
+// Corresponds with POST /v1/monitors/{monitor_id}/pause (the `PauseMonitor` operationId).
+func (c *Client) PauseMonitor(ctx context.Context, monitorId MonitorId, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewPauseMonitorRequest(c.Server, monitorId)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// ResumeMonitor Resume a monitor
+//
+// Resumes scheduled runs and sets `next_run_at` from now. Missed runs are not replayed individually. Resuming a monitor that is not paused returns HTTP `409` with `invalid_state`. State has a 90-day retention period, so a long-paused monitor may establish a new baseline.
+//
+// The same active-monitor limit applies to creation and resuming. At the limit, HTTP `409` with `quota_exceeded` leaves the monitor unchanged. Pause or delete an active monitor, or upgrade the organization's tier, before retrying.
+//
+// Corresponds with POST /v1/monitors/{monitor_id}/resume (the `ResumeMonitor` operationId).
+func (c *Client) ResumeMonitor(ctx context.Context, monitorId MonitorId, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewResumeMonitorRequest(c.Server, monitorId)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// RunMonitor Run a monitor now
+//
+// Queues a manual run and returns it at once with status `queued`. The
+// run's `id` is the `run_id` of its `monitor.run.completed` event, and
+// you can follow it with get run. A monitor has at most one run at a
+// time: while one is queued or running, this returns 409
+// `run_in_progress` with that run's ID. A paused monitor returns 409
+// `invalid_state`.
+//
+// Corresponds with POST /v1/monitors/{monitor_id}/run (the `RunMonitor` operationId).
+func (c *Client) RunMonitor(ctx context.Context, monitorId MonitorId, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewRunMonitorRequest(c.Server, monitorId)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// ListMonitorRuns List a monitor's runs
+//
+// Lists the monitor's runs with their changes, newest first. Runs are kept 90 days.
+//
+// Corresponds with GET /v1/monitors/{monitor_id}/runs (the `ListMonitorRuns` operationId).
+func (c *Client) ListMonitorRuns(ctx context.Context, monitorId MonitorId, params *ListMonitorRunsParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewListMonitorRunsRequest(c.Server, monitorId, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// GetMonitorRun Get a run
+//
+// Returns one run with its changes and target errors. A run is visible as soon as run-now returns it.
+//
+// Corresponds with GET /v1/monitors/{monitor_id}/runs/{run_id} (the `GetMonitorRun` operationId).
+func (c *Client) GetMonitorRun(ctx context.Context, monitorId MonitorId, runId MonitorRunId, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGetMonitorRunRequest(c.Server, monitorId, runId)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// TestMonitorWebhook Test a monitor's webhook
+//
+// Sends one signed `monitor.webhook.test` event to the configured webhook URL. Takes no request body and returns the delivery outcome after a response or a 10-second timeout. The test is not retried and does not count toward the `webhook_failing` pause threshold. A monitor without a webhook returns HTTP `409` with `invalid_state`.
+//
+// Corresponds with POST /v1/monitors/{monitor_id}/webhook/test (the `TestMonitorWebhook` operationId).
+func (c *Client) TestMonitorWebhook(ctx context.Context, monitorId MonitorId, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewTestMonitorWebhookRequest(c.Server, monitorId)
 	if err != nil {
 		return nil, err
 	}
@@ -12043,6 +14710,492 @@ func NewListModelsRequest(server string) (*http.Request, error) {
 	return req, nil
 }
 
+// NewListMonitorsRequest constructs an http.Request for the ListMonitors method
+func NewListMonitorsRequest(server string, params *ListMonitorsParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/monitors")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "limit", *params.Limit, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.After != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "after", *params.After, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewCreateMonitorRequest calls the generic CreateMonitor builder with application/json body
+func NewCreateMonitorRequest(server string, params *CreateMonitorParams, body CreateMonitorJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewCreateMonitorRequestWithBody(server, params, "application/json", bodyReader)
+}
+
+// NewCreateMonitorRequestWithBody constructs an http.Request for the CreateMonitor method, with any body, and a specified content type
+func NewCreateMonitorRequestWithBody(server string, params *CreateMonitorParams, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/monitors")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	if params != nil {
+
+		if params.IdempotencyKey != nil {
+			var headerParam0 string
+
+			headerParam0, err = runtime.StyleParamWithOptions("simple", false, "Idempotency-Key", *params.IdempotencyKey, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationHeader, Type: "string", Format: ""})
+			if err != nil {
+				return nil, err
+			}
+
+			req.Header.Set("Idempotency-Key", headerParam0)
+		}
+
+	}
+
+	return req, nil
+}
+
+// NewDeleteMonitorRequest constructs an http.Request for the DeleteMonitor method
+func NewDeleteMonitorRequest(server string, monitorId MonitorId) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "monitor_id", monitorId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/monitors/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodDelete, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetMonitorRequest constructs an http.Request for the GetMonitor method
+func NewGetMonitorRequest(server string, monitorId MonitorId) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "monitor_id", monitorId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/monitors/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewUpdateMonitorRequest calls the generic UpdateMonitor builder with application/json body
+func NewUpdateMonitorRequest(server string, monitorId MonitorId, body UpdateMonitorJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewUpdateMonitorRequestWithBody(server, monitorId, "application/json", bodyReader)
+}
+
+// NewUpdateMonitorRequestWithBody constructs an http.Request for the UpdateMonitor method, with any body, and a specified content type
+func NewUpdateMonitorRequestWithBody(server string, monitorId MonitorId, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "monitor_id", monitorId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/monitors/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPatch, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewPauseMonitorRequest constructs an http.Request for the PauseMonitor method
+func NewPauseMonitorRequest(server string, monitorId MonitorId) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "monitor_id", monitorId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/monitors/%s/pause", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewResumeMonitorRequest constructs an http.Request for the ResumeMonitor method
+func NewResumeMonitorRequest(server string, monitorId MonitorId) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "monitor_id", monitorId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/monitors/%s/resume", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewRunMonitorRequest constructs an http.Request for the RunMonitor method
+func NewRunMonitorRequest(server string, monitorId MonitorId) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "monitor_id", monitorId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/monitors/%s/run", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewListMonitorRunsRequest constructs an http.Request for the ListMonitorRuns method
+func NewListMonitorRunsRequest(server string, monitorId MonitorId, params *ListMonitorRunsParams) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "monitor_id", monitorId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/monitors/%s/runs", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		// queryValues collects non-styled parameters (passthrough, JSON)
+		// that are safe to round-trip through url.Values.Encode().
+		queryValues := queryURL.Query()
+		// rawQueryFragments collects pre-encoded query fragments from
+		// styled parameters, preserving literal commas as delimiters
+		// per the OpenAPI spec (e.g. "color=blue,black,brown").
+		var rawQueryFragments []string
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "limit", *params.Limit, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if params.After != nil {
+
+			if queryFrag, err := runtime.StyleParamWithOptions("form", true, "after", *params.After, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationQuery, Type: "string", Format: ""}); err != nil {
+				return nil, err
+			} else {
+				for _, qp := range strings.Split(queryFrag, "&") {
+					rawQueryFragments = append(rawQueryFragments, qp)
+				}
+			}
+
+		}
+
+		if encoded := queryValues.Encode(); encoded != "" {
+			rawQueryFragments = append(rawQueryFragments, encoded)
+		}
+		queryURL.RawQuery = strings.Join(rawQueryFragments, "&")
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGetMonitorRunRequest constructs an http.Request for the GetMonitorRun method
+func NewGetMonitorRunRequest(server string, monitorId MonitorId, runId MonitorRunId) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "monitor_id", monitorId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	var pathParam1 string
+
+	pathParam1, err = runtime.StyleParamWithOptions("simple", false, "run_id", runId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/monitors/%s/runs/%s", pathParam0, pathParam1)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewTestMonitorWebhookRequest constructs an http.Request for the TestMonitorWebhook method
+func NewTestMonitorWebhookRequest(server string, monitorId MonitorId) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "monitor_id", monitorId, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/monitors/%s/webhook/test", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
 // NewListSkillsRequest constructs an http.Request for the ListSkills method
 func NewListSkillsRequest(server string, params *ListSkillsParams) (*http.Request, error) {
 	var err error
@@ -12922,6 +16075,168 @@ type ClientWithResponsesInterface interface {
 	//
 	// Corresponds with GET /v1/models (the `ListModels` operationId).
 	ListModelsWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*ListModelsResponse2, error)
+
+	// ListMonitorsWithResponse List monitors
+	//
+	// Lists your API Group's monitors, newest first.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /v1/monitors (the `ListMonitors` operationId).
+	ListMonitorsWithResponse(ctx context.Context, params *ListMonitorsParams, reqEditors ...RequestEditorFn) (*ListMonitorsResponse, error)
+
+	// CreateMonitorWithBodyWithResponse Create a monitor
+	//
+	// Creates an `active` monitor. Its first run is due immediately and starts asynchronously; retrieve results with Get a run or List a monitor's runs.
+	//
+	// Omit `webhook` or set it to null to retrieve results without notifications. If you configure a webhook without a `secret`, this response returns the generated secret in `webhook.secret`. Store it to verify deliveries. A secret you supply is never returned.
+	//
+	// Use `Idempotency-Key` for retries. The same key and body return the original monitor in its current state, without its secret. Reusing the key with a different body returns `400`. If the first response was lost, set a new secret with Update a monitor.
+	//
+	// Active-monitor limits apply per API organization: 100 for tiers 0 and 1, 200 for tier 2, 300 for tier 3, 400 for tier 4, and 500 for tier 5. Paused monitors do not count. Creating or resuming at the limit returns HTTP `409` with `quota_exceeded`. Pause or delete an active monitor, or upgrade the organization's tier, before retrying.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /v1/monitors (the `CreateMonitor` operationId).
+	CreateMonitorWithBodyWithResponse(ctx context.Context, params *CreateMonitorParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CreateMonitorResponse, error)
+
+	// CreateMonitorWithResponse Create a monitor
+	//
+	// Creates an `active` monitor. Its first run is due immediately and starts asynchronously; retrieve results with Get a run or List a monitor's runs.
+	//
+	// Omit `webhook` or set it to null to retrieve results without notifications. If you configure a webhook without a `secret`, this response returns the generated secret in `webhook.secret`. Store it to verify deliveries. A secret you supply is never returned.
+	//
+	// Use `Idempotency-Key` for retries. The same key and body return the original monitor in its current state, without its secret. Reusing the key with a different body returns `400`. If the first response was lost, set a new secret with Update a monitor.
+	//
+	// Active-monitor limits apply per API organization: 100 for tiers 0 and 1, 200 for tier 2, 300 for tier 3, 400 for tier 4, and 500 for tier 5. Paused monitors do not count. Creating or resuming at the limit returns HTTP `409` with `quota_exceeded`. Pause or delete an active monitor, or upgrade the organization's tier, before retrying.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /v1/monitors (the `CreateMonitor` operationId).
+	CreateMonitorWithResponse(ctx context.Context, params *CreateMonitorParams, body CreateMonitorJSONRequestBody, reqEditors ...RequestEditorFn) (*CreateMonitorResponse, error)
+
+	// DeleteMonitorWithResponse Delete a monitor
+	//
+	// Deletes the monitor, its run history, and its state, and stops scheduling new runs.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with DELETE /v1/monitors/{monitor_id} (the `DeleteMonitor` operationId).
+	DeleteMonitorWithResponse(ctx context.Context, monitorId MonitorId, reqEditors ...RequestEditorFn) (*DeleteMonitorResponse2, error)
+
+	// GetMonitorWithResponse Retrieve a monitor
+	//
+	// Returns the monitor with its status, `next_run_at`, and last run.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /v1/monitors/{monitor_id} (the `GetMonitor` operationId).
+	GetMonitorWithResponse(ctx context.Context, monitorId MonitorId, reqEditors ...RequestEditorFn) (*GetMonitorResponse, error)
+
+	// UpdateMonitorWithBodyWithResponse Update a monitor
+	//
+	// Replaces each top-level field the body names: any subset of `name`,
+	// `goal`, `targets`, `schedule`, `webhook` and `metadata`. An absent
+	// key leaves the field unchanged. `null` clears an optional field:
+	// `goal` becomes `""`, `metadata` becomes `{}`, `webhook` is removed;
+	// `null` for `name`, `targets` or `schedule` returns 400. An empty
+	// object returns the monitor unchanged.
+	//
+	// A new `schedule` recomputes `next_run_at`. Updating targets preserves existing run windows, seen-URL history, and stored Page baselines, subject to retention. A Page URL without a stored baseline establishes one on its first successful fetch. A
+	// `webhook` replaces the whole webhook. Without a `secret` it keeps the
+	// current one, or, on a monitor without a webhook, generates one that
+	// this response returns in `webhook.secret`. A new `secret` rotates:
+	// for 24 hours deliveries are signed with both the new and the old
+	// secret.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PATCH /v1/monitors/{monitor_id} (the `UpdateMonitor` operationId).
+	UpdateMonitorWithBodyWithResponse(ctx context.Context, monitorId MonitorId, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*UpdateMonitorResponse, error)
+
+	// UpdateMonitorWithResponse Update a monitor
+	//
+	// Replaces each top-level field the body names: any subset of `name`,
+	// `goal`, `targets`, `schedule`, `webhook` and `metadata`. An absent
+	// key leaves the field unchanged. `null` clears an optional field:
+	// `goal` becomes `""`, `metadata` becomes `{}`, `webhook` is removed;
+	// `null` for `name`, `targets` or `schedule` returns 400. An empty
+	// object returns the monitor unchanged.
+	//
+	// A new `schedule` recomputes `next_run_at`. Updating targets preserves existing run windows, seen-URL history, and stored Page baselines, subject to retention. A Page URL without a stored baseline establishes one on its first successful fetch. A
+	// `webhook` replaces the whole webhook. Without a `secret` it keeps the
+	// current one, or, on a monitor without a webhook, generates one that
+	// this response returns in `webhook.secret`. A new `secret` rotates:
+	// for 24 hours deliveries are signed with both the new and the old
+	// secret.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with PATCH /v1/monitors/{monitor_id} (the `UpdateMonitor` operationId).
+	UpdateMonitorWithResponse(ctx context.Context, monitorId MonitorId, body UpdateMonitorJSONRequestBody, reqEditors ...RequestEditorFn) (*UpdateMonitorResponse, error)
+
+	// PauseMonitorWithResponse Pause a monitor
+	//
+	// Stops scheduled runs and keeps the monitor's state. A queued run is
+	// cancelled (it ends `skipped`); a run already running finishes. Pausing
+	// a paused monitor returns it unchanged.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /v1/monitors/{monitor_id}/pause (the `PauseMonitor` operationId).
+	PauseMonitorWithResponse(ctx context.Context, monitorId MonitorId, reqEditors ...RequestEditorFn) (*PauseMonitorResponse, error)
+
+	// ResumeMonitorWithResponse Resume a monitor
+	//
+	// Resumes scheduled runs and sets `next_run_at` from now. Missed runs are not replayed individually. Resuming a monitor that is not paused returns HTTP `409` with `invalid_state`. State has a 90-day retention period, so a long-paused monitor may establish a new baseline.
+	//
+	// The same active-monitor limit applies to creation and resuming. At the limit, HTTP `409` with `quota_exceeded` leaves the monitor unchanged. Pause or delete an active monitor, or upgrade the organization's tier, before retrying.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /v1/monitors/{monitor_id}/resume (the `ResumeMonitor` operationId).
+	ResumeMonitorWithResponse(ctx context.Context, monitorId MonitorId, reqEditors ...RequestEditorFn) (*ResumeMonitorResponse, error)
+
+	// RunMonitorWithResponse Run a monitor now
+	//
+	// Queues a manual run and returns it at once with status `queued`. The
+	// run's `id` is the `run_id` of its `monitor.run.completed` event, and
+	// you can follow it with get run. A monitor has at most one run at a
+	// time: while one is queued or running, this returns 409
+	// `run_in_progress` with that run's ID. A paused monitor returns 409
+	// `invalid_state`.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /v1/monitors/{monitor_id}/run (the `RunMonitor` operationId).
+	RunMonitorWithResponse(ctx context.Context, monitorId MonitorId, reqEditors ...RequestEditorFn) (*RunMonitorResponse, error)
+
+	// ListMonitorRunsWithResponse List a monitor's runs
+	//
+	// Lists the monitor's runs with their changes, newest first. Runs are kept 90 days.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /v1/monitors/{monitor_id}/runs (the `ListMonitorRuns` operationId).
+	ListMonitorRunsWithResponse(ctx context.Context, monitorId MonitorId, params *ListMonitorRunsParams, reqEditors ...RequestEditorFn) (*ListMonitorRunsResponse, error)
+
+	// GetMonitorRunWithResponse Get a run
+	//
+	// Returns one run with its changes and target errors. A run is visible as soon as run-now returns it.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /v1/monitors/{monitor_id}/runs/{run_id} (the `GetMonitorRun` operationId).
+	GetMonitorRunWithResponse(ctx context.Context, monitorId MonitorId, runId MonitorRunId, reqEditors ...RequestEditorFn) (*GetMonitorRunResponse, error)
+
+	// TestMonitorWebhookWithResponse Test a monitor's webhook
+	//
+	// Sends one signed `monitor.webhook.test` event to the configured webhook URL. Takes no request body and returns the delivery outcome after a response or a 10-second timeout. The test is not retried and does not count toward the `webhook_failing` pause threshold. A monitor without a webhook returns HTTP `409` with `invalid_state`.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /v1/monitors/{monitor_id}/webhook/test (the `TestMonitorWebhook` operationId).
+	TestMonitorWebhookWithResponse(ctx context.Context, monitorId MonitorId, reqEditors ...RequestEditorFn) (*TestMonitorWebhookResponse, error)
 
 	// ListSkillsWithResponse List skills
 	//
@@ -14411,6 +17726,1143 @@ func (r ListModelsResponse2) ContentType() string {
 	return ""
 }
 
+// ListMonitorsResponse429Headers the declared response headers of an HTTP 429 response for ListMonitors
+type ListMonitorsResponse429Headers struct {
+	RetryAfter *int
+}
+
+type ListMonitorsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *MonitorList
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *MonitorBadRequest
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *MonitorUnauthorized
+	// JSON403 the response for an HTTP 403 `application/json` response
+	JSON403 *MonitorForbidden
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *MonitorTooManyRequests
+	// JSON502 the response for an HTTP 502 `application/json` response
+	JSON502 *MonitorBadGateway
+	// JSON503 the response for an HTTP 503 `application/json` response
+	JSON503 *MonitorUnavailable
+	// JSON504 the response for an HTTP 504 `application/json` response
+	JSON504 *MonitorGatewayTimeout
+	// Headers429 the parsed response headers for an HTTP 429 response
+	Headers429 *ListMonitorsResponse429Headers
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r ListMonitorsResponse) GetJSON200() *MonitorList {
+	return r.JSON200
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r ListMonitorsResponse) GetJSON400() *MonitorBadRequest {
+	return r.JSON400
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r ListMonitorsResponse) GetJSON401() *MonitorUnauthorized {
+	return r.JSON401
+}
+
+// GetJSON403 returns the response for an HTTP 403 `application/json` response
+func (r ListMonitorsResponse) GetJSON403() *MonitorForbidden {
+	return r.JSON403
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r ListMonitorsResponse) GetJSON429() *MonitorTooManyRequests {
+	return r.JSON429
+}
+
+// GetJSON502 returns the response for an HTTP 502 `application/json` response
+func (r ListMonitorsResponse) GetJSON502() *MonitorBadGateway {
+	return r.JSON502
+}
+
+// GetJSON503 returns the response for an HTTP 503 `application/json` response
+func (r ListMonitorsResponse) GetJSON503() *MonitorUnavailable {
+	return r.JSON503
+}
+
+// GetJSON504 returns the response for an HTTP 504 `application/json` response
+func (r ListMonitorsResponse) GetJSON504() *MonitorGatewayTimeout {
+	return r.JSON504
+}
+
+// GetBody returns the raw response body bytes
+func (r ListMonitorsResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r ListMonitorsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r ListMonitorsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r ListMonitorsResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+// CreateMonitorResponse429Headers the declared response headers of an HTTP 429 response for CreateMonitor
+type CreateMonitorResponse429Headers struct {
+	RetryAfter *int
+}
+
+type CreateMonitorResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *Monitor
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *MonitorBadRequest
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *MonitorUnauthorized
+	// JSON402 the response for an HTTP 402 `application/json` response
+	JSON402 *MonitorPaymentRequired
+	// JSON403 the response for an HTTP 403 `application/json` response
+	JSON403 *MonitorForbidden
+	// JSON409 the response for an HTTP 409 `application/json` response
+	JSON409 *MonitorApiError
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *MonitorTooManyRequests
+	// JSON502 the response for an HTTP 502 `application/json` response
+	JSON502 *MonitorBadGateway
+	// JSON503 the response for an HTTP 503 `application/json` response
+	JSON503 *MonitorUnavailable
+	// JSON504 the response for an HTTP 504 `application/json` response
+	JSON504 *MonitorGatewayTimeout
+	// Headers429 the parsed response headers for an HTTP 429 response
+	Headers429 *CreateMonitorResponse429Headers
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r CreateMonitorResponse) GetJSON200() *Monitor {
+	return r.JSON200
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r CreateMonitorResponse) GetJSON400() *MonitorBadRequest {
+	return r.JSON400
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r CreateMonitorResponse) GetJSON401() *MonitorUnauthorized {
+	return r.JSON401
+}
+
+// GetJSON402 returns the response for an HTTP 402 `application/json` response
+func (r CreateMonitorResponse) GetJSON402() *MonitorPaymentRequired {
+	return r.JSON402
+}
+
+// GetJSON403 returns the response for an HTTP 403 `application/json` response
+func (r CreateMonitorResponse) GetJSON403() *MonitorForbidden {
+	return r.JSON403
+}
+
+// GetJSON409 returns the response for an HTTP 409 `application/json` response
+func (r CreateMonitorResponse) GetJSON409() *MonitorApiError {
+	return r.JSON409
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r CreateMonitorResponse) GetJSON429() *MonitorTooManyRequests {
+	return r.JSON429
+}
+
+// GetJSON502 returns the response for an HTTP 502 `application/json` response
+func (r CreateMonitorResponse) GetJSON502() *MonitorBadGateway {
+	return r.JSON502
+}
+
+// GetJSON503 returns the response for an HTTP 503 `application/json` response
+func (r CreateMonitorResponse) GetJSON503() *MonitorUnavailable {
+	return r.JSON503
+}
+
+// GetJSON504 returns the response for an HTTP 504 `application/json` response
+func (r CreateMonitorResponse) GetJSON504() *MonitorGatewayTimeout {
+	return r.JSON504
+}
+
+// GetBody returns the raw response body bytes
+func (r CreateMonitorResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r CreateMonitorResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CreateMonitorResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r CreateMonitorResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+// DeleteMonitorResponse2429Headers the declared response headers of an HTTP 429 response for DeleteMonitor
+type DeleteMonitorResponse2429Headers struct {
+	RetryAfter *int
+}
+
+type DeleteMonitorResponse2 struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *DeleteMonitorResponse
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *MonitorUnauthorized
+	// JSON403 the response for an HTTP 403 `application/json` response
+	JSON403 *MonitorForbidden
+	// JSON404 the response for an HTTP 404 `application/json` response
+	JSON404 *MonitorNotFound
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *MonitorTooManyRequests
+	// JSON502 the response for an HTTP 502 `application/json` response
+	JSON502 *MonitorBadGateway
+	// JSON503 the response for an HTTP 503 `application/json` response
+	JSON503 *MonitorUnavailable
+	// JSON504 the response for an HTTP 504 `application/json` response
+	JSON504 *MonitorGatewayTimeout
+	// Headers429 the parsed response headers for an HTTP 429 response
+	Headers429 *DeleteMonitorResponse2429Headers
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r DeleteMonitorResponse2) GetJSON200() *DeleteMonitorResponse {
+	return r.JSON200
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r DeleteMonitorResponse2) GetJSON401() *MonitorUnauthorized {
+	return r.JSON401
+}
+
+// GetJSON403 returns the response for an HTTP 403 `application/json` response
+func (r DeleteMonitorResponse2) GetJSON403() *MonitorForbidden {
+	return r.JSON403
+}
+
+// GetJSON404 returns the response for an HTTP 404 `application/json` response
+func (r DeleteMonitorResponse2) GetJSON404() *MonitorNotFound {
+	return r.JSON404
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r DeleteMonitorResponse2) GetJSON429() *MonitorTooManyRequests {
+	return r.JSON429
+}
+
+// GetJSON502 returns the response for an HTTP 502 `application/json` response
+func (r DeleteMonitorResponse2) GetJSON502() *MonitorBadGateway {
+	return r.JSON502
+}
+
+// GetJSON503 returns the response for an HTTP 503 `application/json` response
+func (r DeleteMonitorResponse2) GetJSON503() *MonitorUnavailable {
+	return r.JSON503
+}
+
+// GetJSON504 returns the response for an HTTP 504 `application/json` response
+func (r DeleteMonitorResponse2) GetJSON504() *MonitorGatewayTimeout {
+	return r.JSON504
+}
+
+// GetBody returns the raw response body bytes
+func (r DeleteMonitorResponse2) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r DeleteMonitorResponse2) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r DeleteMonitorResponse2) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r DeleteMonitorResponse2) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+// GetMonitorResponse429Headers the declared response headers of an HTTP 429 response for GetMonitor
+type GetMonitorResponse429Headers struct {
+	RetryAfter *int
+}
+
+type GetMonitorResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *Monitor
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *MonitorUnauthorized
+	// JSON403 the response for an HTTP 403 `application/json` response
+	JSON403 *MonitorForbidden
+	// JSON404 the response for an HTTP 404 `application/json` response
+	JSON404 *MonitorNotFound
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *MonitorTooManyRequests
+	// JSON502 the response for an HTTP 502 `application/json` response
+	JSON502 *MonitorBadGateway
+	// JSON503 the response for an HTTP 503 `application/json` response
+	JSON503 *MonitorUnavailable
+	// JSON504 the response for an HTTP 504 `application/json` response
+	JSON504 *MonitorGatewayTimeout
+	// Headers429 the parsed response headers for an HTTP 429 response
+	Headers429 *GetMonitorResponse429Headers
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r GetMonitorResponse) GetJSON200() *Monitor {
+	return r.JSON200
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r GetMonitorResponse) GetJSON401() *MonitorUnauthorized {
+	return r.JSON401
+}
+
+// GetJSON403 returns the response for an HTTP 403 `application/json` response
+func (r GetMonitorResponse) GetJSON403() *MonitorForbidden {
+	return r.JSON403
+}
+
+// GetJSON404 returns the response for an HTTP 404 `application/json` response
+func (r GetMonitorResponse) GetJSON404() *MonitorNotFound {
+	return r.JSON404
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r GetMonitorResponse) GetJSON429() *MonitorTooManyRequests {
+	return r.JSON429
+}
+
+// GetJSON502 returns the response for an HTTP 502 `application/json` response
+func (r GetMonitorResponse) GetJSON502() *MonitorBadGateway {
+	return r.JSON502
+}
+
+// GetJSON503 returns the response for an HTTP 503 `application/json` response
+func (r GetMonitorResponse) GetJSON503() *MonitorUnavailable {
+	return r.JSON503
+}
+
+// GetJSON504 returns the response for an HTTP 504 `application/json` response
+func (r GetMonitorResponse) GetJSON504() *MonitorGatewayTimeout {
+	return r.JSON504
+}
+
+// GetBody returns the raw response body bytes
+func (r GetMonitorResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r GetMonitorResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetMonitorResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r GetMonitorResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+// UpdateMonitorResponse429Headers the declared response headers of an HTTP 429 response for UpdateMonitor
+type UpdateMonitorResponse429Headers struct {
+	RetryAfter *int
+}
+
+type UpdateMonitorResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *Monitor
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *MonitorBadRequest
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *MonitorUnauthorized
+	// JSON403 the response for an HTTP 403 `application/json` response
+	JSON403 *MonitorForbidden
+	// JSON404 the response for an HTTP 404 `application/json` response
+	JSON404 *MonitorNotFound
+	// JSON409 the response for an HTTP 409 `application/json` response
+	JSON409 *MonitorConcurrentUpdate
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *MonitorTooManyRequests
+	// JSON502 the response for an HTTP 502 `application/json` response
+	JSON502 *MonitorBadGateway
+	// JSON503 the response for an HTTP 503 `application/json` response
+	JSON503 *MonitorUnavailable
+	// JSON504 the response for an HTTP 504 `application/json` response
+	JSON504 *MonitorGatewayTimeout
+	// Headers429 the parsed response headers for an HTTP 429 response
+	Headers429 *UpdateMonitorResponse429Headers
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r UpdateMonitorResponse) GetJSON200() *Monitor {
+	return r.JSON200
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r UpdateMonitorResponse) GetJSON400() *MonitorBadRequest {
+	return r.JSON400
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r UpdateMonitorResponse) GetJSON401() *MonitorUnauthorized {
+	return r.JSON401
+}
+
+// GetJSON403 returns the response for an HTTP 403 `application/json` response
+func (r UpdateMonitorResponse) GetJSON403() *MonitorForbidden {
+	return r.JSON403
+}
+
+// GetJSON404 returns the response for an HTTP 404 `application/json` response
+func (r UpdateMonitorResponse) GetJSON404() *MonitorNotFound {
+	return r.JSON404
+}
+
+// GetJSON409 returns the response for an HTTP 409 `application/json` response
+func (r UpdateMonitorResponse) GetJSON409() *MonitorConcurrentUpdate {
+	return r.JSON409
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r UpdateMonitorResponse) GetJSON429() *MonitorTooManyRequests {
+	return r.JSON429
+}
+
+// GetJSON502 returns the response for an HTTP 502 `application/json` response
+func (r UpdateMonitorResponse) GetJSON502() *MonitorBadGateway {
+	return r.JSON502
+}
+
+// GetJSON503 returns the response for an HTTP 503 `application/json` response
+func (r UpdateMonitorResponse) GetJSON503() *MonitorUnavailable {
+	return r.JSON503
+}
+
+// GetJSON504 returns the response for an HTTP 504 `application/json` response
+func (r UpdateMonitorResponse) GetJSON504() *MonitorGatewayTimeout {
+	return r.JSON504
+}
+
+// GetBody returns the raw response body bytes
+func (r UpdateMonitorResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r UpdateMonitorResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r UpdateMonitorResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r UpdateMonitorResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+// PauseMonitorResponse429Headers the declared response headers of an HTTP 429 response for PauseMonitor
+type PauseMonitorResponse429Headers struct {
+	RetryAfter *int
+}
+
+type PauseMonitorResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *Monitor
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *MonitorUnauthorized
+	// JSON403 the response for an HTTP 403 `application/json` response
+	JSON403 *MonitorForbidden
+	// JSON404 the response for an HTTP 404 `application/json` response
+	JSON404 *MonitorNotFound
+	// JSON409 the response for an HTTP 409 `application/json` response
+	JSON409 *MonitorConcurrentUpdate
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *MonitorTooManyRequests
+	// JSON502 the response for an HTTP 502 `application/json` response
+	JSON502 *MonitorBadGateway
+	// JSON503 the response for an HTTP 503 `application/json` response
+	JSON503 *MonitorUnavailable
+	// JSON504 the response for an HTTP 504 `application/json` response
+	JSON504 *MonitorGatewayTimeout
+	// Headers429 the parsed response headers for an HTTP 429 response
+	Headers429 *PauseMonitorResponse429Headers
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r PauseMonitorResponse) GetJSON200() *Monitor {
+	return r.JSON200
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r PauseMonitorResponse) GetJSON401() *MonitorUnauthorized {
+	return r.JSON401
+}
+
+// GetJSON403 returns the response for an HTTP 403 `application/json` response
+func (r PauseMonitorResponse) GetJSON403() *MonitorForbidden {
+	return r.JSON403
+}
+
+// GetJSON404 returns the response for an HTTP 404 `application/json` response
+func (r PauseMonitorResponse) GetJSON404() *MonitorNotFound {
+	return r.JSON404
+}
+
+// GetJSON409 returns the response for an HTTP 409 `application/json` response
+func (r PauseMonitorResponse) GetJSON409() *MonitorConcurrentUpdate {
+	return r.JSON409
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r PauseMonitorResponse) GetJSON429() *MonitorTooManyRequests {
+	return r.JSON429
+}
+
+// GetJSON502 returns the response for an HTTP 502 `application/json` response
+func (r PauseMonitorResponse) GetJSON502() *MonitorBadGateway {
+	return r.JSON502
+}
+
+// GetJSON503 returns the response for an HTTP 503 `application/json` response
+func (r PauseMonitorResponse) GetJSON503() *MonitorUnavailable {
+	return r.JSON503
+}
+
+// GetJSON504 returns the response for an HTTP 504 `application/json` response
+func (r PauseMonitorResponse) GetJSON504() *MonitorGatewayTimeout {
+	return r.JSON504
+}
+
+// GetBody returns the raw response body bytes
+func (r PauseMonitorResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r PauseMonitorResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r PauseMonitorResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r PauseMonitorResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+// ResumeMonitorResponse429Headers the declared response headers of an HTTP 429 response for ResumeMonitor
+type ResumeMonitorResponse429Headers struct {
+	RetryAfter *int
+}
+
+type ResumeMonitorResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *Monitor
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *MonitorUnauthorized
+	// JSON403 the response for an HTTP 403 `application/json` response
+	JSON403 *MonitorForbidden
+	// JSON404 the response for an HTTP 404 `application/json` response
+	JSON404 *MonitorNotFound
+	// JSON409 the response for an HTTP 409 `application/json` response
+	JSON409 *MonitorApiError
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *MonitorTooManyRequests
+	// JSON502 the response for an HTTP 502 `application/json` response
+	JSON502 *MonitorBadGateway
+	// JSON503 the response for an HTTP 503 `application/json` response
+	JSON503 *MonitorUnavailable
+	// JSON504 the response for an HTTP 504 `application/json` response
+	JSON504 *MonitorGatewayTimeout
+	// Headers429 the parsed response headers for an HTTP 429 response
+	Headers429 *ResumeMonitorResponse429Headers
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r ResumeMonitorResponse) GetJSON200() *Monitor {
+	return r.JSON200
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r ResumeMonitorResponse) GetJSON401() *MonitorUnauthorized {
+	return r.JSON401
+}
+
+// GetJSON403 returns the response for an HTTP 403 `application/json` response
+func (r ResumeMonitorResponse) GetJSON403() *MonitorForbidden {
+	return r.JSON403
+}
+
+// GetJSON404 returns the response for an HTTP 404 `application/json` response
+func (r ResumeMonitorResponse) GetJSON404() *MonitorNotFound {
+	return r.JSON404
+}
+
+// GetJSON409 returns the response for an HTTP 409 `application/json` response
+func (r ResumeMonitorResponse) GetJSON409() *MonitorApiError {
+	return r.JSON409
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r ResumeMonitorResponse) GetJSON429() *MonitorTooManyRequests {
+	return r.JSON429
+}
+
+// GetJSON502 returns the response for an HTTP 502 `application/json` response
+func (r ResumeMonitorResponse) GetJSON502() *MonitorBadGateway {
+	return r.JSON502
+}
+
+// GetJSON503 returns the response for an HTTP 503 `application/json` response
+func (r ResumeMonitorResponse) GetJSON503() *MonitorUnavailable {
+	return r.JSON503
+}
+
+// GetJSON504 returns the response for an HTTP 504 `application/json` response
+func (r ResumeMonitorResponse) GetJSON504() *MonitorGatewayTimeout {
+	return r.JSON504
+}
+
+// GetBody returns the raw response body bytes
+func (r ResumeMonitorResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r ResumeMonitorResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r ResumeMonitorResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r ResumeMonitorResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+// RunMonitorResponse429Headers the declared response headers of an HTTP 429 response for RunMonitor
+type RunMonitorResponse429Headers struct {
+	RetryAfter *int
+}
+
+type RunMonitorResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON202 the response for an HTTP 202 `application/json` response
+	JSON202 *MonitorRun
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *MonitorUnauthorized
+	// JSON402 the response for an HTTP 402 `application/json` response
+	JSON402 *MonitorPaymentRequired
+	// JSON403 the response for an HTTP 403 `application/json` response
+	JSON403 *MonitorForbidden
+	// JSON404 the response for an HTTP 404 `application/json` response
+	JSON404 *MonitorNotFound
+	// JSON409 the response for an HTTP 409 `application/json` response
+	JSON409 *RunMonitor409JSONResponseBody
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *MonitorTooManyRequests
+	// JSON502 the response for an HTTP 502 `application/json` response
+	JSON502 *MonitorBadGateway
+	// JSON503 the response for an HTTP 503 `application/json` response
+	JSON503 *MonitorUnavailable
+	// JSON504 the response for an HTTP 504 `application/json` response
+	JSON504 *MonitorGatewayTimeout
+	// Headers429 the parsed response headers for an HTTP 429 response
+	Headers429 *RunMonitorResponse429Headers
+}
+
+// GetJSON202 returns the response for an HTTP 202 `application/json` response
+func (r RunMonitorResponse) GetJSON202() *MonitorRun {
+	return r.JSON202
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r RunMonitorResponse) GetJSON401() *MonitorUnauthorized {
+	return r.JSON401
+}
+
+// GetJSON402 returns the response for an HTTP 402 `application/json` response
+func (r RunMonitorResponse) GetJSON402() *MonitorPaymentRequired {
+	return r.JSON402
+}
+
+// GetJSON403 returns the response for an HTTP 403 `application/json` response
+func (r RunMonitorResponse) GetJSON403() *MonitorForbidden {
+	return r.JSON403
+}
+
+// GetJSON404 returns the response for an HTTP 404 `application/json` response
+func (r RunMonitorResponse) GetJSON404() *MonitorNotFound {
+	return r.JSON404
+}
+
+// GetJSON409 returns the response for an HTTP 409 `application/json` response
+func (r RunMonitorResponse) GetJSON409() *RunMonitor409JSONResponseBody {
+	return r.JSON409
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r RunMonitorResponse) GetJSON429() *MonitorTooManyRequests {
+	return r.JSON429
+}
+
+// GetJSON502 returns the response for an HTTP 502 `application/json` response
+func (r RunMonitorResponse) GetJSON502() *MonitorBadGateway {
+	return r.JSON502
+}
+
+// GetJSON503 returns the response for an HTTP 503 `application/json` response
+func (r RunMonitorResponse) GetJSON503() *MonitorUnavailable {
+	return r.JSON503
+}
+
+// GetJSON504 returns the response for an HTTP 504 `application/json` response
+func (r RunMonitorResponse) GetJSON504() *MonitorGatewayTimeout {
+	return r.JSON504
+}
+
+// GetBody returns the raw response body bytes
+func (r RunMonitorResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r RunMonitorResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r RunMonitorResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r RunMonitorResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+// ListMonitorRunsResponse429Headers the declared response headers of an HTTP 429 response for ListMonitorRuns
+type ListMonitorRunsResponse429Headers struct {
+	RetryAfter *int
+}
+
+type ListMonitorRunsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *MonitorRunList
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *MonitorBadRequest
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *MonitorUnauthorized
+	// JSON403 the response for an HTTP 403 `application/json` response
+	JSON403 *MonitorForbidden
+	// JSON404 the response for an HTTP 404 `application/json` response
+	JSON404 *MonitorNotFound
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *MonitorTooManyRequests
+	// JSON502 the response for an HTTP 502 `application/json` response
+	JSON502 *MonitorBadGateway
+	// JSON503 the response for an HTTP 503 `application/json` response
+	JSON503 *MonitorUnavailable
+	// JSON504 the response for an HTTP 504 `application/json` response
+	JSON504 *MonitorGatewayTimeout
+	// Headers429 the parsed response headers for an HTTP 429 response
+	Headers429 *ListMonitorRunsResponse429Headers
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r ListMonitorRunsResponse) GetJSON200() *MonitorRunList {
+	return r.JSON200
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r ListMonitorRunsResponse) GetJSON400() *MonitorBadRequest {
+	return r.JSON400
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r ListMonitorRunsResponse) GetJSON401() *MonitorUnauthorized {
+	return r.JSON401
+}
+
+// GetJSON403 returns the response for an HTTP 403 `application/json` response
+func (r ListMonitorRunsResponse) GetJSON403() *MonitorForbidden {
+	return r.JSON403
+}
+
+// GetJSON404 returns the response for an HTTP 404 `application/json` response
+func (r ListMonitorRunsResponse) GetJSON404() *MonitorNotFound {
+	return r.JSON404
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r ListMonitorRunsResponse) GetJSON429() *MonitorTooManyRequests {
+	return r.JSON429
+}
+
+// GetJSON502 returns the response for an HTTP 502 `application/json` response
+func (r ListMonitorRunsResponse) GetJSON502() *MonitorBadGateway {
+	return r.JSON502
+}
+
+// GetJSON503 returns the response for an HTTP 503 `application/json` response
+func (r ListMonitorRunsResponse) GetJSON503() *MonitorUnavailable {
+	return r.JSON503
+}
+
+// GetJSON504 returns the response for an HTTP 504 `application/json` response
+func (r ListMonitorRunsResponse) GetJSON504() *MonitorGatewayTimeout {
+	return r.JSON504
+}
+
+// GetBody returns the raw response body bytes
+func (r ListMonitorRunsResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r ListMonitorRunsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r ListMonitorRunsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r ListMonitorRunsResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+// GetMonitorRunResponse429Headers the declared response headers of an HTTP 429 response for GetMonitorRun
+type GetMonitorRunResponse429Headers struct {
+	RetryAfter *int
+}
+
+type GetMonitorRunResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *MonitorRun
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *MonitorUnauthorized
+	// JSON403 the response for an HTTP 403 `application/json` response
+	JSON403 *MonitorForbidden
+	// JSON404 the response for an HTTP 404 `application/json` response
+	JSON404 *MonitorApiError
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *MonitorTooManyRequests
+	// JSON502 the response for an HTTP 502 `application/json` response
+	JSON502 *MonitorBadGateway
+	// JSON503 the response for an HTTP 503 `application/json` response
+	JSON503 *MonitorUnavailable
+	// JSON504 the response for an HTTP 504 `application/json` response
+	JSON504 *MonitorGatewayTimeout
+	// Headers429 the parsed response headers for an HTTP 429 response
+	Headers429 *GetMonitorRunResponse429Headers
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r GetMonitorRunResponse) GetJSON200() *MonitorRun {
+	return r.JSON200
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r GetMonitorRunResponse) GetJSON401() *MonitorUnauthorized {
+	return r.JSON401
+}
+
+// GetJSON403 returns the response for an HTTP 403 `application/json` response
+func (r GetMonitorRunResponse) GetJSON403() *MonitorForbidden {
+	return r.JSON403
+}
+
+// GetJSON404 returns the response for an HTTP 404 `application/json` response
+func (r GetMonitorRunResponse) GetJSON404() *MonitorApiError {
+	return r.JSON404
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r GetMonitorRunResponse) GetJSON429() *MonitorTooManyRequests {
+	return r.JSON429
+}
+
+// GetJSON502 returns the response for an HTTP 502 `application/json` response
+func (r GetMonitorRunResponse) GetJSON502() *MonitorBadGateway {
+	return r.JSON502
+}
+
+// GetJSON503 returns the response for an HTTP 503 `application/json` response
+func (r GetMonitorRunResponse) GetJSON503() *MonitorUnavailable {
+	return r.JSON503
+}
+
+// GetJSON504 returns the response for an HTTP 504 `application/json` response
+func (r GetMonitorRunResponse) GetJSON504() *MonitorGatewayTimeout {
+	return r.JSON504
+}
+
+// GetBody returns the raw response body bytes
+func (r GetMonitorRunResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r GetMonitorRunResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GetMonitorRunResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r GetMonitorRunResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+// TestMonitorWebhookResponse429Headers the declared response headers of an HTTP 429 response for TestMonitorWebhook
+type TestMonitorWebhookResponse429Headers struct {
+	RetryAfter *int
+}
+
+type TestMonitorWebhookResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *MonitorWebhookTest
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *MonitorUnauthorized
+	// JSON403 the response for an HTTP 403 `application/json` response
+	JSON403 *MonitorForbidden
+	// JSON404 the response for an HTTP 404 `application/json` response
+	JSON404 *MonitorNotFound
+	// JSON409 the response for an HTTP 409 `application/json` response
+	JSON409 *MonitorInvalidState
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *MonitorTooManyRequests
+	// JSON502 the response for an HTTP 502 `application/json` response
+	JSON502 *MonitorBadGateway
+	// JSON503 the response for an HTTP 503 `application/json` response
+	JSON503 *MonitorUnavailable
+	// JSON504 the response for an HTTP 504 `application/json` response
+	JSON504 *MonitorGatewayTimeout
+	// Headers429 the parsed response headers for an HTTP 429 response
+	Headers429 *TestMonitorWebhookResponse429Headers
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r TestMonitorWebhookResponse) GetJSON200() *MonitorWebhookTest {
+	return r.JSON200
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r TestMonitorWebhookResponse) GetJSON401() *MonitorUnauthorized {
+	return r.JSON401
+}
+
+// GetJSON403 returns the response for an HTTP 403 `application/json` response
+func (r TestMonitorWebhookResponse) GetJSON403() *MonitorForbidden {
+	return r.JSON403
+}
+
+// GetJSON404 returns the response for an HTTP 404 `application/json` response
+func (r TestMonitorWebhookResponse) GetJSON404() *MonitorNotFound {
+	return r.JSON404
+}
+
+// GetJSON409 returns the response for an HTTP 409 `application/json` response
+func (r TestMonitorWebhookResponse) GetJSON409() *MonitorInvalidState {
+	return r.JSON409
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r TestMonitorWebhookResponse) GetJSON429() *MonitorTooManyRequests {
+	return r.JSON429
+}
+
+// GetJSON502 returns the response for an HTTP 502 `application/json` response
+func (r TestMonitorWebhookResponse) GetJSON502() *MonitorBadGateway {
+	return r.JSON502
+}
+
+// GetJSON503 returns the response for an HTTP 503 `application/json` response
+func (r TestMonitorWebhookResponse) GetJSON503() *MonitorUnavailable {
+	return r.JSON503
+}
+
+// GetJSON504 returns the response for an HTTP 504 `application/json` response
+func (r TestMonitorWebhookResponse) GetJSON504() *MonitorGatewayTimeout {
+	return r.JSON504
+}
+
+// GetBody returns the raw response body bytes
+func (r TestMonitorWebhookResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r TestMonitorWebhookResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r TestMonitorWebhookResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r TestMonitorWebhookResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
 type ListSkillsResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
@@ -15497,6 +19949,246 @@ func (c *ClientWithResponses) ListModelsWithResponse(ctx context.Context, reqEdi
 		return nil, err
 	}
 	return ParseListModelsResponse2(rsp)
+}
+
+// ListMonitorsWithResponse List monitors
+//
+// Lists your API Group's monitors, newest first.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /v1/monitors (the `ListMonitors` operationId).
+func (c *ClientWithResponses) ListMonitorsWithResponse(ctx context.Context, params *ListMonitorsParams, reqEditors ...RequestEditorFn) (*ListMonitorsResponse, error) {
+	rsp, err := c.ListMonitors(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseListMonitorsResponse(rsp)
+}
+
+// CreateMonitorWithBodyWithResponse Create a monitor
+//
+// Creates an `active` monitor. Its first run is due immediately and starts asynchronously; retrieve results with Get a run or List a monitor's runs.
+//
+// Omit `webhook` or set it to null to retrieve results without notifications. If you configure a webhook without a `secret`, this response returns the generated secret in `webhook.secret`. Store it to verify deliveries. A secret you supply is never returned.
+//
+// Use `Idempotency-Key` for retries. The same key and body return the original monitor in its current state, without its secret. Reusing the key with a different body returns `400`. If the first response was lost, set a new secret with Update a monitor.
+//
+// Active-monitor limits apply per API organization: 100 for tiers 0 and 1, 200 for tier 2, 300 for tier 3, 400 for tier 4, and 500 for tier 5. Paused monitors do not count. Creating or resuming at the limit returns HTTP `409` with `quota_exceeded`. Pause or delete an active monitor, or upgrade the organization's tier, before retrying.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /v1/monitors (the `CreateMonitor` operationId).
+func (c *ClientWithResponses) CreateMonitorWithBodyWithResponse(ctx context.Context, params *CreateMonitorParams, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CreateMonitorResponse, error) {
+	rsp, err := c.CreateMonitorWithBody(ctx, params, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCreateMonitorResponse(rsp)
+}
+
+// CreateMonitorWithResponse Create a monitor
+//
+// Creates an `active` monitor. Its first run is due immediately and starts asynchronously; retrieve results with Get a run or List a monitor's runs.
+//
+// Omit `webhook` or set it to null to retrieve results without notifications. If you configure a webhook without a `secret`, this response returns the generated secret in `webhook.secret`. Store it to verify deliveries. A secret you supply is never returned.
+//
+// Use `Idempotency-Key` for retries. The same key and body return the original monitor in its current state, without its secret. Reusing the key with a different body returns `400`. If the first response was lost, set a new secret with Update a monitor.
+//
+// Active-monitor limits apply per API organization: 100 for tiers 0 and 1, 200 for tier 2, 300 for tier 3, 400 for tier 4, and 500 for tier 5. Paused monitors do not count. Creating or resuming at the limit returns HTTP `409` with `quota_exceeded`. Pause or delete an active monitor, or upgrade the organization's tier, before retrying.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /v1/monitors (the `CreateMonitor` operationId).
+func (c *ClientWithResponses) CreateMonitorWithResponse(ctx context.Context, params *CreateMonitorParams, body CreateMonitorJSONRequestBody, reqEditors ...RequestEditorFn) (*CreateMonitorResponse, error) {
+	rsp, err := c.CreateMonitor(ctx, params, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCreateMonitorResponse(rsp)
+}
+
+// DeleteMonitorWithResponse Delete a monitor
+//
+// Deletes the monitor, its run history, and its state, and stops scheduling new runs.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with DELETE /v1/monitors/{monitor_id} (the `DeleteMonitor` operationId).
+func (c *ClientWithResponses) DeleteMonitorWithResponse(ctx context.Context, monitorId MonitorId, reqEditors ...RequestEditorFn) (*DeleteMonitorResponse2, error) {
+	rsp, err := c.DeleteMonitor(ctx, monitorId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseDeleteMonitorResponse2(rsp)
+}
+
+// GetMonitorWithResponse Retrieve a monitor
+//
+// Returns the monitor with its status, `next_run_at`, and last run.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /v1/monitors/{monitor_id} (the `GetMonitor` operationId).
+func (c *ClientWithResponses) GetMonitorWithResponse(ctx context.Context, monitorId MonitorId, reqEditors ...RequestEditorFn) (*GetMonitorResponse, error) {
+	rsp, err := c.GetMonitor(ctx, monitorId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetMonitorResponse(rsp)
+}
+
+// UpdateMonitorWithBodyWithResponse Update a monitor
+//
+// Replaces each top-level field the body names: any subset of `name`,
+// `goal`, `targets`, `schedule`, `webhook` and `metadata`. An absent
+// key leaves the field unchanged. `null` clears an optional field:
+// `goal` becomes `""`, `metadata` becomes `{}`, `webhook` is removed;
+// `null` for `name`, `targets` or `schedule` returns 400. An empty
+// object returns the monitor unchanged.
+//
+// A new `schedule` recomputes `next_run_at`. Updating targets preserves existing run windows, seen-URL history, and stored Page baselines, subject to retention. A Page URL without a stored baseline establishes one on its first successful fetch. A
+// `webhook` replaces the whole webhook. Without a `secret` it keeps the
+// current one, or, on a monitor without a webhook, generates one that
+// this response returns in `webhook.secret`. A new `secret` rotates:
+// for 24 hours deliveries are signed with both the new and the old
+// secret.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PATCH /v1/monitors/{monitor_id} (the `UpdateMonitor` operationId).
+func (c *ClientWithResponses) UpdateMonitorWithBodyWithResponse(ctx context.Context, monitorId MonitorId, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*UpdateMonitorResponse, error) {
+	rsp, err := c.UpdateMonitorWithBody(ctx, monitorId, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseUpdateMonitorResponse(rsp)
+}
+
+// UpdateMonitorWithResponse Update a monitor
+//
+// Replaces each top-level field the body names: any subset of `name`,
+// `goal`, `targets`, `schedule`, `webhook` and `metadata`. An absent
+// key leaves the field unchanged. `null` clears an optional field:
+// `goal` becomes `""`, `metadata` becomes `{}`, `webhook` is removed;
+// `null` for `name`, `targets` or `schedule` returns 400. An empty
+// object returns the monitor unchanged.
+//
+// A new `schedule` recomputes `next_run_at`. Updating targets preserves existing run windows, seen-URL history, and stored Page baselines, subject to retention. A Page URL without a stored baseline establishes one on its first successful fetch. A
+// `webhook` replaces the whole webhook. Without a `secret` it keeps the
+// current one, or, on a monitor without a webhook, generates one that
+// this response returns in `webhook.secret`. A new `secret` rotates:
+// for 24 hours deliveries are signed with both the new and the old
+// secret.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with PATCH /v1/monitors/{monitor_id} (the `UpdateMonitor` operationId).
+func (c *ClientWithResponses) UpdateMonitorWithResponse(ctx context.Context, monitorId MonitorId, body UpdateMonitorJSONRequestBody, reqEditors ...RequestEditorFn) (*UpdateMonitorResponse, error) {
+	rsp, err := c.UpdateMonitor(ctx, monitorId, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseUpdateMonitorResponse(rsp)
+}
+
+// PauseMonitorWithResponse Pause a monitor
+//
+// Stops scheduled runs and keeps the monitor's state. A queued run is
+// cancelled (it ends `skipped`); a run already running finishes. Pausing
+// a paused monitor returns it unchanged.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /v1/monitors/{monitor_id}/pause (the `PauseMonitor` operationId).
+func (c *ClientWithResponses) PauseMonitorWithResponse(ctx context.Context, monitorId MonitorId, reqEditors ...RequestEditorFn) (*PauseMonitorResponse, error) {
+	rsp, err := c.PauseMonitor(ctx, monitorId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParsePauseMonitorResponse(rsp)
+}
+
+// ResumeMonitorWithResponse Resume a monitor
+//
+// Resumes scheduled runs and sets `next_run_at` from now. Missed runs are not replayed individually. Resuming a monitor that is not paused returns HTTP `409` with `invalid_state`. State has a 90-day retention period, so a long-paused monitor may establish a new baseline.
+//
+// The same active-monitor limit applies to creation and resuming. At the limit, HTTP `409` with `quota_exceeded` leaves the monitor unchanged. Pause or delete an active monitor, or upgrade the organization's tier, before retrying.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /v1/monitors/{monitor_id}/resume (the `ResumeMonitor` operationId).
+func (c *ClientWithResponses) ResumeMonitorWithResponse(ctx context.Context, monitorId MonitorId, reqEditors ...RequestEditorFn) (*ResumeMonitorResponse, error) {
+	rsp, err := c.ResumeMonitor(ctx, monitorId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseResumeMonitorResponse(rsp)
+}
+
+// RunMonitorWithResponse Run a monitor now
+//
+// Queues a manual run and returns it at once with status `queued`. The
+// run's `id` is the `run_id` of its `monitor.run.completed` event, and
+// you can follow it with get run. A monitor has at most one run at a
+// time: while one is queued or running, this returns 409
+// `run_in_progress` with that run's ID. A paused monitor returns 409
+// `invalid_state`.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /v1/monitors/{monitor_id}/run (the `RunMonitor` operationId).
+func (c *ClientWithResponses) RunMonitorWithResponse(ctx context.Context, monitorId MonitorId, reqEditors ...RequestEditorFn) (*RunMonitorResponse, error) {
+	rsp, err := c.RunMonitor(ctx, monitorId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseRunMonitorResponse(rsp)
+}
+
+// ListMonitorRunsWithResponse List a monitor's runs
+//
+// Lists the monitor's runs with their changes, newest first. Runs are kept 90 days.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /v1/monitors/{monitor_id}/runs (the `ListMonitorRuns` operationId).
+func (c *ClientWithResponses) ListMonitorRunsWithResponse(ctx context.Context, monitorId MonitorId, params *ListMonitorRunsParams, reqEditors ...RequestEditorFn) (*ListMonitorRunsResponse, error) {
+	rsp, err := c.ListMonitorRuns(ctx, monitorId, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseListMonitorRunsResponse(rsp)
+}
+
+// GetMonitorRunWithResponse Get a run
+//
+// Returns one run with its changes and target errors. A run is visible as soon as run-now returns it.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /v1/monitors/{monitor_id}/runs/{run_id} (the `GetMonitorRun` operationId).
+func (c *ClientWithResponses) GetMonitorRunWithResponse(ctx context.Context, monitorId MonitorId, runId MonitorRunId, reqEditors ...RequestEditorFn) (*GetMonitorRunResponse, error) {
+	rsp, err := c.GetMonitorRun(ctx, monitorId, runId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGetMonitorRunResponse(rsp)
+}
+
+// TestMonitorWebhookWithResponse Test a monitor's webhook
+//
+// Sends one signed `monitor.webhook.test` event to the configured webhook URL. Takes no request body and returns the delivery outcome after a response or a 10-second timeout. The test is not retried and does not count toward the `webhook_failing` pause threshold. A monitor without a webhook returns HTTP `409` with `invalid_state`.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /v1/monitors/{monitor_id}/webhook/test (the `TestMonitorWebhook` operationId).
+func (c *ClientWithResponses) TestMonitorWebhookWithResponse(ctx context.Context, monitorId MonitorId, reqEditors ...RequestEditorFn) (*TestMonitorWebhookResponse, error) {
+	rsp, err := c.TestMonitorWebhook(ctx, monitorId, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseTestMonitorWebhookResponse(rsp)
 }
 
 // ListSkillsWithResponse List skills
@@ -16732,6 +21424,1044 @@ func ParseListModelsResponse2(rsp *http.Response) (*ListModelsResponse2, error) 
 		}
 		response.JSON200 = &dest
 
+	}
+
+	return response, nil
+}
+
+// ParseListMonitorsResponse parses an HTTP response from a ListMonitorsWithResponse call
+func ParseListMonitorsResponse(rsp *http.Response) (*ListMonitorsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &ListMonitorsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest MonitorList
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest MonitorBadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest MonitorUnauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest MonitorForbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest MonitorTooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 502:
+		var dest MonitorBadGateway
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON502 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest MonitorUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 504:
+		var dest MonitorGatewayTimeout
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON504 = &dest
+
+	}
+
+	switch {
+	case rsp.StatusCode == 429:
+		var headers ListMonitorsResponse429Headers
+		if values := rsp.Header.Values("Retry-After"); len(values) > 0 {
+			var value int
+			if err := runtime.BindStyledParameterWithOptions("simple", "Retry-After", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.RetryAfter = &value
+		}
+		response.Headers429 = &headers
+	}
+
+	return response, nil
+}
+
+// ParseCreateMonitorResponse parses an HTTP response from a CreateMonitorWithResponse call
+func ParseCreateMonitorResponse(rsp *http.Response) (*CreateMonitorResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CreateMonitorResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest Monitor
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest MonitorBadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest MonitorUnauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 402:
+		var dest MonitorPaymentRequired
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON402 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest MonitorForbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 409:
+		var dest MonitorApiError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON409 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest MonitorTooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 502:
+		var dest MonitorBadGateway
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON502 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest MonitorUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 504:
+		var dest MonitorGatewayTimeout
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON504 = &dest
+
+	}
+
+	switch {
+	case rsp.StatusCode == 429:
+		var headers CreateMonitorResponse429Headers
+		if values := rsp.Header.Values("Retry-After"); len(values) > 0 {
+			var value int
+			if err := runtime.BindStyledParameterWithOptions("simple", "Retry-After", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.RetryAfter = &value
+		}
+		response.Headers429 = &headers
+	}
+
+	return response, nil
+}
+
+// ParseDeleteMonitorResponse2 parses an HTTP response from a DeleteMonitorWithResponse call
+func ParseDeleteMonitorResponse2(rsp *http.Response) (*DeleteMonitorResponse2, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &DeleteMonitorResponse2{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest DeleteMonitorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest MonitorUnauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest MonitorForbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest MonitorNotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest MonitorTooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 502:
+		var dest MonitorBadGateway
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON502 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest MonitorUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 504:
+		var dest MonitorGatewayTimeout
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON504 = &dest
+
+	}
+
+	switch {
+	case rsp.StatusCode == 429:
+		var headers DeleteMonitorResponse2429Headers
+		if values := rsp.Header.Values("Retry-After"); len(values) > 0 {
+			var value int
+			if err := runtime.BindStyledParameterWithOptions("simple", "Retry-After", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.RetryAfter = &value
+		}
+		response.Headers429 = &headers
+	}
+
+	return response, nil
+}
+
+// ParseGetMonitorResponse parses an HTTP response from a GetMonitorWithResponse call
+func ParseGetMonitorResponse(rsp *http.Response) (*GetMonitorResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetMonitorResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest Monitor
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest MonitorUnauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest MonitorForbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest MonitorNotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest MonitorTooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 502:
+		var dest MonitorBadGateway
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON502 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest MonitorUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 504:
+		var dest MonitorGatewayTimeout
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON504 = &dest
+
+	}
+
+	switch {
+	case rsp.StatusCode == 429:
+		var headers GetMonitorResponse429Headers
+		if values := rsp.Header.Values("Retry-After"); len(values) > 0 {
+			var value int
+			if err := runtime.BindStyledParameterWithOptions("simple", "Retry-After", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.RetryAfter = &value
+		}
+		response.Headers429 = &headers
+	}
+
+	return response, nil
+}
+
+// ParseUpdateMonitorResponse parses an HTTP response from a UpdateMonitorWithResponse call
+func ParseUpdateMonitorResponse(rsp *http.Response) (*UpdateMonitorResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &UpdateMonitorResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest Monitor
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest MonitorBadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest MonitorUnauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest MonitorForbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest MonitorNotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 409:
+		var dest MonitorConcurrentUpdate
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON409 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest MonitorTooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 502:
+		var dest MonitorBadGateway
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON502 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest MonitorUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 504:
+		var dest MonitorGatewayTimeout
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON504 = &dest
+
+	}
+
+	switch {
+	case rsp.StatusCode == 429:
+		var headers UpdateMonitorResponse429Headers
+		if values := rsp.Header.Values("Retry-After"); len(values) > 0 {
+			var value int
+			if err := runtime.BindStyledParameterWithOptions("simple", "Retry-After", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.RetryAfter = &value
+		}
+		response.Headers429 = &headers
+	}
+
+	return response, nil
+}
+
+// ParsePauseMonitorResponse parses an HTTP response from a PauseMonitorWithResponse call
+func ParsePauseMonitorResponse(rsp *http.Response) (*PauseMonitorResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &PauseMonitorResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest Monitor
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest MonitorUnauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest MonitorForbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest MonitorNotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 409:
+		var dest MonitorConcurrentUpdate
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON409 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest MonitorTooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 502:
+		var dest MonitorBadGateway
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON502 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest MonitorUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 504:
+		var dest MonitorGatewayTimeout
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON504 = &dest
+
+	}
+
+	switch {
+	case rsp.StatusCode == 429:
+		var headers PauseMonitorResponse429Headers
+		if values := rsp.Header.Values("Retry-After"); len(values) > 0 {
+			var value int
+			if err := runtime.BindStyledParameterWithOptions("simple", "Retry-After", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.RetryAfter = &value
+		}
+		response.Headers429 = &headers
+	}
+
+	return response, nil
+}
+
+// ParseResumeMonitorResponse parses an HTTP response from a ResumeMonitorWithResponse call
+func ParseResumeMonitorResponse(rsp *http.Response) (*ResumeMonitorResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &ResumeMonitorResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest Monitor
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest MonitorUnauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest MonitorForbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest MonitorNotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 409:
+		var dest MonitorApiError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON409 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest MonitorTooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 502:
+		var dest MonitorBadGateway
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON502 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest MonitorUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 504:
+		var dest MonitorGatewayTimeout
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON504 = &dest
+
+	}
+
+	switch {
+	case rsp.StatusCode == 429:
+		var headers ResumeMonitorResponse429Headers
+		if values := rsp.Header.Values("Retry-After"); len(values) > 0 {
+			var value int
+			if err := runtime.BindStyledParameterWithOptions("simple", "Retry-After", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.RetryAfter = &value
+		}
+		response.Headers429 = &headers
+	}
+
+	return response, nil
+}
+
+// ParseRunMonitorResponse parses an HTTP response from a RunMonitorWithResponse call
+func ParseRunMonitorResponse(rsp *http.Response) (*RunMonitorResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &RunMonitorResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 202:
+		var dest MonitorRun
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON202 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest MonitorUnauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 402:
+		var dest MonitorPaymentRequired
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON402 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest MonitorForbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest MonitorNotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 409:
+		var dest RunMonitor409JSONResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON409 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest MonitorTooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 502:
+		var dest MonitorBadGateway
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON502 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest MonitorUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 504:
+		var dest MonitorGatewayTimeout
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON504 = &dest
+
+	}
+
+	switch {
+	case rsp.StatusCode == 429:
+		var headers RunMonitorResponse429Headers
+		if values := rsp.Header.Values("Retry-After"); len(values) > 0 {
+			var value int
+			if err := runtime.BindStyledParameterWithOptions("simple", "Retry-After", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.RetryAfter = &value
+		}
+		response.Headers429 = &headers
+	}
+
+	return response, nil
+}
+
+// ParseListMonitorRunsResponse parses an HTTP response from a ListMonitorRunsWithResponse call
+func ParseListMonitorRunsResponse(rsp *http.Response) (*ListMonitorRunsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &ListMonitorRunsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest MonitorRunList
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest MonitorBadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest MonitorUnauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest MonitorForbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest MonitorNotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest MonitorTooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 502:
+		var dest MonitorBadGateway
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON502 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest MonitorUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 504:
+		var dest MonitorGatewayTimeout
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON504 = &dest
+
+	}
+
+	switch {
+	case rsp.StatusCode == 429:
+		var headers ListMonitorRunsResponse429Headers
+		if values := rsp.Header.Values("Retry-After"); len(values) > 0 {
+			var value int
+			if err := runtime.BindStyledParameterWithOptions("simple", "Retry-After", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.RetryAfter = &value
+		}
+		response.Headers429 = &headers
+	}
+
+	return response, nil
+}
+
+// ParseGetMonitorRunResponse parses an HTTP response from a GetMonitorRunWithResponse call
+func ParseGetMonitorRunResponse(rsp *http.Response) (*GetMonitorRunResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GetMonitorRunResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest MonitorRun
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest MonitorUnauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest MonitorForbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest MonitorApiError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest MonitorTooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 502:
+		var dest MonitorBadGateway
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON502 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest MonitorUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 504:
+		var dest MonitorGatewayTimeout
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON504 = &dest
+
+	}
+
+	switch {
+	case rsp.StatusCode == 429:
+		var headers GetMonitorRunResponse429Headers
+		if values := rsp.Header.Values("Retry-After"); len(values) > 0 {
+			var value int
+			if err := runtime.BindStyledParameterWithOptions("simple", "Retry-After", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.RetryAfter = &value
+		}
+		response.Headers429 = &headers
+	}
+
+	return response, nil
+}
+
+// ParseTestMonitorWebhookResponse parses an HTTP response from a TestMonitorWebhookWithResponse call
+func ParseTestMonitorWebhookResponse(rsp *http.Response) (*TestMonitorWebhookResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &TestMonitorWebhookResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest MonitorWebhookTest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest MonitorUnauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest MonitorForbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest MonitorNotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 409:
+		var dest MonitorInvalidState
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON409 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest MonitorTooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 502:
+		var dest MonitorBadGateway
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON502 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest MonitorUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 504:
+		var dest MonitorGatewayTimeout
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON504 = &dest
+
+	}
+
+	switch {
+	case rsp.StatusCode == 429:
+		var headers TestMonitorWebhookResponse429Headers
+		if values := rsp.Header.Values("Retry-After"); len(values) > 0 {
+			var value int
+			if err := runtime.BindStyledParameterWithOptions("simple", "Retry-After", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.RetryAfter = &value
+		}
+		response.Headers429 = &headers
 	}
 
 	return response, nil
