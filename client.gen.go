@@ -15,6 +15,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/oapi-codegen/nullable"
 	"github.com/oapi-codegen/runtime"
 	openapi_types "github.com/oapi-codegen/runtime/types"
 )
@@ -559,6 +560,216 @@ func (e ContentPartType) Valid() bool {
 	}
 }
 
+// Defines values for ContextCriteriaQuestionType.
+const (
+	ContextCriteriaQuestionTypeNoul ContextCriteriaQuestionType = "noul"
+)
+
+// Valid indicates whether the value is a known member of the ContextCriteriaQuestionType enum.
+func (e ContextCriteriaQuestionType) Valid() bool {
+	switch e {
+	case ContextCriteriaQuestionTypeNoul:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ContextCurrency.
+const (
+	ContextCurrencyUSD ContextCurrency = "USD"
+)
+
+// Valid indicates whether the value is a known member of the ContextCurrency enum.
+func (e ContextCurrency) Valid() bool {
+	switch e {
+	case ContextCurrencyUSD:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ContextDecisionNoulAnswerType.
+const (
+	ContextDecisionNoulAnswerTypeNoul ContextDecisionNoulAnswerType = "noul"
+)
+
+// Valid indicates whether the value is a known member of the ContextDecisionNoulAnswerType enum.
+func (e ContextDecisionNoulAnswerType) Valid() bool {
+	switch e {
+	case ContextDecisionNoulAnswerTypeNoul:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ContextDocumentCriteriaError.
+const (
+	ContextDocumentCriteriaErrorError      ContextDocumentCriteriaError = "error"
+	ContextDocumentCriteriaErrorOverloaded ContextDocumentCriteriaError = "overloaded"
+	ContextDocumentCriteriaErrorTimeout    ContextDocumentCriteriaError = "timeout"
+)
+
+// Valid indicates whether the value is a known member of the ContextDocumentCriteriaError enum.
+func (e ContextDocumentCriteriaError) Valid() bool {
+	switch e {
+	case ContextDocumentCriteriaErrorError:
+		return true
+	case ContextDocumentCriteriaErrorOverloaded:
+		return true
+	case ContextDocumentCriteriaErrorTimeout:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ContextErrorResponseErrorType.
+const (
+	ContextErrorResponseErrorTypeApiProductNotAllowed     ContextErrorResponseErrorType = "api_product_not_allowed"
+	ContextErrorResponseErrorTypeBadGateway               ContextErrorResponseErrorType = "bad_gateway"
+	ContextErrorResponseErrorTypeForbidden                ContextErrorResponseErrorType = "forbidden"
+	ContextErrorResponseErrorTypeGatewayTimeout           ContextErrorResponseErrorType = "gateway_timeout"
+	ContextErrorResponseErrorTypeInsufficientQuota        ContextErrorResponseErrorType = "insufficient_quota"
+	ContextErrorResponseErrorTypeInternalError            ContextErrorResponseErrorType = "internal_error"
+	ContextErrorResponseErrorTypeInvalidApiKey            ContextErrorResponseErrorType = "invalid_api_key"
+	ContextErrorResponseErrorTypeInvalidRequest           ContextErrorResponseErrorType = "invalid_request"
+	ContextErrorResponseErrorTypeRateLimitExceeded        ContextErrorResponseErrorType = "rate_limit_exceeded"
+	ContextErrorResponseErrorTypeRequestRateLimitExceeded ContextErrorResponseErrorType = "request_rate_limit_exceeded"
+	ContextErrorResponseErrorTypeSafetyIdentifierBlocked  ContextErrorResponseErrorType = "safety_identifier_blocked"
+	ContextErrorResponseErrorTypeServerError              ContextErrorResponseErrorType = "server_error"
+	ContextErrorResponseErrorTypeTimeoutError             ContextErrorResponseErrorType = "timeout_error"
+	ContextErrorResponseErrorTypeTokenExpired             ContextErrorResponseErrorType = "token_expired"
+	ContextErrorResponseErrorTypeUnsupportedFormat        ContextErrorResponseErrorType = "unsupported_format"
+	ContextErrorResponseErrorTypeUnsupportedParam         ContextErrorResponseErrorType = "unsupported_param"
+)
+
+// Valid indicates whether the value is a known member of the ContextErrorResponseErrorType enum.
+func (e ContextErrorResponseErrorType) Valid() bool {
+	switch e {
+	case ContextErrorResponseErrorTypeApiProductNotAllowed:
+		return true
+	case ContextErrorResponseErrorTypeBadGateway:
+		return true
+	case ContextErrorResponseErrorTypeForbidden:
+		return true
+	case ContextErrorResponseErrorTypeGatewayTimeout:
+		return true
+	case ContextErrorResponseErrorTypeInsufficientQuota:
+		return true
+	case ContextErrorResponseErrorTypeInternalError:
+		return true
+	case ContextErrorResponseErrorTypeInvalidApiKey:
+		return true
+	case ContextErrorResponseErrorTypeInvalidRequest:
+		return true
+	case ContextErrorResponseErrorTypeRateLimitExceeded:
+		return true
+	case ContextErrorResponseErrorTypeRequestRateLimitExceeded:
+		return true
+	case ContextErrorResponseErrorTypeSafetyIdentifierBlocked:
+		return true
+	case ContextErrorResponseErrorTypeServerError:
+		return true
+	case ContextErrorResponseErrorTypeTimeoutError:
+		return true
+	case ContextErrorResponseErrorTypeTokenExpired:
+		return true
+	case ContextErrorResponseErrorTypeUnsupportedFormat:
+		return true
+	case ContextErrorResponseErrorTypeUnsupportedParam:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ContextMetadataOrigin.
+const (
+	ContextMetadataOriginCached ContextMetadataOrigin = "cached"
+	ContextMetadataOriginLive   ContextMetadataOrigin = "live"
+)
+
+// Valid indicates whether the value is a known member of the ContextMetadataOrigin enum.
+func (e ContextMetadataOrigin) Valid() bool {
+	switch e {
+	case ContextMetadataOriginCached:
+		return true
+	case ContextMetadataOriginLive:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ContextRequestFormats.
+const (
+	ContextRequestFormatsHighlights ContextRequestFormats = "highlights"
+	ContextRequestFormatsHtml       ContextRequestFormats = "html"
+	ContextRequestFormatsLinks      ContextRequestFormats = "links"
+	ContextRequestFormatsMarkdown   ContextRequestFormats = "markdown"
+)
+
+// Valid indicates whether the value is a known member of the ContextRequestFormats enum.
+func (e ContextRequestFormats) Valid() bool {
+	switch e {
+	case ContextRequestFormatsHighlights:
+		return true
+	case ContextRequestFormatsHtml:
+		return true
+	case ContextRequestFormatsLinks:
+		return true
+	case ContextRequestFormatsMarkdown:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for ContextStatusType.
+const (
+	ContextStatusTypeBlocked       ContextStatusType = "blocked"
+	ContextStatusTypeBotChallenge  ContextStatusType = "bot_challenge"
+	ContextStatusTypeCrawlFailed   ContextStatusType = "crawl_failed"
+	ContextStatusTypeCrawlTimeout  ContextStatusType = "crawl_timeout"
+	ContextStatusTypeInternalError ContextStatusType = "internal_error"
+	ContextStatusTypeInvalidUrl    ContextStatusType = "invalid_url"
+	ContextStatusTypeNoContent     ContextStatusType = "no_content"
+	ContextStatusTypeNoText        ContextStatusType = "no_text"
+	ContextStatusTypeNotModified   ContextStatusType = "not_modified"
+	ContextStatusTypeOk            ContextStatusType = "ok"
+)
+
+// Valid indicates whether the value is a known member of the ContextStatusType enum.
+func (e ContextStatusType) Valid() bool {
+	switch e {
+	case ContextStatusTypeBlocked:
+		return true
+	case ContextStatusTypeBotChallenge:
+		return true
+	case ContextStatusTypeCrawlFailed:
+		return true
+	case ContextStatusTypeCrawlTimeout:
+		return true
+	case ContextStatusTypeInternalError:
+		return true
+	case ContextStatusTypeInvalidUrl:
+		return true
+	case ContextStatusTypeNoContent:
+		return true
+	case ContextStatusTypeNoText:
+		return true
+	case ContextStatusTypeNotModified:
+		return true
+	case ContextStatusTypeOk:
+		return true
+	default:
+		return false
+	}
+}
+
 // Defines values for ContextualizedEmbeddingsRequestEncodingFormat.
 const (
 	ContextualizedEmbeddingsRequestEncodingFormatBase64Binary ContextualizedEmbeddingsRequestEncodingFormat = "base64_binary"
@@ -703,10 +914,45 @@ func (e EmbeddingsRequestEncodingFormat) Valid() bool {
 	}
 }
 
+// Defines values for EmbeddingsRequestInput3Type.
+const (
+	EmbeddingsRequestInput3TypeImage EmbeddingsRequestInput3Type = "image"
+)
+
+// Valid indicates whether the value is a known member of the EmbeddingsRequestInput3Type enum.
+func (e EmbeddingsRequestInput3Type) Valid() bool {
+	switch e {
+	case EmbeddingsRequestInput3TypeImage:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for EmbeddingsRequestInputType.
+const (
+	EmbeddingsRequestInputTypeDocument EmbeddingsRequestInputType = "document"
+	EmbeddingsRequestInputTypeQuery    EmbeddingsRequestInputType = "query"
+)
+
+// Valid indicates whether the value is a known member of the EmbeddingsRequestInputType enum.
+func (e EmbeddingsRequestInputType) Valid() bool {
+	switch e {
+	case EmbeddingsRequestInputTypeDocument:
+		return true
+	case EmbeddingsRequestInputTypeQuery:
+		return true
+	default:
+		return false
+	}
+}
+
 // Defines values for EmbeddingsRequestModel.
 const (
-	EmbeddingsRequestModelPplxEmbedV106b EmbeddingsRequestModel = "pplx-embed-v1-0.6b"
-	EmbeddingsRequestModelPplxEmbedV14b  EmbeddingsRequestModel = "pplx-embed-v1-4b"
+	EmbeddingsRequestModelPplxEmbedV106b        EmbeddingsRequestModel = "pplx-embed-v1-0.6b"
+	EmbeddingsRequestModelPplxEmbedV14b         EmbeddingsRequestModel = "pplx-embed-v1-4b"
+	EmbeddingsRequestModelPplxEmbedV2Context06b EmbeddingsRequestModel = "pplx-embed-v2-context-0.6b"
+	EmbeddingsRequestModelPplxEmbedV2Context9b  EmbeddingsRequestModel = "pplx-embed-v2-context-9b"
 )
 
 // Valid indicates whether the value is a known member of the EmbeddingsRequestModel enum.
@@ -715,6 +961,40 @@ func (e EmbeddingsRequestModel) Valid() bool {
 	case EmbeddingsRequestModelPplxEmbedV106b:
 		return true
 	case EmbeddingsRequestModelPplxEmbedV14b:
+		return true
+	case EmbeddingsRequestModelPplxEmbedV2Context06b:
+		return true
+	case EmbeddingsRequestModelPplxEmbedV2Context9b:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for EmbeddingsRequestNumChunks.
+const (
+	EmbeddingsRequestNumChunksN1  EmbeddingsRequestNumChunks = 1
+	EmbeddingsRequestNumChunksN16 EmbeddingsRequestNumChunks = 16
+	EmbeddingsRequestNumChunksN2  EmbeddingsRequestNumChunks = 2
+	EmbeddingsRequestNumChunksN32 EmbeddingsRequestNumChunks = 32
+	EmbeddingsRequestNumChunksN4  EmbeddingsRequestNumChunks = 4
+	EmbeddingsRequestNumChunksN8  EmbeddingsRequestNumChunks = 8
+)
+
+// Valid indicates whether the value is a known member of the EmbeddingsRequestNumChunks enum.
+func (e EmbeddingsRequestNumChunks) Valid() bool {
+	switch e {
+	case EmbeddingsRequestNumChunksN1:
+		return true
+	case EmbeddingsRequestNumChunksN16:
+		return true
+	case EmbeddingsRequestNumChunksN2:
+		return true
+	case EmbeddingsRequestNumChunksN32:
+		return true
+	case EmbeddingsRequestNumChunksN4:
+		return true
+	case EmbeddingsRequestNumChunksN8:
 		return true
 	default:
 		return false
@@ -1444,6 +1724,7 @@ func (e MonitorCurrency) Valid() bool {
 // Defines values for MonitorEventType.
 const (
 	MonitorEventTypeMonitorChangesDetected MonitorEventType = "monitor.changes.detected"
+	MonitorEventTypeMonitorCreated         MonitorEventType = "monitor.created"
 	MonitorEventTypeMonitorPaused          MonitorEventType = "monitor.paused"
 	MonitorEventTypeMonitorRunCompleted    MonitorEventType = "monitor.run.completed"
 )
@@ -1452,6 +1733,8 @@ const (
 func (e MonitorEventType) Valid() bool {
 	switch e {
 	case MonitorEventTypeMonitorChangesDetected:
+		return true
+	case MonitorEventTypeMonitorCreated:
 		return true
 	case MonitorEventTypeMonitorPaused:
 		return true
@@ -1951,6 +2234,2766 @@ func (e NoulQuestionType) Valid() bool {
 	}
 }
 
+// Defines values for OrchestratorChatChatCompletionAllowedToolsMode.
+const (
+	OrchestratorChatChatCompletionAllowedToolsModeAuto     OrchestratorChatChatCompletionAllowedToolsMode = "auto"
+	OrchestratorChatChatCompletionAllowedToolsModeRequired OrchestratorChatChatCompletionAllowedToolsMode = "required"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatChatCompletionAllowedToolsMode enum.
+func (e OrchestratorChatChatCompletionAllowedToolsMode) Valid() bool {
+	switch e {
+	case OrchestratorChatChatCompletionAllowedToolsModeAuto:
+		return true
+	case OrchestratorChatChatCompletionAllowedToolsModeRequired:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatChatCompletionAllowedToolsChoiceType.
+const (
+	OrchestratorChatChatCompletionAllowedToolsChoiceTypeAllowedTools OrchestratorChatChatCompletionAllowedToolsChoiceType = "allowed_tools"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatChatCompletionAllowedToolsChoiceType enum.
+func (e OrchestratorChatChatCompletionAllowedToolsChoiceType) Valid() bool {
+	switch e {
+	case OrchestratorChatChatCompletionAllowedToolsChoiceTypeAllowedTools:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatChatCompletionMessageCustomToolCallType.
+const (
+	OrchestratorChatChatCompletionMessageCustomToolCallTypeCustom OrchestratorChatChatCompletionMessageCustomToolCallType = "custom"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatChatCompletionMessageCustomToolCallType enum.
+func (e OrchestratorChatChatCompletionMessageCustomToolCallType) Valid() bool {
+	switch e {
+	case OrchestratorChatChatCompletionMessageCustomToolCallTypeCustom:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatChatCompletionMessageToolCallType.
+const (
+	OrchestratorChatChatCompletionMessageToolCallTypeFunction OrchestratorChatChatCompletionMessageToolCallType = "function"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatChatCompletionMessageToolCallType enum.
+func (e OrchestratorChatChatCompletionMessageToolCallType) Valid() bool {
+	switch e {
+	case OrchestratorChatChatCompletionMessageToolCallTypeFunction:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatChatCompletionMessageToolCallChunkType.
+const (
+	OrchestratorChatChatCompletionMessageToolCallChunkTypeFunction OrchestratorChatChatCompletionMessageToolCallChunkType = "function"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatChatCompletionMessageToolCallChunkType enum.
+func (e OrchestratorChatChatCompletionMessageToolCallChunkType) Valid() bool {
+	switch e {
+	case OrchestratorChatChatCompletionMessageToolCallChunkTypeFunction:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatChatCompletionModerationErrorType.
+const (
+	OrchestratorChatChatCompletionModerationErrorTypeError OrchestratorChatChatCompletionModerationErrorType = "error"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatChatCompletionModerationErrorType enum.
+func (e OrchestratorChatChatCompletionModerationErrorType) Valid() bool {
+	switch e {
+	case OrchestratorChatChatCompletionModerationErrorTypeError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatChatCompletionModerationResultsType.
+const (
+	OrchestratorChatChatCompletionModerationResultsTypeModerationResults OrchestratorChatChatCompletionModerationResultsType = "moderation_results"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatChatCompletionModerationResultsType enum.
+func (e OrchestratorChatChatCompletionModerationResultsType) Valid() bool {
+	switch e {
+	case OrchestratorChatChatCompletionModerationResultsTypeModerationResults:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatChatCompletionNamedToolChoiceType.
+const (
+	OrchestratorChatChatCompletionNamedToolChoiceTypeFunction OrchestratorChatChatCompletionNamedToolChoiceType = "function"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatChatCompletionNamedToolChoiceType enum.
+func (e OrchestratorChatChatCompletionNamedToolChoiceType) Valid() bool {
+	switch e {
+	case OrchestratorChatChatCompletionNamedToolChoiceTypeFunction:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatChatCompletionNamedToolChoiceCustomType.
+const (
+	OrchestratorChatChatCompletionNamedToolChoiceCustomTypeCustom OrchestratorChatChatCompletionNamedToolChoiceCustomType = "custom"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatChatCompletionNamedToolChoiceCustomType enum.
+func (e OrchestratorChatChatCompletionNamedToolChoiceCustomType) Valid() bool {
+	switch e {
+	case OrchestratorChatChatCompletionNamedToolChoiceCustomTypeCustom:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatChatCompletionRequestAssistantMessageRole.
+const (
+	OrchestratorChatChatCompletionRequestAssistantMessageRoleAssistant OrchestratorChatChatCompletionRequestAssistantMessageRole = "assistant"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatChatCompletionRequestAssistantMessageRole enum.
+func (e OrchestratorChatChatCompletionRequestAssistantMessageRole) Valid() bool {
+	switch e {
+	case OrchestratorChatChatCompletionRequestAssistantMessageRoleAssistant:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatChatCompletionRequestDeveloperMessageRole.
+const (
+	OrchestratorChatChatCompletionRequestDeveloperMessageRoleDeveloper OrchestratorChatChatCompletionRequestDeveloperMessageRole = "developer"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatChatCompletionRequestDeveloperMessageRole enum.
+func (e OrchestratorChatChatCompletionRequestDeveloperMessageRole) Valid() bool {
+	switch e {
+	case OrchestratorChatChatCompletionRequestDeveloperMessageRoleDeveloper:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatChatCompletionRequestFunctionMessageRole.
+const (
+	OrchestratorChatChatCompletionRequestFunctionMessageRoleFunction OrchestratorChatChatCompletionRequestFunctionMessageRole = "function"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatChatCompletionRequestFunctionMessageRole enum.
+func (e OrchestratorChatChatCompletionRequestFunctionMessageRole) Valid() bool {
+	switch e {
+	case OrchestratorChatChatCompletionRequestFunctionMessageRoleFunction:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatChatCompletionRequestMessageContentPartAudioInputAudioFormat.
+const (
+	OrchestratorChatChatCompletionRequestMessageContentPartAudioInputAudioFormatMp3 OrchestratorChatChatCompletionRequestMessageContentPartAudioInputAudioFormat = "mp3"
+	OrchestratorChatChatCompletionRequestMessageContentPartAudioInputAudioFormatWav OrchestratorChatChatCompletionRequestMessageContentPartAudioInputAudioFormat = "wav"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatChatCompletionRequestMessageContentPartAudioInputAudioFormat enum.
+func (e OrchestratorChatChatCompletionRequestMessageContentPartAudioInputAudioFormat) Valid() bool {
+	switch e {
+	case OrchestratorChatChatCompletionRequestMessageContentPartAudioInputAudioFormatMp3:
+		return true
+	case OrchestratorChatChatCompletionRequestMessageContentPartAudioInputAudioFormatWav:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatChatCompletionRequestMessageContentPartAudioType.
+const (
+	OrchestratorChatChatCompletionRequestMessageContentPartAudioTypeInputAudio OrchestratorChatChatCompletionRequestMessageContentPartAudioType = "input_audio"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatChatCompletionRequestMessageContentPartAudioType enum.
+func (e OrchestratorChatChatCompletionRequestMessageContentPartAudioType) Valid() bool {
+	switch e {
+	case OrchestratorChatChatCompletionRequestMessageContentPartAudioTypeInputAudio:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatChatCompletionRequestMessageContentPartFileType.
+const (
+	OrchestratorChatChatCompletionRequestMessageContentPartFileTypeFile OrchestratorChatChatCompletionRequestMessageContentPartFileType = "file"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatChatCompletionRequestMessageContentPartFileType enum.
+func (e OrchestratorChatChatCompletionRequestMessageContentPartFileType) Valid() bool {
+	switch e {
+	case OrchestratorChatChatCompletionRequestMessageContentPartFileTypeFile:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatChatCompletionRequestMessageContentPartImageImageUrlDetail.
+const (
+	OrchestratorChatChatCompletionRequestMessageContentPartImageImageUrlDetailAuto OrchestratorChatChatCompletionRequestMessageContentPartImageImageUrlDetail = "auto"
+	OrchestratorChatChatCompletionRequestMessageContentPartImageImageUrlDetailHigh OrchestratorChatChatCompletionRequestMessageContentPartImageImageUrlDetail = "high"
+	OrchestratorChatChatCompletionRequestMessageContentPartImageImageUrlDetailLow  OrchestratorChatChatCompletionRequestMessageContentPartImageImageUrlDetail = "low"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatChatCompletionRequestMessageContentPartImageImageUrlDetail enum.
+func (e OrchestratorChatChatCompletionRequestMessageContentPartImageImageUrlDetail) Valid() bool {
+	switch e {
+	case OrchestratorChatChatCompletionRequestMessageContentPartImageImageUrlDetailAuto:
+		return true
+	case OrchestratorChatChatCompletionRequestMessageContentPartImageImageUrlDetailHigh:
+		return true
+	case OrchestratorChatChatCompletionRequestMessageContentPartImageImageUrlDetailLow:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatChatCompletionRequestMessageContentPartImageType.
+const (
+	OrchestratorChatChatCompletionRequestMessageContentPartImageTypeImageUrl OrchestratorChatChatCompletionRequestMessageContentPartImageType = "image_url"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatChatCompletionRequestMessageContentPartImageType enum.
+func (e OrchestratorChatChatCompletionRequestMessageContentPartImageType) Valid() bool {
+	switch e {
+	case OrchestratorChatChatCompletionRequestMessageContentPartImageTypeImageUrl:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatChatCompletionRequestMessageContentPartRefusalType.
+const (
+	OrchestratorChatChatCompletionRequestMessageContentPartRefusalTypeRefusal OrchestratorChatChatCompletionRequestMessageContentPartRefusalType = "refusal"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatChatCompletionRequestMessageContentPartRefusalType enum.
+func (e OrchestratorChatChatCompletionRequestMessageContentPartRefusalType) Valid() bool {
+	switch e {
+	case OrchestratorChatChatCompletionRequestMessageContentPartRefusalTypeRefusal:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatChatCompletionRequestMessageContentPartTextType.
+const (
+	OrchestratorChatChatCompletionRequestMessageContentPartTextTypeText OrchestratorChatChatCompletionRequestMessageContentPartTextType = "text"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatChatCompletionRequestMessageContentPartTextType enum.
+func (e OrchestratorChatChatCompletionRequestMessageContentPartTextType) Valid() bool {
+	switch e {
+	case OrchestratorChatChatCompletionRequestMessageContentPartTextTypeText:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatChatCompletionRequestSystemMessageRole.
+const (
+	OrchestratorChatChatCompletionRequestSystemMessageRoleSystem OrchestratorChatChatCompletionRequestSystemMessageRole = "system"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatChatCompletionRequestSystemMessageRole enum.
+func (e OrchestratorChatChatCompletionRequestSystemMessageRole) Valid() bool {
+	switch e {
+	case OrchestratorChatChatCompletionRequestSystemMessageRoleSystem:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatChatCompletionRequestToolMessageRole.
+const (
+	OrchestratorChatChatCompletionRequestToolMessageRoleTool OrchestratorChatChatCompletionRequestToolMessageRole = "tool"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatChatCompletionRequestToolMessageRole enum.
+func (e OrchestratorChatChatCompletionRequestToolMessageRole) Valid() bool {
+	switch e {
+	case OrchestratorChatChatCompletionRequestToolMessageRoleTool:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatChatCompletionRequestUserMessageRole.
+const (
+	OrchestratorChatChatCompletionRequestUserMessageRoleUser OrchestratorChatChatCompletionRequestUserMessageRole = "user"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatChatCompletionRequestUserMessageRole enum.
+func (e OrchestratorChatChatCompletionRequestUserMessageRole) Valid() bool {
+	switch e {
+	case OrchestratorChatChatCompletionRequestUserMessageRoleUser:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatChatCompletionResponseMessageAnnotationsType.
+const (
+	OrchestratorChatChatCompletionResponseMessageAnnotationsTypeUrlCitation OrchestratorChatChatCompletionResponseMessageAnnotationsType = "url_citation"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatChatCompletionResponseMessageAnnotationsType enum.
+func (e OrchestratorChatChatCompletionResponseMessageAnnotationsType) Valid() bool {
+	switch e {
+	case OrchestratorChatChatCompletionResponseMessageAnnotationsTypeUrlCitation:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatChatCompletionResponseMessageRole.
+const (
+	OrchestratorChatChatCompletionResponseMessageRoleAssistant OrchestratorChatChatCompletionResponseMessageRole = "assistant"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatChatCompletionResponseMessageRole enum.
+func (e OrchestratorChatChatCompletionResponseMessageRole) Valid() bool {
+	switch e {
+	case OrchestratorChatChatCompletionResponseMessageRoleAssistant:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatChatCompletionStreamResponseDeltaRole.
+const (
+	OrchestratorChatChatCompletionStreamResponseDeltaRoleAssistant OrchestratorChatChatCompletionStreamResponseDeltaRole = "assistant"
+	OrchestratorChatChatCompletionStreamResponseDeltaRoleDeveloper OrchestratorChatChatCompletionStreamResponseDeltaRole = "developer"
+	OrchestratorChatChatCompletionStreamResponseDeltaRoleSystem    OrchestratorChatChatCompletionStreamResponseDeltaRole = "system"
+	OrchestratorChatChatCompletionStreamResponseDeltaRoleTool      OrchestratorChatChatCompletionStreamResponseDeltaRole = "tool"
+	OrchestratorChatChatCompletionStreamResponseDeltaRoleUser      OrchestratorChatChatCompletionStreamResponseDeltaRole = "user"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatChatCompletionStreamResponseDeltaRole enum.
+func (e OrchestratorChatChatCompletionStreamResponseDeltaRole) Valid() bool {
+	switch e {
+	case OrchestratorChatChatCompletionStreamResponseDeltaRoleAssistant:
+		return true
+	case OrchestratorChatChatCompletionStreamResponseDeltaRoleDeveloper:
+		return true
+	case OrchestratorChatChatCompletionStreamResponseDeltaRoleSystem:
+		return true
+	case OrchestratorChatChatCompletionStreamResponseDeltaRoleTool:
+		return true
+	case OrchestratorChatChatCompletionStreamResponseDeltaRoleUser:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatChatCompletionToolType.
+const (
+	OrchestratorChatChatCompletionToolTypeFunction OrchestratorChatChatCompletionToolType = "function"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatChatCompletionToolType enum.
+func (e OrchestratorChatChatCompletionToolType) Valid() bool {
+	switch e {
+	case OrchestratorChatChatCompletionToolTypeFunction:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatChatCompletionToolChoiceOption0.
+const (
+	OrchestratorChatChatCompletionToolChoiceOption0Auto     OrchestratorChatChatCompletionToolChoiceOption0 = "auto"
+	OrchestratorChatChatCompletionToolChoiceOption0None     OrchestratorChatChatCompletionToolChoiceOption0 = "none"
+	OrchestratorChatChatCompletionToolChoiceOption0Required OrchestratorChatChatCompletionToolChoiceOption0 = "required"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatChatCompletionToolChoiceOption0 enum.
+func (e OrchestratorChatChatCompletionToolChoiceOption0) Valid() bool {
+	switch e {
+	case OrchestratorChatChatCompletionToolChoiceOption0Auto:
+		return true
+	case OrchestratorChatChatCompletionToolChoiceOption0None:
+		return true
+	case OrchestratorChatChatCompletionToolChoiceOption0Required:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatCreateChatCompletionResponseChoicesFinishReason.
+const (
+	OrchestratorChatCreateChatCompletionResponseChoicesFinishReasonContentFilter OrchestratorChatCreateChatCompletionResponseChoicesFinishReason = "content_filter"
+	OrchestratorChatCreateChatCompletionResponseChoicesFinishReasonFunctionCall  OrchestratorChatCreateChatCompletionResponseChoicesFinishReason = "function_call"
+	OrchestratorChatCreateChatCompletionResponseChoicesFinishReasonLength        OrchestratorChatCreateChatCompletionResponseChoicesFinishReason = "length"
+	OrchestratorChatCreateChatCompletionResponseChoicesFinishReasonStop          OrchestratorChatCreateChatCompletionResponseChoicesFinishReason = "stop"
+	OrchestratorChatCreateChatCompletionResponseChoicesFinishReasonToolCalls     OrchestratorChatCreateChatCompletionResponseChoicesFinishReason = "tool_calls"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatCreateChatCompletionResponseChoicesFinishReason enum.
+func (e OrchestratorChatCreateChatCompletionResponseChoicesFinishReason) Valid() bool {
+	switch e {
+	case OrchestratorChatCreateChatCompletionResponseChoicesFinishReasonContentFilter:
+		return true
+	case OrchestratorChatCreateChatCompletionResponseChoicesFinishReasonFunctionCall:
+		return true
+	case OrchestratorChatCreateChatCompletionResponseChoicesFinishReasonLength:
+		return true
+	case OrchestratorChatCreateChatCompletionResponseChoicesFinishReasonStop:
+		return true
+	case OrchestratorChatCreateChatCompletionResponseChoicesFinishReasonToolCalls:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatCreateChatCompletionResponseObject.
+const (
+	OrchestratorChatCreateChatCompletionResponseObjectChatCompletion OrchestratorChatCreateChatCompletionResponseObject = "chat.completion"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatCreateChatCompletionResponseObject enum.
+func (e OrchestratorChatCreateChatCompletionResponseObject) Valid() bool {
+	switch e {
+	case OrchestratorChatCreateChatCompletionResponseObjectChatCompletion:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatCreateChatCompletionStreamResponseChoicesFinishReason.
+const (
+	OrchestratorChatCreateChatCompletionStreamResponseChoicesFinishReasonContentFilter OrchestratorChatCreateChatCompletionStreamResponseChoicesFinishReason = "content_filter"
+	OrchestratorChatCreateChatCompletionStreamResponseChoicesFinishReasonFunctionCall  OrchestratorChatCreateChatCompletionStreamResponseChoicesFinishReason = "function_call"
+	OrchestratorChatCreateChatCompletionStreamResponseChoicesFinishReasonLength        OrchestratorChatCreateChatCompletionStreamResponseChoicesFinishReason = "length"
+	OrchestratorChatCreateChatCompletionStreamResponseChoicesFinishReasonStop          OrchestratorChatCreateChatCompletionStreamResponseChoicesFinishReason = "stop"
+	OrchestratorChatCreateChatCompletionStreamResponseChoicesFinishReasonToolCalls     OrchestratorChatCreateChatCompletionStreamResponseChoicesFinishReason = "tool_calls"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatCreateChatCompletionStreamResponseChoicesFinishReason enum.
+func (e OrchestratorChatCreateChatCompletionStreamResponseChoicesFinishReason) Valid() bool {
+	switch e {
+	case OrchestratorChatCreateChatCompletionStreamResponseChoicesFinishReasonContentFilter:
+		return true
+	case OrchestratorChatCreateChatCompletionStreamResponseChoicesFinishReasonFunctionCall:
+		return true
+	case OrchestratorChatCreateChatCompletionStreamResponseChoicesFinishReasonLength:
+		return true
+	case OrchestratorChatCreateChatCompletionStreamResponseChoicesFinishReasonStop:
+		return true
+	case OrchestratorChatCreateChatCompletionStreamResponseChoicesFinishReasonToolCalls:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatCreateChatCompletionStreamResponseObject.
+const (
+	OrchestratorChatCreateChatCompletionStreamResponseObjectChatCompletionChunk OrchestratorChatCreateChatCompletionStreamResponseObject = "chat.completion.chunk"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatCreateChatCompletionStreamResponseObject enum.
+func (e OrchestratorChatCreateChatCompletionStreamResponseObject) Valid() bool {
+	switch e {
+	case OrchestratorChatCreateChatCompletionStreamResponseObjectChatCompletionChunk:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatCustomToolChatCompletionsCustomFormat0Type.
+const (
+	OrchestratorChatCustomToolChatCompletionsCustomFormat0TypeText OrchestratorChatCustomToolChatCompletionsCustomFormat0Type = "text"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatCustomToolChatCompletionsCustomFormat0Type enum.
+func (e OrchestratorChatCustomToolChatCompletionsCustomFormat0Type) Valid() bool {
+	switch e {
+	case OrchestratorChatCustomToolChatCompletionsCustomFormat0TypeText:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatCustomToolChatCompletionsCustomFormat1GrammarSyntax.
+const (
+	OrchestratorChatCustomToolChatCompletionsCustomFormat1GrammarSyntaxLark  OrchestratorChatCustomToolChatCompletionsCustomFormat1GrammarSyntax = "lark"
+	OrchestratorChatCustomToolChatCompletionsCustomFormat1GrammarSyntaxRegex OrchestratorChatCustomToolChatCompletionsCustomFormat1GrammarSyntax = "regex"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatCustomToolChatCompletionsCustomFormat1GrammarSyntax enum.
+func (e OrchestratorChatCustomToolChatCompletionsCustomFormat1GrammarSyntax) Valid() bool {
+	switch e {
+	case OrchestratorChatCustomToolChatCompletionsCustomFormat1GrammarSyntaxLark:
+		return true
+	case OrchestratorChatCustomToolChatCompletionsCustomFormat1GrammarSyntaxRegex:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatCustomToolChatCompletionsCustomFormat1Type.
+const (
+	OrchestratorChatCustomToolChatCompletionsCustomFormat1TypeGrammar OrchestratorChatCustomToolChatCompletionsCustomFormat1Type = "grammar"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatCustomToolChatCompletionsCustomFormat1Type enum.
+func (e OrchestratorChatCustomToolChatCompletionsCustomFormat1Type) Valid() bool {
+	switch e {
+	case OrchestratorChatCustomToolChatCompletionsCustomFormat1TypeGrammar:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatCustomToolChatCompletionsType.
+const (
+	OrchestratorChatCustomToolChatCompletionsTypeCustom OrchestratorChatCustomToolChatCompletionsType = "custom"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatCustomToolChatCompletionsType enum.
+func (e OrchestratorChatCustomToolChatCompletionsType) Valid() bool {
+	switch e {
+	case OrchestratorChatCustomToolChatCompletionsTypeCustom:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatModelPricingUnit.
+const (
+	OrchestratorChatModelPricingUnitUsdPer1mTokens OrchestratorChatModelPricingUnit = "usd_per_1m_tokens"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatModelPricingUnit enum.
+func (e OrchestratorChatModelPricingUnit) Valid() bool {
+	switch e {
+	case OrchestratorChatModelPricingUnitUsdPer1mTokens:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatModerationInputType.
+const (
+	OrchestratorChatModerationInputTypeImage OrchestratorChatModerationInputType = "image"
+	OrchestratorChatModerationInputTypeText  OrchestratorChatModerationInputType = "text"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatModerationInputType enum.
+func (e OrchestratorChatModerationInputType) Valid() bool {
+	switch e {
+	case OrchestratorChatModerationInputTypeImage:
+		return true
+	case OrchestratorChatModerationInputTypeText:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatModerationResultBodyType.
+const (
+	OrchestratorChatModerationResultBodyTypeModerationResult OrchestratorChatModerationResultBodyType = "moderation_result"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatModerationResultBodyType enum.
+func (e OrchestratorChatModerationResultBodyType) Valid() bool {
+	switch e {
+	case OrchestratorChatModerationResultBodyTypeModerationResult:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatPromptCacheBreakpointParamMode.
+const (
+	OrchestratorChatPromptCacheBreakpointParamModeExplicit OrchestratorChatPromptCacheBreakpointParamMode = "explicit"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatPromptCacheBreakpointParamMode enum.
+func (e OrchestratorChatPromptCacheBreakpointParamMode) Valid() bool {
+	switch e {
+	case OrchestratorChatPromptCacheBreakpointParamModeExplicit:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatPromptCacheModeEnum.
+const (
+	OrchestratorChatPromptCacheModeEnumExplicit OrchestratorChatPromptCacheModeEnum = "explicit"
+	OrchestratorChatPromptCacheModeEnumImplicit OrchestratorChatPromptCacheModeEnum = "implicit"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatPromptCacheModeEnum enum.
+func (e OrchestratorChatPromptCacheModeEnum) Valid() bool {
+	switch e {
+	case OrchestratorChatPromptCacheModeEnumExplicit:
+		return true
+	case OrchestratorChatPromptCacheModeEnumImplicit:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatPromptCacheTTLEnum.
+const (
+	OrchestratorChatPromptCacheTTLEnumN1h  OrchestratorChatPromptCacheTTLEnum = "1h"
+	OrchestratorChatPromptCacheTTLEnumN30m OrchestratorChatPromptCacheTTLEnum = "30m"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatPromptCacheTTLEnum enum.
+func (e OrchestratorChatPromptCacheTTLEnum) Valid() bool {
+	switch e {
+	case OrchestratorChatPromptCacheTTLEnumN1h:
+		return true
+	case OrchestratorChatPromptCacheTTLEnumN30m:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatResponseFormatJsonObjectType.
+const (
+	OrchestratorChatResponseFormatJsonObjectTypeJsonObject OrchestratorChatResponseFormatJsonObjectType = "json_object"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatResponseFormatJsonObjectType enum.
+func (e OrchestratorChatResponseFormatJsonObjectType) Valid() bool {
+	switch e {
+	case OrchestratorChatResponseFormatJsonObjectTypeJsonObject:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatResponseFormatJsonSchemaType.
+const (
+	OrchestratorChatResponseFormatJsonSchemaTypeJsonSchema OrchestratorChatResponseFormatJsonSchemaType = "json_schema"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatResponseFormatJsonSchemaType enum.
+func (e OrchestratorChatResponseFormatJsonSchemaType) Valid() bool {
+	switch e {
+	case OrchestratorChatResponseFormatJsonSchemaTypeJsonSchema:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorChatResponseFormatTextType.
+const (
+	OrchestratorChatResponseFormatTextTypeText OrchestratorChatResponseFormatTextType = "text"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorChatResponseFormatTextType enum.
+func (e OrchestratorChatResponseFormatTextType) Valid() bool {
+	switch e {
+	case OrchestratorChatResponseFormatTextTypeText:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorMessagesBase64DocumentSourceMediaType.
+const (
+	OrchestratorMessagesBase64DocumentSourceMediaTypeApplicationpdf OrchestratorMessagesBase64DocumentSourceMediaType = "application/pdf"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorMessagesBase64DocumentSourceMediaType enum.
+func (e OrchestratorMessagesBase64DocumentSourceMediaType) Valid() bool {
+	switch e {
+	case OrchestratorMessagesBase64DocumentSourceMediaTypeApplicationpdf:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorMessagesBase64DocumentSourceType.
+const (
+	OrchestratorMessagesBase64DocumentSourceTypeBase64 OrchestratorMessagesBase64DocumentSourceType = "base64"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorMessagesBase64DocumentSourceType enum.
+func (e OrchestratorMessagesBase64DocumentSourceType) Valid() bool {
+	switch e {
+	case OrchestratorMessagesBase64DocumentSourceTypeBase64:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorMessagesBase64ImageSourceMediaType.
+const (
+	OrchestratorMessagesBase64ImageSourceMediaTypeImagegif  OrchestratorMessagesBase64ImageSourceMediaType = "image/gif"
+	OrchestratorMessagesBase64ImageSourceMediaTypeImagejpeg OrchestratorMessagesBase64ImageSourceMediaType = "image/jpeg"
+	OrchestratorMessagesBase64ImageSourceMediaTypeImagepng  OrchestratorMessagesBase64ImageSourceMediaType = "image/png"
+	OrchestratorMessagesBase64ImageSourceMediaTypeImagewebp OrchestratorMessagesBase64ImageSourceMediaType = "image/webp"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorMessagesBase64ImageSourceMediaType enum.
+func (e OrchestratorMessagesBase64ImageSourceMediaType) Valid() bool {
+	switch e {
+	case OrchestratorMessagesBase64ImageSourceMediaTypeImagegif:
+		return true
+	case OrchestratorMessagesBase64ImageSourceMediaTypeImagejpeg:
+		return true
+	case OrchestratorMessagesBase64ImageSourceMediaTypeImagepng:
+		return true
+	case OrchestratorMessagesBase64ImageSourceMediaTypeImagewebp:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorMessagesBase64ImageSourceType.
+const (
+	OrchestratorMessagesBase64ImageSourceTypeBase64 OrchestratorMessagesBase64ImageSourceType = "base64"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorMessagesBase64ImageSourceType enum.
+func (e OrchestratorMessagesBase64ImageSourceType) Valid() bool {
+	switch e {
+	case OrchestratorMessagesBase64ImageSourceTypeBase64:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorMessagesCacheControlTtl.
+const (
+	OrchestratorMessagesCacheControlTtlN1h OrchestratorMessagesCacheControlTtl = "1h"
+	OrchestratorMessagesCacheControlTtlN5m OrchestratorMessagesCacheControlTtl = "5m"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorMessagesCacheControlTtl enum.
+func (e OrchestratorMessagesCacheControlTtl) Valid() bool {
+	switch e {
+	case OrchestratorMessagesCacheControlTtlN1h:
+		return true
+	case OrchestratorMessagesCacheControlTtlN5m:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorMessagesCacheControlType.
+const (
+	OrchestratorMessagesCacheControlTypeEphemeral OrchestratorMessagesCacheControlType = "ephemeral"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorMessagesCacheControlType enum.
+func (e OrchestratorMessagesCacheControlType) Valid() bool {
+	switch e {
+	case OrchestratorMessagesCacheControlTypeEphemeral:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorMessagesCreateMessageRequestServiceTier.
+const (
+	OrchestratorMessagesCreateMessageRequestServiceTierAuto         OrchestratorMessagesCreateMessageRequestServiceTier = "auto"
+	OrchestratorMessagesCreateMessageRequestServiceTierStandardOnly OrchestratorMessagesCreateMessageRequestServiceTier = "standard_only"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorMessagesCreateMessageRequestServiceTier enum.
+func (e OrchestratorMessagesCreateMessageRequestServiceTier) Valid() bool {
+	switch e {
+	case OrchestratorMessagesCreateMessageRequestServiceTierAuto:
+		return true
+	case OrchestratorMessagesCreateMessageRequestServiceTierStandardOnly:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorMessagesCreateMessageRequestSpeed.
+const (
+	OrchestratorMessagesCreateMessageRequestSpeedFast     OrchestratorMessagesCreateMessageRequestSpeed = "fast"
+	OrchestratorMessagesCreateMessageRequestSpeedStandard OrchestratorMessagesCreateMessageRequestSpeed = "standard"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorMessagesCreateMessageRequestSpeed enum.
+func (e OrchestratorMessagesCreateMessageRequestSpeed) Valid() bool {
+	switch e {
+	case OrchestratorMessagesCreateMessageRequestSpeedFast:
+		return true
+	case OrchestratorMessagesCreateMessageRequestSpeedStandard:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorMessagesDocumentBlockType.
+const (
+	OrchestratorMessagesDocumentBlockTypeDocument OrchestratorMessagesDocumentBlockType = "document"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorMessagesDocumentBlockType enum.
+func (e OrchestratorMessagesDocumentBlockType) Valid() bool {
+	switch e {
+	case OrchestratorMessagesDocumentBlockTypeDocument:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorMessagesErrorObjectType.
+const (
+	OrchestratorMessagesErrorObjectTypeApiError            OrchestratorMessagesErrorObjectType = "api_error"
+	OrchestratorMessagesErrorObjectTypeAuthenticationError OrchestratorMessagesErrorObjectType = "authentication_error"
+	OrchestratorMessagesErrorObjectTypeInvalidRequestError OrchestratorMessagesErrorObjectType = "invalid_request_error"
+	OrchestratorMessagesErrorObjectTypeNotFoundError       OrchestratorMessagesErrorObjectType = "not_found_error"
+	OrchestratorMessagesErrorObjectTypeOverloadedError     OrchestratorMessagesErrorObjectType = "overloaded_error"
+	OrchestratorMessagesErrorObjectTypePermissionError     OrchestratorMessagesErrorObjectType = "permission_error"
+	OrchestratorMessagesErrorObjectTypeRateLimitError      OrchestratorMessagesErrorObjectType = "rate_limit_error"
+	OrchestratorMessagesErrorObjectTypeRequestTooLarge     OrchestratorMessagesErrorObjectType = "request_too_large"
+	OrchestratorMessagesErrorObjectTypeTimeoutError        OrchestratorMessagesErrorObjectType = "timeout_error"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorMessagesErrorObjectType enum.
+func (e OrchestratorMessagesErrorObjectType) Valid() bool {
+	switch e {
+	case OrchestratorMessagesErrorObjectTypeApiError:
+		return true
+	case OrchestratorMessagesErrorObjectTypeAuthenticationError:
+		return true
+	case OrchestratorMessagesErrorObjectTypeInvalidRequestError:
+		return true
+	case OrchestratorMessagesErrorObjectTypeNotFoundError:
+		return true
+	case OrchestratorMessagesErrorObjectTypeOverloadedError:
+		return true
+	case OrchestratorMessagesErrorObjectTypePermissionError:
+		return true
+	case OrchestratorMessagesErrorObjectTypeRateLimitError:
+		return true
+	case OrchestratorMessagesErrorObjectTypeRequestTooLarge:
+		return true
+	case OrchestratorMessagesErrorObjectTypeTimeoutError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorMessagesErrorResponseType.
+const (
+	OrchestratorMessagesErrorResponseTypeError OrchestratorMessagesErrorResponseType = "error"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorMessagesErrorResponseType enum.
+func (e OrchestratorMessagesErrorResponseType) Valid() bool {
+	switch e {
+	case OrchestratorMessagesErrorResponseTypeError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorMessagesImageBlockType.
+const (
+	OrchestratorMessagesImageBlockTypeImage OrchestratorMessagesImageBlockType = "image"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorMessagesImageBlockType enum.
+func (e OrchestratorMessagesImageBlockType) Valid() bool {
+	switch e {
+	case OrchestratorMessagesImageBlockTypeImage:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorMessagesInputMessageRole.
+const (
+	OrchestratorMessagesInputMessageRoleAssistant OrchestratorMessagesInputMessageRole = "assistant"
+	OrchestratorMessagesInputMessageRoleSystem    OrchestratorMessagesInputMessageRole = "system"
+	OrchestratorMessagesInputMessageRoleUser      OrchestratorMessagesInputMessageRole = "user"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorMessagesInputMessageRole enum.
+func (e OrchestratorMessagesInputMessageRole) Valid() bool {
+	switch e {
+	case OrchestratorMessagesInputMessageRoleAssistant:
+		return true
+	case OrchestratorMessagesInputMessageRoleSystem:
+		return true
+	case OrchestratorMessagesInputMessageRoleUser:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorMessagesMessageRole.
+const (
+	OrchestratorMessagesMessageRoleAssistant OrchestratorMessagesMessageRole = "assistant"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorMessagesMessageRole enum.
+func (e OrchestratorMessagesMessageRole) Valid() bool {
+	switch e {
+	case OrchestratorMessagesMessageRoleAssistant:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorMessagesMessageStopReason.
+const (
+	OrchestratorMessagesMessageStopReasonEndTurn                    OrchestratorMessagesMessageStopReason = "end_turn"
+	OrchestratorMessagesMessageStopReasonMaxTokens                  OrchestratorMessagesMessageStopReason = "max_tokens"
+	OrchestratorMessagesMessageStopReasonModelContextWindowExceeded OrchestratorMessagesMessageStopReason = "model_context_window_exceeded"
+	OrchestratorMessagesMessageStopReasonPauseTurn                  OrchestratorMessagesMessageStopReason = "pause_turn"
+	OrchestratorMessagesMessageStopReasonRefusal                    OrchestratorMessagesMessageStopReason = "refusal"
+	OrchestratorMessagesMessageStopReasonStopSequence               OrchestratorMessagesMessageStopReason = "stop_sequence"
+	OrchestratorMessagesMessageStopReasonToolUse                    OrchestratorMessagesMessageStopReason = "tool_use"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorMessagesMessageStopReason enum.
+func (e OrchestratorMessagesMessageStopReason) Valid() bool {
+	switch e {
+	case OrchestratorMessagesMessageStopReasonEndTurn:
+		return true
+	case OrchestratorMessagesMessageStopReasonMaxTokens:
+		return true
+	case OrchestratorMessagesMessageStopReasonModelContextWindowExceeded:
+		return true
+	case OrchestratorMessagesMessageStopReasonPauseTurn:
+		return true
+	case OrchestratorMessagesMessageStopReasonRefusal:
+		return true
+	case OrchestratorMessagesMessageStopReasonStopSequence:
+		return true
+	case OrchestratorMessagesMessageStopReasonToolUse:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorMessagesMessageType.
+const (
+	OrchestratorMessagesMessageTypeMessage OrchestratorMessagesMessageType = "message"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorMessagesMessageType enum.
+func (e OrchestratorMessagesMessageType) Valid() bool {
+	switch e {
+	case OrchestratorMessagesMessageTypeMessage:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorMessagesOutputConfigEffort.
+const (
+	OrchestratorMessagesOutputConfigEffortHigh   OrchestratorMessagesOutputConfigEffort = "high"
+	OrchestratorMessagesOutputConfigEffortLow    OrchestratorMessagesOutputConfigEffort = "low"
+	OrchestratorMessagesOutputConfigEffortMax    OrchestratorMessagesOutputConfigEffort = "max"
+	OrchestratorMessagesOutputConfigEffortMedium OrchestratorMessagesOutputConfigEffort = "medium"
+	OrchestratorMessagesOutputConfigEffortXhigh  OrchestratorMessagesOutputConfigEffort = "xhigh"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorMessagesOutputConfigEffort enum.
+func (e OrchestratorMessagesOutputConfigEffort) Valid() bool {
+	switch e {
+	case OrchestratorMessagesOutputConfigEffortHigh:
+		return true
+	case OrchestratorMessagesOutputConfigEffortLow:
+		return true
+	case OrchestratorMessagesOutputConfigEffortMax:
+		return true
+	case OrchestratorMessagesOutputConfigEffortMedium:
+		return true
+	case OrchestratorMessagesOutputConfigEffortXhigh:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorMessagesOutputConfigFormatType.
+const (
+	OrchestratorMessagesOutputConfigFormatTypeJsonSchema OrchestratorMessagesOutputConfigFormatType = "json_schema"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorMessagesOutputConfigFormatType enum.
+func (e OrchestratorMessagesOutputConfigFormatType) Valid() bool {
+	switch e {
+	case OrchestratorMessagesOutputConfigFormatTypeJsonSchema:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorMessagesPlainTextDocumentSourceMediaType.
+const (
+	OrchestratorMessagesPlainTextDocumentSourceMediaTypeTextplain OrchestratorMessagesPlainTextDocumentSourceMediaType = "text/plain"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorMessagesPlainTextDocumentSourceMediaType enum.
+func (e OrchestratorMessagesPlainTextDocumentSourceMediaType) Valid() bool {
+	switch e {
+	case OrchestratorMessagesPlainTextDocumentSourceMediaTypeTextplain:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorMessagesPlainTextDocumentSourceType.
+const (
+	OrchestratorMessagesPlainTextDocumentSourceTypeText OrchestratorMessagesPlainTextDocumentSourceType = "text"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorMessagesPlainTextDocumentSourceType enum.
+func (e OrchestratorMessagesPlainTextDocumentSourceType) Valid() bool {
+	switch e {
+	case OrchestratorMessagesPlainTextDocumentSourceTypeText:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorMessagesRedactedThinkingBlockType.
+const (
+	OrchestratorMessagesRedactedThinkingBlockTypeRedactedThinking OrchestratorMessagesRedactedThinkingBlockType = "redacted_thinking"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorMessagesRedactedThinkingBlockType enum.
+func (e OrchestratorMessagesRedactedThinkingBlockType) Valid() bool {
+	switch e {
+	case OrchestratorMessagesRedactedThinkingBlockTypeRedactedThinking:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorMessagesSearchResultBlockType.
+const (
+	OrchestratorMessagesSearchResultBlockTypeSearchResult OrchestratorMessagesSearchResultBlockType = "search_result"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorMessagesSearchResultBlockType enum.
+func (e OrchestratorMessagesSearchResultBlockType) Valid() bool {
+	switch e {
+	case OrchestratorMessagesSearchResultBlockTypeSearchResult:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorMessagesSearchResultTextBlockType.
+const (
+	OrchestratorMessagesSearchResultTextBlockTypeText OrchestratorMessagesSearchResultTextBlockType = "text"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorMessagesSearchResultTextBlockType enum.
+func (e OrchestratorMessagesSearchResultTextBlockType) Valid() bool {
+	switch e {
+	case OrchestratorMessagesSearchResultTextBlockTypeText:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorMessagesTextBlockType.
+const (
+	OrchestratorMessagesTextBlockTypeText OrchestratorMessagesTextBlockType = "text"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorMessagesTextBlockType enum.
+func (e OrchestratorMessagesTextBlockType) Valid() bool {
+	switch e {
+	case OrchestratorMessagesTextBlockTypeText:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorMessagesThinkingBlockType.
+const (
+	OrchestratorMessagesThinkingBlockTypeThinking OrchestratorMessagesThinkingBlockType = "thinking"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorMessagesThinkingBlockType enum.
+func (e OrchestratorMessagesThinkingBlockType) Valid() bool {
+	switch e {
+	case OrchestratorMessagesThinkingBlockTypeThinking:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorMessagesThinkingConfigAdaptiveType.
+const (
+	OrchestratorMessagesThinkingConfigAdaptiveTypeAdaptive OrchestratorMessagesThinkingConfigAdaptiveType = "adaptive"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorMessagesThinkingConfigAdaptiveType enum.
+func (e OrchestratorMessagesThinkingConfigAdaptiveType) Valid() bool {
+	switch e {
+	case OrchestratorMessagesThinkingConfigAdaptiveTypeAdaptive:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorMessagesThinkingConfigDisabledType.
+const (
+	OrchestratorMessagesThinkingConfigDisabledTypeDisabled OrchestratorMessagesThinkingConfigDisabledType = "disabled"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorMessagesThinkingConfigDisabledType enum.
+func (e OrchestratorMessagesThinkingConfigDisabledType) Valid() bool {
+	switch e {
+	case OrchestratorMessagesThinkingConfigDisabledTypeDisabled:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorMessagesThinkingConfigEnabledType.
+const (
+	OrchestratorMessagesThinkingConfigEnabledTypeEnabled OrchestratorMessagesThinkingConfigEnabledType = "enabled"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorMessagesThinkingConfigEnabledType enum.
+func (e OrchestratorMessagesThinkingConfigEnabledType) Valid() bool {
+	switch e {
+	case OrchestratorMessagesThinkingConfigEnabledTypeEnabled:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorMessagesThinkingDisplay.
+const (
+	OrchestratorMessagesThinkingDisplayOmitted    OrchestratorMessagesThinkingDisplay = "omitted"
+	OrchestratorMessagesThinkingDisplaySummarized OrchestratorMessagesThinkingDisplay = "summarized"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorMessagesThinkingDisplay enum.
+func (e OrchestratorMessagesThinkingDisplay) Valid() bool {
+	switch e {
+	case OrchestratorMessagesThinkingDisplayOmitted:
+		return true
+	case OrchestratorMessagesThinkingDisplaySummarized:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorMessagesToolType.
+const (
+	OrchestratorMessagesToolTypeCustom OrchestratorMessagesToolType = "custom"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorMessagesToolType enum.
+func (e OrchestratorMessagesToolType) Valid() bool {
+	switch e {
+	case OrchestratorMessagesToolTypeCustom:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorMessagesToolChoiceAnyType.
+const (
+	OrchestratorMessagesToolChoiceAnyTypeAny OrchestratorMessagesToolChoiceAnyType = "any"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorMessagesToolChoiceAnyType enum.
+func (e OrchestratorMessagesToolChoiceAnyType) Valid() bool {
+	switch e {
+	case OrchestratorMessagesToolChoiceAnyTypeAny:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorMessagesToolChoiceAutoType.
+const (
+	OrchestratorMessagesToolChoiceAutoTypeAuto OrchestratorMessagesToolChoiceAutoType = "auto"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorMessagesToolChoiceAutoType enum.
+func (e OrchestratorMessagesToolChoiceAutoType) Valid() bool {
+	switch e {
+	case OrchestratorMessagesToolChoiceAutoTypeAuto:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorMessagesToolChoiceNoneType.
+const (
+	OrchestratorMessagesToolChoiceNoneTypeNone OrchestratorMessagesToolChoiceNoneType = "none"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorMessagesToolChoiceNoneType enum.
+func (e OrchestratorMessagesToolChoiceNoneType) Valid() bool {
+	switch e {
+	case OrchestratorMessagesToolChoiceNoneTypeNone:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorMessagesToolChoiceToolType.
+const (
+	OrchestratorMessagesToolChoiceToolTypeTool OrchestratorMessagesToolChoiceToolType = "tool"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorMessagesToolChoiceToolType enum.
+func (e OrchestratorMessagesToolChoiceToolType) Valid() bool {
+	switch e {
+	case OrchestratorMessagesToolChoiceToolTypeTool:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorMessagesToolResultBlockType.
+const (
+	OrchestratorMessagesToolResultBlockTypeToolResult OrchestratorMessagesToolResultBlockType = "tool_result"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorMessagesToolResultBlockType enum.
+func (e OrchestratorMessagesToolResultBlockType) Valid() bool {
+	switch e {
+	case OrchestratorMessagesToolResultBlockTypeToolResult:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorMessagesToolUseBlockType.
+const (
+	OrchestratorMessagesToolUseBlockTypeToolUse OrchestratorMessagesToolUseBlockType = "tool_use"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorMessagesToolUseBlockType enum.
+func (e OrchestratorMessagesToolUseBlockType) Valid() bool {
+	switch e {
+	case OrchestratorMessagesToolUseBlockTypeToolUse:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorMessagesURLDocumentSourceType.
+const (
+	OrchestratorMessagesURLDocumentSourceTypeUrl OrchestratorMessagesURLDocumentSourceType = "url"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorMessagesURLDocumentSourceType enum.
+func (e OrchestratorMessagesURLDocumentSourceType) Valid() bool {
+	switch e {
+	case OrchestratorMessagesURLDocumentSourceTypeUrl:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorMessagesURLImageSourceType.
+const (
+	OrchestratorMessagesURLImageSourceTypeUrl OrchestratorMessagesURLImageSourceType = "url"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorMessagesURLImageSourceType enum.
+func (e OrchestratorMessagesURLImageSourceType) Valid() bool {
+	switch e {
+	case OrchestratorMessagesURLImageSourceTypeUrl:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesAdditionalToolsItemParamType.
+const (
+	OrchestratorResponsesAdditionalToolsItemParamTypeAdditionalTools OrchestratorResponsesAdditionalToolsItemParamType = "additional_tools"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesAdditionalToolsItemParamType enum.
+func (e OrchestratorResponsesAdditionalToolsItemParamType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesAdditionalToolsItemParamTypeAdditionalTools:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesAllowedToolChoiceType.
+const (
+	OrchestratorResponsesAllowedToolChoiceTypeAllowedTools OrchestratorResponsesAllowedToolChoiceType = "allowed_tools"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesAllowedToolChoiceType enum.
+func (e OrchestratorResponsesAllowedToolChoiceType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesAllowedToolChoiceTypeAllowedTools:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesAssistantMessageItemParamPhase.
+const (
+	OrchestratorResponsesAssistantMessageItemParamPhaseCommentary  OrchestratorResponsesAssistantMessageItemParamPhase = "commentary"
+	OrchestratorResponsesAssistantMessageItemParamPhaseFinalAnswer OrchestratorResponsesAssistantMessageItemParamPhase = "final_answer"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesAssistantMessageItemParamPhase enum.
+func (e OrchestratorResponsesAssistantMessageItemParamPhase) Valid() bool {
+	switch e {
+	case OrchestratorResponsesAssistantMessageItemParamPhaseCommentary:
+		return true
+	case OrchestratorResponsesAssistantMessageItemParamPhaseFinalAnswer:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesAssistantMessageItemParamRole.
+const (
+	OrchestratorResponsesAssistantMessageItemParamRoleAssistant OrchestratorResponsesAssistantMessageItemParamRole = "assistant"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesAssistantMessageItemParamRole enum.
+func (e OrchestratorResponsesAssistantMessageItemParamRole) Valid() bool {
+	switch e {
+	case OrchestratorResponsesAssistantMessageItemParamRoleAssistant:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesAssistantMessageItemParamType.
+const (
+	OrchestratorResponsesAssistantMessageItemParamTypeMessage OrchestratorResponsesAssistantMessageItemParamType = "message"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesAssistantMessageItemParamType enum.
+func (e OrchestratorResponsesAssistantMessageItemParamType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesAssistantMessageItemParamTypeMessage:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesCustomToolCallType.
+const (
+	OrchestratorResponsesCustomToolCallTypeCustomToolCall OrchestratorResponsesCustomToolCallType = "custom_tool_call"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesCustomToolCallType enum.
+func (e OrchestratorResponsesCustomToolCallType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesCustomToolCallTypeCustomToolCall:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesCustomToolCallItemParamType.
+const (
+	OrchestratorResponsesCustomToolCallItemParamTypeCustomToolCall OrchestratorResponsesCustomToolCallItemParamType = "custom_tool_call"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesCustomToolCallItemParamType enum.
+func (e OrchestratorResponsesCustomToolCallItemParamType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesCustomToolCallItemParamTypeCustomToolCall:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesCustomToolCallOutputItemParamType.
+const (
+	OrchestratorResponsesCustomToolCallOutputItemParamTypeCustomToolCallOutput OrchestratorResponsesCustomToolCallOutputItemParamType = "custom_tool_call_output"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesCustomToolCallOutputItemParamType enum.
+func (e OrchestratorResponsesCustomToolCallOutputItemParamType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesCustomToolCallOutputItemParamTypeCustomToolCallOutput:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesCustomToolParamType.
+const (
+	OrchestratorResponsesCustomToolParamTypeCustom OrchestratorResponsesCustomToolParamType = "custom"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesCustomToolParamType enum.
+func (e OrchestratorResponsesCustomToolParamType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesCustomToolParamTypeCustom:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesDeveloperMessageItemParamRole.
+const (
+	OrchestratorResponsesDeveloperMessageItemParamRoleDeveloper OrchestratorResponsesDeveloperMessageItemParamRole = "developer"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesDeveloperMessageItemParamRole enum.
+func (e OrchestratorResponsesDeveloperMessageItemParamRole) Valid() bool {
+	switch e {
+	case OrchestratorResponsesDeveloperMessageItemParamRoleDeveloper:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesDeveloperMessageItemParamType.
+const (
+	OrchestratorResponsesDeveloperMessageItemParamTypeMessage OrchestratorResponsesDeveloperMessageItemParamType = "message"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesDeveloperMessageItemParamType enum.
+func (e OrchestratorResponsesDeveloperMessageItemParamType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesDeveloperMessageItemParamTypeMessage:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesErrorStreamingEventType.
+const (
+	OrchestratorResponsesErrorStreamingEventTypeError OrchestratorResponsesErrorStreamingEventType = "error"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesErrorStreamingEventType enum.
+func (e OrchestratorResponsesErrorStreamingEventType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesErrorStreamingEventTypeError:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesFunctionCallType.
+const (
+	OrchestratorResponsesFunctionCallTypeFunctionCall OrchestratorResponsesFunctionCallType = "function_call"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesFunctionCallType enum.
+func (e OrchestratorResponsesFunctionCallType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesFunctionCallTypeFunctionCall:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesFunctionCallItemParamType.
+const (
+	OrchestratorResponsesFunctionCallItemParamTypeFunctionCall OrchestratorResponsesFunctionCallItemParamType = "function_call"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesFunctionCallItemParamType enum.
+func (e OrchestratorResponsesFunctionCallItemParamType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesFunctionCallItemParamTypeFunctionCall:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesFunctionCallOutputType.
+const (
+	OrchestratorResponsesFunctionCallOutputTypeFunctionCallOutput OrchestratorResponsesFunctionCallOutputType = "function_call_output"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesFunctionCallOutputType enum.
+func (e OrchestratorResponsesFunctionCallOutputType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesFunctionCallOutputTypeFunctionCallOutput:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesFunctionCallOutputItemParamType.
+const (
+	OrchestratorResponsesFunctionCallOutputItemParamTypeFunctionCallOutput OrchestratorResponsesFunctionCallOutputItemParamType = "function_call_output"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesFunctionCallOutputItemParamType enum.
+func (e OrchestratorResponsesFunctionCallOutputItemParamType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesFunctionCallOutputItemParamTypeFunctionCallOutput:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesFunctionCallOutputStatusEnum.
+const (
+	OrchestratorResponsesFunctionCallOutputStatusEnumCompleted  OrchestratorResponsesFunctionCallOutputStatusEnum = "completed"
+	OrchestratorResponsesFunctionCallOutputStatusEnumInProgress OrchestratorResponsesFunctionCallOutputStatusEnum = "in_progress"
+	OrchestratorResponsesFunctionCallOutputStatusEnumIncomplete OrchestratorResponsesFunctionCallOutputStatusEnum = "incomplete"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesFunctionCallOutputStatusEnum enum.
+func (e OrchestratorResponsesFunctionCallOutputStatusEnum) Valid() bool {
+	switch e {
+	case OrchestratorResponsesFunctionCallOutputStatusEnumCompleted:
+		return true
+	case OrchestratorResponsesFunctionCallOutputStatusEnumInProgress:
+		return true
+	case OrchestratorResponsesFunctionCallOutputStatusEnumIncomplete:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesFunctionCallStatus.
+const (
+	OrchestratorResponsesFunctionCallStatusCompleted  OrchestratorResponsesFunctionCallStatus = "completed"
+	OrchestratorResponsesFunctionCallStatusInProgress OrchestratorResponsesFunctionCallStatus = "in_progress"
+	OrchestratorResponsesFunctionCallStatusIncomplete OrchestratorResponsesFunctionCallStatus = "incomplete"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesFunctionCallStatus enum.
+func (e OrchestratorResponsesFunctionCallStatus) Valid() bool {
+	switch e {
+	case OrchestratorResponsesFunctionCallStatusCompleted:
+		return true
+	case OrchestratorResponsesFunctionCallStatusInProgress:
+		return true
+	case OrchestratorResponsesFunctionCallStatusIncomplete:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesFunctionToolType.
+const (
+	OrchestratorResponsesFunctionToolTypeFunction OrchestratorResponsesFunctionToolType = "function"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesFunctionToolType enum.
+func (e OrchestratorResponsesFunctionToolType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesFunctionToolTypeFunction:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesFunctionToolChoiceType.
+const (
+	OrchestratorResponsesFunctionToolChoiceTypeFunction OrchestratorResponsesFunctionToolChoiceType = "function"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesFunctionToolChoiceType enum.
+func (e OrchestratorResponsesFunctionToolChoiceType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesFunctionToolChoiceTypeFunction:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesFunctionToolParamType.
+const (
+	OrchestratorResponsesFunctionToolParamTypeFunction OrchestratorResponsesFunctionToolParamType = "function"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesFunctionToolParamType enum.
+func (e OrchestratorResponsesFunctionToolParamType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesFunctionToolParamTypeFunction:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesImageDetail.
+const (
+	OrchestratorResponsesImageDetailAuto OrchestratorResponsesImageDetail = "auto"
+	OrchestratorResponsesImageDetailHigh OrchestratorResponsesImageDetail = "high"
+	OrchestratorResponsesImageDetailLow  OrchestratorResponsesImageDetail = "low"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesImageDetail enum.
+func (e OrchestratorResponsesImageDetail) Valid() bool {
+	switch e {
+	case OrchestratorResponsesImageDetailAuto:
+		return true
+	case OrchestratorResponsesImageDetailHigh:
+		return true
+	case OrchestratorResponsesImageDetailLow:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesIncludeEnum.
+const (
+	OrchestratorResponsesIncludeEnumReasoningEncryptedContent OrchestratorResponsesIncludeEnum = "reasoning.encrypted_content"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesIncludeEnum enum.
+func (e OrchestratorResponsesIncludeEnum) Valid() bool {
+	switch e {
+	case OrchestratorResponsesIncludeEnumReasoningEncryptedContent:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesInputFileContentType.
+const (
+	OrchestratorResponsesInputFileContentTypeInputFile OrchestratorResponsesInputFileContentType = "input_file"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesInputFileContentType enum.
+func (e OrchestratorResponsesInputFileContentType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesInputFileContentTypeInputFile:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesInputImageContentType.
+const (
+	OrchestratorResponsesInputImageContentTypeInputImage OrchestratorResponsesInputImageContentType = "input_image"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesInputImageContentType enum.
+func (e OrchestratorResponsesInputImageContentType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesInputImageContentTypeInputImage:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesInputImageContentParamAutoParamType.
+const (
+	OrchestratorResponsesInputImageContentParamAutoParamTypeInputImage OrchestratorResponsesInputImageContentParamAutoParamType = "input_image"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesInputImageContentParamAutoParamType enum.
+func (e OrchestratorResponsesInputImageContentParamAutoParamType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesInputImageContentParamAutoParamTypeInputImage:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesInputTextContentType.
+const (
+	OrchestratorResponsesInputTextContentTypeInputText OrchestratorResponsesInputTextContentType = "input_text"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesInputTextContentType enum.
+func (e OrchestratorResponsesInputTextContentType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesInputTextContentTypeInputText:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesInputTextContentParamType.
+const (
+	OrchestratorResponsesInputTextContentParamTypeInputText OrchestratorResponsesInputTextContentParamType = "input_text"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesInputTextContentParamType enum.
+func (e OrchestratorResponsesInputTextContentParamType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesInputTextContentParamTypeInputText:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesInputVideoContentType.
+const (
+	OrchestratorResponsesInputVideoContentTypeInputVideo OrchestratorResponsesInputVideoContentType = "input_video"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesInputVideoContentType enum.
+func (e OrchestratorResponsesInputVideoContentType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesInputVideoContentTypeInputVideo:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesJsonSchemaResponseFormatParamStrict.
+const (
+	OrchestratorResponsesJsonSchemaResponseFormatParamStrictTrue OrchestratorResponsesJsonSchemaResponseFormatParamStrict = true
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesJsonSchemaResponseFormatParamStrict enum.
+func (e OrchestratorResponsesJsonSchemaResponseFormatParamStrict) Valid() bool {
+	switch e {
+	case OrchestratorResponsesJsonSchemaResponseFormatParamStrictTrue:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesJsonSchemaResponseFormatParamType.
+const (
+	OrchestratorResponsesJsonSchemaResponseFormatParamTypeJsonSchema OrchestratorResponsesJsonSchemaResponseFormatParamType = "json_schema"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesJsonSchemaResponseFormatParamType enum.
+func (e OrchestratorResponsesJsonSchemaResponseFormatParamType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesJsonSchemaResponseFormatParamTypeJsonSchema:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesMessagePhase.
+const (
+	OrchestratorResponsesMessagePhaseCommentary  OrchestratorResponsesMessagePhase = "commentary"
+	OrchestratorResponsesMessagePhaseFinalAnswer OrchestratorResponsesMessagePhase = "final_answer"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesMessagePhase enum.
+func (e OrchestratorResponsesMessagePhase) Valid() bool {
+	switch e {
+	case OrchestratorResponsesMessagePhaseCommentary:
+		return true
+	case OrchestratorResponsesMessagePhaseFinalAnswer:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesMessageType.
+const (
+	OrchestratorResponsesMessageTypeMessage OrchestratorResponsesMessageType = "message"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesMessageType enum.
+func (e OrchestratorResponsesMessageType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesMessageTypeMessage:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesMessageRole.
+const (
+	OrchestratorResponsesMessageRoleAssistant OrchestratorResponsesMessageRole = "assistant"
+	OrchestratorResponsesMessageRoleDeveloper OrchestratorResponsesMessageRole = "developer"
+	OrchestratorResponsesMessageRoleSystem    OrchestratorResponsesMessageRole = "system"
+	OrchestratorResponsesMessageRoleUser      OrchestratorResponsesMessageRole = "user"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesMessageRole enum.
+func (e OrchestratorResponsesMessageRole) Valid() bool {
+	switch e {
+	case OrchestratorResponsesMessageRoleAssistant:
+		return true
+	case OrchestratorResponsesMessageRoleDeveloper:
+		return true
+	case OrchestratorResponsesMessageRoleSystem:
+		return true
+	case OrchestratorResponsesMessageRoleUser:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesMessageStatus.
+const (
+	OrchestratorResponsesMessageStatusCompleted  OrchestratorResponsesMessageStatus = "completed"
+	OrchestratorResponsesMessageStatusInProgress OrchestratorResponsesMessageStatus = "in_progress"
+	OrchestratorResponsesMessageStatusIncomplete OrchestratorResponsesMessageStatus = "incomplete"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesMessageStatus enum.
+func (e OrchestratorResponsesMessageStatus) Valid() bool {
+	switch e {
+	case OrchestratorResponsesMessageStatusCompleted:
+		return true
+	case OrchestratorResponsesMessageStatusInProgress:
+		return true
+	case OrchestratorResponsesMessageStatusIncomplete:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesNamespaceToolParamType.
+const (
+	OrchestratorResponsesNamespaceToolParamTypeNamespace OrchestratorResponsesNamespaceToolParamType = "namespace"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesNamespaceToolParamType enum.
+func (e OrchestratorResponsesNamespaceToolParamType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesNamespaceToolParamTypeNamespace:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesOutputTextContentType.
+const (
+	OrchestratorResponsesOutputTextContentTypeOutputText OrchestratorResponsesOutputTextContentType = "output_text"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesOutputTextContentType enum.
+func (e OrchestratorResponsesOutputTextContentType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesOutputTextContentTypeOutputText:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesOutputTextContentParamType.
+const (
+	OrchestratorResponsesOutputTextContentParamTypeOutputText OrchestratorResponsesOutputTextContentParamType = "output_text"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesOutputTextContentParamType enum.
+func (e OrchestratorResponsesOutputTextContentParamType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesOutputTextContentParamTypeOutputText:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesReasoningBodyType.
+const (
+	OrchestratorResponsesReasoningBodyTypeReasoning OrchestratorResponsesReasoningBodyType = "reasoning"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesReasoningBodyType enum.
+func (e OrchestratorResponsesReasoningBodyType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesReasoningBodyTypeReasoning:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesReasoningEffortEnum.
+const (
+	OrchestratorResponsesReasoningEffortEnumHigh   OrchestratorResponsesReasoningEffortEnum = "high"
+	OrchestratorResponsesReasoningEffortEnumLow    OrchestratorResponsesReasoningEffortEnum = "low"
+	OrchestratorResponsesReasoningEffortEnumMedium OrchestratorResponsesReasoningEffortEnum = "medium"
+	OrchestratorResponsesReasoningEffortEnumNone   OrchestratorResponsesReasoningEffortEnum = "none"
+	OrchestratorResponsesReasoningEffortEnumXhigh  OrchestratorResponsesReasoningEffortEnum = "xhigh"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesReasoningEffortEnum enum.
+func (e OrchestratorResponsesReasoningEffortEnum) Valid() bool {
+	switch e {
+	case OrchestratorResponsesReasoningEffortEnumHigh:
+		return true
+	case OrchestratorResponsesReasoningEffortEnumLow:
+		return true
+	case OrchestratorResponsesReasoningEffortEnumMedium:
+		return true
+	case OrchestratorResponsesReasoningEffortEnumNone:
+		return true
+	case OrchestratorResponsesReasoningEffortEnumXhigh:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesReasoningItemParamType.
+const (
+	OrchestratorResponsesReasoningItemParamTypeReasoning OrchestratorResponsesReasoningItemParamType = "reasoning"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesReasoningItemParamType enum.
+func (e OrchestratorResponsesReasoningItemParamType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesReasoningItemParamTypeReasoning:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesReasoningSummaryContentParamType.
+const (
+	OrchestratorResponsesReasoningSummaryContentParamTypeSummaryText OrchestratorResponsesReasoningSummaryContentParamType = "summary_text"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesReasoningSummaryContentParamType enum.
+func (e OrchestratorResponsesReasoningSummaryContentParamType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesReasoningSummaryContentParamTypeSummaryText:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesReasoningSummaryEnum.
+const (
+	OrchestratorResponsesReasoningSummaryEnumAuto     OrchestratorResponsesReasoningSummaryEnum = "auto"
+	OrchestratorResponsesReasoningSummaryEnumConcise  OrchestratorResponsesReasoningSummaryEnum = "concise"
+	OrchestratorResponsesReasoningSummaryEnumDetailed OrchestratorResponsesReasoningSummaryEnum = "detailed"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesReasoningSummaryEnum enum.
+func (e OrchestratorResponsesReasoningSummaryEnum) Valid() bool {
+	switch e {
+	case OrchestratorResponsesReasoningSummaryEnumAuto:
+		return true
+	case OrchestratorResponsesReasoningSummaryEnumConcise:
+		return true
+	case OrchestratorResponsesReasoningSummaryEnumDetailed:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesReasoningTextContentType.
+const (
+	OrchestratorResponsesReasoningTextContentTypeReasoningText OrchestratorResponsesReasoningTextContentType = "reasoning_text"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesReasoningTextContentType enum.
+func (e OrchestratorResponsesReasoningTextContentType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesReasoningTextContentTypeReasoningText:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesRefusalContentType.
+const (
+	OrchestratorResponsesRefusalContentTypeRefusal OrchestratorResponsesRefusalContentType = "refusal"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesRefusalContentType enum.
+func (e OrchestratorResponsesRefusalContentType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesRefusalContentTypeRefusal:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesRefusalContentParamType.
+const (
+	OrchestratorResponsesRefusalContentParamTypeRefusal OrchestratorResponsesRefusalContentParamType = "refusal"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesRefusalContentParamType enum.
+func (e OrchestratorResponsesRefusalContentParamType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesRefusalContentParamTypeRefusal:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesResponseCompletedStreamingEventType.
+const (
+	OrchestratorResponsesResponseCompletedStreamingEventTypeResponseCompleted OrchestratorResponsesResponseCompletedStreamingEventType = "response.completed"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesResponseCompletedStreamingEventType enum.
+func (e OrchestratorResponsesResponseCompletedStreamingEventType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesResponseCompletedStreamingEventTypeResponseCompleted:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesResponseContentPartAddedStreamingEventType.
+const (
+	OrchestratorResponsesResponseContentPartAddedStreamingEventTypeResponseContentPartAdded OrchestratorResponsesResponseContentPartAddedStreamingEventType = "response.content_part.added"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesResponseContentPartAddedStreamingEventType enum.
+func (e OrchestratorResponsesResponseContentPartAddedStreamingEventType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesResponseContentPartAddedStreamingEventTypeResponseContentPartAdded:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesResponseContentPartDoneStreamingEventType.
+const (
+	OrchestratorResponsesResponseContentPartDoneStreamingEventTypeResponseContentPartDone OrchestratorResponsesResponseContentPartDoneStreamingEventType = "response.content_part.done"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesResponseContentPartDoneStreamingEventType enum.
+func (e OrchestratorResponsesResponseContentPartDoneStreamingEventType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesResponseContentPartDoneStreamingEventTypeResponseContentPartDone:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesResponseCreatedStreamingEventType.
+const (
+	OrchestratorResponsesResponseCreatedStreamingEventTypeResponseCreated OrchestratorResponsesResponseCreatedStreamingEventType = "response.created"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesResponseCreatedStreamingEventType enum.
+func (e OrchestratorResponsesResponseCreatedStreamingEventType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesResponseCreatedStreamingEventTypeResponseCreated:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesResponseCustomToolCallInputDeltaStreamingEventType.
+const (
+	OrchestratorResponsesResponseCustomToolCallInputDeltaStreamingEventTypeResponseCustomToolCallInputDelta OrchestratorResponsesResponseCustomToolCallInputDeltaStreamingEventType = "response.custom_tool_call_input.delta"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesResponseCustomToolCallInputDeltaStreamingEventType enum.
+func (e OrchestratorResponsesResponseCustomToolCallInputDeltaStreamingEventType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesResponseCustomToolCallInputDeltaStreamingEventTypeResponseCustomToolCallInputDelta:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesResponseCustomToolCallInputDoneStreamingEventType.
+const (
+	OrchestratorResponsesResponseCustomToolCallInputDoneStreamingEventTypeResponseCustomToolCallInputDone OrchestratorResponsesResponseCustomToolCallInputDoneStreamingEventType = "response.custom_tool_call_input.done"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesResponseCustomToolCallInputDoneStreamingEventType enum.
+func (e OrchestratorResponsesResponseCustomToolCallInputDoneStreamingEventType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesResponseCustomToolCallInputDoneStreamingEventTypeResponseCustomToolCallInputDone:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesResponseFailedStreamingEventType.
+const (
+	OrchestratorResponsesResponseFailedStreamingEventTypeResponseFailed OrchestratorResponsesResponseFailedStreamingEventType = "response.failed"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesResponseFailedStreamingEventType enum.
+func (e OrchestratorResponsesResponseFailedStreamingEventType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesResponseFailedStreamingEventTypeResponseFailed:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesResponseFunctionCallArgumentsDeltaStreamingEventType.
+const (
+	OrchestratorResponsesResponseFunctionCallArgumentsDeltaStreamingEventTypeResponseFunctionCallArgumentsDelta OrchestratorResponsesResponseFunctionCallArgumentsDeltaStreamingEventType = "response.function_call_arguments.delta"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesResponseFunctionCallArgumentsDeltaStreamingEventType enum.
+func (e OrchestratorResponsesResponseFunctionCallArgumentsDeltaStreamingEventType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesResponseFunctionCallArgumentsDeltaStreamingEventTypeResponseFunctionCallArgumentsDelta:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesResponseFunctionCallArgumentsDoneStreamingEventType.
+const (
+	OrchestratorResponsesResponseFunctionCallArgumentsDoneStreamingEventTypeResponseFunctionCallArgumentsDone OrchestratorResponsesResponseFunctionCallArgumentsDoneStreamingEventType = "response.function_call_arguments.done"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesResponseFunctionCallArgumentsDoneStreamingEventType enum.
+func (e OrchestratorResponsesResponseFunctionCallArgumentsDoneStreamingEventType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesResponseFunctionCallArgumentsDoneStreamingEventTypeResponseFunctionCallArgumentsDone:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesResponseInProgressStreamingEventType.
+const (
+	OrchestratorResponsesResponseInProgressStreamingEventTypeResponseInProgress OrchestratorResponsesResponseInProgressStreamingEventType = "response.in_progress"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesResponseInProgressStreamingEventType enum.
+func (e OrchestratorResponsesResponseInProgressStreamingEventType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesResponseInProgressStreamingEventTypeResponseInProgress:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesResponseIncompleteStreamingEventType.
+const (
+	OrchestratorResponsesResponseIncompleteStreamingEventTypeResponseIncomplete OrchestratorResponsesResponseIncompleteStreamingEventType = "response.incomplete"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesResponseIncompleteStreamingEventType enum.
+func (e OrchestratorResponsesResponseIncompleteStreamingEventType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesResponseIncompleteStreamingEventTypeResponseIncomplete:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesResponseOutputItemAddedStreamingEventType.
+const (
+	OrchestratorResponsesResponseOutputItemAddedStreamingEventTypeResponseOutputItemAdded OrchestratorResponsesResponseOutputItemAddedStreamingEventType = "response.output_item.added"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesResponseOutputItemAddedStreamingEventType enum.
+func (e OrchestratorResponsesResponseOutputItemAddedStreamingEventType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesResponseOutputItemAddedStreamingEventTypeResponseOutputItemAdded:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesResponseOutputItemDoneStreamingEventType.
+const (
+	OrchestratorResponsesResponseOutputItemDoneStreamingEventTypeResponseOutputItemDone OrchestratorResponsesResponseOutputItemDoneStreamingEventType = "response.output_item.done"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesResponseOutputItemDoneStreamingEventType enum.
+func (e OrchestratorResponsesResponseOutputItemDoneStreamingEventType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesResponseOutputItemDoneStreamingEventTypeResponseOutputItemDone:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesResponseOutputTextAnnotationAddedStreamingEventType.
+const (
+	OrchestratorResponsesResponseOutputTextAnnotationAddedStreamingEventTypeResponseOutputTextAnnotationAdded OrchestratorResponsesResponseOutputTextAnnotationAddedStreamingEventType = "response.output_text.annotation.added"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesResponseOutputTextAnnotationAddedStreamingEventType enum.
+func (e OrchestratorResponsesResponseOutputTextAnnotationAddedStreamingEventType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesResponseOutputTextAnnotationAddedStreamingEventTypeResponseOutputTextAnnotationAdded:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesResponseOutputTextDeltaStreamingEventType.
+const (
+	OrchestratorResponsesResponseOutputTextDeltaStreamingEventTypeResponseOutputTextDelta OrchestratorResponsesResponseOutputTextDeltaStreamingEventType = "response.output_text.delta"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesResponseOutputTextDeltaStreamingEventType enum.
+func (e OrchestratorResponsesResponseOutputTextDeltaStreamingEventType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesResponseOutputTextDeltaStreamingEventTypeResponseOutputTextDelta:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesResponseOutputTextDoneStreamingEventType.
+const (
+	OrchestratorResponsesResponseOutputTextDoneStreamingEventTypeResponseOutputTextDone OrchestratorResponsesResponseOutputTextDoneStreamingEventType = "response.output_text.done"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesResponseOutputTextDoneStreamingEventType enum.
+func (e OrchestratorResponsesResponseOutputTextDoneStreamingEventType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesResponseOutputTextDoneStreamingEventTypeResponseOutputTextDone:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesResponseQueuedStreamingEventType.
+const (
+	OrchestratorResponsesResponseQueuedStreamingEventTypeResponseQueued OrchestratorResponsesResponseQueuedStreamingEventType = "response.queued"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesResponseQueuedStreamingEventType enum.
+func (e OrchestratorResponsesResponseQueuedStreamingEventType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesResponseQueuedStreamingEventTypeResponseQueued:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesResponseReasoningDeltaStreamingEventType.
+const (
+	OrchestratorResponsesResponseReasoningDeltaStreamingEventTypeResponseReasoningDelta OrchestratorResponsesResponseReasoningDeltaStreamingEventType = "response.reasoning.delta"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesResponseReasoningDeltaStreamingEventType enum.
+func (e OrchestratorResponsesResponseReasoningDeltaStreamingEventType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesResponseReasoningDeltaStreamingEventTypeResponseReasoningDelta:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesResponseReasoningDoneStreamingEventType.
+const (
+	OrchestratorResponsesResponseReasoningDoneStreamingEventTypeResponseReasoningDone OrchestratorResponsesResponseReasoningDoneStreamingEventType = "response.reasoning.done"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesResponseReasoningDoneStreamingEventType enum.
+func (e OrchestratorResponsesResponseReasoningDoneStreamingEventType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesResponseReasoningDoneStreamingEventTypeResponseReasoningDone:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesResponseReasoningSummaryDeltaStreamingEventType.
+const (
+	OrchestratorResponsesResponseReasoningSummaryDeltaStreamingEventTypeResponseReasoningSummaryTextDelta OrchestratorResponsesResponseReasoningSummaryDeltaStreamingEventType = "response.reasoning_summary_text.delta"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesResponseReasoningSummaryDeltaStreamingEventType enum.
+func (e OrchestratorResponsesResponseReasoningSummaryDeltaStreamingEventType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesResponseReasoningSummaryDeltaStreamingEventTypeResponseReasoningSummaryTextDelta:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesResponseReasoningSummaryDoneStreamingEventType.
+const (
+	OrchestratorResponsesResponseReasoningSummaryDoneStreamingEventTypeResponseReasoningSummaryTextDone OrchestratorResponsesResponseReasoningSummaryDoneStreamingEventType = "response.reasoning_summary_text.done"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesResponseReasoningSummaryDoneStreamingEventType enum.
+func (e OrchestratorResponsesResponseReasoningSummaryDoneStreamingEventType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesResponseReasoningSummaryDoneStreamingEventTypeResponseReasoningSummaryTextDone:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEventType.
+const (
+	OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEventTypeResponseReasoningSummaryPartAdded OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEventType = "response.reasoning_summary_part.added"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEventType enum.
+func (e OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEventType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEventTypeResponseReasoningSummaryPartAdded:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEventType.
+const (
+	OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEventTypeResponseReasoningSummaryPartDone OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEventType = "response.reasoning_summary_part.done"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEventType enum.
+func (e OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEventType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEventTypeResponseReasoningSummaryPartDone:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesResponseRefusalDeltaStreamingEventType.
+const (
+	OrchestratorResponsesResponseRefusalDeltaStreamingEventTypeResponseRefusalDelta OrchestratorResponsesResponseRefusalDeltaStreamingEventType = "response.refusal.delta"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesResponseRefusalDeltaStreamingEventType enum.
+func (e OrchestratorResponsesResponseRefusalDeltaStreamingEventType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesResponseRefusalDeltaStreamingEventTypeResponseRefusalDelta:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesResponseRefusalDoneStreamingEventType.
+const (
+	OrchestratorResponsesResponseRefusalDoneStreamingEventTypeResponseRefusalDone OrchestratorResponsesResponseRefusalDoneStreamingEventType = "response.refusal.done"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesResponseRefusalDoneStreamingEventType enum.
+func (e OrchestratorResponsesResponseRefusalDoneStreamingEventType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesResponseRefusalDoneStreamingEventTypeResponseRefusalDone:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesResponseResourceObject.
+const (
+	OrchestratorResponsesResponseResourceObjectResponse OrchestratorResponsesResponseResourceObject = "response"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesResponseResourceObject enum.
+func (e OrchestratorResponsesResponseResourceObject) Valid() bool {
+	switch e {
+	case OrchestratorResponsesResponseResourceObjectResponse:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesServiceTierEnum.
+const (
+	OrchestratorResponsesServiceTierEnumAuto     OrchestratorResponsesServiceTierEnum = "auto"
+	OrchestratorResponsesServiceTierEnumDefault  OrchestratorResponsesServiceTierEnum = "default"
+	OrchestratorResponsesServiceTierEnumFlex     OrchestratorResponsesServiceTierEnum = "flex"
+	OrchestratorResponsesServiceTierEnumPriority OrchestratorResponsesServiceTierEnum = "priority"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesServiceTierEnum enum.
+func (e OrchestratorResponsesServiceTierEnum) Valid() bool {
+	switch e {
+	case OrchestratorResponsesServiceTierEnumAuto:
+		return true
+	case OrchestratorResponsesServiceTierEnumDefault:
+		return true
+	case OrchestratorResponsesServiceTierEnumFlex:
+		return true
+	case OrchestratorResponsesServiceTierEnumPriority:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesSpecificFunctionParamType.
+const (
+	OrchestratorResponsesSpecificFunctionParamTypeFunction OrchestratorResponsesSpecificFunctionParamType = "function"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesSpecificFunctionParamType enum.
+func (e OrchestratorResponsesSpecificFunctionParamType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesSpecificFunctionParamTypeFunction:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesSummaryTextContentType.
+const (
+	OrchestratorResponsesSummaryTextContentTypeSummaryText OrchestratorResponsesSummaryTextContentType = "summary_text"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesSummaryTextContentType enum.
+func (e OrchestratorResponsesSummaryTextContentType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesSummaryTextContentTypeSummaryText:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesSystemMessageItemParamRole.
+const (
+	OrchestratorResponsesSystemMessageItemParamRoleSystem OrchestratorResponsesSystemMessageItemParamRole = "system"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesSystemMessageItemParamRole enum.
+func (e OrchestratorResponsesSystemMessageItemParamRole) Valid() bool {
+	switch e {
+	case OrchestratorResponsesSystemMessageItemParamRoleSystem:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesSystemMessageItemParamType.
+const (
+	OrchestratorResponsesSystemMessageItemParamTypeMessage OrchestratorResponsesSystemMessageItemParamType = "message"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesSystemMessageItemParamType enum.
+func (e OrchestratorResponsesSystemMessageItemParamType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesSystemMessageItemParamTypeMessage:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesTextContentType.
+const (
+	OrchestratorResponsesTextContentTypeText OrchestratorResponsesTextContentType = "text"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesTextContentType enum.
+func (e OrchestratorResponsesTextContentType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesTextContentTypeText:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesTextResponseFormatType.
+const (
+	OrchestratorResponsesTextResponseFormatTypeText OrchestratorResponsesTextResponseFormatType = "text"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesTextResponseFormatType enum.
+func (e OrchestratorResponsesTextResponseFormatType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesTextResponseFormatTypeText:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesToolChoiceValueEnum.
+const (
+	OrchestratorResponsesToolChoiceValueEnumAuto     OrchestratorResponsesToolChoiceValueEnum = "auto"
+	OrchestratorResponsesToolChoiceValueEnumNone     OrchestratorResponsesToolChoiceValueEnum = "none"
+	OrchestratorResponsesToolChoiceValueEnumRequired OrchestratorResponsesToolChoiceValueEnum = "required"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesToolChoiceValueEnum enum.
+func (e OrchestratorResponsesToolChoiceValueEnum) Valid() bool {
+	switch e {
+	case OrchestratorResponsesToolChoiceValueEnumAuto:
+		return true
+	case OrchestratorResponsesToolChoiceValueEnumNone:
+		return true
+	case OrchestratorResponsesToolChoiceValueEnumRequired:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesTruncationEnum.
+const (
+	OrchestratorResponsesTruncationEnumDisabled OrchestratorResponsesTruncationEnum = "disabled"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesTruncationEnum enum.
+func (e OrchestratorResponsesTruncationEnum) Valid() bool {
+	switch e {
+	case OrchestratorResponsesTruncationEnumDisabled:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesUrlCitationBodyType.
+const (
+	OrchestratorResponsesUrlCitationBodyTypeUrlCitation OrchestratorResponsesUrlCitationBodyType = "url_citation"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesUrlCitationBodyType enum.
+func (e OrchestratorResponsesUrlCitationBodyType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesUrlCitationBodyTypeUrlCitation:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesUrlCitationParamType.
+const (
+	OrchestratorResponsesUrlCitationParamTypeUrlCitation OrchestratorResponsesUrlCitationParamType = "url_citation"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesUrlCitationParamType enum.
+func (e OrchestratorResponsesUrlCitationParamType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesUrlCitationParamTypeUrlCitation:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesUserMessageItemParamRole.
+const (
+	OrchestratorResponsesUserMessageItemParamRoleUser OrchestratorResponsesUserMessageItemParamRole = "user"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesUserMessageItemParamRole enum.
+func (e OrchestratorResponsesUserMessageItemParamRole) Valid() bool {
+	switch e {
+	case OrchestratorResponsesUserMessageItemParamRoleUser:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesUserMessageItemParamType.
+const (
+	OrchestratorResponsesUserMessageItemParamTypeMessage OrchestratorResponsesUserMessageItemParamType = "message"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesUserMessageItemParamType enum.
+func (e OrchestratorResponsesUserMessageItemParamType) Valid() bool {
+	switch e {
+	case OrchestratorResponsesUserMessageItemParamTypeMessage:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorResponsesVerbosityEnum.
+const (
+	OrchestratorResponsesVerbosityEnumHigh   OrchestratorResponsesVerbosityEnum = "high"
+	OrchestratorResponsesVerbosityEnumLow    OrchestratorResponsesVerbosityEnum = "low"
+	OrchestratorResponsesVerbosityEnumMedium OrchestratorResponsesVerbosityEnum = "medium"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorResponsesVerbosityEnum enum.
+func (e OrchestratorResponsesVerbosityEnum) Valid() bool {
+	switch e {
+	case OrchestratorResponsesVerbosityEnumHigh:
+		return true
+	case OrchestratorResponsesVerbosityEnumLow:
+		return true
+	case OrchestratorResponsesVerbosityEnumMedium:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for OrchestratorRoutingReasoningEffort.
+const (
+	OrchestratorRoutingReasoningEffortAuto OrchestratorRoutingReasoningEffort = "auto"
+)
+
+// Valid indicates whether the value is a known member of the OrchestratorRoutingReasoningEffort enum.
+func (e OrchestratorRoutingReasoningEffort) Valid() bool {
+	switch e {
+	case OrchestratorRoutingReasoningEffortAuto:
+		return true
+	default:
+		return false
+	}
+}
+
 // Defines values for PeopleSearchResultsOutputItemType.
 const (
 	PeopleSearchResultsOutputItemTypePeopleSearchResults PeopleSearchResultsOutputItemType = "people_search_results"
@@ -1990,6 +5033,39 @@ const (
 func (e ProfileReferenceType) Valid() bool {
 	switch e {
 	case ProfileReferenceTypeCustom:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for PromptCacheBreakpointMode.
+const (
+	PromptCacheBreakpointModeExplicit PromptCacheBreakpointMode = "explicit"
+)
+
+// Valid indicates whether the value is a known member of the PromptCacheBreakpointMode enum.
+func (e PromptCacheBreakpointMode) Valid() bool {
+	switch e {
+	case PromptCacheBreakpointModeExplicit:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for PromptCacheOptionsMode.
+const (
+	PromptCacheOptionsModeExplicit PromptCacheOptionsMode = "explicit"
+	PromptCacheOptionsModeImplicit PromptCacheOptionsMode = "implicit"
+)
+
+// Valid indicates whether the value is a known member of the PromptCacheOptionsMode enum.
+func (e PromptCacheOptionsMode) Valid() bool {
+	switch e {
+	case PromptCacheOptionsModeExplicit:
+		return true
+	case PromptCacheOptionsModeImplicit:
 		return true
 	default:
 		return false
@@ -2808,15 +5884,29 @@ type ApiPublicSearchResult struct {
 // ApiPublicSearchResultSource Source type of the result (web or attachment)
 type ApiPublicSearchResultSource string
 
+// ApiSearchErrorResponse Error body returned by `POST /search`.
+type ApiSearchErrorResponse struct {
+	Error struct {
+		// Code HTTP status code.
+		Code int `json:"code"`
+
+		// Message Human-readable error message.
+		Message string `json:"message"`
+
+		// Type Error category, such as `invalid_request`, `invalid_language_code`, `invalid_country_code`, or `invalid_api_key`.
+		Type string `json:"type"`
+	} `json:"error"`
+}
+
 // ApiSearchPage A single page from search results
 type ApiSearchPage struct {
-	// Date Publication date of the page
+	// Date Publication date of the page (YYYY-MM-DD). Omitted when the publication date is unknown.
 	Date *string `json:"date,omitempty"`
 
-	// LastUpdated Date the page was last updated
+	// LastUpdated Date the page was last updated (YYYY-MM-DD).
 	LastUpdated *string `json:"last_updated,omitempty"`
 
-	// Snippet Content snippet extracted from the page
+	// Snippet Text extracted from the page that is relevant to the query. Not the full page.
 	Snippet string `json:"snippet"`
 
 	// Title Title of the page
@@ -2828,8 +5918,11 @@ type ApiSearchPage struct {
 
 // ApiSearchRequest defines model for ApiSearchRequest.
 type ApiSearchRequest struct {
-	// Country ISO 3166-1 alpha-2 country code
+	// Country ISO 3166-1 alpha-2 country code, such as `US`. Returns results more relevant to that country.
 	Country *string `json:"country,omitempty"`
+
+	// DisplayServerTime When `true`, the response includes `server_time`.
+	DisplayServerTime *bool `json:"display_server_time,omitempty"`
 
 	// LastUpdatedAfterFilter Return results updated after this date (MM/DD/YYYY)
 	LastUpdatedAfterFilter *Date `json:"last_updated_after_filter,omitempty"`
@@ -2837,10 +5930,10 @@ type ApiSearchRequest struct {
 	// LastUpdatedBeforeFilter Return results updated before this date (MM/DD/YYYY)
 	LastUpdatedBeforeFilter *Date `json:"last_updated_before_filter,omitempty"`
 
-	// MaxResults Maximum number of results. Values above 20 require search_type=people. Supports up to 20 for web search and up to 50 for people search.
+	// MaxResults Maximum number of results in the response, across all queries in the request. 1 to 20 for `web` and `fast`, 1 to 50 for `people`.
 	MaxResults *int `json:"max_results,omitempty"`
 
-	// Query Search query (required)
+	// Query One search query, or an array of 1 to 5 queries. Each query is 1 to 8192 bytes of UTF-8; the limit counts bytes, not characters. `max_results` applies to the combined results of all queries.
 	Query ApiSearchRequest_Query `json:"query"`
 
 	// SearchAfterDateFilter Return results published after this date (MM/DD/YYYY)
@@ -2849,16 +5942,16 @@ type ApiSearchRequest struct {
 	// SearchBeforeDateFilter Return results published before this date (MM/DD/YYYY)
 	SearchBeforeDateFilter *Date `json:"search_before_date_filter,omitempty"`
 
-	// SearchDomainFilter Limit search results to specific domains (max 20)
+	// SearchDomainFilter Include or exclude up to 200 domains or URLs, each up to 253 characters. Prefix an entry with `-` to exclude it.
 	SearchDomainFilter *[]string `json:"search_domain_filter,omitempty"`
 
-	// SearchLanguageFilter ISO 639-1 language codes (2-character max)
+	// SearchLanguageFilter ISO 639-1 language codes, such as `en` or `fr`. Returns results in those languages. Up to 20 codes.
 	SearchLanguageFilter *[]string `json:"search_language_filter,omitempty"`
 
 	// SearchRecencyFilter Filter by publication recency (hour/day/week/month/year)
 	SearchRecencyFilter *SearchRecencyFilter `json:"search_recency_filter,omitempty"`
 
-	// SearchType Search type - "web" for general web search, "fast" for lower-latency, lower-cost web search, "people" for people search. max_results above 20 is only supported for people search.
+	// SearchType Search type: `web` for general web search, `fast` for lower-latency web search, or `people` for people search. `max_results` above 20 is only supported for `people`.
 	SearchType *ApiSearchRequestSearchType `json:"search_type,omitempty"`
 }
 
@@ -2868,19 +5961,24 @@ type ApiSearchRequestQuery0 = string
 // ApiSearchRequestQuery1 defines model for ApiSearchRequest.Query.1.
 type ApiSearchRequestQuery1 = []string
 
-// ApiSearchRequest_Query Search query (required)
+// ApiSearchRequest_Query One search query, or an array of 1 to 5 queries. Each query is 1 to 8192 bytes of UTF-8; the limit counts bytes, not characters. `max_results` applies to the combined results of all queries.
 type ApiSearchRequest_Query struct {
 	union json.RawMessage
 }
 
-// ApiSearchRequestSearchType Search type - "web" for general web search, "fast" for lower-latency, lower-cost web search, "people" for people search. max_results above 20 is only supported for people search.
+// ApiSearchRequestSearchType Search type: `web` for general web search, `fast` for lower-latency web search, or `people` for people search. `max_results` above 20 is only supported for `people`.
 type ApiSearchRequestSearchType string
 
 // ApiSearchResponse defines model for ApiSearchResponse.
 type ApiSearchResponse struct {
-	Id         string          `json:"id"`
-	Results    []ApiSearchPage `json:"results"`
-	ServerTime *string         `json:"server_time,omitempty"`
+	// Id Request ID.
+	Id string `json:"id"`
+
+	// Results Ranked results. With several queries, results from all queries share one list.
+	Results []ApiSearchPage `json:"results"`
+
+	// ServerTime Server processing time, such as `0.163s`. Not included in responses by default.
+	ServerTime *string `json:"server_time,omitempty"`
 }
 
 // ApprovalFilter Matches a tool when every present field matches. An empty filter matches every tool.
@@ -2954,7 +6052,7 @@ type AsyncApiChatCompletionsResponseSummary struct {
 // AsyncProcessingStatus Status enum for async processing.
 type AsyncProcessingStatus string
 
-// AuditEvent A single audit event. Field semantics match audit log webhooks.
+// AuditEvent A single audit event. Top-level field names differ from the audit log webhook payload; see the [Audit API guide](/docs/admin/audit-api#webhooks-or-api) for the differences.
 type AuditEvent struct {
 	// ActorEmail Email of the member who performed the action. Empty for system-generated events such as `audit_events_accessed`.
 	ActorEmail string `json:"actor_email"`
@@ -2968,13 +6066,13 @@ type AuditEvent struct {
 	// Id Stable, unique event identifier.
 	Id string `json:"id"`
 
-	// IpAddress Client IP address recorded for the action, or an empty string when unavailable.
+	// IpAddress Client address recorded for the action, or an empty string when unavailable. Some server-originated events carry a non-IP marker, so validate the value before parsing it as an IP address.
 	IpAddress string `json:"ip_address"`
 
-	// Metadata Event-specific details. Keys vary by `type` and match the audit log webhook payload for that event. Treat the object as additive; new keys may appear without a version change.
+	// Metadata Event-specific details. Keys vary by `type` and generally match the `metadata` object in the audit log webhook payload for that event. The exceptions (credential redaction, `comet_agent_action` fields, and answer text length) are listed in the [Audit API guide](/docs/admin/audit-api#webhooks-or-api). Treat the object as additive; new keys may appear without a version change.
 	Metadata map[string]interface{} `json:"metadata"`
 
-	// SessionId Identifier for the actor's sign-in session, or `null` when no session applies.
+	// SessionId Identifier that links related events, such as a query and its answer. It is not a sign-in session. `null` when none was recorded.
 	SessionId *string `json:"session_id"`
 
 	// Type Event type, for example `query`, `member_invited`, or `connector_connected`.
@@ -3488,6 +6586,240 @@ type ContentPart struct {
 // ContentPartType Type of a content part
 type ContentPartType string
 
+// ContextCost The cost of the request at list price: the per-URL rate for each billed URL, plus the Decisions API input token price of criteria.input_tokens when the request has criteria. It does not reflect account-specific discounts, credits, or adjustments. See [Context API pricing](/docs/getting-started/pricing#context-api-pricing).
+type ContextCost struct {
+	// Currency The currency of total_cost. Always USD.
+	Currency ContextCurrency `json:"currency"`
+
+	// TotalCost fetched_urls at the list per-URL rate, plus the list price of criteria.input_tokens when the request has criteria, rounded to 5 decimals.
+	TotalCost float64 `json:"total_cost"`
+}
+
+// ContextCriteriaOutcomes What counts as true and what counts as false.
+type ContextCriteriaOutcomes struct {
+	// False What makes the answer false, 1 to 500 characters. It must contain a non-whitespace character.
+	False *string `json:"false,omitempty"`
+
+	// True What makes the answer true, 1 to 500 characters. It must contain a non-whitespace character.
+	True *string `json:"true,omitempty"`
+}
+
+// ContextCriteriaQuestion A yes or no question, or a statement to check, about each page.
+type ContextCriteriaQuestion struct {
+	// Criteria Optional descriptions of what makes the answer true and what makes it false.
+	Criteria *ContextCriteriaOutcomes `json:"criteria,omitempty"`
+
+	// Instructions The question to answer or the statement to check, 1 to 1000 characters. It must contain a non-whitespace character.
+	Instructions string `json:"instructions"`
+
+	// Type The question type. Always noul.
+	Type ContextCriteriaQuestionType `json:"type"`
+}
+
+// ContextCriteriaQuestionType The question type. Always noul.
+type ContextCriteriaQuestionType string
+
+// ContextCriteriaUsage Token usage for criteria scoring. Present only when the request has criteria and scoring usage was reported.
+type ContextCriteriaUsage struct {
+	// InputTokens The tokens the decision model read to score the pages (page text plus the questions), billed as Decisions API input tokens.
+	InputTokens int64 `json:"input_tokens"`
+}
+
+// ContextCurrency The currency of total_cost. Always USD.
+type ContextCurrency string
+
+// ContextDecisionNoulAnswer The answer to a noul question: the probability that the answer is yes or the statement is true.
+type ContextDecisionNoulAnswer struct {
+	// Noul The probability of yes or true, from 0 to 1. Values near 0.5 mean the model is unsure.
+	Noul float64 `json:"noul"`
+
+	// Type Always noul.
+	Type ContextDecisionNoulAnswerType `json:"type"`
+}
+
+// ContextDecisionNoulAnswerType Always noul.
+type ContextDecisionNoulAnswerType string
+
+// ContextDocument No field is ever null: a field without a value is omitted. markdown, html, links, and highlights appear only when requested and status.type is ok. metadata appears when status.type is ok or not_modified. A failed result has only url and status.
+type ContextDocument struct {
+	// Criteria The answer to each criteria question, keyed by question ID. Only when the request has criteria and status.type is ok; omitted when the page was not scored, and then criteria_error says why if scoring failed.
+	Criteria *map[string]ContextDecisionNoulAnswer `json:"criteria,omitempty"`
+
+	// CriteriaError Why scoring failed. Only when the request has criteria, status.type is ok, and criteria is omitted; absent when the page had no text to score. timeout: scoring ran out of time. overloaded: the scoring service was at capacity. error: scoring failed for another reason.
+	CriteriaError *ContextDocumentCriteriaError `json:"criteria_error,omitempty"`
+
+	// Highlights The passages of the page most relevant to highlights.query, as one string of extracted page text. Omitted when no passage was returned within max_tokens_per_url.
+	Highlights *string `json:"highlights,omitempty"`
+
+	// Html The page's HTML. Omitted for a page that is not HTML, such as a PDF.
+	Html *string `json:"html,omitempty"`
+
+	// Links The page's links resolved to absolute URLs, without duplicates, in page order. [] for a page without links.
+	Links *[]string `json:"links,omitempty"`
+
+	// Markdown The page content as Markdown.
+	Markdown *string `json:"markdown,omitempty"`
+
+	// Metadata Returned when status.type is ok or not_modified, whatever formats asks for. A field without a value is omitted. Other meta tags in the page's head (name, property, or itemprop) with a non-empty name and value are returned under their lowercased name, such as og:title: a string, or an array of the distinct values in page order when the page repeats the tag.
+	Metadata *ContextMetadata `json:"metadata,omitempty"`
+
+	// Status What happened to this URL.
+	Status ContextStatus `json:"status"`
+
+	// Url The URL exactly as you sent it.
+	Url string `json:"url"`
+}
+
+// ContextDocumentCriteriaError Why scoring failed. Only when the request has criteria, status.type is ok, and criteria is omitted; absent when the page had no text to score. timeout: scoring ran out of time. overloaded: the scoring service was at capacity. error: scoring failed for another reason.
+type ContextDocumentCriteriaError string
+
+// ContextErrorResponse defines model for ContextErrorResponse.
+type ContextErrorResponse struct {
+	Error struct {
+		// Code HTTP status code
+		Code    int    `json:"code"`
+		Message string `json:"message"`
+
+		// Param The request field the error is about, when one applies.
+		Param *string `json:"param,omitempty"`
+
+		// RequestId The request ID. Present on errors the Context API returns itself.
+		RequestId *string `json:"request_id,omitempty"`
+
+		// Type The error type. See each status code for its types.
+		Type ContextErrorResponseErrorType `json:"type"`
+	} `json:"error"`
+}
+
+// ContextErrorResponseErrorType The error type. See each status code for its types.
+type ContextErrorResponseErrorType string
+
+// ContextHighlights Highlights settings. Required when formats includes highlights, and allowed only then.
+type ContextHighlights struct {
+	// MaxTokensPerUrl Maximum length of each page's highlights, in tokens.
+	MaxTokensPerUrl *int `json:"max_tokens_per_url,omitempty"`
+
+	// Query What to look for in each page, 1 to 1024 characters. It must contain a non-whitespace character.
+	Query string `json:"query"`
+}
+
+// ContextMetadata Returned when status.type is ok or not_modified, whatever formats asks for. A field without a value is omitted. Other meta tags in the page's head (name, property, or itemprop) with a non-empty name and value are returned under their lowercased name, such as og:title: a string, or an array of the distinct values in page order when the page repeats the tag.
+type ContextMetadata struct {
+	// Author Page author.
+	Author *string `json:"author,omitempty"`
+
+	// ContentType Content-Type reported for the page.
+	ContentType *string `json:"content_type,omitempty"`
+
+	// Description Page description.
+	Description *string `json:"description,omitempty"`
+
+	// FetchedAt When the returned content was fetched.
+	FetchedAt *time.Time `json:"fetched_at,omitempty"`
+
+	// Language Page language, such as en.
+	Language *string `json:"language,omitempty"`
+
+	// LastModified The site's Last-Modified header, when it sent one. Send it as if_modified_since to check whether the page changed. It is not a publication date or fetch time.
+	LastModified *string `json:"last_modified,omitempty"`
+
+	// Origin cached: a stored copy, chosen by max_age_seconds or cache_only. live: fetched for this request.
+	Origin *ContextMetadataOrigin `json:"origin,omitempty"`
+
+	// PublishedDate Publication date (YYYY-MM-DD).
+	PublishedDate *openapi_types.Date `json:"published_date,omitempty"`
+
+	// SourceUrl The URL the content came from, after normalization and redirects. It can differ from url.
+	SourceUrl string `json:"source_url"`
+
+	// Title Page title.
+	Title                *string                                         `json:"title,omitempty"`
+	AdditionalProperties map[string]ContextMetadata_AdditionalProperties `json:"-"`
+}
+
+// ContextMetadata0 defines model for ContextMetadata.0.
+type ContextMetadata0 = string
+
+// ContextMetadata1 defines model for ContextMetadata.1.
+type ContextMetadata1 = []string
+
+// ContextMetadata_AdditionalProperties defines model for ContextMetadata.AdditionalProperties.
+type ContextMetadata_AdditionalProperties struct {
+	union json.RawMessage
+}
+
+// ContextMetadataOrigin cached: a stored copy, chosen by max_age_seconds or cache_only. live: fetched for this request.
+type ContextMetadataOrigin string
+
+// ContextRequest defines model for ContextRequest.
+type ContextRequest struct {
+	// CacheOnly When true, answer only from stored copies at most max_age_seconds old and never fetch live. A URL without one has status.type no_content. Requires max_age_seconds above 0.
+	CacheOnly *bool `json:"cache_only,omitempty"`
+
+	// Criteria Decision questions to score each page with, keyed by question ID. 1 to 5 questions. IDs must match [A-Za-z0-9_-]{1,64}, and query is reserved. Scoring never filters, reorders, or drops results.
+	Criteria *map[string]ContextCriteriaQuestion `json:"criteria,omitempty"`
+
+	// Formats What to return besides metadata, which is always returned for a page with content. highlights requires the highlights object. [] returns metadata only.
+	Formats *[]ContextRequestFormats `json:"formats,omitempty"`
+
+	// Highlights Highlights settings. Required when formats includes highlights, and allowed only then.
+	Highlights *ContextHighlights `json:"highlights,omitempty"`
+
+	// IfModifiedSince A metadata.last_modified value from an earlier response, in IMF-fixdate form such as Thu, 03 Dec 1992 08:37:20 GMT. Requires exactly one URL and max_age_seconds 0. If the page has not changed since then, its result has status.type not_modified and no content, so keep the content you already have.
+	IfModifiedSince *string `json:"if_modified_since,omitempty"`
+
+	// MaxAgeSeconds Maximum age of a stored copy to accept, up to 63072000 (two years). 0 always fetches the page live.
+	MaxAgeSeconds *int `json:"max_age_seconds,omitempty"`
+
+	// TimeoutMs Time budget for fetching the pages. URLs are fetched in parallel, and a URL that does not finish in time has status.type crawl_timeout while the rest keep their content. The response can take slightly longer than this budget. With criteria, the maximum is 95000, and scoring may add up to 15 seconds.
+	TimeoutMs *int `json:"timeout_ms,omitempty"`
+
+	// Urls 1 to 50 http or https URLs. Your usage tier can lower the maximum. A string that is not an absolute http or https URL does not fail the request: its result has status.type invalid_url.
+	Urls []string `json:"urls"`
+}
+
+// ContextRequestFormats defines model for ContextRequest.Formats.
+type ContextRequestFormats string
+
+// ContextResponse defines model for ContextResponse.
+type ContextResponse struct {
+	// RequestId The request ID, the same value as the X-Request-Id response header. Include it when you contact support.
+	RequestId string `json:"request_id"`
+
+	// Results One result per input URL, in request order.
+	Results []ContextDocument `json:"results"`
+
+	// Usage The number of billed URLs in this request, the criteria scoring tokens when the request has criteria, and the cost at list price.
+	Usage ContextUsage `json:"usage"`
+}
+
+// ContextStatus What happened to this URL.
+type ContextStatus struct {
+	// Message A fixed sentence describing the failure. Only on failures.
+	Message *string `json:"message,omitempty"`
+
+	// StatusCode The site's own HTTP status, on ok, not_modified, bot_challenge, and crawl_failed, when the site answered.
+	StatusCode *int `json:"status_code,omitempty"`
+
+	// Type ok: the fetch succeeded; the result has metadata and the requested formats that are available. not_modified: unchanged since if_modified_since. invalid_url: not an absolute http or https URL. blocked: the URL is blocked and was not fetched. bot_challenge: the site answered with a bot challenge. crawl_failed: the fetch failed. crawl_timeout: fetching the page timed out. no_text: the page has no text, and formats has markdown. no_content: no content was found for the URL. internal_error: the URL could not be read; retry later.
+	Type ContextStatusType `json:"type"`
+}
+
+// ContextStatusType ok: the fetch succeeded; the result has metadata and the requested formats that are available. not_modified: unchanged since if_modified_since. invalid_url: not an absolute http or https URL. blocked: the URL is blocked and was not fetched. bot_challenge: the site answered with a bot challenge. crawl_failed: the fetch failed. crawl_timeout: fetching the page timed out. no_text: the page has no text, and formats has markdown. no_content: no content was found for the URL. internal_error: the URL could not be read; retry later.
+type ContextStatusType string
+
+// ContextUsage The number of billed URLs in this request, the criteria scoring tokens when the request has criteria, and the cost at list price.
+type ContextUsage struct {
+	// Cost The cost of the request at list price: the per-URL rate for each billed URL, plus the Decisions API input token price of criteria.input_tokens when the request has criteria. It does not reflect account-specific discounts, credits, or adjustments. See [Context API pricing](/docs/getting-started/pricing#context-api-pricing).
+	Cost ContextCost `json:"cost"`
+
+	// Criteria Token usage for criteria scoring. Present only when the request has criteria and scoring usage was reported.
+	Criteria *ContextCriteriaUsage `json:"criteria,omitempty"`
+
+	// FetchedUrls The number of billed URLs: the results whose status.type is ok or not_modified. Failed URLs are free, so this is 0 when every URL fails.
+	FetchedUrls int `json:"fetched_urls"`
+}
+
 // ContextualizedEmbeddingObject A single contextualized embedding result
 type ContextualizedEmbeddingObject struct {
 	// Data List of embedding objects for chunks in this document
@@ -3671,7 +7003,7 @@ type DecisionsRequest struct {
 	// Mode Set to `web_grounding` to search the web before the model answers. For a URL-only state, the API first fetches the page and replaces the URL with its text. It then runs one Fast Search per question, up to 100 questions, and adds the top results to `state`. The response lists search evidence in `search_results` and fetched page text in `fetched_results`. If no search returns a result, the model answers from `state`, including any fetched text. Each search or successful URL fetch costs $0.001; fetched text and search evidence count as input tokens. Any other mode value, including an empty string or `null`, returns `400`. See [Web grounding](/docs/decisions/quickstart#web-grounding).
 	Mode *DecisionsRequestMode `json:"mode,omitempty"`
 
-	// Model The decision model: `pplx-decider-v1.3` (27B, $0.02 per million input tokens), `pplx-decider-flash-v1.3` (4B, $0.01 per million input tokens), `pplx-decider-v1.2` (27B, $0.02 per million input tokens) or `pplx-decider-flash-v1.2` (4B, $0.01 per million input tokens). The aliases `pplx-decider-latest` and `perplexity/pplx-decider-latest` select `pplx-decider-v1.3`, and `pplx-decider-flash-latest` and `perplexity/pplx-decider-flash-latest` select `pplx-decider-flash-v1.3`; an alias can move to a newer model over time. `pplx-decider-v1.1-27b` and `pplx-decider-v1-27b` remain accepted and select `pplx-decider-v1.2`. Only the v1.3 models serve `locate` questions. A missing or unknown model returns `400`.
+	// Model The decision model: `pplx-decider-v1.3` (27B, $0.02 per million input tokens), `pplx-decider-flash-v1.3` (4B, $0.01 per million input tokens), `pplx-decider-v1.2` (27B, $0.02 per million input tokens) or `pplx-decider-flash-v1.2` (4B, $0.01 per million input tokens). The aliases `pplx-decider-latest` and `perplexity/pplx-decider-latest` select `pplx-decider-v1.3`, and `pplx-decider-flash-latest` and `perplexity/pplx-decider-flash-latest` select `pplx-decider-flash-v1.3`; an alias can move to a newer model over time. `pplx-decider-v1.1-27b` and `pplx-decider-v1-27b` remain accepted and select `pplx-decider-v1.2`. Only the v1.3 models, by name or through the `-latest` aliases, serve `locate` questions. A missing or unknown model returns `400`.
 	Model string `json:"model"`
 
 	// Questions Questions keyed by a non-empty name you choose. The response uses the same names. At least one question. With `mode` `web_grounding`, at most 100; more returns `400` with `param` `questions`.
@@ -3740,17 +7072,23 @@ type EmbeddingObject struct {
 
 // EmbeddingsRequest Request body for creating embeddings
 type EmbeddingsRequest struct {
-	// Dimensions Number of dimensions for output embeddings (Matryoshka). Range: 128-1024 for pplx-embed-v1-0.6b, 128-2560 for pplx-embed-v1-4b. Defaults to full dimensions (1024 or 2560).
+	// Dimensions Output dimensions. v2: 1024 for pplx-embed-v2-context-0.6b (not MRL-trained); 1024 or 2048 for pplx-embed-v2-context-9b (MRL). v1: multiples of 8 from 128 to 1024 for pplx-embed-v1-0.6b or 2560 for pplx-embed-v1-4b. Defaults to the model's full dimensions.
 	Dimensions *int `json:"dimensions,omitempty"`
 
 	// EncodingFormat Output encoding format for embeddings. base64_int8 returns base64-encoded signed int8 values. base64_binary returns base64-encoded packed binary (1 bit per dimension).
 	EncodingFormat *EmbeddingsRequestEncodingFormat `json:"encoding_format,omitempty"`
 
-	// Input Input text to embed, encoded as a string or array of strings. Maximum 512 texts per request. Each input must not exceed 32K tokens. All inputs in a single request must not exceed 120,000 tokens combined. Empty strings are not allowed.
+	// Input Input to embed. pplx-embed-v2 models accept a string, an array of strings, pre-chunked documents (an array of string arrays), or image objects. pplx-embed-v1 models accept only a string or array of strings; a request contains only text or only images. Maximum 512 texts or documents per request. Each text or document must not exceed 32K tokens. All text in a single request must not exceed 120,000 tokens combined. Empty strings are not allowed.
 	Input EmbeddingsRequest_Input `json:"input"`
 
-	// Model The embedding model to use
+	// InputType Required for pplx-embed-v2 models. Use query for search queries and document for content you index. Pre-chunked documents and images require document.
+	InputType *EmbeddingsRequestInputType `json:"input_type,omitempty"`
+
+	// Model The embedding model to use. Start with pplx-embed-v2-context-0.6b. v1 models will be phased out during 2027.
 	Model EmbeddingsRequestModel `json:"model"`
+
+	// NumChunks pplx-embed-v2 image inputs only. Splits each image into this many horizontal regions and returns one embedding per region. Small images can return fewer regions.
+	NumChunks *EmbeddingsRequestNumChunks `json:"num_chunks,omitempty"`
 }
 
 // EmbeddingsRequestEncodingFormat Output encoding format for embeddings. base64_int8 returns base64-encoded signed int8 values. base64_binary returns base64-encoded packed binary (1 bit per dimension).
@@ -3762,18 +7100,37 @@ type EmbeddingsRequestInput0 = string
 // EmbeddingsRequestInput1 defines model for EmbeddingsRequest.Input.1.
 type EmbeddingsRequestInput1 = []string
 
-// EmbeddingsRequest_Input Input text to embed, encoded as a string or array of strings. Maximum 512 texts per request. Each input must not exceed 32K tokens. All inputs in a single request must not exceed 120,000 tokens combined. Empty strings are not allowed.
+// EmbeddingsRequestInput2 Pre-chunked documents for pplx-embed-v2 models with input_type document. Each inner array holds one document's chunks in order. Maximum 16,000 chunks per request.
+type EmbeddingsRequestInput2 = [][]string
+
+// EmbeddingsRequestInput3 Images for pplx-embed-v2 models with input_type document. Maximum 96 images and 20 MB of base64 image data per request.
+type EmbeddingsRequestInput3 = []struct {
+	// Image Base64 data URI, for example data:image/png;base64,<BASE64_IMAGE>. JPEG, PNG, and WebP are supported; animated images are not.
+	Image string                      `json:"image"`
+	Type  EmbeddingsRequestInput3Type `json:"type"`
+}
+
+// EmbeddingsRequestInput3Type defines model for EmbeddingsRequest.Input.3.Type.
+type EmbeddingsRequestInput3Type string
+
+// EmbeddingsRequest_Input Input to embed. pplx-embed-v2 models accept a string, an array of strings, pre-chunked documents (an array of string arrays), or image objects. pplx-embed-v1 models accept only a string or array of strings; a request contains only text or only images. Maximum 512 texts or documents per request. Each text or document must not exceed 32K tokens. All text in a single request must not exceed 120,000 tokens combined. Empty strings are not allowed.
 type EmbeddingsRequest_Input struct {
 	union json.RawMessage
 }
 
-// EmbeddingsRequestModel The embedding model to use
+// EmbeddingsRequestInputType Required for pplx-embed-v2 models. Use query for search queries and document for content you index. Pre-chunked documents and images require document.
+type EmbeddingsRequestInputType string
+
+// EmbeddingsRequestModel The embedding model to use. Start with pplx-embed-v2-context-0.6b. v1 models will be phased out during 2027.
 type EmbeddingsRequestModel string
+
+// EmbeddingsRequestNumChunks pplx-embed-v2 image inputs only. Splits each image into this many horizontal regions and returns one embedding per region. Small images can return fewer regions.
+type EmbeddingsRequestNumChunks int
 
 // EmbeddingsResponse Response body for embeddings request
 type EmbeddingsResponse struct {
-	// Data List of embedding objects
-	Data *[]EmbeddingObject `json:"data,omitempty"`
+	// Data List of embedding objects. Pre-chunked documents and image inputs with num_chunks above 1 return one contextualized object per input, with chunk embeddings in data.
+	Data *[]EmbeddingsResponse_Data_Item `json:"data,omitempty"`
 
 	// Model The model used to generate embeddings
 	Model *string `json:"model,omitempty"`
@@ -3783,6 +7140,11 @@ type EmbeddingsResponse struct {
 
 	// Usage Token usage for the embeddings request
 	Usage *EmbeddingsUsage `json:"usage,omitempty"`
+}
+
+// EmbeddingsResponse_Data_Item defines model for EmbeddingsResponse.data.Item.
+type EmbeddingsResponse_Data_Item struct {
+	union json.RawMessage
 }
 
 // EmbeddingsUsage Token usage for the embeddings request
@@ -4195,10 +7557,13 @@ type InputContentPart struct {
 	FileUrl *string `json:"file_url,omitempty"`
 
 	// Filename Optional input_file basename, at most 255 UTF-8 bytes. Its extension must match the document type.
-	Filename *string              `json:"filename,omitempty"`
-	ImageUrl *string              `json:"image_url,omitempty"`
-	Text     *string              `json:"text,omitempty"`
-	Type     InputContentPartType `json:"type"`
+	Filename *string `json:"filename,omitempty"`
+	ImageUrl *string `json:"image_url,omitempty"`
+
+	// PromptCacheBreakpoint Marks the end of a reusable prompt prefix on an `input_text` part. Marks replace the default cache breakpoints. A request allows up to 4 marks in `explicit` mode and up to 3 in `implicit` mode; more marks, or a mark on another part type, return HTTP 400.
+	PromptCacheBreakpoint *PromptCacheBreakpoint `json:"prompt_cache_breakpoint,omitempty"`
+	Text                  *string                `json:"text,omitempty"`
+	Type                  InputContentPartType   `json:"type"`
 }
 
 // InputContentPartType defines model for InputContentPart.Type.
@@ -4283,7 +7648,7 @@ type LocateAnswer struct {
 // LocateAnswerType Always `locate`.
 type LocateAnswerType string
 
-// LocateQuestion A question that returns the spans of `state` that match `instructions`. It ignores `criteria` and any other member besides `type` and `instructions`. Only `pplx-decider-v1.3` and `pplx-decider-flash-v1.3` serve it; other models return `400`. A request with a `locate` question needs a string `state`, no images, and at most 128 questions; with `web_grounding`, a page URL `state` returns `400` with `param` `state`. Other question types can be sent in the same request. Locate was trained on inputs of up to 8k tokens and evaluated on inputs of up to 32k tokens; longer inputs are accepted, but span quality on them is not measured.
+// LocateQuestion A question that returns the spans of `state` that match `instructions`. It ignores `criteria` and any other member besides `type` and `instructions`. It needs a v1.3 model: `pplx-decider-v1.3`, `pplx-decider-flash-v1.3`, or the `-latest` aliases that select them; any other model returns `400`. A request with a `locate` question needs a string `state`, no images, and at most 128 questions; with `web_grounding`, a page URL `state` returns `400` with `param` `state`. Other question types can be sent in the same request. Locate was trained on inputs of up to 8k tokens and evaluated on inputs of up to 32k tokens; longer inputs are accepted, but span quality on them is not measured.
 type LocateQuestion struct {
 	// Instructions What to find in `state`: a short label such as `email address` or an instruction such as `Extract the city where the job is located.` Whitespace-only text returns `400`.
 	Instructions string `json:"instructions"`
@@ -4687,11 +8052,7 @@ type MonitorDiff struct {
 // MonitorDomain A bare host name, such as `example.com`.
 type MonitorDomain = string
 
-// MonitorEventType `monitor.changes.detected`: a run succeeded with at least one change.
-// `monitor.run.completed`: a run ended `succeeded` (with or without
-// changes) or `failed`. `monitor.paused`: the service paused the
-// monitor; your own pause sends nothing. New types may be added; a new
-// type is sent only to webhooks that list it in `events`.
+// MonitorEventType `monitor.changes.detected`: a run succeeded with at least one change. `monitor.run.completed`: a run ended `succeeded` (with or without changes) or `failed`. `monitor.paused`: the service paused the monitor; your own pause sends nothing. `monitor.created`: the first successful run. Subscribe explicitly; it replaces `monitor.changes.detected` and `monitor.run.completed` for that run. New types may be added and are sent only to webhooks that list them in `events`.
 type MonitorEventType string
 
 // MonitorFreshness New values may be added; ignore unknown ones in responses.
@@ -4761,9 +8122,7 @@ type MonitorMetadata map[string]string
 
 // MonitorPageChange A meaningful change to a page target
 type MonitorPageChange struct {
-	// Confidence Score from 0 to 1 that the change matches `goal`; higher is more
-	// confident. Compare scores within one monitor; the scale may be
-	// recalibrated.
+	// Confidence `confidence` is the meaningfulness score, from 0 to 1. The judge uses your goal if you set one.
 	Confidence float64 `json:"confidence"`
 
 	// Diff Text changes between two page checks.
@@ -4952,7 +8311,7 @@ type MonitorRunUsage struct {
 	// Cost Estimated run cost at list prices: $0.001 per succeeded Search run or counted fetched URL in a succeeded Page run, rounded to 5 decimal places. This is not the amount charged.
 	Cost MonitorRunCost `json:"cost"`
 
-	// FetchedUrls Pages a Page monitor run fetched. Zero for a Search monitor run.
+	// FetchedUrls Counted fetched URLs in a succeeded Page run; zero for Search runs and for runs that did not succeed.
 	FetchedUrls int32 `json:"fetched_urls"`
 }
 
@@ -5007,9 +8366,7 @@ type MonitorSearchFiltersRequest struct {
 
 // MonitorSearchResultChange A search result new to the query since the last run
 type MonitorSearchResultChange struct {
-	// Confidence Score from 0 to 1 that the change matches `goal`; higher is more
-	// confident. Compare scores within one monitor; the scale may be
-	// recalibrated.
+	// Confidence `confidence` is the product of the applicable judging scores, from 0 to 1. The threshold applies to each check, not to the product, so a kept result can have a lower confidence than the threshold. Compare scores within one monitor.
 	Confidence float64 `json:"confidence"`
 
 	// Id Stable opaque ID with the prefix `chg_`. Use it to deduplicate the same finding across runs and webhook deliveries.
@@ -5264,6 +8621,3199 @@ type NoulQuestion_Instructions struct {
 // NoulQuestionType Always `noul`.
 type NoulQuestionType string
 
+// OrchestratorChatChatCompletionAllowedTools defines model for OrchestratorChatChatCompletionAllowedTools.
+type OrchestratorChatChatCompletionAllowedTools struct {
+	Mode  OrchestratorChatChatCompletionAllowedToolsMode `json:"mode"`
+	Tools []map[string]interface{}                       `json:"tools"`
+}
+
+// OrchestratorChatChatCompletionAllowedToolsMode defines model for OrchestratorChatChatCompletionAllowedTools.Mode.
+type OrchestratorChatChatCompletionAllowedToolsMode string
+
+// OrchestratorChatChatCompletionAllowedToolsChoice defines model for OrchestratorChatChatCompletionAllowedToolsChoice.
+type OrchestratorChatChatCompletionAllowedToolsChoice struct {
+	AllowedTools OrchestratorChatChatCompletionAllowedTools           `json:"allowed_tools"`
+	Type         OrchestratorChatChatCompletionAllowedToolsChoiceType `json:"type"`
+}
+
+// OrchestratorChatChatCompletionAllowedToolsChoiceType defines model for OrchestratorChatChatCompletionAllowedToolsChoice.Type.
+type OrchestratorChatChatCompletionAllowedToolsChoiceType string
+
+// OrchestratorChatChatCompletionMessageCustomToolCall defines model for OrchestratorChatChatCompletionMessageCustomToolCall.
+type OrchestratorChatChatCompletionMessageCustomToolCall struct {
+	Custom struct {
+		Input string `json:"input"`
+		Name  string `json:"name"`
+	} `json:"custom"`
+	Id   string                                                  `json:"id"`
+	Type OrchestratorChatChatCompletionMessageCustomToolCallType `json:"type"`
+}
+
+// OrchestratorChatChatCompletionMessageCustomToolCallType defines model for OrchestratorChatChatCompletionMessageCustomToolCall.Type.
+type OrchestratorChatChatCompletionMessageCustomToolCallType string
+
+// OrchestratorChatChatCompletionMessageToolCall defines model for OrchestratorChatChatCompletionMessageToolCall.
+type OrchestratorChatChatCompletionMessageToolCall struct {
+	Function struct {
+		Arguments string `json:"arguments"`
+		Name      string `json:"name"`
+	} `json:"function"`
+	Id   string                                            `json:"id"`
+	Type OrchestratorChatChatCompletionMessageToolCallType `json:"type"`
+}
+
+// OrchestratorChatChatCompletionMessageToolCallType defines model for OrchestratorChatChatCompletionMessageToolCall.Type.
+type OrchestratorChatChatCompletionMessageToolCallType string
+
+// OrchestratorChatChatCompletionMessageToolCallChunk defines model for OrchestratorChatChatCompletionMessageToolCallChunk.
+type OrchestratorChatChatCompletionMessageToolCallChunk struct {
+	Function *struct {
+		Arguments *string `json:"arguments,omitempty"`
+		Name      *string `json:"name,omitempty"`
+	} `json:"function,omitempty"`
+	Id    *string                                                 `json:"id,omitempty"`
+	Index int                                                     `json:"index"`
+	Type  *OrchestratorChatChatCompletionMessageToolCallChunkType `json:"type,omitempty"`
+}
+
+// OrchestratorChatChatCompletionMessageToolCallChunkType defines model for OrchestratorChatChatCompletionMessageToolCallChunk.Type.
+type OrchestratorChatChatCompletionMessageToolCallChunkType string
+
+// OrchestratorChatChatCompletionMessageToolCalls defines model for OrchestratorChatChatCompletionMessageToolCalls.
+type OrchestratorChatChatCompletionMessageToolCalls = []OrchestratorChatChatCompletionMessageToolCalls_Item
+
+// OrchestratorChatChatCompletionMessageToolCalls_Item defines model for OrchestratorChatChatCompletionMessageToolCalls.Item.
+type OrchestratorChatChatCompletionMessageToolCalls_Item struct {
+	union json.RawMessage
+}
+
+// OrchestratorChatChatCompletionModeration defines model for OrchestratorChatChatCompletionModeration.
+type OrchestratorChatChatCompletionModeration struct {
+	Input  OrchestratorChatChatCompletionModeration_Input  `json:"input"`
+	Output OrchestratorChatChatCompletionModeration_Output `json:"output"`
+}
+
+// OrchestratorChatChatCompletionModeration_Input defines model for OrchestratorChatChatCompletionModeration.Input.
+type OrchestratorChatChatCompletionModeration_Input struct {
+	union json.RawMessage
+}
+
+// OrchestratorChatChatCompletionModeration_Output defines model for OrchestratorChatChatCompletionModeration.Output.
+type OrchestratorChatChatCompletionModeration_Output struct {
+	union json.RawMessage
+}
+
+// OrchestratorChatChatCompletionModerationError defines model for OrchestratorChatChatCompletionModerationError.
+type OrchestratorChatChatCompletionModerationError struct {
+	Code    string                                            `json:"code"`
+	Message string                                            `json:"message"`
+	Type    OrchestratorChatChatCompletionModerationErrorType `json:"type"`
+}
+
+// OrchestratorChatChatCompletionModerationErrorType defines model for OrchestratorChatChatCompletionModerationError.Type.
+type OrchestratorChatChatCompletionModerationErrorType string
+
+// OrchestratorChatChatCompletionModerationResults defines model for OrchestratorChatChatCompletionModerationResults.
+type OrchestratorChatChatCompletionModerationResults struct {
+	Model   string                                              `json:"model"`
+	Results []OrchestratorChatModerationResultBody              `json:"results"`
+	Type    OrchestratorChatChatCompletionModerationResultsType `json:"type"`
+}
+
+// OrchestratorChatChatCompletionModerationResultsType defines model for OrchestratorChatChatCompletionModerationResults.Type.
+type OrchestratorChatChatCompletionModerationResultsType string
+
+// OrchestratorChatChatCompletionNamedToolChoice defines model for OrchestratorChatChatCompletionNamedToolChoice.
+type OrchestratorChatChatCompletionNamedToolChoice struct {
+	Function struct {
+		Name string `json:"name"`
+	} `json:"function"`
+	Type OrchestratorChatChatCompletionNamedToolChoiceType `json:"type"`
+}
+
+// OrchestratorChatChatCompletionNamedToolChoiceType defines model for OrchestratorChatChatCompletionNamedToolChoice.Type.
+type OrchestratorChatChatCompletionNamedToolChoiceType string
+
+// OrchestratorChatChatCompletionNamedToolChoiceCustom defines model for OrchestratorChatChatCompletionNamedToolChoiceCustom.
+type OrchestratorChatChatCompletionNamedToolChoiceCustom struct {
+	Custom struct {
+		Name string `json:"name"`
+	} `json:"custom"`
+	Type OrchestratorChatChatCompletionNamedToolChoiceCustomType `json:"type"`
+}
+
+// OrchestratorChatChatCompletionNamedToolChoiceCustomType defines model for OrchestratorChatChatCompletionNamedToolChoiceCustom.Type.
+type OrchestratorChatChatCompletionNamedToolChoiceCustomType string
+
+// OrchestratorChatChatCompletionRequestAssistantMessage defines model for OrchestratorChatChatCompletionRequestAssistantMessage.
+type OrchestratorChatChatCompletionRequestAssistantMessage struct {
+	Audio *struct {
+		Id string `json:"id"`
+	} `json:"audio,omitempty"`
+	Content *struct {
+		union json.RawMessage
+	} `json:"content,omitempty"`
+	// Deprecated: this property has been marked as deprecated upstream, but no `x-deprecated-reason` was set
+	FunctionCall *struct {
+		Arguments string `json:"arguments"`
+		Name      string `json:"name"`
+	} `json:"function_call,omitempty"`
+	Name             *string                                                   `json:"name,omitempty"`
+	ReasoningContent *string                                                   `json:"reasoning_content,omitempty"`
+	Refusal          *string                                                   `json:"refusal,omitempty"`
+	Role             OrchestratorChatChatCompletionRequestAssistantMessageRole `json:"role"`
+	ToolCalls        *OrchestratorChatChatCompletionMessageToolCalls           `json:"tool_calls,omitempty"`
+}
+
+// OrchestratorChatChatCompletionRequestAssistantMessageContent0 defines model for OrchestratorChatChatCompletionRequestAssistantMessage.Content.0.
+type OrchestratorChatChatCompletionRequestAssistantMessageContent0 = string
+
+// OrchestratorChatChatCompletionRequestAssistantMessageContent1 defines model for OrchestratorChatChatCompletionRequestAssistantMessage.Content.1.
+type OrchestratorChatChatCompletionRequestAssistantMessageContent1 = []OrchestratorChatChatCompletionRequestAssistantMessageContentPart
+
+// OrchestratorChatChatCompletionRequestAssistantMessageRole defines model for OrchestratorChatChatCompletionRequestAssistantMessage.Role.
+type OrchestratorChatChatCompletionRequestAssistantMessageRole string
+
+// OrchestratorChatChatCompletionRequestAssistantMessageContentPart defines model for OrchestratorChatChatCompletionRequestAssistantMessageContentPart.
+type OrchestratorChatChatCompletionRequestAssistantMessageContentPart struct {
+	union json.RawMessage
+}
+
+// OrchestratorChatChatCompletionRequestDeveloperMessage defines model for OrchestratorChatChatCompletionRequestDeveloperMessage.
+type OrchestratorChatChatCompletionRequestDeveloperMessage struct {
+	Content OrchestratorChatChatCompletionRequestDeveloperMessage_Content `json:"content"`
+	Name    *string                                                       `json:"name,omitempty"`
+	Role    OrchestratorChatChatCompletionRequestDeveloperMessageRole     `json:"role"`
+}
+
+// OrchestratorChatChatCompletionRequestDeveloperMessageContent0 defines model for OrchestratorChatChatCompletionRequestDeveloperMessage.Content.0.
+type OrchestratorChatChatCompletionRequestDeveloperMessageContent0 = string
+
+// OrchestratorChatChatCompletionRequestDeveloperMessageContent1 defines model for OrchestratorChatChatCompletionRequestDeveloperMessage.Content.1.
+type OrchestratorChatChatCompletionRequestDeveloperMessageContent1 = []OrchestratorChatChatCompletionRequestMessageContentPartText
+
+// OrchestratorChatChatCompletionRequestDeveloperMessage_Content defines model for OrchestratorChatChatCompletionRequestDeveloperMessage.Content.
+type OrchestratorChatChatCompletionRequestDeveloperMessage_Content struct {
+	union json.RawMessage
+}
+
+// OrchestratorChatChatCompletionRequestDeveloperMessageRole defines model for OrchestratorChatChatCompletionRequestDeveloperMessage.Role.
+type OrchestratorChatChatCompletionRequestDeveloperMessageRole string
+
+// OrchestratorChatChatCompletionRequestFunctionMessage defines model for OrchestratorChatChatCompletionRequestFunctionMessage.
+//
+// Deprecated: this type has been marked as deprecated upstream, but no `x-deprecated-reason` was set
+type OrchestratorChatChatCompletionRequestFunctionMessage struct {
+	Content *string                                                  `json:"content"`
+	Name    string                                                   `json:"name"`
+	Role    OrchestratorChatChatCompletionRequestFunctionMessageRole `json:"role"`
+}
+
+// OrchestratorChatChatCompletionRequestFunctionMessageRole defines model for OrchestratorChatChatCompletionRequestFunctionMessage.Role.
+type OrchestratorChatChatCompletionRequestFunctionMessageRole string
+
+// OrchestratorChatChatCompletionRequestMessage defines model for OrchestratorChatChatCompletionRequestMessage.
+type OrchestratorChatChatCompletionRequestMessage struct {
+	union json.RawMessage
+}
+
+// OrchestratorChatChatCompletionRequestMessageContentPartAudio defines model for OrchestratorChatChatCompletionRequestMessageContentPartAudio.
+type OrchestratorChatChatCompletionRequestMessageContentPartAudio struct {
+	InputAudio struct {
+		Data   string                                                                       `json:"data"`
+		Format OrchestratorChatChatCompletionRequestMessageContentPartAudioInputAudioFormat `json:"format"`
+	} `json:"input_audio"`
+	PromptCacheBreakpoint *OrchestratorChatPromptCacheBreakpointParam                      `json:"prompt_cache_breakpoint,omitempty"`
+	Type                  OrchestratorChatChatCompletionRequestMessageContentPartAudioType `json:"type"`
+}
+
+// OrchestratorChatChatCompletionRequestMessageContentPartAudioInputAudioFormat defines model for OrchestratorChatChatCompletionRequestMessageContentPartAudio.InputAudio.Format.
+type OrchestratorChatChatCompletionRequestMessageContentPartAudioInputAudioFormat string
+
+// OrchestratorChatChatCompletionRequestMessageContentPartAudioType defines model for OrchestratorChatChatCompletionRequestMessageContentPartAudio.Type.
+type OrchestratorChatChatCompletionRequestMessageContentPartAudioType string
+
+// OrchestratorChatChatCompletionRequestMessageContentPartFile defines model for OrchestratorChatChatCompletionRequestMessageContentPartFile.
+type OrchestratorChatChatCompletionRequestMessageContentPartFile struct {
+	File struct {
+		FileData *string `json:"file_data,omitempty"`
+		FileId   *string `json:"file_id,omitempty"`
+		Filename *string `json:"filename,omitempty"`
+	} `json:"file"`
+	PromptCacheBreakpoint *OrchestratorChatPromptCacheBreakpointParam                     `json:"prompt_cache_breakpoint,omitempty"`
+	Type                  OrchestratorChatChatCompletionRequestMessageContentPartFileType `json:"type"`
+}
+
+// OrchestratorChatChatCompletionRequestMessageContentPartFileType defines model for OrchestratorChatChatCompletionRequestMessageContentPartFile.Type.
+type OrchestratorChatChatCompletionRequestMessageContentPartFileType string
+
+// OrchestratorChatChatCompletionRequestMessageContentPartImage defines model for OrchestratorChatChatCompletionRequestMessageContentPartImage.
+type OrchestratorChatChatCompletionRequestMessageContentPartImage struct {
+	ImageUrl struct {
+		Detail *OrchestratorChatChatCompletionRequestMessageContentPartImageImageUrlDetail `json:"detail,omitempty"`
+		Url    string                                                                      `json:"url"`
+	} `json:"image_url"`
+	PromptCacheBreakpoint *OrchestratorChatPromptCacheBreakpointParam                      `json:"prompt_cache_breakpoint,omitempty"`
+	Type                  OrchestratorChatChatCompletionRequestMessageContentPartImageType `json:"type"`
+}
+
+// OrchestratorChatChatCompletionRequestMessageContentPartImageImageUrlDetail defines model for OrchestratorChatChatCompletionRequestMessageContentPartImage.ImageUrl.Detail.
+type OrchestratorChatChatCompletionRequestMessageContentPartImageImageUrlDetail string
+
+// OrchestratorChatChatCompletionRequestMessageContentPartImageType defines model for OrchestratorChatChatCompletionRequestMessageContentPartImage.Type.
+type OrchestratorChatChatCompletionRequestMessageContentPartImageType string
+
+// OrchestratorChatChatCompletionRequestMessageContentPartRefusal defines model for OrchestratorChatChatCompletionRequestMessageContentPartRefusal.
+type OrchestratorChatChatCompletionRequestMessageContentPartRefusal struct {
+	Refusal string                                                             `json:"refusal"`
+	Type    OrchestratorChatChatCompletionRequestMessageContentPartRefusalType `json:"type"`
+}
+
+// OrchestratorChatChatCompletionRequestMessageContentPartRefusalType defines model for OrchestratorChatChatCompletionRequestMessageContentPartRefusal.Type.
+type OrchestratorChatChatCompletionRequestMessageContentPartRefusalType string
+
+// OrchestratorChatChatCompletionRequestMessageContentPartText defines model for OrchestratorChatChatCompletionRequestMessageContentPartText.
+type OrchestratorChatChatCompletionRequestMessageContentPartText struct {
+	PromptCacheBreakpoint *OrchestratorChatPromptCacheBreakpointParam                     `json:"prompt_cache_breakpoint,omitempty"`
+	Text                  string                                                          `json:"text"`
+	Type                  OrchestratorChatChatCompletionRequestMessageContentPartTextType `json:"type"`
+}
+
+// OrchestratorChatChatCompletionRequestMessageContentPartTextType defines model for OrchestratorChatChatCompletionRequestMessageContentPartText.Type.
+type OrchestratorChatChatCompletionRequestMessageContentPartTextType string
+
+// OrchestratorChatChatCompletionRequestSystemMessage defines model for OrchestratorChatChatCompletionRequestSystemMessage.
+type OrchestratorChatChatCompletionRequestSystemMessage struct {
+	Content OrchestratorChatChatCompletionRequestSystemMessage_Content `json:"content"`
+	Name    *string                                                    `json:"name,omitempty"`
+	Role    OrchestratorChatChatCompletionRequestSystemMessageRole     `json:"role"`
+}
+
+// OrchestratorChatChatCompletionRequestSystemMessageContent0 defines model for OrchestratorChatChatCompletionRequestSystemMessage.Content.0.
+type OrchestratorChatChatCompletionRequestSystemMessageContent0 = string
+
+// OrchestratorChatChatCompletionRequestSystemMessageContent1 defines model for OrchestratorChatChatCompletionRequestSystemMessage.Content.1.
+type OrchestratorChatChatCompletionRequestSystemMessageContent1 = []OrchestratorChatChatCompletionRequestSystemMessageContentPart
+
+// OrchestratorChatChatCompletionRequestSystemMessage_Content defines model for OrchestratorChatChatCompletionRequestSystemMessage.Content.
+type OrchestratorChatChatCompletionRequestSystemMessage_Content struct {
+	union json.RawMessage
+}
+
+// OrchestratorChatChatCompletionRequestSystemMessageRole defines model for OrchestratorChatChatCompletionRequestSystemMessage.Role.
+type OrchestratorChatChatCompletionRequestSystemMessageRole string
+
+// OrchestratorChatChatCompletionRequestSystemMessageContentPart defines model for OrchestratorChatChatCompletionRequestSystemMessageContentPart.
+type OrchestratorChatChatCompletionRequestSystemMessageContentPart struct {
+	union json.RawMessage
+}
+
+// OrchestratorChatChatCompletionRequestToolMessage defines model for OrchestratorChatChatCompletionRequestToolMessage.
+type OrchestratorChatChatCompletionRequestToolMessage struct {
+	Content    OrchestratorChatChatCompletionRequestToolMessage_Content `json:"content"`
+	Role       OrchestratorChatChatCompletionRequestToolMessageRole     `json:"role"`
+	ToolCallId string                                                   `json:"tool_call_id"`
+}
+
+// OrchestratorChatChatCompletionRequestToolMessageContent0 defines model for OrchestratorChatChatCompletionRequestToolMessage.Content.0.
+type OrchestratorChatChatCompletionRequestToolMessageContent0 = string
+
+// OrchestratorChatChatCompletionRequestToolMessageContent1 defines model for OrchestratorChatChatCompletionRequestToolMessage.Content.1.
+type OrchestratorChatChatCompletionRequestToolMessageContent1 = []OrchestratorChatChatCompletionRequestToolMessageContentPart
+
+// OrchestratorChatChatCompletionRequestToolMessage_Content defines model for OrchestratorChatChatCompletionRequestToolMessage.Content.
+type OrchestratorChatChatCompletionRequestToolMessage_Content struct {
+	union json.RawMessage
+}
+
+// OrchestratorChatChatCompletionRequestToolMessageRole defines model for OrchestratorChatChatCompletionRequestToolMessage.Role.
+type OrchestratorChatChatCompletionRequestToolMessageRole string
+
+// OrchestratorChatChatCompletionRequestToolMessageContentPart defines model for OrchestratorChatChatCompletionRequestToolMessageContentPart.
+type OrchestratorChatChatCompletionRequestToolMessageContentPart struct {
+	union json.RawMessage
+}
+
+// OrchestratorChatChatCompletionRequestUserMessage defines model for OrchestratorChatChatCompletionRequestUserMessage.
+type OrchestratorChatChatCompletionRequestUserMessage struct {
+	Content OrchestratorChatChatCompletionRequestUserMessage_Content `json:"content"`
+	Name    *string                                                  `json:"name,omitempty"`
+	Role    OrchestratorChatChatCompletionRequestUserMessageRole     `json:"role"`
+}
+
+// OrchestratorChatChatCompletionRequestUserMessageContent0 defines model for OrchestratorChatChatCompletionRequestUserMessage.Content.0.
+type OrchestratorChatChatCompletionRequestUserMessageContent0 = string
+
+// OrchestratorChatChatCompletionRequestUserMessageContent1 defines model for OrchestratorChatChatCompletionRequestUserMessage.Content.1.
+type OrchestratorChatChatCompletionRequestUserMessageContent1 = []OrchestratorChatChatCompletionRequestUserMessageContentPart
+
+// OrchestratorChatChatCompletionRequestUserMessage_Content defines model for OrchestratorChatChatCompletionRequestUserMessage.Content.
+type OrchestratorChatChatCompletionRequestUserMessage_Content struct {
+	union json.RawMessage
+}
+
+// OrchestratorChatChatCompletionRequestUserMessageRole defines model for OrchestratorChatChatCompletionRequestUserMessage.Role.
+type OrchestratorChatChatCompletionRequestUserMessageRole string
+
+// OrchestratorChatChatCompletionRequestUserMessageContentPart defines model for OrchestratorChatChatCompletionRequestUserMessageContentPart.
+type OrchestratorChatChatCompletionRequestUserMessageContentPart struct {
+	union json.RawMessage
+}
+
+// OrchestratorChatChatCompletionResponseMessage defines model for OrchestratorChatChatCompletionResponseMessage.
+type OrchestratorChatChatCompletionResponseMessage struct {
+	Annotations *[]struct {
+		Type        OrchestratorChatChatCompletionResponseMessageAnnotationsType `json:"type"`
+		UrlCitation struct {
+			EndIndex   int    `json:"end_index"`
+			StartIndex int    `json:"start_index"`
+			Title      string `json:"title"`
+			Url        string `json:"url"`
+		} `json:"url_citation"`
+	} `json:"annotations,omitempty"`
+	Audio *struct {
+		Data       string `json:"data"`
+		ExpiresAt  int    `json:"expires_at"`
+		Id         string `json:"id"`
+		Transcript string `json:"transcript"`
+	} `json:"audio,omitempty"`
+	Content *string `json:"content"`
+	// Deprecated: this property has been marked as deprecated upstream, but no `x-deprecated-reason` was set
+	FunctionCall *struct {
+		Arguments string `json:"arguments"`
+		Name      string `json:"name"`
+	} `json:"function_call,omitempty"`
+	ReasoningContent *string                                           `json:"reasoning_content,omitempty"`
+	Refusal          *string                                           `json:"refusal"`
+	Role             OrchestratorChatChatCompletionResponseMessageRole `json:"role"`
+	ToolCalls        *OrchestratorChatChatCompletionMessageToolCalls   `json:"tool_calls,omitempty"`
+}
+
+// OrchestratorChatChatCompletionResponseMessageAnnotationsType defines model for OrchestratorChatChatCompletionResponseMessage.Annotations.Type.
+type OrchestratorChatChatCompletionResponseMessageAnnotationsType string
+
+// OrchestratorChatChatCompletionResponseMessageRole defines model for OrchestratorChatChatCompletionResponseMessage.Role.
+type OrchestratorChatChatCompletionResponseMessageRole string
+
+// OrchestratorChatChatCompletionStreamOptions defines model for OrchestratorChatChatCompletionStreamOptions.
+type OrchestratorChatChatCompletionStreamOptions struct {
+	// IncludeUsage When `true`, a final chunk before `data: [DONE]` reports token usage for the whole request.
+	IncludeUsage *bool `json:"include_usage,omitempty"`
+}
+
+// OrchestratorChatChatCompletionStreamResponseDelta defines model for OrchestratorChatChatCompletionStreamResponseDelta.
+type OrchestratorChatChatCompletionStreamResponseDelta struct {
+	Content *string `json:"content,omitempty"`
+	// Deprecated: this property has been marked as deprecated upstream, but no `x-deprecated-reason` was set
+	FunctionCall *struct {
+		Arguments *string `json:"arguments,omitempty"`
+		Name      *string `json:"name,omitempty"`
+	} `json:"function_call,omitempty"`
+	ReasoningContent *string                                                `json:"reasoning_content,omitempty"`
+	Refusal          nullable.Nullable[string]                              `json:"refusal,omitempty"`
+	Role             *OrchestratorChatChatCompletionStreamResponseDeltaRole `json:"role,omitempty"`
+	ToolCalls        *[]OrchestratorChatChatCompletionMessageToolCallChunk  `json:"tool_calls,omitempty"`
+}
+
+// OrchestratorChatChatCompletionStreamResponseDeltaRole defines model for OrchestratorChatChatCompletionStreamResponseDelta.Role.
+type OrchestratorChatChatCompletionStreamResponseDeltaRole string
+
+// OrchestratorChatChatCompletionTokenLogprob defines model for OrchestratorChatChatCompletionTokenLogprob.
+type OrchestratorChatChatCompletionTokenLogprob struct {
+	Bytes       *[]int  `json:"bytes"`
+	Logprob     float64 `json:"logprob"`
+	Token       string  `json:"token"`
+	TopLogprobs []struct {
+		Bytes   *[]int  `json:"bytes"`
+		Logprob float64 `json:"logprob"`
+		Token   string  `json:"token"`
+	} `json:"top_logprobs"`
+}
+
+// OrchestratorChatChatCompletionTool defines model for OrchestratorChatChatCompletionTool.
+type OrchestratorChatChatCompletionTool struct {
+	Function OrchestratorChatFunctionObject         `json:"function"`
+	Type     OrchestratorChatChatCompletionToolType `json:"type"`
+}
+
+// OrchestratorChatChatCompletionToolType defines model for OrchestratorChatChatCompletionTool.Type.
+type OrchestratorChatChatCompletionToolType string
+
+// OrchestratorChatChatCompletionToolChoiceOption defines model for OrchestratorChatChatCompletionToolChoiceOption.
+type OrchestratorChatChatCompletionToolChoiceOption struct {
+	union json.RawMessage
+}
+
+// OrchestratorChatChatCompletionToolChoiceOption0 defines model for OrchestratorChatChatCompletionToolChoiceOption.0.
+type OrchestratorChatChatCompletionToolChoiceOption0 string
+
+// OrchestratorChatCompletionUsage defines model for OrchestratorChatCompletionUsage.
+type OrchestratorChatCompletionUsage struct {
+	// CompletionTokens Generated tokens, including reasoning tokens.
+	CompletionTokens        int `json:"completion_tokens"`
+	CompletionTokensDetails *struct {
+		AcceptedPredictionTokens *int `json:"accepted_prediction_tokens,omitempty"`
+		AudioTokens              *int `json:"audio_tokens,omitempty"`
+		ReasoningTokens          *int `json:"reasoning_tokens,omitempty"`
+		RejectedPredictionTokens *int `json:"rejected_prediction_tokens,omitempty"`
+	} `json:"completion_tokens_details,omitempty"`
+
+	// PromptTokens Input tokens for the request, including cache reads and writes.
+	PromptTokens        int `json:"prompt_tokens"`
+	PromptTokensDetails *struct {
+		AudioTokens      *int `json:"audio_tokens,omitempty"`
+		CacheWriteTokens *int `json:"cache_write_tokens,omitempty"`
+		CachedTokens     *int `json:"cached_tokens,omitempty"`
+	} `json:"prompt_tokens_details,omitempty"`
+
+	// TotalTokens Sum of `prompt_tokens` and `completion_tokens`.
+	TotalTokens int `json:"total_tokens"`
+}
+
+// OrchestratorChatCreateChatCompletionRequest defines model for OrchestratorChatCreateChatCompletionRequest.
+type OrchestratorChatCreateChatCompletionRequest struct {
+	// MaxCompletionTokens Upper bound on generated tokens for this request, including reasoning tokens. Some Anthropic models with reasoning can report more completion tokens than this value.
+	MaxCompletionTokens *int `json:"max_completion_tokens,omitempty"`
+
+	// MaxTokens Legacy alias of `max_completion_tokens`.
+	// Deprecated: this property has been marked as deprecated upstream, but no `x-deprecated-reason` was set
+	MaxTokens *int `json:"max_tokens,omitempty"`
+
+	// Messages The conversation so far, as an array of message objects with `role` and `content`. The leading `system` or `developer` message is applied as the system prompt.
+	Messages []OrchestratorChatChatCompletionRequestMessage `json:"messages"`
+
+	// Metadata Accepted for SDK compatibility; not forwarded to the model.
+	Metadata *OrchestratorChatMetadata `json:"metadata,omitempty"`
+
+	// Model A model id from the Orchestrator catalog, or `perplexity/auto` to select a model for each request. With Auto, omit `routing` to use the default policy or provide an inline routing object.
+	Model OrchestratorChatModelIdsShared `json:"model"`
+
+	// ParallelToolCalls Set to `false` to allow at most one tool call per turn. Defaults to `true`, which allows, but does not require, several calls.
+	ParallelToolCalls *OrchestratorChatParallelToolCalls `json:"parallel_tool_calls,omitempty"`
+
+	// PromptCacheKey Stable key grouping related requests to improve prompt-cache hit rates.
+	PromptCacheKey *string `json:"prompt_cache_key,omitempty"`
+
+	// PromptCacheOptions Prompt-cache settings. `ttl` accepts `30m` or `1h`; `1h` works on Anthropic models only.
+	PromptCacheOptions *OrchestratorChatPromptCacheOptionsParam `json:"prompt_cache_options,omitempty"`
+
+	// ReasoningEffort How much reasoning the model performs before answering, on models that support it. Supported values and the default vary by model, and an unsupported value returns a 400.
+	ReasoningEffort *OrchestratorChatReasoningEffort `json:"reasoning_effort,omitempty"`
+
+	// ResponseFormat Output format. Use type `json_schema` for strict structured output or `json_object` for JSON mode.
+	ResponseFormat *OrchestratorChatCreateChatCompletionRequest_ResponseFormat `json:"response_format,omitempty"`
+
+	// Routing Inline routing for `model: "perplexity/auto"` only. Omit this field or set it to null to use the default policy. The serialized routing object must be at most 16384 bytes. Models must be available in the Orchestrator catalog. Routes incompatible with the request are excluded; if the default model is incompatible, the first compatible route model becomes the default. The request fails if no model is compatible.
+	Routing *OrchestratorChatCreateChatCompletionRequest_Routing `json:"routing,omitempty"`
+
+	// SafetyIdentifier Accepted for SDK compatibility; not forwarded to the model.
+	SafetyIdentifier *string `json:"safety_identifier,omitempty"`
+
+	// ServiceTier Processing tier for the request. `flex` halves token rates on supported models; `auto` and `default` are equivalent.
+	ServiceTier *OrchestratorChatServiceTier `json:"service_tier,omitempty"`
+
+	// Stop One stop string, or an array of at most 4. On models that honor stop sequences, output ends at the first match. Some models accept the field without applying it.
+	Stop *OrchestratorChatStopConfiguration `json:"stop,omitempty"`
+
+	// Stream When `true`, tokens are sent as server-sent events as they are generated, terminated by `data: [DONE]`.
+	Stream *bool `json:"stream,omitempty"`
+
+	// StreamOptions Streaming options. Only allowed when `stream` is `true`.
+	StreamOptions *OrchestratorChatChatCompletionStreamOptions `json:"stream_options,omitempty"`
+
+	// Temperature Controls randomness in token selection. Anthropic models accept 0 to 1; other models accept 0 to 2. Higher values produce more varied output. Some models reject requests that set both `temperature` and `top_p`.
+	Temperature *float64 `json:"temperature,omitempty"`
+
+	// ToolChoice Controls whether the model may call tools, requires a specific tool, or limits selection with `allowed_tools`.
+	ToolChoice *OrchestratorChatChatCompletionToolChoiceOption `json:"tool_choice,omitempty"`
+
+	// Tools Function definitions the model can invoke. A tool's `description` is optional.
+	Tools *[]OrchestratorChatCreateChatCompletionRequest_Tools_Item `json:"tools,omitempty"`
+
+	// TopP Cumulative probability cutoff for nucleus sampling, 0 to 1. Some models reject requests that set both `top_p` and `temperature`.
+	TopP *float64 `json:"top_p,omitempty"`
+
+	// User Accepted for SDK compatibility; not forwarded to the model.
+	// Deprecated: this property has been marked as deprecated upstream, but no `x-deprecated-reason` was set
+	User *string `json:"user,omitempty"`
+}
+
+// OrchestratorChatCreateChatCompletionRequest_ResponseFormat Output format. Use type `json_schema` for strict structured output or `json_object` for JSON mode.
+type OrchestratorChatCreateChatCompletionRequest_ResponseFormat struct {
+	union json.RawMessage
+}
+
+// OrchestratorChatCreateChatCompletionRequestRouting1 defines model for OrchestratorChatCreateChatCompletionRequest.Routing.1.
+type OrchestratorChatCreateChatCompletionRequestRouting1 = map[string]interface{}
+
+// OrchestratorChatCreateChatCompletionRequest_Routing Inline routing for `model: "perplexity/auto"` only. Omit this field or set it to null to use the default policy. The serialized routing object must be at most 16384 bytes. Models must be available in the Orchestrator catalog. Routes incompatible with the request are excluded; if the default model is incompatible, the first compatible route model becomes the default. The request fails if no model is compatible.
+type OrchestratorChatCreateChatCompletionRequest_Routing struct {
+	union json.RawMessage
+}
+
+// OrchestratorChatCreateChatCompletionRequest_Tools_Item defines model for OrchestratorChatCreateChatCompletionRequest.tools.Item.
+type OrchestratorChatCreateChatCompletionRequest_Tools_Item struct {
+	union json.RawMessage
+}
+
+// OrchestratorChatCreateChatCompletionResponse defines model for OrchestratorChatCreateChatCompletionResponse.
+type OrchestratorChatCreateChatCompletionResponse struct {
+	// Choices The completion. Contains exactly one choice.
+	Choices []struct {
+		FinishReason OrchestratorChatCreateChatCompletionResponseChoicesFinishReason `json:"finish_reason"`
+		Index        int                                                             `json:"index"`
+		Logprobs     *struct {
+			Content *[]OrchestratorChatChatCompletionTokenLogprob `json:"content"`
+			Refusal *[]OrchestratorChatChatCompletionTokenLogprob `json:"refusal"`
+		} `json:"logprobs"`
+		Message OrchestratorChatChatCompletionResponseMessage `json:"message"`
+	} `json:"choices"`
+
+	// Created Creation time as a Unix timestamp in seconds.
+	Created int `json:"created"`
+
+	// Id Identifier of this completion.
+	Id string `json:"id"`
+
+	// Model The model that served the request. With `perplexity/auto`, this is the selected model, not `perplexity/auto`. Billing uses the served model's rates.
+	Model      string                                                   `json:"model"`
+	Moderation *OrchestratorChatCreateChatCompletionResponse_Moderation `json:"moderation,omitempty"`
+
+	// Object Always `"chat.completion"`.
+	Object OrchestratorChatCreateChatCompletionResponseObject `json:"object"`
+
+	// ServiceTier The processing tier that served the request, or `null` when none is reported.
+	ServiceTier *OrchestratorChatServiceTier `json:"service_tier,omitempty"`
+	// Deprecated: this property has been marked as deprecated upstream, but no `x-deprecated-reason` was set
+	SystemFingerprint *string `json:"system_fingerprint,omitempty"`
+
+	// Usage Token accounting for the request.
+	Usage *OrchestratorChatCompletionUsage `json:"usage,omitempty"`
+}
+
+// OrchestratorChatCreateChatCompletionResponseChoicesFinishReason defines model for OrchestratorChatCreateChatCompletionResponse.Choices.FinishReason.
+type OrchestratorChatCreateChatCompletionResponseChoicesFinishReason string
+
+// OrchestratorChatCreateChatCompletionResponse_Moderation defines model for OrchestratorChatCreateChatCompletionResponse.Moderation.
+type OrchestratorChatCreateChatCompletionResponse_Moderation struct {
+	union json.RawMessage
+}
+
+// OrchestratorChatCreateChatCompletionResponseObject Always `"chat.completion"`.
+type OrchestratorChatCreateChatCompletionResponseObject string
+
+// OrchestratorChatCreateChatCompletionStreamResponse defines model for OrchestratorChatCreateChatCompletionStreamResponse.
+type OrchestratorChatCreateChatCompletionStreamResponse struct {
+	// Choices Incremental output. Empty in the final usage chunk when `stream_options.include_usage` is set.
+	Choices []struct {
+		Delta        OrchestratorChatChatCompletionStreamResponseDelta                      `json:"delta"`
+		FinishReason *OrchestratorChatCreateChatCompletionStreamResponseChoicesFinishReason `json:"finish_reason"`
+		Index        int                                                                    `json:"index"`
+		Logprobs     *struct {
+			Content *[]OrchestratorChatChatCompletionTokenLogprob `json:"content"`
+			Refusal *[]OrchestratorChatChatCompletionTokenLogprob `json:"refusal"`
+		} `json:"logprobs,omitempty"`
+	} `json:"choices"`
+
+	// Created Creation time as a Unix timestamp in seconds, shared by every chunk.
+	Created int `json:"created"`
+
+	// Id Identifier of this completion, shared by every chunk.
+	Id string `json:"id"`
+
+	// Model The model that served the request. With `perplexity/auto`, this is the selected model, not `perplexity/auto`. Billing uses the served model's rates.
+	Model      string                                                         `json:"model"`
+	Moderation *OrchestratorChatCreateChatCompletionStreamResponse_Moderation `json:"moderation,omitempty"`
+
+	// Object Always `"chat.completion.chunk"`.
+	Object      OrchestratorChatCreateChatCompletionStreamResponseObject `json:"object"`
+	ServiceTier *OrchestratorChatServiceTier                             `json:"service_tier,omitempty"`
+	// Deprecated: this property has been marked as deprecated upstream, but no `x-deprecated-reason` was set
+	SystemFingerprint *string `json:"system_fingerprint,omitempty"`
+
+	// Usage Only when the request set `stream_options.include_usage`: `null` in earlier chunks and the request's token totals in the final chunk. Omitted otherwise.
+	Usage *OrchestratorChatCompletionUsage `json:"usage,omitempty"`
+}
+
+// OrchestratorChatCreateChatCompletionStreamResponseChoicesFinishReason defines model for OrchestratorChatCreateChatCompletionStreamResponse.Choices.FinishReason.
+type OrchestratorChatCreateChatCompletionStreamResponseChoicesFinishReason string
+
+// OrchestratorChatCreateChatCompletionStreamResponse_Moderation defines model for OrchestratorChatCreateChatCompletionStreamResponse.Moderation.
+type OrchestratorChatCreateChatCompletionStreamResponse_Moderation struct {
+	union json.RawMessage
+}
+
+// OrchestratorChatCreateChatCompletionStreamResponseObject Always `"chat.completion.chunk"`.
+type OrchestratorChatCreateChatCompletionStreamResponseObject string
+
+// OrchestratorChatCreateModelResponseProperties defines model for OrchestratorChatCreateModelResponseProperties.
+type OrchestratorChatCreateModelResponseProperties struct {
+	// Metadata Accepted for SDK compatibility; not forwarded to the model.
+	Metadata *OrchestratorChatMetadata `json:"metadata,omitempty"`
+
+	// PromptCacheKey Stable key grouping related requests to improve prompt-cache hit rates.
+	PromptCacheKey *string `json:"prompt_cache_key,omitempty"`
+
+	// PromptCacheOptions Prompt-cache settings. `ttl` accepts `30m` or `1h`; `1h` works on Anthropic models only.
+	PromptCacheOptions *OrchestratorChatPromptCacheOptionsParam `json:"prompt_cache_options,omitempty"`
+
+	// SafetyIdentifier Accepted for SDK compatibility; not forwarded to the model.
+	SafetyIdentifier *string `json:"safety_identifier,omitempty"`
+
+	// ServiceTier Processing tier for the request. `flex` halves token rates on supported models; `auto` and `default` are equivalent.
+	ServiceTier *OrchestratorChatServiceTier `json:"service_tier,omitempty"`
+
+	// Temperature Controls randomness in token selection. Anthropic models accept 0 to 1; other models accept 0 to 2. Higher values produce more varied output. Some models reject requests that set both `temperature` and `top_p`.
+	Temperature *float64 `json:"temperature,omitempty"`
+
+	// TopP Cumulative probability cutoff for nucleus sampling, 0 to 1. Some models reject requests that set both `top_p` and `temperature`.
+	TopP *float64 `json:"top_p,omitempty"`
+
+	// User Accepted for SDK compatibility; not forwarded to the model.
+	// Deprecated: this property has been marked as deprecated upstream, but no `x-deprecated-reason` was set
+	User *string `json:"user,omitempty"`
+}
+
+// OrchestratorChatCustomToolChatCompletions defines model for OrchestratorChatCustomToolChatCompletions.
+type OrchestratorChatCustomToolChatCompletions struct {
+	Custom struct {
+		Format *OrchestratorChatCustomToolChatCompletions_Custom_Format `json:"format,omitempty"`
+		Name   string                                                   `json:"name"`
+	} `json:"custom"`
+	Type OrchestratorChatCustomToolChatCompletionsType `json:"type"`
+}
+
+// OrchestratorChatCustomToolChatCompletionsCustomFormat0 defines model for OrchestratorChatCustomToolChatCompletions.Custom.Format.0.
+type OrchestratorChatCustomToolChatCompletionsCustomFormat0 struct {
+	Type OrchestratorChatCustomToolChatCompletionsCustomFormat0Type `json:"type"`
+}
+
+// OrchestratorChatCustomToolChatCompletionsCustomFormat0Type defines model for OrchestratorChatCustomToolChatCompletions.Custom.Format.0.Type.
+type OrchestratorChatCustomToolChatCompletionsCustomFormat0Type string
+
+// OrchestratorChatCustomToolChatCompletionsCustomFormat1 defines model for OrchestratorChatCustomToolChatCompletions.Custom.Format.1.
+type OrchestratorChatCustomToolChatCompletionsCustomFormat1 struct {
+	Grammar struct {
+		Definition string                                                              `json:"definition"`
+		Syntax     OrchestratorChatCustomToolChatCompletionsCustomFormat1GrammarSyntax `json:"syntax"`
+	} `json:"grammar"`
+	Type OrchestratorChatCustomToolChatCompletionsCustomFormat1Type `json:"type"`
+}
+
+// OrchestratorChatCustomToolChatCompletionsCustomFormat1GrammarSyntax defines model for OrchestratorChatCustomToolChatCompletions.Custom.Format.1.Grammar.Syntax.
+type OrchestratorChatCustomToolChatCompletionsCustomFormat1GrammarSyntax string
+
+// OrchestratorChatCustomToolChatCompletionsCustomFormat1Type defines model for OrchestratorChatCustomToolChatCompletions.Custom.Format.1.Type.
+type OrchestratorChatCustomToolChatCompletionsCustomFormat1Type string
+
+// OrchestratorChatCustomToolChatCompletions_Custom_Format defines model for OrchestratorChatCustomToolChatCompletions.Custom.Format.
+type OrchestratorChatCustomToolChatCompletions_Custom_Format struct {
+	union json.RawMessage
+}
+
+// OrchestratorChatCustomToolChatCompletionsType defines model for OrchestratorChatCustomToolChatCompletions.Type.
+type OrchestratorChatCustomToolChatCompletionsType string
+
+// OrchestratorChatError defines model for OrchestratorChatError.
+type OrchestratorChatError struct {
+	// Code A machine-readable code when available, such as `unsupported_parameter` or `unsupported_value`; otherwise `null`. Authentication failures use the number `401`.
+	Code *string `json:"code"`
+
+	// Message Human-readable description of the error.
+	Message string `json:"message"`
+
+	// Param The request parameter the error refers to, when applicable.
+	Param *string `json:"param"`
+
+	// Type Error category: `invalid_request_error` for validation errors, `invalid_api_key` for authentication failures, `rate_limit_error` for 429, `server_error` for 5xx.
+	Type string `json:"type"`
+}
+
+// OrchestratorChatErrorResponse defines model for OrchestratorChatErrorResponse.
+type OrchestratorChatErrorResponse struct {
+	Error OrchestratorChatError `json:"error"`
+}
+
+// OrchestratorChatFunctionObject defines model for OrchestratorChatFunctionObject.
+type OrchestratorChatFunctionObject struct {
+	Name       string                              `json:"name"`
+	Parameters *OrchestratorChatFunctionParameters `json:"parameters,omitempty"`
+	Strict     *bool                               `json:"strict,omitempty"`
+}
+
+// OrchestratorChatFunctionParameters defines model for OrchestratorChatFunctionParameters.
+type OrchestratorChatFunctionParameters map[string]interface{}
+
+// OrchestratorChatMetadata defines model for OrchestratorChatMetadata.
+type OrchestratorChatMetadata map[string]string
+
+// OrchestratorChatModel defines model for OrchestratorChatModel.
+type OrchestratorChatModel struct {
+	// Id Public model slug, e.g. `perplexity/kimi-k3`.
+	Id string `json:"id"`
+
+	// Object Always `model`.
+	Object  string `json:"object"`
+	Created int64  `json:"created"`
+
+	// OwnedBy Provider prefix of the slug, e.g. `perplexity`.
+	OwnedBy string `json:"owned_by"`
+
+	// Pricing Base token prices in USD per 1M tokens. Every field is a price; cache_read is the effective cached-input price.
+	Pricing OrchestratorChatModelPricing `json:"pricing"`
+}
+
+// OrchestratorChatModelIdsShared A `creator/model-name` id from the Orchestrator API catalog.
+type OrchestratorChatModelIdsShared = string
+
+// OrchestratorChatModelList defines model for OrchestratorChatModelList.
+type OrchestratorChatModelList struct {
+	// Object Always `list`.
+	Object string                  `json:"object"`
+	Data   []OrchestratorChatModel `json:"data"`
+}
+
+// OrchestratorChatModelPricing Base token prices in USD per 1M tokens. Every field is a price; cache_read is the effective cached-input price.
+type OrchestratorChatModelPricing struct {
+	Input      float64                          `json:"input"`
+	Output     float64                          `json:"output"`
+	CacheWrite *float64                         `json:"cache_write,omitempty"`
+	CacheRead  *float64                         `json:"cache_read,omitempty"`
+	Unit       OrchestratorChatModelPricingUnit `json:"unit"`
+}
+
+// OrchestratorChatModelPricingUnit defines model for OrchestratorChatModelPricing.Unit.
+type OrchestratorChatModelPricingUnit string
+
+// OrchestratorChatModelResponseProperties defines model for OrchestratorChatModelResponseProperties.
+type OrchestratorChatModelResponseProperties struct {
+	// Metadata Accepted for SDK compatibility; not forwarded to the model.
+	Metadata *OrchestratorChatMetadata `json:"metadata,omitempty"`
+
+	// PromptCacheKey Stable key grouping related requests to improve prompt-cache hit rates.
+	PromptCacheKey *string `json:"prompt_cache_key,omitempty"`
+
+	// SafetyIdentifier Accepted for SDK compatibility; not forwarded to the model.
+	SafetyIdentifier *string `json:"safety_identifier,omitempty"`
+
+	// ServiceTier Processing tier for the request. `flex` halves token rates on supported models; `auto` and `default` are equivalent.
+	ServiceTier *OrchestratorChatServiceTier `json:"service_tier,omitempty"`
+
+	// Temperature Controls randomness in token selection. Anthropic models accept 0 to 1; other models accept 0 to 2. Higher values produce more varied output. Some models reject requests that set both `temperature` and `top_p`.
+	Temperature *float64 `json:"temperature,omitempty"`
+
+	// TopP Cumulative probability cutoff for nucleus sampling, 0 to 1. Some models reject requests that set both `top_p` and `temperature`.
+	TopP *float64 `json:"top_p,omitempty"`
+
+	// User Accepted for SDK compatibility; not forwarded to the model.
+	// Deprecated: this property has been marked as deprecated upstream, but no `x-deprecated-reason` was set
+	User *string `json:"user,omitempty"`
+}
+
+// OrchestratorChatModerationInputType defines model for OrchestratorChatModerationInputType.
+type OrchestratorChatModerationInputType string
+
+// OrchestratorChatModerationResultBody defines model for OrchestratorChatModerationResultBody.
+type OrchestratorChatModerationResultBody struct {
+	Categories                map[string]bool                                  `json:"categories"`
+	CategoryAppliedInputTypes map[string][]OrchestratorChatModerationInputType `json:"category_applied_input_types"`
+	CategoryScores            map[string]float64                               `json:"category_scores"`
+	Flagged                   bool                                             `json:"flagged"`
+	Model                     string                                           `json:"model"`
+	Type                      OrchestratorChatModerationResultBodyType         `json:"type"`
+}
+
+// OrchestratorChatModerationResultBodyType defines model for OrchestratorChatModerationResultBody.Type.
+type OrchestratorChatModerationResultBodyType string
+
+// OrchestratorChatParallelToolCalls defines model for OrchestratorChatParallelToolCalls.
+type OrchestratorChatParallelToolCalls = bool
+
+// OrchestratorChatPromptCacheBreakpointParam defines model for OrchestratorChatPromptCacheBreakpointParam.
+type OrchestratorChatPromptCacheBreakpointParam struct {
+	Mode OrchestratorChatPromptCacheBreakpointParamMode `json:"mode"`
+}
+
+// OrchestratorChatPromptCacheBreakpointParamMode defines model for OrchestratorChatPromptCacheBreakpointParam.Mode.
+type OrchestratorChatPromptCacheBreakpointParamMode string
+
+// OrchestratorChatPromptCacheModeEnum defines model for OrchestratorChatPromptCacheModeEnum.
+type OrchestratorChatPromptCacheModeEnum string
+
+// OrchestratorChatPromptCacheOptionsParam defines model for OrchestratorChatPromptCacheOptionsParam.
+type OrchestratorChatPromptCacheOptionsParam struct {
+	Mode *OrchestratorChatPromptCacheModeEnum `json:"mode,omitempty"`
+	Ttl  *OrchestratorChatPromptCacheTTLEnum  `json:"ttl,omitempty"`
+}
+
+// OrchestratorChatPromptCacheTTLEnum defines model for OrchestratorChatPromptCacheTTLEnum.
+type OrchestratorChatPromptCacheTTLEnum string
+
+// OrchestratorChatReasoningEffort defines model for OrchestratorChatReasoningEffort.
+type OrchestratorChatReasoningEffort string
+
+// OrchestratorChatResponseFormatJsonObject defines model for OrchestratorChatResponseFormatJsonObject.
+type OrchestratorChatResponseFormatJsonObject struct {
+	Type OrchestratorChatResponseFormatJsonObjectType `json:"type"`
+}
+
+// OrchestratorChatResponseFormatJsonObjectType defines model for OrchestratorChatResponseFormatJsonObject.Type.
+type OrchestratorChatResponseFormatJsonObjectType string
+
+// OrchestratorChatResponseFormatJsonSchema defines model for OrchestratorChatResponseFormatJsonSchema.
+type OrchestratorChatResponseFormatJsonSchema struct {
+	JsonSchema struct {
+		Name   string                                          `json:"name"`
+		Schema *OrchestratorChatResponseFormatJsonSchemaSchema `json:"schema,omitempty"`
+		Strict *bool                                           `json:"strict,omitempty"`
+	} `json:"json_schema"`
+	Type OrchestratorChatResponseFormatJsonSchemaType `json:"type"`
+}
+
+// OrchestratorChatResponseFormatJsonSchemaType defines model for OrchestratorChatResponseFormatJsonSchema.Type.
+type OrchestratorChatResponseFormatJsonSchemaType string
+
+// OrchestratorChatResponseFormatJsonSchemaSchema defines model for OrchestratorChatResponseFormatJsonSchemaSchema.
+type OrchestratorChatResponseFormatJsonSchemaSchema map[string]interface{}
+
+// OrchestratorChatResponseFormatText defines model for OrchestratorChatResponseFormatText.
+type OrchestratorChatResponseFormatText struct {
+	Type OrchestratorChatResponseFormatTextType `json:"type"`
+}
+
+// OrchestratorChatResponseFormatTextType defines model for OrchestratorChatResponseFormatText.Type.
+type OrchestratorChatResponseFormatTextType string
+
+// OrchestratorChatServiceTier defines model for OrchestratorChatServiceTier.
+type OrchestratorChatServiceTier string
+
+// OrchestratorChatStopConfiguration defines model for OrchestratorChatStopConfiguration.
+type OrchestratorChatStopConfiguration struct {
+	union json.RawMessage
+}
+
+// OrchestratorChatStopConfiguration0 defines model for OrchestratorChatStopConfiguration.0.
+type OrchestratorChatStopConfiguration0 = string
+
+// OrchestratorChatStopConfiguration1 defines model for OrchestratorChatStopConfiguration.1.
+type OrchestratorChatStopConfiguration1 = []string
+
+// OrchestratorMessagesBase64DocumentSource defines model for OrchestratorMessagesBase64DocumentSource.
+type OrchestratorMessagesBase64DocumentSource struct {
+	Data      string                                            `json:"data"`
+	MediaType OrchestratorMessagesBase64DocumentSourceMediaType `json:"media_type"`
+	Type      OrchestratorMessagesBase64DocumentSourceType      `json:"type"`
+}
+
+// OrchestratorMessagesBase64DocumentSourceMediaType defines model for OrchestratorMessagesBase64DocumentSource.MediaType.
+type OrchestratorMessagesBase64DocumentSourceMediaType string
+
+// OrchestratorMessagesBase64DocumentSourceType defines model for OrchestratorMessagesBase64DocumentSource.Type.
+type OrchestratorMessagesBase64DocumentSourceType string
+
+// OrchestratorMessagesBase64ImageSource defines model for OrchestratorMessagesBase64ImageSource.
+type OrchestratorMessagesBase64ImageSource struct {
+	// Data Base64-encoded image bytes, kept as a string end to end.
+	Data      string                                         `json:"data"`
+	MediaType OrchestratorMessagesBase64ImageSourceMediaType `json:"media_type"`
+	Type      OrchestratorMessagesBase64ImageSourceType      `json:"type"`
+}
+
+// OrchestratorMessagesBase64ImageSourceMediaType defines model for OrchestratorMessagesBase64ImageSource.MediaType.
+type OrchestratorMessagesBase64ImageSourceMediaType string
+
+// OrchestratorMessagesBase64ImageSourceType defines model for OrchestratorMessagesBase64ImageSource.Type.
+type OrchestratorMessagesBase64ImageSourceType string
+
+// OrchestratorMessagesCacheControl Ephemeral cache breakpoint. Set `ttl` to `5m` or `1h`. Cache writes with a `1h` TTL are billed at 2x the base input rate.
+type OrchestratorMessagesCacheControl struct {
+	Ttl  *OrchestratorMessagesCacheControlTtl `json:"ttl,omitempty"`
+	Type OrchestratorMessagesCacheControlType `json:"type"`
+}
+
+// OrchestratorMessagesCacheControlTtl defines model for OrchestratorMessagesCacheControl.Ttl.
+type OrchestratorMessagesCacheControlTtl string
+
+// OrchestratorMessagesCacheControlType defines model for OrchestratorMessagesCacheControl.Type.
+type OrchestratorMessagesCacheControlType string
+
+// OrchestratorMessagesCacheCreation Cache-write input tokens, broken down by TTL.
+type OrchestratorMessagesCacheCreation struct {
+	Ephemeral1hInputTokens int `json:"ephemeral_1h_input_tokens"`
+	Ephemeral5mInputTokens int `json:"ephemeral_5m_input_tokens"`
+}
+
+// OrchestratorMessagesContentBlock defines model for OrchestratorMessagesContentBlock.
+type OrchestratorMessagesContentBlock struct {
+	union json.RawMessage
+}
+
+// OrchestratorMessagesCreateMessageRequest Request body for POST /orchestrator/v1/messages.
+type OrchestratorMessagesCreateMessageRequest struct {
+	// CacheControl Ephemeral cache breakpoint. Set `ttl` to `5m` or `1h`. Cache writes with a `1h` TTL are billed at 2x the base input rate.
+	CacheControl *OrchestratorMessagesCacheControl `json:"cache_control,omitempty"`
+
+	// Container Not supported. Requests that set it return a 400.
+	Container *json.RawMessage `json:"container,omitempty"`
+
+	// ContextManagement Requires the `anthropic-beta: context-management-2025-06-27` request header; without it, the request returns a 400. On `anthropic/` models, edits are applied and reported in the response's `context_management.applied_edits`. Other models accept the field without applying it.
+	ContextManagement *json.RawMessage `json:"context_management,omitempty"`
+
+	// FallbackCreditToken Rejected by validation together with fallbacks.
+	FallbackCreditToken *string `json:"fallback_credit_token,omitempty"`
+
+	// Fallbacks Not supported. Requests that set it return a 400.
+	Fallbacks *json.RawMessage `json:"fallbacks,omitempty"`
+
+	// InferenceGeo Not supported. Requests that set it return a 400.
+	InferenceGeo *string `json:"inference_geo,omitempty"`
+
+	// MaxTokens Maximum number of tokens to generate. Required by the Messages API.
+	MaxTokens int `json:"max_tokens"`
+
+	// McpServers Not supported. Requests that set it return a 400.
+	McpServers *json.RawMessage                     `json:"mcp_servers,omitempty"`
+	Messages   []OrchestratorMessagesInputMessage   `json:"messages"`
+	Metadata   *OrchestratorMessagesRequestMetadata `json:"metadata,omitempty"`
+
+	// Model A model id from the Orchestrator catalog, or `perplexity/auto` to select a model for each request. With Auto, omit `routing` to use the default policy or provide an inline routing object.
+	Model        string                            `json:"model"`
+	OutputConfig *OrchestratorMessagesOutputConfig `json:"output_config,omitempty"`
+
+	// Routing Inline routing for `model: "perplexity/auto"` only. Omit this field or set it to null to use the default policy. The serialized routing object must be at most 16384 bytes. Models must be available in the Orchestrator catalog. Routes incompatible with the request are excluded; if the default model is incompatible, the first compatible route model becomes the default. The request fails if no model is compatible.
+	Routing *OrchestratorMessagesCreateMessageRequest_Routing `json:"routing,omitempty"`
+
+	// ServiceTier Accepts `auto` or `standard_only`; other values return a 400. Neither value changes processing. `anthropic/` responses report `usage.service_tier` as `standard`.
+	ServiceTier *OrchestratorMessagesCreateMessageRequestServiceTier `json:"service_tier,omitempty"`
+
+	// Speed "standard" is inert; "fast" is rejected (no fast-mode routing).
+	Speed         *OrchestratorMessagesCreateMessageRequestSpeed `json:"speed,omitempty"`
+	StopSequences *[]string                                      `json:"stop_sequences,omitempty"`
+
+	// Stream When true, respond with server-sent events.
+	Stream *bool `json:"stream,omitempty"`
+
+	// System System prompt as plain text or an array of text blocks.
+	System      *OrchestratorMessagesCreateMessageRequest_System `json:"system,omitempty"`
+	Temperature *float32                                         `json:"temperature,omitempty"`
+	Thinking    *OrchestratorMessagesThinkingConfig              `json:"thinking,omitempty"`
+	ToolChoice  *OrchestratorMessagesToolChoice                  `json:"tool_choice,omitempty"`
+	Tools       *[]OrchestratorMessagesTool                      `json:"tools,omitempty"`
+
+	// TopK Restricts sampling to the K most likely tokens at each step. Must be at least 1.
+	TopK *int     `json:"top_k,omitempty"`
+	TopP *float32 `json:"top_p,omitempty"`
+}
+
+// OrchestratorMessagesCreateMessageRequestRouting1 defines model for OrchestratorMessagesCreateMessageRequest.Routing.1.
+type OrchestratorMessagesCreateMessageRequestRouting1 = map[string]interface{}
+
+// OrchestratorMessagesCreateMessageRequest_Routing Inline routing for `model: "perplexity/auto"` only. Omit this field or set it to null to use the default policy. The serialized routing object must be at most 16384 bytes. Models must be available in the Orchestrator catalog. Routes incompatible with the request are excluded; if the default model is incompatible, the first compatible route model becomes the default. The request fails if no model is compatible.
+type OrchestratorMessagesCreateMessageRequest_Routing struct {
+	union json.RawMessage
+}
+
+// OrchestratorMessagesCreateMessageRequestServiceTier Accepts `auto` or `standard_only`; other values return a 400. Neither value changes processing. `anthropic/` responses report `usage.service_tier` as `standard`.
+type OrchestratorMessagesCreateMessageRequestServiceTier string
+
+// OrchestratorMessagesCreateMessageRequestSpeed "standard" is inert; "fast" is rejected (no fast-mode routing).
+type OrchestratorMessagesCreateMessageRequestSpeed string
+
+// OrchestratorMessagesCreateMessageRequestSystem0 defines model for OrchestratorMessagesCreateMessageRequest.System.0.
+type OrchestratorMessagesCreateMessageRequestSystem0 = string
+
+// OrchestratorMessagesCreateMessageRequestSystem1 defines model for OrchestratorMessagesCreateMessageRequest.System.1.
+type OrchestratorMessagesCreateMessageRequestSystem1 = []OrchestratorMessagesTextBlock
+
+// OrchestratorMessagesCreateMessageRequest_System System prompt as plain text or an array of text blocks.
+type OrchestratorMessagesCreateMessageRequest_System struct {
+	union json.RawMessage
+}
+
+// OrchestratorMessagesDocumentBlock Document input. Sources can be base64 `application/pdf`, plain text, a URL, or a list of text content blocks. Base64 PDF works on `anthropic/` models and some others. Plain-text, URL, and content sources, `title`, `context`, and enabled citations require an `anthropic/` model; other models return a 400.
+type OrchestratorMessagesDocumentBlock struct {
+	// CacheControl Ephemeral cache breakpoint. Set `ttl` to `5m` or `1h`. Cache writes with a `1h` TTL are billed at 2x the base input rate.
+	CacheControl *OrchestratorMessagesCacheControl `json:"cache_control,omitempty"`
+
+	// Citations Set `enabled: true` to receive citations for this document in the response. The citation type follows the source: `char_location` for plain text, `page_location` for PDFs, and `content_block_location` for content block lists. Requires an `anthropic/` model; other models return a 400.
+	Citations *json.RawMessage                      `json:"citations,omitempty"`
+	Context   *string                               `json:"context,omitempty"`
+	Source    OrchestratorMessagesDocumentSource    `json:"source"`
+	Title     *string                               `json:"title,omitempty"`
+	Type      OrchestratorMessagesDocumentBlockType `json:"type"`
+}
+
+// OrchestratorMessagesDocumentBlockType defines model for OrchestratorMessagesDocumentBlock.Type.
+type OrchestratorMessagesDocumentBlockType string
+
+// OrchestratorMessagesDocumentSource defines model for OrchestratorMessagesDocumentSource.
+type OrchestratorMessagesDocumentSource struct {
+	union json.RawMessage
+}
+
+// OrchestratorMessagesErrorObject defines model for OrchestratorMessagesErrorObject.
+type OrchestratorMessagesErrorObject struct {
+	Message string                              `json:"message"`
+	Type    OrchestratorMessagesErrorObjectType `json:"type"`
+}
+
+// OrchestratorMessagesErrorObjectType defines model for OrchestratorMessagesErrorObject.Type.
+type OrchestratorMessagesErrorObjectType string
+
+// OrchestratorMessagesErrorResponse Error envelope, as a JSON body and as the SSE error event payload.
+type OrchestratorMessagesErrorResponse struct {
+	Error OrchestratorMessagesErrorObject       `json:"error"`
+	Type  OrchestratorMessagesErrorResponseType `json:"type"`
+}
+
+// OrchestratorMessagesErrorResponseType defines model for OrchestratorMessagesErrorResponse.Type.
+type OrchestratorMessagesErrorResponseType string
+
+// OrchestratorMessagesImageBlock defines model for OrchestratorMessagesImageBlock.
+type OrchestratorMessagesImageBlock struct {
+	// CacheControl Ephemeral cache breakpoint. Set `ttl` to `5m` or `1h`. Cache writes with a `1h` TTL are billed at 2x the base input rate.
+	CacheControl *OrchestratorMessagesCacheControl  `json:"cache_control,omitempty"`
+	Source       OrchestratorMessagesImageSource    `json:"source"`
+	Type         OrchestratorMessagesImageBlockType `json:"type"`
+}
+
+// OrchestratorMessagesImageBlockType defines model for OrchestratorMessagesImageBlock.Type.
+type OrchestratorMessagesImageBlockType string
+
+// OrchestratorMessagesImageSource defines model for OrchestratorMessagesImageSource.
+type OrchestratorMessagesImageSource struct {
+	union json.RawMessage
+}
+
+// OrchestratorMessagesInputContentBlock defines model for OrchestratorMessagesInputContentBlock.
+type OrchestratorMessagesInputContentBlock struct {
+	union json.RawMessage
+}
+
+// OrchestratorMessagesInputMessage defines model for OrchestratorMessagesInputMessage.
+type OrchestratorMessagesInputMessage struct {
+	// Content Message content as plain text or an array of content blocks.
+	Content OrchestratorMessagesInputMessage_Content `json:"content"`
+	Role    OrchestratorMessagesInputMessageRole     `json:"role"`
+}
+
+// OrchestratorMessagesInputMessageContent0 defines model for OrchestratorMessagesInputMessage.Content.0.
+type OrchestratorMessagesInputMessageContent0 = string
+
+// OrchestratorMessagesInputMessageContent1 defines model for OrchestratorMessagesInputMessage.Content.1.
+type OrchestratorMessagesInputMessageContent1 = []OrchestratorMessagesInputContentBlock
+
+// OrchestratorMessagesInputMessage_Content Message content as plain text or an array of content blocks.
+type OrchestratorMessagesInputMessage_Content struct {
+	union json.RawMessage
+}
+
+// OrchestratorMessagesInputMessageRole defines model for OrchestratorMessagesInputMessage.Role.
+type OrchestratorMessagesInputMessageRole string
+
+// OrchestratorMessagesMessage Non-streaming response body and the message_start payload.
+type OrchestratorMessagesMessage struct {
+	Content []OrchestratorMessagesContentBlock `json:"content"`
+	Id      string                             `json:"id"`
+
+	// Model The model that served the request. With `perplexity/auto`, this is the selected model, not `perplexity/auto`. Billing uses the served model's rates.
+	Model        string                                 `json:"model"`
+	Role         OrchestratorMessagesMessageRole        `json:"role"`
+	StopReason   *OrchestratorMessagesMessageStopReason `json:"stop_reason"`
+	StopSequence *string                                `json:"stop_sequence"`
+	Type         OrchestratorMessagesMessageType        `json:"type"`
+	Usage        OrchestratorMessagesUsage              `json:"usage"`
+}
+
+// OrchestratorMessagesMessageRole defines model for OrchestratorMessagesMessage.Role.
+type OrchestratorMessagesMessageRole string
+
+// OrchestratorMessagesMessageStopReason defines model for OrchestratorMessagesMessage.StopReason.
+type OrchestratorMessagesMessageStopReason string
+
+// OrchestratorMessagesMessageType defines model for OrchestratorMessagesMessage.Type.
+type OrchestratorMessagesMessageType string
+
+// OrchestratorMessagesOutputConfig defines model for OrchestratorMessagesOutputConfig.
+type OrchestratorMessagesOutputConfig struct {
+	Effort *OrchestratorMessagesOutputConfigEffort `json:"effort,omitempty"`
+	Format *OrchestratorMessagesOutputConfigFormat `json:"format,omitempty"`
+
+	// TaskBudget Accepted and ignored.
+	TaskBudget *json.RawMessage `json:"task_budget,omitempty"`
+}
+
+// OrchestratorMessagesOutputConfigEffort defines model for OrchestratorMessagesOutputConfig.Effort.
+type OrchestratorMessagesOutputConfigEffort string
+
+// OrchestratorMessagesOutputConfigFormat defines model for OrchestratorMessagesOutputConfigFormat.
+type OrchestratorMessagesOutputConfigFormat struct {
+	// Schema JSON Schema for the response, kept as raw JSON and forwarded verbatim.
+	Schema json.RawMessage                            `json:"schema"`
+	Type   OrchestratorMessagesOutputConfigFormatType `json:"type"`
+}
+
+// OrchestratorMessagesOutputConfigFormatType defines model for OrchestratorMessagesOutputConfigFormat.Type.
+type OrchestratorMessagesOutputConfigFormatType string
+
+// OrchestratorMessagesPlainTextDocumentSource defines model for OrchestratorMessagesPlainTextDocumentSource.
+type OrchestratorMessagesPlainTextDocumentSource struct {
+	Data      string                                               `json:"data"`
+	MediaType OrchestratorMessagesPlainTextDocumentSourceMediaType `json:"media_type"`
+	Type      OrchestratorMessagesPlainTextDocumentSourceType      `json:"type"`
+}
+
+// OrchestratorMessagesPlainTextDocumentSourceMediaType defines model for OrchestratorMessagesPlainTextDocumentSource.MediaType.
+type OrchestratorMessagesPlainTextDocumentSourceMediaType string
+
+// OrchestratorMessagesPlainTextDocumentSourceType defines model for OrchestratorMessagesPlainTextDocumentSource.Type.
+type OrchestratorMessagesPlainTextDocumentSourceType string
+
+// OrchestratorMessagesRedactedThinkingBlock Redacted thinking replay. Accepted by the spec, rejected by validation.
+type OrchestratorMessagesRedactedThinkingBlock struct {
+	Data string                                        `json:"data"`
+	Type OrchestratorMessagesRedactedThinkingBlockType `json:"type"`
+}
+
+// OrchestratorMessagesRedactedThinkingBlockType defines model for OrchestratorMessagesRedactedThinkingBlock.Type.
+type OrchestratorMessagesRedactedThinkingBlockType string
+
+// OrchestratorMessagesRequestMetadata defines model for OrchestratorMessagesRequestMetadata.
+type OrchestratorMessagesRequestMetadata struct {
+	UserId *string `json:"user_id,omitempty"`
+}
+
+// OrchestratorMessagesSearchResultBlock Search result with source attribution. Supported on `anthropic/` models only; other models return a 400.
+type OrchestratorMessagesSearchResultBlock struct {
+	// CacheControl Ephemeral cache breakpoint. Set `ttl` to `5m` or `1h`. Cache writes with a `1h` TTL are billed at 2x the base input rate.
+	CacheControl *OrchestratorMessagesCacheControl `json:"cache_control,omitempty"`
+
+	// Citations Set `enabled: true` to receive `search_result_location` citations in the response.
+	Citations *json.RawMessage                            `json:"citations,omitempty"`
+	Content   []OrchestratorMessagesSearchResultTextBlock `json:"content"`
+
+	// Source Source URL or identifier for the result.
+	Source string                                    `json:"source"`
+	Title  string                                    `json:"title"`
+	Type   OrchestratorMessagesSearchResultBlockType `json:"type"`
+}
+
+// OrchestratorMessagesSearchResultBlockType defines model for OrchestratorMessagesSearchResultBlock.Type.
+type OrchestratorMessagesSearchResultBlockType string
+
+// OrchestratorMessagesSearchResultTextBlock defines model for OrchestratorMessagesSearchResultTextBlock.
+type OrchestratorMessagesSearchResultTextBlock struct {
+	Text string                                        `json:"text"`
+	Type OrchestratorMessagesSearchResultTextBlockType `json:"type"`
+}
+
+// OrchestratorMessagesSearchResultTextBlockType defines model for OrchestratorMessagesSearchResultTextBlock.Type.
+type OrchestratorMessagesSearchResultTextBlockType string
+
+// OrchestratorMessagesTextBlock defines model for OrchestratorMessagesTextBlock.
+type OrchestratorMessagesTextBlock struct {
+	// CacheControl Ephemeral cache breakpoint. Set `ttl` to `5m` or `1h`. Cache writes with a `1h` TTL are billed at 2x the base input rate.
+	CacheControl *OrchestratorMessagesCacheControl `json:"cache_control,omitempty"`
+	Text         string                            `json:"text"`
+	Type         OrchestratorMessagesTextBlockType `json:"type"`
+}
+
+// OrchestratorMessagesTextBlockType defines model for OrchestratorMessagesTextBlock.Type.
+type OrchestratorMessagesTextBlockType string
+
+// OrchestratorMessagesThinkingBlock Extended-thinking output; in requests only as replayed history. Empty thinking text is valid under display "omitted".
+type OrchestratorMessagesThinkingBlock struct {
+	Signature string                                `json:"signature"`
+	Thinking  string                                `json:"thinking"`
+	Type      OrchestratorMessagesThinkingBlockType `json:"type"`
+}
+
+// OrchestratorMessagesThinkingBlockType defines model for OrchestratorMessagesThinkingBlock.Type.
+type OrchestratorMessagesThinkingBlockType string
+
+// OrchestratorMessagesThinkingConfig defines model for OrchestratorMessagesThinkingConfig.
+type OrchestratorMessagesThinkingConfig struct {
+	union json.RawMessage
+}
+
+// OrchestratorMessagesThinkingConfigAdaptive Model-controlled thinking. Set `output_config.effort` to guide how much the model thinks. Some models reject this type.
+type OrchestratorMessagesThinkingConfigAdaptive struct {
+	Display *OrchestratorMessagesThinkingDisplay           `json:"display,omitempty"`
+	Type    OrchestratorMessagesThinkingConfigAdaptiveType `json:"type"`
+}
+
+// OrchestratorMessagesThinkingConfigAdaptiveType defines model for OrchestratorMessagesThinkingConfigAdaptive.Type.
+type OrchestratorMessagesThinkingConfigAdaptiveType string
+
+// OrchestratorMessagesThinkingConfigDisabled defines model for OrchestratorMessagesThinkingConfigDisabled.
+type OrchestratorMessagesThinkingConfigDisabled struct {
+	Type OrchestratorMessagesThinkingConfigDisabledType `json:"type"`
+}
+
+// OrchestratorMessagesThinkingConfigDisabledType defines model for OrchestratorMessagesThinkingConfigDisabled.Type.
+type OrchestratorMessagesThinkingConfigDisabledType string
+
+// OrchestratorMessagesThinkingConfigEnabled Budget-based thinking. `anthropic/` models receive `budget_tokens` as is; other models get a reasoning-effort level derived from it. Some models reject this type and require `adaptive`.
+type OrchestratorMessagesThinkingConfigEnabled struct {
+	BudgetTokens int                                           `json:"budget_tokens"`
+	Display      *OrchestratorMessagesThinkingDisplay          `json:"display,omitempty"`
+	Type         OrchestratorMessagesThinkingConfigEnabledType `json:"type"`
+}
+
+// OrchestratorMessagesThinkingConfigEnabledType defines model for OrchestratorMessagesThinkingConfigEnabled.Type.
+type OrchestratorMessagesThinkingConfigEnabledType string
+
+// OrchestratorMessagesThinkingDisplay defines model for OrchestratorMessagesThinkingDisplay.
+type OrchestratorMessagesThinkingDisplay string
+
+// OrchestratorMessagesTool defines model for OrchestratorMessagesTool.
+type OrchestratorMessagesTool struct {
+	// AllowedCallers Accepted and ignored. Code-execution tools are not supported.
+	AllowedCallers *json.RawMessage `json:"allowed_callers,omitempty"`
+
+	// CacheControl Ephemeral cache breakpoint. Set `ttl` to `5m` or `1h`. Cache writes with a `1h` TTL are billed at 2x the base input rate.
+	CacheControl *OrchestratorMessagesCacheControl `json:"cache_control,omitempty"`
+
+	// DeferLoading Forwarded to the provider with deferred tool loading enabled.
+	DeferLoading *bool   `json:"defer_loading,omitempty"`
+	Description  *string `json:"description,omitempty"`
+
+	// EagerInputStreaming Accepted and ignored. Fine-grained tool streaming is not enabled.
+	EagerInputStreaming *bool `json:"eager_input_streaming,omitempty"`
+
+	// InputExamples Accepted and ignored.
+	InputExamples *json.RawMessage `json:"input_examples,omitempty"`
+
+	// InputSchema JSON Schema for the tool input, kept as raw JSON and forwarded verbatim.
+	InputSchema json.RawMessage `json:"input_schema"`
+	Name        string          `json:"name"`
+
+	// Strict Forwarded to the provider. Where the provider supports it, tool input is constrained to the schema.
+	Strict *bool `json:"strict,omitempty"`
+
+	// Type Optional explicit tool kind; `custom` is the default. Server tool types are rejected by validation.
+	Type *OrchestratorMessagesToolType `json:"type,omitempty"`
+}
+
+// OrchestratorMessagesToolType Optional explicit tool kind; `custom` is the default. Server tool types are rejected by validation.
+type OrchestratorMessagesToolType string
+
+// OrchestratorMessagesToolChoice defines model for OrchestratorMessagesToolChoice.
+type OrchestratorMessagesToolChoice struct {
+	union json.RawMessage
+}
+
+// OrchestratorMessagesToolChoiceAny defines model for OrchestratorMessagesToolChoiceAny.
+type OrchestratorMessagesToolChoiceAny struct {
+	DisableParallelToolUse *bool                                 `json:"disable_parallel_tool_use,omitempty"`
+	Type                   OrchestratorMessagesToolChoiceAnyType `json:"type"`
+}
+
+// OrchestratorMessagesToolChoiceAnyType defines model for OrchestratorMessagesToolChoiceAny.Type.
+type OrchestratorMessagesToolChoiceAnyType string
+
+// OrchestratorMessagesToolChoiceAuto defines model for OrchestratorMessagesToolChoiceAuto.
+type OrchestratorMessagesToolChoiceAuto struct {
+	DisableParallelToolUse *bool                                  `json:"disable_parallel_tool_use,omitempty"`
+	Type                   OrchestratorMessagesToolChoiceAutoType `json:"type"`
+}
+
+// OrchestratorMessagesToolChoiceAutoType defines model for OrchestratorMessagesToolChoiceAuto.Type.
+type OrchestratorMessagesToolChoiceAutoType string
+
+// OrchestratorMessagesToolChoiceNone defines model for OrchestratorMessagesToolChoiceNone.
+type OrchestratorMessagesToolChoiceNone struct {
+	Type OrchestratorMessagesToolChoiceNoneType `json:"type"`
+}
+
+// OrchestratorMessagesToolChoiceNoneType defines model for OrchestratorMessagesToolChoiceNone.Type.
+type OrchestratorMessagesToolChoiceNoneType string
+
+// OrchestratorMessagesToolChoiceTool defines model for OrchestratorMessagesToolChoiceTool.
+type OrchestratorMessagesToolChoiceTool struct {
+	DisableParallelToolUse *bool                                  `json:"disable_parallel_tool_use,omitempty"`
+	Name                   string                                 `json:"name"`
+	Type                   OrchestratorMessagesToolChoiceToolType `json:"type"`
+}
+
+// OrchestratorMessagesToolChoiceToolType defines model for OrchestratorMessagesToolChoiceTool.Type.
+type OrchestratorMessagesToolChoiceToolType string
+
+// OrchestratorMessagesToolResultBlock defines model for OrchestratorMessagesToolResultBlock.
+type OrchestratorMessagesToolResultBlock struct {
+	// CacheControl Ephemeral cache breakpoint. Set `ttl` to `5m` or `1h`. Cache writes with a `1h` TTL are billed at 2x the base input rate.
+	CacheControl *OrchestratorMessagesCacheControl `json:"cache_control,omitempty"`
+
+	// Content Tool output as plain text or an array of content blocks.
+	Content   *OrchestratorMessagesToolResultBlock_Content `json:"content,omitempty"`
+	IsError   *bool                                        `json:"is_error,omitempty"`
+	ToolUseId string                                       `json:"tool_use_id"`
+	Type      OrchestratorMessagesToolResultBlockType      `json:"type"`
+}
+
+// OrchestratorMessagesToolResultBlockContent0 defines model for OrchestratorMessagesToolResultBlock.Content.0.
+type OrchestratorMessagesToolResultBlockContent0 = string
+
+// OrchestratorMessagesToolResultBlockContent1 defines model for OrchestratorMessagesToolResultBlock.Content.1.
+type OrchestratorMessagesToolResultBlockContent1 = []OrchestratorMessagesToolResultContentBlock
+
+// OrchestratorMessagesToolResultBlock_Content Tool output as plain text or an array of content blocks.
+type OrchestratorMessagesToolResultBlock_Content struct {
+	union json.RawMessage
+}
+
+// OrchestratorMessagesToolResultBlockType defines model for OrchestratorMessagesToolResultBlock.Type.
+type OrchestratorMessagesToolResultBlockType string
+
+// OrchestratorMessagesToolResultContentBlock defines model for OrchestratorMessagesToolResultContentBlock.
+type OrchestratorMessagesToolResultContentBlock struct {
+	union json.RawMessage
+}
+
+// OrchestratorMessagesToolUseBlock Tool invocation, in assistant history and in responses.
+type OrchestratorMessagesToolUseBlock struct {
+	// CacheControl Ephemeral cache breakpoint. Set `ttl` to `5m` or `1h`. Cache writes with a `1h` TTL are billed at 2x the base input rate.
+	CacheControl *OrchestratorMessagesCacheControl `json:"cache_control,omitempty"`
+	Id           string                            `json:"id"`
+
+	// Input Kept as raw JSON so caller bytes (e.g. int64 ids) pass through verbatim.
+	Input json.RawMessage                      `json:"input"`
+	Name  string                               `json:"name"`
+	Type  OrchestratorMessagesToolUseBlockType `json:"type"`
+}
+
+// OrchestratorMessagesToolUseBlockType defines model for OrchestratorMessagesToolUseBlock.Type.
+type OrchestratorMessagesToolUseBlockType string
+
+// OrchestratorMessagesURLDocumentSource defines model for OrchestratorMessagesURLDocumentSource.
+type OrchestratorMessagesURLDocumentSource struct {
+	Type OrchestratorMessagesURLDocumentSourceType `json:"type"`
+	Url  string                                    `json:"url"`
+}
+
+// OrchestratorMessagesURLDocumentSourceType defines model for OrchestratorMessagesURLDocumentSource.Type.
+type OrchestratorMessagesURLDocumentSourceType string
+
+// OrchestratorMessagesURLImageSource defines model for OrchestratorMessagesURLImageSource.
+type OrchestratorMessagesURLImageSource struct {
+	Type OrchestratorMessagesURLImageSourceType `json:"type"`
+	Url  string                                 `json:"url"`
+}
+
+// OrchestratorMessagesURLImageSourceType defines model for OrchestratorMessagesURLImageSource.Type.
+type OrchestratorMessagesURLImageSourceType string
+
+// OrchestratorMessagesUsage defines model for OrchestratorMessagesUsage.
+type OrchestratorMessagesUsage struct {
+	// CacheCreation Cache-write input tokens, broken down by TTL.
+	CacheCreation            *OrchestratorMessagesCacheCreation `json:"cache_creation,omitempty"`
+	CacheCreationInputTokens *int                               `json:"cache_creation_input_tokens"`
+	CacheReadInputTokens     *int                               `json:"cache_read_input_tokens"`
+	InputTokens              int                                `json:"input_tokens"`
+	OutputTokens             int                                `json:"output_tokens"`
+	ServiceTier              *string                            `json:"service_tier,omitempty"`
+}
+
+// OrchestratorResponsesAdditionalToolsItemParam A Codex-compatible input item that supplies additional tools for the request.
+type OrchestratorResponsesAdditionalToolsItemParam struct {
+	// Role The role codex attributes the tool prefix to (always `developer`).
+	Role *string `json:"role,omitempty"`
+
+	// Tools The tools to merge after the top-level tools param.
+	Tools []OrchestratorResponsesResponsesToolParam `json:"tools"`
+
+	// Type The item type. Always `additional_tools`.
+	Type OrchestratorResponsesAdditionalToolsItemParamType `json:"type"`
+}
+
+// OrchestratorResponsesAdditionalToolsItemParamType The item type. Always `additional_tools`.
+type OrchestratorResponsesAdditionalToolsItemParamType string
+
+// OrchestratorResponsesAllowedToolChoice defines model for OrchestratorResponsesAllowedToolChoice.
+type OrchestratorResponsesAllowedToolChoice struct {
+	Mode  OrchestratorResponsesToolChoiceValueEnum            `json:"mode"`
+	Tools []OrchestratorResponsesAllowedToolChoice_Tools_Item `json:"tools"`
+	Type  OrchestratorResponsesAllowedToolChoiceType          `json:"type"`
+}
+
+// OrchestratorResponsesAllowedToolChoice_Tools_Item defines model for OrchestratorResponsesAllowedToolChoice.tools.Item.
+type OrchestratorResponsesAllowedToolChoice_Tools_Item struct {
+	union json.RawMessage
+}
+
+// OrchestratorResponsesAllowedToolChoiceType defines model for OrchestratorResponsesAllowedToolChoice.Type.
+type OrchestratorResponsesAllowedToolChoiceType string
+
+// OrchestratorResponsesAnnotation An annotation that applies to a span of output text.
+type OrchestratorResponsesAnnotation struct {
+	union json.RawMessage
+}
+
+// OrchestratorResponsesAssistantMessageItemParam defines model for OrchestratorResponsesAssistantMessageItemParam.
+type OrchestratorResponsesAssistantMessageItemParam struct {
+	// Content The message content, as an array of content parts.
+	Content OrchestratorResponsesAssistantMessageItemParam_Content `json:"content"`
+
+	// Id The unique ID of this message item.
+	Id *string `json:"id,omitempty"`
+
+	// Phase Labels an `assistant` message as intermediate commentary (`commentary`) or the final answer (`final_answer`). For models like `gpt-5.3-codex` and beyond, when sending follow-up requests, preserve and resend phase on all assistant messages. Omitting it can degrade performance. Not used for user messages.
+	Phase *OrchestratorResponsesAssistantMessageItemParamPhase `json:"phase,omitempty"`
+
+	// Role The role of the message author. Always `assistant`.
+	Role OrchestratorResponsesAssistantMessageItemParamRole `json:"role"`
+
+	// Status The status of the message item.
+	Status *string `json:"status,omitempty"`
+
+	// Type The item type. Always `message`.
+	Type OrchestratorResponsesAssistantMessageItemParamType `json:"type"`
+}
+
+// OrchestratorResponsesAssistantMessageItemParamContent0 defines model for OrchestratorResponsesAssistantMessageItemParam.Content.0.
+type OrchestratorResponsesAssistantMessageItemParamContent0 = []OrchestratorResponsesAssistantMessageItemParam_Content_0_Item
+
+// OrchestratorResponsesAssistantMessageItemParam_Content_0_Item A piece of assistant message content, such as text or a refusal.
+type OrchestratorResponsesAssistantMessageItemParam_Content_0_Item struct {
+	union json.RawMessage
+}
+
+// OrchestratorResponsesAssistantMessageItemParamContent1 The message content, as a single string.
+type OrchestratorResponsesAssistantMessageItemParamContent1 = string
+
+// OrchestratorResponsesAssistantMessageItemParam_Content The message content, as an array of content parts.
+type OrchestratorResponsesAssistantMessageItemParam_Content struct {
+	union json.RawMessage
+}
+
+// OrchestratorResponsesAssistantMessageItemParamPhase Labels an `assistant` message as intermediate commentary (`commentary`) or the final answer (`final_answer`). For models like `gpt-5.3-codex` and beyond, when sending follow-up requests, preserve and resend phase on all assistant messages. Omitting it can degrade performance. Not used for user messages.
+type OrchestratorResponsesAssistantMessageItemParamPhase string
+
+// OrchestratorResponsesAssistantMessageItemParamRole The role of the message author. Always `assistant`.
+type OrchestratorResponsesAssistantMessageItemParamRole string
+
+// OrchestratorResponsesAssistantMessageItemParamType The item type. Always `message`.
+type OrchestratorResponsesAssistantMessageItemParamType string
+
+// OrchestratorResponsesCreateResponseBody defines model for OrchestratorResponsesCreateResponseBody.
+type OrchestratorResponsesCreateResponseBody struct {
+	Include *[]OrchestratorResponsesIncludeEnum `json:"include,omitempty"`
+
+	// Input Context to provide to the model for the scope of this request. May either be a string or an array of input items. If a string is provided, it is interpreted as a user message.
+	Input OrchestratorResponsesCreateResponseBody_Input `json:"input"`
+
+	// Instructions Additional instructions to guide the model for this request.
+	Instructions *string `json:"instructions,omitempty"`
+
+	// MaxOutputTokens The maximum number of tokens the model may generate for this response.
+	MaxOutputTokens *int `json:"max_output_tokens,omitempty"`
+
+	// Metadata Set of 16 key-value pairs that can be attached to an object. This can be         useful for storing additional information about the object in a structured         format, and querying for objects via API or the dashboard.
+	//         Keys are strings with a maximum length of 64 characters. Values are strings         with a maximum length of 512 characters.
+	Metadata *OrchestratorResponsesMetadataParam `json:"metadata,omitempty"`
+
+	// Model A model id from the Orchestrator catalog, or `perplexity/auto` to select a model for each request. With Auto, omit `routing` to use the default policy or provide an inline routing object.
+	Model string `json:"model"`
+
+	// ParallelToolCalls Whether the model may call multiple tools in parallel.
+	ParallelToolCalls *bool `json:"parallel_tool_calls,omitempty"`
+
+	// PromptCacheKey A key to use when reading from or writing to the prompt cache.
+	PromptCacheKey *string `json:"prompt_cache_key,omitempty"`
+
+	// Reasoning **gpt-5 and o-series models only** Configuration options for [reasoning models](https://platform.openai.com/docs/guides/reasoning).
+	Reasoning *OrchestratorResponsesReasoningParam `json:"reasoning,omitempty"`
+
+	// Routing Inline routing for `model: "perplexity/auto"` only. Omit this field or set it to null to use the default policy. The serialized routing object must be at most 16384 bytes. Models must be available in the Orchestrator catalog. Routes incompatible with the request are excluded; if the default model is incompatible, the first compatible route model becomes the default. The request fails if no model is compatible.
+	Routing *OrchestratorResponsesCreateResponseBody_Routing `json:"routing,omitempty"`
+
+	// SafetyIdentifier A stable identifier used for safety monitoring and abuse detection.
+	SafetyIdentifier *string                               `json:"safety_identifier,omitempty"`
+	ServiceTier      *OrchestratorResponsesServiceTierEnum `json:"service_tier,omitempty"`
+
+	// Stream Whether to stream response events as server-sent events.
+	Stream *bool `json:"stream,omitempty"`
+
+	// Temperature Sampling temperature to use, between 0 and 2. Higher values make the output more random.
+	Temperature *float64                        `json:"temperature,omitempty"`
+	Text        *OrchestratorResponsesTextParam `json:"text,omitempty"`
+
+	// ToolChoice Controls which tool the model should use, if any.
+	ToolChoice *OrchestratorResponsesToolChoiceParam `json:"tool_choice,omitempty"`
+
+	// Tools A list of tools that the model may call while generating the response.
+	Tools *[]OrchestratorResponsesResponsesToolParam `json:"tools,omitempty"`
+
+	// TopP Nucleus sampling parameter, between 0 and 1. The model considers only the tokens with the top cumulative probability.
+	TopP       *float64                             `json:"top_p,omitempty"`
+	Truncation *OrchestratorResponsesTruncationEnum `json:"truncation,omitempty"`
+}
+
+// OrchestratorResponsesCreateResponseBodyInput0 defines model for OrchestratorResponsesCreateResponseBody.Input.0.
+type OrchestratorResponsesCreateResponseBodyInput0 = string
+
+// OrchestratorResponsesCreateResponseBodyInput1 defines model for OrchestratorResponsesCreateResponseBody.Input.1.
+type OrchestratorResponsesCreateResponseBodyInput1 = []OrchestratorResponsesItemParam
+
+// OrchestratorResponsesCreateResponseBody_Input Context to provide to the model for the scope of this request. May either be a string or an array of input items. If a string is provided, it is interpreted as a user message.
+type OrchestratorResponsesCreateResponseBody_Input struct {
+	union json.RawMessage
+}
+
+// OrchestratorResponsesCreateResponseBodyRouting1 defines model for OrchestratorResponsesCreateResponseBody.Routing.1.
+type OrchestratorResponsesCreateResponseBodyRouting1 = map[string]interface{}
+
+// OrchestratorResponsesCreateResponseBody_Routing Inline routing for `model: "perplexity/auto"` only. Omit this field or set it to null to use the default policy. The serialized routing object must be at most 16384 bytes. Models must be available in the Orchestrator catalog. Routes incompatible with the request are excluded; if the default model is incompatible, the first compatible route model becomes the default. The request fails if no model is compatible.
+type OrchestratorResponsesCreateResponseBody_Routing struct {
+	union json.RawMessage
+}
+
+// OrchestratorResponsesCustomToolCall A custom (freeform) tool call that was generated by the model.
+type OrchestratorResponsesCustomToolCall struct {
+	// CallId The unique ID of the custom tool call that was generated.
+	CallId string `json:"call_id"`
+
+	// Id The unique ID of the custom tool call item.
+	Id string `json:"id"`
+
+	// Input The raw freeform input string that was generated, never forced through JSON.
+	Input string `json:"input"`
+
+	// Name The name of the custom tool that was called.
+	Name string `json:"name"`
+
+	// Namespace The namespace associated with the custom tool, if any.
+	Namespace *string                                 `json:"namespace,omitempty"`
+	Status    OrchestratorResponsesFunctionCallStatus `json:"status"`
+
+	// Type The type of the item. Always `custom_tool_call`.
+	Type OrchestratorResponsesCustomToolCallType `json:"type"`
+}
+
+// OrchestratorResponsesCustomToolCallType The type of the item. Always `custom_tool_call`.
+type OrchestratorResponsesCustomToolCallType string
+
+// OrchestratorResponsesCustomToolCallItemParam A custom (freeform) tool call replayed from a prior response.
+type OrchestratorResponsesCustomToolCallItemParam struct {
+	// CallId The unique ID of the custom tool call generated by the model.
+	CallId string `json:"call_id"`
+
+	// Id The unique ID of this custom tool call.
+	Id *string `json:"id,omitempty"`
+
+	// Input The raw freeform tool input string, forwarded verbatim.
+	Input string `json:"input"`
+
+	// Name The name of the custom tool to call.
+	Name string `json:"name"`
+
+	// Namespace The namespace associated with the custom tool, if any.
+	Namespace *string                                  `json:"namespace,omitempty"`
+	Status    *OrchestratorResponsesFunctionCallStatus `json:"status,omitempty"`
+
+	// Type The item type. Always `custom_tool_call`.
+	Type OrchestratorResponsesCustomToolCallItemParamType `json:"type"`
+}
+
+// OrchestratorResponsesCustomToolCallItemParamType The item type. Always `custom_tool_call`.
+type OrchestratorResponsesCustomToolCallItemParamType string
+
+// OrchestratorResponsesCustomToolCallOutputItemParam The output of a custom tool call.
+type OrchestratorResponsesCustomToolCallOutputItemParam struct {
+	// CallId The unique ID of the custom tool call generated by the model.
+	CallId string `json:"call_id"`
+
+	// Id The unique ID of the custom tool call output.
+	Id *string `json:"id,omitempty"`
+
+	// Output Text or image output of the custom tool call.
+	Output OrchestratorResponsesCustomToolCallOutputItemParam_Output `json:"output"`
+	Status *OrchestratorResponsesFunctionCallStatus                  `json:"status,omitempty"`
+
+	// Type The item type. Always `custom_tool_call_output`.
+	Type OrchestratorResponsesCustomToolCallOutputItemParamType `json:"type"`
+}
+
+// OrchestratorResponsesCustomToolCallOutputItemParamOutput0 A string output of the custom tool call.
+type OrchestratorResponsesCustomToolCallOutputItemParamOutput0 = string
+
+// OrchestratorResponsesCustomToolCallOutputItemParamOutput1 An array of content outputs (text, image) for the custom tool call.
+type OrchestratorResponsesCustomToolCallOutputItemParamOutput1 = []OrchestratorResponsesCustomToolCallOutputItemParam_Output_1_Item
+
+// OrchestratorResponsesCustomToolCallOutputItemParam_Output_1_Item A piece of message content, such as text or an image.
+type OrchestratorResponsesCustomToolCallOutputItemParam_Output_1_Item struct {
+	union json.RawMessage
+}
+
+// OrchestratorResponsesCustomToolCallOutputItemParam_Output Text or image output of the custom tool call.
+type OrchestratorResponsesCustomToolCallOutputItemParam_Output struct {
+	union json.RawMessage
+}
+
+// OrchestratorResponsesCustomToolCallOutputItemParamType The item type. Always `custom_tool_call_output`.
+type OrchestratorResponsesCustomToolCallOutputItemParamType string
+
+// OrchestratorResponsesCustomToolParam A freeform custom tool whose input is a raw string, optionally constrained by a grammar.
+type OrchestratorResponsesCustomToolParam struct {
+	Description *string `json:"description,omitempty"`
+
+	// Format The freeform input format constraint ({"type":"text"} or {"type":"grammar","syntax":...,"definition":...}), kept as raw JSON and forwarded verbatim.
+	Format *map[string]interface{}                  `json:"format,omitempty"`
+	Name   string                                   `json:"name"`
+	Type   OrchestratorResponsesCustomToolParamType `json:"type"`
+}
+
+// OrchestratorResponsesCustomToolParamType defines model for OrchestratorResponsesCustomToolParam.Type.
+type OrchestratorResponsesCustomToolParamType string
+
+// OrchestratorResponsesDeveloperMessageItemParam defines model for OrchestratorResponsesDeveloperMessageItemParam.
+type OrchestratorResponsesDeveloperMessageItemParam struct {
+	// Content The message content, as an array of content parts.
+	Content OrchestratorResponsesDeveloperMessageItemParam_Content `json:"content"`
+
+	// Id The unique ID of this message item.
+	Id *string `json:"id,omitempty"`
+
+	// Role The message role. Always `developer`.
+	Role OrchestratorResponsesDeveloperMessageItemParamRole `json:"role"`
+
+	// Status The status of the message item.
+	Status *string `json:"status,omitempty"`
+
+	// Type The item type. Always `message`.
+	Type OrchestratorResponsesDeveloperMessageItemParamType `json:"type"`
+}
+
+// OrchestratorResponsesDeveloperMessageItemParamContent0 defines model for OrchestratorResponsesDeveloperMessageItemParam.Content.0.
+type OrchestratorResponsesDeveloperMessageItemParamContent0 = []OrchestratorResponsesDeveloperMessageItemParam_Content_0_Item
+
+// OrchestratorResponsesDeveloperMessageItemParam_Content_0_Item defines model for OrchestratorResponsesDeveloperMessageItemParam.Content.0.Item.
+type OrchestratorResponsesDeveloperMessageItemParam_Content_0_Item struct {
+	union json.RawMessage
+}
+
+// OrchestratorResponsesDeveloperMessageItemParamContent1 The message content, as a single string.
+type OrchestratorResponsesDeveloperMessageItemParamContent1 = string
+
+// OrchestratorResponsesDeveloperMessageItemParam_Content The message content, as an array of content parts.
+type OrchestratorResponsesDeveloperMessageItemParam_Content struct {
+	union json.RawMessage
+}
+
+// OrchestratorResponsesDeveloperMessageItemParamRole The message role. Always `developer`.
+type OrchestratorResponsesDeveloperMessageItemParamRole string
+
+// OrchestratorResponsesDeveloperMessageItemParamType The item type. Always `message`.
+type OrchestratorResponsesDeveloperMessageItemParamType string
+
+// OrchestratorResponsesError An error that occurred while generating the response.
+type OrchestratorResponsesError struct {
+	// Code A machine-readable error code that was returned.
+	Code string `json:"code"`
+
+	// Message A human-readable description of the error that was returned.
+	Message string `json:"message"`
+}
+
+// OrchestratorResponsesErrorPayload An error payload that was emitted for a streaming error event.
+type OrchestratorResponsesErrorPayload struct {
+	// Code The error code that was emitted, if any.
+	Code *string `json:"code"`
+
+	// Headers The response headers that were emitted with the error, if any.
+	Headers *map[string]string `json:"headers,omitempty"`
+
+	// Message The human-readable error message that was emitted.
+	Message string `json:"message"`
+
+	// Param The parameter name that was associated with the error, if any.
+	Param *string `json:"param"`
+
+	// Type The error type that was emitted.
+	Type string `json:"type"`
+}
+
+// OrchestratorResponsesErrorResponse An error returned before streaming begins.
+type OrchestratorResponsesErrorResponse struct {
+	// Error An error payload that was emitted for a streaming error event.
+	Error OrchestratorResponsesErrorPayload `json:"error"`
+}
+
+// OrchestratorResponsesErrorStreamingEvent A streaming event that indicated an error was emitted.
+type OrchestratorResponsesErrorStreamingEvent struct {
+	// Error An error payload that was emitted for a streaming error event.
+	Error OrchestratorResponsesErrorPayload `json:"error"`
+
+	// SequenceNumber The sequence number of the event that was emitted.
+	SequenceNumber int `json:"sequence_number"`
+
+	// Type The type of the event, always `error`.
+	Type OrchestratorResponsesErrorStreamingEventType `json:"type"`
+}
+
+// OrchestratorResponsesErrorStreamingEventType The type of the event, always `error`.
+type OrchestratorResponsesErrorStreamingEventType string
+
+// OrchestratorResponsesFunctionCall A function tool call that was generated by the model.
+type OrchestratorResponsesFunctionCall struct {
+	// Arguments The arguments JSON string that was generated.
+	Arguments string `json:"arguments"`
+
+	// CallId The unique ID of the function tool call that was generated.
+	CallId string `json:"call_id"`
+
+	// Id The unique ID of the function call item.
+	Id string `json:"id"`
+
+	// Name The name of the function that was called.
+	Name string `json:"name"`
+
+	// Namespace The namespace associated with the function tool, if any.
+	Namespace *string                                 `json:"namespace,omitempty"`
+	Status    OrchestratorResponsesFunctionCallStatus `json:"status"`
+
+	// Type The type of the item. Always `function_call`.
+	Type OrchestratorResponsesFunctionCallType `json:"type"`
+}
+
+// OrchestratorResponsesFunctionCallType The type of the item. Always `function_call`.
+type OrchestratorResponsesFunctionCallType string
+
+// OrchestratorResponsesFunctionCallItemParam defines model for OrchestratorResponsesFunctionCallItemParam.
+type OrchestratorResponsesFunctionCallItemParam struct {
+	// Arguments The function arguments as a JSON string.
+	Arguments string `json:"arguments"`
+
+	// CallId The unique ID of the function tool call generated by the model.
+	CallId string `json:"call_id"`
+
+	// Id The unique ID of this function tool call.
+	Id *string `json:"id,omitempty"`
+
+	// Name The name of the function to call.
+	Name string `json:"name"`
+
+	// Namespace The namespace associated with the function tool, if any.
+	Namespace *string                                  `json:"namespace,omitempty"`
+	Status    *OrchestratorResponsesFunctionCallStatus `json:"status,omitempty"`
+
+	// Type The item type. Always `function_call`.
+	Type OrchestratorResponsesFunctionCallItemParamType `json:"type"`
+}
+
+// OrchestratorResponsesFunctionCallItemParamType The item type. Always `function_call`.
+type OrchestratorResponsesFunctionCallItemParamType string
+
+// OrchestratorResponsesFunctionCallOutput A function tool call output that was returned by the tool.
+type OrchestratorResponsesFunctionCallOutput struct {
+	// CallId The unique ID of the function tool call generated by the model.
+	CallId string `json:"call_id"`
+
+	// Id The unique ID of the function tool call output. Populated when this item is returned via API.
+	Id     string                                         `json:"id"`
+	Output OrchestratorResponsesFunctionCallOutput_Output `json:"output"`
+
+	// Status Similar to `FunctionCallStatus`. All three options are allowed here for compatibility, but because in practice these items will be provided by developers, only `completed` should be used.
+	Status OrchestratorResponsesFunctionCallOutputStatusEnum `json:"status"`
+
+	// Type The type of the function tool call output. Always `function_call_output`.
+	Type OrchestratorResponsesFunctionCallOutputType `json:"type"`
+}
+
+// OrchestratorResponsesFunctionCallOutputOutput0 A JSON string of the output of the function tool call.
+type OrchestratorResponsesFunctionCallOutputOutput0 = string
+
+// OrchestratorResponsesFunctionCallOutputOutput1 An array of output contents (images, files, text) for the function tool call.
+type OrchestratorResponsesFunctionCallOutputOutput1 = []OrchestratorResponsesFunctionCallOutput_Output_1_Item
+
+// OrchestratorResponsesFunctionCallOutput_Output_1_Item A content part that makes up an input or output item.
+type OrchestratorResponsesFunctionCallOutput_Output_1_Item struct {
+	union json.RawMessage
+}
+
+// OrchestratorResponsesFunctionCallOutput_Output defines model for OrchestratorResponsesFunctionCallOutput.Output.
+type OrchestratorResponsesFunctionCallOutput_Output struct {
+	union json.RawMessage
+}
+
+// OrchestratorResponsesFunctionCallOutputType The type of the function tool call output. Always `function_call_output`.
+type OrchestratorResponsesFunctionCallOutputType string
+
+// OrchestratorResponsesFunctionCallOutputItemParam The output of a function tool call.
+type OrchestratorResponsesFunctionCallOutputItemParam struct {
+	// CallId The unique ID of the function tool call generated by the model.
+	CallId string `json:"call_id"`
+
+	// Id The unique ID of the function tool call output. Populated when this item is returned via API.
+	Id *string `json:"id,omitempty"`
+
+	// Output Text, image, or file output of the function tool call.
+	Output OrchestratorResponsesFunctionCallOutputItemParam_Output `json:"output"`
+	Status *OrchestratorResponsesFunctionCallStatus                `json:"status,omitempty"`
+
+	// Type The type of the function tool call output. Always `function_call_output`.
+	Type OrchestratorResponsesFunctionCallOutputItemParamType `json:"type"`
+}
+
+// OrchestratorResponsesFunctionCallOutputItemParamOutput0 A JSON string of the output of the function tool call.
+type OrchestratorResponsesFunctionCallOutputItemParamOutput0 = string
+
+// OrchestratorResponsesFunctionCallOutputItemParamOutput1 An array of content outputs (text, image, file) for the function tool call.
+type OrchestratorResponsesFunctionCallOutputItemParamOutput1 = []OrchestratorResponsesFunctionCallOutputItemParam_Output_1_Item
+
+// OrchestratorResponsesFunctionCallOutputItemParam_Output_1_Item A piece of message content, such as text, an image, or a file.
+type OrchestratorResponsesFunctionCallOutputItemParam_Output_1_Item struct {
+	union json.RawMessage
+}
+
+// OrchestratorResponsesFunctionCallOutputItemParam_Output Text, image, or file output of the function tool call.
+type OrchestratorResponsesFunctionCallOutputItemParam_Output struct {
+	union json.RawMessage
+}
+
+// OrchestratorResponsesFunctionCallOutputItemParamType The type of the function tool call output. Always `function_call_output`.
+type OrchestratorResponsesFunctionCallOutputItemParamType string
+
+// OrchestratorResponsesFunctionCallOutputStatusEnum Similar to `FunctionCallStatus`. All three options are allowed here for compatibility, but because in practice these items will be provided by developers, only `completed` should be used.
+type OrchestratorResponsesFunctionCallOutputStatusEnum string
+
+// OrchestratorResponsesFunctionCallStatus defines model for OrchestratorResponsesFunctionCallStatus.
+type OrchestratorResponsesFunctionCallStatus string
+
+// OrchestratorResponsesFunctionTool Defines a function in your own code the model can choose to call. Learn more about [function calling](https://platform.openai.com/docs/guides/function-calling).
+type OrchestratorResponsesFunctionTool struct {
+	// Description A description of the function. Used by the model to determine whether or not to call the function.
+	Description *string `json:"description"`
+
+	// Name The name of the function to call.
+	Name string `json:"name"`
+
+	// Parameters A JSON schema object describing the parameters of the function.
+	Parameters *map[string]interface{} `json:"parameters"`
+
+	// Strict Whether to enforce strict parameter validation. Default `true`.
+	Strict *bool `json:"strict"`
+
+	// Type The type of the function tool. Always `function`.
+	Type OrchestratorResponsesFunctionToolType `json:"type"`
+}
+
+// OrchestratorResponsesFunctionToolType The type of the function tool. Always `function`.
+type OrchestratorResponsesFunctionToolType string
+
+// OrchestratorResponsesFunctionToolChoice defines model for OrchestratorResponsesFunctionToolChoice.
+type OrchestratorResponsesFunctionToolChoice struct {
+	Name *string                                     `json:"name,omitempty"`
+	Type OrchestratorResponsesFunctionToolChoiceType `json:"type"`
+}
+
+// OrchestratorResponsesFunctionToolChoiceType defines model for OrchestratorResponsesFunctionToolChoice.Type.
+type OrchestratorResponsesFunctionToolChoiceType string
+
+// OrchestratorResponsesFunctionToolParam defines model for OrchestratorResponsesFunctionToolParam.
+type OrchestratorResponsesFunctionToolParam struct {
+	Description string `json:"description"`
+	Name        string `json:"name"`
+
+	// Parameters JSON Schema for the function parameters, kept as raw JSON and forwarded verbatim.
+	Parameters *map[string]interface{}                    `json:"parameters,omitempty"`
+	Strict     *bool                                      `json:"strict,omitempty"`
+	Type       OrchestratorResponsesFunctionToolParamType `json:"type"`
+}
+
+// OrchestratorResponsesFunctionToolParamType defines model for OrchestratorResponsesFunctionToolParam.Type.
+type OrchestratorResponsesFunctionToolParamType string
+
+// OrchestratorResponsesImageDetail defines model for OrchestratorResponsesImageDetail.
+type OrchestratorResponsesImageDetail string
+
+// OrchestratorResponsesIncludeEnum defines model for OrchestratorResponsesIncludeEnum.
+type OrchestratorResponsesIncludeEnum string
+
+// OrchestratorResponsesIncompleteDetails Details about why the response was incomplete.
+type OrchestratorResponsesIncompleteDetails struct {
+	// Reason The reason the response could not be completed.
+	Reason string `json:"reason"`
+}
+
+// OrchestratorResponsesInputFileContent A file input to the model.
+type OrchestratorResponsesInputFileContent struct {
+	// FileUrl The URL of the file to be sent to the model.
+	FileUrl *string `json:"file_url,omitempty"`
+
+	// Filename The name of the file to be sent to the model.
+	Filename *string `json:"filename,omitempty"`
+
+	// Type The type of the input item. Always `input_file`.
+	Type OrchestratorResponsesInputFileContentType `json:"type"`
+}
+
+// OrchestratorResponsesInputFileContentType The type of the input item. Always `input_file`.
+type OrchestratorResponsesInputFileContentType string
+
+// OrchestratorResponsesInputImageContent An image input to the model. Learn about [image inputs](/docs/guides/vision).
+type OrchestratorResponsesInputImageContent struct {
+	Detail OrchestratorResponsesImageDetail `json:"detail"`
+
+	// ImageUrl The URL of the image to be sent to the model. A fully qualified URL or base64 encoded image in a data URL.
+	ImageUrl *string `json:"image_url"`
+
+	// Type The type of the input item. Always `input_image`.
+	Type OrchestratorResponsesInputImageContentType `json:"type"`
+}
+
+// OrchestratorResponsesInputImageContentType The type of the input item. Always `input_image`.
+type OrchestratorResponsesInputImageContentType string
+
+// OrchestratorResponsesInputImageContentParamAutoParam An image input to the model. Learn about [image inputs](/docs/guides/vision)
+type OrchestratorResponsesInputImageContentParamAutoParam struct {
+	Detail *OrchestratorResponsesImageDetail `json:"detail,omitempty"`
+
+	// ImageUrl The URL of the image to be sent to the model. A fully qualified URL or base64 encoded image in a data URL.
+	ImageUrl *string `json:"image_url,omitempty"`
+
+	// Type The type of the input item. Always `input_image`.
+	Type OrchestratorResponsesInputImageContentParamAutoParamType `json:"type"`
+}
+
+// OrchestratorResponsesInputImageContentParamAutoParamType The type of the input item. Always `input_image`.
+type OrchestratorResponsesInputImageContentParamAutoParamType string
+
+// OrchestratorResponsesInputTextContent A text input to the model.
+type OrchestratorResponsesInputTextContent struct {
+	// Text The text input to the model.
+	Text string `json:"text"`
+
+	// Type The type of the input item. Always `input_text`.
+	Type OrchestratorResponsesInputTextContentType `json:"type"`
+}
+
+// OrchestratorResponsesInputTextContentType The type of the input item. Always `input_text`.
+type OrchestratorResponsesInputTextContentType string
+
+// OrchestratorResponsesInputTextContentParam A text input to the model.
+type OrchestratorResponsesInputTextContentParam struct {
+	// Text The text input to the model.
+	Text string `json:"text"`
+
+	// Type The type of the input item. Always `input_text`.
+	Type OrchestratorResponsesInputTextContentParamType `json:"type"`
+}
+
+// OrchestratorResponsesInputTextContentParamType The type of the input item. Always `input_text`.
+type OrchestratorResponsesInputTextContentParamType string
+
+// OrchestratorResponsesInputTokensDetails A breakdown of input token usage that was recorded.
+type OrchestratorResponsesInputTokensDetails struct {
+	// CacheWriteTokens The number of input tokens written to the prompt cache. Present only when cache writes occur.
+	CacheWriteTokens *int `json:"cache_write_tokens,omitempty"`
+
+	// CachedTokens The number of input tokens that were served from cache.
+	CachedTokens int `json:"cached_tokens"`
+}
+
+// OrchestratorResponsesInputVideoContent A content block representing a video input to the model.
+type OrchestratorResponsesInputVideoContent struct {
+	// Type The type of the input content. Always `input_video`.
+	Type OrchestratorResponsesInputVideoContentType `json:"type"`
+
+	// VideoUrl A base64 or remote url that resolves to a video file.
+	VideoUrl string `json:"video_url"`
+}
+
+// OrchestratorResponsesInputVideoContentType The type of the input content. Always `input_video`.
+type OrchestratorResponsesInputVideoContentType string
+
+// OrchestratorResponsesItemField An item representing a message, tool call, tool output, reasoning, or other response element.
+type OrchestratorResponsesItemField struct {
+	union json.RawMessage
+}
+
+// OrchestratorResponsesItemParam defines model for OrchestratorResponsesItemParam.
+type OrchestratorResponsesItemParam struct {
+	union json.RawMessage
+}
+
+// OrchestratorResponsesJsonSchemaResponseFormatParam defines model for OrchestratorResponsesJsonSchemaResponseFormatParam.
+type OrchestratorResponsesJsonSchemaResponseFormatParam struct {
+	// Description A description of what the response format is for, used by the model to
+	// determine how to respond in the format.
+	Description *string `json:"description,omitempty"`
+
+	// Name The name of the response format. Must be a-z, A-Z, 0-9, or contain
+	// underscores and dashes, with a maximum length of 64.
+	Name string `json:"name"`
+
+	// Schema The schema for the response format, described as a JSON Schema object.
+	Schema map[string]interface{} `json:"schema"`
+
+	// Strict Whether to enable strict schema adherence when generating the output.
+	// If set to true, the model will always follow the exact schema defined
+	// in the `schema` field. Only a subset of JSON Schema is supported when
+	// `strict` is `true`.
+	Strict *OrchestratorResponsesJsonSchemaResponseFormatParamStrict `json:"strict,omitempty"`
+
+	// Type The type of response format being defined. Always `json_schema`.
+	Type OrchestratorResponsesJsonSchemaResponseFormatParamType `json:"type"`
+}
+
+// OrchestratorResponsesJsonSchemaResponseFormatParamStrict defines model for OrchestratorResponsesJsonSchemaResponseFormatParam.Strict.
+type OrchestratorResponsesJsonSchemaResponseFormatParamStrict bool
+
+// OrchestratorResponsesJsonSchemaResponseFormatParamType The type of response format being defined. Always `json_schema`.
+type OrchestratorResponsesJsonSchemaResponseFormatParamType string
+
+// OrchestratorResponsesLogProb The log probability of a token.
+type OrchestratorResponsesLogProb struct {
+	Bytes       []int                             `json:"bytes"`
+	Logprob     float64                           `json:"logprob"`
+	Token       string                            `json:"token"`
+	TopLogprobs []OrchestratorResponsesTopLogProb `json:"top_logprobs"`
+}
+
+// OrchestratorResponsesMessage A message to or from the model.
+type OrchestratorResponsesMessage struct {
+	// Content The content of the message
+	Content []OrchestratorResponsesMessage_Content_Item `json:"content"`
+
+	// Id The unique ID of the message.
+	Id string `json:"id"`
+
+	// Phase Labels an `assistant` message as intermediate commentary (`commentary`) or the final answer (`final_answer`). For models like `gpt-5.3-codex` and beyond, when sending follow-up requests, preserve and resend phase on all assistant messages. Omitting it can degrade performance. Not used for user messages.
+	Phase  *OrchestratorResponsesMessagePhase `json:"phase,omitempty"`
+	Role   OrchestratorResponsesMessageRole   `json:"role"`
+	Status OrchestratorResponsesMessageStatus `json:"status"`
+
+	// Type The type of the message. Always set to `message`.
+	Type OrchestratorResponsesMessageType `json:"type"`
+}
+
+// OrchestratorResponsesMessage_Content_Item A content part that makes up an input or output item.
+type OrchestratorResponsesMessage_Content_Item struct {
+	union json.RawMessage
+}
+
+// OrchestratorResponsesMessagePhase Labels an `assistant` message as intermediate commentary (`commentary`) or the final answer (`final_answer`). For models like `gpt-5.3-codex` and beyond, when sending follow-up requests, preserve and resend phase on all assistant messages. Omitting it can degrade performance. Not used for user messages.
+type OrchestratorResponsesMessagePhase string
+
+// OrchestratorResponsesMessageType The type of the message. Always set to `message`.
+type OrchestratorResponsesMessageType string
+
+// OrchestratorResponsesMessageRole defines model for OrchestratorResponsesMessageRole.
+type OrchestratorResponsesMessageRole string
+
+// OrchestratorResponsesMessageStatus defines model for OrchestratorResponsesMessageStatus.
+type OrchestratorResponsesMessageStatus string
+
+// OrchestratorResponsesMetadataParam Set of 16 key-value pairs that can be attached to an object. This can be         useful for storing additional information about the object in a structured         format, and querying for objects via API or the dashboard.
+//
+//	Keys are strings with a maximum length of 64 characters. Values are strings         with a maximum length of 512 characters.
+type OrchestratorResponsesMetadataParam map[string]string
+
+// OrchestratorResponsesNamespaceToolParam A namespace that groups related function tools.
+type OrchestratorResponsesNamespaceToolParam struct {
+	Description *string `json:"description,omitempty"`
+	Name        string  `json:"name"`
+
+	// Tools The function tools grouped under this namespace.
+	Tools []OrchestratorResponsesFunctionToolParam    `json:"tools"`
+	Type  OrchestratorResponsesNamespaceToolParamType `json:"type"`
+}
+
+// OrchestratorResponsesNamespaceToolParamType defines model for OrchestratorResponsesNamespaceToolParam.Type.
+type OrchestratorResponsesNamespaceToolParamType string
+
+// OrchestratorResponsesOutputTextContent A text output from the model.
+type OrchestratorResponsesOutputTextContent struct {
+	// Annotations The annotations of the text output.
+	Annotations []OrchestratorResponsesAnnotation `json:"annotations"`
+	Logprobs    *[]OrchestratorResponsesLogProb   `json:"logprobs,omitempty"`
+
+	// Text The text output from the model.
+	Text string `json:"text"`
+
+	// Type The type of the output text. Always `output_text`.
+	Type OrchestratorResponsesOutputTextContentType `json:"type"`
+}
+
+// OrchestratorResponsesOutputTextContentType The type of the output text. Always `output_text`.
+type OrchestratorResponsesOutputTextContentType string
+
+// OrchestratorResponsesOutputTextContentParam defines model for OrchestratorResponsesOutputTextContentParam.
+type OrchestratorResponsesOutputTextContentParam struct {
+	// Annotations Citations associated with the text content.
+	Annotations *OrchestratorResponsesOutputTextContentParam_Annotations `json:"annotations,omitempty"`
+
+	// Text The text content.
+	Text string `json:"text"`
+
+	// Type The content type. Always `output_text`.
+	Type OrchestratorResponsesOutputTextContentParamType `json:"type"`
+}
+
+// OrchestratorResponsesOutputTextContentParamAnnotations0 defines model for OrchestratorResponsesOutputTextContentParam.Annotations.0.
+type OrchestratorResponsesOutputTextContentParamAnnotations0 = []OrchestratorResponsesUrlCitationParam
+
+// OrchestratorResponsesOutputTextContentParam_Annotations Citations associated with the text content.
+type OrchestratorResponsesOutputTextContentParam_Annotations struct {
+	union json.RawMessage
+}
+
+// OrchestratorResponsesOutputTextContentParamType The content type. Always `output_text`.
+type OrchestratorResponsesOutputTextContentParamType string
+
+// OrchestratorResponsesOutputTokensDetails A breakdown of output token usage that was recorded.
+type OrchestratorResponsesOutputTokensDetails struct {
+	// ReasoningTokens The number of output tokens that were attributed to reasoning.
+	ReasoningTokens int `json:"reasoning_tokens"`
+}
+
+// OrchestratorResponsesReasoningBody A reasoning item that was generated by the model.
+type OrchestratorResponsesReasoningBody struct {
+	// Content The reasoning content that was generated.
+	Content *[]OrchestratorResponsesReasoningBody_Content_Item `json:"content,omitempty"`
+
+	// EncryptedContent The encrypted reasoning content that was generated.
+	EncryptedContent *string `json:"encrypted_content,omitempty"`
+
+	// Id The unique ID of the reasoning item.
+	Id     string                              `json:"id"`
+	Status *OrchestratorResponsesMessageStatus `json:"status,omitempty"`
+
+	// Summary The reasoning summary content that was generated.
+	Summary []OrchestratorResponsesReasoningBody_Summary_Item `json:"summary"`
+
+	// Type The type of the item. Always `reasoning`.
+	Type OrchestratorResponsesReasoningBodyType `json:"type"`
+}
+
+// OrchestratorResponsesReasoningBody_Content_Item A content part that makes up an input or output item.
+type OrchestratorResponsesReasoningBody_Content_Item struct {
+	union json.RawMessage
+}
+
+// OrchestratorResponsesReasoningBody_Summary_Item A content part that makes up an input or output item.
+type OrchestratorResponsesReasoningBody_Summary_Item struct {
+	union json.RawMessage
+}
+
+// OrchestratorResponsesReasoningBodyType The type of the item. Always `reasoning`.
+type OrchestratorResponsesReasoningBodyType string
+
+// OrchestratorResponsesReasoningEffortEnum defines model for OrchestratorResponsesReasoningEffortEnum.
+type OrchestratorResponsesReasoningEffortEnum string
+
+// OrchestratorResponsesReasoningItemParam defines model for OrchestratorResponsesReasoningItemParam.
+type OrchestratorResponsesReasoningItemParam struct {
+	Content interface{} `json:"content,omitempty"`
+
+	// EncryptedContent An encrypted representation of the reasoning content.
+	EncryptedContent *string `json:"encrypted_content,omitempty"`
+
+	// Id The unique ID of this reasoning item.
+	Id *string `json:"id,omitempty"`
+
+	// Summary Reasoning summary content associated with this item.
+	Summary []OrchestratorResponsesReasoningSummaryContentParam `json:"summary"`
+
+	// Type The item type. Always `reasoning`.
+	Type OrchestratorResponsesReasoningItemParamType `json:"type"`
+}
+
+// OrchestratorResponsesReasoningItemParamType The item type. Always `reasoning`.
+type OrchestratorResponsesReasoningItemParamType string
+
+// OrchestratorResponsesReasoningParam **gpt-5 and o-series models only** Configuration options for [reasoning models](https://platform.openai.com/docs/guides/reasoning).
+type OrchestratorResponsesReasoningParam struct {
+	// Effort Controls the level of reasoning effort the model should apply. Higher effort may increase latency and cost.
+	Effort *struct {
+		union json.RawMessage
+	} `json:"effort,omitempty"`
+	Summary *OrchestratorResponsesReasoningSummaryEnum `json:"summary,omitempty"`
+}
+
+// OrchestratorResponsesReasoningSummaryContentParam defines model for OrchestratorResponsesReasoningSummaryContentParam.
+type OrchestratorResponsesReasoningSummaryContentParam struct {
+	// Text The reasoning summary text.
+	Text string `json:"text"`
+
+	// Type The content type. Always `summary_text`.
+	Type OrchestratorResponsesReasoningSummaryContentParamType `json:"type"`
+}
+
+// OrchestratorResponsesReasoningSummaryContentParamType The content type. Always `summary_text`.
+type OrchestratorResponsesReasoningSummaryContentParamType string
+
+// OrchestratorResponsesReasoningSummaryEnum defines model for OrchestratorResponsesReasoningSummaryEnum.
+type OrchestratorResponsesReasoningSummaryEnum string
+
+// OrchestratorResponsesReasoningTextContent Reasoning text from the model.
+type OrchestratorResponsesReasoningTextContent struct {
+	// Text The reasoning text from the model.
+	Text string `json:"text"`
+
+	// Type The type of the reasoning text. Always `reasoning_text`.
+	Type OrchestratorResponsesReasoningTextContentType `json:"type"`
+}
+
+// OrchestratorResponsesReasoningTextContentType The type of the reasoning text. Always `reasoning_text`.
+type OrchestratorResponsesReasoningTextContentType string
+
+// OrchestratorResponsesRefusalContent A refusal from the model.
+type OrchestratorResponsesRefusalContent struct {
+	// Refusal The refusal explanation from the model.
+	Refusal string `json:"refusal"`
+
+	// Type The type of the refusal. Always `refusal`.
+	Type OrchestratorResponsesRefusalContentType `json:"type"`
+}
+
+// OrchestratorResponsesRefusalContentType The type of the refusal. Always `refusal`.
+type OrchestratorResponsesRefusalContentType string
+
+// OrchestratorResponsesRefusalContentParam defines model for OrchestratorResponsesRefusalContentParam.
+type OrchestratorResponsesRefusalContentParam struct {
+	// Refusal The refusal text.
+	Refusal string `json:"refusal"`
+
+	// Type The content type. Always `refusal`.
+	Type OrchestratorResponsesRefusalContentParamType `json:"type"`
+}
+
+// OrchestratorResponsesRefusalContentParamType The content type. Always `refusal`.
+type OrchestratorResponsesRefusalContentParamType string
+
+// OrchestratorResponsesResponseCompletedStreamingEvent A streaming event that indicated the response was completed.
+type OrchestratorResponsesResponseCompletedStreamingEvent struct {
+	// Response The complete response object that was returned by the Responses API.
+	Response OrchestratorResponsesResponseResource `json:"response"`
+
+	// SequenceNumber The sequence number of the event that was emitted.
+	SequenceNumber int `json:"sequence_number"`
+
+	// Type The type of the event, always `response.completed`.
+	Type OrchestratorResponsesResponseCompletedStreamingEventType `json:"type"`
+}
+
+// OrchestratorResponsesResponseCompletedStreamingEventType The type of the event, always `response.completed`.
+type OrchestratorResponsesResponseCompletedStreamingEventType string
+
+// OrchestratorResponsesResponseContentPartAddedStreamingEvent A streaming event that indicated a content part was added.
+type OrchestratorResponsesResponseContentPartAddedStreamingEvent struct {
+	// ContentIndex The index of the content part that was added.
+	ContentIndex int `json:"content_index"`
+
+	// ItemId The ID of the item that was updated.
+	ItemId string `json:"item_id"`
+
+	// OutputIndex The index of the output item that was updated.
+	OutputIndex int `json:"output_index"`
+
+	// Part A content part that makes up an input or output item.
+	Part OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part `json:"part"`
+
+	// SequenceNumber The sequence number of the event that was emitted.
+	SequenceNumber int `json:"sequence_number"`
+
+	// Type The type of the event, always `response.content_part.added`.
+	Type OrchestratorResponsesResponseContentPartAddedStreamingEventType `json:"type"`
+}
+
+// OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part A content part that makes up an input or output item.
+type OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part struct {
+	union json.RawMessage
+}
+
+// OrchestratorResponsesResponseContentPartAddedStreamingEventType The type of the event, always `response.content_part.added`.
+type OrchestratorResponsesResponseContentPartAddedStreamingEventType string
+
+// OrchestratorResponsesResponseContentPartDoneStreamingEvent A streaming event that indicated a content part was completed.
+type OrchestratorResponsesResponseContentPartDoneStreamingEvent struct {
+	// ContentIndex The index of the content part that was completed.
+	ContentIndex int `json:"content_index"`
+
+	// ItemId The ID of the item that was updated.
+	ItemId string `json:"item_id"`
+
+	// OutputIndex The index of the output item that was updated.
+	OutputIndex int `json:"output_index"`
+
+	// Part A content part that makes up an input or output item.
+	Part OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part `json:"part"`
+
+	// SequenceNumber The sequence number of the event that was emitted.
+	SequenceNumber int `json:"sequence_number"`
+
+	// Type The type of the event, always `response.content_part.done`.
+	Type OrchestratorResponsesResponseContentPartDoneStreamingEventType `json:"type"`
+}
+
+// OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part A content part that makes up an input or output item.
+type OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part struct {
+	union json.RawMessage
+}
+
+// OrchestratorResponsesResponseContentPartDoneStreamingEventType The type of the event, always `response.content_part.done`.
+type OrchestratorResponsesResponseContentPartDoneStreamingEventType string
+
+// OrchestratorResponsesResponseCreatedStreamingEvent A streaming event that indicated the response was created.
+type OrchestratorResponsesResponseCreatedStreamingEvent struct {
+	// Response The complete response object that was returned by the Responses API.
+	Response OrchestratorResponsesResponseResource `json:"response"`
+
+	// SequenceNumber The sequence number of the event that was emitted.
+	SequenceNumber int `json:"sequence_number"`
+
+	// Type The type of the event, always `response.created`.
+	Type OrchestratorResponsesResponseCreatedStreamingEventType `json:"type"`
+}
+
+// OrchestratorResponsesResponseCreatedStreamingEventType The type of the event, always `response.created`.
+type OrchestratorResponsesResponseCreatedStreamingEventType string
+
+// OrchestratorResponsesResponseCustomToolCallInputDeltaStreamingEvent A streaming event that indicated custom tool call input was incrementally added.
+type OrchestratorResponsesResponseCustomToolCallInputDeltaStreamingEvent struct {
+	// Delta The input delta that was appended.
+	Delta string `json:"delta"`
+
+	// ItemId The ID of the custom tool call item that was updated.
+	ItemId string `json:"item_id"`
+
+	// OutputIndex The index of the output item that was updated.
+	OutputIndex int `json:"output_index"`
+
+	// SequenceNumber The sequence number of the event that was emitted.
+	SequenceNumber int `json:"sequence_number"`
+
+	// Type The type of the event, always `response.custom_tool_call_input.delta`.
+	Type OrchestratorResponsesResponseCustomToolCallInputDeltaStreamingEventType `json:"type"`
+}
+
+// OrchestratorResponsesResponseCustomToolCallInputDeltaStreamingEventType The type of the event, always `response.custom_tool_call_input.delta`.
+type OrchestratorResponsesResponseCustomToolCallInputDeltaStreamingEventType string
+
+// OrchestratorResponsesResponseCustomToolCallInputDoneStreamingEvent A streaming event that indicated custom tool call input was completed.
+type OrchestratorResponsesResponseCustomToolCallInputDoneStreamingEvent struct {
+	// Input The final input string that was emitted.
+	Input string `json:"input"`
+
+	// ItemId The ID of the custom tool call item that was updated.
+	ItemId string `json:"item_id"`
+
+	// OutputIndex The index of the output item that was updated.
+	OutputIndex int `json:"output_index"`
+
+	// SequenceNumber The sequence number of the event that was emitted.
+	SequenceNumber int `json:"sequence_number"`
+
+	// Type The type of the event, always `response.custom_tool_call_input.done`.
+	Type OrchestratorResponsesResponseCustomToolCallInputDoneStreamingEventType `json:"type"`
+}
+
+// OrchestratorResponsesResponseCustomToolCallInputDoneStreamingEventType The type of the event, always `response.custom_tool_call_input.done`.
+type OrchestratorResponsesResponseCustomToolCallInputDoneStreamingEventType string
+
+// OrchestratorResponsesResponseFailedStreamingEvent A streaming event that indicated the response had failed.
+type OrchestratorResponsesResponseFailedStreamingEvent struct {
+	// Response The complete response object that was returned by the Responses API.
+	Response OrchestratorResponsesResponseResource `json:"response"`
+
+	// SequenceNumber The sequence number of the event that was emitted.
+	SequenceNumber int `json:"sequence_number"`
+
+	// Type The type of the event, always `response.failed`.
+	Type OrchestratorResponsesResponseFailedStreamingEventType `json:"type"`
+}
+
+// OrchestratorResponsesResponseFailedStreamingEventType The type of the event, always `response.failed`.
+type OrchestratorResponsesResponseFailedStreamingEventType string
+
+// OrchestratorResponsesResponseFunctionCallArgumentsDeltaStreamingEvent A streaming event that indicated function call arguments were incrementally added.
+type OrchestratorResponsesResponseFunctionCallArgumentsDeltaStreamingEvent struct {
+	// Delta The arguments delta that was appended.
+	Delta string `json:"delta"`
+
+	// ItemId The ID of the tool call item that was updated.
+	ItemId string `json:"item_id"`
+
+	// Obfuscation An obfuscation string that was added to pad the event payload.
+	Obfuscation *string `json:"obfuscation,omitempty"`
+
+	// OutputIndex The index of the output item that was updated.
+	OutputIndex int `json:"output_index"`
+
+	// SequenceNumber The sequence number of the event that was emitted.
+	SequenceNumber int `json:"sequence_number"`
+
+	// Type The type of the event, always `response.function_call_arguments.delta`.
+	Type OrchestratorResponsesResponseFunctionCallArgumentsDeltaStreamingEventType `json:"type"`
+}
+
+// OrchestratorResponsesResponseFunctionCallArgumentsDeltaStreamingEventType The type of the event, always `response.function_call_arguments.delta`.
+type OrchestratorResponsesResponseFunctionCallArgumentsDeltaStreamingEventType string
+
+// OrchestratorResponsesResponseFunctionCallArgumentsDoneStreamingEvent A streaming event that indicated function call arguments were completed.
+type OrchestratorResponsesResponseFunctionCallArgumentsDoneStreamingEvent struct {
+	// Arguments The final arguments string that was emitted.
+	Arguments string `json:"arguments"`
+
+	// ItemId The ID of the tool call item that was updated.
+	ItemId string `json:"item_id"`
+
+	// OutputIndex The index of the output item that was updated.
+	OutputIndex int `json:"output_index"`
+
+	// SequenceNumber The sequence number of the event that was emitted.
+	SequenceNumber int `json:"sequence_number"`
+
+	// Type The type of the event, always `response.function_call_arguments.done`.
+	Type OrchestratorResponsesResponseFunctionCallArgumentsDoneStreamingEventType `json:"type"`
+}
+
+// OrchestratorResponsesResponseFunctionCallArgumentsDoneStreamingEventType The type of the event, always `response.function_call_arguments.done`.
+type OrchestratorResponsesResponseFunctionCallArgumentsDoneStreamingEventType string
+
+// OrchestratorResponsesResponseInProgressStreamingEvent A streaming event that indicated the response was in progress.
+type OrchestratorResponsesResponseInProgressStreamingEvent struct {
+	// Response The complete response object that was returned by the Responses API.
+	Response OrchestratorResponsesResponseResource `json:"response"`
+
+	// SequenceNumber The sequence number of the event that was emitted.
+	SequenceNumber int `json:"sequence_number"`
+
+	// Type The type of the event, always `response.in_progress`.
+	Type OrchestratorResponsesResponseInProgressStreamingEventType `json:"type"`
+}
+
+// OrchestratorResponsesResponseInProgressStreamingEventType The type of the event, always `response.in_progress`.
+type OrchestratorResponsesResponseInProgressStreamingEventType string
+
+// OrchestratorResponsesResponseIncompleteStreamingEvent A streaming event that indicated the response was incomplete.
+type OrchestratorResponsesResponseIncompleteStreamingEvent struct {
+	// Response The complete response object that was returned by the Responses API.
+	Response OrchestratorResponsesResponseResource `json:"response"`
+
+	// SequenceNumber The sequence number of the event that was emitted.
+	SequenceNumber int `json:"sequence_number"`
+
+	// Type The type of the event, always `response.incomplete`.
+	Type OrchestratorResponsesResponseIncompleteStreamingEventType `json:"type"`
+}
+
+// OrchestratorResponsesResponseIncompleteStreamingEventType The type of the event, always `response.incomplete`.
+type OrchestratorResponsesResponseIncompleteStreamingEventType string
+
+// OrchestratorResponsesResponseOutputItemAddedStreamingEvent A streaming event that indicated an output item was added to the response.
+type OrchestratorResponsesResponseOutputItemAddedStreamingEvent struct {
+	// Item An item representing a message, tool call, tool output, reasoning, or other response element.
+	Item OrchestratorResponsesItemField `json:"item"`
+
+	// OutputIndex The index of the output item that was added.
+	OutputIndex int `json:"output_index"`
+
+	// SequenceNumber The sequence number of the event that was emitted.
+	SequenceNumber int `json:"sequence_number"`
+
+	// Type The type of the event, always `response.output_item.added`.
+	Type OrchestratorResponsesResponseOutputItemAddedStreamingEventType `json:"type"`
+}
+
+// OrchestratorResponsesResponseOutputItemAddedStreamingEventType The type of the event, always `response.output_item.added`.
+type OrchestratorResponsesResponseOutputItemAddedStreamingEventType string
+
+// OrchestratorResponsesResponseOutputItemDoneStreamingEvent A streaming event that indicated an output item was completed.
+type OrchestratorResponsesResponseOutputItemDoneStreamingEvent struct {
+	// Item An item representing a message, tool call, tool output, reasoning, or other response element.
+	Item OrchestratorResponsesItemField `json:"item"`
+
+	// OutputIndex The index of the output item that was completed.
+	OutputIndex int `json:"output_index"`
+
+	// SequenceNumber The sequence number of the event that was emitted.
+	SequenceNumber int `json:"sequence_number"`
+
+	// Type The type of the event, always `response.output_item.done`.
+	Type OrchestratorResponsesResponseOutputItemDoneStreamingEventType `json:"type"`
+}
+
+// OrchestratorResponsesResponseOutputItemDoneStreamingEventType The type of the event, always `response.output_item.done`.
+type OrchestratorResponsesResponseOutputItemDoneStreamingEventType string
+
+// OrchestratorResponsesResponseOutputTextAnnotationAddedStreamingEvent A streaming event that indicated an output text annotation was added.
+type OrchestratorResponsesResponseOutputTextAnnotationAddedStreamingEvent struct {
+	// Annotation An annotation that applies to a span of output text.
+	Annotation OrchestratorResponsesAnnotation `json:"annotation"`
+
+	// AnnotationIndex The index of the annotation that was added.
+	AnnotationIndex int `json:"annotation_index"`
+
+	// ContentIndex The index of the output text content that was updated.
+	ContentIndex int `json:"content_index"`
+
+	// ItemId The ID of the item that was updated.
+	ItemId string `json:"item_id"`
+
+	// OutputIndex The index of the output item that was updated.
+	OutputIndex int `json:"output_index"`
+
+	// SequenceNumber The sequence number of the event that was emitted.
+	SequenceNumber int `json:"sequence_number"`
+
+	// Type The type of the event, always `response.output_text.annotation.added`.
+	Type OrchestratorResponsesResponseOutputTextAnnotationAddedStreamingEventType `json:"type"`
+}
+
+// OrchestratorResponsesResponseOutputTextAnnotationAddedStreamingEventType The type of the event, always `response.output_text.annotation.added`.
+type OrchestratorResponsesResponseOutputTextAnnotationAddedStreamingEventType string
+
+// OrchestratorResponsesResponseOutputTextDeltaStreamingEvent A streaming event that indicated output text was incrementally added.
+type OrchestratorResponsesResponseOutputTextDeltaStreamingEvent struct {
+	// ContentIndex The index of the content part that was updated.
+	ContentIndex int `json:"content_index"`
+
+	// Delta The text delta that was appended.
+	Delta string `json:"delta"`
+
+	// ItemId The ID of the item that was updated.
+	ItemId string `json:"item_id"`
+
+	// Logprobs The token log probabilities that were emitted with the delta, if any.
+	Logprobs *[]OrchestratorResponsesLogProb `json:"logprobs,omitempty"`
+
+	// Obfuscation An obfuscation string that was added to pad the event payload.
+	Obfuscation *string `json:"obfuscation,omitempty"`
+
+	// OutputIndex The index of the output item that was updated.
+	OutputIndex int `json:"output_index"`
+
+	// SequenceNumber The sequence number of the event that was emitted.
+	SequenceNumber int `json:"sequence_number"`
+
+	// Type The type of the event, always `response.output_text.delta`.
+	Type OrchestratorResponsesResponseOutputTextDeltaStreamingEventType `json:"type"`
+}
+
+// OrchestratorResponsesResponseOutputTextDeltaStreamingEventType The type of the event, always `response.output_text.delta`.
+type OrchestratorResponsesResponseOutputTextDeltaStreamingEventType string
+
+// OrchestratorResponsesResponseOutputTextDoneStreamingEvent A streaming event that indicated output text was completed.
+type OrchestratorResponsesResponseOutputTextDoneStreamingEvent struct {
+	// ContentIndex The index of the content part that was completed.
+	ContentIndex int `json:"content_index"`
+
+	// ItemId The ID of the item that was updated.
+	ItemId string `json:"item_id"`
+
+	// Logprobs The token log probabilities that were emitted with the final text, if any.
+	Logprobs *[]OrchestratorResponsesLogProb `json:"logprobs,omitempty"`
+
+	// OutputIndex The index of the output item that was updated.
+	OutputIndex int `json:"output_index"`
+
+	// SequenceNumber The sequence number of the event that was emitted.
+	SequenceNumber int `json:"sequence_number"`
+
+	// Text The final text that was emitted.
+	Text string `json:"text"`
+
+	// Type The type of the event, always `response.output_text.done`.
+	Type OrchestratorResponsesResponseOutputTextDoneStreamingEventType `json:"type"`
+}
+
+// OrchestratorResponsesResponseOutputTextDoneStreamingEventType The type of the event, always `response.output_text.done`.
+type OrchestratorResponsesResponseOutputTextDoneStreamingEventType string
+
+// OrchestratorResponsesResponseQueuedStreamingEvent A streaming event that indicated the response was queued.
+type OrchestratorResponsesResponseQueuedStreamingEvent struct {
+	// Response The complete response object that was returned by the Responses API.
+	Response OrchestratorResponsesResponseResource `json:"response"`
+
+	// SequenceNumber The sequence number of the event that was emitted.
+	SequenceNumber int `json:"sequence_number"`
+
+	// Type The type of the event, always `response.queued`.
+	Type OrchestratorResponsesResponseQueuedStreamingEventType `json:"type"`
+}
+
+// OrchestratorResponsesResponseQueuedStreamingEventType The type of the event, always `response.queued`.
+type OrchestratorResponsesResponseQueuedStreamingEventType string
+
+// OrchestratorResponsesResponseReasoningDeltaStreamingEvent A streaming event that indicated reasoning text was incrementally added.
+type OrchestratorResponsesResponseReasoningDeltaStreamingEvent struct {
+	// ContentIndex The index of the reasoning content that was updated.
+	ContentIndex int `json:"content_index"`
+
+	// Delta The reasoning text delta that was appended.
+	Delta string `json:"delta"`
+
+	// ItemId The ID of the item that was updated.
+	ItemId string `json:"item_id"`
+
+	// Obfuscation An obfuscation string that was added to pad the event payload.
+	Obfuscation *string `json:"obfuscation,omitempty"`
+
+	// OutputIndex The index of the output item that was updated.
+	OutputIndex int `json:"output_index"`
+
+	// SequenceNumber The sequence number of the event that was emitted.
+	SequenceNumber int `json:"sequence_number"`
+
+	// Type The type of the event, always `response.reasoning.delta`.
+	Type OrchestratorResponsesResponseReasoningDeltaStreamingEventType `json:"type"`
+}
+
+// OrchestratorResponsesResponseReasoningDeltaStreamingEventType The type of the event, always `response.reasoning.delta`.
+type OrchestratorResponsesResponseReasoningDeltaStreamingEventType string
+
+// OrchestratorResponsesResponseReasoningDoneStreamingEvent A streaming event that indicated reasoning text was completed.
+type OrchestratorResponsesResponseReasoningDoneStreamingEvent struct {
+	// ContentIndex The index of the reasoning content that was completed.
+	ContentIndex int `json:"content_index"`
+
+	// ItemId The ID of the item that was updated.
+	ItemId string `json:"item_id"`
+
+	// OutputIndex The index of the output item that was updated.
+	OutputIndex int `json:"output_index"`
+
+	// SequenceNumber The sequence number of the event that was emitted.
+	SequenceNumber int `json:"sequence_number"`
+
+	// Text The final reasoning text that was emitted.
+	Text string `json:"text"`
+
+	// Type The type of the event, always `response.reasoning.done`.
+	Type OrchestratorResponsesResponseReasoningDoneStreamingEventType `json:"type"`
+}
+
+// OrchestratorResponsesResponseReasoningDoneStreamingEventType The type of the event, always `response.reasoning.done`.
+type OrchestratorResponsesResponseReasoningDoneStreamingEventType string
+
+// OrchestratorResponsesResponseReasoningSummaryDeltaStreamingEvent A streaming event that indicated a reasoning summary was incrementally added.
+type OrchestratorResponsesResponseReasoningSummaryDeltaStreamingEvent struct {
+	// Delta The summary text delta that was appended.
+	Delta string `json:"delta"`
+
+	// ItemId The ID of the item that was updated.
+	ItemId string `json:"item_id"`
+
+	// Obfuscation An obfuscation string that was added to pad the event payload.
+	Obfuscation *string `json:"obfuscation,omitempty"`
+
+	// OutputIndex The index of the output item that was updated.
+	OutputIndex int `json:"output_index"`
+
+	// SequenceNumber The sequence number of the event that was emitted.
+	SequenceNumber int `json:"sequence_number"`
+
+	// SummaryIndex The index of the summary content that was updated.
+	SummaryIndex int `json:"summary_index"`
+
+	// Type The type of the event, always `response.reasoning_summary.delta`.
+	Type OrchestratorResponsesResponseReasoningSummaryDeltaStreamingEventType `json:"type"`
+}
+
+// OrchestratorResponsesResponseReasoningSummaryDeltaStreamingEventType The type of the event, always `response.reasoning_summary.delta`.
+type OrchestratorResponsesResponseReasoningSummaryDeltaStreamingEventType string
+
+// OrchestratorResponsesResponseReasoningSummaryDoneStreamingEvent A streaming event that indicated a reasoning summary was completed.
+type OrchestratorResponsesResponseReasoningSummaryDoneStreamingEvent struct {
+	// ItemId The ID of the item that was updated.
+	ItemId string `json:"item_id"`
+
+	// OutputIndex The index of the output item that was updated.
+	OutputIndex int `json:"output_index"`
+
+	// SequenceNumber The sequence number of the event that was emitted.
+	SequenceNumber int `json:"sequence_number"`
+
+	// SummaryIndex The index of the summary content that was completed.
+	SummaryIndex int `json:"summary_index"`
+
+	// Text The final summary text that was emitted.
+	Text string `json:"text"`
+
+	// Type The type of the event, always `response.reasoning_summary.done`.
+	Type OrchestratorResponsesResponseReasoningSummaryDoneStreamingEventType `json:"type"`
+}
+
+// OrchestratorResponsesResponseReasoningSummaryDoneStreamingEventType The type of the event, always `response.reasoning_summary.done`.
+type OrchestratorResponsesResponseReasoningSummaryDoneStreamingEventType string
+
+// OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent A streaming event that indicated a reasoning summary part was added.
+type OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent struct {
+	// ItemId The ID of the item that was updated.
+	ItemId string `json:"item_id"`
+
+	// OutputIndex The index of the output item that was updated.
+	OutputIndex int `json:"output_index"`
+
+	// Part A content part that makes up an input or output item.
+	Part OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part `json:"part"`
+
+	// SequenceNumber The sequence number of the event that was emitted.
+	SequenceNumber int `json:"sequence_number"`
+
+	// SummaryIndex The index of the summary part that was added.
+	SummaryIndex int `json:"summary_index"`
+
+	// Type The type of the event, always `response.reasoning_summary_part.added`.
+	Type OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEventType `json:"type"`
+}
+
+// OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part A content part that makes up an input or output item.
+type OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part struct {
+	union json.RawMessage
+}
+
+// OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEventType The type of the event, always `response.reasoning_summary_part.added`.
+type OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEventType string
+
+// OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent A streaming event that indicated a reasoning summary part was completed.
+type OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent struct {
+	// ItemId The ID of the item that was updated.
+	ItemId string `json:"item_id"`
+
+	// OutputIndex The index of the output item that was updated.
+	OutputIndex int `json:"output_index"`
+
+	// Part A content part that makes up an input or output item.
+	Part OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part `json:"part"`
+
+	// SequenceNumber The sequence number of the event that was emitted.
+	SequenceNumber int `json:"sequence_number"`
+
+	// SummaryIndex The index of the summary part that was completed.
+	SummaryIndex int `json:"summary_index"`
+
+	// Type The type of the event, always `response.reasoning_summary_part.done`.
+	Type OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEventType `json:"type"`
+}
+
+// OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part A content part that makes up an input or output item.
+type OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part struct {
+	union json.RawMessage
+}
+
+// OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEventType The type of the event, always `response.reasoning_summary_part.done`.
+type OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEventType string
+
+// OrchestratorResponsesResponseRefusalDeltaStreamingEvent A streaming event that indicated refusal text was incrementally added.
+type OrchestratorResponsesResponseRefusalDeltaStreamingEvent struct {
+	// ContentIndex The index of the refusal content that was updated.
+	ContentIndex int `json:"content_index"`
+
+	// Delta The refusal text delta that was appended.
+	Delta string `json:"delta"`
+
+	// ItemId The ID of the item that was updated.
+	ItemId string `json:"item_id"`
+
+	// OutputIndex The index of the output item that was updated.
+	OutputIndex int `json:"output_index"`
+
+	// SequenceNumber The sequence number of the event that was emitted.
+	SequenceNumber int `json:"sequence_number"`
+
+	// Type The type of the event, always `response.refusal.delta`.
+	Type OrchestratorResponsesResponseRefusalDeltaStreamingEventType `json:"type"`
+}
+
+// OrchestratorResponsesResponseRefusalDeltaStreamingEventType The type of the event, always `response.refusal.delta`.
+type OrchestratorResponsesResponseRefusalDeltaStreamingEventType string
+
+// OrchestratorResponsesResponseRefusalDoneStreamingEvent A streaming event that indicated refusal text was completed.
+type OrchestratorResponsesResponseRefusalDoneStreamingEvent struct {
+	// ContentIndex The index of the refusal content that was completed.
+	ContentIndex int `json:"content_index"`
+
+	// ItemId The ID of the item that was updated.
+	ItemId string `json:"item_id"`
+
+	// OutputIndex The index of the output item that was updated.
+	OutputIndex int `json:"output_index"`
+
+	// Refusal The final refusal text that was emitted.
+	Refusal string `json:"refusal"`
+
+	// SequenceNumber The sequence number of the event that was emitted.
+	SequenceNumber int `json:"sequence_number"`
+
+	// Type The type of the event, always `response.refusal.done`.
+	Type OrchestratorResponsesResponseRefusalDoneStreamingEventType `json:"type"`
+}
+
+// OrchestratorResponsesResponseRefusalDoneStreamingEventType The type of the event, always `response.refusal.done`.
+type OrchestratorResponsesResponseRefusalDoneStreamingEventType string
+
+// OrchestratorResponsesResponseResource The complete response object that was returned by the Responses API.
+type OrchestratorResponsesResponseResource struct {
+	// Background Whether this request was run in the background.
+	Background bool `json:"background"`
+
+	// CompletedAt The Unix timestamp (in seconds) for when the response was completed, if it was completed.
+	CompletedAt *int `json:"completed_at"`
+
+	// CreatedAt The Unix timestamp (in seconds) for when the response was created.
+	CreatedAt int `json:"created_at"`
+
+	// Error The error that occurred, if the response failed.
+	Error *OrchestratorResponsesError `json:"error"`
+
+	// FrequencyPenalty The frequency penalty that was used to penalize new tokens based on their frequency in the text so far.
+	FrequencyPenalty float64 `json:"frequency_penalty"`
+
+	// Id The unique ID of the response that was created.
+	Id string `json:"id"`
+
+	// IncompleteDetails Details about why the response was incomplete, if applicable.
+	IncompleteDetails *OrchestratorResponsesIncompleteDetails `json:"incomplete_details"`
+
+	// Instructions Additional instructions that were used to guide the model for this response.
+	Instructions *struct {
+		union json.RawMessage
+	} `json:"instructions"`
+
+	// MaxOutputTokens The maximum number of tokens the model was allowed to generate for this response.
+	MaxOutputTokens *int `json:"max_output_tokens"`
+
+	// MaxToolCalls The maximum number of tool calls the model was allowed to make while generating the response.
+	MaxToolCalls *int `json:"max_tool_calls"`
+
+	// Metadata Developer-defined metadata associated with the response.
+	Metadata interface{} `json:"metadata"`
+
+	// Model The model that served the request. With `perplexity/auto`, this is the selected model, not `perplexity/auto`. Billing uses the served model's rates.
+	Model string `json:"model"`
+
+	// Object The object type, which was always `response`.
+	Object OrchestratorResponsesResponseResourceObject `json:"object"`
+
+	// Output The output items that were generated by the model.
+	Output []OrchestratorResponsesItemField `json:"output"`
+
+	// ParallelToolCalls Whether the model was allowed to call multiple tools in parallel.
+	ParallelToolCalls bool `json:"parallel_tool_calls"`
+
+	// PresencePenalty The presence penalty that was used to penalize new tokens based on whether they appear in the text so far.
+	PresencePenalty float64 `json:"presence_penalty"`
+
+	// PreviousResponseId The ID of the previous response in the chain that was referenced, if any.
+	PreviousResponseId *string `json:"previous_response_id"`
+
+	// PromptCacheKey A key that was used to read from or write to the prompt cache.
+	PromptCacheKey *string `json:"prompt_cache_key"`
+
+	// Reasoning The reasoning configuration used for this response.
+	Reasoning *map[string]interface{} `json:"reasoning"`
+
+	// SafetyIdentifier A stable identifier that was used for safety monitoring and abuse detection.
+	SafetyIdentifier *string `json:"safety_identifier"`
+
+	// ServiceTier The service tier that was used for this response.
+	ServiceTier string `json:"service_tier"`
+
+	// Status The status that was set for the response.
+	Status string `json:"status"`
+
+	// Store Whether this response was stored so it can be retrieved later.
+	Store bool `json:"store"`
+
+	// Temperature The sampling temperature that was used for this response.
+	Temperature float64 `json:"temperature"`
+
+	// Text The text output configuration used for this response.
+	Text       map[string]interface{}                           `json:"text"`
+	ToolChoice OrchestratorResponsesResponseResource_ToolChoice `json:"tool_choice"`
+
+	// Tools The tools that were available to the model during response generation.
+	Tools []OrchestratorResponsesTool `json:"tools"`
+
+	// TopLogprobs The number of most likely tokens that were returned at each position, along with their log probabilities.
+	TopLogprobs int `json:"top_logprobs"`
+
+	// TopP The nucleus sampling parameter that was used for this response.
+	TopP       float64                             `json:"top_p"`
+	Truncation OrchestratorResponsesTruncationEnum `json:"truncation"`
+
+	// Usage Token usage statistics that were recorded for the response, if available.
+	Usage *OrchestratorResponsesUsage `json:"usage"`
+}
+
+// OrchestratorResponsesResponseResourceInstructions0 defines model for OrchestratorResponsesResponseResource.Instructions.0.
+type OrchestratorResponsesResponseResourceInstructions0 = string
+
+// OrchestratorResponsesResponseResourceObject The object type, which was always `response`.
+type OrchestratorResponsesResponseResourceObject string
+
+// OrchestratorResponsesResponseResource_ToolChoice defines model for OrchestratorResponsesResponseResource.ToolChoice.
+type OrchestratorResponsesResponseResource_ToolChoice struct {
+	union json.RawMessage
+}
+
+// OrchestratorResponsesResponseStreamEvent One event in a streamed response.
+type OrchestratorResponsesResponseStreamEvent struct {
+	union json.RawMessage
+}
+
+// OrchestratorResponsesResponsesToolParam defines model for OrchestratorResponsesResponsesToolParam.
+type OrchestratorResponsesResponsesToolParam struct {
+	union json.RawMessage
+}
+
+// OrchestratorResponsesServiceTierEnum defines model for OrchestratorResponsesServiceTierEnum.
+type OrchestratorResponsesServiceTierEnum string
+
+// OrchestratorResponsesSpecificFunctionParam defines model for OrchestratorResponsesSpecificFunctionParam.
+type OrchestratorResponsesSpecificFunctionParam struct {
+	// Name The name of the function tool to call.
+	Name string `json:"name"`
+
+	// Type The tool to call. Always `function`.
+	Type OrchestratorResponsesSpecificFunctionParamType `json:"type"`
+}
+
+// OrchestratorResponsesSpecificFunctionParamType The tool to call. Always `function`.
+type OrchestratorResponsesSpecificFunctionParamType string
+
+// OrchestratorResponsesSpecificToolChoiceParam defines model for OrchestratorResponsesSpecificToolChoiceParam.
+type OrchestratorResponsesSpecificToolChoiceParam struct {
+	union json.RawMessage
+}
+
+// OrchestratorResponsesSummaryTextContent A summary text from the model.
+type OrchestratorResponsesSummaryTextContent struct {
+	// Text A summary of the reasoning output from the model so far.
+	Text string `json:"text"`
+
+	// Type The type of the object. Always `summary_text`.
+	Type OrchestratorResponsesSummaryTextContentType `json:"type"`
+}
+
+// OrchestratorResponsesSummaryTextContentType The type of the object. Always `summary_text`.
+type OrchestratorResponsesSummaryTextContentType string
+
+// OrchestratorResponsesSystemMessageItemParam defines model for OrchestratorResponsesSystemMessageItemParam.
+type OrchestratorResponsesSystemMessageItemParam struct {
+	// Content The message content, as an array of content parts.
+	Content OrchestratorResponsesSystemMessageItemParam_Content `json:"content"`
+
+	// Id The unique ID of this message item.
+	Id *string `json:"id,omitempty"`
+
+	// Role The message role. Always `system`.
+	Role OrchestratorResponsesSystemMessageItemParamRole `json:"role"`
+
+	// Status The status of the message item.
+	Status *string `json:"status,omitempty"`
+
+	// Type The item type. Always `message`.
+	Type OrchestratorResponsesSystemMessageItemParamType `json:"type"`
+}
+
+// OrchestratorResponsesSystemMessageItemParamContent0 defines model for OrchestratorResponsesSystemMessageItemParam.Content.0.
+type OrchestratorResponsesSystemMessageItemParamContent0 = []OrchestratorResponsesSystemMessageItemParam_Content_0_Item
+
+// OrchestratorResponsesSystemMessageItemParam_Content_0_Item defines model for OrchestratorResponsesSystemMessageItemParam.Content.0.Item.
+type OrchestratorResponsesSystemMessageItemParam_Content_0_Item struct {
+	union json.RawMessage
+}
+
+// OrchestratorResponsesSystemMessageItemParamContent1 The message content, as a single string.
+type OrchestratorResponsesSystemMessageItemParamContent1 = string
+
+// OrchestratorResponsesSystemMessageItemParam_Content The message content, as an array of content parts.
+type OrchestratorResponsesSystemMessageItemParam_Content struct {
+	union json.RawMessage
+}
+
+// OrchestratorResponsesSystemMessageItemParamRole The message role. Always `system`.
+type OrchestratorResponsesSystemMessageItemParamRole string
+
+// OrchestratorResponsesSystemMessageItemParamType The item type. Always `message`.
+type OrchestratorResponsesSystemMessageItemParamType string
+
+// OrchestratorResponsesTextContent A text content.
+type OrchestratorResponsesTextContent struct {
+	Text string                               `json:"text"`
+	Type OrchestratorResponsesTextContentType `json:"type"`
+}
+
+// OrchestratorResponsesTextContentType defines model for OrchestratorResponsesTextContent.Type.
+type OrchestratorResponsesTextContentType string
+
+// OrchestratorResponsesTextFormatParam defines model for OrchestratorResponsesTextFormatParam.
+type OrchestratorResponsesTextFormatParam struct {
+	union json.RawMessage
+}
+
+// OrchestratorResponsesTextParam defines model for OrchestratorResponsesTextParam.
+type OrchestratorResponsesTextParam struct {
+	Format    *OrchestratorResponsesTextFormatParam `json:"format,omitempty"`
+	Verbosity *OrchestratorResponsesVerbosityEnum   `json:"verbosity,omitempty"`
+}
+
+// OrchestratorResponsesTextResponseFormat defines model for OrchestratorResponsesTextResponseFormat.
+type OrchestratorResponsesTextResponseFormat struct {
+	Type OrchestratorResponsesTextResponseFormatType `json:"type"`
+}
+
+// OrchestratorResponsesTextResponseFormatType defines model for OrchestratorResponsesTextResponseFormat.Type.
+type OrchestratorResponsesTextResponseFormatType string
+
+// OrchestratorResponsesTool A tool that can be used to generate a response.
+type OrchestratorResponsesTool struct {
+	union json.RawMessage
+}
+
+// OrchestratorResponsesToolChoiceParam Controls which tool the model should use, if any.
+type OrchestratorResponsesToolChoiceParam struct {
+	union json.RawMessage
+}
+
+// OrchestratorResponsesToolChoiceValueEnum defines model for OrchestratorResponsesToolChoiceValueEnum.
+type OrchestratorResponsesToolChoiceValueEnum string
+
+// OrchestratorResponsesTopLogProb The top log probability of a token.
+type OrchestratorResponsesTopLogProb struct {
+	Bytes   []int   `json:"bytes"`
+	Logprob float64 `json:"logprob"`
+	Token   string  `json:"token"`
+}
+
+// OrchestratorResponsesTruncationEnum defines model for OrchestratorResponsesTruncationEnum.
+type OrchestratorResponsesTruncationEnum string
+
+// OrchestratorResponsesUrlCitationBody A citation for a web resource used to generate a model response.
+type OrchestratorResponsesUrlCitationBody struct {
+	// EndIndex The index of the last character of the URL citation in the message.
+	EndIndex int `json:"end_index"`
+
+	// StartIndex The index of the first character of the URL citation in the message.
+	StartIndex int `json:"start_index"`
+
+	// Title The title of the web resource.
+	Title string `json:"title"`
+
+	// Type The type of the URL citation. Always `url_citation`.
+	Type OrchestratorResponsesUrlCitationBodyType `json:"type"`
+
+	// Url The URL of the web resource.
+	Url string `json:"url"`
+}
+
+// OrchestratorResponsesUrlCitationBodyType The type of the URL citation. Always `url_citation`.
+type OrchestratorResponsesUrlCitationBodyType string
+
+// OrchestratorResponsesUrlCitationParam defines model for OrchestratorResponsesUrlCitationParam.
+type OrchestratorResponsesUrlCitationParam struct {
+	// EndIndex The index of the last character of the citation in the message.
+	EndIndex int `json:"end_index"`
+
+	// StartIndex The index of the first character of the citation in the message.
+	StartIndex int `json:"start_index"`
+
+	// Title The title of the cited resource.
+	Title string `json:"title"`
+
+	// Type The citation type. Always `url_citation`.
+	Type OrchestratorResponsesUrlCitationParamType `json:"type"`
+
+	// Url The URL of the cited resource.
+	Url string `json:"url"`
+}
+
+// OrchestratorResponsesUrlCitationParamType The citation type. Always `url_citation`.
+type OrchestratorResponsesUrlCitationParamType string
+
+// OrchestratorResponsesUsage Token usage statistics that were recorded for the response.
+type OrchestratorResponsesUsage struct {
+	// InputTokens The number of input tokens that were used to generate the response.
+	InputTokens int `json:"input_tokens"`
+
+	// InputTokensDetails A breakdown of input token usage that was recorded.
+	InputTokensDetails OrchestratorResponsesInputTokensDetails `json:"input_tokens_details"`
+
+	// OutputTokens The number of output tokens that were generated by the model.
+	OutputTokens int `json:"output_tokens"`
+
+	// OutputTokensDetails A breakdown of output token usage that was recorded.
+	OutputTokensDetails OrchestratorResponsesOutputTokensDetails `json:"output_tokens_details"`
+
+	// TotalTokens The total number of tokens that were used.
+	TotalTokens int `json:"total_tokens"`
+}
+
+// OrchestratorResponsesUserMessageItemParam defines model for OrchestratorResponsesUserMessageItemParam.
+type OrchestratorResponsesUserMessageItemParam struct {
+	// Content The message content, as an array of content parts.
+	Content OrchestratorResponsesUserMessageItemParam_Content `json:"content"`
+
+	// Id The unique ID of this message item.
+	Id *string `json:"id,omitempty"`
+
+	// Role The message role. Always `user`.
+	Role OrchestratorResponsesUserMessageItemParamRole `json:"role"`
+
+	// Status The status of the message item.
+	Status *string `json:"status,omitempty"`
+
+	// Type The item type. Always `message`.
+	Type OrchestratorResponsesUserMessageItemParamType `json:"type"`
+}
+
+// OrchestratorResponsesUserMessageItemParamContent0 defines model for OrchestratorResponsesUserMessageItemParam.Content.0.
+type OrchestratorResponsesUserMessageItemParamContent0 = []OrchestratorResponsesUserMessageItemParam_Content_0_Item
+
+// OrchestratorResponsesUserMessageItemParam_Content_0_Item A piece of message content, such as text, an image, or a file.
+type OrchestratorResponsesUserMessageItemParam_Content_0_Item struct {
+	union json.RawMessage
+}
+
+// OrchestratorResponsesUserMessageItemParamContent1 The message content, as a single string.
+type OrchestratorResponsesUserMessageItemParamContent1 = string
+
+// OrchestratorResponsesUserMessageItemParam_Content The message content, as an array of content parts.
+type OrchestratorResponsesUserMessageItemParam_Content struct {
+	union json.RawMessage
+}
+
+// OrchestratorResponsesUserMessageItemParamRole The message role. Always `user`.
+type OrchestratorResponsesUserMessageItemParamRole string
+
+// OrchestratorResponsesUserMessageItemParamType The item type. Always `message`.
+type OrchestratorResponsesUserMessageItemParamType string
+
+// OrchestratorResponsesVerbosityEnum defines model for OrchestratorResponsesVerbosityEnum.
+type OrchestratorResponsesVerbosityEnum string
+
+// OrchestratorRoute defines model for OrchestratorRoute.
+type OrchestratorRoute struct {
+	// Description Describe the requests this route should handle. Must contain non-whitespace text and be at most 1000 UTF-8 bytes, not characters.
+	Description string `json:"description"`
+
+	// Model An available Orchestrator model id. Cannot be `perplexity/auto`.
+	Model string `json:"model"`
+
+	// Name A unique route name within this request. `none` is reserved.
+	Name string `json:"name"`
+}
+
+// OrchestratorRouting Inline routing for `model: "perplexity/auto"` only. Omit this field or set it to null to use the default policy. The serialized routing object must be at most 16384 bytes. Models must be available in the Orchestrator catalog. Routes incompatible with the request are excluded; if the default model is incompatible, the first compatible route model becomes the default. The request fails if no model is compatible.
+type OrchestratorRouting struct {
+	// DefaultModel The available model to use when no route fits. Cannot be `perplexity/auto`.
+	DefaultModel string `json:"default_model"`
+
+	// ReasoningEffort Let the router select reasoning effort as well as the model. Cannot be combined with caller-set reasoning effort or thinking. When omitted, the request's effort or the served model's default applies.
+	ReasoningEffort *OrchestratorRoutingReasoningEffort `json:"reasoning_effort,omitempty"`
+
+	// Routes One to five routes. Names must be unique within the array; multiple routes may use the same model. The server enforces name uniqueness and UTF-8 byte limits.
+	Routes []OrchestratorRoute `json:"routes"`
+}
+
+// OrchestratorRoutingReasoningEffort Let the router select reasoning effort as well as the model. Cannot be combined with caller-set reasoning effort or thinking. When omitted, the request's effort or the served model's default applies.
+type OrchestratorRoutingReasoningEffort string
+
 // OutputItem defines model for OutputItem.
 type OutputItem struct {
 	union json.RawMessage
@@ -5339,6 +11889,26 @@ type ProfileReference struct {
 
 // ProfileReferenceType defines model for ProfileReference.Type.
 type ProfileReferenceType string
+
+// PromptCacheBreakpoint Marks the end of a reusable prompt prefix on an `input_text` part. Marks replace the default cache breakpoints. A request allows up to 4 marks in `explicit` mode and up to 3 in `implicit` mode; more marks, or a mark on another part type, return HTTP 400.
+type PromptCacheBreakpoint struct {
+	Mode PromptCacheBreakpointMode `json:"mode"`
+}
+
+// PromptCacheBreakpointMode defines model for PromptCacheBreakpoint.Mode.
+type PromptCacheBreakpointMode string
+
+// PromptCacheOptions Prompt cache options. `implicit` (default) keeps the default cache breakpoints and provider automatic caching. `explicit` turns both off, so only `input_text` parts marked with `prompt_cache_breakpoint` are cached; with no marks, the request makes no cache writes. See [Prompt Caching](/docs/agent-api/prompt-caching).
+type PromptCacheOptions struct {
+	// Mode Prompt cache mode. Defaults to `implicit`.
+	Mode *PromptCacheOptionsMode `json:"mode,omitempty"`
+
+	// Ttl Accepted for OpenAI compatibility and ignored. Providers apply their default cache lifetime.
+	Ttl *string `json:"ttl,omitempty"`
+}
+
+// PromptCacheOptionsMode Prompt cache mode. Defaults to `implicit`.
+type PromptCacheOptionsMode string
 
 // Question A named question about `state`. Discriminated by `type`.
 type Question struct {
@@ -5593,8 +12163,14 @@ type ResponsesRequest struct {
 	PreviousResponseId *string `json:"previous_response_id,omitempty"`
 
 	// Profile Saved, versioned configuration to run with. The version is resolved when the request is admitted. Cannot be combined with effort.
-	Profile   *ProfileReference `json:"profile,omitempty"`
-	Reasoning *ReasoningConfig  `json:"reasoning,omitempty"`
+	Profile *ProfileReference `json:"profile,omitempty"`
+
+	// PromptCacheKey Stable key for prompt cache affinity. Send the same key on requests that share a prompt prefix, including retries and multi-turn conversations, so later requests can read the cached prefix. The key is scoped to your account and does not affect model routing. See [Prompt Caching](/docs/agent-api/prompt-caching).
+	PromptCacheKey *string `json:"prompt_cache_key,omitempty"`
+
+	// PromptCacheOptions Prompt cache options. `implicit` (default) keeps the default cache breakpoints and provider automatic caching. `explicit` turns both off, so only `input_text` parts marked with `prompt_cache_breakpoint` are cached; with no marks, the request makes no cache writes. See [Prompt Caching](/docs/agent-api/prompt-caching).
+	PromptCacheOptions *PromptCacheOptions `json:"prompt_cache_options,omitempty"`
+	Reasoning          *ReasoningConfig    `json:"reasoning,omitempty"`
 
 	// ResponseFormat Specifies the desired output format for the model response
 	ResponseFormat *ResponseFormat `json:"response_format,omitempty"`
@@ -5846,7 +12422,7 @@ type ScoreQuestionType string
 
 // SearchDomainFilter defines model for SearchDomainFilter.
 type SearchDomainFilter struct {
-	// SearchDomainFilter Limit search results to specific domains (max 20)
+	// SearchDomainFilter Include or exclude up to 200 domains or URLs, each up to 253 characters. Prefix an entry with `-` to exclude it.
 	SearchDomainFilter *[]string `json:"search_domain_filter,omitempty"`
 }
 
@@ -6260,7 +12836,7 @@ type WebSearchFilters struct {
 	// SearchBeforeDateFilter Return results published before this date (MM/DD/YYYY)
 	SearchBeforeDateFilter *Date `json:"search_before_date_filter,omitempty"`
 
-	// SearchDomainFilter Limit search results to specific domains (max 20)
+	// SearchDomainFilter Include or exclude up to 200 domains or URLs, each up to 253 characters. Prefix an entry with `-` to exclude it.
 	SearchDomainFilter *[]string `json:"search_domain_filter,omitempty"`
 
 	// SearchRecencyFilter Filter by publication recency (hour/day/week/month/year)
@@ -6614,6 +13190,15 @@ type GetComputerUsageAnalyticsV2ParamsDataset string
 // GetComputerUsageAnalyticsV2ParamsGroupBy defines parameters for GetComputerUsageAnalyticsV2.
 type GetComputerUsageAnalyticsV2ParamsGroupBy string
 
+// GatewayCreateChatCompletionJSONRequestBody defines body for GatewayCreateChatCompletion for application/json ContentType.
+type GatewayCreateChatCompletionJSONRequestBody = OrchestratorChatCreateChatCompletionRequest
+
+// GatewayCreateMessageJSONRequestBody defines body for GatewayCreateMessage for application/json ContentType.
+type GatewayCreateMessageJSONRequestBody = OrchestratorMessagesCreateMessageRequest
+
+// GatewayCreateResponseJSONRequestBody defines body for GatewayCreateResponse for application/json ContentType.
+type GatewayCreateResponseJSONRequestBody = OrchestratorResponsesCreateResponseBody
+
 // SearchSearchPostJSONRequestBody defines body for SearchSearchPost for application/json ContentType.
 type SearchSearchPostJSONRequestBody = ApiSearchRequest
 
@@ -6625,6 +13210,9 @@ type CreateAsyncChatCompletionsAsyncChatCompletionsPostJSONRequestBody = AsyncAp
 
 // CreateBatchJSONRequestBody defines body for CreateBatch for application/json ContentType.
 type CreateBatchJSONRequestBody = CreateBatchRequest
+
+// ContextJSONRequestBody defines body for Context for application/json ContentType.
+type ContextJSONRequestBody = ContextRequest
 
 // ContextualizedEmbeddingsV1ContextualizedembeddingsPostJSONRequestBody defines body for ContextualizedEmbeddingsV1ContextualizedembeddingsPost for application/json ContentType.
 type ContextualizedEmbeddingsV1ContextualizedembeddingsPostJSONRequestBody = ContextualizedEmbeddingsRequest
@@ -6652,6 +13240,207 @@ type UpdateSkillMultipartRequestBody UpdateSkillMultipartBody
 
 // ChatCompletionsChatCompletionsPostJSONRequestBody defines body for ChatCompletionsChatCompletionsPost for application/json ContentType.
 type ChatCompletionsChatCompletionsPostJSONRequestBody = ApiChatCompletionsRequest
+
+// Getter for additional properties for ContextMetadata. Returns the specified
+// element and whether it was found
+func (a ContextMetadata) Get(fieldName string) (value ContextMetadata_AdditionalProperties, found bool) {
+	if a.AdditionalProperties != nil {
+		value, found = a.AdditionalProperties[fieldName]
+	}
+	return
+}
+
+// Setter for additional properties for ContextMetadata
+func (a *ContextMetadata) Set(fieldName string, value ContextMetadata_AdditionalProperties) {
+	if a.AdditionalProperties == nil {
+		a.AdditionalProperties = make(map[string]ContextMetadata_AdditionalProperties)
+	}
+	a.AdditionalProperties[fieldName] = value
+}
+
+// Override default JSON handling for ContextMetadata to handle AdditionalProperties
+func (a *ContextMetadata) UnmarshalJSON(b []byte) error {
+	object := make(map[string]json.RawMessage)
+	err := json.Unmarshal(b, &object)
+	if err != nil {
+		return err
+	}
+
+	if raw, found := object["author"]; found {
+		err = json.Unmarshal(raw, &a.Author)
+		if err != nil {
+			return fmt.Errorf("error reading 'author': %w", err)
+		}
+		delete(object, "author")
+	}
+
+	if raw, found := object["content_type"]; found {
+		err = json.Unmarshal(raw, &a.ContentType)
+		if err != nil {
+			return fmt.Errorf("error reading 'content_type': %w", err)
+		}
+		delete(object, "content_type")
+	}
+
+	if raw, found := object["description"]; found {
+		err = json.Unmarshal(raw, &a.Description)
+		if err != nil {
+			return fmt.Errorf("error reading 'description': %w", err)
+		}
+		delete(object, "description")
+	}
+
+	if raw, found := object["fetched_at"]; found {
+		err = json.Unmarshal(raw, &a.FetchedAt)
+		if err != nil {
+			return fmt.Errorf("error reading 'fetched_at': %w", err)
+		}
+		delete(object, "fetched_at")
+	}
+
+	if raw, found := object["language"]; found {
+		err = json.Unmarshal(raw, &a.Language)
+		if err != nil {
+			return fmt.Errorf("error reading 'language': %w", err)
+		}
+		delete(object, "language")
+	}
+
+	if raw, found := object["last_modified"]; found {
+		err = json.Unmarshal(raw, &a.LastModified)
+		if err != nil {
+			return fmt.Errorf("error reading 'last_modified': %w", err)
+		}
+		delete(object, "last_modified")
+	}
+
+	if raw, found := object["origin"]; found {
+		err = json.Unmarshal(raw, &a.Origin)
+		if err != nil {
+			return fmt.Errorf("error reading 'origin': %w", err)
+		}
+		delete(object, "origin")
+	}
+
+	if raw, found := object["published_date"]; found {
+		err = json.Unmarshal(raw, &a.PublishedDate)
+		if err != nil {
+			return fmt.Errorf("error reading 'published_date': %w", err)
+		}
+		delete(object, "published_date")
+	}
+
+	if raw, found := object["source_url"]; found {
+		err = json.Unmarshal(raw, &a.SourceUrl)
+		if err != nil {
+			return fmt.Errorf("error reading 'source_url': %w", err)
+		}
+		delete(object, "source_url")
+	}
+
+	if raw, found := object["title"]; found {
+		err = json.Unmarshal(raw, &a.Title)
+		if err != nil {
+			return fmt.Errorf("error reading 'title': %w", err)
+		}
+		delete(object, "title")
+	}
+
+	if len(object) != 0 {
+		a.AdditionalProperties = make(map[string]ContextMetadata_AdditionalProperties)
+		for fieldName, fieldBuf := range object {
+			var fieldVal ContextMetadata_AdditionalProperties
+			err := json.Unmarshal(fieldBuf, &fieldVal)
+			if err != nil {
+				return fmt.Errorf("error unmarshaling field %s: %w", fieldName, err)
+			}
+			a.AdditionalProperties[fieldName] = fieldVal
+		}
+	}
+	return nil
+}
+
+// Override default JSON handling for ContextMetadata to handle AdditionalProperties
+func (a ContextMetadata) MarshalJSON() ([]byte, error) {
+	var err error
+	object := make(map[string]json.RawMessage)
+
+	if a.Author != nil {
+		object["author"], err = json.Marshal(a.Author)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'author': %w", err)
+		}
+	}
+
+	if a.ContentType != nil {
+		object["content_type"], err = json.Marshal(a.ContentType)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'content_type': %w", err)
+		}
+	}
+
+	if a.Description != nil {
+		object["description"], err = json.Marshal(a.Description)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'description': %w", err)
+		}
+	}
+
+	if a.FetchedAt != nil {
+		object["fetched_at"], err = json.Marshal(a.FetchedAt)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'fetched_at': %w", err)
+		}
+	}
+
+	if a.Language != nil {
+		object["language"], err = json.Marshal(a.Language)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'language': %w", err)
+		}
+	}
+
+	if a.LastModified != nil {
+		object["last_modified"], err = json.Marshal(a.LastModified)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'last_modified': %w", err)
+		}
+	}
+
+	if a.Origin != nil {
+		object["origin"], err = json.Marshal(a.Origin)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'origin': %w", err)
+		}
+	}
+
+	if a.PublishedDate != nil {
+		object["published_date"], err = json.Marshal(a.PublishedDate)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'published_date': %w", err)
+		}
+	}
+
+	object["source_url"], err = json.Marshal(a.SourceUrl)
+	if err != nil {
+		return nil, fmt.Errorf("error marshaling 'source_url': %w", err)
+	}
+
+	if a.Title != nil {
+		object["title"], err = json.Marshal(a.Title)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'title': %w", err)
+		}
+	}
+
+	for fieldName, field := range a.AdditionalProperties {
+		object[fieldName], err = json.Marshal(field)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling '%s': %w", fieldName, err)
+		}
+	}
+	return json.Marshal(object)
+}
 
 // Getter for additional properties for McpToolDef_Annotations. Returns the specified
 // element and whether it was found
@@ -7947,6 +14736,68 @@ func (t *ChoiceQuestion_Instructions) UnmarshalJSON(b []byte) error {
 	return err
 }
 
+// AsContextMetadata0 returns the union data inside the ContextMetadata_AdditionalProperties as a ContextMetadata0
+func (t ContextMetadata_AdditionalProperties) AsContextMetadata0() (ContextMetadata0, error) {
+	var body ContextMetadata0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromContextMetadata0 overwrites any union data inside the ContextMetadata_AdditionalProperties as the provided ContextMetadata0
+func (t *ContextMetadata_AdditionalProperties) FromContextMetadata0(v ContextMetadata0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeContextMetadata0 performs a merge with any union data inside the ContextMetadata_AdditionalProperties, using the provided ContextMetadata0
+func (t *ContextMetadata_AdditionalProperties) MergeContextMetadata0(v ContextMetadata0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsContextMetadata1 returns the union data inside the ContextMetadata_AdditionalProperties as a ContextMetadata1
+func (t ContextMetadata_AdditionalProperties) AsContextMetadata1() (ContextMetadata1, error) {
+	var body ContextMetadata1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromContextMetadata1 overwrites any union data inside the ContextMetadata_AdditionalProperties as the provided ContextMetadata1
+func (t *ContextMetadata_AdditionalProperties) FromContextMetadata1(v ContextMetadata1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeContextMetadata1 performs a merge with any union data inside the ContextMetadata_AdditionalProperties, using the provided ContextMetadata1
+func (t *ContextMetadata_AdditionalProperties) MergeContextMetadata1(v ContextMetadata1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t ContextMetadata_AdditionalProperties) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *ContextMetadata_AdditionalProperties) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
 // AsDecisionsRequestState0 returns the union data inside the DecisionsRequest_State as a DecisionsRequestState0
 func (t DecisionsRequest_State) AsDecisionsRequestState0() (DecisionsRequestState0, error) {
 	var body DecisionsRequestState0
@@ -8087,12 +14938,126 @@ func (t *EmbeddingsRequest_Input) MergeEmbeddingsRequestInput1(v EmbeddingsReque
 	return err
 }
 
+// AsEmbeddingsRequestInput2 returns the union data inside the EmbeddingsRequest_Input as a EmbeddingsRequestInput2
+func (t EmbeddingsRequest_Input) AsEmbeddingsRequestInput2() (EmbeddingsRequestInput2, error) {
+	var body EmbeddingsRequestInput2
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromEmbeddingsRequestInput2 overwrites any union data inside the EmbeddingsRequest_Input as the provided EmbeddingsRequestInput2
+func (t *EmbeddingsRequest_Input) FromEmbeddingsRequestInput2(v EmbeddingsRequestInput2) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeEmbeddingsRequestInput2 performs a merge with any union data inside the EmbeddingsRequest_Input, using the provided EmbeddingsRequestInput2
+func (t *EmbeddingsRequest_Input) MergeEmbeddingsRequestInput2(v EmbeddingsRequestInput2) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsEmbeddingsRequestInput3 returns the union data inside the EmbeddingsRequest_Input as a EmbeddingsRequestInput3
+func (t EmbeddingsRequest_Input) AsEmbeddingsRequestInput3() (EmbeddingsRequestInput3, error) {
+	var body EmbeddingsRequestInput3
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromEmbeddingsRequestInput3 overwrites any union data inside the EmbeddingsRequest_Input as the provided EmbeddingsRequestInput3
+func (t *EmbeddingsRequest_Input) FromEmbeddingsRequestInput3(v EmbeddingsRequestInput3) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeEmbeddingsRequestInput3 performs a merge with any union data inside the EmbeddingsRequest_Input, using the provided EmbeddingsRequestInput3
+func (t *EmbeddingsRequest_Input) MergeEmbeddingsRequestInput3(v EmbeddingsRequestInput3) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
 func (t EmbeddingsRequest_Input) MarshalJSON() ([]byte, error) {
 	b, err := t.union.MarshalJSON()
 	return b, err
 }
 
 func (t *EmbeddingsRequest_Input) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsEmbeddingObject returns the union data inside the EmbeddingsResponse_Data_Item as a EmbeddingObject
+func (t EmbeddingsResponse_Data_Item) AsEmbeddingObject() (EmbeddingObject, error) {
+	var body EmbeddingObject
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromEmbeddingObject overwrites any union data inside the EmbeddingsResponse_Data_Item as the provided EmbeddingObject
+func (t *EmbeddingsResponse_Data_Item) FromEmbeddingObject(v EmbeddingObject) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeEmbeddingObject performs a merge with any union data inside the EmbeddingsResponse_Data_Item, using the provided EmbeddingObject
+func (t *EmbeddingsResponse_Data_Item) MergeEmbeddingObject(v EmbeddingObject) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsContextualizedEmbeddingObject returns the union data inside the EmbeddingsResponse_Data_Item as a ContextualizedEmbeddingObject
+func (t EmbeddingsResponse_Data_Item) AsContextualizedEmbeddingObject() (ContextualizedEmbeddingObject, error) {
+	var body ContextualizedEmbeddingObject
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromContextualizedEmbeddingObject overwrites any union data inside the EmbeddingsResponse_Data_Item as the provided ContextualizedEmbeddingObject
+func (t *EmbeddingsResponse_Data_Item) FromContextualizedEmbeddingObject(v ContextualizedEmbeddingObject) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeContextualizedEmbeddingObject performs a merge with any union data inside the EmbeddingsResponse_Data_Item, using the provided ContextualizedEmbeddingObject
+func (t *EmbeddingsResponse_Data_Item) MergeContextualizedEmbeddingObject(v ContextualizedEmbeddingObject) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t EmbeddingsResponse_Data_Item) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *EmbeddingsResponse_Data_Item) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
@@ -9557,6 +16522,8376 @@ func (t NoulQuestion_Instructions) MarshalJSON() ([]byte, error) {
 }
 
 func (t *NoulQuestion_Instructions) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorChatChatCompletionMessageToolCall returns the union data inside the OrchestratorChatChatCompletionMessageToolCalls_Item as a OrchestratorChatChatCompletionMessageToolCall
+func (t OrchestratorChatChatCompletionMessageToolCalls_Item) AsOrchestratorChatChatCompletionMessageToolCall() (OrchestratorChatChatCompletionMessageToolCall, error) {
+	var body OrchestratorChatChatCompletionMessageToolCall
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatChatCompletionMessageToolCall overwrites any union data inside the OrchestratorChatChatCompletionMessageToolCalls_Item as the provided OrchestratorChatChatCompletionMessageToolCall
+func (t *OrchestratorChatChatCompletionMessageToolCalls_Item) FromOrchestratorChatChatCompletionMessageToolCall(v OrchestratorChatChatCompletionMessageToolCall) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorChatChatCompletionMessageToolCall"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatChatCompletionMessageToolCall performs a merge with any union data inside the OrchestratorChatChatCompletionMessageToolCalls_Item, using the provided OrchestratorChatChatCompletionMessageToolCall
+func (t *OrchestratorChatChatCompletionMessageToolCalls_Item) MergeOrchestratorChatChatCompletionMessageToolCall(v OrchestratorChatChatCompletionMessageToolCall) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorChatChatCompletionMessageToolCall"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorChatChatCompletionMessageCustomToolCall returns the union data inside the OrchestratorChatChatCompletionMessageToolCalls_Item as a OrchestratorChatChatCompletionMessageCustomToolCall
+func (t OrchestratorChatChatCompletionMessageToolCalls_Item) AsOrchestratorChatChatCompletionMessageCustomToolCall() (OrchestratorChatChatCompletionMessageCustomToolCall, error) {
+	var body OrchestratorChatChatCompletionMessageCustomToolCall
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatChatCompletionMessageCustomToolCall overwrites any union data inside the OrchestratorChatChatCompletionMessageToolCalls_Item as the provided OrchestratorChatChatCompletionMessageCustomToolCall
+func (t *OrchestratorChatChatCompletionMessageToolCalls_Item) FromOrchestratorChatChatCompletionMessageCustomToolCall(v OrchestratorChatChatCompletionMessageCustomToolCall) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorChatChatCompletionMessageCustomToolCall"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatChatCompletionMessageCustomToolCall performs a merge with any union data inside the OrchestratorChatChatCompletionMessageToolCalls_Item, using the provided OrchestratorChatChatCompletionMessageCustomToolCall
+func (t *OrchestratorChatChatCompletionMessageToolCalls_Item) MergeOrchestratorChatChatCompletionMessageCustomToolCall(v OrchestratorChatChatCompletionMessageCustomToolCall) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorChatChatCompletionMessageCustomToolCall"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorChatChatCompletionMessageToolCalls_Item) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t OrchestratorChatChatCompletionMessageToolCalls_Item) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "OrchestratorChatChatCompletionMessageCustomToolCall":
+		return t.AsOrchestratorChatChatCompletionMessageCustomToolCall()
+	case "OrchestratorChatChatCompletionMessageToolCall":
+		return t.AsOrchestratorChatChatCompletionMessageToolCall()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t OrchestratorChatChatCompletionMessageToolCalls_Item) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorChatChatCompletionMessageToolCalls_Item) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorChatChatCompletionModerationResults returns the union data inside the OrchestratorChatChatCompletionModeration_Input as a OrchestratorChatChatCompletionModerationResults
+func (t OrchestratorChatChatCompletionModeration_Input) AsOrchestratorChatChatCompletionModerationResults() (OrchestratorChatChatCompletionModerationResults, error) {
+	var body OrchestratorChatChatCompletionModerationResults
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatChatCompletionModerationResults overwrites any union data inside the OrchestratorChatChatCompletionModeration_Input as the provided OrchestratorChatChatCompletionModerationResults
+func (t *OrchestratorChatChatCompletionModeration_Input) FromOrchestratorChatChatCompletionModerationResults(v OrchestratorChatChatCompletionModerationResults) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorChatChatCompletionModerationResults"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatChatCompletionModerationResults performs a merge with any union data inside the OrchestratorChatChatCompletionModeration_Input, using the provided OrchestratorChatChatCompletionModerationResults
+func (t *OrchestratorChatChatCompletionModeration_Input) MergeOrchestratorChatChatCompletionModerationResults(v OrchestratorChatChatCompletionModerationResults) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorChatChatCompletionModerationResults"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorChatChatCompletionModerationError returns the union data inside the OrchestratorChatChatCompletionModeration_Input as a OrchestratorChatChatCompletionModerationError
+func (t OrchestratorChatChatCompletionModeration_Input) AsOrchestratorChatChatCompletionModerationError() (OrchestratorChatChatCompletionModerationError, error) {
+	var body OrchestratorChatChatCompletionModerationError
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatChatCompletionModerationError overwrites any union data inside the OrchestratorChatChatCompletionModeration_Input as the provided OrchestratorChatChatCompletionModerationError
+func (t *OrchestratorChatChatCompletionModeration_Input) FromOrchestratorChatChatCompletionModerationError(v OrchestratorChatChatCompletionModerationError) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorChatChatCompletionModerationError"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatChatCompletionModerationError performs a merge with any union data inside the OrchestratorChatChatCompletionModeration_Input, using the provided OrchestratorChatChatCompletionModerationError
+func (t *OrchestratorChatChatCompletionModeration_Input) MergeOrchestratorChatChatCompletionModerationError(v OrchestratorChatChatCompletionModerationError) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorChatChatCompletionModerationError"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorChatChatCompletionModeration_Input) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t OrchestratorChatChatCompletionModeration_Input) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "OrchestratorChatChatCompletionModerationError":
+		return t.AsOrchestratorChatChatCompletionModerationError()
+	case "OrchestratorChatChatCompletionModerationResults":
+		return t.AsOrchestratorChatChatCompletionModerationResults()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t OrchestratorChatChatCompletionModeration_Input) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorChatChatCompletionModeration_Input) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorChatChatCompletionModerationResults returns the union data inside the OrchestratorChatChatCompletionModeration_Output as a OrchestratorChatChatCompletionModerationResults
+func (t OrchestratorChatChatCompletionModeration_Output) AsOrchestratorChatChatCompletionModerationResults() (OrchestratorChatChatCompletionModerationResults, error) {
+	var body OrchestratorChatChatCompletionModerationResults
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatChatCompletionModerationResults overwrites any union data inside the OrchestratorChatChatCompletionModeration_Output as the provided OrchestratorChatChatCompletionModerationResults
+func (t *OrchestratorChatChatCompletionModeration_Output) FromOrchestratorChatChatCompletionModerationResults(v OrchestratorChatChatCompletionModerationResults) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorChatChatCompletionModerationResults"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatChatCompletionModerationResults performs a merge with any union data inside the OrchestratorChatChatCompletionModeration_Output, using the provided OrchestratorChatChatCompletionModerationResults
+func (t *OrchestratorChatChatCompletionModeration_Output) MergeOrchestratorChatChatCompletionModerationResults(v OrchestratorChatChatCompletionModerationResults) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorChatChatCompletionModerationResults"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorChatChatCompletionModerationError returns the union data inside the OrchestratorChatChatCompletionModeration_Output as a OrchestratorChatChatCompletionModerationError
+func (t OrchestratorChatChatCompletionModeration_Output) AsOrchestratorChatChatCompletionModerationError() (OrchestratorChatChatCompletionModerationError, error) {
+	var body OrchestratorChatChatCompletionModerationError
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatChatCompletionModerationError overwrites any union data inside the OrchestratorChatChatCompletionModeration_Output as the provided OrchestratorChatChatCompletionModerationError
+func (t *OrchestratorChatChatCompletionModeration_Output) FromOrchestratorChatChatCompletionModerationError(v OrchestratorChatChatCompletionModerationError) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorChatChatCompletionModerationError"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatChatCompletionModerationError performs a merge with any union data inside the OrchestratorChatChatCompletionModeration_Output, using the provided OrchestratorChatChatCompletionModerationError
+func (t *OrchestratorChatChatCompletionModeration_Output) MergeOrchestratorChatChatCompletionModerationError(v OrchestratorChatChatCompletionModerationError) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorChatChatCompletionModerationError"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorChatChatCompletionModeration_Output) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t OrchestratorChatChatCompletionModeration_Output) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "OrchestratorChatChatCompletionModerationError":
+		return t.AsOrchestratorChatChatCompletionModerationError()
+	case "OrchestratorChatChatCompletionModerationResults":
+		return t.AsOrchestratorChatChatCompletionModerationResults()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t OrchestratorChatChatCompletionModeration_Output) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorChatChatCompletionModeration_Output) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorChatChatCompletionRequestMessageContentPartText returns the union data inside the OrchestratorChatChatCompletionRequestAssistantMessageContentPart as a OrchestratorChatChatCompletionRequestMessageContentPartText
+func (t OrchestratorChatChatCompletionRequestAssistantMessageContentPart) AsOrchestratorChatChatCompletionRequestMessageContentPartText() (OrchestratorChatChatCompletionRequestMessageContentPartText, error) {
+	var body OrchestratorChatChatCompletionRequestMessageContentPartText
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatChatCompletionRequestMessageContentPartText overwrites any union data inside the OrchestratorChatChatCompletionRequestAssistantMessageContentPart as the provided OrchestratorChatChatCompletionRequestMessageContentPartText
+func (t *OrchestratorChatChatCompletionRequestAssistantMessageContentPart) FromOrchestratorChatChatCompletionRequestMessageContentPartText(v OrchestratorChatChatCompletionRequestMessageContentPartText) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorChatChatCompletionRequestMessageContentPartText"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatChatCompletionRequestMessageContentPartText performs a merge with any union data inside the OrchestratorChatChatCompletionRequestAssistantMessageContentPart, using the provided OrchestratorChatChatCompletionRequestMessageContentPartText
+func (t *OrchestratorChatChatCompletionRequestAssistantMessageContentPart) MergeOrchestratorChatChatCompletionRequestMessageContentPartText(v OrchestratorChatChatCompletionRequestMessageContentPartText) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorChatChatCompletionRequestMessageContentPartText"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorChatChatCompletionRequestMessageContentPartRefusal returns the union data inside the OrchestratorChatChatCompletionRequestAssistantMessageContentPart as a OrchestratorChatChatCompletionRequestMessageContentPartRefusal
+func (t OrchestratorChatChatCompletionRequestAssistantMessageContentPart) AsOrchestratorChatChatCompletionRequestMessageContentPartRefusal() (OrchestratorChatChatCompletionRequestMessageContentPartRefusal, error) {
+	var body OrchestratorChatChatCompletionRequestMessageContentPartRefusal
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatChatCompletionRequestMessageContentPartRefusal overwrites any union data inside the OrchestratorChatChatCompletionRequestAssistantMessageContentPart as the provided OrchestratorChatChatCompletionRequestMessageContentPartRefusal
+func (t *OrchestratorChatChatCompletionRequestAssistantMessageContentPart) FromOrchestratorChatChatCompletionRequestMessageContentPartRefusal(v OrchestratorChatChatCompletionRequestMessageContentPartRefusal) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorChatChatCompletionRequestMessageContentPartRefusal"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatChatCompletionRequestMessageContentPartRefusal performs a merge with any union data inside the OrchestratorChatChatCompletionRequestAssistantMessageContentPart, using the provided OrchestratorChatChatCompletionRequestMessageContentPartRefusal
+func (t *OrchestratorChatChatCompletionRequestAssistantMessageContentPart) MergeOrchestratorChatChatCompletionRequestMessageContentPartRefusal(v OrchestratorChatChatCompletionRequestMessageContentPartRefusal) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorChatChatCompletionRequestMessageContentPartRefusal"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorChatChatCompletionRequestAssistantMessageContentPart) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t OrchestratorChatChatCompletionRequestAssistantMessageContentPart) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "OrchestratorChatChatCompletionRequestMessageContentPartRefusal":
+		return t.AsOrchestratorChatChatCompletionRequestMessageContentPartRefusal()
+	case "OrchestratorChatChatCompletionRequestMessageContentPartText":
+		return t.AsOrchestratorChatChatCompletionRequestMessageContentPartText()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t OrchestratorChatChatCompletionRequestAssistantMessageContentPart) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorChatChatCompletionRequestAssistantMessageContentPart) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorChatChatCompletionRequestDeveloperMessageContent0 returns the union data inside the OrchestratorChatChatCompletionRequestDeveloperMessage_Content as a OrchestratorChatChatCompletionRequestDeveloperMessageContent0
+func (t OrchestratorChatChatCompletionRequestDeveloperMessage_Content) AsOrchestratorChatChatCompletionRequestDeveloperMessageContent0() (OrchestratorChatChatCompletionRequestDeveloperMessageContent0, error) {
+	var body OrchestratorChatChatCompletionRequestDeveloperMessageContent0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatChatCompletionRequestDeveloperMessageContent0 overwrites any union data inside the OrchestratorChatChatCompletionRequestDeveloperMessage_Content as the provided OrchestratorChatChatCompletionRequestDeveloperMessageContent0
+func (t *OrchestratorChatChatCompletionRequestDeveloperMessage_Content) FromOrchestratorChatChatCompletionRequestDeveloperMessageContent0(v OrchestratorChatChatCompletionRequestDeveloperMessageContent0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatChatCompletionRequestDeveloperMessageContent0 performs a merge with any union data inside the OrchestratorChatChatCompletionRequestDeveloperMessage_Content, using the provided OrchestratorChatChatCompletionRequestDeveloperMessageContent0
+func (t *OrchestratorChatChatCompletionRequestDeveloperMessage_Content) MergeOrchestratorChatChatCompletionRequestDeveloperMessageContent0(v OrchestratorChatChatCompletionRequestDeveloperMessageContent0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorChatChatCompletionRequestDeveloperMessageContent1 returns the union data inside the OrchestratorChatChatCompletionRequestDeveloperMessage_Content as a OrchestratorChatChatCompletionRequestDeveloperMessageContent1
+func (t OrchestratorChatChatCompletionRequestDeveloperMessage_Content) AsOrchestratorChatChatCompletionRequestDeveloperMessageContent1() (OrchestratorChatChatCompletionRequestDeveloperMessageContent1, error) {
+	var body OrchestratorChatChatCompletionRequestDeveloperMessageContent1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatChatCompletionRequestDeveloperMessageContent1 overwrites any union data inside the OrchestratorChatChatCompletionRequestDeveloperMessage_Content as the provided OrchestratorChatChatCompletionRequestDeveloperMessageContent1
+func (t *OrchestratorChatChatCompletionRequestDeveloperMessage_Content) FromOrchestratorChatChatCompletionRequestDeveloperMessageContent1(v OrchestratorChatChatCompletionRequestDeveloperMessageContent1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatChatCompletionRequestDeveloperMessageContent1 performs a merge with any union data inside the OrchestratorChatChatCompletionRequestDeveloperMessage_Content, using the provided OrchestratorChatChatCompletionRequestDeveloperMessageContent1
+func (t *OrchestratorChatChatCompletionRequestDeveloperMessage_Content) MergeOrchestratorChatChatCompletionRequestDeveloperMessageContent1(v OrchestratorChatChatCompletionRequestDeveloperMessageContent1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorChatChatCompletionRequestDeveloperMessage_Content) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorChatChatCompletionRequestDeveloperMessage_Content) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorChatChatCompletionRequestDeveloperMessage returns the union data inside the OrchestratorChatChatCompletionRequestMessage as a OrchestratorChatChatCompletionRequestDeveloperMessage
+func (t OrchestratorChatChatCompletionRequestMessage) AsOrchestratorChatChatCompletionRequestDeveloperMessage() (OrchestratorChatChatCompletionRequestDeveloperMessage, error) {
+	var body OrchestratorChatChatCompletionRequestDeveloperMessage
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatChatCompletionRequestDeveloperMessage overwrites any union data inside the OrchestratorChatChatCompletionRequestMessage as the provided OrchestratorChatChatCompletionRequestDeveloperMessage
+func (t *OrchestratorChatChatCompletionRequestMessage) FromOrchestratorChatChatCompletionRequestDeveloperMessage(v OrchestratorChatChatCompletionRequestDeveloperMessage) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"role":"OrchestratorChatChatCompletionRequestDeveloperMessage"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatChatCompletionRequestDeveloperMessage performs a merge with any union data inside the OrchestratorChatChatCompletionRequestMessage, using the provided OrchestratorChatChatCompletionRequestDeveloperMessage
+func (t *OrchestratorChatChatCompletionRequestMessage) MergeOrchestratorChatChatCompletionRequestDeveloperMessage(v OrchestratorChatChatCompletionRequestDeveloperMessage) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"role":"OrchestratorChatChatCompletionRequestDeveloperMessage"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorChatChatCompletionRequestSystemMessage returns the union data inside the OrchestratorChatChatCompletionRequestMessage as a OrchestratorChatChatCompletionRequestSystemMessage
+func (t OrchestratorChatChatCompletionRequestMessage) AsOrchestratorChatChatCompletionRequestSystemMessage() (OrchestratorChatChatCompletionRequestSystemMessage, error) {
+	var body OrchestratorChatChatCompletionRequestSystemMessage
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatChatCompletionRequestSystemMessage overwrites any union data inside the OrchestratorChatChatCompletionRequestMessage as the provided OrchestratorChatChatCompletionRequestSystemMessage
+func (t *OrchestratorChatChatCompletionRequestMessage) FromOrchestratorChatChatCompletionRequestSystemMessage(v OrchestratorChatChatCompletionRequestSystemMessage) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"role":"OrchestratorChatChatCompletionRequestSystemMessage"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatChatCompletionRequestSystemMessage performs a merge with any union data inside the OrchestratorChatChatCompletionRequestMessage, using the provided OrchestratorChatChatCompletionRequestSystemMessage
+func (t *OrchestratorChatChatCompletionRequestMessage) MergeOrchestratorChatChatCompletionRequestSystemMessage(v OrchestratorChatChatCompletionRequestSystemMessage) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"role":"OrchestratorChatChatCompletionRequestSystemMessage"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorChatChatCompletionRequestUserMessage returns the union data inside the OrchestratorChatChatCompletionRequestMessage as a OrchestratorChatChatCompletionRequestUserMessage
+func (t OrchestratorChatChatCompletionRequestMessage) AsOrchestratorChatChatCompletionRequestUserMessage() (OrchestratorChatChatCompletionRequestUserMessage, error) {
+	var body OrchestratorChatChatCompletionRequestUserMessage
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatChatCompletionRequestUserMessage overwrites any union data inside the OrchestratorChatChatCompletionRequestMessage as the provided OrchestratorChatChatCompletionRequestUserMessage
+func (t *OrchestratorChatChatCompletionRequestMessage) FromOrchestratorChatChatCompletionRequestUserMessage(v OrchestratorChatChatCompletionRequestUserMessage) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"role":"OrchestratorChatChatCompletionRequestUserMessage"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatChatCompletionRequestUserMessage performs a merge with any union data inside the OrchestratorChatChatCompletionRequestMessage, using the provided OrchestratorChatChatCompletionRequestUserMessage
+func (t *OrchestratorChatChatCompletionRequestMessage) MergeOrchestratorChatChatCompletionRequestUserMessage(v OrchestratorChatChatCompletionRequestUserMessage) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"role":"OrchestratorChatChatCompletionRequestUserMessage"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorChatChatCompletionRequestAssistantMessage returns the union data inside the OrchestratorChatChatCompletionRequestMessage as a OrchestratorChatChatCompletionRequestAssistantMessage
+func (t OrchestratorChatChatCompletionRequestMessage) AsOrchestratorChatChatCompletionRequestAssistantMessage() (OrchestratorChatChatCompletionRequestAssistantMessage, error) {
+	var body OrchestratorChatChatCompletionRequestAssistantMessage
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatChatCompletionRequestAssistantMessage overwrites any union data inside the OrchestratorChatChatCompletionRequestMessage as the provided OrchestratorChatChatCompletionRequestAssistantMessage
+func (t *OrchestratorChatChatCompletionRequestMessage) FromOrchestratorChatChatCompletionRequestAssistantMessage(v OrchestratorChatChatCompletionRequestAssistantMessage) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"role":"OrchestratorChatChatCompletionRequestAssistantMessage"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatChatCompletionRequestAssistantMessage performs a merge with any union data inside the OrchestratorChatChatCompletionRequestMessage, using the provided OrchestratorChatChatCompletionRequestAssistantMessage
+func (t *OrchestratorChatChatCompletionRequestMessage) MergeOrchestratorChatChatCompletionRequestAssistantMessage(v OrchestratorChatChatCompletionRequestAssistantMessage) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"role":"OrchestratorChatChatCompletionRequestAssistantMessage"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorChatChatCompletionRequestToolMessage returns the union data inside the OrchestratorChatChatCompletionRequestMessage as a OrchestratorChatChatCompletionRequestToolMessage
+func (t OrchestratorChatChatCompletionRequestMessage) AsOrchestratorChatChatCompletionRequestToolMessage() (OrchestratorChatChatCompletionRequestToolMessage, error) {
+	var body OrchestratorChatChatCompletionRequestToolMessage
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatChatCompletionRequestToolMessage overwrites any union data inside the OrchestratorChatChatCompletionRequestMessage as the provided OrchestratorChatChatCompletionRequestToolMessage
+func (t *OrchestratorChatChatCompletionRequestMessage) FromOrchestratorChatChatCompletionRequestToolMessage(v OrchestratorChatChatCompletionRequestToolMessage) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"role":"OrchestratorChatChatCompletionRequestToolMessage"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatChatCompletionRequestToolMessage performs a merge with any union data inside the OrchestratorChatChatCompletionRequestMessage, using the provided OrchestratorChatChatCompletionRequestToolMessage
+func (t *OrchestratorChatChatCompletionRequestMessage) MergeOrchestratorChatChatCompletionRequestToolMessage(v OrchestratorChatChatCompletionRequestToolMessage) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"role":"OrchestratorChatChatCompletionRequestToolMessage"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorChatChatCompletionRequestFunctionMessage returns the union data inside the OrchestratorChatChatCompletionRequestMessage as a OrchestratorChatChatCompletionRequestFunctionMessage
+func (t OrchestratorChatChatCompletionRequestMessage) AsOrchestratorChatChatCompletionRequestFunctionMessage() (OrchestratorChatChatCompletionRequestFunctionMessage, error) {
+	var body OrchestratorChatChatCompletionRequestFunctionMessage
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatChatCompletionRequestFunctionMessage overwrites any union data inside the OrchestratorChatChatCompletionRequestMessage as the provided OrchestratorChatChatCompletionRequestFunctionMessage
+func (t *OrchestratorChatChatCompletionRequestMessage) FromOrchestratorChatChatCompletionRequestFunctionMessage(v OrchestratorChatChatCompletionRequestFunctionMessage) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"role":"OrchestratorChatChatCompletionRequestFunctionMessage"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatChatCompletionRequestFunctionMessage performs a merge with any union data inside the OrchestratorChatChatCompletionRequestMessage, using the provided OrchestratorChatChatCompletionRequestFunctionMessage
+func (t *OrchestratorChatChatCompletionRequestMessage) MergeOrchestratorChatChatCompletionRequestFunctionMessage(v OrchestratorChatChatCompletionRequestFunctionMessage) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"role":"OrchestratorChatChatCompletionRequestFunctionMessage"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorChatChatCompletionRequestMessage) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"role"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t OrchestratorChatChatCompletionRequestMessage) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "OrchestratorChatChatCompletionRequestAssistantMessage":
+		return t.AsOrchestratorChatChatCompletionRequestAssistantMessage()
+	case "OrchestratorChatChatCompletionRequestDeveloperMessage":
+		return t.AsOrchestratorChatChatCompletionRequestDeveloperMessage()
+	case "OrchestratorChatChatCompletionRequestFunctionMessage":
+		return t.AsOrchestratorChatChatCompletionRequestFunctionMessage()
+	case "OrchestratorChatChatCompletionRequestSystemMessage":
+		return t.AsOrchestratorChatChatCompletionRequestSystemMessage()
+	case "OrchestratorChatChatCompletionRequestToolMessage":
+		return t.AsOrchestratorChatChatCompletionRequestToolMessage()
+	case "OrchestratorChatChatCompletionRequestUserMessage":
+		return t.AsOrchestratorChatChatCompletionRequestUserMessage()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t OrchestratorChatChatCompletionRequestMessage) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorChatChatCompletionRequestMessage) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorChatChatCompletionRequestSystemMessageContent0 returns the union data inside the OrchestratorChatChatCompletionRequestSystemMessage_Content as a OrchestratorChatChatCompletionRequestSystemMessageContent0
+func (t OrchestratorChatChatCompletionRequestSystemMessage_Content) AsOrchestratorChatChatCompletionRequestSystemMessageContent0() (OrchestratorChatChatCompletionRequestSystemMessageContent0, error) {
+	var body OrchestratorChatChatCompletionRequestSystemMessageContent0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatChatCompletionRequestSystemMessageContent0 overwrites any union data inside the OrchestratorChatChatCompletionRequestSystemMessage_Content as the provided OrchestratorChatChatCompletionRequestSystemMessageContent0
+func (t *OrchestratorChatChatCompletionRequestSystemMessage_Content) FromOrchestratorChatChatCompletionRequestSystemMessageContent0(v OrchestratorChatChatCompletionRequestSystemMessageContent0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatChatCompletionRequestSystemMessageContent0 performs a merge with any union data inside the OrchestratorChatChatCompletionRequestSystemMessage_Content, using the provided OrchestratorChatChatCompletionRequestSystemMessageContent0
+func (t *OrchestratorChatChatCompletionRequestSystemMessage_Content) MergeOrchestratorChatChatCompletionRequestSystemMessageContent0(v OrchestratorChatChatCompletionRequestSystemMessageContent0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorChatChatCompletionRequestSystemMessageContent1 returns the union data inside the OrchestratorChatChatCompletionRequestSystemMessage_Content as a OrchestratorChatChatCompletionRequestSystemMessageContent1
+func (t OrchestratorChatChatCompletionRequestSystemMessage_Content) AsOrchestratorChatChatCompletionRequestSystemMessageContent1() (OrchestratorChatChatCompletionRequestSystemMessageContent1, error) {
+	var body OrchestratorChatChatCompletionRequestSystemMessageContent1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatChatCompletionRequestSystemMessageContent1 overwrites any union data inside the OrchestratorChatChatCompletionRequestSystemMessage_Content as the provided OrchestratorChatChatCompletionRequestSystemMessageContent1
+func (t *OrchestratorChatChatCompletionRequestSystemMessage_Content) FromOrchestratorChatChatCompletionRequestSystemMessageContent1(v OrchestratorChatChatCompletionRequestSystemMessageContent1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatChatCompletionRequestSystemMessageContent1 performs a merge with any union data inside the OrchestratorChatChatCompletionRequestSystemMessage_Content, using the provided OrchestratorChatChatCompletionRequestSystemMessageContent1
+func (t *OrchestratorChatChatCompletionRequestSystemMessage_Content) MergeOrchestratorChatChatCompletionRequestSystemMessageContent1(v OrchestratorChatChatCompletionRequestSystemMessageContent1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorChatChatCompletionRequestSystemMessage_Content) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorChatChatCompletionRequestSystemMessage_Content) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorChatChatCompletionRequestMessageContentPartText returns the union data inside the OrchestratorChatChatCompletionRequestSystemMessageContentPart as a OrchestratorChatChatCompletionRequestMessageContentPartText
+func (t OrchestratorChatChatCompletionRequestSystemMessageContentPart) AsOrchestratorChatChatCompletionRequestMessageContentPartText() (OrchestratorChatChatCompletionRequestMessageContentPartText, error) {
+	var body OrchestratorChatChatCompletionRequestMessageContentPartText
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatChatCompletionRequestMessageContentPartText overwrites any union data inside the OrchestratorChatChatCompletionRequestSystemMessageContentPart as the provided OrchestratorChatChatCompletionRequestMessageContentPartText
+func (t *OrchestratorChatChatCompletionRequestSystemMessageContentPart) FromOrchestratorChatChatCompletionRequestMessageContentPartText(v OrchestratorChatChatCompletionRequestMessageContentPartText) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatChatCompletionRequestMessageContentPartText performs a merge with any union data inside the OrchestratorChatChatCompletionRequestSystemMessageContentPart, using the provided OrchestratorChatChatCompletionRequestMessageContentPartText
+func (t *OrchestratorChatChatCompletionRequestSystemMessageContentPart) MergeOrchestratorChatChatCompletionRequestMessageContentPartText(v OrchestratorChatChatCompletionRequestMessageContentPartText) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorChatChatCompletionRequestSystemMessageContentPart) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorChatChatCompletionRequestSystemMessageContentPart) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorChatChatCompletionRequestToolMessageContent0 returns the union data inside the OrchestratorChatChatCompletionRequestToolMessage_Content as a OrchestratorChatChatCompletionRequestToolMessageContent0
+func (t OrchestratorChatChatCompletionRequestToolMessage_Content) AsOrchestratorChatChatCompletionRequestToolMessageContent0() (OrchestratorChatChatCompletionRequestToolMessageContent0, error) {
+	var body OrchestratorChatChatCompletionRequestToolMessageContent0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatChatCompletionRequestToolMessageContent0 overwrites any union data inside the OrchestratorChatChatCompletionRequestToolMessage_Content as the provided OrchestratorChatChatCompletionRequestToolMessageContent0
+func (t *OrchestratorChatChatCompletionRequestToolMessage_Content) FromOrchestratorChatChatCompletionRequestToolMessageContent0(v OrchestratorChatChatCompletionRequestToolMessageContent0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatChatCompletionRequestToolMessageContent0 performs a merge with any union data inside the OrchestratorChatChatCompletionRequestToolMessage_Content, using the provided OrchestratorChatChatCompletionRequestToolMessageContent0
+func (t *OrchestratorChatChatCompletionRequestToolMessage_Content) MergeOrchestratorChatChatCompletionRequestToolMessageContent0(v OrchestratorChatChatCompletionRequestToolMessageContent0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorChatChatCompletionRequestToolMessageContent1 returns the union data inside the OrchestratorChatChatCompletionRequestToolMessage_Content as a OrchestratorChatChatCompletionRequestToolMessageContent1
+func (t OrchestratorChatChatCompletionRequestToolMessage_Content) AsOrchestratorChatChatCompletionRequestToolMessageContent1() (OrchestratorChatChatCompletionRequestToolMessageContent1, error) {
+	var body OrchestratorChatChatCompletionRequestToolMessageContent1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatChatCompletionRequestToolMessageContent1 overwrites any union data inside the OrchestratorChatChatCompletionRequestToolMessage_Content as the provided OrchestratorChatChatCompletionRequestToolMessageContent1
+func (t *OrchestratorChatChatCompletionRequestToolMessage_Content) FromOrchestratorChatChatCompletionRequestToolMessageContent1(v OrchestratorChatChatCompletionRequestToolMessageContent1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatChatCompletionRequestToolMessageContent1 performs a merge with any union data inside the OrchestratorChatChatCompletionRequestToolMessage_Content, using the provided OrchestratorChatChatCompletionRequestToolMessageContent1
+func (t *OrchestratorChatChatCompletionRequestToolMessage_Content) MergeOrchestratorChatChatCompletionRequestToolMessageContent1(v OrchestratorChatChatCompletionRequestToolMessageContent1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorChatChatCompletionRequestToolMessage_Content) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorChatChatCompletionRequestToolMessage_Content) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorChatChatCompletionRequestMessageContentPartText returns the union data inside the OrchestratorChatChatCompletionRequestToolMessageContentPart as a OrchestratorChatChatCompletionRequestMessageContentPartText
+func (t OrchestratorChatChatCompletionRequestToolMessageContentPart) AsOrchestratorChatChatCompletionRequestMessageContentPartText() (OrchestratorChatChatCompletionRequestMessageContentPartText, error) {
+	var body OrchestratorChatChatCompletionRequestMessageContentPartText
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatChatCompletionRequestMessageContentPartText overwrites any union data inside the OrchestratorChatChatCompletionRequestToolMessageContentPart as the provided OrchestratorChatChatCompletionRequestMessageContentPartText
+func (t *OrchestratorChatChatCompletionRequestToolMessageContentPart) FromOrchestratorChatChatCompletionRequestMessageContentPartText(v OrchestratorChatChatCompletionRequestMessageContentPartText) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatChatCompletionRequestMessageContentPartText performs a merge with any union data inside the OrchestratorChatChatCompletionRequestToolMessageContentPart, using the provided OrchestratorChatChatCompletionRequestMessageContentPartText
+func (t *OrchestratorChatChatCompletionRequestToolMessageContentPart) MergeOrchestratorChatChatCompletionRequestMessageContentPartText(v OrchestratorChatChatCompletionRequestMessageContentPartText) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorChatChatCompletionRequestToolMessageContentPart) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorChatChatCompletionRequestToolMessageContentPart) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorChatChatCompletionRequestUserMessageContent0 returns the union data inside the OrchestratorChatChatCompletionRequestUserMessage_Content as a OrchestratorChatChatCompletionRequestUserMessageContent0
+func (t OrchestratorChatChatCompletionRequestUserMessage_Content) AsOrchestratorChatChatCompletionRequestUserMessageContent0() (OrchestratorChatChatCompletionRequestUserMessageContent0, error) {
+	var body OrchestratorChatChatCompletionRequestUserMessageContent0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatChatCompletionRequestUserMessageContent0 overwrites any union data inside the OrchestratorChatChatCompletionRequestUserMessage_Content as the provided OrchestratorChatChatCompletionRequestUserMessageContent0
+func (t *OrchestratorChatChatCompletionRequestUserMessage_Content) FromOrchestratorChatChatCompletionRequestUserMessageContent0(v OrchestratorChatChatCompletionRequestUserMessageContent0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatChatCompletionRequestUserMessageContent0 performs a merge with any union data inside the OrchestratorChatChatCompletionRequestUserMessage_Content, using the provided OrchestratorChatChatCompletionRequestUserMessageContent0
+func (t *OrchestratorChatChatCompletionRequestUserMessage_Content) MergeOrchestratorChatChatCompletionRequestUserMessageContent0(v OrchestratorChatChatCompletionRequestUserMessageContent0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorChatChatCompletionRequestUserMessageContent1 returns the union data inside the OrchestratorChatChatCompletionRequestUserMessage_Content as a OrchestratorChatChatCompletionRequestUserMessageContent1
+func (t OrchestratorChatChatCompletionRequestUserMessage_Content) AsOrchestratorChatChatCompletionRequestUserMessageContent1() (OrchestratorChatChatCompletionRequestUserMessageContent1, error) {
+	var body OrchestratorChatChatCompletionRequestUserMessageContent1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatChatCompletionRequestUserMessageContent1 overwrites any union data inside the OrchestratorChatChatCompletionRequestUserMessage_Content as the provided OrchestratorChatChatCompletionRequestUserMessageContent1
+func (t *OrchestratorChatChatCompletionRequestUserMessage_Content) FromOrchestratorChatChatCompletionRequestUserMessageContent1(v OrchestratorChatChatCompletionRequestUserMessageContent1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatChatCompletionRequestUserMessageContent1 performs a merge with any union data inside the OrchestratorChatChatCompletionRequestUserMessage_Content, using the provided OrchestratorChatChatCompletionRequestUserMessageContent1
+func (t *OrchestratorChatChatCompletionRequestUserMessage_Content) MergeOrchestratorChatChatCompletionRequestUserMessageContent1(v OrchestratorChatChatCompletionRequestUserMessageContent1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorChatChatCompletionRequestUserMessage_Content) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorChatChatCompletionRequestUserMessage_Content) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorChatChatCompletionRequestMessageContentPartText returns the union data inside the OrchestratorChatChatCompletionRequestUserMessageContentPart as a OrchestratorChatChatCompletionRequestMessageContentPartText
+func (t OrchestratorChatChatCompletionRequestUserMessageContentPart) AsOrchestratorChatChatCompletionRequestMessageContentPartText() (OrchestratorChatChatCompletionRequestMessageContentPartText, error) {
+	var body OrchestratorChatChatCompletionRequestMessageContentPartText
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatChatCompletionRequestMessageContentPartText overwrites any union data inside the OrchestratorChatChatCompletionRequestUserMessageContentPart as the provided OrchestratorChatChatCompletionRequestMessageContentPartText
+func (t *OrchestratorChatChatCompletionRequestUserMessageContentPart) FromOrchestratorChatChatCompletionRequestMessageContentPartText(v OrchestratorChatChatCompletionRequestMessageContentPartText) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatChatCompletionRequestMessageContentPartText performs a merge with any union data inside the OrchestratorChatChatCompletionRequestUserMessageContentPart, using the provided OrchestratorChatChatCompletionRequestMessageContentPartText
+func (t *OrchestratorChatChatCompletionRequestUserMessageContentPart) MergeOrchestratorChatChatCompletionRequestMessageContentPartText(v OrchestratorChatChatCompletionRequestMessageContentPartText) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorChatChatCompletionRequestMessageContentPartImage returns the union data inside the OrchestratorChatChatCompletionRequestUserMessageContentPart as a OrchestratorChatChatCompletionRequestMessageContentPartImage
+func (t OrchestratorChatChatCompletionRequestUserMessageContentPart) AsOrchestratorChatChatCompletionRequestMessageContentPartImage() (OrchestratorChatChatCompletionRequestMessageContentPartImage, error) {
+	var body OrchestratorChatChatCompletionRequestMessageContentPartImage
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatChatCompletionRequestMessageContentPartImage overwrites any union data inside the OrchestratorChatChatCompletionRequestUserMessageContentPart as the provided OrchestratorChatChatCompletionRequestMessageContentPartImage
+func (t *OrchestratorChatChatCompletionRequestUserMessageContentPart) FromOrchestratorChatChatCompletionRequestMessageContentPartImage(v OrchestratorChatChatCompletionRequestMessageContentPartImage) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatChatCompletionRequestMessageContentPartImage performs a merge with any union data inside the OrchestratorChatChatCompletionRequestUserMessageContentPart, using the provided OrchestratorChatChatCompletionRequestMessageContentPartImage
+func (t *OrchestratorChatChatCompletionRequestUserMessageContentPart) MergeOrchestratorChatChatCompletionRequestMessageContentPartImage(v OrchestratorChatChatCompletionRequestMessageContentPartImage) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorChatChatCompletionRequestMessageContentPartAudio returns the union data inside the OrchestratorChatChatCompletionRequestUserMessageContentPart as a OrchestratorChatChatCompletionRequestMessageContentPartAudio
+func (t OrchestratorChatChatCompletionRequestUserMessageContentPart) AsOrchestratorChatChatCompletionRequestMessageContentPartAudio() (OrchestratorChatChatCompletionRequestMessageContentPartAudio, error) {
+	var body OrchestratorChatChatCompletionRequestMessageContentPartAudio
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatChatCompletionRequestMessageContentPartAudio overwrites any union data inside the OrchestratorChatChatCompletionRequestUserMessageContentPart as the provided OrchestratorChatChatCompletionRequestMessageContentPartAudio
+func (t *OrchestratorChatChatCompletionRequestUserMessageContentPart) FromOrchestratorChatChatCompletionRequestMessageContentPartAudio(v OrchestratorChatChatCompletionRequestMessageContentPartAudio) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatChatCompletionRequestMessageContentPartAudio performs a merge with any union data inside the OrchestratorChatChatCompletionRequestUserMessageContentPart, using the provided OrchestratorChatChatCompletionRequestMessageContentPartAudio
+func (t *OrchestratorChatChatCompletionRequestUserMessageContentPart) MergeOrchestratorChatChatCompletionRequestMessageContentPartAudio(v OrchestratorChatChatCompletionRequestMessageContentPartAudio) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorChatChatCompletionRequestMessageContentPartFile returns the union data inside the OrchestratorChatChatCompletionRequestUserMessageContentPart as a OrchestratorChatChatCompletionRequestMessageContentPartFile
+func (t OrchestratorChatChatCompletionRequestUserMessageContentPart) AsOrchestratorChatChatCompletionRequestMessageContentPartFile() (OrchestratorChatChatCompletionRequestMessageContentPartFile, error) {
+	var body OrchestratorChatChatCompletionRequestMessageContentPartFile
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatChatCompletionRequestMessageContentPartFile overwrites any union data inside the OrchestratorChatChatCompletionRequestUserMessageContentPart as the provided OrchestratorChatChatCompletionRequestMessageContentPartFile
+func (t *OrchestratorChatChatCompletionRequestUserMessageContentPart) FromOrchestratorChatChatCompletionRequestMessageContentPartFile(v OrchestratorChatChatCompletionRequestMessageContentPartFile) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatChatCompletionRequestMessageContentPartFile performs a merge with any union data inside the OrchestratorChatChatCompletionRequestUserMessageContentPart, using the provided OrchestratorChatChatCompletionRequestMessageContentPartFile
+func (t *OrchestratorChatChatCompletionRequestUserMessageContentPart) MergeOrchestratorChatChatCompletionRequestMessageContentPartFile(v OrchestratorChatChatCompletionRequestMessageContentPartFile) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorChatChatCompletionRequestUserMessageContentPart) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorChatChatCompletionRequestUserMessageContentPart) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorChatChatCompletionToolChoiceOption0 returns the union data inside the OrchestratorChatChatCompletionToolChoiceOption as a OrchestratorChatChatCompletionToolChoiceOption0
+func (t OrchestratorChatChatCompletionToolChoiceOption) AsOrchestratorChatChatCompletionToolChoiceOption0() (OrchestratorChatChatCompletionToolChoiceOption0, error) {
+	var body OrchestratorChatChatCompletionToolChoiceOption0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatChatCompletionToolChoiceOption0 overwrites any union data inside the OrchestratorChatChatCompletionToolChoiceOption as the provided OrchestratorChatChatCompletionToolChoiceOption0
+func (t *OrchestratorChatChatCompletionToolChoiceOption) FromOrchestratorChatChatCompletionToolChoiceOption0(v OrchestratorChatChatCompletionToolChoiceOption0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatChatCompletionToolChoiceOption0 performs a merge with any union data inside the OrchestratorChatChatCompletionToolChoiceOption, using the provided OrchestratorChatChatCompletionToolChoiceOption0
+func (t *OrchestratorChatChatCompletionToolChoiceOption) MergeOrchestratorChatChatCompletionToolChoiceOption0(v OrchestratorChatChatCompletionToolChoiceOption0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorChatChatCompletionAllowedToolsChoice returns the union data inside the OrchestratorChatChatCompletionToolChoiceOption as a OrchestratorChatChatCompletionAllowedToolsChoice
+func (t OrchestratorChatChatCompletionToolChoiceOption) AsOrchestratorChatChatCompletionAllowedToolsChoice() (OrchestratorChatChatCompletionAllowedToolsChoice, error) {
+	var body OrchestratorChatChatCompletionAllowedToolsChoice
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatChatCompletionAllowedToolsChoice overwrites any union data inside the OrchestratorChatChatCompletionToolChoiceOption as the provided OrchestratorChatChatCompletionAllowedToolsChoice
+func (t *OrchestratorChatChatCompletionToolChoiceOption) FromOrchestratorChatChatCompletionAllowedToolsChoice(v OrchestratorChatChatCompletionAllowedToolsChoice) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatChatCompletionAllowedToolsChoice performs a merge with any union data inside the OrchestratorChatChatCompletionToolChoiceOption, using the provided OrchestratorChatChatCompletionAllowedToolsChoice
+func (t *OrchestratorChatChatCompletionToolChoiceOption) MergeOrchestratorChatChatCompletionAllowedToolsChoice(v OrchestratorChatChatCompletionAllowedToolsChoice) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorChatChatCompletionNamedToolChoice returns the union data inside the OrchestratorChatChatCompletionToolChoiceOption as a OrchestratorChatChatCompletionNamedToolChoice
+func (t OrchestratorChatChatCompletionToolChoiceOption) AsOrchestratorChatChatCompletionNamedToolChoice() (OrchestratorChatChatCompletionNamedToolChoice, error) {
+	var body OrchestratorChatChatCompletionNamedToolChoice
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatChatCompletionNamedToolChoice overwrites any union data inside the OrchestratorChatChatCompletionToolChoiceOption as the provided OrchestratorChatChatCompletionNamedToolChoice
+func (t *OrchestratorChatChatCompletionToolChoiceOption) FromOrchestratorChatChatCompletionNamedToolChoice(v OrchestratorChatChatCompletionNamedToolChoice) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatChatCompletionNamedToolChoice performs a merge with any union data inside the OrchestratorChatChatCompletionToolChoiceOption, using the provided OrchestratorChatChatCompletionNamedToolChoice
+func (t *OrchestratorChatChatCompletionToolChoiceOption) MergeOrchestratorChatChatCompletionNamedToolChoice(v OrchestratorChatChatCompletionNamedToolChoice) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorChatChatCompletionNamedToolChoiceCustom returns the union data inside the OrchestratorChatChatCompletionToolChoiceOption as a OrchestratorChatChatCompletionNamedToolChoiceCustom
+func (t OrchestratorChatChatCompletionToolChoiceOption) AsOrchestratorChatChatCompletionNamedToolChoiceCustom() (OrchestratorChatChatCompletionNamedToolChoiceCustom, error) {
+	var body OrchestratorChatChatCompletionNamedToolChoiceCustom
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatChatCompletionNamedToolChoiceCustom overwrites any union data inside the OrchestratorChatChatCompletionToolChoiceOption as the provided OrchestratorChatChatCompletionNamedToolChoiceCustom
+func (t *OrchestratorChatChatCompletionToolChoiceOption) FromOrchestratorChatChatCompletionNamedToolChoiceCustom(v OrchestratorChatChatCompletionNamedToolChoiceCustom) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatChatCompletionNamedToolChoiceCustom performs a merge with any union data inside the OrchestratorChatChatCompletionToolChoiceOption, using the provided OrchestratorChatChatCompletionNamedToolChoiceCustom
+func (t *OrchestratorChatChatCompletionToolChoiceOption) MergeOrchestratorChatChatCompletionNamedToolChoiceCustom(v OrchestratorChatChatCompletionNamedToolChoiceCustom) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorChatChatCompletionToolChoiceOption) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorChatChatCompletionToolChoiceOption) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorChatResponseFormatText returns the union data inside the OrchestratorChatCreateChatCompletionRequest_ResponseFormat as a OrchestratorChatResponseFormatText
+func (t OrchestratorChatCreateChatCompletionRequest_ResponseFormat) AsOrchestratorChatResponseFormatText() (OrchestratorChatResponseFormatText, error) {
+	var body OrchestratorChatResponseFormatText
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatResponseFormatText overwrites any union data inside the OrchestratorChatCreateChatCompletionRequest_ResponseFormat as the provided OrchestratorChatResponseFormatText
+func (t *OrchestratorChatCreateChatCompletionRequest_ResponseFormat) FromOrchestratorChatResponseFormatText(v OrchestratorChatResponseFormatText) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorChatResponseFormatText"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatResponseFormatText performs a merge with any union data inside the OrchestratorChatCreateChatCompletionRequest_ResponseFormat, using the provided OrchestratorChatResponseFormatText
+func (t *OrchestratorChatCreateChatCompletionRequest_ResponseFormat) MergeOrchestratorChatResponseFormatText(v OrchestratorChatResponseFormatText) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorChatResponseFormatText"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorChatResponseFormatJsonSchema returns the union data inside the OrchestratorChatCreateChatCompletionRequest_ResponseFormat as a OrchestratorChatResponseFormatJsonSchema
+func (t OrchestratorChatCreateChatCompletionRequest_ResponseFormat) AsOrchestratorChatResponseFormatJsonSchema() (OrchestratorChatResponseFormatJsonSchema, error) {
+	var body OrchestratorChatResponseFormatJsonSchema
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatResponseFormatJsonSchema overwrites any union data inside the OrchestratorChatCreateChatCompletionRequest_ResponseFormat as the provided OrchestratorChatResponseFormatJsonSchema
+func (t *OrchestratorChatCreateChatCompletionRequest_ResponseFormat) FromOrchestratorChatResponseFormatJsonSchema(v OrchestratorChatResponseFormatJsonSchema) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorChatResponseFormatJsonSchema"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatResponseFormatJsonSchema performs a merge with any union data inside the OrchestratorChatCreateChatCompletionRequest_ResponseFormat, using the provided OrchestratorChatResponseFormatJsonSchema
+func (t *OrchestratorChatCreateChatCompletionRequest_ResponseFormat) MergeOrchestratorChatResponseFormatJsonSchema(v OrchestratorChatResponseFormatJsonSchema) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorChatResponseFormatJsonSchema"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorChatResponseFormatJsonObject returns the union data inside the OrchestratorChatCreateChatCompletionRequest_ResponseFormat as a OrchestratorChatResponseFormatJsonObject
+func (t OrchestratorChatCreateChatCompletionRequest_ResponseFormat) AsOrchestratorChatResponseFormatJsonObject() (OrchestratorChatResponseFormatJsonObject, error) {
+	var body OrchestratorChatResponseFormatJsonObject
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatResponseFormatJsonObject overwrites any union data inside the OrchestratorChatCreateChatCompletionRequest_ResponseFormat as the provided OrchestratorChatResponseFormatJsonObject
+func (t *OrchestratorChatCreateChatCompletionRequest_ResponseFormat) FromOrchestratorChatResponseFormatJsonObject(v OrchestratorChatResponseFormatJsonObject) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorChatResponseFormatJsonObject"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatResponseFormatJsonObject performs a merge with any union data inside the OrchestratorChatCreateChatCompletionRequest_ResponseFormat, using the provided OrchestratorChatResponseFormatJsonObject
+func (t *OrchestratorChatCreateChatCompletionRequest_ResponseFormat) MergeOrchestratorChatResponseFormatJsonObject(v OrchestratorChatResponseFormatJsonObject) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorChatResponseFormatJsonObject"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorChatCreateChatCompletionRequest_ResponseFormat) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t OrchestratorChatCreateChatCompletionRequest_ResponseFormat) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "OrchestratorChatResponseFormatJsonObject":
+		return t.AsOrchestratorChatResponseFormatJsonObject()
+	case "OrchestratorChatResponseFormatJsonSchema":
+		return t.AsOrchestratorChatResponseFormatJsonSchema()
+	case "OrchestratorChatResponseFormatText":
+		return t.AsOrchestratorChatResponseFormatText()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t OrchestratorChatCreateChatCompletionRequest_ResponseFormat) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorChatCreateChatCompletionRequest_ResponseFormat) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorRouting returns the union data inside the OrchestratorChatCreateChatCompletionRequest_Routing as a OrchestratorRouting
+func (t OrchestratorChatCreateChatCompletionRequest_Routing) AsOrchestratorRouting() (OrchestratorRouting, error) {
+	var body OrchestratorRouting
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorRouting overwrites any union data inside the OrchestratorChatCreateChatCompletionRequest_Routing as the provided OrchestratorRouting
+func (t *OrchestratorChatCreateChatCompletionRequest_Routing) FromOrchestratorRouting(v OrchestratorRouting) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorRouting performs a merge with any union data inside the OrchestratorChatCreateChatCompletionRequest_Routing, using the provided OrchestratorRouting
+func (t *OrchestratorChatCreateChatCompletionRequest_Routing) MergeOrchestratorRouting(v OrchestratorRouting) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorChatCreateChatCompletionRequestRouting1 returns the union data inside the OrchestratorChatCreateChatCompletionRequest_Routing as a OrchestratorChatCreateChatCompletionRequestRouting1
+func (t OrchestratorChatCreateChatCompletionRequest_Routing) AsOrchestratorChatCreateChatCompletionRequestRouting1() (OrchestratorChatCreateChatCompletionRequestRouting1, error) {
+	var body OrchestratorChatCreateChatCompletionRequestRouting1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatCreateChatCompletionRequestRouting1 overwrites any union data inside the OrchestratorChatCreateChatCompletionRequest_Routing as the provided OrchestratorChatCreateChatCompletionRequestRouting1
+func (t *OrchestratorChatCreateChatCompletionRequest_Routing) FromOrchestratorChatCreateChatCompletionRequestRouting1(v OrchestratorChatCreateChatCompletionRequestRouting1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatCreateChatCompletionRequestRouting1 performs a merge with any union data inside the OrchestratorChatCreateChatCompletionRequest_Routing, using the provided OrchestratorChatCreateChatCompletionRequestRouting1
+func (t *OrchestratorChatCreateChatCompletionRequest_Routing) MergeOrchestratorChatCreateChatCompletionRequestRouting1(v OrchestratorChatCreateChatCompletionRequestRouting1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorChatCreateChatCompletionRequest_Routing) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorChatCreateChatCompletionRequest_Routing) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorChatChatCompletionTool returns the union data inside the OrchestratorChatCreateChatCompletionRequest_Tools_Item as a OrchestratorChatChatCompletionTool
+func (t OrchestratorChatCreateChatCompletionRequest_Tools_Item) AsOrchestratorChatChatCompletionTool() (OrchestratorChatChatCompletionTool, error) {
+	var body OrchestratorChatChatCompletionTool
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatChatCompletionTool overwrites any union data inside the OrchestratorChatCreateChatCompletionRequest_Tools_Item as the provided OrchestratorChatChatCompletionTool
+func (t *OrchestratorChatCreateChatCompletionRequest_Tools_Item) FromOrchestratorChatChatCompletionTool(v OrchestratorChatChatCompletionTool) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatChatCompletionTool performs a merge with any union data inside the OrchestratorChatCreateChatCompletionRequest_Tools_Item, using the provided OrchestratorChatChatCompletionTool
+func (t *OrchestratorChatCreateChatCompletionRequest_Tools_Item) MergeOrchestratorChatChatCompletionTool(v OrchestratorChatChatCompletionTool) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorChatCustomToolChatCompletions returns the union data inside the OrchestratorChatCreateChatCompletionRequest_Tools_Item as a OrchestratorChatCustomToolChatCompletions
+func (t OrchestratorChatCreateChatCompletionRequest_Tools_Item) AsOrchestratorChatCustomToolChatCompletions() (OrchestratorChatCustomToolChatCompletions, error) {
+	var body OrchestratorChatCustomToolChatCompletions
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatCustomToolChatCompletions overwrites any union data inside the OrchestratorChatCreateChatCompletionRequest_Tools_Item as the provided OrchestratorChatCustomToolChatCompletions
+func (t *OrchestratorChatCreateChatCompletionRequest_Tools_Item) FromOrchestratorChatCustomToolChatCompletions(v OrchestratorChatCustomToolChatCompletions) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatCustomToolChatCompletions performs a merge with any union data inside the OrchestratorChatCreateChatCompletionRequest_Tools_Item, using the provided OrchestratorChatCustomToolChatCompletions
+func (t *OrchestratorChatCreateChatCompletionRequest_Tools_Item) MergeOrchestratorChatCustomToolChatCompletions(v OrchestratorChatCustomToolChatCompletions) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorChatCreateChatCompletionRequest_Tools_Item) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorChatCreateChatCompletionRequest_Tools_Item) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorChatChatCompletionModeration returns the union data inside the OrchestratorChatCreateChatCompletionResponse_Moderation as a OrchestratorChatChatCompletionModeration
+func (t OrchestratorChatCreateChatCompletionResponse_Moderation) AsOrchestratorChatChatCompletionModeration() (OrchestratorChatChatCompletionModeration, error) {
+	var body OrchestratorChatChatCompletionModeration
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatChatCompletionModeration overwrites any union data inside the OrchestratorChatCreateChatCompletionResponse_Moderation as the provided OrchestratorChatChatCompletionModeration
+func (t *OrchestratorChatCreateChatCompletionResponse_Moderation) FromOrchestratorChatChatCompletionModeration(v OrchestratorChatChatCompletionModeration) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatChatCompletionModeration performs a merge with any union data inside the OrchestratorChatCreateChatCompletionResponse_Moderation, using the provided OrchestratorChatChatCompletionModeration
+func (t *OrchestratorChatCreateChatCompletionResponse_Moderation) MergeOrchestratorChatChatCompletionModeration(v OrchestratorChatChatCompletionModeration) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorChatCreateChatCompletionResponse_Moderation) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorChatCreateChatCompletionResponse_Moderation) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorChatChatCompletionModeration returns the union data inside the OrchestratorChatCreateChatCompletionStreamResponse_Moderation as a OrchestratorChatChatCompletionModeration
+func (t OrchestratorChatCreateChatCompletionStreamResponse_Moderation) AsOrchestratorChatChatCompletionModeration() (OrchestratorChatChatCompletionModeration, error) {
+	var body OrchestratorChatChatCompletionModeration
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatChatCompletionModeration overwrites any union data inside the OrchestratorChatCreateChatCompletionStreamResponse_Moderation as the provided OrchestratorChatChatCompletionModeration
+func (t *OrchestratorChatCreateChatCompletionStreamResponse_Moderation) FromOrchestratorChatChatCompletionModeration(v OrchestratorChatChatCompletionModeration) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatChatCompletionModeration performs a merge with any union data inside the OrchestratorChatCreateChatCompletionStreamResponse_Moderation, using the provided OrchestratorChatChatCompletionModeration
+func (t *OrchestratorChatCreateChatCompletionStreamResponse_Moderation) MergeOrchestratorChatChatCompletionModeration(v OrchestratorChatChatCompletionModeration) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorChatCreateChatCompletionStreamResponse_Moderation) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorChatCreateChatCompletionStreamResponse_Moderation) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorChatCustomToolChatCompletionsCustomFormat0 returns the union data inside the OrchestratorChatCustomToolChatCompletions_Custom_Format as a OrchestratorChatCustomToolChatCompletionsCustomFormat0
+func (t OrchestratorChatCustomToolChatCompletions_Custom_Format) AsOrchestratorChatCustomToolChatCompletionsCustomFormat0() (OrchestratorChatCustomToolChatCompletionsCustomFormat0, error) {
+	var body OrchestratorChatCustomToolChatCompletionsCustomFormat0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatCustomToolChatCompletionsCustomFormat0 overwrites any union data inside the OrchestratorChatCustomToolChatCompletions_Custom_Format as the provided OrchestratorChatCustomToolChatCompletionsCustomFormat0
+func (t *OrchestratorChatCustomToolChatCompletions_Custom_Format) FromOrchestratorChatCustomToolChatCompletionsCustomFormat0(v OrchestratorChatCustomToolChatCompletionsCustomFormat0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatCustomToolChatCompletionsCustomFormat0 performs a merge with any union data inside the OrchestratorChatCustomToolChatCompletions_Custom_Format, using the provided OrchestratorChatCustomToolChatCompletionsCustomFormat0
+func (t *OrchestratorChatCustomToolChatCompletions_Custom_Format) MergeOrchestratorChatCustomToolChatCompletionsCustomFormat0(v OrchestratorChatCustomToolChatCompletionsCustomFormat0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorChatCustomToolChatCompletionsCustomFormat1 returns the union data inside the OrchestratorChatCustomToolChatCompletions_Custom_Format as a OrchestratorChatCustomToolChatCompletionsCustomFormat1
+func (t OrchestratorChatCustomToolChatCompletions_Custom_Format) AsOrchestratorChatCustomToolChatCompletionsCustomFormat1() (OrchestratorChatCustomToolChatCompletionsCustomFormat1, error) {
+	var body OrchestratorChatCustomToolChatCompletionsCustomFormat1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorChatCustomToolChatCompletionsCustomFormat1 overwrites any union data inside the OrchestratorChatCustomToolChatCompletions_Custom_Format as the provided OrchestratorChatCustomToolChatCompletionsCustomFormat1
+func (t *OrchestratorChatCustomToolChatCompletions_Custom_Format) FromOrchestratorChatCustomToolChatCompletionsCustomFormat1(v OrchestratorChatCustomToolChatCompletionsCustomFormat1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorChatCustomToolChatCompletionsCustomFormat1 performs a merge with any union data inside the OrchestratorChatCustomToolChatCompletions_Custom_Format, using the provided OrchestratorChatCustomToolChatCompletionsCustomFormat1
+func (t *OrchestratorChatCustomToolChatCompletions_Custom_Format) MergeOrchestratorChatCustomToolChatCompletionsCustomFormat1(v OrchestratorChatCustomToolChatCompletionsCustomFormat1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorChatCustomToolChatCompletions_Custom_Format) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorChatCustomToolChatCompletions_Custom_Format) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorMessagesTextBlock returns the union data inside the OrchestratorMessagesContentBlock as a OrchestratorMessagesTextBlock
+func (t OrchestratorMessagesContentBlock) AsOrchestratorMessagesTextBlock() (OrchestratorMessagesTextBlock, error) {
+	var body OrchestratorMessagesTextBlock
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorMessagesTextBlock overwrites any union data inside the OrchestratorMessagesContentBlock as the provided OrchestratorMessagesTextBlock
+func (t *OrchestratorMessagesContentBlock) FromOrchestratorMessagesTextBlock(v OrchestratorMessagesTextBlock) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"text"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorMessagesTextBlock performs a merge with any union data inside the OrchestratorMessagesContentBlock, using the provided OrchestratorMessagesTextBlock
+func (t *OrchestratorMessagesContentBlock) MergeOrchestratorMessagesTextBlock(v OrchestratorMessagesTextBlock) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"text"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorMessagesToolUseBlock returns the union data inside the OrchestratorMessagesContentBlock as a OrchestratorMessagesToolUseBlock
+func (t OrchestratorMessagesContentBlock) AsOrchestratorMessagesToolUseBlock() (OrchestratorMessagesToolUseBlock, error) {
+	var body OrchestratorMessagesToolUseBlock
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorMessagesToolUseBlock overwrites any union data inside the OrchestratorMessagesContentBlock as the provided OrchestratorMessagesToolUseBlock
+func (t *OrchestratorMessagesContentBlock) FromOrchestratorMessagesToolUseBlock(v OrchestratorMessagesToolUseBlock) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"tool_use"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorMessagesToolUseBlock performs a merge with any union data inside the OrchestratorMessagesContentBlock, using the provided OrchestratorMessagesToolUseBlock
+func (t *OrchestratorMessagesContentBlock) MergeOrchestratorMessagesToolUseBlock(v OrchestratorMessagesToolUseBlock) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"tool_use"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorMessagesThinkingBlock returns the union data inside the OrchestratorMessagesContentBlock as a OrchestratorMessagesThinkingBlock
+func (t OrchestratorMessagesContentBlock) AsOrchestratorMessagesThinkingBlock() (OrchestratorMessagesThinkingBlock, error) {
+	var body OrchestratorMessagesThinkingBlock
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorMessagesThinkingBlock overwrites any union data inside the OrchestratorMessagesContentBlock as the provided OrchestratorMessagesThinkingBlock
+func (t *OrchestratorMessagesContentBlock) FromOrchestratorMessagesThinkingBlock(v OrchestratorMessagesThinkingBlock) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"thinking"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorMessagesThinkingBlock performs a merge with any union data inside the OrchestratorMessagesContentBlock, using the provided OrchestratorMessagesThinkingBlock
+func (t *OrchestratorMessagesContentBlock) MergeOrchestratorMessagesThinkingBlock(v OrchestratorMessagesThinkingBlock) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"thinking"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorMessagesContentBlock) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t OrchestratorMessagesContentBlock) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "text":
+		return t.AsOrchestratorMessagesTextBlock()
+	case "thinking":
+		return t.AsOrchestratorMessagesThinkingBlock()
+	case "tool_use":
+		return t.AsOrchestratorMessagesToolUseBlock()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t OrchestratorMessagesContentBlock) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorMessagesContentBlock) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorRouting returns the union data inside the OrchestratorMessagesCreateMessageRequest_Routing as a OrchestratorRouting
+func (t OrchestratorMessagesCreateMessageRequest_Routing) AsOrchestratorRouting() (OrchestratorRouting, error) {
+	var body OrchestratorRouting
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorRouting overwrites any union data inside the OrchestratorMessagesCreateMessageRequest_Routing as the provided OrchestratorRouting
+func (t *OrchestratorMessagesCreateMessageRequest_Routing) FromOrchestratorRouting(v OrchestratorRouting) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorRouting performs a merge with any union data inside the OrchestratorMessagesCreateMessageRequest_Routing, using the provided OrchestratorRouting
+func (t *OrchestratorMessagesCreateMessageRequest_Routing) MergeOrchestratorRouting(v OrchestratorRouting) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorMessagesCreateMessageRequestRouting1 returns the union data inside the OrchestratorMessagesCreateMessageRequest_Routing as a OrchestratorMessagesCreateMessageRequestRouting1
+func (t OrchestratorMessagesCreateMessageRequest_Routing) AsOrchestratorMessagesCreateMessageRequestRouting1() (OrchestratorMessagesCreateMessageRequestRouting1, error) {
+	var body OrchestratorMessagesCreateMessageRequestRouting1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorMessagesCreateMessageRequestRouting1 overwrites any union data inside the OrchestratorMessagesCreateMessageRequest_Routing as the provided OrchestratorMessagesCreateMessageRequestRouting1
+func (t *OrchestratorMessagesCreateMessageRequest_Routing) FromOrchestratorMessagesCreateMessageRequestRouting1(v OrchestratorMessagesCreateMessageRequestRouting1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorMessagesCreateMessageRequestRouting1 performs a merge with any union data inside the OrchestratorMessagesCreateMessageRequest_Routing, using the provided OrchestratorMessagesCreateMessageRequestRouting1
+func (t *OrchestratorMessagesCreateMessageRequest_Routing) MergeOrchestratorMessagesCreateMessageRequestRouting1(v OrchestratorMessagesCreateMessageRequestRouting1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorMessagesCreateMessageRequest_Routing) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorMessagesCreateMessageRequest_Routing) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorMessagesCreateMessageRequestSystem0 returns the union data inside the OrchestratorMessagesCreateMessageRequest_System as a OrchestratorMessagesCreateMessageRequestSystem0
+func (t OrchestratorMessagesCreateMessageRequest_System) AsOrchestratorMessagesCreateMessageRequestSystem0() (OrchestratorMessagesCreateMessageRequestSystem0, error) {
+	var body OrchestratorMessagesCreateMessageRequestSystem0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorMessagesCreateMessageRequestSystem0 overwrites any union data inside the OrchestratorMessagesCreateMessageRequest_System as the provided OrchestratorMessagesCreateMessageRequestSystem0
+func (t *OrchestratorMessagesCreateMessageRequest_System) FromOrchestratorMessagesCreateMessageRequestSystem0(v OrchestratorMessagesCreateMessageRequestSystem0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorMessagesCreateMessageRequestSystem0 performs a merge with any union data inside the OrchestratorMessagesCreateMessageRequest_System, using the provided OrchestratorMessagesCreateMessageRequestSystem0
+func (t *OrchestratorMessagesCreateMessageRequest_System) MergeOrchestratorMessagesCreateMessageRequestSystem0(v OrchestratorMessagesCreateMessageRequestSystem0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorMessagesCreateMessageRequestSystem1 returns the union data inside the OrchestratorMessagesCreateMessageRequest_System as a OrchestratorMessagesCreateMessageRequestSystem1
+func (t OrchestratorMessagesCreateMessageRequest_System) AsOrchestratorMessagesCreateMessageRequestSystem1() (OrchestratorMessagesCreateMessageRequestSystem1, error) {
+	var body OrchestratorMessagesCreateMessageRequestSystem1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorMessagesCreateMessageRequestSystem1 overwrites any union data inside the OrchestratorMessagesCreateMessageRequest_System as the provided OrchestratorMessagesCreateMessageRequestSystem1
+func (t *OrchestratorMessagesCreateMessageRequest_System) FromOrchestratorMessagesCreateMessageRequestSystem1(v OrchestratorMessagesCreateMessageRequestSystem1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorMessagesCreateMessageRequestSystem1 performs a merge with any union data inside the OrchestratorMessagesCreateMessageRequest_System, using the provided OrchestratorMessagesCreateMessageRequestSystem1
+func (t *OrchestratorMessagesCreateMessageRequest_System) MergeOrchestratorMessagesCreateMessageRequestSystem1(v OrchestratorMessagesCreateMessageRequestSystem1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorMessagesCreateMessageRequest_System) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorMessagesCreateMessageRequest_System) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorMessagesBase64DocumentSource returns the union data inside the OrchestratorMessagesDocumentSource as a OrchestratorMessagesBase64DocumentSource
+func (t OrchestratorMessagesDocumentSource) AsOrchestratorMessagesBase64DocumentSource() (OrchestratorMessagesBase64DocumentSource, error) {
+	var body OrchestratorMessagesBase64DocumentSource
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorMessagesBase64DocumentSource overwrites any union data inside the OrchestratorMessagesDocumentSource as the provided OrchestratorMessagesBase64DocumentSource
+func (t *OrchestratorMessagesDocumentSource) FromOrchestratorMessagesBase64DocumentSource(v OrchestratorMessagesBase64DocumentSource) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"base64"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorMessagesBase64DocumentSource performs a merge with any union data inside the OrchestratorMessagesDocumentSource, using the provided OrchestratorMessagesBase64DocumentSource
+func (t *OrchestratorMessagesDocumentSource) MergeOrchestratorMessagesBase64DocumentSource(v OrchestratorMessagesBase64DocumentSource) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"base64"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorMessagesPlainTextDocumentSource returns the union data inside the OrchestratorMessagesDocumentSource as a OrchestratorMessagesPlainTextDocumentSource
+func (t OrchestratorMessagesDocumentSource) AsOrchestratorMessagesPlainTextDocumentSource() (OrchestratorMessagesPlainTextDocumentSource, error) {
+	var body OrchestratorMessagesPlainTextDocumentSource
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorMessagesPlainTextDocumentSource overwrites any union data inside the OrchestratorMessagesDocumentSource as the provided OrchestratorMessagesPlainTextDocumentSource
+func (t *OrchestratorMessagesDocumentSource) FromOrchestratorMessagesPlainTextDocumentSource(v OrchestratorMessagesPlainTextDocumentSource) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"text"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorMessagesPlainTextDocumentSource performs a merge with any union data inside the OrchestratorMessagesDocumentSource, using the provided OrchestratorMessagesPlainTextDocumentSource
+func (t *OrchestratorMessagesDocumentSource) MergeOrchestratorMessagesPlainTextDocumentSource(v OrchestratorMessagesPlainTextDocumentSource) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"text"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorMessagesURLDocumentSource returns the union data inside the OrchestratorMessagesDocumentSource as a OrchestratorMessagesURLDocumentSource
+func (t OrchestratorMessagesDocumentSource) AsOrchestratorMessagesURLDocumentSource() (OrchestratorMessagesURLDocumentSource, error) {
+	var body OrchestratorMessagesURLDocumentSource
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorMessagesURLDocumentSource overwrites any union data inside the OrchestratorMessagesDocumentSource as the provided OrchestratorMessagesURLDocumentSource
+func (t *OrchestratorMessagesDocumentSource) FromOrchestratorMessagesURLDocumentSource(v OrchestratorMessagesURLDocumentSource) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"url"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorMessagesURLDocumentSource performs a merge with any union data inside the OrchestratorMessagesDocumentSource, using the provided OrchestratorMessagesURLDocumentSource
+func (t *OrchestratorMessagesDocumentSource) MergeOrchestratorMessagesURLDocumentSource(v OrchestratorMessagesURLDocumentSource) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"url"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorMessagesDocumentSource) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t OrchestratorMessagesDocumentSource) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "base64":
+		return t.AsOrchestratorMessagesBase64DocumentSource()
+	case "text":
+		return t.AsOrchestratorMessagesPlainTextDocumentSource()
+	case "url":
+		return t.AsOrchestratorMessagesURLDocumentSource()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t OrchestratorMessagesDocumentSource) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorMessagesDocumentSource) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorMessagesBase64ImageSource returns the union data inside the OrchestratorMessagesImageSource as a OrchestratorMessagesBase64ImageSource
+func (t OrchestratorMessagesImageSource) AsOrchestratorMessagesBase64ImageSource() (OrchestratorMessagesBase64ImageSource, error) {
+	var body OrchestratorMessagesBase64ImageSource
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorMessagesBase64ImageSource overwrites any union data inside the OrchestratorMessagesImageSource as the provided OrchestratorMessagesBase64ImageSource
+func (t *OrchestratorMessagesImageSource) FromOrchestratorMessagesBase64ImageSource(v OrchestratorMessagesBase64ImageSource) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"base64"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorMessagesBase64ImageSource performs a merge with any union data inside the OrchestratorMessagesImageSource, using the provided OrchestratorMessagesBase64ImageSource
+func (t *OrchestratorMessagesImageSource) MergeOrchestratorMessagesBase64ImageSource(v OrchestratorMessagesBase64ImageSource) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"base64"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorMessagesURLImageSource returns the union data inside the OrchestratorMessagesImageSource as a OrchestratorMessagesURLImageSource
+func (t OrchestratorMessagesImageSource) AsOrchestratorMessagesURLImageSource() (OrchestratorMessagesURLImageSource, error) {
+	var body OrchestratorMessagesURLImageSource
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorMessagesURLImageSource overwrites any union data inside the OrchestratorMessagesImageSource as the provided OrchestratorMessagesURLImageSource
+func (t *OrchestratorMessagesImageSource) FromOrchestratorMessagesURLImageSource(v OrchestratorMessagesURLImageSource) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"url"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorMessagesURLImageSource performs a merge with any union data inside the OrchestratorMessagesImageSource, using the provided OrchestratorMessagesURLImageSource
+func (t *OrchestratorMessagesImageSource) MergeOrchestratorMessagesURLImageSource(v OrchestratorMessagesURLImageSource) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"url"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorMessagesImageSource) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t OrchestratorMessagesImageSource) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "base64":
+		return t.AsOrchestratorMessagesBase64ImageSource()
+	case "url":
+		return t.AsOrchestratorMessagesURLImageSource()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t OrchestratorMessagesImageSource) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorMessagesImageSource) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorMessagesTextBlock returns the union data inside the OrchestratorMessagesInputContentBlock as a OrchestratorMessagesTextBlock
+func (t OrchestratorMessagesInputContentBlock) AsOrchestratorMessagesTextBlock() (OrchestratorMessagesTextBlock, error) {
+	var body OrchestratorMessagesTextBlock
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorMessagesTextBlock overwrites any union data inside the OrchestratorMessagesInputContentBlock as the provided OrchestratorMessagesTextBlock
+func (t *OrchestratorMessagesInputContentBlock) FromOrchestratorMessagesTextBlock(v OrchestratorMessagesTextBlock) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"text"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorMessagesTextBlock performs a merge with any union data inside the OrchestratorMessagesInputContentBlock, using the provided OrchestratorMessagesTextBlock
+func (t *OrchestratorMessagesInputContentBlock) MergeOrchestratorMessagesTextBlock(v OrchestratorMessagesTextBlock) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"text"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorMessagesImageBlock returns the union data inside the OrchestratorMessagesInputContentBlock as a OrchestratorMessagesImageBlock
+func (t OrchestratorMessagesInputContentBlock) AsOrchestratorMessagesImageBlock() (OrchestratorMessagesImageBlock, error) {
+	var body OrchestratorMessagesImageBlock
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorMessagesImageBlock overwrites any union data inside the OrchestratorMessagesInputContentBlock as the provided OrchestratorMessagesImageBlock
+func (t *OrchestratorMessagesInputContentBlock) FromOrchestratorMessagesImageBlock(v OrchestratorMessagesImageBlock) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"image"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorMessagesImageBlock performs a merge with any union data inside the OrchestratorMessagesInputContentBlock, using the provided OrchestratorMessagesImageBlock
+func (t *OrchestratorMessagesInputContentBlock) MergeOrchestratorMessagesImageBlock(v OrchestratorMessagesImageBlock) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"image"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorMessagesDocumentBlock returns the union data inside the OrchestratorMessagesInputContentBlock as a OrchestratorMessagesDocumentBlock
+func (t OrchestratorMessagesInputContentBlock) AsOrchestratorMessagesDocumentBlock() (OrchestratorMessagesDocumentBlock, error) {
+	var body OrchestratorMessagesDocumentBlock
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorMessagesDocumentBlock overwrites any union data inside the OrchestratorMessagesInputContentBlock as the provided OrchestratorMessagesDocumentBlock
+func (t *OrchestratorMessagesInputContentBlock) FromOrchestratorMessagesDocumentBlock(v OrchestratorMessagesDocumentBlock) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"document"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorMessagesDocumentBlock performs a merge with any union data inside the OrchestratorMessagesInputContentBlock, using the provided OrchestratorMessagesDocumentBlock
+func (t *OrchestratorMessagesInputContentBlock) MergeOrchestratorMessagesDocumentBlock(v OrchestratorMessagesDocumentBlock) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"document"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorMessagesSearchResultBlock returns the union data inside the OrchestratorMessagesInputContentBlock as a OrchestratorMessagesSearchResultBlock
+func (t OrchestratorMessagesInputContentBlock) AsOrchestratorMessagesSearchResultBlock() (OrchestratorMessagesSearchResultBlock, error) {
+	var body OrchestratorMessagesSearchResultBlock
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorMessagesSearchResultBlock overwrites any union data inside the OrchestratorMessagesInputContentBlock as the provided OrchestratorMessagesSearchResultBlock
+func (t *OrchestratorMessagesInputContentBlock) FromOrchestratorMessagesSearchResultBlock(v OrchestratorMessagesSearchResultBlock) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"search_result"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorMessagesSearchResultBlock performs a merge with any union data inside the OrchestratorMessagesInputContentBlock, using the provided OrchestratorMessagesSearchResultBlock
+func (t *OrchestratorMessagesInputContentBlock) MergeOrchestratorMessagesSearchResultBlock(v OrchestratorMessagesSearchResultBlock) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"search_result"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorMessagesToolUseBlock returns the union data inside the OrchestratorMessagesInputContentBlock as a OrchestratorMessagesToolUseBlock
+func (t OrchestratorMessagesInputContentBlock) AsOrchestratorMessagesToolUseBlock() (OrchestratorMessagesToolUseBlock, error) {
+	var body OrchestratorMessagesToolUseBlock
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorMessagesToolUseBlock overwrites any union data inside the OrchestratorMessagesInputContentBlock as the provided OrchestratorMessagesToolUseBlock
+func (t *OrchestratorMessagesInputContentBlock) FromOrchestratorMessagesToolUseBlock(v OrchestratorMessagesToolUseBlock) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"tool_use"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorMessagesToolUseBlock performs a merge with any union data inside the OrchestratorMessagesInputContentBlock, using the provided OrchestratorMessagesToolUseBlock
+func (t *OrchestratorMessagesInputContentBlock) MergeOrchestratorMessagesToolUseBlock(v OrchestratorMessagesToolUseBlock) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"tool_use"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorMessagesToolResultBlock returns the union data inside the OrchestratorMessagesInputContentBlock as a OrchestratorMessagesToolResultBlock
+func (t OrchestratorMessagesInputContentBlock) AsOrchestratorMessagesToolResultBlock() (OrchestratorMessagesToolResultBlock, error) {
+	var body OrchestratorMessagesToolResultBlock
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorMessagesToolResultBlock overwrites any union data inside the OrchestratorMessagesInputContentBlock as the provided OrchestratorMessagesToolResultBlock
+func (t *OrchestratorMessagesInputContentBlock) FromOrchestratorMessagesToolResultBlock(v OrchestratorMessagesToolResultBlock) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"tool_result"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorMessagesToolResultBlock performs a merge with any union data inside the OrchestratorMessagesInputContentBlock, using the provided OrchestratorMessagesToolResultBlock
+func (t *OrchestratorMessagesInputContentBlock) MergeOrchestratorMessagesToolResultBlock(v OrchestratorMessagesToolResultBlock) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"tool_result"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorMessagesThinkingBlock returns the union data inside the OrchestratorMessagesInputContentBlock as a OrchestratorMessagesThinkingBlock
+func (t OrchestratorMessagesInputContentBlock) AsOrchestratorMessagesThinkingBlock() (OrchestratorMessagesThinkingBlock, error) {
+	var body OrchestratorMessagesThinkingBlock
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorMessagesThinkingBlock overwrites any union data inside the OrchestratorMessagesInputContentBlock as the provided OrchestratorMessagesThinkingBlock
+func (t *OrchestratorMessagesInputContentBlock) FromOrchestratorMessagesThinkingBlock(v OrchestratorMessagesThinkingBlock) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"thinking"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorMessagesThinkingBlock performs a merge with any union data inside the OrchestratorMessagesInputContentBlock, using the provided OrchestratorMessagesThinkingBlock
+func (t *OrchestratorMessagesInputContentBlock) MergeOrchestratorMessagesThinkingBlock(v OrchestratorMessagesThinkingBlock) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"thinking"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorMessagesRedactedThinkingBlock returns the union data inside the OrchestratorMessagesInputContentBlock as a OrchestratorMessagesRedactedThinkingBlock
+func (t OrchestratorMessagesInputContentBlock) AsOrchestratorMessagesRedactedThinkingBlock() (OrchestratorMessagesRedactedThinkingBlock, error) {
+	var body OrchestratorMessagesRedactedThinkingBlock
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorMessagesRedactedThinkingBlock overwrites any union data inside the OrchestratorMessagesInputContentBlock as the provided OrchestratorMessagesRedactedThinkingBlock
+func (t *OrchestratorMessagesInputContentBlock) FromOrchestratorMessagesRedactedThinkingBlock(v OrchestratorMessagesRedactedThinkingBlock) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"redacted_thinking"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorMessagesRedactedThinkingBlock performs a merge with any union data inside the OrchestratorMessagesInputContentBlock, using the provided OrchestratorMessagesRedactedThinkingBlock
+func (t *OrchestratorMessagesInputContentBlock) MergeOrchestratorMessagesRedactedThinkingBlock(v OrchestratorMessagesRedactedThinkingBlock) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"redacted_thinking"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorMessagesInputContentBlock) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t OrchestratorMessagesInputContentBlock) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "document":
+		return t.AsOrchestratorMessagesDocumentBlock()
+	case "image":
+		return t.AsOrchestratorMessagesImageBlock()
+	case "redacted_thinking":
+		return t.AsOrchestratorMessagesRedactedThinkingBlock()
+	case "search_result":
+		return t.AsOrchestratorMessagesSearchResultBlock()
+	case "text":
+		return t.AsOrchestratorMessagesTextBlock()
+	case "thinking":
+		return t.AsOrchestratorMessagesThinkingBlock()
+	case "tool_result":
+		return t.AsOrchestratorMessagesToolResultBlock()
+	case "tool_use":
+		return t.AsOrchestratorMessagesToolUseBlock()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t OrchestratorMessagesInputContentBlock) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorMessagesInputContentBlock) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorMessagesInputMessageContent0 returns the union data inside the OrchestratorMessagesInputMessage_Content as a OrchestratorMessagesInputMessageContent0
+func (t OrchestratorMessagesInputMessage_Content) AsOrchestratorMessagesInputMessageContent0() (OrchestratorMessagesInputMessageContent0, error) {
+	var body OrchestratorMessagesInputMessageContent0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorMessagesInputMessageContent0 overwrites any union data inside the OrchestratorMessagesInputMessage_Content as the provided OrchestratorMessagesInputMessageContent0
+func (t *OrchestratorMessagesInputMessage_Content) FromOrchestratorMessagesInputMessageContent0(v OrchestratorMessagesInputMessageContent0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorMessagesInputMessageContent0 performs a merge with any union data inside the OrchestratorMessagesInputMessage_Content, using the provided OrchestratorMessagesInputMessageContent0
+func (t *OrchestratorMessagesInputMessage_Content) MergeOrchestratorMessagesInputMessageContent0(v OrchestratorMessagesInputMessageContent0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorMessagesInputMessageContent1 returns the union data inside the OrchestratorMessagesInputMessage_Content as a OrchestratorMessagesInputMessageContent1
+func (t OrchestratorMessagesInputMessage_Content) AsOrchestratorMessagesInputMessageContent1() (OrchestratorMessagesInputMessageContent1, error) {
+	var body OrchestratorMessagesInputMessageContent1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorMessagesInputMessageContent1 overwrites any union data inside the OrchestratorMessagesInputMessage_Content as the provided OrchestratorMessagesInputMessageContent1
+func (t *OrchestratorMessagesInputMessage_Content) FromOrchestratorMessagesInputMessageContent1(v OrchestratorMessagesInputMessageContent1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorMessagesInputMessageContent1 performs a merge with any union data inside the OrchestratorMessagesInputMessage_Content, using the provided OrchestratorMessagesInputMessageContent1
+func (t *OrchestratorMessagesInputMessage_Content) MergeOrchestratorMessagesInputMessageContent1(v OrchestratorMessagesInputMessageContent1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorMessagesInputMessage_Content) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorMessagesInputMessage_Content) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorMessagesThinkingConfigEnabled returns the union data inside the OrchestratorMessagesThinkingConfig as a OrchestratorMessagesThinkingConfigEnabled
+func (t OrchestratorMessagesThinkingConfig) AsOrchestratorMessagesThinkingConfigEnabled() (OrchestratorMessagesThinkingConfigEnabled, error) {
+	var body OrchestratorMessagesThinkingConfigEnabled
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorMessagesThinkingConfigEnabled overwrites any union data inside the OrchestratorMessagesThinkingConfig as the provided OrchestratorMessagesThinkingConfigEnabled
+func (t *OrchestratorMessagesThinkingConfig) FromOrchestratorMessagesThinkingConfigEnabled(v OrchestratorMessagesThinkingConfigEnabled) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"enabled"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorMessagesThinkingConfigEnabled performs a merge with any union data inside the OrchestratorMessagesThinkingConfig, using the provided OrchestratorMessagesThinkingConfigEnabled
+func (t *OrchestratorMessagesThinkingConfig) MergeOrchestratorMessagesThinkingConfigEnabled(v OrchestratorMessagesThinkingConfigEnabled) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"enabled"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorMessagesThinkingConfigAdaptive returns the union data inside the OrchestratorMessagesThinkingConfig as a OrchestratorMessagesThinkingConfigAdaptive
+func (t OrchestratorMessagesThinkingConfig) AsOrchestratorMessagesThinkingConfigAdaptive() (OrchestratorMessagesThinkingConfigAdaptive, error) {
+	var body OrchestratorMessagesThinkingConfigAdaptive
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorMessagesThinkingConfigAdaptive overwrites any union data inside the OrchestratorMessagesThinkingConfig as the provided OrchestratorMessagesThinkingConfigAdaptive
+func (t *OrchestratorMessagesThinkingConfig) FromOrchestratorMessagesThinkingConfigAdaptive(v OrchestratorMessagesThinkingConfigAdaptive) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"adaptive"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorMessagesThinkingConfigAdaptive performs a merge with any union data inside the OrchestratorMessagesThinkingConfig, using the provided OrchestratorMessagesThinkingConfigAdaptive
+func (t *OrchestratorMessagesThinkingConfig) MergeOrchestratorMessagesThinkingConfigAdaptive(v OrchestratorMessagesThinkingConfigAdaptive) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"adaptive"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorMessagesThinkingConfigDisabled returns the union data inside the OrchestratorMessagesThinkingConfig as a OrchestratorMessagesThinkingConfigDisabled
+func (t OrchestratorMessagesThinkingConfig) AsOrchestratorMessagesThinkingConfigDisabled() (OrchestratorMessagesThinkingConfigDisabled, error) {
+	var body OrchestratorMessagesThinkingConfigDisabled
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorMessagesThinkingConfigDisabled overwrites any union data inside the OrchestratorMessagesThinkingConfig as the provided OrchestratorMessagesThinkingConfigDisabled
+func (t *OrchestratorMessagesThinkingConfig) FromOrchestratorMessagesThinkingConfigDisabled(v OrchestratorMessagesThinkingConfigDisabled) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"disabled"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorMessagesThinkingConfigDisabled performs a merge with any union data inside the OrchestratorMessagesThinkingConfig, using the provided OrchestratorMessagesThinkingConfigDisabled
+func (t *OrchestratorMessagesThinkingConfig) MergeOrchestratorMessagesThinkingConfigDisabled(v OrchestratorMessagesThinkingConfigDisabled) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"disabled"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorMessagesThinkingConfig) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t OrchestratorMessagesThinkingConfig) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "adaptive":
+		return t.AsOrchestratorMessagesThinkingConfigAdaptive()
+	case "disabled":
+		return t.AsOrchestratorMessagesThinkingConfigDisabled()
+	case "enabled":
+		return t.AsOrchestratorMessagesThinkingConfigEnabled()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t OrchestratorMessagesThinkingConfig) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorMessagesThinkingConfig) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorMessagesToolChoiceAuto returns the union data inside the OrchestratorMessagesToolChoice as a OrchestratorMessagesToolChoiceAuto
+func (t OrchestratorMessagesToolChoice) AsOrchestratorMessagesToolChoiceAuto() (OrchestratorMessagesToolChoiceAuto, error) {
+	var body OrchestratorMessagesToolChoiceAuto
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorMessagesToolChoiceAuto overwrites any union data inside the OrchestratorMessagesToolChoice as the provided OrchestratorMessagesToolChoiceAuto
+func (t *OrchestratorMessagesToolChoice) FromOrchestratorMessagesToolChoiceAuto(v OrchestratorMessagesToolChoiceAuto) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"auto"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorMessagesToolChoiceAuto performs a merge with any union data inside the OrchestratorMessagesToolChoice, using the provided OrchestratorMessagesToolChoiceAuto
+func (t *OrchestratorMessagesToolChoice) MergeOrchestratorMessagesToolChoiceAuto(v OrchestratorMessagesToolChoiceAuto) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"auto"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorMessagesToolChoiceAny returns the union data inside the OrchestratorMessagesToolChoice as a OrchestratorMessagesToolChoiceAny
+func (t OrchestratorMessagesToolChoice) AsOrchestratorMessagesToolChoiceAny() (OrchestratorMessagesToolChoiceAny, error) {
+	var body OrchestratorMessagesToolChoiceAny
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorMessagesToolChoiceAny overwrites any union data inside the OrchestratorMessagesToolChoice as the provided OrchestratorMessagesToolChoiceAny
+func (t *OrchestratorMessagesToolChoice) FromOrchestratorMessagesToolChoiceAny(v OrchestratorMessagesToolChoiceAny) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"any"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorMessagesToolChoiceAny performs a merge with any union data inside the OrchestratorMessagesToolChoice, using the provided OrchestratorMessagesToolChoiceAny
+func (t *OrchestratorMessagesToolChoice) MergeOrchestratorMessagesToolChoiceAny(v OrchestratorMessagesToolChoiceAny) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"any"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorMessagesToolChoiceTool returns the union data inside the OrchestratorMessagesToolChoice as a OrchestratorMessagesToolChoiceTool
+func (t OrchestratorMessagesToolChoice) AsOrchestratorMessagesToolChoiceTool() (OrchestratorMessagesToolChoiceTool, error) {
+	var body OrchestratorMessagesToolChoiceTool
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorMessagesToolChoiceTool overwrites any union data inside the OrchestratorMessagesToolChoice as the provided OrchestratorMessagesToolChoiceTool
+func (t *OrchestratorMessagesToolChoice) FromOrchestratorMessagesToolChoiceTool(v OrchestratorMessagesToolChoiceTool) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"tool"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorMessagesToolChoiceTool performs a merge with any union data inside the OrchestratorMessagesToolChoice, using the provided OrchestratorMessagesToolChoiceTool
+func (t *OrchestratorMessagesToolChoice) MergeOrchestratorMessagesToolChoiceTool(v OrchestratorMessagesToolChoiceTool) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"tool"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorMessagesToolChoiceNone returns the union data inside the OrchestratorMessagesToolChoice as a OrchestratorMessagesToolChoiceNone
+func (t OrchestratorMessagesToolChoice) AsOrchestratorMessagesToolChoiceNone() (OrchestratorMessagesToolChoiceNone, error) {
+	var body OrchestratorMessagesToolChoiceNone
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorMessagesToolChoiceNone overwrites any union data inside the OrchestratorMessagesToolChoice as the provided OrchestratorMessagesToolChoiceNone
+func (t *OrchestratorMessagesToolChoice) FromOrchestratorMessagesToolChoiceNone(v OrchestratorMessagesToolChoiceNone) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"none"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorMessagesToolChoiceNone performs a merge with any union data inside the OrchestratorMessagesToolChoice, using the provided OrchestratorMessagesToolChoiceNone
+func (t *OrchestratorMessagesToolChoice) MergeOrchestratorMessagesToolChoiceNone(v OrchestratorMessagesToolChoiceNone) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"none"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorMessagesToolChoice) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t OrchestratorMessagesToolChoice) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "any":
+		return t.AsOrchestratorMessagesToolChoiceAny()
+	case "auto":
+		return t.AsOrchestratorMessagesToolChoiceAuto()
+	case "none":
+		return t.AsOrchestratorMessagesToolChoiceNone()
+	case "tool":
+		return t.AsOrchestratorMessagesToolChoiceTool()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t OrchestratorMessagesToolChoice) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorMessagesToolChoice) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorMessagesToolResultBlockContent0 returns the union data inside the OrchestratorMessagesToolResultBlock_Content as a OrchestratorMessagesToolResultBlockContent0
+func (t OrchestratorMessagesToolResultBlock_Content) AsOrchestratorMessagesToolResultBlockContent0() (OrchestratorMessagesToolResultBlockContent0, error) {
+	var body OrchestratorMessagesToolResultBlockContent0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorMessagesToolResultBlockContent0 overwrites any union data inside the OrchestratorMessagesToolResultBlock_Content as the provided OrchestratorMessagesToolResultBlockContent0
+func (t *OrchestratorMessagesToolResultBlock_Content) FromOrchestratorMessagesToolResultBlockContent0(v OrchestratorMessagesToolResultBlockContent0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorMessagesToolResultBlockContent0 performs a merge with any union data inside the OrchestratorMessagesToolResultBlock_Content, using the provided OrchestratorMessagesToolResultBlockContent0
+func (t *OrchestratorMessagesToolResultBlock_Content) MergeOrchestratorMessagesToolResultBlockContent0(v OrchestratorMessagesToolResultBlockContent0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorMessagesToolResultBlockContent1 returns the union data inside the OrchestratorMessagesToolResultBlock_Content as a OrchestratorMessagesToolResultBlockContent1
+func (t OrchestratorMessagesToolResultBlock_Content) AsOrchestratorMessagesToolResultBlockContent1() (OrchestratorMessagesToolResultBlockContent1, error) {
+	var body OrchestratorMessagesToolResultBlockContent1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorMessagesToolResultBlockContent1 overwrites any union data inside the OrchestratorMessagesToolResultBlock_Content as the provided OrchestratorMessagesToolResultBlockContent1
+func (t *OrchestratorMessagesToolResultBlock_Content) FromOrchestratorMessagesToolResultBlockContent1(v OrchestratorMessagesToolResultBlockContent1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorMessagesToolResultBlockContent1 performs a merge with any union data inside the OrchestratorMessagesToolResultBlock_Content, using the provided OrchestratorMessagesToolResultBlockContent1
+func (t *OrchestratorMessagesToolResultBlock_Content) MergeOrchestratorMessagesToolResultBlockContent1(v OrchestratorMessagesToolResultBlockContent1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorMessagesToolResultBlock_Content) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorMessagesToolResultBlock_Content) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorMessagesTextBlock returns the union data inside the OrchestratorMessagesToolResultContentBlock as a OrchestratorMessagesTextBlock
+func (t OrchestratorMessagesToolResultContentBlock) AsOrchestratorMessagesTextBlock() (OrchestratorMessagesTextBlock, error) {
+	var body OrchestratorMessagesTextBlock
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorMessagesTextBlock overwrites any union data inside the OrchestratorMessagesToolResultContentBlock as the provided OrchestratorMessagesTextBlock
+func (t *OrchestratorMessagesToolResultContentBlock) FromOrchestratorMessagesTextBlock(v OrchestratorMessagesTextBlock) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"text"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorMessagesTextBlock performs a merge with any union data inside the OrchestratorMessagesToolResultContentBlock, using the provided OrchestratorMessagesTextBlock
+func (t *OrchestratorMessagesToolResultContentBlock) MergeOrchestratorMessagesTextBlock(v OrchestratorMessagesTextBlock) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"text"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorMessagesImageBlock returns the union data inside the OrchestratorMessagesToolResultContentBlock as a OrchestratorMessagesImageBlock
+func (t OrchestratorMessagesToolResultContentBlock) AsOrchestratorMessagesImageBlock() (OrchestratorMessagesImageBlock, error) {
+	var body OrchestratorMessagesImageBlock
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorMessagesImageBlock overwrites any union data inside the OrchestratorMessagesToolResultContentBlock as the provided OrchestratorMessagesImageBlock
+func (t *OrchestratorMessagesToolResultContentBlock) FromOrchestratorMessagesImageBlock(v OrchestratorMessagesImageBlock) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"image"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorMessagesImageBlock performs a merge with any union data inside the OrchestratorMessagesToolResultContentBlock, using the provided OrchestratorMessagesImageBlock
+func (t *OrchestratorMessagesToolResultContentBlock) MergeOrchestratorMessagesImageBlock(v OrchestratorMessagesImageBlock) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"image"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorMessagesDocumentBlock returns the union data inside the OrchestratorMessagesToolResultContentBlock as a OrchestratorMessagesDocumentBlock
+func (t OrchestratorMessagesToolResultContentBlock) AsOrchestratorMessagesDocumentBlock() (OrchestratorMessagesDocumentBlock, error) {
+	var body OrchestratorMessagesDocumentBlock
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorMessagesDocumentBlock overwrites any union data inside the OrchestratorMessagesToolResultContentBlock as the provided OrchestratorMessagesDocumentBlock
+func (t *OrchestratorMessagesToolResultContentBlock) FromOrchestratorMessagesDocumentBlock(v OrchestratorMessagesDocumentBlock) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"document"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorMessagesDocumentBlock performs a merge with any union data inside the OrchestratorMessagesToolResultContentBlock, using the provided OrchestratorMessagesDocumentBlock
+func (t *OrchestratorMessagesToolResultContentBlock) MergeOrchestratorMessagesDocumentBlock(v OrchestratorMessagesDocumentBlock) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"document"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorMessagesSearchResultBlock returns the union data inside the OrchestratorMessagesToolResultContentBlock as a OrchestratorMessagesSearchResultBlock
+func (t OrchestratorMessagesToolResultContentBlock) AsOrchestratorMessagesSearchResultBlock() (OrchestratorMessagesSearchResultBlock, error) {
+	var body OrchestratorMessagesSearchResultBlock
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorMessagesSearchResultBlock overwrites any union data inside the OrchestratorMessagesToolResultContentBlock as the provided OrchestratorMessagesSearchResultBlock
+func (t *OrchestratorMessagesToolResultContentBlock) FromOrchestratorMessagesSearchResultBlock(v OrchestratorMessagesSearchResultBlock) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"search_result"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorMessagesSearchResultBlock performs a merge with any union data inside the OrchestratorMessagesToolResultContentBlock, using the provided OrchestratorMessagesSearchResultBlock
+func (t *OrchestratorMessagesToolResultContentBlock) MergeOrchestratorMessagesSearchResultBlock(v OrchestratorMessagesSearchResultBlock) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"search_result"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorMessagesToolResultContentBlock) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t OrchestratorMessagesToolResultContentBlock) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "document":
+		return t.AsOrchestratorMessagesDocumentBlock()
+	case "image":
+		return t.AsOrchestratorMessagesImageBlock()
+	case "search_result":
+		return t.AsOrchestratorMessagesSearchResultBlock()
+	case "text":
+		return t.AsOrchestratorMessagesTextBlock()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t OrchestratorMessagesToolResultContentBlock) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorMessagesToolResultContentBlock) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorResponsesFunctionToolChoice returns the union data inside the OrchestratorResponsesAllowedToolChoice_Tools_Item as a OrchestratorResponsesFunctionToolChoice
+func (t OrchestratorResponsesAllowedToolChoice_Tools_Item) AsOrchestratorResponsesFunctionToolChoice() (OrchestratorResponsesFunctionToolChoice, error) {
+	var body OrchestratorResponsesFunctionToolChoice
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesFunctionToolChoice overwrites any union data inside the OrchestratorResponsesAllowedToolChoice_Tools_Item as the provided OrchestratorResponsesFunctionToolChoice
+func (t *OrchestratorResponsesAllowedToolChoice_Tools_Item) FromOrchestratorResponsesFunctionToolChoice(v OrchestratorResponsesFunctionToolChoice) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesFunctionToolChoice performs a merge with any union data inside the OrchestratorResponsesAllowedToolChoice_Tools_Item, using the provided OrchestratorResponsesFunctionToolChoice
+func (t *OrchestratorResponsesAllowedToolChoice_Tools_Item) MergeOrchestratorResponsesFunctionToolChoice(v OrchestratorResponsesFunctionToolChoice) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorResponsesAllowedToolChoice_Tools_Item) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorResponsesAllowedToolChoice_Tools_Item) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorResponsesUrlCitationBody returns the union data inside the OrchestratorResponsesAnnotation as a OrchestratorResponsesUrlCitationBody
+func (t OrchestratorResponsesAnnotation) AsOrchestratorResponsesUrlCitationBody() (OrchestratorResponsesUrlCitationBody, error) {
+	var body OrchestratorResponsesUrlCitationBody
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesUrlCitationBody overwrites any union data inside the OrchestratorResponsesAnnotation as the provided OrchestratorResponsesUrlCitationBody
+func (t *OrchestratorResponsesAnnotation) FromOrchestratorResponsesUrlCitationBody(v OrchestratorResponsesUrlCitationBody) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesUrlCitationBody"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesUrlCitationBody performs a merge with any union data inside the OrchestratorResponsesAnnotation, using the provided OrchestratorResponsesUrlCitationBody
+func (t *OrchestratorResponsesAnnotation) MergeOrchestratorResponsesUrlCitationBody(v OrchestratorResponsesUrlCitationBody) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesUrlCitationBody"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorResponsesAnnotation) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t OrchestratorResponsesAnnotation) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "OrchestratorResponsesUrlCitationBody":
+		return t.AsOrchestratorResponsesUrlCitationBody()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t OrchestratorResponsesAnnotation) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorResponsesAnnotation) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorResponsesOutputTextContentParam returns the union data inside the OrchestratorResponsesAssistantMessageItemParam_Content_0_Item as a OrchestratorResponsesOutputTextContentParam
+func (t OrchestratorResponsesAssistantMessageItemParam_Content_0_Item) AsOrchestratorResponsesOutputTextContentParam() (OrchestratorResponsesOutputTextContentParam, error) {
+	var body OrchestratorResponsesOutputTextContentParam
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesOutputTextContentParam overwrites any union data inside the OrchestratorResponsesAssistantMessageItemParam_Content_0_Item as the provided OrchestratorResponsesOutputTextContentParam
+func (t *OrchestratorResponsesAssistantMessageItemParam_Content_0_Item) FromOrchestratorResponsesOutputTextContentParam(v OrchestratorResponsesOutputTextContentParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesOutputTextContentParam"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesOutputTextContentParam performs a merge with any union data inside the OrchestratorResponsesAssistantMessageItemParam_Content_0_Item, using the provided OrchestratorResponsesOutputTextContentParam
+func (t *OrchestratorResponsesAssistantMessageItemParam_Content_0_Item) MergeOrchestratorResponsesOutputTextContentParam(v OrchestratorResponsesOutputTextContentParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesOutputTextContentParam"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesRefusalContentParam returns the union data inside the OrchestratorResponsesAssistantMessageItemParam_Content_0_Item as a OrchestratorResponsesRefusalContentParam
+func (t OrchestratorResponsesAssistantMessageItemParam_Content_0_Item) AsOrchestratorResponsesRefusalContentParam() (OrchestratorResponsesRefusalContentParam, error) {
+	var body OrchestratorResponsesRefusalContentParam
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesRefusalContentParam overwrites any union data inside the OrchestratorResponsesAssistantMessageItemParam_Content_0_Item as the provided OrchestratorResponsesRefusalContentParam
+func (t *OrchestratorResponsesAssistantMessageItemParam_Content_0_Item) FromOrchestratorResponsesRefusalContentParam(v OrchestratorResponsesRefusalContentParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesRefusalContentParam"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesRefusalContentParam performs a merge with any union data inside the OrchestratorResponsesAssistantMessageItemParam_Content_0_Item, using the provided OrchestratorResponsesRefusalContentParam
+func (t *OrchestratorResponsesAssistantMessageItemParam_Content_0_Item) MergeOrchestratorResponsesRefusalContentParam(v OrchestratorResponsesRefusalContentParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesRefusalContentParam"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorResponsesAssistantMessageItemParam_Content_0_Item) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t OrchestratorResponsesAssistantMessageItemParam_Content_0_Item) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "OrchestratorResponsesOutputTextContentParam":
+		return t.AsOrchestratorResponsesOutputTextContentParam()
+	case "OrchestratorResponsesRefusalContentParam":
+		return t.AsOrchestratorResponsesRefusalContentParam()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t OrchestratorResponsesAssistantMessageItemParam_Content_0_Item) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorResponsesAssistantMessageItemParam_Content_0_Item) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorResponsesAssistantMessageItemParamContent0 returns the union data inside the OrchestratorResponsesAssistantMessageItemParam_Content as a OrchestratorResponsesAssistantMessageItemParamContent0
+func (t OrchestratorResponsesAssistantMessageItemParam_Content) AsOrchestratorResponsesAssistantMessageItemParamContent0() (OrchestratorResponsesAssistantMessageItemParamContent0, error) {
+	var body OrchestratorResponsesAssistantMessageItemParamContent0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesAssistantMessageItemParamContent0 overwrites any union data inside the OrchestratorResponsesAssistantMessageItemParam_Content as the provided OrchestratorResponsesAssistantMessageItemParamContent0
+func (t *OrchestratorResponsesAssistantMessageItemParam_Content) FromOrchestratorResponsesAssistantMessageItemParamContent0(v OrchestratorResponsesAssistantMessageItemParamContent0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesAssistantMessageItemParamContent0 performs a merge with any union data inside the OrchestratorResponsesAssistantMessageItemParam_Content, using the provided OrchestratorResponsesAssistantMessageItemParamContent0
+func (t *OrchestratorResponsesAssistantMessageItemParam_Content) MergeOrchestratorResponsesAssistantMessageItemParamContent0(v OrchestratorResponsesAssistantMessageItemParamContent0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesAssistantMessageItemParamContent1 returns the union data inside the OrchestratorResponsesAssistantMessageItemParam_Content as a OrchestratorResponsesAssistantMessageItemParamContent1
+func (t OrchestratorResponsesAssistantMessageItemParam_Content) AsOrchestratorResponsesAssistantMessageItemParamContent1() (OrchestratorResponsesAssistantMessageItemParamContent1, error) {
+	var body OrchestratorResponsesAssistantMessageItemParamContent1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesAssistantMessageItemParamContent1 overwrites any union data inside the OrchestratorResponsesAssistantMessageItemParam_Content as the provided OrchestratorResponsesAssistantMessageItemParamContent1
+func (t *OrchestratorResponsesAssistantMessageItemParam_Content) FromOrchestratorResponsesAssistantMessageItemParamContent1(v OrchestratorResponsesAssistantMessageItemParamContent1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesAssistantMessageItemParamContent1 performs a merge with any union data inside the OrchestratorResponsesAssistantMessageItemParam_Content, using the provided OrchestratorResponsesAssistantMessageItemParamContent1
+func (t *OrchestratorResponsesAssistantMessageItemParam_Content) MergeOrchestratorResponsesAssistantMessageItemParamContent1(v OrchestratorResponsesAssistantMessageItemParamContent1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorResponsesAssistantMessageItemParam_Content) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorResponsesAssistantMessageItemParam_Content) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorResponsesCreateResponseBodyInput0 returns the union data inside the OrchestratorResponsesCreateResponseBody_Input as a OrchestratorResponsesCreateResponseBodyInput0
+func (t OrchestratorResponsesCreateResponseBody_Input) AsOrchestratorResponsesCreateResponseBodyInput0() (OrchestratorResponsesCreateResponseBodyInput0, error) {
+	var body OrchestratorResponsesCreateResponseBodyInput0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesCreateResponseBodyInput0 overwrites any union data inside the OrchestratorResponsesCreateResponseBody_Input as the provided OrchestratorResponsesCreateResponseBodyInput0
+func (t *OrchestratorResponsesCreateResponseBody_Input) FromOrchestratorResponsesCreateResponseBodyInput0(v OrchestratorResponsesCreateResponseBodyInput0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesCreateResponseBodyInput0 performs a merge with any union data inside the OrchestratorResponsesCreateResponseBody_Input, using the provided OrchestratorResponsesCreateResponseBodyInput0
+func (t *OrchestratorResponsesCreateResponseBody_Input) MergeOrchestratorResponsesCreateResponseBodyInput0(v OrchestratorResponsesCreateResponseBodyInput0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesCreateResponseBodyInput1 returns the union data inside the OrchestratorResponsesCreateResponseBody_Input as a OrchestratorResponsesCreateResponseBodyInput1
+func (t OrchestratorResponsesCreateResponseBody_Input) AsOrchestratorResponsesCreateResponseBodyInput1() (OrchestratorResponsesCreateResponseBodyInput1, error) {
+	var body OrchestratorResponsesCreateResponseBodyInput1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesCreateResponseBodyInput1 overwrites any union data inside the OrchestratorResponsesCreateResponseBody_Input as the provided OrchestratorResponsesCreateResponseBodyInput1
+func (t *OrchestratorResponsesCreateResponseBody_Input) FromOrchestratorResponsesCreateResponseBodyInput1(v OrchestratorResponsesCreateResponseBodyInput1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesCreateResponseBodyInput1 performs a merge with any union data inside the OrchestratorResponsesCreateResponseBody_Input, using the provided OrchestratorResponsesCreateResponseBodyInput1
+func (t *OrchestratorResponsesCreateResponseBody_Input) MergeOrchestratorResponsesCreateResponseBodyInput1(v OrchestratorResponsesCreateResponseBodyInput1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorResponsesCreateResponseBody_Input) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorResponsesCreateResponseBody_Input) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorRouting returns the union data inside the OrchestratorResponsesCreateResponseBody_Routing as a OrchestratorRouting
+func (t OrchestratorResponsesCreateResponseBody_Routing) AsOrchestratorRouting() (OrchestratorRouting, error) {
+	var body OrchestratorRouting
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorRouting overwrites any union data inside the OrchestratorResponsesCreateResponseBody_Routing as the provided OrchestratorRouting
+func (t *OrchestratorResponsesCreateResponseBody_Routing) FromOrchestratorRouting(v OrchestratorRouting) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorRouting performs a merge with any union data inside the OrchestratorResponsesCreateResponseBody_Routing, using the provided OrchestratorRouting
+func (t *OrchestratorResponsesCreateResponseBody_Routing) MergeOrchestratorRouting(v OrchestratorRouting) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesCreateResponseBodyRouting1 returns the union data inside the OrchestratorResponsesCreateResponseBody_Routing as a OrchestratorResponsesCreateResponseBodyRouting1
+func (t OrchestratorResponsesCreateResponseBody_Routing) AsOrchestratorResponsesCreateResponseBodyRouting1() (OrchestratorResponsesCreateResponseBodyRouting1, error) {
+	var body OrchestratorResponsesCreateResponseBodyRouting1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesCreateResponseBodyRouting1 overwrites any union data inside the OrchestratorResponsesCreateResponseBody_Routing as the provided OrchestratorResponsesCreateResponseBodyRouting1
+func (t *OrchestratorResponsesCreateResponseBody_Routing) FromOrchestratorResponsesCreateResponseBodyRouting1(v OrchestratorResponsesCreateResponseBodyRouting1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesCreateResponseBodyRouting1 performs a merge with any union data inside the OrchestratorResponsesCreateResponseBody_Routing, using the provided OrchestratorResponsesCreateResponseBodyRouting1
+func (t *OrchestratorResponsesCreateResponseBody_Routing) MergeOrchestratorResponsesCreateResponseBodyRouting1(v OrchestratorResponsesCreateResponseBodyRouting1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorResponsesCreateResponseBody_Routing) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorResponsesCreateResponseBody_Routing) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorResponsesInputTextContentParam returns the union data inside the OrchestratorResponsesCustomToolCallOutputItemParam_Output_1_Item as a OrchestratorResponsesInputTextContentParam
+func (t OrchestratorResponsesCustomToolCallOutputItemParam_Output_1_Item) AsOrchestratorResponsesInputTextContentParam() (OrchestratorResponsesInputTextContentParam, error) {
+	var body OrchestratorResponsesInputTextContentParam
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesInputTextContentParam overwrites any union data inside the OrchestratorResponsesCustomToolCallOutputItemParam_Output_1_Item as the provided OrchestratorResponsesInputTextContentParam
+func (t *OrchestratorResponsesCustomToolCallOutputItemParam_Output_1_Item) FromOrchestratorResponsesInputTextContentParam(v OrchestratorResponsesInputTextContentParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputTextContentParam"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesInputTextContentParam performs a merge with any union data inside the OrchestratorResponsesCustomToolCallOutputItemParam_Output_1_Item, using the provided OrchestratorResponsesInputTextContentParam
+func (t *OrchestratorResponsesCustomToolCallOutputItemParam_Output_1_Item) MergeOrchestratorResponsesInputTextContentParam(v OrchestratorResponsesInputTextContentParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputTextContentParam"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesInputImageContentParamAutoParam returns the union data inside the OrchestratorResponsesCustomToolCallOutputItemParam_Output_1_Item as a OrchestratorResponsesInputImageContentParamAutoParam
+func (t OrchestratorResponsesCustomToolCallOutputItemParam_Output_1_Item) AsOrchestratorResponsesInputImageContentParamAutoParam() (OrchestratorResponsesInputImageContentParamAutoParam, error) {
+	var body OrchestratorResponsesInputImageContentParamAutoParam
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesInputImageContentParamAutoParam overwrites any union data inside the OrchestratorResponsesCustomToolCallOutputItemParam_Output_1_Item as the provided OrchestratorResponsesInputImageContentParamAutoParam
+func (t *OrchestratorResponsesCustomToolCallOutputItemParam_Output_1_Item) FromOrchestratorResponsesInputImageContentParamAutoParam(v OrchestratorResponsesInputImageContentParamAutoParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputImageContentParamAutoParam"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesInputImageContentParamAutoParam performs a merge with any union data inside the OrchestratorResponsesCustomToolCallOutputItemParam_Output_1_Item, using the provided OrchestratorResponsesInputImageContentParamAutoParam
+func (t *OrchestratorResponsesCustomToolCallOutputItemParam_Output_1_Item) MergeOrchestratorResponsesInputImageContentParamAutoParam(v OrchestratorResponsesInputImageContentParamAutoParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputImageContentParamAutoParam"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorResponsesCustomToolCallOutputItemParam_Output_1_Item) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t OrchestratorResponsesCustomToolCallOutputItemParam_Output_1_Item) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "OrchestratorResponsesInputImageContentParamAutoParam":
+		return t.AsOrchestratorResponsesInputImageContentParamAutoParam()
+	case "OrchestratorResponsesInputTextContentParam":
+		return t.AsOrchestratorResponsesInputTextContentParam()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t OrchestratorResponsesCustomToolCallOutputItemParam_Output_1_Item) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorResponsesCustomToolCallOutputItemParam_Output_1_Item) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorResponsesCustomToolCallOutputItemParamOutput0 returns the union data inside the OrchestratorResponsesCustomToolCallOutputItemParam_Output as a OrchestratorResponsesCustomToolCallOutputItemParamOutput0
+func (t OrchestratorResponsesCustomToolCallOutputItemParam_Output) AsOrchestratorResponsesCustomToolCallOutputItemParamOutput0() (OrchestratorResponsesCustomToolCallOutputItemParamOutput0, error) {
+	var body OrchestratorResponsesCustomToolCallOutputItemParamOutput0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesCustomToolCallOutputItemParamOutput0 overwrites any union data inside the OrchestratorResponsesCustomToolCallOutputItemParam_Output as the provided OrchestratorResponsesCustomToolCallOutputItemParamOutput0
+func (t *OrchestratorResponsesCustomToolCallOutputItemParam_Output) FromOrchestratorResponsesCustomToolCallOutputItemParamOutput0(v OrchestratorResponsesCustomToolCallOutputItemParamOutput0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesCustomToolCallOutputItemParamOutput0 performs a merge with any union data inside the OrchestratorResponsesCustomToolCallOutputItemParam_Output, using the provided OrchestratorResponsesCustomToolCallOutputItemParamOutput0
+func (t *OrchestratorResponsesCustomToolCallOutputItemParam_Output) MergeOrchestratorResponsesCustomToolCallOutputItemParamOutput0(v OrchestratorResponsesCustomToolCallOutputItemParamOutput0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesCustomToolCallOutputItemParamOutput1 returns the union data inside the OrchestratorResponsesCustomToolCallOutputItemParam_Output as a OrchestratorResponsesCustomToolCallOutputItemParamOutput1
+func (t OrchestratorResponsesCustomToolCallOutputItemParam_Output) AsOrchestratorResponsesCustomToolCallOutputItemParamOutput1() (OrchestratorResponsesCustomToolCallOutputItemParamOutput1, error) {
+	var body OrchestratorResponsesCustomToolCallOutputItemParamOutput1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesCustomToolCallOutputItemParamOutput1 overwrites any union data inside the OrchestratorResponsesCustomToolCallOutputItemParam_Output as the provided OrchestratorResponsesCustomToolCallOutputItemParamOutput1
+func (t *OrchestratorResponsesCustomToolCallOutputItemParam_Output) FromOrchestratorResponsesCustomToolCallOutputItemParamOutput1(v OrchestratorResponsesCustomToolCallOutputItemParamOutput1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesCustomToolCallOutputItemParamOutput1 performs a merge with any union data inside the OrchestratorResponsesCustomToolCallOutputItemParam_Output, using the provided OrchestratorResponsesCustomToolCallOutputItemParamOutput1
+func (t *OrchestratorResponsesCustomToolCallOutputItemParam_Output) MergeOrchestratorResponsesCustomToolCallOutputItemParamOutput1(v OrchestratorResponsesCustomToolCallOutputItemParamOutput1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorResponsesCustomToolCallOutputItemParam_Output) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorResponsesCustomToolCallOutputItemParam_Output) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorResponsesInputTextContentParam returns the union data inside the OrchestratorResponsesDeveloperMessageItemParam_Content_0_Item as a OrchestratorResponsesInputTextContentParam
+func (t OrchestratorResponsesDeveloperMessageItemParam_Content_0_Item) AsOrchestratorResponsesInputTextContentParam() (OrchestratorResponsesInputTextContentParam, error) {
+	var body OrchestratorResponsesInputTextContentParam
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesInputTextContentParam overwrites any union data inside the OrchestratorResponsesDeveloperMessageItemParam_Content_0_Item as the provided OrchestratorResponsesInputTextContentParam
+func (t *OrchestratorResponsesDeveloperMessageItemParam_Content_0_Item) FromOrchestratorResponsesInputTextContentParam(v OrchestratorResponsesInputTextContentParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputTextContentParam"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesInputTextContentParam performs a merge with any union data inside the OrchestratorResponsesDeveloperMessageItemParam_Content_0_Item, using the provided OrchestratorResponsesInputTextContentParam
+func (t *OrchestratorResponsesDeveloperMessageItemParam_Content_0_Item) MergeOrchestratorResponsesInputTextContentParam(v OrchestratorResponsesInputTextContentParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputTextContentParam"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorResponsesDeveloperMessageItemParam_Content_0_Item) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t OrchestratorResponsesDeveloperMessageItemParam_Content_0_Item) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "OrchestratorResponsesInputTextContentParam":
+		return t.AsOrchestratorResponsesInputTextContentParam()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t OrchestratorResponsesDeveloperMessageItemParam_Content_0_Item) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorResponsesDeveloperMessageItemParam_Content_0_Item) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorResponsesDeveloperMessageItemParamContent0 returns the union data inside the OrchestratorResponsesDeveloperMessageItemParam_Content as a OrchestratorResponsesDeveloperMessageItemParamContent0
+func (t OrchestratorResponsesDeveloperMessageItemParam_Content) AsOrchestratorResponsesDeveloperMessageItemParamContent0() (OrchestratorResponsesDeveloperMessageItemParamContent0, error) {
+	var body OrchestratorResponsesDeveloperMessageItemParamContent0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesDeveloperMessageItemParamContent0 overwrites any union data inside the OrchestratorResponsesDeveloperMessageItemParam_Content as the provided OrchestratorResponsesDeveloperMessageItemParamContent0
+func (t *OrchestratorResponsesDeveloperMessageItemParam_Content) FromOrchestratorResponsesDeveloperMessageItemParamContent0(v OrchestratorResponsesDeveloperMessageItemParamContent0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesDeveloperMessageItemParamContent0 performs a merge with any union data inside the OrchestratorResponsesDeveloperMessageItemParam_Content, using the provided OrchestratorResponsesDeveloperMessageItemParamContent0
+func (t *OrchestratorResponsesDeveloperMessageItemParam_Content) MergeOrchestratorResponsesDeveloperMessageItemParamContent0(v OrchestratorResponsesDeveloperMessageItemParamContent0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesDeveloperMessageItemParamContent1 returns the union data inside the OrchestratorResponsesDeveloperMessageItemParam_Content as a OrchestratorResponsesDeveloperMessageItemParamContent1
+func (t OrchestratorResponsesDeveloperMessageItemParam_Content) AsOrchestratorResponsesDeveloperMessageItemParamContent1() (OrchestratorResponsesDeveloperMessageItemParamContent1, error) {
+	var body OrchestratorResponsesDeveloperMessageItemParamContent1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesDeveloperMessageItemParamContent1 overwrites any union data inside the OrchestratorResponsesDeveloperMessageItemParam_Content as the provided OrchestratorResponsesDeveloperMessageItemParamContent1
+func (t *OrchestratorResponsesDeveloperMessageItemParam_Content) FromOrchestratorResponsesDeveloperMessageItemParamContent1(v OrchestratorResponsesDeveloperMessageItemParamContent1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesDeveloperMessageItemParamContent1 performs a merge with any union data inside the OrchestratorResponsesDeveloperMessageItemParam_Content, using the provided OrchestratorResponsesDeveloperMessageItemParamContent1
+func (t *OrchestratorResponsesDeveloperMessageItemParam_Content) MergeOrchestratorResponsesDeveloperMessageItemParamContent1(v OrchestratorResponsesDeveloperMessageItemParamContent1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorResponsesDeveloperMessageItemParam_Content) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorResponsesDeveloperMessageItemParam_Content) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorResponsesInputTextContent returns the union data inside the OrchestratorResponsesFunctionCallOutput_Output_1_Item as a OrchestratorResponsesInputTextContent
+func (t OrchestratorResponsesFunctionCallOutput_Output_1_Item) AsOrchestratorResponsesInputTextContent() (OrchestratorResponsesInputTextContent, error) {
+	var body OrchestratorResponsesInputTextContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesInputTextContent overwrites any union data inside the OrchestratorResponsesFunctionCallOutput_Output_1_Item as the provided OrchestratorResponsesInputTextContent
+func (t *OrchestratorResponsesFunctionCallOutput_Output_1_Item) FromOrchestratorResponsesInputTextContent(v OrchestratorResponsesInputTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputTextContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesInputTextContent performs a merge with any union data inside the OrchestratorResponsesFunctionCallOutput_Output_1_Item, using the provided OrchestratorResponsesInputTextContent
+func (t *OrchestratorResponsesFunctionCallOutput_Output_1_Item) MergeOrchestratorResponsesInputTextContent(v OrchestratorResponsesInputTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputTextContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesInputImageContent returns the union data inside the OrchestratorResponsesFunctionCallOutput_Output_1_Item as a OrchestratorResponsesInputImageContent
+func (t OrchestratorResponsesFunctionCallOutput_Output_1_Item) AsOrchestratorResponsesInputImageContent() (OrchestratorResponsesInputImageContent, error) {
+	var body OrchestratorResponsesInputImageContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesInputImageContent overwrites any union data inside the OrchestratorResponsesFunctionCallOutput_Output_1_Item as the provided OrchestratorResponsesInputImageContent
+func (t *OrchestratorResponsesFunctionCallOutput_Output_1_Item) FromOrchestratorResponsesInputImageContent(v OrchestratorResponsesInputImageContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputImageContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesInputImageContent performs a merge with any union data inside the OrchestratorResponsesFunctionCallOutput_Output_1_Item, using the provided OrchestratorResponsesInputImageContent
+func (t *OrchestratorResponsesFunctionCallOutput_Output_1_Item) MergeOrchestratorResponsesInputImageContent(v OrchestratorResponsesInputImageContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputImageContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesInputFileContent returns the union data inside the OrchestratorResponsesFunctionCallOutput_Output_1_Item as a OrchestratorResponsesInputFileContent
+func (t OrchestratorResponsesFunctionCallOutput_Output_1_Item) AsOrchestratorResponsesInputFileContent() (OrchestratorResponsesInputFileContent, error) {
+	var body OrchestratorResponsesInputFileContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesInputFileContent overwrites any union data inside the OrchestratorResponsesFunctionCallOutput_Output_1_Item as the provided OrchestratorResponsesInputFileContent
+func (t *OrchestratorResponsesFunctionCallOutput_Output_1_Item) FromOrchestratorResponsesInputFileContent(v OrchestratorResponsesInputFileContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputFileContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesInputFileContent performs a merge with any union data inside the OrchestratorResponsesFunctionCallOutput_Output_1_Item, using the provided OrchestratorResponsesInputFileContent
+func (t *OrchestratorResponsesFunctionCallOutput_Output_1_Item) MergeOrchestratorResponsesInputFileContent(v OrchestratorResponsesInputFileContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputFileContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorResponsesFunctionCallOutput_Output_1_Item) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t OrchestratorResponsesFunctionCallOutput_Output_1_Item) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "OrchestratorResponsesInputFileContent":
+		return t.AsOrchestratorResponsesInputFileContent()
+	case "OrchestratorResponsesInputImageContent":
+		return t.AsOrchestratorResponsesInputImageContent()
+	case "OrchestratorResponsesInputTextContent":
+		return t.AsOrchestratorResponsesInputTextContent()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t OrchestratorResponsesFunctionCallOutput_Output_1_Item) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorResponsesFunctionCallOutput_Output_1_Item) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorResponsesFunctionCallOutputOutput0 returns the union data inside the OrchestratorResponsesFunctionCallOutput_Output as a OrchestratorResponsesFunctionCallOutputOutput0
+func (t OrchestratorResponsesFunctionCallOutput_Output) AsOrchestratorResponsesFunctionCallOutputOutput0() (OrchestratorResponsesFunctionCallOutputOutput0, error) {
+	var body OrchestratorResponsesFunctionCallOutputOutput0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesFunctionCallOutputOutput0 overwrites any union data inside the OrchestratorResponsesFunctionCallOutput_Output as the provided OrchestratorResponsesFunctionCallOutputOutput0
+func (t *OrchestratorResponsesFunctionCallOutput_Output) FromOrchestratorResponsesFunctionCallOutputOutput0(v OrchestratorResponsesFunctionCallOutputOutput0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesFunctionCallOutputOutput0 performs a merge with any union data inside the OrchestratorResponsesFunctionCallOutput_Output, using the provided OrchestratorResponsesFunctionCallOutputOutput0
+func (t *OrchestratorResponsesFunctionCallOutput_Output) MergeOrchestratorResponsesFunctionCallOutputOutput0(v OrchestratorResponsesFunctionCallOutputOutput0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesFunctionCallOutputOutput1 returns the union data inside the OrchestratorResponsesFunctionCallOutput_Output as a OrchestratorResponsesFunctionCallOutputOutput1
+func (t OrchestratorResponsesFunctionCallOutput_Output) AsOrchestratorResponsesFunctionCallOutputOutput1() (OrchestratorResponsesFunctionCallOutputOutput1, error) {
+	var body OrchestratorResponsesFunctionCallOutputOutput1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesFunctionCallOutputOutput1 overwrites any union data inside the OrchestratorResponsesFunctionCallOutput_Output as the provided OrchestratorResponsesFunctionCallOutputOutput1
+func (t *OrchestratorResponsesFunctionCallOutput_Output) FromOrchestratorResponsesFunctionCallOutputOutput1(v OrchestratorResponsesFunctionCallOutputOutput1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesFunctionCallOutputOutput1 performs a merge with any union data inside the OrchestratorResponsesFunctionCallOutput_Output, using the provided OrchestratorResponsesFunctionCallOutputOutput1
+func (t *OrchestratorResponsesFunctionCallOutput_Output) MergeOrchestratorResponsesFunctionCallOutputOutput1(v OrchestratorResponsesFunctionCallOutputOutput1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorResponsesFunctionCallOutput_Output) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorResponsesFunctionCallOutput_Output) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorResponsesInputTextContentParam returns the union data inside the OrchestratorResponsesFunctionCallOutputItemParam_Output_1_Item as a OrchestratorResponsesInputTextContentParam
+func (t OrchestratorResponsesFunctionCallOutputItemParam_Output_1_Item) AsOrchestratorResponsesInputTextContentParam() (OrchestratorResponsesInputTextContentParam, error) {
+	var body OrchestratorResponsesInputTextContentParam
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesInputTextContentParam overwrites any union data inside the OrchestratorResponsesFunctionCallOutputItemParam_Output_1_Item as the provided OrchestratorResponsesInputTextContentParam
+func (t *OrchestratorResponsesFunctionCallOutputItemParam_Output_1_Item) FromOrchestratorResponsesInputTextContentParam(v OrchestratorResponsesInputTextContentParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputTextContentParam"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesInputTextContentParam performs a merge with any union data inside the OrchestratorResponsesFunctionCallOutputItemParam_Output_1_Item, using the provided OrchestratorResponsesInputTextContentParam
+func (t *OrchestratorResponsesFunctionCallOutputItemParam_Output_1_Item) MergeOrchestratorResponsesInputTextContentParam(v OrchestratorResponsesInputTextContentParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputTextContentParam"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesInputImageContentParamAutoParam returns the union data inside the OrchestratorResponsesFunctionCallOutputItemParam_Output_1_Item as a OrchestratorResponsesInputImageContentParamAutoParam
+func (t OrchestratorResponsesFunctionCallOutputItemParam_Output_1_Item) AsOrchestratorResponsesInputImageContentParamAutoParam() (OrchestratorResponsesInputImageContentParamAutoParam, error) {
+	var body OrchestratorResponsesInputImageContentParamAutoParam
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesInputImageContentParamAutoParam overwrites any union data inside the OrchestratorResponsesFunctionCallOutputItemParam_Output_1_Item as the provided OrchestratorResponsesInputImageContentParamAutoParam
+func (t *OrchestratorResponsesFunctionCallOutputItemParam_Output_1_Item) FromOrchestratorResponsesInputImageContentParamAutoParam(v OrchestratorResponsesInputImageContentParamAutoParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputImageContentParamAutoParam"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesInputImageContentParamAutoParam performs a merge with any union data inside the OrchestratorResponsesFunctionCallOutputItemParam_Output_1_Item, using the provided OrchestratorResponsesInputImageContentParamAutoParam
+func (t *OrchestratorResponsesFunctionCallOutputItemParam_Output_1_Item) MergeOrchestratorResponsesInputImageContentParamAutoParam(v OrchestratorResponsesInputImageContentParamAutoParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputImageContentParamAutoParam"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorResponsesFunctionCallOutputItemParam_Output_1_Item) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t OrchestratorResponsesFunctionCallOutputItemParam_Output_1_Item) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "OrchestratorResponsesInputImageContentParamAutoParam":
+		return t.AsOrchestratorResponsesInputImageContentParamAutoParam()
+	case "OrchestratorResponsesInputTextContentParam":
+		return t.AsOrchestratorResponsesInputTextContentParam()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t OrchestratorResponsesFunctionCallOutputItemParam_Output_1_Item) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorResponsesFunctionCallOutputItemParam_Output_1_Item) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorResponsesFunctionCallOutputItemParamOutput0 returns the union data inside the OrchestratorResponsesFunctionCallOutputItemParam_Output as a OrchestratorResponsesFunctionCallOutputItemParamOutput0
+func (t OrchestratorResponsesFunctionCallOutputItemParam_Output) AsOrchestratorResponsesFunctionCallOutputItemParamOutput0() (OrchestratorResponsesFunctionCallOutputItemParamOutput0, error) {
+	var body OrchestratorResponsesFunctionCallOutputItemParamOutput0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesFunctionCallOutputItemParamOutput0 overwrites any union data inside the OrchestratorResponsesFunctionCallOutputItemParam_Output as the provided OrchestratorResponsesFunctionCallOutputItemParamOutput0
+func (t *OrchestratorResponsesFunctionCallOutputItemParam_Output) FromOrchestratorResponsesFunctionCallOutputItemParamOutput0(v OrchestratorResponsesFunctionCallOutputItemParamOutput0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesFunctionCallOutputItemParamOutput0 performs a merge with any union data inside the OrchestratorResponsesFunctionCallOutputItemParam_Output, using the provided OrchestratorResponsesFunctionCallOutputItemParamOutput0
+func (t *OrchestratorResponsesFunctionCallOutputItemParam_Output) MergeOrchestratorResponsesFunctionCallOutputItemParamOutput0(v OrchestratorResponsesFunctionCallOutputItemParamOutput0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesFunctionCallOutputItemParamOutput1 returns the union data inside the OrchestratorResponsesFunctionCallOutputItemParam_Output as a OrchestratorResponsesFunctionCallOutputItemParamOutput1
+func (t OrchestratorResponsesFunctionCallOutputItemParam_Output) AsOrchestratorResponsesFunctionCallOutputItemParamOutput1() (OrchestratorResponsesFunctionCallOutputItemParamOutput1, error) {
+	var body OrchestratorResponsesFunctionCallOutputItemParamOutput1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesFunctionCallOutputItemParamOutput1 overwrites any union data inside the OrchestratorResponsesFunctionCallOutputItemParam_Output as the provided OrchestratorResponsesFunctionCallOutputItemParamOutput1
+func (t *OrchestratorResponsesFunctionCallOutputItemParam_Output) FromOrchestratorResponsesFunctionCallOutputItemParamOutput1(v OrchestratorResponsesFunctionCallOutputItemParamOutput1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesFunctionCallOutputItemParamOutput1 performs a merge with any union data inside the OrchestratorResponsesFunctionCallOutputItemParam_Output, using the provided OrchestratorResponsesFunctionCallOutputItemParamOutput1
+func (t *OrchestratorResponsesFunctionCallOutputItemParam_Output) MergeOrchestratorResponsesFunctionCallOutputItemParamOutput1(v OrchestratorResponsesFunctionCallOutputItemParamOutput1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorResponsesFunctionCallOutputItemParam_Output) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorResponsesFunctionCallOutputItemParam_Output) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorResponsesMessage returns the union data inside the OrchestratorResponsesItemField as a OrchestratorResponsesMessage
+func (t OrchestratorResponsesItemField) AsOrchestratorResponsesMessage() (OrchestratorResponsesMessage, error) {
+	var body OrchestratorResponsesMessage
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesMessage overwrites any union data inside the OrchestratorResponsesItemField as the provided OrchestratorResponsesMessage
+func (t *OrchestratorResponsesItemField) FromOrchestratorResponsesMessage(v OrchestratorResponsesMessage) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesMessage"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesMessage performs a merge with any union data inside the OrchestratorResponsesItemField, using the provided OrchestratorResponsesMessage
+func (t *OrchestratorResponsesItemField) MergeOrchestratorResponsesMessage(v OrchestratorResponsesMessage) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesMessage"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesFunctionCall returns the union data inside the OrchestratorResponsesItemField as a OrchestratorResponsesFunctionCall
+func (t OrchestratorResponsesItemField) AsOrchestratorResponsesFunctionCall() (OrchestratorResponsesFunctionCall, error) {
+	var body OrchestratorResponsesFunctionCall
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesFunctionCall overwrites any union data inside the OrchestratorResponsesItemField as the provided OrchestratorResponsesFunctionCall
+func (t *OrchestratorResponsesItemField) FromOrchestratorResponsesFunctionCall(v OrchestratorResponsesFunctionCall) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesFunctionCall"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesFunctionCall performs a merge with any union data inside the OrchestratorResponsesItemField, using the provided OrchestratorResponsesFunctionCall
+func (t *OrchestratorResponsesItemField) MergeOrchestratorResponsesFunctionCall(v OrchestratorResponsesFunctionCall) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesFunctionCall"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesFunctionCallOutput returns the union data inside the OrchestratorResponsesItemField as a OrchestratorResponsesFunctionCallOutput
+func (t OrchestratorResponsesItemField) AsOrchestratorResponsesFunctionCallOutput() (OrchestratorResponsesFunctionCallOutput, error) {
+	var body OrchestratorResponsesFunctionCallOutput
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesFunctionCallOutput overwrites any union data inside the OrchestratorResponsesItemField as the provided OrchestratorResponsesFunctionCallOutput
+func (t *OrchestratorResponsesItemField) FromOrchestratorResponsesFunctionCallOutput(v OrchestratorResponsesFunctionCallOutput) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesFunctionCallOutput"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesFunctionCallOutput performs a merge with any union data inside the OrchestratorResponsesItemField, using the provided OrchestratorResponsesFunctionCallOutput
+func (t *OrchestratorResponsesItemField) MergeOrchestratorResponsesFunctionCallOutput(v OrchestratorResponsesFunctionCallOutput) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesFunctionCallOutput"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesCustomToolCall returns the union data inside the OrchestratorResponsesItemField as a OrchestratorResponsesCustomToolCall
+func (t OrchestratorResponsesItemField) AsOrchestratorResponsesCustomToolCall() (OrchestratorResponsesCustomToolCall, error) {
+	var body OrchestratorResponsesCustomToolCall
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesCustomToolCall overwrites any union data inside the OrchestratorResponsesItemField as the provided OrchestratorResponsesCustomToolCall
+func (t *OrchestratorResponsesItemField) FromOrchestratorResponsesCustomToolCall(v OrchestratorResponsesCustomToolCall) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesCustomToolCall"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesCustomToolCall performs a merge with any union data inside the OrchestratorResponsesItemField, using the provided OrchestratorResponsesCustomToolCall
+func (t *OrchestratorResponsesItemField) MergeOrchestratorResponsesCustomToolCall(v OrchestratorResponsesCustomToolCall) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesCustomToolCall"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesReasoningBody returns the union data inside the OrchestratorResponsesItemField as a OrchestratorResponsesReasoningBody
+func (t OrchestratorResponsesItemField) AsOrchestratorResponsesReasoningBody() (OrchestratorResponsesReasoningBody, error) {
+	var body OrchestratorResponsesReasoningBody
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesReasoningBody overwrites any union data inside the OrchestratorResponsesItemField as the provided OrchestratorResponsesReasoningBody
+func (t *OrchestratorResponsesItemField) FromOrchestratorResponsesReasoningBody(v OrchestratorResponsesReasoningBody) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesReasoningBody"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesReasoningBody performs a merge with any union data inside the OrchestratorResponsesItemField, using the provided OrchestratorResponsesReasoningBody
+func (t *OrchestratorResponsesItemField) MergeOrchestratorResponsesReasoningBody(v OrchestratorResponsesReasoningBody) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesReasoningBody"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorResponsesItemField) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t OrchestratorResponsesItemField) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "OrchestratorResponsesCustomToolCall":
+		return t.AsOrchestratorResponsesCustomToolCall()
+	case "OrchestratorResponsesFunctionCall":
+		return t.AsOrchestratorResponsesFunctionCall()
+	case "OrchestratorResponsesFunctionCallOutput":
+		return t.AsOrchestratorResponsesFunctionCallOutput()
+	case "OrchestratorResponsesMessage":
+		return t.AsOrchestratorResponsesMessage()
+	case "OrchestratorResponsesReasoningBody":
+		return t.AsOrchestratorResponsesReasoningBody()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t OrchestratorResponsesItemField) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorResponsesItemField) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorResponsesAdditionalToolsItemParam returns the union data inside the OrchestratorResponsesItemParam as a OrchestratorResponsesAdditionalToolsItemParam
+func (t OrchestratorResponsesItemParam) AsOrchestratorResponsesAdditionalToolsItemParam() (OrchestratorResponsesAdditionalToolsItemParam, error) {
+	var body OrchestratorResponsesAdditionalToolsItemParam
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesAdditionalToolsItemParam overwrites any union data inside the OrchestratorResponsesItemParam as the provided OrchestratorResponsesAdditionalToolsItemParam
+func (t *OrchestratorResponsesItemParam) FromOrchestratorResponsesAdditionalToolsItemParam(v OrchestratorResponsesAdditionalToolsItemParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesAdditionalToolsItemParam"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesAdditionalToolsItemParam performs a merge with any union data inside the OrchestratorResponsesItemParam, using the provided OrchestratorResponsesAdditionalToolsItemParam
+func (t *OrchestratorResponsesItemParam) MergeOrchestratorResponsesAdditionalToolsItemParam(v OrchestratorResponsesAdditionalToolsItemParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesAdditionalToolsItemParam"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesReasoningItemParam returns the union data inside the OrchestratorResponsesItemParam as a OrchestratorResponsesReasoningItemParam
+func (t OrchestratorResponsesItemParam) AsOrchestratorResponsesReasoningItemParam() (OrchestratorResponsesReasoningItemParam, error) {
+	var body OrchestratorResponsesReasoningItemParam
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesReasoningItemParam overwrites any union data inside the OrchestratorResponsesItemParam as the provided OrchestratorResponsesReasoningItemParam
+func (t *OrchestratorResponsesItemParam) FromOrchestratorResponsesReasoningItemParam(v OrchestratorResponsesReasoningItemParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesReasoningItemParam"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesReasoningItemParam performs a merge with any union data inside the OrchestratorResponsesItemParam, using the provided OrchestratorResponsesReasoningItemParam
+func (t *OrchestratorResponsesItemParam) MergeOrchestratorResponsesReasoningItemParam(v OrchestratorResponsesReasoningItemParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesReasoningItemParam"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesUserMessageItemParam returns the union data inside the OrchestratorResponsesItemParam as a OrchestratorResponsesUserMessageItemParam
+func (t OrchestratorResponsesItemParam) AsOrchestratorResponsesUserMessageItemParam() (OrchestratorResponsesUserMessageItemParam, error) {
+	var body OrchestratorResponsesUserMessageItemParam
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesUserMessageItemParam overwrites any union data inside the OrchestratorResponsesItemParam as the provided OrchestratorResponsesUserMessageItemParam
+func (t *OrchestratorResponsesItemParam) FromOrchestratorResponsesUserMessageItemParam(v OrchestratorResponsesUserMessageItemParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesUserMessageItemParam"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesUserMessageItemParam performs a merge with any union data inside the OrchestratorResponsesItemParam, using the provided OrchestratorResponsesUserMessageItemParam
+func (t *OrchestratorResponsesItemParam) MergeOrchestratorResponsesUserMessageItemParam(v OrchestratorResponsesUserMessageItemParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesUserMessageItemParam"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesSystemMessageItemParam returns the union data inside the OrchestratorResponsesItemParam as a OrchestratorResponsesSystemMessageItemParam
+func (t OrchestratorResponsesItemParam) AsOrchestratorResponsesSystemMessageItemParam() (OrchestratorResponsesSystemMessageItemParam, error) {
+	var body OrchestratorResponsesSystemMessageItemParam
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesSystemMessageItemParam overwrites any union data inside the OrchestratorResponsesItemParam as the provided OrchestratorResponsesSystemMessageItemParam
+func (t *OrchestratorResponsesItemParam) FromOrchestratorResponsesSystemMessageItemParam(v OrchestratorResponsesSystemMessageItemParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesSystemMessageItemParam"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesSystemMessageItemParam performs a merge with any union data inside the OrchestratorResponsesItemParam, using the provided OrchestratorResponsesSystemMessageItemParam
+func (t *OrchestratorResponsesItemParam) MergeOrchestratorResponsesSystemMessageItemParam(v OrchestratorResponsesSystemMessageItemParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesSystemMessageItemParam"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesDeveloperMessageItemParam returns the union data inside the OrchestratorResponsesItemParam as a OrchestratorResponsesDeveloperMessageItemParam
+func (t OrchestratorResponsesItemParam) AsOrchestratorResponsesDeveloperMessageItemParam() (OrchestratorResponsesDeveloperMessageItemParam, error) {
+	var body OrchestratorResponsesDeveloperMessageItemParam
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesDeveloperMessageItemParam overwrites any union data inside the OrchestratorResponsesItemParam as the provided OrchestratorResponsesDeveloperMessageItemParam
+func (t *OrchestratorResponsesItemParam) FromOrchestratorResponsesDeveloperMessageItemParam(v OrchestratorResponsesDeveloperMessageItemParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesDeveloperMessageItemParam"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesDeveloperMessageItemParam performs a merge with any union data inside the OrchestratorResponsesItemParam, using the provided OrchestratorResponsesDeveloperMessageItemParam
+func (t *OrchestratorResponsesItemParam) MergeOrchestratorResponsesDeveloperMessageItemParam(v OrchestratorResponsesDeveloperMessageItemParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesDeveloperMessageItemParam"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesAssistantMessageItemParam returns the union data inside the OrchestratorResponsesItemParam as a OrchestratorResponsesAssistantMessageItemParam
+func (t OrchestratorResponsesItemParam) AsOrchestratorResponsesAssistantMessageItemParam() (OrchestratorResponsesAssistantMessageItemParam, error) {
+	var body OrchestratorResponsesAssistantMessageItemParam
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesAssistantMessageItemParam overwrites any union data inside the OrchestratorResponsesItemParam as the provided OrchestratorResponsesAssistantMessageItemParam
+func (t *OrchestratorResponsesItemParam) FromOrchestratorResponsesAssistantMessageItemParam(v OrchestratorResponsesAssistantMessageItemParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesAssistantMessageItemParam"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesAssistantMessageItemParam performs a merge with any union data inside the OrchestratorResponsesItemParam, using the provided OrchestratorResponsesAssistantMessageItemParam
+func (t *OrchestratorResponsesItemParam) MergeOrchestratorResponsesAssistantMessageItemParam(v OrchestratorResponsesAssistantMessageItemParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesAssistantMessageItemParam"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesFunctionCallItemParam returns the union data inside the OrchestratorResponsesItemParam as a OrchestratorResponsesFunctionCallItemParam
+func (t OrchestratorResponsesItemParam) AsOrchestratorResponsesFunctionCallItemParam() (OrchestratorResponsesFunctionCallItemParam, error) {
+	var body OrchestratorResponsesFunctionCallItemParam
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesFunctionCallItemParam overwrites any union data inside the OrchestratorResponsesItemParam as the provided OrchestratorResponsesFunctionCallItemParam
+func (t *OrchestratorResponsesItemParam) FromOrchestratorResponsesFunctionCallItemParam(v OrchestratorResponsesFunctionCallItemParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesFunctionCallItemParam"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesFunctionCallItemParam performs a merge with any union data inside the OrchestratorResponsesItemParam, using the provided OrchestratorResponsesFunctionCallItemParam
+func (t *OrchestratorResponsesItemParam) MergeOrchestratorResponsesFunctionCallItemParam(v OrchestratorResponsesFunctionCallItemParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesFunctionCallItemParam"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesFunctionCallOutputItemParam returns the union data inside the OrchestratorResponsesItemParam as a OrchestratorResponsesFunctionCallOutputItemParam
+func (t OrchestratorResponsesItemParam) AsOrchestratorResponsesFunctionCallOutputItemParam() (OrchestratorResponsesFunctionCallOutputItemParam, error) {
+	var body OrchestratorResponsesFunctionCallOutputItemParam
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesFunctionCallOutputItemParam overwrites any union data inside the OrchestratorResponsesItemParam as the provided OrchestratorResponsesFunctionCallOutputItemParam
+func (t *OrchestratorResponsesItemParam) FromOrchestratorResponsesFunctionCallOutputItemParam(v OrchestratorResponsesFunctionCallOutputItemParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesFunctionCallOutputItemParam"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesFunctionCallOutputItemParam performs a merge with any union data inside the OrchestratorResponsesItemParam, using the provided OrchestratorResponsesFunctionCallOutputItemParam
+func (t *OrchestratorResponsesItemParam) MergeOrchestratorResponsesFunctionCallOutputItemParam(v OrchestratorResponsesFunctionCallOutputItemParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesFunctionCallOutputItemParam"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesCustomToolCallItemParam returns the union data inside the OrchestratorResponsesItemParam as a OrchestratorResponsesCustomToolCallItemParam
+func (t OrchestratorResponsesItemParam) AsOrchestratorResponsesCustomToolCallItemParam() (OrchestratorResponsesCustomToolCallItemParam, error) {
+	var body OrchestratorResponsesCustomToolCallItemParam
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesCustomToolCallItemParam overwrites any union data inside the OrchestratorResponsesItemParam as the provided OrchestratorResponsesCustomToolCallItemParam
+func (t *OrchestratorResponsesItemParam) FromOrchestratorResponsesCustomToolCallItemParam(v OrchestratorResponsesCustomToolCallItemParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesCustomToolCallItemParam"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesCustomToolCallItemParam performs a merge with any union data inside the OrchestratorResponsesItemParam, using the provided OrchestratorResponsesCustomToolCallItemParam
+func (t *OrchestratorResponsesItemParam) MergeOrchestratorResponsesCustomToolCallItemParam(v OrchestratorResponsesCustomToolCallItemParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesCustomToolCallItemParam"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesCustomToolCallOutputItemParam returns the union data inside the OrchestratorResponsesItemParam as a OrchestratorResponsesCustomToolCallOutputItemParam
+func (t OrchestratorResponsesItemParam) AsOrchestratorResponsesCustomToolCallOutputItemParam() (OrchestratorResponsesCustomToolCallOutputItemParam, error) {
+	var body OrchestratorResponsesCustomToolCallOutputItemParam
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesCustomToolCallOutputItemParam overwrites any union data inside the OrchestratorResponsesItemParam as the provided OrchestratorResponsesCustomToolCallOutputItemParam
+func (t *OrchestratorResponsesItemParam) FromOrchestratorResponsesCustomToolCallOutputItemParam(v OrchestratorResponsesCustomToolCallOutputItemParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesCustomToolCallOutputItemParam"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesCustomToolCallOutputItemParam performs a merge with any union data inside the OrchestratorResponsesItemParam, using the provided OrchestratorResponsesCustomToolCallOutputItemParam
+func (t *OrchestratorResponsesItemParam) MergeOrchestratorResponsesCustomToolCallOutputItemParam(v OrchestratorResponsesCustomToolCallOutputItemParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesCustomToolCallOutputItemParam"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorResponsesItemParam) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t OrchestratorResponsesItemParam) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "OrchestratorResponsesAdditionalToolsItemParam":
+		return t.AsOrchestratorResponsesAdditionalToolsItemParam()
+	case "OrchestratorResponsesAssistantMessageItemParam":
+		return t.AsOrchestratorResponsesAssistantMessageItemParam()
+	case "OrchestratorResponsesCustomToolCallItemParam":
+		return t.AsOrchestratorResponsesCustomToolCallItemParam()
+	case "OrchestratorResponsesCustomToolCallOutputItemParam":
+		return t.AsOrchestratorResponsesCustomToolCallOutputItemParam()
+	case "OrchestratorResponsesDeveloperMessageItemParam":
+		return t.AsOrchestratorResponsesDeveloperMessageItemParam()
+	case "OrchestratorResponsesFunctionCallItemParam":
+		return t.AsOrchestratorResponsesFunctionCallItemParam()
+	case "OrchestratorResponsesFunctionCallOutputItemParam":
+		return t.AsOrchestratorResponsesFunctionCallOutputItemParam()
+	case "OrchestratorResponsesReasoningItemParam":
+		return t.AsOrchestratorResponsesReasoningItemParam()
+	case "OrchestratorResponsesSystemMessageItemParam":
+		return t.AsOrchestratorResponsesSystemMessageItemParam()
+	case "OrchestratorResponsesUserMessageItemParam":
+		return t.AsOrchestratorResponsesUserMessageItemParam()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t OrchestratorResponsesItemParam) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorResponsesItemParam) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorResponsesInputTextContent returns the union data inside the OrchestratorResponsesMessage_Content_Item as a OrchestratorResponsesInputTextContent
+func (t OrchestratorResponsesMessage_Content_Item) AsOrchestratorResponsesInputTextContent() (OrchestratorResponsesInputTextContent, error) {
+	var body OrchestratorResponsesInputTextContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesInputTextContent overwrites any union data inside the OrchestratorResponsesMessage_Content_Item as the provided OrchestratorResponsesInputTextContent
+func (t *OrchestratorResponsesMessage_Content_Item) FromOrchestratorResponsesInputTextContent(v OrchestratorResponsesInputTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputTextContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesInputTextContent performs a merge with any union data inside the OrchestratorResponsesMessage_Content_Item, using the provided OrchestratorResponsesInputTextContent
+func (t *OrchestratorResponsesMessage_Content_Item) MergeOrchestratorResponsesInputTextContent(v OrchestratorResponsesInputTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputTextContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesOutputTextContent returns the union data inside the OrchestratorResponsesMessage_Content_Item as a OrchestratorResponsesOutputTextContent
+func (t OrchestratorResponsesMessage_Content_Item) AsOrchestratorResponsesOutputTextContent() (OrchestratorResponsesOutputTextContent, error) {
+	var body OrchestratorResponsesOutputTextContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesOutputTextContent overwrites any union data inside the OrchestratorResponsesMessage_Content_Item as the provided OrchestratorResponsesOutputTextContent
+func (t *OrchestratorResponsesMessage_Content_Item) FromOrchestratorResponsesOutputTextContent(v OrchestratorResponsesOutputTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesOutputTextContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesOutputTextContent performs a merge with any union data inside the OrchestratorResponsesMessage_Content_Item, using the provided OrchestratorResponsesOutputTextContent
+func (t *OrchestratorResponsesMessage_Content_Item) MergeOrchestratorResponsesOutputTextContent(v OrchestratorResponsesOutputTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesOutputTextContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesTextContent returns the union data inside the OrchestratorResponsesMessage_Content_Item as a OrchestratorResponsesTextContent
+func (t OrchestratorResponsesMessage_Content_Item) AsOrchestratorResponsesTextContent() (OrchestratorResponsesTextContent, error) {
+	var body OrchestratorResponsesTextContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesTextContent overwrites any union data inside the OrchestratorResponsesMessage_Content_Item as the provided OrchestratorResponsesTextContent
+func (t *OrchestratorResponsesMessage_Content_Item) FromOrchestratorResponsesTextContent(v OrchestratorResponsesTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesTextContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesTextContent performs a merge with any union data inside the OrchestratorResponsesMessage_Content_Item, using the provided OrchestratorResponsesTextContent
+func (t *OrchestratorResponsesMessage_Content_Item) MergeOrchestratorResponsesTextContent(v OrchestratorResponsesTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesTextContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesSummaryTextContent returns the union data inside the OrchestratorResponsesMessage_Content_Item as a OrchestratorResponsesSummaryTextContent
+func (t OrchestratorResponsesMessage_Content_Item) AsOrchestratorResponsesSummaryTextContent() (OrchestratorResponsesSummaryTextContent, error) {
+	var body OrchestratorResponsesSummaryTextContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesSummaryTextContent overwrites any union data inside the OrchestratorResponsesMessage_Content_Item as the provided OrchestratorResponsesSummaryTextContent
+func (t *OrchestratorResponsesMessage_Content_Item) FromOrchestratorResponsesSummaryTextContent(v OrchestratorResponsesSummaryTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesSummaryTextContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesSummaryTextContent performs a merge with any union data inside the OrchestratorResponsesMessage_Content_Item, using the provided OrchestratorResponsesSummaryTextContent
+func (t *OrchestratorResponsesMessage_Content_Item) MergeOrchestratorResponsesSummaryTextContent(v OrchestratorResponsesSummaryTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesSummaryTextContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesReasoningTextContent returns the union data inside the OrchestratorResponsesMessage_Content_Item as a OrchestratorResponsesReasoningTextContent
+func (t OrchestratorResponsesMessage_Content_Item) AsOrchestratorResponsesReasoningTextContent() (OrchestratorResponsesReasoningTextContent, error) {
+	var body OrchestratorResponsesReasoningTextContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesReasoningTextContent overwrites any union data inside the OrchestratorResponsesMessage_Content_Item as the provided OrchestratorResponsesReasoningTextContent
+func (t *OrchestratorResponsesMessage_Content_Item) FromOrchestratorResponsesReasoningTextContent(v OrchestratorResponsesReasoningTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesReasoningTextContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesReasoningTextContent performs a merge with any union data inside the OrchestratorResponsesMessage_Content_Item, using the provided OrchestratorResponsesReasoningTextContent
+func (t *OrchestratorResponsesMessage_Content_Item) MergeOrchestratorResponsesReasoningTextContent(v OrchestratorResponsesReasoningTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesReasoningTextContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesRefusalContent returns the union data inside the OrchestratorResponsesMessage_Content_Item as a OrchestratorResponsesRefusalContent
+func (t OrchestratorResponsesMessage_Content_Item) AsOrchestratorResponsesRefusalContent() (OrchestratorResponsesRefusalContent, error) {
+	var body OrchestratorResponsesRefusalContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesRefusalContent overwrites any union data inside the OrchestratorResponsesMessage_Content_Item as the provided OrchestratorResponsesRefusalContent
+func (t *OrchestratorResponsesMessage_Content_Item) FromOrchestratorResponsesRefusalContent(v OrchestratorResponsesRefusalContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesRefusalContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesRefusalContent performs a merge with any union data inside the OrchestratorResponsesMessage_Content_Item, using the provided OrchestratorResponsesRefusalContent
+func (t *OrchestratorResponsesMessage_Content_Item) MergeOrchestratorResponsesRefusalContent(v OrchestratorResponsesRefusalContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesRefusalContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesInputImageContent returns the union data inside the OrchestratorResponsesMessage_Content_Item as a OrchestratorResponsesInputImageContent
+func (t OrchestratorResponsesMessage_Content_Item) AsOrchestratorResponsesInputImageContent() (OrchestratorResponsesInputImageContent, error) {
+	var body OrchestratorResponsesInputImageContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesInputImageContent overwrites any union data inside the OrchestratorResponsesMessage_Content_Item as the provided OrchestratorResponsesInputImageContent
+func (t *OrchestratorResponsesMessage_Content_Item) FromOrchestratorResponsesInputImageContent(v OrchestratorResponsesInputImageContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputImageContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesInputImageContent performs a merge with any union data inside the OrchestratorResponsesMessage_Content_Item, using the provided OrchestratorResponsesInputImageContent
+func (t *OrchestratorResponsesMessage_Content_Item) MergeOrchestratorResponsesInputImageContent(v OrchestratorResponsesInputImageContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputImageContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesInputFileContent returns the union data inside the OrchestratorResponsesMessage_Content_Item as a OrchestratorResponsesInputFileContent
+func (t OrchestratorResponsesMessage_Content_Item) AsOrchestratorResponsesInputFileContent() (OrchestratorResponsesInputFileContent, error) {
+	var body OrchestratorResponsesInputFileContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesInputFileContent overwrites any union data inside the OrchestratorResponsesMessage_Content_Item as the provided OrchestratorResponsesInputFileContent
+func (t *OrchestratorResponsesMessage_Content_Item) FromOrchestratorResponsesInputFileContent(v OrchestratorResponsesInputFileContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputFileContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesInputFileContent performs a merge with any union data inside the OrchestratorResponsesMessage_Content_Item, using the provided OrchestratorResponsesInputFileContent
+func (t *OrchestratorResponsesMessage_Content_Item) MergeOrchestratorResponsesInputFileContent(v OrchestratorResponsesInputFileContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputFileContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesInputVideoContent returns the union data inside the OrchestratorResponsesMessage_Content_Item as a OrchestratorResponsesInputVideoContent
+func (t OrchestratorResponsesMessage_Content_Item) AsOrchestratorResponsesInputVideoContent() (OrchestratorResponsesInputVideoContent, error) {
+	var body OrchestratorResponsesInputVideoContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesInputVideoContent overwrites any union data inside the OrchestratorResponsesMessage_Content_Item as the provided OrchestratorResponsesInputVideoContent
+func (t *OrchestratorResponsesMessage_Content_Item) FromOrchestratorResponsesInputVideoContent(v OrchestratorResponsesInputVideoContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputVideoContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesInputVideoContent performs a merge with any union data inside the OrchestratorResponsesMessage_Content_Item, using the provided OrchestratorResponsesInputVideoContent
+func (t *OrchestratorResponsesMessage_Content_Item) MergeOrchestratorResponsesInputVideoContent(v OrchestratorResponsesInputVideoContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputVideoContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorResponsesMessage_Content_Item) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t OrchestratorResponsesMessage_Content_Item) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "OrchestratorResponsesInputFileContent":
+		return t.AsOrchestratorResponsesInputFileContent()
+	case "OrchestratorResponsesInputImageContent":
+		return t.AsOrchestratorResponsesInputImageContent()
+	case "OrchestratorResponsesInputTextContent":
+		return t.AsOrchestratorResponsesInputTextContent()
+	case "OrchestratorResponsesInputVideoContent":
+		return t.AsOrchestratorResponsesInputVideoContent()
+	case "OrchestratorResponsesOutputTextContent":
+		return t.AsOrchestratorResponsesOutputTextContent()
+	case "OrchestratorResponsesReasoningTextContent":
+		return t.AsOrchestratorResponsesReasoningTextContent()
+	case "OrchestratorResponsesRefusalContent":
+		return t.AsOrchestratorResponsesRefusalContent()
+	case "OrchestratorResponsesSummaryTextContent":
+		return t.AsOrchestratorResponsesSummaryTextContent()
+	case "OrchestratorResponsesTextContent":
+		return t.AsOrchestratorResponsesTextContent()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t OrchestratorResponsesMessage_Content_Item) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorResponsesMessage_Content_Item) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorResponsesOutputTextContentParamAnnotations0 returns the union data inside the OrchestratorResponsesOutputTextContentParam_Annotations as a OrchestratorResponsesOutputTextContentParamAnnotations0
+func (t OrchestratorResponsesOutputTextContentParam_Annotations) AsOrchestratorResponsesOutputTextContentParamAnnotations0() (OrchestratorResponsesOutputTextContentParamAnnotations0, error) {
+	var body OrchestratorResponsesOutputTextContentParamAnnotations0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesOutputTextContentParamAnnotations0 overwrites any union data inside the OrchestratorResponsesOutputTextContentParam_Annotations as the provided OrchestratorResponsesOutputTextContentParamAnnotations0
+func (t *OrchestratorResponsesOutputTextContentParam_Annotations) FromOrchestratorResponsesOutputTextContentParamAnnotations0(v OrchestratorResponsesOutputTextContentParamAnnotations0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesOutputTextContentParamAnnotations0 performs a merge with any union data inside the OrchestratorResponsesOutputTextContentParam_Annotations, using the provided OrchestratorResponsesOutputTextContentParamAnnotations0
+func (t *OrchestratorResponsesOutputTextContentParam_Annotations) MergeOrchestratorResponsesOutputTextContentParamAnnotations0(v OrchestratorResponsesOutputTextContentParamAnnotations0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorResponsesOutputTextContentParam_Annotations) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorResponsesOutputTextContentParam_Annotations) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorResponsesInputTextContent returns the union data inside the OrchestratorResponsesReasoningBody_Content_Item as a OrchestratorResponsesInputTextContent
+func (t OrchestratorResponsesReasoningBody_Content_Item) AsOrchestratorResponsesInputTextContent() (OrchestratorResponsesInputTextContent, error) {
+	var body OrchestratorResponsesInputTextContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesInputTextContent overwrites any union data inside the OrchestratorResponsesReasoningBody_Content_Item as the provided OrchestratorResponsesInputTextContent
+func (t *OrchestratorResponsesReasoningBody_Content_Item) FromOrchestratorResponsesInputTextContent(v OrchestratorResponsesInputTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputTextContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesInputTextContent performs a merge with any union data inside the OrchestratorResponsesReasoningBody_Content_Item, using the provided OrchestratorResponsesInputTextContent
+func (t *OrchestratorResponsesReasoningBody_Content_Item) MergeOrchestratorResponsesInputTextContent(v OrchestratorResponsesInputTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputTextContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesOutputTextContent returns the union data inside the OrchestratorResponsesReasoningBody_Content_Item as a OrchestratorResponsesOutputTextContent
+func (t OrchestratorResponsesReasoningBody_Content_Item) AsOrchestratorResponsesOutputTextContent() (OrchestratorResponsesOutputTextContent, error) {
+	var body OrchestratorResponsesOutputTextContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesOutputTextContent overwrites any union data inside the OrchestratorResponsesReasoningBody_Content_Item as the provided OrchestratorResponsesOutputTextContent
+func (t *OrchestratorResponsesReasoningBody_Content_Item) FromOrchestratorResponsesOutputTextContent(v OrchestratorResponsesOutputTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesOutputTextContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesOutputTextContent performs a merge with any union data inside the OrchestratorResponsesReasoningBody_Content_Item, using the provided OrchestratorResponsesOutputTextContent
+func (t *OrchestratorResponsesReasoningBody_Content_Item) MergeOrchestratorResponsesOutputTextContent(v OrchestratorResponsesOutputTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesOutputTextContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesTextContent returns the union data inside the OrchestratorResponsesReasoningBody_Content_Item as a OrchestratorResponsesTextContent
+func (t OrchestratorResponsesReasoningBody_Content_Item) AsOrchestratorResponsesTextContent() (OrchestratorResponsesTextContent, error) {
+	var body OrchestratorResponsesTextContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesTextContent overwrites any union data inside the OrchestratorResponsesReasoningBody_Content_Item as the provided OrchestratorResponsesTextContent
+func (t *OrchestratorResponsesReasoningBody_Content_Item) FromOrchestratorResponsesTextContent(v OrchestratorResponsesTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesTextContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesTextContent performs a merge with any union data inside the OrchestratorResponsesReasoningBody_Content_Item, using the provided OrchestratorResponsesTextContent
+func (t *OrchestratorResponsesReasoningBody_Content_Item) MergeOrchestratorResponsesTextContent(v OrchestratorResponsesTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesTextContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesSummaryTextContent returns the union data inside the OrchestratorResponsesReasoningBody_Content_Item as a OrchestratorResponsesSummaryTextContent
+func (t OrchestratorResponsesReasoningBody_Content_Item) AsOrchestratorResponsesSummaryTextContent() (OrchestratorResponsesSummaryTextContent, error) {
+	var body OrchestratorResponsesSummaryTextContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesSummaryTextContent overwrites any union data inside the OrchestratorResponsesReasoningBody_Content_Item as the provided OrchestratorResponsesSummaryTextContent
+func (t *OrchestratorResponsesReasoningBody_Content_Item) FromOrchestratorResponsesSummaryTextContent(v OrchestratorResponsesSummaryTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesSummaryTextContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesSummaryTextContent performs a merge with any union data inside the OrchestratorResponsesReasoningBody_Content_Item, using the provided OrchestratorResponsesSummaryTextContent
+func (t *OrchestratorResponsesReasoningBody_Content_Item) MergeOrchestratorResponsesSummaryTextContent(v OrchestratorResponsesSummaryTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesSummaryTextContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesReasoningTextContent returns the union data inside the OrchestratorResponsesReasoningBody_Content_Item as a OrchestratorResponsesReasoningTextContent
+func (t OrchestratorResponsesReasoningBody_Content_Item) AsOrchestratorResponsesReasoningTextContent() (OrchestratorResponsesReasoningTextContent, error) {
+	var body OrchestratorResponsesReasoningTextContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesReasoningTextContent overwrites any union data inside the OrchestratorResponsesReasoningBody_Content_Item as the provided OrchestratorResponsesReasoningTextContent
+func (t *OrchestratorResponsesReasoningBody_Content_Item) FromOrchestratorResponsesReasoningTextContent(v OrchestratorResponsesReasoningTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesReasoningTextContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesReasoningTextContent performs a merge with any union data inside the OrchestratorResponsesReasoningBody_Content_Item, using the provided OrchestratorResponsesReasoningTextContent
+func (t *OrchestratorResponsesReasoningBody_Content_Item) MergeOrchestratorResponsesReasoningTextContent(v OrchestratorResponsesReasoningTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesReasoningTextContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesRefusalContent returns the union data inside the OrchestratorResponsesReasoningBody_Content_Item as a OrchestratorResponsesRefusalContent
+func (t OrchestratorResponsesReasoningBody_Content_Item) AsOrchestratorResponsesRefusalContent() (OrchestratorResponsesRefusalContent, error) {
+	var body OrchestratorResponsesRefusalContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesRefusalContent overwrites any union data inside the OrchestratorResponsesReasoningBody_Content_Item as the provided OrchestratorResponsesRefusalContent
+func (t *OrchestratorResponsesReasoningBody_Content_Item) FromOrchestratorResponsesRefusalContent(v OrchestratorResponsesRefusalContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesRefusalContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesRefusalContent performs a merge with any union data inside the OrchestratorResponsesReasoningBody_Content_Item, using the provided OrchestratorResponsesRefusalContent
+func (t *OrchestratorResponsesReasoningBody_Content_Item) MergeOrchestratorResponsesRefusalContent(v OrchestratorResponsesRefusalContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesRefusalContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesInputImageContent returns the union data inside the OrchestratorResponsesReasoningBody_Content_Item as a OrchestratorResponsesInputImageContent
+func (t OrchestratorResponsesReasoningBody_Content_Item) AsOrchestratorResponsesInputImageContent() (OrchestratorResponsesInputImageContent, error) {
+	var body OrchestratorResponsesInputImageContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesInputImageContent overwrites any union data inside the OrchestratorResponsesReasoningBody_Content_Item as the provided OrchestratorResponsesInputImageContent
+func (t *OrchestratorResponsesReasoningBody_Content_Item) FromOrchestratorResponsesInputImageContent(v OrchestratorResponsesInputImageContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputImageContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesInputImageContent performs a merge with any union data inside the OrchestratorResponsesReasoningBody_Content_Item, using the provided OrchestratorResponsesInputImageContent
+func (t *OrchestratorResponsesReasoningBody_Content_Item) MergeOrchestratorResponsesInputImageContent(v OrchestratorResponsesInputImageContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputImageContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesInputFileContent returns the union data inside the OrchestratorResponsesReasoningBody_Content_Item as a OrchestratorResponsesInputFileContent
+func (t OrchestratorResponsesReasoningBody_Content_Item) AsOrchestratorResponsesInputFileContent() (OrchestratorResponsesInputFileContent, error) {
+	var body OrchestratorResponsesInputFileContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesInputFileContent overwrites any union data inside the OrchestratorResponsesReasoningBody_Content_Item as the provided OrchestratorResponsesInputFileContent
+func (t *OrchestratorResponsesReasoningBody_Content_Item) FromOrchestratorResponsesInputFileContent(v OrchestratorResponsesInputFileContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputFileContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesInputFileContent performs a merge with any union data inside the OrchestratorResponsesReasoningBody_Content_Item, using the provided OrchestratorResponsesInputFileContent
+func (t *OrchestratorResponsesReasoningBody_Content_Item) MergeOrchestratorResponsesInputFileContent(v OrchestratorResponsesInputFileContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputFileContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorResponsesReasoningBody_Content_Item) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t OrchestratorResponsesReasoningBody_Content_Item) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "OrchestratorResponsesInputFileContent":
+		return t.AsOrchestratorResponsesInputFileContent()
+	case "OrchestratorResponsesInputImageContent":
+		return t.AsOrchestratorResponsesInputImageContent()
+	case "OrchestratorResponsesInputTextContent":
+		return t.AsOrchestratorResponsesInputTextContent()
+	case "OrchestratorResponsesOutputTextContent":
+		return t.AsOrchestratorResponsesOutputTextContent()
+	case "OrchestratorResponsesReasoningTextContent":
+		return t.AsOrchestratorResponsesReasoningTextContent()
+	case "OrchestratorResponsesRefusalContent":
+		return t.AsOrchestratorResponsesRefusalContent()
+	case "OrchestratorResponsesSummaryTextContent":
+		return t.AsOrchestratorResponsesSummaryTextContent()
+	case "OrchestratorResponsesTextContent":
+		return t.AsOrchestratorResponsesTextContent()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t OrchestratorResponsesReasoningBody_Content_Item) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorResponsesReasoningBody_Content_Item) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorResponsesInputTextContent returns the union data inside the OrchestratorResponsesReasoningBody_Summary_Item as a OrchestratorResponsesInputTextContent
+func (t OrchestratorResponsesReasoningBody_Summary_Item) AsOrchestratorResponsesInputTextContent() (OrchestratorResponsesInputTextContent, error) {
+	var body OrchestratorResponsesInputTextContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesInputTextContent overwrites any union data inside the OrchestratorResponsesReasoningBody_Summary_Item as the provided OrchestratorResponsesInputTextContent
+func (t *OrchestratorResponsesReasoningBody_Summary_Item) FromOrchestratorResponsesInputTextContent(v OrchestratorResponsesInputTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputTextContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesInputTextContent performs a merge with any union data inside the OrchestratorResponsesReasoningBody_Summary_Item, using the provided OrchestratorResponsesInputTextContent
+func (t *OrchestratorResponsesReasoningBody_Summary_Item) MergeOrchestratorResponsesInputTextContent(v OrchestratorResponsesInputTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputTextContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesOutputTextContent returns the union data inside the OrchestratorResponsesReasoningBody_Summary_Item as a OrchestratorResponsesOutputTextContent
+func (t OrchestratorResponsesReasoningBody_Summary_Item) AsOrchestratorResponsesOutputTextContent() (OrchestratorResponsesOutputTextContent, error) {
+	var body OrchestratorResponsesOutputTextContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesOutputTextContent overwrites any union data inside the OrchestratorResponsesReasoningBody_Summary_Item as the provided OrchestratorResponsesOutputTextContent
+func (t *OrchestratorResponsesReasoningBody_Summary_Item) FromOrchestratorResponsesOutputTextContent(v OrchestratorResponsesOutputTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesOutputTextContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesOutputTextContent performs a merge with any union data inside the OrchestratorResponsesReasoningBody_Summary_Item, using the provided OrchestratorResponsesOutputTextContent
+func (t *OrchestratorResponsesReasoningBody_Summary_Item) MergeOrchestratorResponsesOutputTextContent(v OrchestratorResponsesOutputTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesOutputTextContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesTextContent returns the union data inside the OrchestratorResponsesReasoningBody_Summary_Item as a OrchestratorResponsesTextContent
+func (t OrchestratorResponsesReasoningBody_Summary_Item) AsOrchestratorResponsesTextContent() (OrchestratorResponsesTextContent, error) {
+	var body OrchestratorResponsesTextContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesTextContent overwrites any union data inside the OrchestratorResponsesReasoningBody_Summary_Item as the provided OrchestratorResponsesTextContent
+func (t *OrchestratorResponsesReasoningBody_Summary_Item) FromOrchestratorResponsesTextContent(v OrchestratorResponsesTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesTextContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesTextContent performs a merge with any union data inside the OrchestratorResponsesReasoningBody_Summary_Item, using the provided OrchestratorResponsesTextContent
+func (t *OrchestratorResponsesReasoningBody_Summary_Item) MergeOrchestratorResponsesTextContent(v OrchestratorResponsesTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesTextContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesSummaryTextContent returns the union data inside the OrchestratorResponsesReasoningBody_Summary_Item as a OrchestratorResponsesSummaryTextContent
+func (t OrchestratorResponsesReasoningBody_Summary_Item) AsOrchestratorResponsesSummaryTextContent() (OrchestratorResponsesSummaryTextContent, error) {
+	var body OrchestratorResponsesSummaryTextContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesSummaryTextContent overwrites any union data inside the OrchestratorResponsesReasoningBody_Summary_Item as the provided OrchestratorResponsesSummaryTextContent
+func (t *OrchestratorResponsesReasoningBody_Summary_Item) FromOrchestratorResponsesSummaryTextContent(v OrchestratorResponsesSummaryTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesSummaryTextContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesSummaryTextContent performs a merge with any union data inside the OrchestratorResponsesReasoningBody_Summary_Item, using the provided OrchestratorResponsesSummaryTextContent
+func (t *OrchestratorResponsesReasoningBody_Summary_Item) MergeOrchestratorResponsesSummaryTextContent(v OrchestratorResponsesSummaryTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesSummaryTextContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesReasoningTextContent returns the union data inside the OrchestratorResponsesReasoningBody_Summary_Item as a OrchestratorResponsesReasoningTextContent
+func (t OrchestratorResponsesReasoningBody_Summary_Item) AsOrchestratorResponsesReasoningTextContent() (OrchestratorResponsesReasoningTextContent, error) {
+	var body OrchestratorResponsesReasoningTextContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesReasoningTextContent overwrites any union data inside the OrchestratorResponsesReasoningBody_Summary_Item as the provided OrchestratorResponsesReasoningTextContent
+func (t *OrchestratorResponsesReasoningBody_Summary_Item) FromOrchestratorResponsesReasoningTextContent(v OrchestratorResponsesReasoningTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesReasoningTextContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesReasoningTextContent performs a merge with any union data inside the OrchestratorResponsesReasoningBody_Summary_Item, using the provided OrchestratorResponsesReasoningTextContent
+func (t *OrchestratorResponsesReasoningBody_Summary_Item) MergeOrchestratorResponsesReasoningTextContent(v OrchestratorResponsesReasoningTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesReasoningTextContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesRefusalContent returns the union data inside the OrchestratorResponsesReasoningBody_Summary_Item as a OrchestratorResponsesRefusalContent
+func (t OrchestratorResponsesReasoningBody_Summary_Item) AsOrchestratorResponsesRefusalContent() (OrchestratorResponsesRefusalContent, error) {
+	var body OrchestratorResponsesRefusalContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesRefusalContent overwrites any union data inside the OrchestratorResponsesReasoningBody_Summary_Item as the provided OrchestratorResponsesRefusalContent
+func (t *OrchestratorResponsesReasoningBody_Summary_Item) FromOrchestratorResponsesRefusalContent(v OrchestratorResponsesRefusalContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesRefusalContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesRefusalContent performs a merge with any union data inside the OrchestratorResponsesReasoningBody_Summary_Item, using the provided OrchestratorResponsesRefusalContent
+func (t *OrchestratorResponsesReasoningBody_Summary_Item) MergeOrchestratorResponsesRefusalContent(v OrchestratorResponsesRefusalContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesRefusalContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesInputImageContent returns the union data inside the OrchestratorResponsesReasoningBody_Summary_Item as a OrchestratorResponsesInputImageContent
+func (t OrchestratorResponsesReasoningBody_Summary_Item) AsOrchestratorResponsesInputImageContent() (OrchestratorResponsesInputImageContent, error) {
+	var body OrchestratorResponsesInputImageContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesInputImageContent overwrites any union data inside the OrchestratorResponsesReasoningBody_Summary_Item as the provided OrchestratorResponsesInputImageContent
+func (t *OrchestratorResponsesReasoningBody_Summary_Item) FromOrchestratorResponsesInputImageContent(v OrchestratorResponsesInputImageContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputImageContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesInputImageContent performs a merge with any union data inside the OrchestratorResponsesReasoningBody_Summary_Item, using the provided OrchestratorResponsesInputImageContent
+func (t *OrchestratorResponsesReasoningBody_Summary_Item) MergeOrchestratorResponsesInputImageContent(v OrchestratorResponsesInputImageContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputImageContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesInputFileContent returns the union data inside the OrchestratorResponsesReasoningBody_Summary_Item as a OrchestratorResponsesInputFileContent
+func (t OrchestratorResponsesReasoningBody_Summary_Item) AsOrchestratorResponsesInputFileContent() (OrchestratorResponsesInputFileContent, error) {
+	var body OrchestratorResponsesInputFileContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesInputFileContent overwrites any union data inside the OrchestratorResponsesReasoningBody_Summary_Item as the provided OrchestratorResponsesInputFileContent
+func (t *OrchestratorResponsesReasoningBody_Summary_Item) FromOrchestratorResponsesInputFileContent(v OrchestratorResponsesInputFileContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputFileContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesInputFileContent performs a merge with any union data inside the OrchestratorResponsesReasoningBody_Summary_Item, using the provided OrchestratorResponsesInputFileContent
+func (t *OrchestratorResponsesReasoningBody_Summary_Item) MergeOrchestratorResponsesInputFileContent(v OrchestratorResponsesInputFileContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputFileContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorResponsesReasoningBody_Summary_Item) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t OrchestratorResponsesReasoningBody_Summary_Item) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "OrchestratorResponsesInputFileContent":
+		return t.AsOrchestratorResponsesInputFileContent()
+	case "OrchestratorResponsesInputImageContent":
+		return t.AsOrchestratorResponsesInputImageContent()
+	case "OrchestratorResponsesInputTextContent":
+		return t.AsOrchestratorResponsesInputTextContent()
+	case "OrchestratorResponsesOutputTextContent":
+		return t.AsOrchestratorResponsesOutputTextContent()
+	case "OrchestratorResponsesReasoningTextContent":
+		return t.AsOrchestratorResponsesReasoningTextContent()
+	case "OrchestratorResponsesRefusalContent":
+		return t.AsOrchestratorResponsesRefusalContent()
+	case "OrchestratorResponsesSummaryTextContent":
+		return t.AsOrchestratorResponsesSummaryTextContent()
+	case "OrchestratorResponsesTextContent":
+		return t.AsOrchestratorResponsesTextContent()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t OrchestratorResponsesReasoningBody_Summary_Item) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorResponsesReasoningBody_Summary_Item) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorResponsesInputTextContent returns the union data inside the OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part as a OrchestratorResponsesInputTextContent
+func (t OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part) AsOrchestratorResponsesInputTextContent() (OrchestratorResponsesInputTextContent, error) {
+	var body OrchestratorResponsesInputTextContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesInputTextContent overwrites any union data inside the OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part as the provided OrchestratorResponsesInputTextContent
+func (t *OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part) FromOrchestratorResponsesInputTextContent(v OrchestratorResponsesInputTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputTextContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesInputTextContent performs a merge with any union data inside the OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part, using the provided OrchestratorResponsesInputTextContent
+func (t *OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part) MergeOrchestratorResponsesInputTextContent(v OrchestratorResponsesInputTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputTextContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesOutputTextContent returns the union data inside the OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part as a OrchestratorResponsesOutputTextContent
+func (t OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part) AsOrchestratorResponsesOutputTextContent() (OrchestratorResponsesOutputTextContent, error) {
+	var body OrchestratorResponsesOutputTextContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesOutputTextContent overwrites any union data inside the OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part as the provided OrchestratorResponsesOutputTextContent
+func (t *OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part) FromOrchestratorResponsesOutputTextContent(v OrchestratorResponsesOutputTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesOutputTextContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesOutputTextContent performs a merge with any union data inside the OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part, using the provided OrchestratorResponsesOutputTextContent
+func (t *OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part) MergeOrchestratorResponsesOutputTextContent(v OrchestratorResponsesOutputTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesOutputTextContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesTextContent returns the union data inside the OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part as a OrchestratorResponsesTextContent
+func (t OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part) AsOrchestratorResponsesTextContent() (OrchestratorResponsesTextContent, error) {
+	var body OrchestratorResponsesTextContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesTextContent overwrites any union data inside the OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part as the provided OrchestratorResponsesTextContent
+func (t *OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part) FromOrchestratorResponsesTextContent(v OrchestratorResponsesTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesTextContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesTextContent performs a merge with any union data inside the OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part, using the provided OrchestratorResponsesTextContent
+func (t *OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part) MergeOrchestratorResponsesTextContent(v OrchestratorResponsesTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesTextContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesSummaryTextContent returns the union data inside the OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part as a OrchestratorResponsesSummaryTextContent
+func (t OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part) AsOrchestratorResponsesSummaryTextContent() (OrchestratorResponsesSummaryTextContent, error) {
+	var body OrchestratorResponsesSummaryTextContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesSummaryTextContent overwrites any union data inside the OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part as the provided OrchestratorResponsesSummaryTextContent
+func (t *OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part) FromOrchestratorResponsesSummaryTextContent(v OrchestratorResponsesSummaryTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesSummaryTextContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesSummaryTextContent performs a merge with any union data inside the OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part, using the provided OrchestratorResponsesSummaryTextContent
+func (t *OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part) MergeOrchestratorResponsesSummaryTextContent(v OrchestratorResponsesSummaryTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesSummaryTextContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesReasoningTextContent returns the union data inside the OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part as a OrchestratorResponsesReasoningTextContent
+func (t OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part) AsOrchestratorResponsesReasoningTextContent() (OrchestratorResponsesReasoningTextContent, error) {
+	var body OrchestratorResponsesReasoningTextContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesReasoningTextContent overwrites any union data inside the OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part as the provided OrchestratorResponsesReasoningTextContent
+func (t *OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part) FromOrchestratorResponsesReasoningTextContent(v OrchestratorResponsesReasoningTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesReasoningTextContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesReasoningTextContent performs a merge with any union data inside the OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part, using the provided OrchestratorResponsesReasoningTextContent
+func (t *OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part) MergeOrchestratorResponsesReasoningTextContent(v OrchestratorResponsesReasoningTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesReasoningTextContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesRefusalContent returns the union data inside the OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part as a OrchestratorResponsesRefusalContent
+func (t OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part) AsOrchestratorResponsesRefusalContent() (OrchestratorResponsesRefusalContent, error) {
+	var body OrchestratorResponsesRefusalContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesRefusalContent overwrites any union data inside the OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part as the provided OrchestratorResponsesRefusalContent
+func (t *OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part) FromOrchestratorResponsesRefusalContent(v OrchestratorResponsesRefusalContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesRefusalContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesRefusalContent performs a merge with any union data inside the OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part, using the provided OrchestratorResponsesRefusalContent
+func (t *OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part) MergeOrchestratorResponsesRefusalContent(v OrchestratorResponsesRefusalContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesRefusalContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesInputImageContent returns the union data inside the OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part as a OrchestratorResponsesInputImageContent
+func (t OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part) AsOrchestratorResponsesInputImageContent() (OrchestratorResponsesInputImageContent, error) {
+	var body OrchestratorResponsesInputImageContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesInputImageContent overwrites any union data inside the OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part as the provided OrchestratorResponsesInputImageContent
+func (t *OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part) FromOrchestratorResponsesInputImageContent(v OrchestratorResponsesInputImageContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputImageContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesInputImageContent performs a merge with any union data inside the OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part, using the provided OrchestratorResponsesInputImageContent
+func (t *OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part) MergeOrchestratorResponsesInputImageContent(v OrchestratorResponsesInputImageContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputImageContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesInputFileContent returns the union data inside the OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part as a OrchestratorResponsesInputFileContent
+func (t OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part) AsOrchestratorResponsesInputFileContent() (OrchestratorResponsesInputFileContent, error) {
+	var body OrchestratorResponsesInputFileContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesInputFileContent overwrites any union data inside the OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part as the provided OrchestratorResponsesInputFileContent
+func (t *OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part) FromOrchestratorResponsesInputFileContent(v OrchestratorResponsesInputFileContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputFileContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesInputFileContent performs a merge with any union data inside the OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part, using the provided OrchestratorResponsesInputFileContent
+func (t *OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part) MergeOrchestratorResponsesInputFileContent(v OrchestratorResponsesInputFileContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputFileContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "OrchestratorResponsesInputFileContent":
+		return t.AsOrchestratorResponsesInputFileContent()
+	case "OrchestratorResponsesInputImageContent":
+		return t.AsOrchestratorResponsesInputImageContent()
+	case "OrchestratorResponsesInputTextContent":
+		return t.AsOrchestratorResponsesInputTextContent()
+	case "OrchestratorResponsesOutputTextContent":
+		return t.AsOrchestratorResponsesOutputTextContent()
+	case "OrchestratorResponsesReasoningTextContent":
+		return t.AsOrchestratorResponsesReasoningTextContent()
+	case "OrchestratorResponsesRefusalContent":
+		return t.AsOrchestratorResponsesRefusalContent()
+	case "OrchestratorResponsesSummaryTextContent":
+		return t.AsOrchestratorResponsesSummaryTextContent()
+	case "OrchestratorResponsesTextContent":
+		return t.AsOrchestratorResponsesTextContent()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorResponsesResponseContentPartAddedStreamingEvent_Part) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorResponsesInputTextContent returns the union data inside the OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part as a OrchestratorResponsesInputTextContent
+func (t OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part) AsOrchestratorResponsesInputTextContent() (OrchestratorResponsesInputTextContent, error) {
+	var body OrchestratorResponsesInputTextContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesInputTextContent overwrites any union data inside the OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part as the provided OrchestratorResponsesInputTextContent
+func (t *OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part) FromOrchestratorResponsesInputTextContent(v OrchestratorResponsesInputTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputTextContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesInputTextContent performs a merge with any union data inside the OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part, using the provided OrchestratorResponsesInputTextContent
+func (t *OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part) MergeOrchestratorResponsesInputTextContent(v OrchestratorResponsesInputTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputTextContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesOutputTextContent returns the union data inside the OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part as a OrchestratorResponsesOutputTextContent
+func (t OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part) AsOrchestratorResponsesOutputTextContent() (OrchestratorResponsesOutputTextContent, error) {
+	var body OrchestratorResponsesOutputTextContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesOutputTextContent overwrites any union data inside the OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part as the provided OrchestratorResponsesOutputTextContent
+func (t *OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part) FromOrchestratorResponsesOutputTextContent(v OrchestratorResponsesOutputTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesOutputTextContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesOutputTextContent performs a merge with any union data inside the OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part, using the provided OrchestratorResponsesOutputTextContent
+func (t *OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part) MergeOrchestratorResponsesOutputTextContent(v OrchestratorResponsesOutputTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesOutputTextContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesTextContent returns the union data inside the OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part as a OrchestratorResponsesTextContent
+func (t OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part) AsOrchestratorResponsesTextContent() (OrchestratorResponsesTextContent, error) {
+	var body OrchestratorResponsesTextContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesTextContent overwrites any union data inside the OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part as the provided OrchestratorResponsesTextContent
+func (t *OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part) FromOrchestratorResponsesTextContent(v OrchestratorResponsesTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesTextContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesTextContent performs a merge with any union data inside the OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part, using the provided OrchestratorResponsesTextContent
+func (t *OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part) MergeOrchestratorResponsesTextContent(v OrchestratorResponsesTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesTextContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesSummaryTextContent returns the union data inside the OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part as a OrchestratorResponsesSummaryTextContent
+func (t OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part) AsOrchestratorResponsesSummaryTextContent() (OrchestratorResponsesSummaryTextContent, error) {
+	var body OrchestratorResponsesSummaryTextContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesSummaryTextContent overwrites any union data inside the OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part as the provided OrchestratorResponsesSummaryTextContent
+func (t *OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part) FromOrchestratorResponsesSummaryTextContent(v OrchestratorResponsesSummaryTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesSummaryTextContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesSummaryTextContent performs a merge with any union data inside the OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part, using the provided OrchestratorResponsesSummaryTextContent
+func (t *OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part) MergeOrchestratorResponsesSummaryTextContent(v OrchestratorResponsesSummaryTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesSummaryTextContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesReasoningTextContent returns the union data inside the OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part as a OrchestratorResponsesReasoningTextContent
+func (t OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part) AsOrchestratorResponsesReasoningTextContent() (OrchestratorResponsesReasoningTextContent, error) {
+	var body OrchestratorResponsesReasoningTextContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesReasoningTextContent overwrites any union data inside the OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part as the provided OrchestratorResponsesReasoningTextContent
+func (t *OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part) FromOrchestratorResponsesReasoningTextContent(v OrchestratorResponsesReasoningTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesReasoningTextContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesReasoningTextContent performs a merge with any union data inside the OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part, using the provided OrchestratorResponsesReasoningTextContent
+func (t *OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part) MergeOrchestratorResponsesReasoningTextContent(v OrchestratorResponsesReasoningTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesReasoningTextContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesRefusalContent returns the union data inside the OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part as a OrchestratorResponsesRefusalContent
+func (t OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part) AsOrchestratorResponsesRefusalContent() (OrchestratorResponsesRefusalContent, error) {
+	var body OrchestratorResponsesRefusalContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesRefusalContent overwrites any union data inside the OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part as the provided OrchestratorResponsesRefusalContent
+func (t *OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part) FromOrchestratorResponsesRefusalContent(v OrchestratorResponsesRefusalContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesRefusalContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesRefusalContent performs a merge with any union data inside the OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part, using the provided OrchestratorResponsesRefusalContent
+func (t *OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part) MergeOrchestratorResponsesRefusalContent(v OrchestratorResponsesRefusalContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesRefusalContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesInputImageContent returns the union data inside the OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part as a OrchestratorResponsesInputImageContent
+func (t OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part) AsOrchestratorResponsesInputImageContent() (OrchestratorResponsesInputImageContent, error) {
+	var body OrchestratorResponsesInputImageContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesInputImageContent overwrites any union data inside the OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part as the provided OrchestratorResponsesInputImageContent
+func (t *OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part) FromOrchestratorResponsesInputImageContent(v OrchestratorResponsesInputImageContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputImageContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesInputImageContent performs a merge with any union data inside the OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part, using the provided OrchestratorResponsesInputImageContent
+func (t *OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part) MergeOrchestratorResponsesInputImageContent(v OrchestratorResponsesInputImageContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputImageContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesInputFileContent returns the union data inside the OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part as a OrchestratorResponsesInputFileContent
+func (t OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part) AsOrchestratorResponsesInputFileContent() (OrchestratorResponsesInputFileContent, error) {
+	var body OrchestratorResponsesInputFileContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesInputFileContent overwrites any union data inside the OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part as the provided OrchestratorResponsesInputFileContent
+func (t *OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part) FromOrchestratorResponsesInputFileContent(v OrchestratorResponsesInputFileContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputFileContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesInputFileContent performs a merge with any union data inside the OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part, using the provided OrchestratorResponsesInputFileContent
+func (t *OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part) MergeOrchestratorResponsesInputFileContent(v OrchestratorResponsesInputFileContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputFileContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "OrchestratorResponsesInputFileContent":
+		return t.AsOrchestratorResponsesInputFileContent()
+	case "OrchestratorResponsesInputImageContent":
+		return t.AsOrchestratorResponsesInputImageContent()
+	case "OrchestratorResponsesInputTextContent":
+		return t.AsOrchestratorResponsesInputTextContent()
+	case "OrchestratorResponsesOutputTextContent":
+		return t.AsOrchestratorResponsesOutputTextContent()
+	case "OrchestratorResponsesReasoningTextContent":
+		return t.AsOrchestratorResponsesReasoningTextContent()
+	case "OrchestratorResponsesRefusalContent":
+		return t.AsOrchestratorResponsesRefusalContent()
+	case "OrchestratorResponsesSummaryTextContent":
+		return t.AsOrchestratorResponsesSummaryTextContent()
+	case "OrchestratorResponsesTextContent":
+		return t.AsOrchestratorResponsesTextContent()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorResponsesResponseContentPartDoneStreamingEvent_Part) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorResponsesInputTextContent returns the union data inside the OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part as a OrchestratorResponsesInputTextContent
+func (t OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part) AsOrchestratorResponsesInputTextContent() (OrchestratorResponsesInputTextContent, error) {
+	var body OrchestratorResponsesInputTextContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesInputTextContent overwrites any union data inside the OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part as the provided OrchestratorResponsesInputTextContent
+func (t *OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part) FromOrchestratorResponsesInputTextContent(v OrchestratorResponsesInputTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputTextContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesInputTextContent performs a merge with any union data inside the OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part, using the provided OrchestratorResponsesInputTextContent
+func (t *OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part) MergeOrchestratorResponsesInputTextContent(v OrchestratorResponsesInputTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputTextContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesOutputTextContent returns the union data inside the OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part as a OrchestratorResponsesOutputTextContent
+func (t OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part) AsOrchestratorResponsesOutputTextContent() (OrchestratorResponsesOutputTextContent, error) {
+	var body OrchestratorResponsesOutputTextContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesOutputTextContent overwrites any union data inside the OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part as the provided OrchestratorResponsesOutputTextContent
+func (t *OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part) FromOrchestratorResponsesOutputTextContent(v OrchestratorResponsesOutputTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesOutputTextContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesOutputTextContent performs a merge with any union data inside the OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part, using the provided OrchestratorResponsesOutputTextContent
+func (t *OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part) MergeOrchestratorResponsesOutputTextContent(v OrchestratorResponsesOutputTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesOutputTextContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesTextContent returns the union data inside the OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part as a OrchestratorResponsesTextContent
+func (t OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part) AsOrchestratorResponsesTextContent() (OrchestratorResponsesTextContent, error) {
+	var body OrchestratorResponsesTextContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesTextContent overwrites any union data inside the OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part as the provided OrchestratorResponsesTextContent
+func (t *OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part) FromOrchestratorResponsesTextContent(v OrchestratorResponsesTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesTextContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesTextContent performs a merge with any union data inside the OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part, using the provided OrchestratorResponsesTextContent
+func (t *OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part) MergeOrchestratorResponsesTextContent(v OrchestratorResponsesTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesTextContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesSummaryTextContent returns the union data inside the OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part as a OrchestratorResponsesSummaryTextContent
+func (t OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part) AsOrchestratorResponsesSummaryTextContent() (OrchestratorResponsesSummaryTextContent, error) {
+	var body OrchestratorResponsesSummaryTextContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesSummaryTextContent overwrites any union data inside the OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part as the provided OrchestratorResponsesSummaryTextContent
+func (t *OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part) FromOrchestratorResponsesSummaryTextContent(v OrchestratorResponsesSummaryTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesSummaryTextContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesSummaryTextContent performs a merge with any union data inside the OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part, using the provided OrchestratorResponsesSummaryTextContent
+func (t *OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part) MergeOrchestratorResponsesSummaryTextContent(v OrchestratorResponsesSummaryTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesSummaryTextContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesReasoningTextContent returns the union data inside the OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part as a OrchestratorResponsesReasoningTextContent
+func (t OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part) AsOrchestratorResponsesReasoningTextContent() (OrchestratorResponsesReasoningTextContent, error) {
+	var body OrchestratorResponsesReasoningTextContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesReasoningTextContent overwrites any union data inside the OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part as the provided OrchestratorResponsesReasoningTextContent
+func (t *OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part) FromOrchestratorResponsesReasoningTextContent(v OrchestratorResponsesReasoningTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesReasoningTextContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesReasoningTextContent performs a merge with any union data inside the OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part, using the provided OrchestratorResponsesReasoningTextContent
+func (t *OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part) MergeOrchestratorResponsesReasoningTextContent(v OrchestratorResponsesReasoningTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesReasoningTextContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesRefusalContent returns the union data inside the OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part as a OrchestratorResponsesRefusalContent
+func (t OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part) AsOrchestratorResponsesRefusalContent() (OrchestratorResponsesRefusalContent, error) {
+	var body OrchestratorResponsesRefusalContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesRefusalContent overwrites any union data inside the OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part as the provided OrchestratorResponsesRefusalContent
+func (t *OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part) FromOrchestratorResponsesRefusalContent(v OrchestratorResponsesRefusalContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesRefusalContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesRefusalContent performs a merge with any union data inside the OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part, using the provided OrchestratorResponsesRefusalContent
+func (t *OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part) MergeOrchestratorResponsesRefusalContent(v OrchestratorResponsesRefusalContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesRefusalContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesInputImageContent returns the union data inside the OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part as a OrchestratorResponsesInputImageContent
+func (t OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part) AsOrchestratorResponsesInputImageContent() (OrchestratorResponsesInputImageContent, error) {
+	var body OrchestratorResponsesInputImageContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesInputImageContent overwrites any union data inside the OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part as the provided OrchestratorResponsesInputImageContent
+func (t *OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part) FromOrchestratorResponsesInputImageContent(v OrchestratorResponsesInputImageContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputImageContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesInputImageContent performs a merge with any union data inside the OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part, using the provided OrchestratorResponsesInputImageContent
+func (t *OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part) MergeOrchestratorResponsesInputImageContent(v OrchestratorResponsesInputImageContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputImageContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesInputFileContent returns the union data inside the OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part as a OrchestratorResponsesInputFileContent
+func (t OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part) AsOrchestratorResponsesInputFileContent() (OrchestratorResponsesInputFileContent, error) {
+	var body OrchestratorResponsesInputFileContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesInputFileContent overwrites any union data inside the OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part as the provided OrchestratorResponsesInputFileContent
+func (t *OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part) FromOrchestratorResponsesInputFileContent(v OrchestratorResponsesInputFileContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputFileContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesInputFileContent performs a merge with any union data inside the OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part, using the provided OrchestratorResponsesInputFileContent
+func (t *OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part) MergeOrchestratorResponsesInputFileContent(v OrchestratorResponsesInputFileContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputFileContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "OrchestratorResponsesInputFileContent":
+		return t.AsOrchestratorResponsesInputFileContent()
+	case "OrchestratorResponsesInputImageContent":
+		return t.AsOrchestratorResponsesInputImageContent()
+	case "OrchestratorResponsesInputTextContent":
+		return t.AsOrchestratorResponsesInputTextContent()
+	case "OrchestratorResponsesOutputTextContent":
+		return t.AsOrchestratorResponsesOutputTextContent()
+	case "OrchestratorResponsesReasoningTextContent":
+		return t.AsOrchestratorResponsesReasoningTextContent()
+	case "OrchestratorResponsesRefusalContent":
+		return t.AsOrchestratorResponsesRefusalContent()
+	case "OrchestratorResponsesSummaryTextContent":
+		return t.AsOrchestratorResponsesSummaryTextContent()
+	case "OrchestratorResponsesTextContent":
+		return t.AsOrchestratorResponsesTextContent()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent_Part) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorResponsesInputTextContent returns the union data inside the OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part as a OrchestratorResponsesInputTextContent
+func (t OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part) AsOrchestratorResponsesInputTextContent() (OrchestratorResponsesInputTextContent, error) {
+	var body OrchestratorResponsesInputTextContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesInputTextContent overwrites any union data inside the OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part as the provided OrchestratorResponsesInputTextContent
+func (t *OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part) FromOrchestratorResponsesInputTextContent(v OrchestratorResponsesInputTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputTextContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesInputTextContent performs a merge with any union data inside the OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part, using the provided OrchestratorResponsesInputTextContent
+func (t *OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part) MergeOrchestratorResponsesInputTextContent(v OrchestratorResponsesInputTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputTextContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesOutputTextContent returns the union data inside the OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part as a OrchestratorResponsesOutputTextContent
+func (t OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part) AsOrchestratorResponsesOutputTextContent() (OrchestratorResponsesOutputTextContent, error) {
+	var body OrchestratorResponsesOutputTextContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesOutputTextContent overwrites any union data inside the OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part as the provided OrchestratorResponsesOutputTextContent
+func (t *OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part) FromOrchestratorResponsesOutputTextContent(v OrchestratorResponsesOutputTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesOutputTextContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesOutputTextContent performs a merge with any union data inside the OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part, using the provided OrchestratorResponsesOutputTextContent
+func (t *OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part) MergeOrchestratorResponsesOutputTextContent(v OrchestratorResponsesOutputTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesOutputTextContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesTextContent returns the union data inside the OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part as a OrchestratorResponsesTextContent
+func (t OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part) AsOrchestratorResponsesTextContent() (OrchestratorResponsesTextContent, error) {
+	var body OrchestratorResponsesTextContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesTextContent overwrites any union data inside the OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part as the provided OrchestratorResponsesTextContent
+func (t *OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part) FromOrchestratorResponsesTextContent(v OrchestratorResponsesTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesTextContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesTextContent performs a merge with any union data inside the OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part, using the provided OrchestratorResponsesTextContent
+func (t *OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part) MergeOrchestratorResponsesTextContent(v OrchestratorResponsesTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesTextContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesSummaryTextContent returns the union data inside the OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part as a OrchestratorResponsesSummaryTextContent
+func (t OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part) AsOrchestratorResponsesSummaryTextContent() (OrchestratorResponsesSummaryTextContent, error) {
+	var body OrchestratorResponsesSummaryTextContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesSummaryTextContent overwrites any union data inside the OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part as the provided OrchestratorResponsesSummaryTextContent
+func (t *OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part) FromOrchestratorResponsesSummaryTextContent(v OrchestratorResponsesSummaryTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesSummaryTextContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesSummaryTextContent performs a merge with any union data inside the OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part, using the provided OrchestratorResponsesSummaryTextContent
+func (t *OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part) MergeOrchestratorResponsesSummaryTextContent(v OrchestratorResponsesSummaryTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesSummaryTextContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesReasoningTextContent returns the union data inside the OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part as a OrchestratorResponsesReasoningTextContent
+func (t OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part) AsOrchestratorResponsesReasoningTextContent() (OrchestratorResponsesReasoningTextContent, error) {
+	var body OrchestratorResponsesReasoningTextContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesReasoningTextContent overwrites any union data inside the OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part as the provided OrchestratorResponsesReasoningTextContent
+func (t *OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part) FromOrchestratorResponsesReasoningTextContent(v OrchestratorResponsesReasoningTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesReasoningTextContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesReasoningTextContent performs a merge with any union data inside the OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part, using the provided OrchestratorResponsesReasoningTextContent
+func (t *OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part) MergeOrchestratorResponsesReasoningTextContent(v OrchestratorResponsesReasoningTextContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesReasoningTextContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesRefusalContent returns the union data inside the OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part as a OrchestratorResponsesRefusalContent
+func (t OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part) AsOrchestratorResponsesRefusalContent() (OrchestratorResponsesRefusalContent, error) {
+	var body OrchestratorResponsesRefusalContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesRefusalContent overwrites any union data inside the OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part as the provided OrchestratorResponsesRefusalContent
+func (t *OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part) FromOrchestratorResponsesRefusalContent(v OrchestratorResponsesRefusalContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesRefusalContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesRefusalContent performs a merge with any union data inside the OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part, using the provided OrchestratorResponsesRefusalContent
+func (t *OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part) MergeOrchestratorResponsesRefusalContent(v OrchestratorResponsesRefusalContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesRefusalContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesInputImageContent returns the union data inside the OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part as a OrchestratorResponsesInputImageContent
+func (t OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part) AsOrchestratorResponsesInputImageContent() (OrchestratorResponsesInputImageContent, error) {
+	var body OrchestratorResponsesInputImageContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesInputImageContent overwrites any union data inside the OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part as the provided OrchestratorResponsesInputImageContent
+func (t *OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part) FromOrchestratorResponsesInputImageContent(v OrchestratorResponsesInputImageContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputImageContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesInputImageContent performs a merge with any union data inside the OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part, using the provided OrchestratorResponsesInputImageContent
+func (t *OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part) MergeOrchestratorResponsesInputImageContent(v OrchestratorResponsesInputImageContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputImageContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesInputFileContent returns the union data inside the OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part as a OrchestratorResponsesInputFileContent
+func (t OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part) AsOrchestratorResponsesInputFileContent() (OrchestratorResponsesInputFileContent, error) {
+	var body OrchestratorResponsesInputFileContent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesInputFileContent overwrites any union data inside the OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part as the provided OrchestratorResponsesInputFileContent
+func (t *OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part) FromOrchestratorResponsesInputFileContent(v OrchestratorResponsesInputFileContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputFileContent"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesInputFileContent performs a merge with any union data inside the OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part, using the provided OrchestratorResponsesInputFileContent
+func (t *OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part) MergeOrchestratorResponsesInputFileContent(v OrchestratorResponsesInputFileContent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputFileContent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "OrchestratorResponsesInputFileContent":
+		return t.AsOrchestratorResponsesInputFileContent()
+	case "OrchestratorResponsesInputImageContent":
+		return t.AsOrchestratorResponsesInputImageContent()
+	case "OrchestratorResponsesInputTextContent":
+		return t.AsOrchestratorResponsesInputTextContent()
+	case "OrchestratorResponsesOutputTextContent":
+		return t.AsOrchestratorResponsesOutputTextContent()
+	case "OrchestratorResponsesReasoningTextContent":
+		return t.AsOrchestratorResponsesReasoningTextContent()
+	case "OrchestratorResponsesRefusalContent":
+		return t.AsOrchestratorResponsesRefusalContent()
+	case "OrchestratorResponsesSummaryTextContent":
+		return t.AsOrchestratorResponsesSummaryTextContent()
+	case "OrchestratorResponsesTextContent":
+		return t.AsOrchestratorResponsesTextContent()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent_Part) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorResponsesFunctionToolChoice returns the union data inside the OrchestratorResponsesResponseResource_ToolChoice as a OrchestratorResponsesFunctionToolChoice
+func (t OrchestratorResponsesResponseResource_ToolChoice) AsOrchestratorResponsesFunctionToolChoice() (OrchestratorResponsesFunctionToolChoice, error) {
+	var body OrchestratorResponsesFunctionToolChoice
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesFunctionToolChoice overwrites any union data inside the OrchestratorResponsesResponseResource_ToolChoice as the provided OrchestratorResponsesFunctionToolChoice
+func (t *OrchestratorResponsesResponseResource_ToolChoice) FromOrchestratorResponsesFunctionToolChoice(v OrchestratorResponsesFunctionToolChoice) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesFunctionToolChoice performs a merge with any union data inside the OrchestratorResponsesResponseResource_ToolChoice, using the provided OrchestratorResponsesFunctionToolChoice
+func (t *OrchestratorResponsesResponseResource_ToolChoice) MergeOrchestratorResponsesFunctionToolChoice(v OrchestratorResponsesFunctionToolChoice) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesToolChoiceValueEnum returns the union data inside the OrchestratorResponsesResponseResource_ToolChoice as a OrchestratorResponsesToolChoiceValueEnum
+func (t OrchestratorResponsesResponseResource_ToolChoice) AsOrchestratorResponsesToolChoiceValueEnum() (OrchestratorResponsesToolChoiceValueEnum, error) {
+	var body OrchestratorResponsesToolChoiceValueEnum
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesToolChoiceValueEnum overwrites any union data inside the OrchestratorResponsesResponseResource_ToolChoice as the provided OrchestratorResponsesToolChoiceValueEnum
+func (t *OrchestratorResponsesResponseResource_ToolChoice) FromOrchestratorResponsesToolChoiceValueEnum(v OrchestratorResponsesToolChoiceValueEnum) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesToolChoiceValueEnum performs a merge with any union data inside the OrchestratorResponsesResponseResource_ToolChoice, using the provided OrchestratorResponsesToolChoiceValueEnum
+func (t *OrchestratorResponsesResponseResource_ToolChoice) MergeOrchestratorResponsesToolChoiceValueEnum(v OrchestratorResponsesToolChoiceValueEnum) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesAllowedToolChoice returns the union data inside the OrchestratorResponsesResponseResource_ToolChoice as a OrchestratorResponsesAllowedToolChoice
+func (t OrchestratorResponsesResponseResource_ToolChoice) AsOrchestratorResponsesAllowedToolChoice() (OrchestratorResponsesAllowedToolChoice, error) {
+	var body OrchestratorResponsesAllowedToolChoice
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesAllowedToolChoice overwrites any union data inside the OrchestratorResponsesResponseResource_ToolChoice as the provided OrchestratorResponsesAllowedToolChoice
+func (t *OrchestratorResponsesResponseResource_ToolChoice) FromOrchestratorResponsesAllowedToolChoice(v OrchestratorResponsesAllowedToolChoice) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesAllowedToolChoice performs a merge with any union data inside the OrchestratorResponsesResponseResource_ToolChoice, using the provided OrchestratorResponsesAllowedToolChoice
+func (t *OrchestratorResponsesResponseResource_ToolChoice) MergeOrchestratorResponsesAllowedToolChoice(v OrchestratorResponsesAllowedToolChoice) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorResponsesResponseResource_ToolChoice) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorResponsesResponseResource_ToolChoice) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorResponsesResponseCreatedStreamingEvent returns the union data inside the OrchestratorResponsesResponseStreamEvent as a OrchestratorResponsesResponseCreatedStreamingEvent
+func (t OrchestratorResponsesResponseStreamEvent) AsOrchestratorResponsesResponseCreatedStreamingEvent() (OrchestratorResponsesResponseCreatedStreamingEvent, error) {
+	var body OrchestratorResponsesResponseCreatedStreamingEvent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesResponseCreatedStreamingEvent overwrites any union data inside the OrchestratorResponsesResponseStreamEvent as the provided OrchestratorResponsesResponseCreatedStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) FromOrchestratorResponsesResponseCreatedStreamingEvent(v OrchestratorResponsesResponseCreatedStreamingEvent) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesResponseCreatedStreamingEvent performs a merge with any union data inside the OrchestratorResponsesResponseStreamEvent, using the provided OrchestratorResponsesResponseCreatedStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) MergeOrchestratorResponsesResponseCreatedStreamingEvent(v OrchestratorResponsesResponseCreatedStreamingEvent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesResponseQueuedStreamingEvent returns the union data inside the OrchestratorResponsesResponseStreamEvent as a OrchestratorResponsesResponseQueuedStreamingEvent
+func (t OrchestratorResponsesResponseStreamEvent) AsOrchestratorResponsesResponseQueuedStreamingEvent() (OrchestratorResponsesResponseQueuedStreamingEvent, error) {
+	var body OrchestratorResponsesResponseQueuedStreamingEvent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesResponseQueuedStreamingEvent overwrites any union data inside the OrchestratorResponsesResponseStreamEvent as the provided OrchestratorResponsesResponseQueuedStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) FromOrchestratorResponsesResponseQueuedStreamingEvent(v OrchestratorResponsesResponseQueuedStreamingEvent) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesResponseQueuedStreamingEvent performs a merge with any union data inside the OrchestratorResponsesResponseStreamEvent, using the provided OrchestratorResponsesResponseQueuedStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) MergeOrchestratorResponsesResponseQueuedStreamingEvent(v OrchestratorResponsesResponseQueuedStreamingEvent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesResponseInProgressStreamingEvent returns the union data inside the OrchestratorResponsesResponseStreamEvent as a OrchestratorResponsesResponseInProgressStreamingEvent
+func (t OrchestratorResponsesResponseStreamEvent) AsOrchestratorResponsesResponseInProgressStreamingEvent() (OrchestratorResponsesResponseInProgressStreamingEvent, error) {
+	var body OrchestratorResponsesResponseInProgressStreamingEvent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesResponseInProgressStreamingEvent overwrites any union data inside the OrchestratorResponsesResponseStreamEvent as the provided OrchestratorResponsesResponseInProgressStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) FromOrchestratorResponsesResponseInProgressStreamingEvent(v OrchestratorResponsesResponseInProgressStreamingEvent) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesResponseInProgressStreamingEvent performs a merge with any union data inside the OrchestratorResponsesResponseStreamEvent, using the provided OrchestratorResponsesResponseInProgressStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) MergeOrchestratorResponsesResponseInProgressStreamingEvent(v OrchestratorResponsesResponseInProgressStreamingEvent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesResponseCompletedStreamingEvent returns the union data inside the OrchestratorResponsesResponseStreamEvent as a OrchestratorResponsesResponseCompletedStreamingEvent
+func (t OrchestratorResponsesResponseStreamEvent) AsOrchestratorResponsesResponseCompletedStreamingEvent() (OrchestratorResponsesResponseCompletedStreamingEvent, error) {
+	var body OrchestratorResponsesResponseCompletedStreamingEvent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesResponseCompletedStreamingEvent overwrites any union data inside the OrchestratorResponsesResponseStreamEvent as the provided OrchestratorResponsesResponseCompletedStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) FromOrchestratorResponsesResponseCompletedStreamingEvent(v OrchestratorResponsesResponseCompletedStreamingEvent) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesResponseCompletedStreamingEvent performs a merge with any union data inside the OrchestratorResponsesResponseStreamEvent, using the provided OrchestratorResponsesResponseCompletedStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) MergeOrchestratorResponsesResponseCompletedStreamingEvent(v OrchestratorResponsesResponseCompletedStreamingEvent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesResponseFailedStreamingEvent returns the union data inside the OrchestratorResponsesResponseStreamEvent as a OrchestratorResponsesResponseFailedStreamingEvent
+func (t OrchestratorResponsesResponseStreamEvent) AsOrchestratorResponsesResponseFailedStreamingEvent() (OrchestratorResponsesResponseFailedStreamingEvent, error) {
+	var body OrchestratorResponsesResponseFailedStreamingEvent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesResponseFailedStreamingEvent overwrites any union data inside the OrchestratorResponsesResponseStreamEvent as the provided OrchestratorResponsesResponseFailedStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) FromOrchestratorResponsesResponseFailedStreamingEvent(v OrchestratorResponsesResponseFailedStreamingEvent) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesResponseFailedStreamingEvent performs a merge with any union data inside the OrchestratorResponsesResponseStreamEvent, using the provided OrchestratorResponsesResponseFailedStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) MergeOrchestratorResponsesResponseFailedStreamingEvent(v OrchestratorResponsesResponseFailedStreamingEvent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesResponseIncompleteStreamingEvent returns the union data inside the OrchestratorResponsesResponseStreamEvent as a OrchestratorResponsesResponseIncompleteStreamingEvent
+func (t OrchestratorResponsesResponseStreamEvent) AsOrchestratorResponsesResponseIncompleteStreamingEvent() (OrchestratorResponsesResponseIncompleteStreamingEvent, error) {
+	var body OrchestratorResponsesResponseIncompleteStreamingEvent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesResponseIncompleteStreamingEvent overwrites any union data inside the OrchestratorResponsesResponseStreamEvent as the provided OrchestratorResponsesResponseIncompleteStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) FromOrchestratorResponsesResponseIncompleteStreamingEvent(v OrchestratorResponsesResponseIncompleteStreamingEvent) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesResponseIncompleteStreamingEvent performs a merge with any union data inside the OrchestratorResponsesResponseStreamEvent, using the provided OrchestratorResponsesResponseIncompleteStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) MergeOrchestratorResponsesResponseIncompleteStreamingEvent(v OrchestratorResponsesResponseIncompleteStreamingEvent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesResponseOutputItemAddedStreamingEvent returns the union data inside the OrchestratorResponsesResponseStreamEvent as a OrchestratorResponsesResponseOutputItemAddedStreamingEvent
+func (t OrchestratorResponsesResponseStreamEvent) AsOrchestratorResponsesResponseOutputItemAddedStreamingEvent() (OrchestratorResponsesResponseOutputItemAddedStreamingEvent, error) {
+	var body OrchestratorResponsesResponseOutputItemAddedStreamingEvent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesResponseOutputItemAddedStreamingEvent overwrites any union data inside the OrchestratorResponsesResponseStreamEvent as the provided OrchestratorResponsesResponseOutputItemAddedStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) FromOrchestratorResponsesResponseOutputItemAddedStreamingEvent(v OrchestratorResponsesResponseOutputItemAddedStreamingEvent) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesResponseOutputItemAddedStreamingEvent performs a merge with any union data inside the OrchestratorResponsesResponseStreamEvent, using the provided OrchestratorResponsesResponseOutputItemAddedStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) MergeOrchestratorResponsesResponseOutputItemAddedStreamingEvent(v OrchestratorResponsesResponseOutputItemAddedStreamingEvent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesResponseOutputItemDoneStreamingEvent returns the union data inside the OrchestratorResponsesResponseStreamEvent as a OrchestratorResponsesResponseOutputItemDoneStreamingEvent
+func (t OrchestratorResponsesResponseStreamEvent) AsOrchestratorResponsesResponseOutputItemDoneStreamingEvent() (OrchestratorResponsesResponseOutputItemDoneStreamingEvent, error) {
+	var body OrchestratorResponsesResponseOutputItemDoneStreamingEvent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesResponseOutputItemDoneStreamingEvent overwrites any union data inside the OrchestratorResponsesResponseStreamEvent as the provided OrchestratorResponsesResponseOutputItemDoneStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) FromOrchestratorResponsesResponseOutputItemDoneStreamingEvent(v OrchestratorResponsesResponseOutputItemDoneStreamingEvent) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesResponseOutputItemDoneStreamingEvent performs a merge with any union data inside the OrchestratorResponsesResponseStreamEvent, using the provided OrchestratorResponsesResponseOutputItemDoneStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) MergeOrchestratorResponsesResponseOutputItemDoneStreamingEvent(v OrchestratorResponsesResponseOutputItemDoneStreamingEvent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent returns the union data inside the OrchestratorResponsesResponseStreamEvent as a OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent
+func (t OrchestratorResponsesResponseStreamEvent) AsOrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent() (OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent, error) {
+	var body OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent overwrites any union data inside the OrchestratorResponsesResponseStreamEvent as the provided OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) FromOrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent(v OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent performs a merge with any union data inside the OrchestratorResponsesResponseStreamEvent, using the provided OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) MergeOrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent(v OrchestratorResponsesResponseReasoningSummaryPartAddedStreamingEvent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent returns the union data inside the OrchestratorResponsesResponseStreamEvent as a OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent
+func (t OrchestratorResponsesResponseStreamEvent) AsOrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent() (OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent, error) {
+	var body OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent overwrites any union data inside the OrchestratorResponsesResponseStreamEvent as the provided OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) FromOrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent(v OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent performs a merge with any union data inside the OrchestratorResponsesResponseStreamEvent, using the provided OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) MergeOrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent(v OrchestratorResponsesResponseReasoningSummaryPartDoneStreamingEvent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesResponseContentPartAddedStreamingEvent returns the union data inside the OrchestratorResponsesResponseStreamEvent as a OrchestratorResponsesResponseContentPartAddedStreamingEvent
+func (t OrchestratorResponsesResponseStreamEvent) AsOrchestratorResponsesResponseContentPartAddedStreamingEvent() (OrchestratorResponsesResponseContentPartAddedStreamingEvent, error) {
+	var body OrchestratorResponsesResponseContentPartAddedStreamingEvent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesResponseContentPartAddedStreamingEvent overwrites any union data inside the OrchestratorResponsesResponseStreamEvent as the provided OrchestratorResponsesResponseContentPartAddedStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) FromOrchestratorResponsesResponseContentPartAddedStreamingEvent(v OrchestratorResponsesResponseContentPartAddedStreamingEvent) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesResponseContentPartAddedStreamingEvent performs a merge with any union data inside the OrchestratorResponsesResponseStreamEvent, using the provided OrchestratorResponsesResponseContentPartAddedStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) MergeOrchestratorResponsesResponseContentPartAddedStreamingEvent(v OrchestratorResponsesResponseContentPartAddedStreamingEvent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesResponseContentPartDoneStreamingEvent returns the union data inside the OrchestratorResponsesResponseStreamEvent as a OrchestratorResponsesResponseContentPartDoneStreamingEvent
+func (t OrchestratorResponsesResponseStreamEvent) AsOrchestratorResponsesResponseContentPartDoneStreamingEvent() (OrchestratorResponsesResponseContentPartDoneStreamingEvent, error) {
+	var body OrchestratorResponsesResponseContentPartDoneStreamingEvent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesResponseContentPartDoneStreamingEvent overwrites any union data inside the OrchestratorResponsesResponseStreamEvent as the provided OrchestratorResponsesResponseContentPartDoneStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) FromOrchestratorResponsesResponseContentPartDoneStreamingEvent(v OrchestratorResponsesResponseContentPartDoneStreamingEvent) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesResponseContentPartDoneStreamingEvent performs a merge with any union data inside the OrchestratorResponsesResponseStreamEvent, using the provided OrchestratorResponsesResponseContentPartDoneStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) MergeOrchestratorResponsesResponseContentPartDoneStreamingEvent(v OrchestratorResponsesResponseContentPartDoneStreamingEvent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesResponseOutputTextDeltaStreamingEvent returns the union data inside the OrchestratorResponsesResponseStreamEvent as a OrchestratorResponsesResponseOutputTextDeltaStreamingEvent
+func (t OrchestratorResponsesResponseStreamEvent) AsOrchestratorResponsesResponseOutputTextDeltaStreamingEvent() (OrchestratorResponsesResponseOutputTextDeltaStreamingEvent, error) {
+	var body OrchestratorResponsesResponseOutputTextDeltaStreamingEvent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesResponseOutputTextDeltaStreamingEvent overwrites any union data inside the OrchestratorResponsesResponseStreamEvent as the provided OrchestratorResponsesResponseOutputTextDeltaStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) FromOrchestratorResponsesResponseOutputTextDeltaStreamingEvent(v OrchestratorResponsesResponseOutputTextDeltaStreamingEvent) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesResponseOutputTextDeltaStreamingEvent performs a merge with any union data inside the OrchestratorResponsesResponseStreamEvent, using the provided OrchestratorResponsesResponseOutputTextDeltaStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) MergeOrchestratorResponsesResponseOutputTextDeltaStreamingEvent(v OrchestratorResponsesResponseOutputTextDeltaStreamingEvent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesResponseOutputTextDoneStreamingEvent returns the union data inside the OrchestratorResponsesResponseStreamEvent as a OrchestratorResponsesResponseOutputTextDoneStreamingEvent
+func (t OrchestratorResponsesResponseStreamEvent) AsOrchestratorResponsesResponseOutputTextDoneStreamingEvent() (OrchestratorResponsesResponseOutputTextDoneStreamingEvent, error) {
+	var body OrchestratorResponsesResponseOutputTextDoneStreamingEvent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesResponseOutputTextDoneStreamingEvent overwrites any union data inside the OrchestratorResponsesResponseStreamEvent as the provided OrchestratorResponsesResponseOutputTextDoneStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) FromOrchestratorResponsesResponseOutputTextDoneStreamingEvent(v OrchestratorResponsesResponseOutputTextDoneStreamingEvent) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesResponseOutputTextDoneStreamingEvent performs a merge with any union data inside the OrchestratorResponsesResponseStreamEvent, using the provided OrchestratorResponsesResponseOutputTextDoneStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) MergeOrchestratorResponsesResponseOutputTextDoneStreamingEvent(v OrchestratorResponsesResponseOutputTextDoneStreamingEvent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesResponseRefusalDeltaStreamingEvent returns the union data inside the OrchestratorResponsesResponseStreamEvent as a OrchestratorResponsesResponseRefusalDeltaStreamingEvent
+func (t OrchestratorResponsesResponseStreamEvent) AsOrchestratorResponsesResponseRefusalDeltaStreamingEvent() (OrchestratorResponsesResponseRefusalDeltaStreamingEvent, error) {
+	var body OrchestratorResponsesResponseRefusalDeltaStreamingEvent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesResponseRefusalDeltaStreamingEvent overwrites any union data inside the OrchestratorResponsesResponseStreamEvent as the provided OrchestratorResponsesResponseRefusalDeltaStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) FromOrchestratorResponsesResponseRefusalDeltaStreamingEvent(v OrchestratorResponsesResponseRefusalDeltaStreamingEvent) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesResponseRefusalDeltaStreamingEvent performs a merge with any union data inside the OrchestratorResponsesResponseStreamEvent, using the provided OrchestratorResponsesResponseRefusalDeltaStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) MergeOrchestratorResponsesResponseRefusalDeltaStreamingEvent(v OrchestratorResponsesResponseRefusalDeltaStreamingEvent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesResponseRefusalDoneStreamingEvent returns the union data inside the OrchestratorResponsesResponseStreamEvent as a OrchestratorResponsesResponseRefusalDoneStreamingEvent
+func (t OrchestratorResponsesResponseStreamEvent) AsOrchestratorResponsesResponseRefusalDoneStreamingEvent() (OrchestratorResponsesResponseRefusalDoneStreamingEvent, error) {
+	var body OrchestratorResponsesResponseRefusalDoneStreamingEvent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesResponseRefusalDoneStreamingEvent overwrites any union data inside the OrchestratorResponsesResponseStreamEvent as the provided OrchestratorResponsesResponseRefusalDoneStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) FromOrchestratorResponsesResponseRefusalDoneStreamingEvent(v OrchestratorResponsesResponseRefusalDoneStreamingEvent) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesResponseRefusalDoneStreamingEvent performs a merge with any union data inside the OrchestratorResponsesResponseStreamEvent, using the provided OrchestratorResponsesResponseRefusalDoneStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) MergeOrchestratorResponsesResponseRefusalDoneStreamingEvent(v OrchestratorResponsesResponseRefusalDoneStreamingEvent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesResponseReasoningDeltaStreamingEvent returns the union data inside the OrchestratorResponsesResponseStreamEvent as a OrchestratorResponsesResponseReasoningDeltaStreamingEvent
+func (t OrchestratorResponsesResponseStreamEvent) AsOrchestratorResponsesResponseReasoningDeltaStreamingEvent() (OrchestratorResponsesResponseReasoningDeltaStreamingEvent, error) {
+	var body OrchestratorResponsesResponseReasoningDeltaStreamingEvent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesResponseReasoningDeltaStreamingEvent overwrites any union data inside the OrchestratorResponsesResponseStreamEvent as the provided OrchestratorResponsesResponseReasoningDeltaStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) FromOrchestratorResponsesResponseReasoningDeltaStreamingEvent(v OrchestratorResponsesResponseReasoningDeltaStreamingEvent) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesResponseReasoningDeltaStreamingEvent performs a merge with any union data inside the OrchestratorResponsesResponseStreamEvent, using the provided OrchestratorResponsesResponseReasoningDeltaStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) MergeOrchestratorResponsesResponseReasoningDeltaStreamingEvent(v OrchestratorResponsesResponseReasoningDeltaStreamingEvent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesResponseReasoningDoneStreamingEvent returns the union data inside the OrchestratorResponsesResponseStreamEvent as a OrchestratorResponsesResponseReasoningDoneStreamingEvent
+func (t OrchestratorResponsesResponseStreamEvent) AsOrchestratorResponsesResponseReasoningDoneStreamingEvent() (OrchestratorResponsesResponseReasoningDoneStreamingEvent, error) {
+	var body OrchestratorResponsesResponseReasoningDoneStreamingEvent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesResponseReasoningDoneStreamingEvent overwrites any union data inside the OrchestratorResponsesResponseStreamEvent as the provided OrchestratorResponsesResponseReasoningDoneStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) FromOrchestratorResponsesResponseReasoningDoneStreamingEvent(v OrchestratorResponsesResponseReasoningDoneStreamingEvent) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesResponseReasoningDoneStreamingEvent performs a merge with any union data inside the OrchestratorResponsesResponseStreamEvent, using the provided OrchestratorResponsesResponseReasoningDoneStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) MergeOrchestratorResponsesResponseReasoningDoneStreamingEvent(v OrchestratorResponsesResponseReasoningDoneStreamingEvent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesResponseReasoningSummaryDeltaStreamingEvent returns the union data inside the OrchestratorResponsesResponseStreamEvent as a OrchestratorResponsesResponseReasoningSummaryDeltaStreamingEvent
+func (t OrchestratorResponsesResponseStreamEvent) AsOrchestratorResponsesResponseReasoningSummaryDeltaStreamingEvent() (OrchestratorResponsesResponseReasoningSummaryDeltaStreamingEvent, error) {
+	var body OrchestratorResponsesResponseReasoningSummaryDeltaStreamingEvent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesResponseReasoningSummaryDeltaStreamingEvent overwrites any union data inside the OrchestratorResponsesResponseStreamEvent as the provided OrchestratorResponsesResponseReasoningSummaryDeltaStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) FromOrchestratorResponsesResponseReasoningSummaryDeltaStreamingEvent(v OrchestratorResponsesResponseReasoningSummaryDeltaStreamingEvent) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesResponseReasoningSummaryDeltaStreamingEvent performs a merge with any union data inside the OrchestratorResponsesResponseStreamEvent, using the provided OrchestratorResponsesResponseReasoningSummaryDeltaStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) MergeOrchestratorResponsesResponseReasoningSummaryDeltaStreamingEvent(v OrchestratorResponsesResponseReasoningSummaryDeltaStreamingEvent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesResponseReasoningSummaryDoneStreamingEvent returns the union data inside the OrchestratorResponsesResponseStreamEvent as a OrchestratorResponsesResponseReasoningSummaryDoneStreamingEvent
+func (t OrchestratorResponsesResponseStreamEvent) AsOrchestratorResponsesResponseReasoningSummaryDoneStreamingEvent() (OrchestratorResponsesResponseReasoningSummaryDoneStreamingEvent, error) {
+	var body OrchestratorResponsesResponseReasoningSummaryDoneStreamingEvent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesResponseReasoningSummaryDoneStreamingEvent overwrites any union data inside the OrchestratorResponsesResponseStreamEvent as the provided OrchestratorResponsesResponseReasoningSummaryDoneStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) FromOrchestratorResponsesResponseReasoningSummaryDoneStreamingEvent(v OrchestratorResponsesResponseReasoningSummaryDoneStreamingEvent) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesResponseReasoningSummaryDoneStreamingEvent performs a merge with any union data inside the OrchestratorResponsesResponseStreamEvent, using the provided OrchestratorResponsesResponseReasoningSummaryDoneStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) MergeOrchestratorResponsesResponseReasoningSummaryDoneStreamingEvent(v OrchestratorResponsesResponseReasoningSummaryDoneStreamingEvent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesResponseOutputTextAnnotationAddedStreamingEvent returns the union data inside the OrchestratorResponsesResponseStreamEvent as a OrchestratorResponsesResponseOutputTextAnnotationAddedStreamingEvent
+func (t OrchestratorResponsesResponseStreamEvent) AsOrchestratorResponsesResponseOutputTextAnnotationAddedStreamingEvent() (OrchestratorResponsesResponseOutputTextAnnotationAddedStreamingEvent, error) {
+	var body OrchestratorResponsesResponseOutputTextAnnotationAddedStreamingEvent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesResponseOutputTextAnnotationAddedStreamingEvent overwrites any union data inside the OrchestratorResponsesResponseStreamEvent as the provided OrchestratorResponsesResponseOutputTextAnnotationAddedStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) FromOrchestratorResponsesResponseOutputTextAnnotationAddedStreamingEvent(v OrchestratorResponsesResponseOutputTextAnnotationAddedStreamingEvent) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesResponseOutputTextAnnotationAddedStreamingEvent performs a merge with any union data inside the OrchestratorResponsesResponseStreamEvent, using the provided OrchestratorResponsesResponseOutputTextAnnotationAddedStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) MergeOrchestratorResponsesResponseOutputTextAnnotationAddedStreamingEvent(v OrchestratorResponsesResponseOutputTextAnnotationAddedStreamingEvent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesResponseFunctionCallArgumentsDeltaStreamingEvent returns the union data inside the OrchestratorResponsesResponseStreamEvent as a OrchestratorResponsesResponseFunctionCallArgumentsDeltaStreamingEvent
+func (t OrchestratorResponsesResponseStreamEvent) AsOrchestratorResponsesResponseFunctionCallArgumentsDeltaStreamingEvent() (OrchestratorResponsesResponseFunctionCallArgumentsDeltaStreamingEvent, error) {
+	var body OrchestratorResponsesResponseFunctionCallArgumentsDeltaStreamingEvent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesResponseFunctionCallArgumentsDeltaStreamingEvent overwrites any union data inside the OrchestratorResponsesResponseStreamEvent as the provided OrchestratorResponsesResponseFunctionCallArgumentsDeltaStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) FromOrchestratorResponsesResponseFunctionCallArgumentsDeltaStreamingEvent(v OrchestratorResponsesResponseFunctionCallArgumentsDeltaStreamingEvent) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesResponseFunctionCallArgumentsDeltaStreamingEvent performs a merge with any union data inside the OrchestratorResponsesResponseStreamEvent, using the provided OrchestratorResponsesResponseFunctionCallArgumentsDeltaStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) MergeOrchestratorResponsesResponseFunctionCallArgumentsDeltaStreamingEvent(v OrchestratorResponsesResponseFunctionCallArgumentsDeltaStreamingEvent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesResponseFunctionCallArgumentsDoneStreamingEvent returns the union data inside the OrchestratorResponsesResponseStreamEvent as a OrchestratorResponsesResponseFunctionCallArgumentsDoneStreamingEvent
+func (t OrchestratorResponsesResponseStreamEvent) AsOrchestratorResponsesResponseFunctionCallArgumentsDoneStreamingEvent() (OrchestratorResponsesResponseFunctionCallArgumentsDoneStreamingEvent, error) {
+	var body OrchestratorResponsesResponseFunctionCallArgumentsDoneStreamingEvent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesResponseFunctionCallArgumentsDoneStreamingEvent overwrites any union data inside the OrchestratorResponsesResponseStreamEvent as the provided OrchestratorResponsesResponseFunctionCallArgumentsDoneStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) FromOrchestratorResponsesResponseFunctionCallArgumentsDoneStreamingEvent(v OrchestratorResponsesResponseFunctionCallArgumentsDoneStreamingEvent) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesResponseFunctionCallArgumentsDoneStreamingEvent performs a merge with any union data inside the OrchestratorResponsesResponseStreamEvent, using the provided OrchestratorResponsesResponseFunctionCallArgumentsDoneStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) MergeOrchestratorResponsesResponseFunctionCallArgumentsDoneStreamingEvent(v OrchestratorResponsesResponseFunctionCallArgumentsDoneStreamingEvent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesResponseCustomToolCallInputDeltaStreamingEvent returns the union data inside the OrchestratorResponsesResponseStreamEvent as a OrchestratorResponsesResponseCustomToolCallInputDeltaStreamingEvent
+func (t OrchestratorResponsesResponseStreamEvent) AsOrchestratorResponsesResponseCustomToolCallInputDeltaStreamingEvent() (OrchestratorResponsesResponseCustomToolCallInputDeltaStreamingEvent, error) {
+	var body OrchestratorResponsesResponseCustomToolCallInputDeltaStreamingEvent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesResponseCustomToolCallInputDeltaStreamingEvent overwrites any union data inside the OrchestratorResponsesResponseStreamEvent as the provided OrchestratorResponsesResponseCustomToolCallInputDeltaStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) FromOrchestratorResponsesResponseCustomToolCallInputDeltaStreamingEvent(v OrchestratorResponsesResponseCustomToolCallInputDeltaStreamingEvent) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesResponseCustomToolCallInputDeltaStreamingEvent performs a merge with any union data inside the OrchestratorResponsesResponseStreamEvent, using the provided OrchestratorResponsesResponseCustomToolCallInputDeltaStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) MergeOrchestratorResponsesResponseCustomToolCallInputDeltaStreamingEvent(v OrchestratorResponsesResponseCustomToolCallInputDeltaStreamingEvent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesResponseCustomToolCallInputDoneStreamingEvent returns the union data inside the OrchestratorResponsesResponseStreamEvent as a OrchestratorResponsesResponseCustomToolCallInputDoneStreamingEvent
+func (t OrchestratorResponsesResponseStreamEvent) AsOrchestratorResponsesResponseCustomToolCallInputDoneStreamingEvent() (OrchestratorResponsesResponseCustomToolCallInputDoneStreamingEvent, error) {
+	var body OrchestratorResponsesResponseCustomToolCallInputDoneStreamingEvent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesResponseCustomToolCallInputDoneStreamingEvent overwrites any union data inside the OrchestratorResponsesResponseStreamEvent as the provided OrchestratorResponsesResponseCustomToolCallInputDoneStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) FromOrchestratorResponsesResponseCustomToolCallInputDoneStreamingEvent(v OrchestratorResponsesResponseCustomToolCallInputDoneStreamingEvent) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesResponseCustomToolCallInputDoneStreamingEvent performs a merge with any union data inside the OrchestratorResponsesResponseStreamEvent, using the provided OrchestratorResponsesResponseCustomToolCallInputDoneStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) MergeOrchestratorResponsesResponseCustomToolCallInputDoneStreamingEvent(v OrchestratorResponsesResponseCustomToolCallInputDoneStreamingEvent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesErrorStreamingEvent returns the union data inside the OrchestratorResponsesResponseStreamEvent as a OrchestratorResponsesErrorStreamingEvent
+func (t OrchestratorResponsesResponseStreamEvent) AsOrchestratorResponsesErrorStreamingEvent() (OrchestratorResponsesErrorStreamingEvent, error) {
+	var body OrchestratorResponsesErrorStreamingEvent
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesErrorStreamingEvent overwrites any union data inside the OrchestratorResponsesResponseStreamEvent as the provided OrchestratorResponsesErrorStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) FromOrchestratorResponsesErrorStreamingEvent(v OrchestratorResponsesErrorStreamingEvent) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesErrorStreamingEvent performs a merge with any union data inside the OrchestratorResponsesResponseStreamEvent, using the provided OrchestratorResponsesErrorStreamingEvent
+func (t *OrchestratorResponsesResponseStreamEvent) MergeOrchestratorResponsesErrorStreamingEvent(v OrchestratorResponsesErrorStreamingEvent) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorResponsesResponseStreamEvent) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorResponsesResponseStreamEvent) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorResponsesFunctionToolParam returns the union data inside the OrchestratorResponsesResponsesToolParam as a OrchestratorResponsesFunctionToolParam
+func (t OrchestratorResponsesResponsesToolParam) AsOrchestratorResponsesFunctionToolParam() (OrchestratorResponsesFunctionToolParam, error) {
+	var body OrchestratorResponsesFunctionToolParam
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesFunctionToolParam overwrites any union data inside the OrchestratorResponsesResponsesToolParam as the provided OrchestratorResponsesFunctionToolParam
+func (t *OrchestratorResponsesResponsesToolParam) FromOrchestratorResponsesFunctionToolParam(v OrchestratorResponsesFunctionToolParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesFunctionToolParam"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesFunctionToolParam performs a merge with any union data inside the OrchestratorResponsesResponsesToolParam, using the provided OrchestratorResponsesFunctionToolParam
+func (t *OrchestratorResponsesResponsesToolParam) MergeOrchestratorResponsesFunctionToolParam(v OrchestratorResponsesFunctionToolParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesFunctionToolParam"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesCustomToolParam returns the union data inside the OrchestratorResponsesResponsesToolParam as a OrchestratorResponsesCustomToolParam
+func (t OrchestratorResponsesResponsesToolParam) AsOrchestratorResponsesCustomToolParam() (OrchestratorResponsesCustomToolParam, error) {
+	var body OrchestratorResponsesCustomToolParam
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesCustomToolParam overwrites any union data inside the OrchestratorResponsesResponsesToolParam as the provided OrchestratorResponsesCustomToolParam
+func (t *OrchestratorResponsesResponsesToolParam) FromOrchestratorResponsesCustomToolParam(v OrchestratorResponsesCustomToolParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesCustomToolParam"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesCustomToolParam performs a merge with any union data inside the OrchestratorResponsesResponsesToolParam, using the provided OrchestratorResponsesCustomToolParam
+func (t *OrchestratorResponsesResponsesToolParam) MergeOrchestratorResponsesCustomToolParam(v OrchestratorResponsesCustomToolParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesCustomToolParam"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesNamespaceToolParam returns the union data inside the OrchestratorResponsesResponsesToolParam as a OrchestratorResponsesNamespaceToolParam
+func (t OrchestratorResponsesResponsesToolParam) AsOrchestratorResponsesNamespaceToolParam() (OrchestratorResponsesNamespaceToolParam, error) {
+	var body OrchestratorResponsesNamespaceToolParam
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesNamespaceToolParam overwrites any union data inside the OrchestratorResponsesResponsesToolParam as the provided OrchestratorResponsesNamespaceToolParam
+func (t *OrchestratorResponsesResponsesToolParam) FromOrchestratorResponsesNamespaceToolParam(v OrchestratorResponsesNamespaceToolParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesNamespaceToolParam"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesNamespaceToolParam performs a merge with any union data inside the OrchestratorResponsesResponsesToolParam, using the provided OrchestratorResponsesNamespaceToolParam
+func (t *OrchestratorResponsesResponsesToolParam) MergeOrchestratorResponsesNamespaceToolParam(v OrchestratorResponsesNamespaceToolParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesNamespaceToolParam"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorResponsesResponsesToolParam) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t OrchestratorResponsesResponsesToolParam) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "OrchestratorResponsesCustomToolParam":
+		return t.AsOrchestratorResponsesCustomToolParam()
+	case "OrchestratorResponsesFunctionToolParam":
+		return t.AsOrchestratorResponsesFunctionToolParam()
+	case "OrchestratorResponsesNamespaceToolParam":
+		return t.AsOrchestratorResponsesNamespaceToolParam()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t OrchestratorResponsesResponsesToolParam) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorResponsesResponsesToolParam) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorResponsesSpecificFunctionParam returns the union data inside the OrchestratorResponsesSpecificToolChoiceParam as a OrchestratorResponsesSpecificFunctionParam
+func (t OrchestratorResponsesSpecificToolChoiceParam) AsOrchestratorResponsesSpecificFunctionParam() (OrchestratorResponsesSpecificFunctionParam, error) {
+	var body OrchestratorResponsesSpecificFunctionParam
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesSpecificFunctionParam overwrites any union data inside the OrchestratorResponsesSpecificToolChoiceParam as the provided OrchestratorResponsesSpecificFunctionParam
+func (t *OrchestratorResponsesSpecificToolChoiceParam) FromOrchestratorResponsesSpecificFunctionParam(v OrchestratorResponsesSpecificFunctionParam) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesSpecificFunctionParam performs a merge with any union data inside the OrchestratorResponsesSpecificToolChoiceParam, using the provided OrchestratorResponsesSpecificFunctionParam
+func (t *OrchestratorResponsesSpecificToolChoiceParam) MergeOrchestratorResponsesSpecificFunctionParam(v OrchestratorResponsesSpecificFunctionParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorResponsesSpecificToolChoiceParam) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorResponsesSpecificToolChoiceParam) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorResponsesInputTextContentParam returns the union data inside the OrchestratorResponsesSystemMessageItemParam_Content_0_Item as a OrchestratorResponsesInputTextContentParam
+func (t OrchestratorResponsesSystemMessageItemParam_Content_0_Item) AsOrchestratorResponsesInputTextContentParam() (OrchestratorResponsesInputTextContentParam, error) {
+	var body OrchestratorResponsesInputTextContentParam
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesInputTextContentParam overwrites any union data inside the OrchestratorResponsesSystemMessageItemParam_Content_0_Item as the provided OrchestratorResponsesInputTextContentParam
+func (t *OrchestratorResponsesSystemMessageItemParam_Content_0_Item) FromOrchestratorResponsesInputTextContentParam(v OrchestratorResponsesInputTextContentParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputTextContentParam"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesInputTextContentParam performs a merge with any union data inside the OrchestratorResponsesSystemMessageItemParam_Content_0_Item, using the provided OrchestratorResponsesInputTextContentParam
+func (t *OrchestratorResponsesSystemMessageItemParam_Content_0_Item) MergeOrchestratorResponsesInputTextContentParam(v OrchestratorResponsesInputTextContentParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputTextContentParam"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorResponsesSystemMessageItemParam_Content_0_Item) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t OrchestratorResponsesSystemMessageItemParam_Content_0_Item) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "OrchestratorResponsesInputTextContentParam":
+		return t.AsOrchestratorResponsesInputTextContentParam()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t OrchestratorResponsesSystemMessageItemParam_Content_0_Item) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorResponsesSystemMessageItemParam_Content_0_Item) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorResponsesSystemMessageItemParamContent0 returns the union data inside the OrchestratorResponsesSystemMessageItemParam_Content as a OrchestratorResponsesSystemMessageItemParamContent0
+func (t OrchestratorResponsesSystemMessageItemParam_Content) AsOrchestratorResponsesSystemMessageItemParamContent0() (OrchestratorResponsesSystemMessageItemParamContent0, error) {
+	var body OrchestratorResponsesSystemMessageItemParamContent0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesSystemMessageItemParamContent0 overwrites any union data inside the OrchestratorResponsesSystemMessageItemParam_Content as the provided OrchestratorResponsesSystemMessageItemParamContent0
+func (t *OrchestratorResponsesSystemMessageItemParam_Content) FromOrchestratorResponsesSystemMessageItemParamContent0(v OrchestratorResponsesSystemMessageItemParamContent0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesSystemMessageItemParamContent0 performs a merge with any union data inside the OrchestratorResponsesSystemMessageItemParam_Content, using the provided OrchestratorResponsesSystemMessageItemParamContent0
+func (t *OrchestratorResponsesSystemMessageItemParam_Content) MergeOrchestratorResponsesSystemMessageItemParamContent0(v OrchestratorResponsesSystemMessageItemParamContent0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesSystemMessageItemParamContent1 returns the union data inside the OrchestratorResponsesSystemMessageItemParam_Content as a OrchestratorResponsesSystemMessageItemParamContent1
+func (t OrchestratorResponsesSystemMessageItemParam_Content) AsOrchestratorResponsesSystemMessageItemParamContent1() (OrchestratorResponsesSystemMessageItemParamContent1, error) {
+	var body OrchestratorResponsesSystemMessageItemParamContent1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesSystemMessageItemParamContent1 overwrites any union data inside the OrchestratorResponsesSystemMessageItemParam_Content as the provided OrchestratorResponsesSystemMessageItemParamContent1
+func (t *OrchestratorResponsesSystemMessageItemParam_Content) FromOrchestratorResponsesSystemMessageItemParamContent1(v OrchestratorResponsesSystemMessageItemParamContent1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesSystemMessageItemParamContent1 performs a merge with any union data inside the OrchestratorResponsesSystemMessageItemParam_Content, using the provided OrchestratorResponsesSystemMessageItemParamContent1
+func (t *OrchestratorResponsesSystemMessageItemParam_Content) MergeOrchestratorResponsesSystemMessageItemParamContent1(v OrchestratorResponsesSystemMessageItemParamContent1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorResponsesSystemMessageItemParam_Content) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorResponsesSystemMessageItemParam_Content) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorResponsesTextResponseFormat returns the union data inside the OrchestratorResponsesTextFormatParam as a OrchestratorResponsesTextResponseFormat
+func (t OrchestratorResponsesTextFormatParam) AsOrchestratorResponsesTextResponseFormat() (OrchestratorResponsesTextResponseFormat, error) {
+	var body OrchestratorResponsesTextResponseFormat
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesTextResponseFormat overwrites any union data inside the OrchestratorResponsesTextFormatParam as the provided OrchestratorResponsesTextResponseFormat
+func (t *OrchestratorResponsesTextFormatParam) FromOrchestratorResponsesTextResponseFormat(v OrchestratorResponsesTextResponseFormat) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesTextResponseFormat performs a merge with any union data inside the OrchestratorResponsesTextFormatParam, using the provided OrchestratorResponsesTextResponseFormat
+func (t *OrchestratorResponsesTextFormatParam) MergeOrchestratorResponsesTextResponseFormat(v OrchestratorResponsesTextResponseFormat) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesJsonSchemaResponseFormatParam returns the union data inside the OrchestratorResponsesTextFormatParam as a OrchestratorResponsesJsonSchemaResponseFormatParam
+func (t OrchestratorResponsesTextFormatParam) AsOrchestratorResponsesJsonSchemaResponseFormatParam() (OrchestratorResponsesJsonSchemaResponseFormatParam, error) {
+	var body OrchestratorResponsesJsonSchemaResponseFormatParam
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesJsonSchemaResponseFormatParam overwrites any union data inside the OrchestratorResponsesTextFormatParam as the provided OrchestratorResponsesJsonSchemaResponseFormatParam
+func (t *OrchestratorResponsesTextFormatParam) FromOrchestratorResponsesJsonSchemaResponseFormatParam(v OrchestratorResponsesJsonSchemaResponseFormatParam) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesJsonSchemaResponseFormatParam performs a merge with any union data inside the OrchestratorResponsesTextFormatParam, using the provided OrchestratorResponsesJsonSchemaResponseFormatParam
+func (t *OrchestratorResponsesTextFormatParam) MergeOrchestratorResponsesJsonSchemaResponseFormatParam(v OrchestratorResponsesJsonSchemaResponseFormatParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorResponsesTextFormatParam) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorResponsesTextFormatParam) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorResponsesFunctionTool returns the union data inside the OrchestratorResponsesTool as a OrchestratorResponsesFunctionTool
+func (t OrchestratorResponsesTool) AsOrchestratorResponsesFunctionTool() (OrchestratorResponsesFunctionTool, error) {
+	var body OrchestratorResponsesFunctionTool
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesFunctionTool overwrites any union data inside the OrchestratorResponsesTool as the provided OrchestratorResponsesFunctionTool
+func (t *OrchestratorResponsesTool) FromOrchestratorResponsesFunctionTool(v OrchestratorResponsesFunctionTool) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesFunctionTool"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesFunctionTool performs a merge with any union data inside the OrchestratorResponsesTool, using the provided OrchestratorResponsesFunctionTool
+func (t *OrchestratorResponsesTool) MergeOrchestratorResponsesFunctionTool(v OrchestratorResponsesFunctionTool) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesFunctionTool"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorResponsesTool) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t OrchestratorResponsesTool) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "OrchestratorResponsesFunctionTool":
+		return t.AsOrchestratorResponsesFunctionTool()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t OrchestratorResponsesTool) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorResponsesTool) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorResponsesSpecificToolChoiceParam returns the union data inside the OrchestratorResponsesToolChoiceParam as a OrchestratorResponsesSpecificToolChoiceParam
+func (t OrchestratorResponsesToolChoiceParam) AsOrchestratorResponsesSpecificToolChoiceParam() (OrchestratorResponsesSpecificToolChoiceParam, error) {
+	var body OrchestratorResponsesSpecificToolChoiceParam
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesSpecificToolChoiceParam overwrites any union data inside the OrchestratorResponsesToolChoiceParam as the provided OrchestratorResponsesSpecificToolChoiceParam
+func (t *OrchestratorResponsesToolChoiceParam) FromOrchestratorResponsesSpecificToolChoiceParam(v OrchestratorResponsesSpecificToolChoiceParam) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesSpecificToolChoiceParam performs a merge with any union data inside the OrchestratorResponsesToolChoiceParam, using the provided OrchestratorResponsesSpecificToolChoiceParam
+func (t *OrchestratorResponsesToolChoiceParam) MergeOrchestratorResponsesSpecificToolChoiceParam(v OrchestratorResponsesSpecificToolChoiceParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesToolChoiceValueEnum returns the union data inside the OrchestratorResponsesToolChoiceParam as a OrchestratorResponsesToolChoiceValueEnum
+func (t OrchestratorResponsesToolChoiceParam) AsOrchestratorResponsesToolChoiceValueEnum() (OrchestratorResponsesToolChoiceValueEnum, error) {
+	var body OrchestratorResponsesToolChoiceValueEnum
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesToolChoiceValueEnum overwrites any union data inside the OrchestratorResponsesToolChoiceParam as the provided OrchestratorResponsesToolChoiceValueEnum
+func (t *OrchestratorResponsesToolChoiceParam) FromOrchestratorResponsesToolChoiceValueEnum(v OrchestratorResponsesToolChoiceValueEnum) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesToolChoiceValueEnum performs a merge with any union data inside the OrchestratorResponsesToolChoiceParam, using the provided OrchestratorResponsesToolChoiceValueEnum
+func (t *OrchestratorResponsesToolChoiceParam) MergeOrchestratorResponsesToolChoiceValueEnum(v OrchestratorResponsesToolChoiceValueEnum) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorResponsesToolChoiceParam) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorResponsesToolChoiceParam) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorResponsesInputTextContentParam returns the union data inside the OrchestratorResponsesUserMessageItemParam_Content_0_Item as a OrchestratorResponsesInputTextContentParam
+func (t OrchestratorResponsesUserMessageItemParam_Content_0_Item) AsOrchestratorResponsesInputTextContentParam() (OrchestratorResponsesInputTextContentParam, error) {
+	var body OrchestratorResponsesInputTextContentParam
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesInputTextContentParam overwrites any union data inside the OrchestratorResponsesUserMessageItemParam_Content_0_Item as the provided OrchestratorResponsesInputTextContentParam
+func (t *OrchestratorResponsesUserMessageItemParam_Content_0_Item) FromOrchestratorResponsesInputTextContentParam(v OrchestratorResponsesInputTextContentParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputTextContentParam"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesInputTextContentParam performs a merge with any union data inside the OrchestratorResponsesUserMessageItemParam_Content_0_Item, using the provided OrchestratorResponsesInputTextContentParam
+func (t *OrchestratorResponsesUserMessageItemParam_Content_0_Item) MergeOrchestratorResponsesInputTextContentParam(v OrchestratorResponsesInputTextContentParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputTextContentParam"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesInputImageContentParamAutoParam returns the union data inside the OrchestratorResponsesUserMessageItemParam_Content_0_Item as a OrchestratorResponsesInputImageContentParamAutoParam
+func (t OrchestratorResponsesUserMessageItemParam_Content_0_Item) AsOrchestratorResponsesInputImageContentParamAutoParam() (OrchestratorResponsesInputImageContentParamAutoParam, error) {
+	var body OrchestratorResponsesInputImageContentParamAutoParam
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesInputImageContentParamAutoParam overwrites any union data inside the OrchestratorResponsesUserMessageItemParam_Content_0_Item as the provided OrchestratorResponsesInputImageContentParamAutoParam
+func (t *OrchestratorResponsesUserMessageItemParam_Content_0_Item) FromOrchestratorResponsesInputImageContentParamAutoParam(v OrchestratorResponsesInputImageContentParamAutoParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputImageContentParamAutoParam"}`))
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesInputImageContentParamAutoParam performs a merge with any union data inside the OrchestratorResponsesUserMessageItemParam_Content_0_Item, using the provided OrchestratorResponsesInputImageContentParamAutoParam
+func (t *OrchestratorResponsesUserMessageItemParam_Content_0_Item) MergeOrchestratorResponsesInputImageContentParamAutoParam(v OrchestratorResponsesInputImageContentParamAutoParam) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"OrchestratorResponsesInputImageContentParamAutoParam"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorResponsesUserMessageItemParam_Content_0_Item) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t OrchestratorResponsesUserMessageItemParam_Content_0_Item) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "OrchestratorResponsesInputImageContentParamAutoParam":
+		return t.AsOrchestratorResponsesInputImageContentParamAutoParam()
+	case "OrchestratorResponsesInputTextContentParam":
+		return t.AsOrchestratorResponsesInputTextContentParam()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t OrchestratorResponsesUserMessageItemParam_Content_0_Item) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorResponsesUserMessageItemParam_Content_0_Item) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	return err
+}
+
+// AsOrchestratorResponsesUserMessageItemParamContent0 returns the union data inside the OrchestratorResponsesUserMessageItemParam_Content as a OrchestratorResponsesUserMessageItemParamContent0
+func (t OrchestratorResponsesUserMessageItemParam_Content) AsOrchestratorResponsesUserMessageItemParamContent0() (OrchestratorResponsesUserMessageItemParamContent0, error) {
+	var body OrchestratorResponsesUserMessageItemParamContent0
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesUserMessageItemParamContent0 overwrites any union data inside the OrchestratorResponsesUserMessageItemParam_Content as the provided OrchestratorResponsesUserMessageItemParamContent0
+func (t *OrchestratorResponsesUserMessageItemParam_Content) FromOrchestratorResponsesUserMessageItemParamContent0(v OrchestratorResponsesUserMessageItemParamContent0) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesUserMessageItemParamContent0 performs a merge with any union data inside the OrchestratorResponsesUserMessageItemParam_Content, using the provided OrchestratorResponsesUserMessageItemParamContent0
+func (t *OrchestratorResponsesUserMessageItemParam_Content) MergeOrchestratorResponsesUserMessageItemParamContent0(v OrchestratorResponsesUserMessageItemParamContent0) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsOrchestratorResponsesUserMessageItemParamContent1 returns the union data inside the OrchestratorResponsesUserMessageItemParam_Content as a OrchestratorResponsesUserMessageItemParamContent1
+func (t OrchestratorResponsesUserMessageItemParam_Content) AsOrchestratorResponsesUserMessageItemParamContent1() (OrchestratorResponsesUserMessageItemParamContent1, error) {
+	var body OrchestratorResponsesUserMessageItemParamContent1
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromOrchestratorResponsesUserMessageItemParamContent1 overwrites any union data inside the OrchestratorResponsesUserMessageItemParam_Content as the provided OrchestratorResponsesUserMessageItemParamContent1
+func (t *OrchestratorResponsesUserMessageItemParam_Content) FromOrchestratorResponsesUserMessageItemParamContent1(v OrchestratorResponsesUserMessageItemParamContent1) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeOrchestratorResponsesUserMessageItemParamContent1 performs a merge with any union data inside the OrchestratorResponsesUserMessageItemParam_Content, using the provided OrchestratorResponsesUserMessageItemParamContent1
+func (t *OrchestratorResponsesUserMessageItemParam_Content) MergeOrchestratorResponsesUserMessageItemParamContent1(v OrchestratorResponsesUserMessageItemParamContent1) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t OrchestratorResponsesUserMessageItemParam_Content) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	return b, err
+}
+
+func (t *OrchestratorResponsesUserMessageItemParam_Content) UnmarshalJSON(b []byte) error {
 	err := t.union.UnmarshalJSON(b)
 	return err
 }
@@ -12082,9 +27417,77 @@ func WithRequestEditorFn(fn RequestEditorFn) ClientOption {
 // The interface specification for the client above.
 type ClientInterface interface {
 
+	// GatewayCreateChatCompletionWithBody Create Chat Completion
+	//
+	// Send a conversation to any Orchestrator API model using the OpenAI Chat Completions schema. Set `stream: true` to receive server-sent events; add `stream_options: {"include_usage": true}` to get token usage in the final chunk.
+	//
+	// Takes any type of body and a specified content type.
+	//
+	// Corresponds with POST /orchestrator/v1/chat/completions (the `GatewayCreateChatCompletion` operationId).
+	GatewayCreateChatCompletionWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GatewayCreateChatCompletion Create Chat Completion
+	//
+	// Send a conversation to any Orchestrator API model using the OpenAI Chat Completions schema. Set `stream: true` to receive server-sent events; add `stream_options: {"include_usage": true}` to get token usage in the final chunk.
+	//
+	// Takes a body of the `application/json` content type.
+	//
+	// Corresponds with POST /orchestrator/v1/chat/completions (the `GatewayCreateChatCompletion` operationId).
+	GatewayCreateChatCompletion(ctx context.Context, body GatewayCreateChatCompletionJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GatewayCreateMessageWithBody Create Message
+	//
+	// Send a conversation to any Orchestrator API model using the Anthropic Messages schema. Set `stream: true` to receive server-sent events. Authenticate with your Perplexity API key in `Authorization: Bearer` or in the Anthropic SDK's default `x-api-key` header.
+	//
+	// Takes any type of body and a specified content type.
+	//
+	// Corresponds with POST /orchestrator/v1/messages (the `GatewayCreateMessage` operationId).
+	GatewayCreateMessageWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GatewayCreateMessage Create Message
+	//
+	// Send a conversation to any Orchestrator API model using the Anthropic Messages schema. Set `stream: true` to receive server-sent events. Authenticate with your Perplexity API key in `Authorization: Bearer` or in the Anthropic SDK's default `x-api-key` header.
+	//
+	// Takes a body of the `application/json` content type.
+	//
+	// Corresponds with POST /orchestrator/v1/messages (the `GatewayCreateMessage` operationId).
+	GatewayCreateMessage(ctx context.Context, body GatewayCreateMessageJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GatewayListModels List Models
+	//
+	// List the models available through the Orchestrator API, sorted by id. Each model includes its base token prices in `pricing` (USD per 1M tokens).
+	//
+	// Corresponds with GET /orchestrator/v1/models (the `GatewayListModels` operationId).
+	GatewayListModels(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GatewayRetrieveModel Retrieve Model
+	//
+	// Retrieve one model by id, including its base token prices. Model ids contain a `/` (for example `perplexity/kimi-k3`); pass the full id in the path.
+	//
+	// Corresponds with GET /orchestrator/v1/models/{model} (the `GatewayRetrieveModel` operationId).
+	GatewayRetrieveModel(ctx context.Context, model string, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GatewayCreateResponseWithBody Create Response
+	//
+	// Generate a model response using the OpenAI Responses schema. Set `stream: true` to receive typed server-sent events followed by `data: [DONE]`.
+	//
+	// Takes any type of body and a specified content type.
+	//
+	// Corresponds with POST /orchestrator/v1/responses (the `GatewayCreateResponse` operationId).
+	GatewayCreateResponseWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// GatewayCreateResponse Create Response
+	//
+	// Generate a model response using the OpenAI Responses schema. Set `stream: true` to receive typed server-sent events followed by `data: [DONE]`.
+	//
+	// Takes a body of the `application/json` content type.
+	//
+	// Corresponds with POST /orchestrator/v1/responses (the `GatewayCreateResponse` operationId).
+	GatewayCreateResponse(ctx context.Context, body GatewayCreateResponseJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
 	// SearchSearchPostWithBody Search the Web
 	//
-	// Search the web and retrieve relevant web page contents.
+	// Returns ranked web results for one query, or for up to five queries in one request. The response is a list of results, not a generated answer.
 	//
 	// Takes any type of body and a specified content type.
 	//
@@ -12093,7 +27496,7 @@ type ClientInterface interface {
 
 	// SearchSearchPost Search the Web
 	//
-	// Search the web and retrieve relevant web page contents.
+	// Returns ranked web results for one query, or for up to five queries in one request. The response is a list of results, not a generated answer.
 	//
 	// Takes a body of the `application/json` content type.
 	//
@@ -12239,7 +27642,25 @@ type ClientInterface interface {
 	// Corresponds with POST /v1/batches/{batch_id}/cancel (the `CancelBatch` operationId).
 	CancelBatch(ctx context.Context, batchId BatchId, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ContextualizedEmbeddingsV1ContextualizedembeddingsPostWithBody Create Contextualized Embeddings
+	// ContextWithBody Fetch URL context
+	//
+	// Fetch Markdown, HTML, links, highlights, and page metadata for 1 to 50 URLs, and optionally score each page with criteria. The response has one result per input URL, in input order. Check each result's status.type for per-URL failures. See the [Context API quickstart](/docs/context/quickstart), [Formats & Freshness](/docs/context/formats-and-freshness), and [Score Pages with Criteria](/docs/context/criteria).
+	//
+	// Takes any type of body and a specified content type.
+	//
+	// Corresponds with POST /v1/context (the `Context` operationId).
+	ContextWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// Context Fetch URL context
+	//
+	// Fetch Markdown, HTML, links, highlights, and page metadata for 1 to 50 URLs, and optionally score each page with criteria. The response has one result per input URL, in input order. Check each result's status.type for per-URL failures. See the [Context API quickstart](/docs/context/quickstart), [Formats & Freshness](/docs/context/formats-and-freshness), and [Score Pages with Criteria](/docs/context/criteria).
+	//
+	// Takes a body of the `application/json` content type.
+	//
+	// Corresponds with POST /v1/context (the `Context` operationId).
+	Context(ctx context.Context, body ContextJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// ContextualizedEmbeddingsV1ContextualizedembeddingsPostWithBody Create Contextualized Embeddings (v1)
 	//
 	// Generate contextualized embeddings for document chunks. Chunks from the same document share context awareness, improving retrieval quality for document-based applications.
 	//
@@ -12248,7 +27669,7 @@ type ClientInterface interface {
 	// Corresponds with POST /v1/contextualizedembeddings (the `ContextualizedEmbeddingsV1ContextualizedembeddingsPost` operationId).
 	ContextualizedEmbeddingsV1ContextualizedembeddingsPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
-	// ContextualizedEmbeddingsV1ContextualizedembeddingsPost Create Contextualized Embeddings
+	// ContextualizedEmbeddingsV1ContextualizedembeddingsPost Create Contextualized Embeddings (v1)
 	//
 	// Generate contextualized embeddings for document chunks. Chunks from the same document share context awareness, improving retrieval quality for document-based applications.
 	//
@@ -12277,7 +27698,7 @@ type ClientInterface interface {
 
 	// EmbeddingsV1EmbeddingsPostWithBody Create Embeddings
 	//
-	// Generate embeddings for a list of texts. Use these embeddings for semantic search, clustering, and other machine learning applications.
+	// Generate embeddings for texts, pre-chunked documents (pplx-embed-v2), or images (pplx-embed-v2). Use these embeddings for semantic search, clustering, and other machine learning applications.
 	//
 	// Takes any type of body and a specified content type.
 	//
@@ -12286,7 +27707,7 @@ type ClientInterface interface {
 
 	// EmbeddingsV1EmbeddingsPost Create Embeddings
 	//
-	// Generate embeddings for a list of texts. Use these embeddings for semantic search, clustering, and other machine learning applications.
+	// Generate embeddings for texts, pre-chunked documents (pplx-embed-v2), or images (pplx-embed-v2). Use these embeddings for semantic search, clustering, and other machine learning applications.
 	//
 	// Takes a body of the `application/json` content type.
 	//
@@ -12570,9 +27991,157 @@ type ClientInterface interface {
 	GetComputerUsageAnalyticsV2(ctx context.Context, params *GetComputerUsageAnalyticsV2Params, reqEditors ...RequestEditorFn) (*http.Response, error)
 }
 
+// GatewayCreateChatCompletionWithBody Create Chat Completion
+//
+// Send a conversation to any Orchestrator API model using the OpenAI Chat Completions schema. Set `stream: true` to receive server-sent events; add `stream_options: {"include_usage": true}` to get token usage in the final chunk.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /orchestrator/v1/chat/completions (the `GatewayCreateChatCompletion` operationId).
+func (c *Client) GatewayCreateChatCompletionWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGatewayCreateChatCompletionRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// GatewayCreateChatCompletion Create Chat Completion
+//
+// Send a conversation to any Orchestrator API model using the OpenAI Chat Completions schema. Set `stream: true` to receive server-sent events; add `stream_options: {"include_usage": true}` to get token usage in the final chunk.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /orchestrator/v1/chat/completions (the `GatewayCreateChatCompletion` operationId).
+func (c *Client) GatewayCreateChatCompletion(ctx context.Context, body GatewayCreateChatCompletionJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGatewayCreateChatCompletionRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// GatewayCreateMessageWithBody Create Message
+//
+// Send a conversation to any Orchestrator API model using the Anthropic Messages schema. Set `stream: true` to receive server-sent events. Authenticate with your Perplexity API key in `Authorization: Bearer` or in the Anthropic SDK's default `x-api-key` header.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /orchestrator/v1/messages (the `GatewayCreateMessage` operationId).
+func (c *Client) GatewayCreateMessageWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGatewayCreateMessageRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// GatewayCreateMessage Create Message
+//
+// Send a conversation to any Orchestrator API model using the Anthropic Messages schema. Set `stream: true` to receive server-sent events. Authenticate with your Perplexity API key in `Authorization: Bearer` or in the Anthropic SDK's default `x-api-key` header.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /orchestrator/v1/messages (the `GatewayCreateMessage` operationId).
+func (c *Client) GatewayCreateMessage(ctx context.Context, body GatewayCreateMessageJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGatewayCreateMessageRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// GatewayListModels List Models
+//
+// List the models available through the Orchestrator API, sorted by id. Each model includes its base token prices in `pricing` (USD per 1M tokens).
+//
+// Corresponds with GET /orchestrator/v1/models (the `GatewayListModels` operationId).
+func (c *Client) GatewayListModels(ctx context.Context, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGatewayListModelsRequest(c.Server)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// GatewayRetrieveModel Retrieve Model
+//
+// Retrieve one model by id, including its base token prices. Model ids contain a `/` (for example `perplexity/kimi-k3`); pass the full id in the path.
+//
+// Corresponds with GET /orchestrator/v1/models/{model} (the `GatewayRetrieveModel` operationId).
+func (c *Client) GatewayRetrieveModel(ctx context.Context, model string, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGatewayRetrieveModelRequest(c.Server, model)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// GatewayCreateResponseWithBody Create Response
+//
+// Generate a model response using the OpenAI Responses schema. Set `stream: true` to receive typed server-sent events followed by `data: [DONE]`.
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /orchestrator/v1/responses (the `GatewayCreateResponse` operationId).
+func (c *Client) GatewayCreateResponseWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGatewayCreateResponseRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// GatewayCreateResponse Create Response
+//
+// Generate a model response using the OpenAI Responses schema. Set `stream: true` to receive typed server-sent events followed by `data: [DONE]`.
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /orchestrator/v1/responses (the `GatewayCreateResponse` operationId).
+func (c *Client) GatewayCreateResponse(ctx context.Context, body GatewayCreateResponseJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewGatewayCreateResponseRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 // SearchSearchPostWithBody Search the Web
 //
-// Search the web and retrieve relevant web page contents.
+// Returns ranked web results for one query, or for up to five queries in one request. The response is a list of results, not a generated answer.
 //
 // Takes any type of body and a specified content type.
 //
@@ -12591,7 +28160,7 @@ func (c *Client) SearchSearchPostWithBody(ctx context.Context, contentType strin
 
 // SearchSearchPost Search the Web
 //
-// Search the web and retrieve relevant web page contents.
+// Returns ranked web results for one query, or for up to five queries in one request. The response is a list of results, not a generated answer.
 //
 // Takes a body of the `application/json` content type.
 //
@@ -12917,7 +28486,45 @@ func (c *Client) CancelBatch(ctx context.Context, batchId BatchId, reqEditors ..
 	return c.Client.Do(req)
 }
 
-// ContextualizedEmbeddingsV1ContextualizedembeddingsPostWithBody Create Contextualized Embeddings
+// ContextWithBody Fetch URL context
+//
+// Fetch Markdown, HTML, links, highlights, and page metadata for 1 to 50 URLs, and optionally score each page with criteria. The response has one result per input URL, in input order. Check each result's status.type for per-URL failures. See the [Context API quickstart](/docs/context/quickstart), [Formats & Freshness](/docs/context/formats-and-freshness), and [Score Pages with Criteria](/docs/context/criteria).
+//
+// Takes any type of body and a specified content type.
+//
+// Corresponds with POST /v1/context (the `Context` operationId).
+func (c *Client) ContextWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewContextRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// Context Fetch URL context
+//
+// Fetch Markdown, HTML, links, highlights, and page metadata for 1 to 50 URLs, and optionally score each page with criteria. The response has one result per input URL, in input order. Check each result's status.type for per-URL failures. See the [Context API quickstart](/docs/context/quickstart), [Formats & Freshness](/docs/context/formats-and-freshness), and [Score Pages with Criteria](/docs/context/criteria).
+//
+// Takes a body of the `application/json` content type.
+//
+// Corresponds with POST /v1/context (the `Context` operationId).
+func (c *Client) Context(ctx context.Context, body ContextJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewContextRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+// ContextualizedEmbeddingsV1ContextualizedembeddingsPostWithBody Create Contextualized Embeddings (v1)
 //
 // Generate contextualized embeddings for document chunks. Chunks from the same document share context awareness, improving retrieval quality for document-based applications.
 //
@@ -12936,7 +28543,7 @@ func (c *Client) ContextualizedEmbeddingsV1ContextualizedembeddingsPostWithBody(
 	return c.Client.Do(req)
 }
 
-// ContextualizedEmbeddingsV1ContextualizedembeddingsPost Create Contextualized Embeddings
+// ContextualizedEmbeddingsV1ContextualizedembeddingsPost Create Contextualized Embeddings (v1)
 //
 // Generate contextualized embeddings for document chunks. Chunks from the same document share context awareness, improving retrieval quality for document-based applications.
 //
@@ -12995,7 +28602,7 @@ func (c *Client) DecisionsV1DecisionsPost(ctx context.Context, body DecisionsV1D
 
 // EmbeddingsV1EmbeddingsPostWithBody Create Embeddings
 //
-// Generate embeddings for a list of texts. Use these embeddings for semantic search, clustering, and other machine learning applications.
+// Generate embeddings for texts, pre-chunked documents (pplx-embed-v2), or images (pplx-embed-v2). Use these embeddings for semantic search, clustering, and other machine learning applications.
 //
 // Takes any type of body and a specified content type.
 //
@@ -13014,7 +28621,7 @@ func (c *Client) EmbeddingsV1EmbeddingsPostWithBody(ctx context.Context, content
 
 // EmbeddingsV1EmbeddingsPost Create Embeddings
 //
-// Generate embeddings for a list of texts. Use these embeddings for semantic search, clustering, and other machine learning applications.
+// Generate embeddings for texts, pre-chunked documents (pplx-embed-v2), or images (pplx-embed-v2). Use these embeddings for semantic search, clustering, and other machine learning applications.
 //
 // Takes a body of the `application/json` content type.
 //
@@ -13595,6 +29202,187 @@ func (c *Client) GetComputerUsageAnalyticsV2(ctx context.Context, params *GetCom
 		return nil, err
 	}
 	return c.Client.Do(req)
+}
+
+// NewGatewayCreateChatCompletionRequest calls the generic GatewayCreateChatCompletion builder with application/json body
+func NewGatewayCreateChatCompletionRequest(server string, body GatewayCreateChatCompletionJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewGatewayCreateChatCompletionRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewGatewayCreateChatCompletionRequestWithBody constructs an http.Request for the GatewayCreateChatCompletion method, with any body, and a specified content type
+func NewGatewayCreateChatCompletionRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/orchestrator/v1/chat/completions")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewGatewayCreateMessageRequest calls the generic GatewayCreateMessage builder with application/json body
+func NewGatewayCreateMessageRequest(server string, body GatewayCreateMessageJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewGatewayCreateMessageRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewGatewayCreateMessageRequestWithBody constructs an http.Request for the GatewayCreateMessage method, with any body, and a specified content type
+func NewGatewayCreateMessageRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/orchestrator/v1/messages")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewGatewayListModelsRequest constructs an http.Request for the GatewayListModels method
+func NewGatewayListModelsRequest(server string) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/orchestrator/v1/models")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGatewayRetrieveModelRequest constructs an http.Request for the GatewayRetrieveModel method
+func NewGatewayRetrieveModelRequest(server string, model string) (*http.Request, error) {
+	var err error
+
+	var pathParam0 string
+
+	pathParam0, err = runtime.StyleParamWithOptions("simple", false, "model", model, runtime.StyleParamOptions{ParamLocation: runtime.ParamLocationPath, Type: "string", Format: ""})
+	if err != nil {
+		return nil, err
+	}
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/orchestrator/v1/models/%s", pathParam0)
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodGet, queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewGatewayCreateResponseRequest calls the generic GatewayCreateResponse builder with application/json body
+func NewGatewayCreateResponseRequest(server string, body GatewayCreateResponseJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewGatewayCreateResponseRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewGatewayCreateResponseRequestWithBody constructs an http.Request for the GatewayCreateResponse method, with any body, and a specified content type
+func NewGatewayCreateResponseRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/orchestrator/v1/responses")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
 }
 
 // NewSearchSearchPostRequest calls the generic SearchSearchPost builder with application/json body
@@ -14338,6 +30126,46 @@ func NewCancelBatchRequest(server string, batchId BatchId) (*http.Request, error
 	if err != nil {
 		return nil, err
 	}
+
+	return req, nil
+}
+
+// NewContextRequest calls the generic Context builder with application/json body
+func NewContextRequest(server string, body ContextJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewContextRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewContextRequestWithBody constructs an http.Request for the Context method, with any body, and a specified content type
+func NewContextRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/v1/context")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest(http.MethodPost, queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
 
 	return req, nil
 }
@@ -15788,9 +31616,81 @@ func WithBaseURL(baseURL string) ClientOption {
 // ClientWithResponsesInterface is the interface specification for the client with responses above.
 type ClientWithResponsesInterface interface {
 
+	// GatewayCreateChatCompletionWithBodyWithResponse Create Chat Completion
+	//
+	// Send a conversation to any Orchestrator API model using the OpenAI Chat Completions schema. Set `stream: true` to receive server-sent events; add `stream_options: {"include_usage": true}` to get token usage in the final chunk.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /orchestrator/v1/chat/completions (the `GatewayCreateChatCompletion` operationId).
+	GatewayCreateChatCompletionWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*GatewayCreateChatCompletionResponse, error)
+
+	// GatewayCreateChatCompletionWithResponse Create Chat Completion
+	//
+	// Send a conversation to any Orchestrator API model using the OpenAI Chat Completions schema. Set `stream: true` to receive server-sent events; add `stream_options: {"include_usage": true}` to get token usage in the final chunk.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /orchestrator/v1/chat/completions (the `GatewayCreateChatCompletion` operationId).
+	GatewayCreateChatCompletionWithResponse(ctx context.Context, body GatewayCreateChatCompletionJSONRequestBody, reqEditors ...RequestEditorFn) (*GatewayCreateChatCompletionResponse, error)
+
+	// GatewayCreateMessageWithBodyWithResponse Create Message
+	//
+	// Send a conversation to any Orchestrator API model using the Anthropic Messages schema. Set `stream: true` to receive server-sent events. Authenticate with your Perplexity API key in `Authorization: Bearer` or in the Anthropic SDK's default `x-api-key` header.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /orchestrator/v1/messages (the `GatewayCreateMessage` operationId).
+	GatewayCreateMessageWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*GatewayCreateMessageResponse, error)
+
+	// GatewayCreateMessageWithResponse Create Message
+	//
+	// Send a conversation to any Orchestrator API model using the Anthropic Messages schema. Set `stream: true` to receive server-sent events. Authenticate with your Perplexity API key in `Authorization: Bearer` or in the Anthropic SDK's default `x-api-key` header.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /orchestrator/v1/messages (the `GatewayCreateMessage` operationId).
+	GatewayCreateMessageWithResponse(ctx context.Context, body GatewayCreateMessageJSONRequestBody, reqEditors ...RequestEditorFn) (*GatewayCreateMessageResponse, error)
+
+	// GatewayListModelsWithResponse List Models
+	//
+	// List the models available through the Orchestrator API, sorted by id. Each model includes its base token prices in `pricing` (USD per 1M tokens).
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /orchestrator/v1/models (the `GatewayListModels` operationId).
+	GatewayListModelsWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*GatewayListModelsResponse, error)
+
+	// GatewayRetrieveModelWithResponse Retrieve Model
+	//
+	// Retrieve one model by id, including its base token prices. Model ids contain a `/` (for example `perplexity/kimi-k3`); pass the full id in the path.
+	//
+	// Returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with GET /orchestrator/v1/models/{model} (the `GatewayRetrieveModel` operationId).
+	GatewayRetrieveModelWithResponse(ctx context.Context, model string, reqEditors ...RequestEditorFn) (*GatewayRetrieveModelResponse, error)
+
+	// GatewayCreateResponseWithBodyWithResponse Create Response
+	//
+	// Generate a model response using the OpenAI Responses schema. Set `stream: true` to receive typed server-sent events followed by `data: [DONE]`.
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /orchestrator/v1/responses (the `GatewayCreateResponse` operationId).
+	GatewayCreateResponseWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*GatewayCreateResponseResponse, error)
+
+	// GatewayCreateResponseWithResponse Create Response
+	//
+	// Generate a model response using the OpenAI Responses schema. Set `stream: true` to receive typed server-sent events followed by `data: [DONE]`.
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /orchestrator/v1/responses (the `GatewayCreateResponse` operationId).
+	GatewayCreateResponseWithResponse(ctx context.Context, body GatewayCreateResponseJSONRequestBody, reqEditors ...RequestEditorFn) (*GatewayCreateResponseResponse, error)
+
 	// SearchSearchPostWithBodyWithResponse Search the Web
 	//
-	// Search the web and retrieve relevant web page contents.
+	// Returns ranked web results for one query, or for up to five queries in one request. The response is a list of results, not a generated answer.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -15799,7 +31699,7 @@ type ClientWithResponsesInterface interface {
 
 	// SearchSearchPostWithResponse Search the Web
 	//
-	// Search the web and retrieve relevant web page contents.
+	// Returns ranked web results for one query, or for up to five queries in one request. The response is a list of results, not a generated answer.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -15967,7 +31867,25 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /v1/batches/{batch_id}/cancel (the `CancelBatch` operationId).
 	CancelBatchWithResponse(ctx context.Context, batchId BatchId, reqEditors ...RequestEditorFn) (*CancelBatchResponse, error)
 
-	// ContextualizedEmbeddingsV1ContextualizedembeddingsPostWithBodyWithResponse Create Contextualized Embeddings
+	// ContextWithBodyWithResponse Fetch URL context
+	//
+	// Fetch Markdown, HTML, links, highlights, and page metadata for 1 to 50 URLs, and optionally score each page with criteria. The response has one result per input URL, in input order. Check each result's status.type for per-URL failures. See the [Context API quickstart](/docs/context/quickstart), [Formats & Freshness](/docs/context/formats-and-freshness), and [Score Pages with Criteria](/docs/context/criteria).
+	//
+	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /v1/context (the `Context` operationId).
+	ContextWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ContextResponse2, error)
+
+	// ContextWithResponse Fetch URL context
+	//
+	// Fetch Markdown, HTML, links, highlights, and page metadata for 1 to 50 URLs, and optionally score each page with criteria. The response has one result per input URL, in input order. Check each result's status.type for per-URL failures. See the [Context API quickstart](/docs/context/quickstart), [Formats & Freshness](/docs/context/formats-and-freshness), and [Score Pages with Criteria](/docs/context/criteria).
+	//
+	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+	//
+	// Corresponds with POST /v1/context (the `Context` operationId).
+	ContextWithResponse(ctx context.Context, body ContextJSONRequestBody, reqEditors ...RequestEditorFn) (*ContextResponse2, error)
+
+	// ContextualizedEmbeddingsV1ContextualizedembeddingsPostWithBodyWithResponse Create Contextualized Embeddings (v1)
 	//
 	// Generate contextualized embeddings for document chunks. Chunks from the same document share context awareness, improving retrieval quality for document-based applications.
 	//
@@ -15976,7 +31894,7 @@ type ClientWithResponsesInterface interface {
 	// Corresponds with POST /v1/contextualizedembeddings (the `ContextualizedEmbeddingsV1ContextualizedembeddingsPost` operationId).
 	ContextualizedEmbeddingsV1ContextualizedembeddingsPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ContextualizedEmbeddingsV1ContextualizedembeddingsPostResponse, error)
 
-	// ContextualizedEmbeddingsV1ContextualizedembeddingsPostWithResponse Create Contextualized Embeddings
+	// ContextualizedEmbeddingsV1ContextualizedembeddingsPostWithResponse Create Contextualized Embeddings (v1)
 	//
 	// Generate contextualized embeddings for document chunks. Chunks from the same document share context awareness, improving retrieval quality for document-based applications.
 	//
@@ -16005,7 +31923,7 @@ type ClientWithResponsesInterface interface {
 
 	// EmbeddingsV1EmbeddingsPostWithBodyWithResponse Create Embeddings
 	//
-	// Generate embeddings for a list of texts. Use these embeddings for semantic search, clustering, and other machine learning applications.
+	// Generate embeddings for texts, pre-chunked documents (pplx-embed-v2), or images (pplx-embed-v2). Use these embeddings for semantic search, clustering, and other machine learning applications.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -16014,7 +31932,7 @@ type ClientWithResponsesInterface interface {
 
 	// EmbeddingsV1EmbeddingsPostWithResponse Create Embeddings
 	//
-	// Generate embeddings for a list of texts. Use these embeddings for semantic search, clustering, and other machine learning applications.
+	// Generate embeddings for texts, pre-chunked documents (pplx-embed-v2), or images (pplx-embed-v2). Use these embeddings for semantic search, clustering, and other machine learning applications.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -16338,13 +32256,299 @@ type ClientWithResponsesInterface interface {
 	GetComputerUsageAnalyticsV2WithResponse(ctx context.Context, params *GetComputerUsageAnalyticsV2Params, reqEditors ...RequestEditorFn) (*GetComputerUsageAnalyticsV2Response, error)
 }
 
+type GatewayCreateChatCompletionResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *OrchestratorChatCreateChatCompletionResponse
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *OrchestratorChatErrorResponse
+	// JSON404 the response for an HTTP 404 `application/json` response
+	JSON404 *OrchestratorChatErrorResponse
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *OrchestratorChatErrorResponse
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r GatewayCreateChatCompletionResponse) GetJSON200() *OrchestratorChatCreateChatCompletionResponse {
+	return r.JSON200
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r GatewayCreateChatCompletionResponse) GetJSON400() *OrchestratorChatErrorResponse {
+	return r.JSON400
+}
+
+// GetJSON404 returns the response for an HTTP 404 `application/json` response
+func (r GatewayCreateChatCompletionResponse) GetJSON404() *OrchestratorChatErrorResponse {
+	return r.JSON404
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r GatewayCreateChatCompletionResponse) GetJSON429() *OrchestratorChatErrorResponse {
+	return r.JSON429
+}
+
+// GetBody returns the raw response body bytes
+func (r GatewayCreateChatCompletionResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r GatewayCreateChatCompletionResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GatewayCreateChatCompletionResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r GatewayCreateChatCompletionResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type GatewayCreateMessageResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *OrchestratorMessagesMessage
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *OrchestratorMessagesErrorResponse
+	// JSON404 the response for an HTTP 404 `application/json` response
+	JSON404 *OrchestratorMessagesErrorResponse
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *OrchestratorMessagesErrorResponse
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r GatewayCreateMessageResponse) GetJSON200() *OrchestratorMessagesMessage {
+	return r.JSON200
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r GatewayCreateMessageResponse) GetJSON400() *OrchestratorMessagesErrorResponse {
+	return r.JSON400
+}
+
+// GetJSON404 returns the response for an HTTP 404 `application/json` response
+func (r GatewayCreateMessageResponse) GetJSON404() *OrchestratorMessagesErrorResponse {
+	return r.JSON404
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r GatewayCreateMessageResponse) GetJSON429() *OrchestratorMessagesErrorResponse {
+	return r.JSON429
+}
+
+// GetBody returns the raw response body bytes
+func (r GatewayCreateMessageResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r GatewayCreateMessageResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GatewayCreateMessageResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r GatewayCreateMessageResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type GatewayListModelsResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *OrchestratorChatModelList
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r GatewayListModelsResponse) GetJSON200() *OrchestratorChatModelList {
+	return r.JSON200
+}
+
+// GetBody returns the raw response body bytes
+func (r GatewayListModelsResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r GatewayListModelsResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GatewayListModelsResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r GatewayListModelsResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type GatewayRetrieveModelResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *OrchestratorChatModel
+	// JSON404 the response for an HTTP 404 `application/json` response
+	JSON404 *OrchestratorChatErrorResponse
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r GatewayRetrieveModelResponse) GetJSON200() *OrchestratorChatModel {
+	return r.JSON200
+}
+
+// GetJSON404 returns the response for an HTTP 404 `application/json` response
+func (r GatewayRetrieveModelResponse) GetJSON404() *OrchestratorChatErrorResponse {
+	return r.JSON404
+}
+
+// GetBody returns the raw response body bytes
+func (r GatewayRetrieveModelResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r GatewayRetrieveModelResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GatewayRetrieveModelResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r GatewayRetrieveModelResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+type GatewayCreateResponseResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *OrchestratorResponsesResponseResource
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *OrchestratorResponsesErrorResponse
+	// JSON404 the response for an HTTP 404 `application/json` response
+	JSON404 *OrchestratorResponsesErrorResponse
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *OrchestratorResponsesErrorResponse
+	// JSON500 the response for an HTTP 500 `application/json` response
+	JSON500 *OrchestratorResponsesErrorResponse
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r GatewayCreateResponseResponse) GetJSON200() *OrchestratorResponsesResponseResource {
+	return r.JSON200
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r GatewayCreateResponseResponse) GetJSON400() *OrchestratorResponsesErrorResponse {
+	return r.JSON400
+}
+
+// GetJSON404 returns the response for an HTTP 404 `application/json` response
+func (r GatewayCreateResponseResponse) GetJSON404() *OrchestratorResponsesErrorResponse {
+	return r.JSON404
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r GatewayCreateResponseResponse) GetJSON429() *OrchestratorResponsesErrorResponse {
+	return r.JSON429
+}
+
+// GetJSON500 returns the response for an HTTP 500 `application/json` response
+func (r GatewayCreateResponseResponse) GetJSON500() *OrchestratorResponsesErrorResponse {
+	return r.JSON500
+}
+
+// GetBody returns the raw response body bytes
+func (r GatewayCreateResponseResponse) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r GatewayCreateResponseResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r GatewayCreateResponseResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r GatewayCreateResponseResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
 type SearchSearchPostResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	// JSON200 the response for an HTTP 200 `application/json` response
 	JSON200 *ApiSearchResponse
-	// JSON422 the response for an HTTP 422 `application/json` response
-	JSON422 *HTTPValidationError
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *ApiSearchErrorResponse
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *ApiSearchErrorResponse
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *ApiSearchErrorResponse
 }
 
 // GetJSON200 returns the response for an HTTP 200 `application/json` response
@@ -16352,9 +32556,19 @@ func (r SearchSearchPostResponse) GetJSON200() *ApiSearchResponse {
 	return r.JSON200
 }
 
-// GetJSON422 returns the response for an HTTP 422 `application/json` response
-func (r SearchSearchPostResponse) GetJSON422() *HTTPValidationError {
-	return r.JSON422
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r SearchSearchPostResponse) GetJSON400() *ApiSearchErrorResponse {
+	return r.JSON400
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r SearchSearchPostResponse) GetJSON401() *ApiSearchErrorResponse {
+	return r.JSON401
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r SearchSearchPostResponse) GetJSON429() *ApiSearchErrorResponse {
+	return r.JSON429
 }
 
 // GetBody returns the raw response body bytes
@@ -17212,6 +33426,117 @@ func (r CancelBatchResponse) StatusCode() int {
 
 // ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
 func (r CancelBatchResponse) ContentType() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Header.Get("Content-Type")
+	}
+	return ""
+}
+
+// ContextResponse2429Headers the declared response headers of an HTTP 429 response for Context
+type ContextResponse2429Headers struct {
+	RetryAfter *int
+}
+
+type ContextResponse2 struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	// JSON200 the response for an HTTP 200 `application/json` response
+	JSON200 *ContextResponse
+	// JSON400 the response for an HTTP 400 `application/json` response
+	JSON400 *ContextErrorResponse
+	// JSON401 the response for an HTTP 401 `application/json` response
+	JSON401 *ContextErrorResponse
+	// JSON403 the response for an HTTP 403 `application/json` response
+	JSON403 *ContextErrorResponse
+	// JSON405 the response for an HTTP 405 `application/json` response
+	JSON405 *ContextErrorResponse
+	// JSON429 the response for an HTTP 429 `application/json` response
+	JSON429 *ContextErrorResponse
+	// JSON500 the response for an HTTP 500 `application/json` response
+	JSON500 *ContextErrorResponse
+	// JSON502 the response for an HTTP 502 `application/json` response
+	JSON502 *ContextErrorResponse
+	// JSON503 the response for an HTTP 503 `application/json` response
+	JSON503 *ContextErrorResponse
+	// JSON504 the response for an HTTP 504 `application/json` response
+	JSON504 *ContextErrorResponse
+	// Headers429 the parsed response headers for an HTTP 429 response
+	Headers429 *ContextResponse2429Headers
+}
+
+// GetJSON200 returns the response for an HTTP 200 `application/json` response
+func (r ContextResponse2) GetJSON200() *ContextResponse {
+	return r.JSON200
+}
+
+// GetJSON400 returns the response for an HTTP 400 `application/json` response
+func (r ContextResponse2) GetJSON400() *ContextErrorResponse {
+	return r.JSON400
+}
+
+// GetJSON401 returns the response for an HTTP 401 `application/json` response
+func (r ContextResponse2) GetJSON401() *ContextErrorResponse {
+	return r.JSON401
+}
+
+// GetJSON403 returns the response for an HTTP 403 `application/json` response
+func (r ContextResponse2) GetJSON403() *ContextErrorResponse {
+	return r.JSON403
+}
+
+// GetJSON405 returns the response for an HTTP 405 `application/json` response
+func (r ContextResponse2) GetJSON405() *ContextErrorResponse {
+	return r.JSON405
+}
+
+// GetJSON429 returns the response for an HTTP 429 `application/json` response
+func (r ContextResponse2) GetJSON429() *ContextErrorResponse {
+	return r.JSON429
+}
+
+// GetJSON500 returns the response for an HTTP 500 `application/json` response
+func (r ContextResponse2) GetJSON500() *ContextErrorResponse {
+	return r.JSON500
+}
+
+// GetJSON502 returns the response for an HTTP 502 `application/json` response
+func (r ContextResponse2) GetJSON502() *ContextErrorResponse {
+	return r.JSON502
+}
+
+// GetJSON503 returns the response for an HTTP 503 `application/json` response
+func (r ContextResponse2) GetJSON503() *ContextErrorResponse {
+	return r.JSON503
+}
+
+// GetJSON504 returns the response for an HTTP 504 `application/json` response
+func (r ContextResponse2) GetJSON504() *ContextErrorResponse {
+	return r.JSON504
+}
+
+// GetBody returns the raw response body bytes
+func (r ContextResponse2) GetBody() []byte {
+	return r.Body
+}
+
+// Status returns HTTPResponse.Status
+func (r ContextResponse2) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r ContextResponse2) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+// ContentType is a convenience method to retrieve the Content-Type value from the HTTP response headers
+func (r ContextResponse2) ContentType() string {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.Header.Get("Content-Type")
 	}
@@ -19477,9 +35802,129 @@ func (r GetComputerUsageAnalyticsV2Response) ContentType() string {
 	return ""
 }
 
+// GatewayCreateChatCompletionWithBodyWithResponse Create Chat Completion
+//
+// Send a conversation to any Orchestrator API model using the OpenAI Chat Completions schema. Set `stream: true` to receive server-sent events; add `stream_options: {"include_usage": true}` to get token usage in the final chunk.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /orchestrator/v1/chat/completions (the `GatewayCreateChatCompletion` operationId).
+func (c *ClientWithResponses) GatewayCreateChatCompletionWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*GatewayCreateChatCompletionResponse, error) {
+	rsp, err := c.GatewayCreateChatCompletionWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGatewayCreateChatCompletionResponse(rsp)
+}
+
+// GatewayCreateChatCompletionWithResponse Create Chat Completion
+//
+// Send a conversation to any Orchestrator API model using the OpenAI Chat Completions schema. Set `stream: true` to receive server-sent events; add `stream_options: {"include_usage": true}` to get token usage in the final chunk.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /orchestrator/v1/chat/completions (the `GatewayCreateChatCompletion` operationId).
+func (c *ClientWithResponses) GatewayCreateChatCompletionWithResponse(ctx context.Context, body GatewayCreateChatCompletionJSONRequestBody, reqEditors ...RequestEditorFn) (*GatewayCreateChatCompletionResponse, error) {
+	rsp, err := c.GatewayCreateChatCompletion(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGatewayCreateChatCompletionResponse(rsp)
+}
+
+// GatewayCreateMessageWithBodyWithResponse Create Message
+//
+// Send a conversation to any Orchestrator API model using the Anthropic Messages schema. Set `stream: true` to receive server-sent events. Authenticate with your Perplexity API key in `Authorization: Bearer` or in the Anthropic SDK's default `x-api-key` header.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /orchestrator/v1/messages (the `GatewayCreateMessage` operationId).
+func (c *ClientWithResponses) GatewayCreateMessageWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*GatewayCreateMessageResponse, error) {
+	rsp, err := c.GatewayCreateMessageWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGatewayCreateMessageResponse(rsp)
+}
+
+// GatewayCreateMessageWithResponse Create Message
+//
+// Send a conversation to any Orchestrator API model using the Anthropic Messages schema. Set `stream: true` to receive server-sent events. Authenticate with your Perplexity API key in `Authorization: Bearer` or in the Anthropic SDK's default `x-api-key` header.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /orchestrator/v1/messages (the `GatewayCreateMessage` operationId).
+func (c *ClientWithResponses) GatewayCreateMessageWithResponse(ctx context.Context, body GatewayCreateMessageJSONRequestBody, reqEditors ...RequestEditorFn) (*GatewayCreateMessageResponse, error) {
+	rsp, err := c.GatewayCreateMessage(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGatewayCreateMessageResponse(rsp)
+}
+
+// GatewayListModelsWithResponse List Models
+//
+// List the models available through the Orchestrator API, sorted by id. Each model includes its base token prices in `pricing` (USD per 1M tokens).
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /orchestrator/v1/models (the `GatewayListModels` operationId).
+func (c *ClientWithResponses) GatewayListModelsWithResponse(ctx context.Context, reqEditors ...RequestEditorFn) (*GatewayListModelsResponse, error) {
+	rsp, err := c.GatewayListModels(ctx, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGatewayListModelsResponse(rsp)
+}
+
+// GatewayRetrieveModelWithResponse Retrieve Model
+//
+// Retrieve one model by id, including its base token prices. Model ids contain a `/` (for example `perplexity/kimi-k3`); pass the full id in the path.
+//
+// Returns a wrapper object for the known response body format(s).
+//
+// Corresponds with GET /orchestrator/v1/models/{model} (the `GatewayRetrieveModel` operationId).
+func (c *ClientWithResponses) GatewayRetrieveModelWithResponse(ctx context.Context, model string, reqEditors ...RequestEditorFn) (*GatewayRetrieveModelResponse, error) {
+	rsp, err := c.GatewayRetrieveModel(ctx, model, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGatewayRetrieveModelResponse(rsp)
+}
+
+// GatewayCreateResponseWithBodyWithResponse Create Response
+//
+// Generate a model response using the OpenAI Responses schema. Set `stream: true` to receive typed server-sent events followed by `data: [DONE]`.
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /orchestrator/v1/responses (the `GatewayCreateResponse` operationId).
+func (c *ClientWithResponses) GatewayCreateResponseWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*GatewayCreateResponseResponse, error) {
+	rsp, err := c.GatewayCreateResponseWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGatewayCreateResponseResponse(rsp)
+}
+
+// GatewayCreateResponseWithResponse Create Response
+//
+// Generate a model response using the OpenAI Responses schema. Set `stream: true` to receive typed server-sent events followed by `data: [DONE]`.
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /orchestrator/v1/responses (the `GatewayCreateResponse` operationId).
+func (c *ClientWithResponses) GatewayCreateResponseWithResponse(ctx context.Context, body GatewayCreateResponseJSONRequestBody, reqEditors ...RequestEditorFn) (*GatewayCreateResponseResponse, error) {
+	rsp, err := c.GatewayCreateResponse(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseGatewayCreateResponseResponse(rsp)
+}
+
 // SearchSearchPostWithBodyWithResponse Search the Web
 //
-// Search the web and retrieve relevant web page contents.
+// Returns ranked web results for one query, or for up to five queries in one request. The response is a list of results, not a generated answer.
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -19494,7 +35939,7 @@ func (c *ClientWithResponses) SearchSearchPostWithBodyWithResponse(ctx context.C
 
 // SearchSearchPostWithResponse Search the Web
 //
-// Search the web and retrieve relevant web page contents.
+// Returns ranked web results for one query, or for up to five queries in one request. The response is a list of results, not a generated answer.
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
@@ -19770,7 +36215,37 @@ func (c *ClientWithResponses) CancelBatchWithResponse(ctx context.Context, batch
 	return ParseCancelBatchResponse(rsp)
 }
 
-// ContextualizedEmbeddingsV1ContextualizedembeddingsPostWithBodyWithResponse Create Contextualized Embeddings
+// ContextWithBodyWithResponse Fetch URL context
+//
+// Fetch Markdown, HTML, links, highlights, and page metadata for 1 to 50 URLs, and optionally score each page with criteria. The response has one result per input URL, in input order. Check each result's status.type for per-URL failures. See the [Context API quickstart](/docs/context/quickstart), [Formats & Freshness](/docs/context/formats-and-freshness), and [Score Pages with Criteria](/docs/context/criteria).
+//
+// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /v1/context (the `Context` operationId).
+func (c *ClientWithResponses) ContextWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ContextResponse2, error) {
+	rsp, err := c.ContextWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseContextResponse2(rsp)
+}
+
+// ContextWithResponse Fetch URL context
+//
+// Fetch Markdown, HTML, links, highlights, and page metadata for 1 to 50 URLs, and optionally score each page with criteria. The response has one result per input URL, in input order. Check each result's status.type for per-URL failures. See the [Context API quickstart](/docs/context/quickstart), [Formats & Freshness](/docs/context/formats-and-freshness), and [Score Pages with Criteria](/docs/context/criteria).
+//
+// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
+//
+// Corresponds with POST /v1/context (the `Context` operationId).
+func (c *ClientWithResponses) ContextWithResponse(ctx context.Context, body ContextJSONRequestBody, reqEditors ...RequestEditorFn) (*ContextResponse2, error) {
+	rsp, err := c.Context(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseContextResponse2(rsp)
+}
+
+// ContextualizedEmbeddingsV1ContextualizedembeddingsPostWithBodyWithResponse Create Contextualized Embeddings (v1)
 //
 // Generate contextualized embeddings for document chunks. Chunks from the same document share context awareness, improving retrieval quality for document-based applications.
 //
@@ -19785,7 +36260,7 @@ func (c *ClientWithResponses) ContextualizedEmbeddingsV1Contextualizedembeddings
 	return ParseContextualizedEmbeddingsV1ContextualizedembeddingsPostResponse(rsp)
 }
 
-// ContextualizedEmbeddingsV1ContextualizedembeddingsPostWithResponse Create Contextualized Embeddings
+// ContextualizedEmbeddingsV1ContextualizedembeddingsPostWithResponse Create Contextualized Embeddings (v1)
 //
 // Generate contextualized embeddings for document chunks. Chunks from the same document share context awareness, improving retrieval quality for document-based applications.
 //
@@ -19832,7 +36307,7 @@ func (c *ClientWithResponses) DecisionsV1DecisionsPostWithResponse(ctx context.C
 
 // EmbeddingsV1EmbeddingsPostWithBodyWithResponse Create Embeddings
 //
-// Generate embeddings for a list of texts. Use these embeddings for semantic search, clustering, and other machine learning applications.
+// Generate embeddings for texts, pre-chunked documents (pplx-embed-v2), or images (pplx-embed-v2). Use these embeddings for semantic search, clustering, and other machine learning applications.
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -19847,7 +36322,7 @@ func (c *ClientWithResponses) EmbeddingsV1EmbeddingsPostWithBodyWithResponse(ctx
 
 // EmbeddingsV1EmbeddingsPostWithResponse Create Embeddings
 //
-// Generate embeddings for a list of texts. Use these embeddings for semantic search, clustering, and other machine learning applications.
+// Generate embeddings for texts, pre-chunked documents (pplx-embed-v2), or images (pplx-embed-v2). Use these embeddings for semantic search, clustering, and other machine learning applications.
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //
@@ -20350,6 +36825,228 @@ func (c *ClientWithResponses) GetComputerUsageAnalyticsV2WithResponse(ctx contex
 	return ParseGetComputerUsageAnalyticsV2Response(rsp)
 }
 
+// ParseGatewayCreateChatCompletionResponse parses an HTTP response from a GatewayCreateChatCompletionWithResponse call
+func ParseGatewayCreateChatCompletionResponse(rsp *http.Response) (*GatewayCreateChatCompletionResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GatewayCreateChatCompletionResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest OrchestratorChatCreateChatCompletionResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest OrchestratorChatErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case rsp.StatusCode == 401:
+		break // No content-type
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest OrchestratorChatErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest OrchestratorChatErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case rsp.StatusCode == 200:
+		// Content-type (text/event-stream) unsupported
+
+	}
+
+	return response, nil
+}
+
+// ParseGatewayCreateMessageResponse parses an HTTP response from a GatewayCreateMessageWithResponse call
+func ParseGatewayCreateMessageResponse(rsp *http.Response) (*GatewayCreateMessageResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GatewayCreateMessageResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest OrchestratorMessagesMessage
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest OrchestratorMessagesErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case rsp.StatusCode == 401:
+		break // No content-type
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest OrchestratorMessagesErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest OrchestratorMessagesErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGatewayListModelsResponse parses an HTTP response from a GatewayListModelsWithResponse call
+func ParseGatewayListModelsResponse(rsp *http.Response) (*GatewayListModelsResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GatewayListModelsResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest OrchestratorChatModelList
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGatewayRetrieveModelResponse parses an HTTP response from a GatewayRetrieveModelWithResponse call
+func ParseGatewayRetrieveModelResponse(rsp *http.Response) (*GatewayRetrieveModelResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GatewayRetrieveModelResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest OrchestratorChatModel
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest OrchestratorChatErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseGatewayCreateResponseResponse parses an HTTP response from a GatewayCreateResponseWithResponse call
+func ParseGatewayCreateResponseResponse(rsp *http.Response) (*GatewayCreateResponseResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &GatewayCreateResponseResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest OrchestratorResponsesResponseResource
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest OrchestratorResponsesErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case rsp.StatusCode == 401:
+		break // No content-type
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest OrchestratorResponsesErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest OrchestratorResponsesErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest OrchestratorResponsesErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case rsp.StatusCode == 200:
+		// Content-type (text/event-stream) unsupported
+
+	}
+
+	return response, nil
+}
+
 // ParseSearchSearchPostResponse parses an HTTP response from a SearchSearchPostWithResponse call
 func ParseSearchSearchPostResponse(rsp *http.Response) (*SearchSearchPostResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
@@ -20371,12 +37068,26 @@ func ParseSearchSearchPostResponse(rsp *http.Response) (*SearchSearchPostRespons
 		}
 		response.JSON200 = &dest
 
-	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 422:
-		var dest HTTPValidationError
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest ApiSearchErrorResponse
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
-		response.JSON422 = &dest
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest ApiSearchErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest ApiSearchErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
 
 	}
 
@@ -20979,6 +37690,108 @@ func ParseCancelBatchResponse(rsp *http.Response) (*CancelBatchResponse, error) 
 		}
 		response.JSON429 = &dest
 
+	}
+
+	return response, nil
+}
+
+// ParseContextResponse2 parses an HTTP response from a ContextWithResponse call
+func ParseContextResponse2(rsp *http.Response) (*ContextResponse2, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &ContextResponse2{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest ContextResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest ContextErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest ContextErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest ContextErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 405:
+		var dest ContextErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON405 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest ContextErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest ContextErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 502:
+		var dest ContextErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON502 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ContextErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 504:
+		var dest ContextErrorResponse
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON504 = &dest
+
+	}
+
+	switch {
+	case rsp.StatusCode == 429:
+		var headers ContextResponse2429Headers
+		if values := rsp.Header.Values("Retry-After"); len(values) > 0 {
+			var value int
+			if err := runtime.BindStyledParameterWithOptions("simple", "Retry-After", values[0], &value, runtime.BindStyledParameterOptions{ParamLocation: runtime.ParamLocationHeader, Explode: false, Required: false, Type: "integer", Format: ""}); err != nil {
+				return nil, err
+			}
+			headers.RetryAfter = &value
+		}
+		response.Headers429 = &headers
 	}
 
 	return response, nil

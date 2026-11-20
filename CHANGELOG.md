@@ -2,6 +2,18 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.6.0, 2026-11-20
+
+- Added a context endpoint: `Client.Context`, `Client.ContextWithBody`, `ClientWithResponses.ContextWithResponse` and `ContextWithBodyWithResponse`, with `ContextDocument`, `ContextCost` and `ContextErrorResponse` types.
+- Added gateway endpoints: `GatewayCreateChatCompletion`, `GatewayCreateMessage`, `GatewayCreateResponse`, `GatewayListModels` and `GatewayRetrieveModel`, each with `WithBody` and `WithResponse` variants where applicable.
+- Added `ApiSearchRequest.DisplayServerTime` and `ApiSearchErrorResponse`.
+- Added `EmbeddingsRequest_Input` helpers `FromEmbeddingsRequestInput2`, `FromEmbeddingsRequestInput3`, `MergeEmbeddingsRequestInput2` and `MergeEmbeddingsRequestInput3`.
+- Breaking: `EmbeddingsResponse.Data` changed from `*[]EmbeddingObject` to `*[]EmbeddingsResponse_Data_Item`.
+- Breaking: removed `SearchSearchPostResponse.JSON422` and `GetJSON422`.
+- Added `ClientInterface` and `ClientWithResponsesInterface` methods for the new endpoints, so custom implementations of these interfaces must add them.
+- Fixed generation: new `scripts/patch-spec.sh` runs from `gen.go` and points the stream chunk `service_tier` and `usage` at `OrchestratorChatServiceTier` and `OrchestratorChatCompletionUsage`, so `OrchestratorChatCreateChatCompletionStreamResponse.Usage` is now `*OrchestratorChatCompletionUsage`.
+- Added the dependency `github.com/oapi-codegen/nullable` v1.1.0 (vendored).
+
 ## v0.5.0, 2026-11-17
 
 - Added the monitors endpoints. New methods on `Client`: `CreateMonitor`, `CreateMonitorWithBody`, `ListMonitors`, `GetMonitor`, `UpdateMonitor`, `UpdateMonitorWithBody`, `DeleteMonitor`, `PauseMonitor`, `ResumeMonitor`, `RunMonitor`, `ListMonitorRuns`, `GetMonitorRun` and `TestMonitorWebhook`. `ClientWithResponses` has the matching `...WithResponse` methods.

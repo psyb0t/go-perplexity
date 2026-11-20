@@ -746,6 +746,9 @@ github.com/nunnatsa/ginkgolinter/internal/rules
 github.com/nunnatsa/ginkgolinter/internal/typecheck
 github.com/nunnatsa/ginkgolinter/linter
 github.com/nunnatsa/ginkgolinter/version
+# github.com/oapi-codegen/nullable v1.1.0
+## explicit; go 1.20
+github.com/oapi-codegen/nullable
 # github.com/oapi-codegen/oapi-codegen/v2 v2.8.0
 ## explicit; go 1.25.0
 github.com/oapi-codegen/oapi-codegen/v2/cmd/oapi-codegen
