@@ -6995,25 +6995,31 @@ type DecisionSearchResult struct {
 	Url string `json:"url"`
 }
 
-// DecisionsRequest The content to evaluate and the named questions to ask about it. `mode` and `max_staleness` are optional. An unknown top-level field returns `400`. The `state` plus any one question must stay under 256K input tokens; questions that do not fit together are answered in groups, and each group counts the `state` again. The body must stay under 32 MiB.
+// DecisionToolCallDetails Billable operations for one grounding tool.
+type DecisionToolCallDetails struct {
+	// Invocation Billable operations for this tool, after deduplication.
+	Invocation int64 `json:"invocation"`
+}
+
+// DecisionsRequest The content to evaluate and the named questions to ask about it. `mode` is optional; `max_staleness` is accepted and ignored. An unknown top-level field returns `400`. The `state` plus any one question must stay under 256K input tokens; questions that do not fit together are answered in groups, and each group counts the `state` again. The body must stay under 32 MiB.
 type DecisionsRequest struct {
-	// MaxStaleness Maximum age of the fetched page in seconds since its last crawl. Applies to URL-only state with `mode: "web_grounding"`. An older stored copy triggers a fresh crawl before the page text is used. Omit to use a stored copy without an age limit. Ignored without `mode`. Does not filter search results.
+	// MaxStaleness Accepted but currently ignored: it does not check the age of a fetched page or trigger a crawl. A non-negative integer is accepted, so existing requests that send it keep working.
 	MaxStaleness *int64 `json:"max_staleness,omitempty"`
 
-	// Mode Set to `web_grounding` to search the web before the model answers. For a URL-only state, the API first fetches the page and replaces the URL with its text. It then runs one Fast Search per question, up to 100 questions, and adds the top results to `state`. The response lists search evidence in `search_results` and fetched page text in `fetched_results`. If no search returns a result, the model answers from `state`, including any fetched text. Each search or successful URL fetch costs $0.001; fetched text and search evidence count as input tokens. Any other mode value, including an empty string or `null`, returns `400`. See [Web grounding](/docs/decisions/quickstart#web-grounding).
+	// Mode Set to `web_grounding` to search the web before the model answers. For a URL-only state, the API first fetches the page and replaces the URL with its text. It then runs one Fast Search per question, up to 100 questions, and adds the top results to `state`. The response lists search evidence in `search_results` and fetched page text in `fetched_results`. If no search returns a result, the model answers from `state`, including any fetched text. Each search costs $0.001 and each successful URL fetch costs $0.0005; fetched text and search evidence count as input tokens. Any other mode value, including an empty string or `null`, returns `400`. See [Web grounding](/docs/decisions/decisions#web-grounding).
 	Mode *DecisionsRequestMode `json:"mode,omitempty"`
 
-	// Model The decision model: `pplx-decider-v1.3` (27B, $0.02 per million input tokens), `pplx-decider-flash-v1.3` (4B, $0.01 per million input tokens), `pplx-decider-v1.2` (27B, $0.02 per million input tokens) or `pplx-decider-flash-v1.2` (4B, $0.01 per million input tokens). The aliases `pplx-decider-latest` and `perplexity/pplx-decider-latest` select `pplx-decider-v1.3`, and `pplx-decider-flash-latest` and `perplexity/pplx-decider-flash-latest` select `pplx-decider-flash-v1.3`; an alias can move to a newer model over time. `pplx-decider-v1.1-27b` and `pplx-decider-v1-27b` remain accepted and select `pplx-decider-v1.2`. Only the v1.3 models, by name or through the `-latest` aliases, serve `locate` questions. A missing or unknown model returns `400`.
+	// Model The decision model: `pplx-decider-v1.3` (27B, $0.02 per million input tokens), `pplx-decider-flash-v1.3` (4B, $0.01 per million input tokens), `pplx-decider-v1.2` (27B, $0.02 per million input tokens) or `pplx-decider-flash-v1.2` (4B, $0.01 per million input tokens). The aliases `pplx-decider-latest` and `perplexity/pplx-decider-latest` select `pplx-decider-v1.3`, and `pplx-decider-flash-latest` and `perplexity/pplx-decider-flash-latest` select `pplx-decider-flash-v1.3`; an alias can move to a newer model over time. `pplx-decider-v1-27b` (27B, $0.02 per million input tokens) remains accepted, and `pplx-decider-v1.1-27b` is an alias of it. Only the v1.3 models, by name or through the `-latest` aliases, serve `locate` questions. A missing or unknown model returns `400`.
 	Model string `json:"model"`
 
 	// Questions Questions keyed by a non-empty name you choose. The response uses the same names. At least one question. With `mode` `web_grounding`, at most 100; more returns `400` with `param` `questions`.
 	Questions map[string]Question `json:"questions"`
 
-	// State The content every question in the request refers to: a string, an object, or an array. Images can appear anywhere in `state` as OpenAI-style `image_url` parts with base64 PNG, JPEG, or WebP data URLs and are read in place. Up to 8 images per question. With `mode: "web_grounding"`, a single page URL is fetched and replaced with its text before web search. Use `max_staleness` to control the age of the fetched copy.
+	// State The content every question in the request refers to: a string, an object, or an array. Images can appear anywhere in `state` as OpenAI-style `image_url` parts with base64 PNG, JPEG, or WebP data URLs and are read in place. Up to 8 images per question. With `mode: "web_grounding"`, a single page URL is fetched and replaced with its text before web search.
 	State DecisionsRequest_State `json:"state"`
 }
 
-// DecisionsRequestMode Set to `web_grounding` to search the web before the model answers. For a URL-only state, the API first fetches the page and replaces the URL with its text. It then runs one Fast Search per question, up to 100 questions, and adds the top results to `state`. The response lists search evidence in `search_results` and fetched page text in `fetched_results`. If no search returns a result, the model answers from `state`, including any fetched text. Each search or successful URL fetch costs $0.001; fetched text and search evidence count as input tokens. Any other mode value, including an empty string or `null`, returns `400`. See [Web grounding](/docs/decisions/quickstart#web-grounding).
+// DecisionsRequestMode Set to `web_grounding` to search the web before the model answers. For a URL-only state, the API first fetches the page and replaces the URL with its text. It then runs one Fast Search per question, up to 100 questions, and adds the top results to `state`. The response lists search evidence in `search_results` and fetched page text in `fetched_results`. If no search returns a result, the model answers from `state`, including any fetched text. Each search costs $0.001 and each successful URL fetch costs $0.0005; fetched text and search evidence count as input tokens. Any other mode value, including an empty string or `null`, returns `400`. See [Web grounding](/docs/decisions/decisions#web-grounding).
 type DecisionsRequestMode string
 
 // DecisionsRequestState0 defines model for DecisionsRequest.State.0.
@@ -7025,7 +7031,7 @@ type DecisionsRequestState1 map[string]interface{}
 // DecisionsRequestState2 defines model for DecisionsRequest.State.2.
 type DecisionsRequestState2 = []interface{}
 
-// DecisionsRequest_State The content every question in the request refers to: a string, an object, or an array. Images can appear anywhere in `state` as OpenAI-style `image_url` parts with base64 PNG, JPEG, or WebP data URLs and are read in place. Up to 8 images per question. With `mode: "web_grounding"`, a single page URL is fetched and replaced with its text before web search. Use `max_staleness` to control the age of the fetched copy.
+// DecisionsRequest_State The content every question in the request refers to: a string, an object, or an array. Images can appear anywhere in `state` as OpenAI-style `image_url` parts with base64 PNG, JPEG, or WebP data URLs and are read in place. Up to 8 images per question. With `mode: "web_grounding"`, a single page URL is fetched and replaced with its text before web search.
 type DecisionsRequest_State struct {
 	union json.RawMessage
 }
@@ -12733,13 +12739,16 @@ type UrlContent struct {
 	Url string `json:"url"`
 }
 
-// Usage Token counts for the request. Input tokens are billed per million at the rate of the selected model: $0.02 for `pplx-decider-v1.3` and `pplx-decider-v1.2`, and $0.01 for `pplx-decider-flash-v1.3` and `pplx-decider-flash-v1.2`. Output tokens are free.
+// Usage Token counts for the request and, with `mode: "web_grounding"`, billable grounding operations. Input tokens are billed per million at the rate of the selected model: $0.02 for `pplx-decider-v1.3` and `pplx-decider-v1.2`, and $0.01 for `pplx-decider-flash-v1.3` and `pplx-decider-flash-v1.2`. Output tokens are free.
 type Usage struct {
 	// InputTokens Input tokens processed for the request.
 	InputTokens int `json:"input_tokens"`
 
 	// OutputTokens Output tokens generated for the answers.
 	OutputTokens int `json:"output_tokens"`
+
+	// ToolCallsDetails Only with `mode: "web_grounding"`: billable grounding operations keyed by tool name. `search_web.invocation` counts the distinct searches that returned, including searches with no results. `fetch_url.invocation` counts the URL fetches that returned, including fetches with no page text. Failed, timed-out, and unstarted operations are not counted, and a tool with no billable operations is omitted. The object is omitted when no tool has a billable operation, and without `mode`. Counts are not charges.
+	ToolCallsDetails *map[string]DecisionToolCallDetails `json:"tool_calls_details,omitempty"`
 }
 
 // UsageInfo Token usage and cost information for a request
@@ -27680,7 +27689,7 @@ type ClientInterface interface {
 
 	// DecisionsV1DecisionsPostWithBody Answer questions
 	//
-	// Evaluate one or more named questions against the content in `state`. Mix `noul`, `choice`, `score`, and `locate` questions in one request; the response returns one answer per question under the same name, plus the model name and token usage. Set `model` to `pplx-decider-v1.3`, `pplx-decider-flash-v1.3`, `pplx-decider-v1.2` or `pplx-decider-flash-v1.2`, or to the alias `pplx-decider-latest` or `pplx-decider-flash-latest`; a missing or unknown model returns `400`. Set `mode` to `web_grounding` to fetch a URL-only state and search the web before the model answers. Use `max_staleness` to control fetched page age. Each search or successful URL fetch is billed. Send the key as `Authorization: Bearer <key>`; an `x-api-key` header is not read and returns `401`.
+	// Evaluate one or more named questions against the content in `state`. Mix `noul`, `choice`, `score`, and `locate` questions in one request; the response returns one answer per question under the same name, plus the model name and token usage. Set `model` to `pplx-decider-v1.3`, `pplx-decider-flash-v1.3`, `pplx-decider-v1.2` or `pplx-decider-flash-v1.2`, or to the alias `pplx-decider-latest` or `pplx-decider-flash-latest`; a missing or unknown model returns `400`. Set `mode` to `web_grounding` to fetch a URL-only state and search the web before the model answers. Each search or successful URL fetch is billed. Send the key as `Authorization: Bearer <key>`; an `x-api-key` header is not read and returns `401`.
 	//
 	// Takes any type of body and a specified content type.
 	//
@@ -27689,7 +27698,7 @@ type ClientInterface interface {
 
 	// DecisionsV1DecisionsPost Answer questions
 	//
-	// Evaluate one or more named questions against the content in `state`. Mix `noul`, `choice`, `score`, and `locate` questions in one request; the response returns one answer per question under the same name, plus the model name and token usage. Set `model` to `pplx-decider-v1.3`, `pplx-decider-flash-v1.3`, `pplx-decider-v1.2` or `pplx-decider-flash-v1.2`, or to the alias `pplx-decider-latest` or `pplx-decider-flash-latest`; a missing or unknown model returns `400`. Set `mode` to `web_grounding` to fetch a URL-only state and search the web before the model answers. Use `max_staleness` to control fetched page age. Each search or successful URL fetch is billed. Send the key as `Authorization: Bearer <key>`; an `x-api-key` header is not read and returns `401`.
+	// Evaluate one or more named questions against the content in `state`. Mix `noul`, `choice`, `score`, and `locate` questions in one request; the response returns one answer per question under the same name, plus the model name and token usage. Set `model` to `pplx-decider-v1.3`, `pplx-decider-flash-v1.3`, `pplx-decider-v1.2` or `pplx-decider-flash-v1.2`, or to the alias `pplx-decider-latest` or `pplx-decider-flash-latest`; a missing or unknown model returns `400`. Set `mode` to `web_grounding` to fetch a URL-only state and search the web before the model answers. Each search or successful URL fetch is billed. Send the key as `Authorization: Bearer <key>`; an `x-api-key` header is not read and returns `401`.
 	//
 	// Takes a body of the `application/json` content type.
 	//
@@ -28564,7 +28573,7 @@ func (c *Client) ContextualizedEmbeddingsV1ContextualizedembeddingsPost(ctx cont
 
 // DecisionsV1DecisionsPostWithBody Answer questions
 //
-// Evaluate one or more named questions against the content in `state`. Mix `noul`, `choice`, `score`, and `locate` questions in one request; the response returns one answer per question under the same name, plus the model name and token usage. Set `model` to `pplx-decider-v1.3`, `pplx-decider-flash-v1.3`, `pplx-decider-v1.2` or `pplx-decider-flash-v1.2`, or to the alias `pplx-decider-latest` or `pplx-decider-flash-latest`; a missing or unknown model returns `400`. Set `mode` to `web_grounding` to fetch a URL-only state and search the web before the model answers. Use `max_staleness` to control fetched page age. Each search or successful URL fetch is billed. Send the key as `Authorization: Bearer <key>`; an `x-api-key` header is not read and returns `401`.
+// Evaluate one or more named questions against the content in `state`. Mix `noul`, `choice`, `score`, and `locate` questions in one request; the response returns one answer per question under the same name, plus the model name and token usage. Set `model` to `pplx-decider-v1.3`, `pplx-decider-flash-v1.3`, `pplx-decider-v1.2` or `pplx-decider-flash-v1.2`, or to the alias `pplx-decider-latest` or `pplx-decider-flash-latest`; a missing or unknown model returns `400`. Set `mode` to `web_grounding` to fetch a URL-only state and search the web before the model answers. Each search or successful URL fetch is billed. Send the key as `Authorization: Bearer <key>`; an `x-api-key` header is not read and returns `401`.
 //
 // Takes any type of body and a specified content type.
 //
@@ -28583,7 +28592,7 @@ func (c *Client) DecisionsV1DecisionsPostWithBody(ctx context.Context, contentTy
 
 // DecisionsV1DecisionsPost Answer questions
 //
-// Evaluate one or more named questions against the content in `state`. Mix `noul`, `choice`, `score`, and `locate` questions in one request; the response returns one answer per question under the same name, plus the model name and token usage. Set `model` to `pplx-decider-v1.3`, `pplx-decider-flash-v1.3`, `pplx-decider-v1.2` or `pplx-decider-flash-v1.2`, or to the alias `pplx-decider-latest` or `pplx-decider-flash-latest`; a missing or unknown model returns `400`. Set `mode` to `web_grounding` to fetch a URL-only state and search the web before the model answers. Use `max_staleness` to control fetched page age. Each search or successful URL fetch is billed. Send the key as `Authorization: Bearer <key>`; an `x-api-key` header is not read and returns `401`.
+// Evaluate one or more named questions against the content in `state`. Mix `noul`, `choice`, `score`, and `locate` questions in one request; the response returns one answer per question under the same name, plus the model name and token usage. Set `model` to `pplx-decider-v1.3`, `pplx-decider-flash-v1.3`, `pplx-decider-v1.2` or `pplx-decider-flash-v1.2`, or to the alias `pplx-decider-latest` or `pplx-decider-flash-latest`; a missing or unknown model returns `400`. Set `mode` to `web_grounding` to fetch a URL-only state and search the web before the model answers. Each search or successful URL fetch is billed. Send the key as `Authorization: Bearer <key>`; an `x-api-key` header is not read and returns `401`.
 //
 // Takes a body of the `application/json` content type.
 //
@@ -31905,7 +31914,7 @@ type ClientWithResponsesInterface interface {
 
 	// DecisionsV1DecisionsPostWithBodyWithResponse Answer questions
 	//
-	// Evaluate one or more named questions against the content in `state`. Mix `noul`, `choice`, `score`, and `locate` questions in one request; the response returns one answer per question under the same name, plus the model name and token usage. Set `model` to `pplx-decider-v1.3`, `pplx-decider-flash-v1.3`, `pplx-decider-v1.2` or `pplx-decider-flash-v1.2`, or to the alias `pplx-decider-latest` or `pplx-decider-flash-latest`; a missing or unknown model returns `400`. Set `mode` to `web_grounding` to fetch a URL-only state and search the web before the model answers. Use `max_staleness` to control fetched page age. Each search or successful URL fetch is billed. Send the key as `Authorization: Bearer <key>`; an `x-api-key` header is not read and returns `401`.
+	// Evaluate one or more named questions against the content in `state`. Mix `noul`, `choice`, `score`, and `locate` questions in one request; the response returns one answer per question under the same name, plus the model name and token usage. Set `model` to `pplx-decider-v1.3`, `pplx-decider-flash-v1.3`, `pplx-decider-v1.2` or `pplx-decider-flash-v1.2`, or to the alias `pplx-decider-latest` or `pplx-decider-flash-latest`; a missing or unknown model returns `400`. Set `mode` to `web_grounding` to fetch a URL-only state and search the web before the model answers. Each search or successful URL fetch is billed. Send the key as `Authorization: Bearer <key>`; an `x-api-key` header is not read and returns `401`.
 	//
 	// Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -31914,7 +31923,7 @@ type ClientWithResponsesInterface interface {
 
 	// DecisionsV1DecisionsPostWithResponse Answer questions
 	//
-	// Evaluate one or more named questions against the content in `state`. Mix `noul`, `choice`, `score`, and `locate` questions in one request; the response returns one answer per question under the same name, plus the model name and token usage. Set `model` to `pplx-decider-v1.3`, `pplx-decider-flash-v1.3`, `pplx-decider-v1.2` or `pplx-decider-flash-v1.2`, or to the alias `pplx-decider-latest` or `pplx-decider-flash-latest`; a missing or unknown model returns `400`. Set `mode` to `web_grounding` to fetch a URL-only state and search the web before the model answers. Use `max_staleness` to control fetched page age. Each search or successful URL fetch is billed. Send the key as `Authorization: Bearer <key>`; an `x-api-key` header is not read and returns `401`.
+	// Evaluate one or more named questions against the content in `state`. Mix `noul`, `choice`, `score`, and `locate` questions in one request; the response returns one answer per question under the same name, plus the model name and token usage. Set `model` to `pplx-decider-v1.3`, `pplx-decider-flash-v1.3`, `pplx-decider-v1.2` or `pplx-decider-flash-v1.2`, or to the alias `pplx-decider-latest` or `pplx-decider-flash-latest`; a missing or unknown model returns `400`. Set `mode` to `web_grounding` to fetch a URL-only state and search the web before the model answers. Each search or successful URL fetch is billed. Send the key as `Authorization: Bearer <key>`; an `x-api-key` header is not read and returns `401`.
 	//
 	// Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 	//
@@ -36277,7 +36286,7 @@ func (c *ClientWithResponses) ContextualizedEmbeddingsV1Contextualizedembeddings
 
 // DecisionsV1DecisionsPostWithBodyWithResponse Answer questions
 //
-// Evaluate one or more named questions against the content in `state`. Mix `noul`, `choice`, `score`, and `locate` questions in one request; the response returns one answer per question under the same name, plus the model name and token usage. Set `model` to `pplx-decider-v1.3`, `pplx-decider-flash-v1.3`, `pplx-decider-v1.2` or `pplx-decider-flash-v1.2`, or to the alias `pplx-decider-latest` or `pplx-decider-flash-latest`; a missing or unknown model returns `400`. Set `mode` to `web_grounding` to fetch a URL-only state and search the web before the model answers. Use `max_staleness` to control fetched page age. Each search or successful URL fetch is billed. Send the key as `Authorization: Bearer <key>`; an `x-api-key` header is not read and returns `401`.
+// Evaluate one or more named questions against the content in `state`. Mix `noul`, `choice`, `score`, and `locate` questions in one request; the response returns one answer per question under the same name, plus the model name and token usage. Set `model` to `pplx-decider-v1.3`, `pplx-decider-flash-v1.3`, `pplx-decider-v1.2` or `pplx-decider-flash-v1.2`, or to the alias `pplx-decider-latest` or `pplx-decider-flash-latest`; a missing or unknown model returns `400`. Set `mode` to `web_grounding` to fetch a URL-only state and search the web before the model answers. Each search or successful URL fetch is billed. Send the key as `Authorization: Bearer <key>`; an `x-api-key` header is not read and returns `401`.
 //
 // Takes any type of body and a specified content type, and returns a wrapper object for the known response body format(s).
 //
@@ -36292,7 +36301,7 @@ func (c *ClientWithResponses) DecisionsV1DecisionsPostWithBodyWithResponse(ctx c
 
 // DecisionsV1DecisionsPostWithResponse Answer questions
 //
-// Evaluate one or more named questions against the content in `state`. Mix `noul`, `choice`, `score`, and `locate` questions in one request; the response returns one answer per question under the same name, plus the model name and token usage. Set `model` to `pplx-decider-v1.3`, `pplx-decider-flash-v1.3`, `pplx-decider-v1.2` or `pplx-decider-flash-v1.2`, or to the alias `pplx-decider-latest` or `pplx-decider-flash-latest`; a missing or unknown model returns `400`. Set `mode` to `web_grounding` to fetch a URL-only state and search the web before the model answers. Use `max_staleness` to control fetched page age. Each search or successful URL fetch is billed. Send the key as `Authorization: Bearer <key>`; an `x-api-key` header is not read and returns `401`.
+// Evaluate one or more named questions against the content in `state`. Mix `noul`, `choice`, `score`, and `locate` questions in one request; the response returns one answer per question under the same name, plus the model name and token usage. Set `model` to `pplx-decider-v1.3`, `pplx-decider-flash-v1.3`, `pplx-decider-v1.2` or `pplx-decider-flash-v1.2`, or to the alias `pplx-decider-latest` or `pplx-decider-flash-latest`; a missing or unknown model returns `400`. Set `mode` to `web_grounding` to fetch a URL-only state and search the web before the model answers. Each search or successful URL fetch is billed. Send the key as `Authorization: Bearer <key>`; an `x-api-key` header is not read and returns `401`.
 //
 // Takes a body of the `application/json` content type, and returns a wrapper object for the known response body format(s).
 //

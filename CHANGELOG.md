@@ -2,6 +2,15 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.6.1, 2026-11-21
+
+- Added the type `DecisionToolCallDetails` with the field `Invocation` (`int64`), the billable operations for one grounding tool.
+- Added the field `Usage.ToolCallsDetails` (`*map[string]DecisionToolCallDetails`), set with `mode: "web_grounding"`, keyed by tool name.
+- Updated docs for `DecisionsRequest.MaxStaleness`: the API accepts it but ignores it.
+- Updated docs for `DecisionsRequest.Mode`: a search costs $0.001 and a successful URL fetch costs $0.0005.
+- Updated docs for `DecisionsRequest.Model`: `pplx-decider-v1-27b` is accepted, and `pplx-decider-v1.1-27b` is an alias of it.
+- The regenerated client matches the upstream spec (version 1.0.0).
+
 ## v0.6.0, 2026-11-20
 
 - Added a context endpoint: `Client.Context`, `Client.ContextWithBody`, `ClientWithResponses.ContextWithResponse` and `ContextWithBodyWithResponse`, with `ContextDocument`, `ContextCost` and `ContextErrorResponse` types.
