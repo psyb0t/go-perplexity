@@ -2,6 +2,16 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.6.2, 2026-11-24
+
+- Added the monitor agent target types `MonitorAgentTarget` and `MonitorAgentTargetRequest` (type `agent`), with `MonitorAgentFilters`, `MonitorAgentFiltersRequest`, `MonitorAgentProfileReference` and the type constants `MonitorAgentTargetTypeAgent`, `MonitorAgentTargetRequestTypeAgent` and `MonitorAgentProfileReferenceTypeCustom`.
+- Added `MonitorAgentUpdateChange` (type `agent_update`) and `MonitorAgentSource` for agent monitor findings, with the constant `MonitorAgentUpdateChangeTypeAgentUpdate`.
+- Added the accessors `AsMonitorAgentTarget`, `FromMonitorAgentTarget` and `MergeMonitorAgentTarget` on `MonitorTarget`, the matching `...MonitorAgentTargetRequest` methods on `MonitorTargetRequest`, and the `...MonitorAgentUpdateChange` methods on `MonitorChange`.
+- Added the field `SnapshotAsOf` (`*string`) to `ApiSearchRequest` and `ContextRequest`.
+- Added the field `Error` (`*string`) to `ApiSearchPage`.
+- Updated docs for monitor types, context metadata origin and the cache and max age request fields.
+- The regenerated client matches the upstream spec (version 1.0.0).
+
 ## v0.6.1, 2026-11-21
 
 - Added the type `DecisionToolCallDetails` with the field `Invocation` (`int64`), the billable operations for one grounding tool.

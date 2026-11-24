@@ -1613,6 +1613,66 @@ func (e MonitorObject) Valid() bool {
 	}
 }
 
+// Defines values for MonitorAgentProfileReferenceType.
+const (
+	MonitorAgentProfileReferenceTypeCustom MonitorAgentProfileReferenceType = "custom"
+)
+
+// Valid indicates whether the value is a known member of the MonitorAgentProfileReferenceType enum.
+func (e MonitorAgentProfileReferenceType) Valid() bool {
+	switch e {
+	case MonitorAgentProfileReferenceTypeCustom:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for MonitorAgentTargetType.
+const (
+	MonitorAgentTargetTypeAgent MonitorAgentTargetType = "agent"
+)
+
+// Valid indicates whether the value is a known member of the MonitorAgentTargetType enum.
+func (e MonitorAgentTargetType) Valid() bool {
+	switch e {
+	case MonitorAgentTargetTypeAgent:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for MonitorAgentTargetRequestType.
+const (
+	MonitorAgentTargetRequestTypeAgent MonitorAgentTargetRequestType = "agent"
+)
+
+// Valid indicates whether the value is a known member of the MonitorAgentTargetRequestType enum.
+func (e MonitorAgentTargetRequestType) Valid() bool {
+	switch e {
+	case MonitorAgentTargetRequestTypeAgent:
+		return true
+	default:
+		return false
+	}
+}
+
+// Defines values for MonitorAgentUpdateChangeType.
+const (
+	MonitorAgentUpdateChangeTypeAgentUpdate MonitorAgentUpdateChangeType = "agent_update"
+)
+
+// Valid indicates whether the value is a known member of the MonitorAgentUpdateChangeType enum.
+func (e MonitorAgentUpdateChangeType) Valid() bool {
+	switch e {
+	case MonitorAgentUpdateChangeTypeAgentUpdate:
+		return true
+	default:
+		return false
+	}
+}
+
 // Defines values for MonitorApiErrorType.
 const (
 	MonitorApiErrorTypeApiProductNotAllowed     MonitorApiErrorType = "api_product_not_allowed"
@@ -5903,6 +5963,9 @@ type ApiSearchPage struct {
 	// Date Publication date of the page (YYYY-MM-DD). Omitted when the publication date is unknown.
 	Date *string `json:"date,omitempty"`
 
+	// Error Present only on `snapshot_as_of` searches, for a page with no readable copy saved at or before that time. `title` and `snippet` are then empty.
+	Error *string `json:"error,omitempty"`
+
 	// LastUpdated Date the page was last updated (YYYY-MM-DD).
 	LastUpdated *string `json:"last_updated,omitempty"`
 
@@ -5953,6 +6016,9 @@ type ApiSearchRequest struct {
 
 	// SearchType Search type: `web` for general web search, `fast` for lower-latency web search, or `people` for people search. `max_results` above 20 is only supported for `people`.
 	SearchType *ApiSearchRequestSearchType `json:"search_type,omitempty"`
+
+	// SnapshotAsOf Search the web as of this RFC 3339 time with a time zone, such as `2026-11-01T00:00:00Z`. Each result comes from the copy of the page saved at or before this time. It must not be in the future or more than 365 days ago. Supported for the `web` and `fast` search types. Cannot be combined with `search_recency_filter`, the publication date filters, or the last-updated filters.
+	SnapshotAsOf *string `json:"snapshot_as_of,omitempty"`
 }
 
 // ApiSearchRequestQuery0 defines model for ApiSearchRequest.Query.0.
@@ -6723,7 +6789,7 @@ type ContextMetadata struct {
 	// LastModified The site's Last-Modified header, when it sent one. Send it as if_modified_since to check whether the page changed. It is not a publication date or fetch time.
 	LastModified *string `json:"last_modified,omitempty"`
 
-	// Origin cached: a stored copy, chosen by max_age_seconds or cache_only. live: fetched for this request.
+	// Origin cached: a stored copy, chosen by max_age_seconds, cache_only, or snapshot_as_of. live: fetched for this request.
 	Origin *ContextMetadataOrigin `json:"origin,omitempty"`
 
 	// PublishedDate Publication date (YYYY-MM-DD).
@@ -6748,12 +6814,12 @@ type ContextMetadata_AdditionalProperties struct {
 	union json.RawMessage
 }
 
-// ContextMetadataOrigin cached: a stored copy, chosen by max_age_seconds or cache_only. live: fetched for this request.
+// ContextMetadataOrigin cached: a stored copy, chosen by max_age_seconds, cache_only, or snapshot_as_of. live: fetched for this request.
 type ContextMetadataOrigin string
 
 // ContextRequest defines model for ContextRequest.
 type ContextRequest struct {
-	// CacheOnly When true, answer only from stored copies at most max_age_seconds old and never fetch live. A URL without one has status.type no_content. Requires max_age_seconds above 0.
+	// CacheOnly When true, answer only from stored copies at most max_age_seconds old and never fetch live. A URL without one has status.type no_content. Requires max_age_seconds above 0. Cannot be combined with snapshot_as_of.
 	CacheOnly *bool `json:"cache_only,omitempty"`
 
 	// Criteria Decision questions to score each page with, keyed by question ID. 1 to 5 questions. IDs must match [A-Za-z0-9_-]{1,64}, and query is reserved. Scoring never filters, reorders, or drops results.
@@ -6768,8 +6834,11 @@ type ContextRequest struct {
 	// IfModifiedSince A metadata.last_modified value from an earlier response, in IMF-fixdate form such as Thu, 03 Dec 1992 08:37:20 GMT. Requires exactly one URL and max_age_seconds 0. If the page has not changed since then, its result has status.type not_modified and no content, so keep the content you already have.
 	IfModifiedSince *string `json:"if_modified_since,omitempty"`
 
-	// MaxAgeSeconds Maximum age of a stored copy to accept, up to 63072000 (two years). 0 always fetches the page live.
+	// MaxAgeSeconds Maximum age of a stored copy to accept, up to 63072000 (two years). 0 always fetches the page live. Cannot be combined with snapshot_as_of.
 	MaxAgeSeconds *int `json:"max_age_seconds,omitempty"`
+
+	// SnapshotAsOf Return each URL as stored at or before this RFC 3339 time with a time zone, such as 2026-11-01T00:00:00Z. It must not be in the future or more than 365 days ago. Never fetches live: a URL with no stored copy from before that time has status.type no_content. Cannot be combined with max_age_seconds, cache_only, or if_modified_since.
+	SnapshotAsOf *string `json:"snapshot_as_of,omitempty"`
 
 	// TimeoutMs Time budget for fetching the pages. URLs are fetched in parallel, and a URL that does not finish in time has status.type crawl_timeout while the rest keep their content. The response can take slightly longer than this budget. With criteria, the maximum is 95000, and scoring may add up to 15 seconds.
 	TimeoutMs *int `json:"timeout_ms,omitempty"`
@@ -6913,9 +6982,9 @@ type CreateBatchRequestCompletionWindow string
 // CreateBatchRequestEndpoint Endpoint every line in the input file targets
 type CreateBatchRequestEndpoint string
 
-// CreateMonitorRequest defines model for CreateMonitorRequest.
+// CreateMonitorRequest Use a single target type for the monitor. An Agent monitor takes exactly one Agent target.
 type CreateMonitorRequest struct {
-	// Goal What counts as worth an alert; each candidate is judged against it
+	// Goal Describe the changes you want the monitor to report. The goal is separate from the Search query or Agent task.
 	Goal *string `json:"goal,omitempty"`
 
 	// Metadata Up to 16 key value pairs; keys 1 to 64 characters, values up to 512 characters (Unicode code points, valid UTF-8). Echoed on every webhook.
@@ -6923,7 +6992,13 @@ type CreateMonitorRequest struct {
 	Name     string                 `json:"name"`
 	Schedule MonitorScheduleRequest `json:"schedule"`
 
-	// Targets Exactly one `search` target, or 1 to 10 `page` targets with distinct URLs
+	// Targets Use one of these target configurations:
+	//
+	// - One Search target.
+	// - One Agent target.
+	// - One to 10 Page targets with distinct URLs.
+	//
+	// Do not mix target types.
 	Targets MonitorTargets         `json:"targets"`
 	Webhook *MonitorWebhookRequest `json:"webhook,omitempty"`
 }
@@ -7922,7 +7997,7 @@ type Monitor struct {
 	// CurrentRunId The queued or running run
 	CurrentRunId *string `json:"current_run_id,omitempty"`
 
-	// Goal `""` when unset
+	// Goal The changes you want the monitor to report. The service returns an empty string if you do not set a goal.
 	Goal string `json:"goal"`
 
 	// Id Opaque ID with the prefix `mon_`
@@ -7949,7 +8024,9 @@ type Monitor struct {
 	// resumed. Whether a run is in flight is `current_run_id`, not the
 	// status. New statuses may be added; treat an unknown one as not
 	// running on its schedule.
-	Status  MonitorStatus   `json:"status"`
+	Status MonitorStatus `json:"status"`
+
+	// Targets The targets for one monitor. An Agent monitor has exactly one target.
 	Targets []MonitorTarget `json:"targets"`
 
 	// UpdatedAt RFC 3339 in UTC with whole seconds, for example `2026-11-12T09:00:41Z`.
@@ -7959,6 +8036,122 @@ type Monitor struct {
 
 // MonitorObject defines model for Monitor.Object.
 type MonitorObject string
+
+// MonitorAgentFilters defines model for MonitorAgentFilters.
+type MonitorAgentFilters struct {
+	// ExcludeDomains The domains the Agent monitor excludes, including their subdomains.
+	ExcludeDomains []MonitorDomain `json:"exclude_domains"`
+
+	// Freshness The freshness values for the target. When both values are present, the Agent monitor applies no date filter to the agent's web search.
+	Freshness []MonitorFreshness `json:"freshness"`
+
+	// IncludeDomains The allowed domains and their subdomains. If this list is empty, only `exclude_domains` can restrict which domains the Agent monitor uses.
+	IncludeDomains []MonitorDomain `json:"include_domains"`
+}
+
+// MonitorAgentFiltersRequest If either domain list is not empty, the service removes sources that the lists do not allow. An update needs at least one allowed source.
+type MonitorAgentFiltersRequest struct {
+	// ExcludeDomains Exclude up to 20 domains and their subdomains. Use bare host names such as `example.com`, without a scheme, path, or port. Do not put the same domain in both lists.
+	ExcludeDomains *[]string `json:"exclude_domains,omitempty"`
+
+	// Freshness Use only `published` to filter the agent's web search by publication date. Use only `updated` to filter it by last-updated date. The service applies no date filter if the field is absent, empty, or contains both values.
+	Freshness *[]MonitorFreshness `json:"freshness,omitempty"`
+
+	// IncludeDomains Allow up to 20 domains and their subdomains. Use bare host names such as `example.com`, without a scheme, path, or port.
+	IncludeDomains *[]string `json:"include_domains,omitempty"`
+}
+
+// MonitorAgentProfileReference A saved Agent API profile.
+type MonitorAgentProfileReference struct {
+	// Id The profile ID, from 1 to 128 characters.
+	Id   string                           `json:"id"`
+	Type MonitorAgentProfileReferenceType `json:"type"`
+
+	// Version The profile version, up to 128 bytes. Omit it to use the latest version.
+	Version *string `json:"version,omitempty"`
+}
+
+// MonitorAgentProfileReferenceType defines model for MonitorAgentProfileReference.Type.
+type MonitorAgentProfileReferenceType string
+
+// MonitorAgentSource defines model for MonitorAgentSource.
+type MonitorAgentSource struct {
+	// PublishedAt The publication date of the source, if available.
+	PublishedAt *MonitorTimestamp `json:"published_at,omitempty"`
+
+	// Title The source title, if available.
+	Title *string `json:"title,omitempty"`
+
+	// Url The URL of the source.
+	Url string `json:"url"`
+}
+
+// MonitorAgentTarget An Agent monitor runs the task in `input` on each run. A run with no saved state is a first check. A first check can save at most one update about the current state. Later runs can save up to five updates.
+type MonitorAgentTarget struct {
+	// Effort The Agent API effort. The service omits this field when the target uses a `profile`.
+	Effort  *string             `json:"effort,omitempty"`
+	Filters MonitorAgentFilters `json:"filters"`
+
+	// Input The task for each run.
+	Input string `json:"input"`
+
+	// Profile A saved Agent API profile.
+	Profile *MonitorAgentProfileReference `json:"profile,omitempty"`
+	Type    MonitorAgentTargetType        `json:"type"`
+}
+
+// MonitorAgentTargetType defines model for MonitorAgentTarget.Type.
+type MonitorAgentTargetType string
+
+// MonitorAgentTargetRequest defines model for MonitorAgentTargetRequest.
+type MonitorAgentTargetRequest struct {
+	// Effort Set the effort to one of these values:
+	//
+	// - `low`
+	// - `medium`
+	// - `high`
+	//
+	// You can add `@latest` or `@<version>` to any value. If you omit `effort` and `profile`, the service uses `low`. Do not send both `effort` and `profile`.
+	Effort *string `json:"effort,omitempty"`
+
+	// Filters If either domain list is not empty, the service removes sources that the lists do not allow. An update needs at least one allowed source.
+	Filters *MonitorAgentFiltersRequest `json:"filters,omitempty"`
+
+	// Input The task for each run, from 1 to 4,000 characters.
+	Input string `json:"input"`
+
+	// Profile A saved Agent API profile.
+	Profile *MonitorAgentProfileReference `json:"profile,omitempty"`
+	Type    MonitorAgentTargetRequestType `json:"type"`
+}
+
+// MonitorAgentTargetRequestType defines model for MonitorAgentTargetRequest.Type.
+type MonitorAgentTargetRequestType string
+
+// MonitorAgentUpdateChange An update that the Agent monitor saved.
+type MonitorAgentUpdateChange struct {
+	// Confidence The confidence score, from 0 to 1. Compare scores within one monitor.
+	Confidence float64 `json:"confidence"`
+
+	// Id Stable opaque ID with the prefix `chg_`. Use it to deduplicate the same finding across runs and webhook deliveries.
+	Id MonitorChangeId `json:"id"`
+
+	// Sources Up to five sources for the update. The list can be empty.
+	Sources []MonitorAgentSource `json:"sources"`
+
+	// Text The text of the update, up to 1,000 characters.
+	Text string `json:"text"`
+
+	// Title The update title, up to 200 characters.
+	Title string                       `json:"title"`
+	Type  MonitorAgentUpdateChangeType `json:"type"`
+
+	// Url The URL of the first source. The service omits this field if `sources` is empty.
+	Url *string `json:"url,omitempty"`
+}
+
+// MonitorAgentUpdateChangeType defines model for MonitorAgentUpdateChange.Type.
+type MonitorAgentUpdateChangeType string
 
 // MonitorApiError defines model for MonitorApiError.
 type MonitorApiError struct {
@@ -8000,7 +8193,7 @@ type MonitorApiError struct {
 // for an unknown one.
 type MonitorApiErrorType string
 
-// MonitorChange One finding the judge kept. New types may be added; skip changes with an unknown type.
+// MonitorChange A change that the monitor saved. Skip changes with a type you do not recognize.
 type MonitorChange struct {
 	union json.RawMessage
 }
@@ -8229,7 +8422,7 @@ type MonitorRun struct {
 	// Trigger What started the run. New triggers may be added; accept unknown values.
 	Trigger MonitorRunTrigger `json:"trigger"`
 
-	// Usage Usage for the run. Only a `succeeded` run has nonzero usage. A succeeded Search run is billed once per run and reports zero `fetched_urls`; Page monitors report counted `fetched_urls`. Judging is included in the price.
+	// Usage Search and Page runs report nonzero usage only when they succeed. A successful Search run counts as one run for billing. A successful Page run counts each fetched URL that qualifies. An Agent run can report an Agent API cost even if the run fails.
 	Usage MonitorRunUsage `json:"usage"`
 
 	// Window Omitted while the run is `queued`
@@ -8239,7 +8432,7 @@ type MonitorRun struct {
 // MonitorRunObject defines model for MonitorRun.Object.
 type MonitorRunObject string
 
-// MonitorRunCost Estimated run cost at list prices: $0.001 per succeeded Search run or counted fetched URL in a succeeded Page run, rounded to 5 decimal places. This is not the amount charged.
+// MonitorRunCost The service estimates the cost at list prices and rounds it to 5 decimal places. This estimate is not the amount charged. A successful Search run costs $0.001 at list prices. A successful Page run costs $0.001 per counted fetched URL at list prices. An Agent run reports only the [Agent API](/docs/getting-started/pricing#agent-api-pricing) cost at list prices, if available.
 type MonitorRunCost struct {
 	// Currency Currency code for cost values
 	Currency  MonitorCurrency `json:"currency"`
@@ -8248,7 +8441,7 @@ type MonitorRunCost struct {
 
 // MonitorRunCounts defines model for MonitorRunCounts.
 type MonitorRunCounts struct {
-	// Candidates New search results or changed pages before judging
+	// Candidates The number of results, page changes, or Agent updates the monitor considered for this run.
 	Candidates int32 `json:"candidates"`
 	Changes    int32 `json:"changes"`
 
@@ -8312,12 +8505,12 @@ type MonitorRunStatus string
 // MonitorRunTrigger What started the run. New triggers may be added; accept unknown values.
 type MonitorRunTrigger string
 
-// MonitorRunUsage Usage for the run. Only a `succeeded` run has nonzero usage. A succeeded Search run is billed once per run and reports zero `fetched_urls`; Page monitors report counted `fetched_urls`. Judging is included in the price.
+// MonitorRunUsage Search and Page runs report nonzero usage only when they succeed. A successful Search run counts as one run for billing. A successful Page run counts each fetched URL that qualifies. An Agent run can report an Agent API cost even if the run fails.
 type MonitorRunUsage struct {
-	// Cost Estimated run cost at list prices: $0.001 per succeeded Search run or counted fetched URL in a succeeded Page run, rounded to 5 decimal places. This is not the amount charged.
+	// Cost The service estimates the cost at list prices and rounds it to 5 decimal places. This estimate is not the amount charged. A successful Search run costs $0.001 at list prices. A successful Page run costs $0.001 per counted fetched URL at list prices. An Agent run reports only the [Agent API](/docs/getting-started/pricing#agent-api-pricing) cost at list prices, if available.
 	Cost MonitorRunCost `json:"cost"`
 
-	// FetchedUrls Counted fetched URLs in a succeeded Page run; zero for Search runs and for runs that did not succeed.
+	// FetchedUrls The number of counted URLs that a successful Page run fetched. This value is zero for all other runs.
 	FetchedUrls int32 `json:"fetched_urls"`
 }
 
@@ -8436,9 +8629,7 @@ type MonitorSearchTargetRequestType string
 // running on its schedule.
 type MonitorStatus string
 
-// MonitorTarget One thing a monitor watches. Today a monitor has exactly one `search`
-// target, or 1 to 10 `page` targets with distinct URLs. New types may
-// be added; skip targets with an unknown type.
+// MonitorTarget A target for the monitor. Skip targets with a type you do not recognize.
 type MonitorTarget struct {
 	union json.RawMessage
 }
@@ -8457,7 +8648,13 @@ type MonitorTargetRequest struct {
 	union json.RawMessage
 }
 
-// MonitorTargets Exactly one `search` target, or 1 to 10 `page` targets with distinct URLs
+// MonitorTargets Use one of these target configurations:
+//
+// - One Search target.
+// - One Agent target.
+// - One to 10 Page targets with distinct URLs.
+//
+// Do not mix target types.
 type MonitorTargets = []MonitorTargetRequest
 
 // MonitorTimestamp RFC 3339 in UTC with whole seconds, for example `2026-11-12T09:00:41Z`.
@@ -12712,17 +12909,21 @@ type URL struct {
 	Url string `json:"url"`
 }
 
-// UpdateMonitorRequest Any subset of the writable fields. A present key replaces that whole
-// field; an absent key leaves it unchanged. `null` clears an optional
-// field: `goal` becomes `""`, `metadata` becomes `{}`, `webhook` is
-// removed.
+// UpdateMonitorRequest Send only the fields you want to replace. The service keeps the fields you omit. Send `null` to clear `goal`, `metadata`, or `webhook`. When you replace an Agent target, repeat the task and the options you want to keep.
 type UpdateMonitorRequest struct {
+	// Goal Replace the goal without changing the Search query or Agent task. The service returns an empty string after you clear the goal.
 	Goal     *string                 `json:"goal,omitempty"`
 	Metadata *map[string]string      `json:"metadata,omitempty"`
 	Name     *string                 `json:"name,omitempty"`
 	Schedule *MonitorScheduleRequest `json:"schedule,omitempty"`
 
-	// Targets Exactly one `search` target, or 1 to 10 `page` targets with distinct URLs
+	// Targets Use one of these target configurations:
+	//
+	// - One Search target.
+	// - One Agent target.
+	// - One to 10 Page targets with distinct URLs.
+	//
+	// Do not mix target types.
 	Targets *MonitorTargets        `json:"targets,omitempty"`
 	Webhook *MonitorWebhookRequest `json:"webhook,omitempty"`
 }
@@ -15769,6 +15970,40 @@ func (t *MonitorChange) MergeMonitorPageChange(v MonitorPageChange) error {
 	return err
 }
 
+// AsMonitorAgentUpdateChange returns the union data inside the MonitorChange as a MonitorAgentUpdateChange
+func (t MonitorChange) AsMonitorAgentUpdateChange() (MonitorAgentUpdateChange, error) {
+	var body MonitorAgentUpdateChange
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromMonitorAgentUpdateChange overwrites any union data inside the MonitorChange as the provided MonitorAgentUpdateChange
+func (t *MonitorChange) FromMonitorAgentUpdateChange(v MonitorAgentUpdateChange) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"agent_update"}`))
+	t.union = b
+	return err
+}
+
+// MergeMonitorAgentUpdateChange performs a merge with any union data inside the MonitorChange, using the provided MonitorAgentUpdateChange
+func (t *MonitorChange) MergeMonitorAgentUpdateChange(v MonitorAgentUpdateChange) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"agent_update"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
 func (t MonitorChange) Discriminator() (string, error) {
 	var discriminator struct {
 		Discriminator string `json:"type"`
@@ -15783,6 +16018,8 @@ func (t MonitorChange) ValueByDiscriminator() (interface{}, error) {
 		return nil, err
 	}
 	switch discriminator {
+	case "agent_update":
+		return t.AsMonitorAgentUpdateChange()
 	case "page_change":
 		return t.AsMonitorPageChange()
 	case "search_result":
@@ -16072,6 +16309,40 @@ func (t *MonitorTarget) MergeMonitorPageTarget(v MonitorPageTarget) error {
 	return err
 }
 
+// AsMonitorAgentTarget returns the union data inside the MonitorTarget as a MonitorAgentTarget
+func (t MonitorTarget) AsMonitorAgentTarget() (MonitorAgentTarget, error) {
+	var body MonitorAgentTarget
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromMonitorAgentTarget overwrites any union data inside the MonitorTarget as the provided MonitorAgentTarget
+func (t *MonitorTarget) FromMonitorAgentTarget(v MonitorAgentTarget) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"agent"}`))
+	t.union = b
+	return err
+}
+
+// MergeMonitorAgentTarget performs a merge with any union data inside the MonitorTarget, using the provided MonitorAgentTarget
+func (t *MonitorTarget) MergeMonitorAgentTarget(v MonitorAgentTarget) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"agent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
 func (t MonitorTarget) Discriminator() (string, error) {
 	var discriminator struct {
 		Discriminator string `json:"type"`
@@ -16086,6 +16357,8 @@ func (t MonitorTarget) ValueByDiscriminator() (interface{}, error) {
 		return nil, err
 	}
 	switch discriminator {
+	case "agent":
+		return t.AsMonitorAgentTarget()
 	case "page":
 		return t.AsMonitorPageTarget()
 	case "search":
@@ -16238,6 +16511,40 @@ func (t *MonitorTargetRequest) MergeMonitorPageTargetRequest(v MonitorPageTarget
 	return err
 }
 
+// AsMonitorAgentTargetRequest returns the union data inside the MonitorTargetRequest as a MonitorAgentTargetRequest
+func (t MonitorTargetRequest) AsMonitorAgentTargetRequest() (MonitorAgentTargetRequest, error) {
+	var body MonitorAgentTargetRequest
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromMonitorAgentTargetRequest overwrites any union data inside the MonitorTargetRequest as the provided MonitorAgentTargetRequest
+func (t *MonitorTargetRequest) FromMonitorAgentTargetRequest(v MonitorAgentTargetRequest) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"agent"}`))
+	t.union = b
+	return err
+}
+
+// MergeMonitorAgentTargetRequest performs a merge with any union data inside the MonitorTargetRequest, using the provided MonitorAgentTargetRequest
+func (t *MonitorTargetRequest) MergeMonitorAgentTargetRequest(v MonitorAgentTargetRequest) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+	b, err = runtime.JSONMerge(b, []byte(`{"type":"agent"}`))
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
 func (t MonitorTargetRequest) Discriminator() (string, error) {
 	var discriminator struct {
 		Discriminator string `json:"type"`
@@ -16252,6 +16559,8 @@ func (t MonitorTargetRequest) ValueByDiscriminator() (interface{}, error) {
 		return nil, err
 	}
 	switch discriminator {
+	case "agent":
+		return t.AsMonitorAgentTargetRequest()
 	case "page":
 		return t.AsMonitorPageTargetRequest()
 	case "search":
