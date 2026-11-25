@@ -5963,10 +5963,7 @@ type ApiSearchPage struct {
 	// Date Publication date of the page (YYYY-MM-DD). Omitted when the publication date is unknown.
 	Date *string `json:"date,omitempty"`
 
-	// Error Present only on `snapshot_as_of` searches, for a page with no readable copy saved at or before that time. `title` and `snippet` are then empty.
-	Error *string `json:"error,omitempty"`
-
-	// LastUpdated Date the page was last updated (YYYY-MM-DD).
+	// LastUpdated Date the page was last updated (YYYY-MM-DD). Omitted on `snapshot_as_of` searches.
 	LastUpdated *string `json:"last_updated,omitempty"`
 
 	// Snippet Text extracted from the page that is relevant to the query. Not the full page.
@@ -6017,7 +6014,7 @@ type ApiSearchRequest struct {
 	// SearchType Search type: `web` for general web search, `fast` for lower-latency web search, or `people` for people search. `max_results` above 20 is only supported for `people`.
 	SearchType *ApiSearchRequestSearchType `json:"search_type,omitempty"`
 
-	// SnapshotAsOf Search the web as of this RFC 3339 time with a time zone, such as `2026-11-01T00:00:00Z`. Each result comes from the copy of the page saved at or before this time. It must not be in the future or more than 365 days ago. Supported for the `web` and `fast` search types. Cannot be combined with `search_recency_filter`, the publication date filters, or the last-updated filters.
+	// SnapshotAsOf Search the web as of this RFC 3339 time with a time zone, such as `2026-11-01T00:00:00Z`. Each result comes from the copy of the page saved at or before this time. It must not be in the future or more than 365 days ago. Cannot be combined with `search_recency_filter`, the publication date filters, the last-updated filters, or `search_type` `people`. A page that can't be shown as of this time is omitted, so the response can have fewer than `max_results` results, or none.
 	SnapshotAsOf *string `json:"snapshot_as_of,omitempty"`
 }
 
@@ -6837,10 +6834,10 @@ type ContextRequest struct {
 	// MaxAgeSeconds Maximum age of a stored copy to accept, up to 63072000 (two years). 0 always fetches the page live. Cannot be combined with snapshot_as_of.
 	MaxAgeSeconds *int `json:"max_age_seconds,omitempty"`
 
-	// SnapshotAsOf Return each URL as stored at or before this RFC 3339 time with a time zone, such as 2026-11-01T00:00:00Z. It must not be in the future or more than 365 days ago. Never fetches live: a URL with no stored copy from before that time has status.type no_content. Cannot be combined with max_age_seconds, cache_only, or if_modified_since.
+	// SnapshotAsOf Return each URL as stored at or before this RFC 3339 time with a time zone, such as 2026-11-01T00:00:00Z. It must not be in the future or more than 365 days ago. Never fetches live: a URL with no stored copy from before that time has status.type no_content. Cannot be combined with max_age_seconds, cache_only, if_modified_since, or the html and links formats.
 	SnapshotAsOf *string `json:"snapshot_as_of,omitempty"`
 
-	// TimeoutMs Time budget for fetching the pages. URLs are fetched in parallel, and a URL that does not finish in time has status.type crawl_timeout while the rest keep their content. The response can take slightly longer than this budget. With criteria, the maximum is 95000, and scoring may add up to 15 seconds.
+	// TimeoutMs Time budget for fetching the pages. URLs are fetched in parallel, and a URL that does not finish in time has status.type crawl_timeout while the rest keep their content. The response can take slightly longer than this budget. With criteria, scoring may add up to 15 seconds.
 	TimeoutMs *int `json:"timeout_ms,omitempty"`
 
 	// Urls 1 to 50 http or https URLs. Your usage tier can lower the maximum. A string that is not an absolute http or https URL does not fail the request: its result has status.type invalid_url.

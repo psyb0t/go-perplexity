@@ -2,6 +2,15 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.7.0, 2026-11-25
+
+- Removed the field `Error` (`*string`) from `ApiSearchPage`. Pages with no copy at the `snapshot_as_of` time are now omitted from the results.
+- Updated docs for `ApiSearchPage.LastUpdated`: it is omitted on `snapshot_as_of` searches.
+- Updated docs for `ApiSearchRequest.SnapshotAsOf`: it cannot be combined with `search_type` `people`, and a response can have fewer than `max_results` results, or none.
+- Updated docs for `ContextRequest.SnapshotAsOf`: it cannot be combined with the html and links formats.
+- Updated docs for `ContextRequest.TimeoutMs`: the 95000 maximum with criteria is no longer stated.
+- The regenerated client matches the upstream spec (version 1.0.0).
+
 ## v0.6.2, 2026-11-24
 
 - Added the monitor agent target types `MonitorAgentTarget` and `MonitorAgentTargetRequest` (type `agent`), with `MonitorAgentFilters`, `MonitorAgentFiltersRequest`, `MonitorAgentProfileReference` and the type constants `MonitorAgentTargetTypeAgent`, `MonitorAgentTargetRequestTypeAgent` and `MonitorAgentProfileReferenceTypeCustom`.
