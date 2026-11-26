@@ -6777,7 +6777,7 @@ type ContextMetadata struct {
 	// Description Page description.
 	Description *string `json:"description,omitempty"`
 
-	// FetchedAt When the returned content was fetched.
+	// FetchedAt When the returned content was fetched. Omitted when snapshot_as_of is set.
 	FetchedAt *time.Time `json:"fetched_at,omitempty"`
 
 	// Language Page language, such as en.
@@ -7332,6 +7332,11 @@ type FetchUrlResultsOutputItemType string
 
 // FetchUrlTool defines model for FetchUrlTool.
 type FetchUrlTool struct {
+	Filters *struct {
+		// SnapshotAsOf Fetch each page as of this RFC 3339 time with a time zone, such as 2026-11-01T00:00:00Z. It must not be in the future or more than 365 days ago.
+		SnapshotAsOf *string `json:"snapshot_as_of,omitempty"`
+	} `json:"filters,omitempty"`
+
 	// MaxUrls Maximum number of URLs to fetch per tool call
 	MaxUrls *int32           `json:"max_urls,omitempty"`
 	Type    FetchUrlToolType `json:"type"`
@@ -13048,6 +13053,9 @@ type WebSearchFilters struct {
 
 	// SearchRecencyFilter Filter by publication recency (hour/day/week/month/year)
 	SearchRecencyFilter *SearchRecencyFilter `json:"search_recency_filter,omitempty"`
+
+	// SnapshotAsOf Search the web as of this RFC 3339 time with a time zone, such as 2026-11-01T00:00:00Z. It must not be in the future or more than 365 days ago. Cannot be combined with search_recency_filter, the publication date filters, or the last updated filters.
+	SnapshotAsOf *string `json:"snapshot_as_of,omitempty"`
 }
 
 // WebSearchOptions Configuration options for web search behavior

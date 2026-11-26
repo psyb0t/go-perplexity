@@ -2,6 +2,13 @@
 
 All notable changes per release. Versions follow [semver](https://semver.org).
 
+## v0.7.1, 2026-11-26
+
+- Added the field `Filters` to `FetchUrlTool`, an anonymous struct with the optional field `SnapshotAsOf` (`*string`). It fetches each page as of an RFC 3339 time that is not in the future or more than 365 days ago.
+- Added the field `SnapshotAsOf` (`*string`) to `WebSearchFilters`. It cannot be combined with `search_recency_filter`, the publication date filters or the last updated filters.
+- Updated docs for `ContextMetadata.FetchedAt`: it is omitted when `snapshot_as_of` is set.
+- No exported identifier was removed or changed. The regenerated client matches the upstream spec (version 1.0.0).
+
 ## v0.7.0, 2026-11-25
 
 - Removed the field `Error` (`*string`) from `ApiSearchPage`. Pages with no copy at the `snapshot_as_of` time are now omitted from the results.
